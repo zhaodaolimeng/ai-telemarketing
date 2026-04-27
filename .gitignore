@@ -72,6 +72,7 @@ data/
 experiments/data/
 experiments/audio/
 experiments/docs/
+docs/
 
 # Customer-specific data
 *customer*
