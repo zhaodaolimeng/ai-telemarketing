@@ -47,6 +47,8 @@ data/tts_test/
 data/chatbot_tests/
 data/evaluations/
 data/audio/
+data/
+experiments/data/
 
 # ML Models
 *.pt
