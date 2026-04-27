@@ -32,15 +32,36 @@ env/
 *.swo
 *~
 
+# Security - Sensitive Information
+.env
+.env.local
+.env.*.local
+*.env
+config.json
+secrets.json
+settings.json
+keys/
+credentials/
+*.pem
+*.key
+*.p12
+*.pfx
+*.cer
+
 # Database
 *.db
 *.sqlite
 *.sqlite3
 
-# Data
+# Data and Audio
 data/tts_output/
 data/*.wav
 data/*.mp3
+data/*.m4a
+data/*.flac
+data/*.ogg
+data/*.wma
+data/*.aac
 data/*.json
 data/*.csv
 data/tts_test/
@@ -49,6 +70,14 @@ data/evaluations/
 data/audio/
 data/
 experiments/data/
+experiments/audio/
+experiments/docs/
+
+# Customer-specific data
+*customer*
+*client*
+*patient*
+*user*
 
 # ML Models
 *.pt
