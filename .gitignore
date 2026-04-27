@@ -41,12 +41,20 @@ env/
 data/tts_output/
 data/*.wav
 data/*.mp3
+data/*.json
+data/*.csv
+data/tts_test/
+data/chatbot_tests/
+data/evaluations/
+data/audio/
 
 # ML Models
 *.pt
 *.pth
 *.bin
 *.onnx
+.huggingface/
+.cache/
 
 # OS
 .DS_Store
