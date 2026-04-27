@@ -1,0 +1,325 @@
+{
+  "case_id": "628385525956608-20260404061649",
+  "file_name": "628385525956608-20260404061649.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 2.34,
+      "speaker": "CUSTOMER",
+      "text": " Ini adalah layanan antispalm excel smart.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 0.0,
+          "end": 0.12,
+          "probability": 0.5404852032661438
+        },
+        {
+          "word": " adalah",
+          "start": 0.12,
+          "end": 0.54,
+          "probability": 0.9934961795806885
+        },
+        {
+          "word": " layanan",
+          "start": 0.54,
+          "end": 0.98,
+          "probability": 0.9332107305526733
+        },
+        {
+          "word": " antispalm",
+          "start": 0.98,
+          "end": 1.62,
+          "probability": 0.6611704304814339
+        },
+        {
+          "word": " excel",
+          "start": 1.62,
+          "end": 1.92,
+          "probability": 0.2291058748960495
+        },
+        {
+          "word": " smart.",
+          "start": 1.92,
+          "end": 2.34,
+          "probability": 0.9205355048179626
+        }
+      ]
+    },
+    {
+      "start": 2.9,
+      "end": 6.62,
+      "speaker": "CUSTOMER",
+      "text": " Pekan 5 untuk meneruskan panggilan Anda ke nomor 7.",
+      "words": [
+        {
+          "word": " Pekan",
+          "start": 2.9,
+          "end": 3.38,
+          "probability": 0.7562974492708842
+        },
+        {
+          "word": " 5",
+          "start": 3.38,
+          "end": 4.0,
+          "probability": 0.3879786729812622
+        },
+        {
+          "word": " untuk",
+          "start": 4.0,
+          "end": 4.6,
+          "probability": 0.689626932144165
+        },
+        {
+          "word": " meneruskan",
+          "start": 4.6,
+          "end": 5.14,
+          "probability": 0.912564734617869
+        },
+        {
+          "word": " panggilan",
+          "start": 5.14,
+          "end": 5.5,
+          "probability": 0.8759538978338242
+        },
+        {
+          "word": " Anda",
+          "start": 5.5,
+          "end": 5.9,
+          "probability": 0.6188031435012817
+        },
+        {
+          "word": " ke",
+          "start": 5.9,
+          "end": 6.14,
+          "probability": 0.9812672138214111
+        },
+        {
+          "word": " nomor",
+          "start": 6.14,
+          "end": 6.42,
+          "probability": 0.792338490486145
+        },
+        {
+          "word": " 7.",
+          "start": 6.42,
+          "end": 6.62,
+          "probability": 0.7268508672714233
+        }
+      ]
+    },
+    {
+      "start": 14.100000000000001,
+      "end": 17.34,
+      "speaker": "CUSTOMER",
+      "text": " Ini adalah layanan antispalm excel smart.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 14.100000000000001,
+          "end": 14.98,
+          "probability": 0.7980098724365234
+        },
+        {
+          "word": " adalah",
+          "start": 14.98,
+          "end": 15.34,
+          "probability": 0.9984554052352905
+        },
+        {
+          "word": " layanan",
+          "start": 15.34,
+          "end": 15.94,
+          "probability": 0.9969468712806702
+        },
+        {
+          "word": " antispalm",
+          "start": 15.94,
+          "end": 16.58,
+          "probability": 0.9950701743364334
+        },
+        {
+          "word": " excel",
+          "start": 16.58,
+          "end": 16.9,
+          "probability": 0.9802879095077515
+        },
+        {
+          "word": " smart.",
+          "start": 16.9,
+          "end": 17.34,
+          "probability": 0.9941561222076416
+        }
+      ]
+    },
+    {
+      "start": 17.78,
+      "end": 21.92,
+      "speaker": "CUSTOMER",
+      "text": " Pekan 1 untuk meneruskan panggilan Anda ke nomor 7.",
+      "words": [
+        {
+          "word": " Pekan",
+          "start": 17.78,
+          "end": 18.32,
+          "probability": 0.9956161578496298
+        },
+        {
+          "word": " 1",
+          "start": 18.32,
+          "end": 19.08,
+          "probability": 0.9890507459640503
+        },
+        {
+          "word": " untuk",
+          "start": 19.08,
+          "end": 19.84,
+          "probability": 0.9851497411727905
+        },
+        {
+          "word": " meneruskan",
+          "start": 19.84,
+          "end": 20.4,
+          "probability": 0.9937708576520284
+        },
+        {
+          "word": " panggilan",
+          "start": 20.4,
+          "end": 20.78,
+          "probability": 0.9955657720565796
+        },
+        {
+          "word": " Anda",
+          "start": 20.78,
+          "end": 21.16,
+          "probability": 0.9269991517066956
+        },
+        {
+          "word": " ke",
+          "start": 21.16,
+          "end": 21.4,
+          "probability": 0.9983102083206177
+        },
+        {
+          "word": " nomor",
+          "start": 21.4,
+          "end": 21.72,
+          "probability": 0.9974747896194458
+        },
+        {
+          "word": " 7.",
+          "start": 21.72,
+          "end": 21.92,
+          "probability": 0.9968841671943665
+        }
+      ]
+    },
+    {
+      "start": 29.12,
+      "end": 32.36,
+      "speaker": "CUSTOMER",
+      "text": " Ini adalah layanan antispalm excel smart.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 29.12,
+          "end": 30.0,
+          "probability": 0.16992051899433136
+        },
+        {
+          "word": " adalah",
+          "start": 30.0,
+          "end": 30.52,
+          "probability": 0.9890232086181641
+        },
+        {
+          "word": " layanan",
+          "start": 30.52,
+          "end": 30.98,
+          "probability": 0.9588803052902222
+        },
+        {
+          "word": " antispalm",
+          "start": 30.98,
+          "end": 31.62,
+          "probability": 0.5994826927781105
+        },
+        {
+          "word": " excel",
+          "start": 31.62,
+          "end": 31.92,
+          "probability": 0.08407341688871384
+        },
+        {
+          "word": " smart.",
+          "start": 31.92,
+          "end": 32.36,
+          "probability": 0.8383111357688904
+        }
+      ]
+    },
+    {
+      "start": 32.96,
+      "end": 36.6,
+      "speaker": "CUSTOMER",
+      "text": " Pekan 4 untuk meneruskan panggilan Anda ke nomor 7.",
+      "words": [
+        {
+          "word": " Pekan",
+          "start": 32.96,
+          "end": 33.38,
+          "probability": 0.710296114285787
+        },
+        {
+          "word": " 4",
+          "start": 33.38,
+          "end": 33.98,
+          "probability": 0.05206317454576492
+        },
+        {
+          "word": " untuk",
+          "start": 33.98,
+          "end": 34.56,
+          "probability": 0.5959882140159607
+        },
+        {
+          "word": " meneruskan",
+          "start": 34.56,
+          "end": 35.1,
+          "probability": 0.6804485097527504
+        },
+        {
+          "word": " panggilan",
+          "start": 35.1,
+          "end": 35.48,
+          "probability": 0.881890207529068
+        },
+        {
+          "word": " Anda",
+          "start": 35.48,
+          "end": 35.88,
+          "probability": 0.772287905216217
+        },
+        {
+          "word": " ke",
+          "start": 35.88,
+          "end": 36.12,
+          "probability": 0.9802543520927429
+        },
+        {
+          "word": " nomor",
+          "start": 36.12,
+          "end": 36.42,
+          "probability": 0.7540572285652161
+        },
+        {
+          "word": " 7.",
+          "start": 36.42,
+          "end": 36.6,
+          "probability": 0.11021190881729126
+        }
+      ]
+    }
+  ],
+  "full_text": " Ini adalah layanan antispalm excel smart.  Pekan 5 untuk meneruskan panggilan Anda ke nomor 7.  Ini adalah layanan antispalm excel smart.  Pekan 1 untuk meneruskan panggilan Anda ke nomor 7.  Ini adalah layanan antispalm excel smart.  Pekan 4 untuk meneruskan panggilan Anda ke nomor 7."
+}

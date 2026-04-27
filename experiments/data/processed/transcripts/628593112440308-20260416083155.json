@@ -1,0 +1,169 @@
+{
+  "case_id": "628593112440308-20260416083155",
+  "file_name": "628593112440308-20260416083155.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 1.16,
+      "speaker": "AGENT",
+      "text": " Bila orang",
+      "words": [
+        {
+          "word": " Bila",
+          "start": 0.0,
+          "end": 0.78,
+          "probability": 0.32078374922275543
+        },
+        {
+          "word": " orang",
+          "start": 0.78,
+          "end": 1.16,
+          "probability": 0.38982445001602173
+        }
+      ]
+    },
+    {
+      "start": 2.0999999999999983,
+      "end": 3.58,
+      "speaker": "CUSTOMER",
+      "text": " Bila orang",
+      "words": [
+        {
+          "word": " Bila",
+          "start": 2.0999999999999983,
+          "end": 3.02,
+          "probability": 0.49760299269109964
+        },
+        {
+          "word": " orang",
+          "start": 3.02,
+          "end": 3.58,
+          "probability": 0.9924566745758057
+        }
+      ]
+    },
+    {
+      "start": 3.58,
+      "end": 4.94,
+      "speaker": "CUSTOMER",
+      "text": " Atau orang-orang",
+      "words": [
+        {
+          "word": " Atau",
+          "start": 3.58,
+          "end": 4.72,
+          "probability": 0.34913632025321323
+        },
+        {
+          "word": " orang",
+          "start": 4.72,
+          "end": 4.84,
+          "probability": 0.10931038856506348
+        },
+        {
+          "word": "-orang",
+          "start": 4.84,
+          "end": 4.94,
+          "probability": 0.4934352319687605
+        }
+      ]
+    },
+    {
+      "start": 7.059999999999999,
+      "end": 10.74,
+      "speaker": "CUSTOMER",
+      "text": " Biar orang-orang mengisi ya",
+      "words": [
+        {
+          "word": " Biar",
+          "start": 7.059999999999999,
+          "end": 7.98,
+          "probability": 0.02533511258661747
+        },
+        {
+          "word": " orang",
+          "start": 7.98,
+          "end": 8.22,
+          "probability": 0.9945147037506104
+        },
+        {
+          "word": "-orang",
+          "start": 8.22,
+          "end": 8.36,
+          "probability": 0.5117163797840476
+        },
+        {
+          "word": " mengisi",
+          "start": 8.36,
+          "end": 8.82,
+          "probability": 0.10409800574416295
+        },
+        {
+          "word": " ya",
+          "start": 8.82,
+          "end": 10.74,
+          "probability": 0.3492266535758972
+        }
+      ]
+    },
+    {
+      "start": 10.74,
+      "end": 17.18,
+      "speaker": "AGENT",
+      "text": " Dan kita",
+      "words": [
+        {
+          "word": " Dan",
+          "start": 10.74,
+          "end": 10.74,
+          "probability": 0.0030781489331275225
+        },
+        {
+          "word": " kita",
+          "start": 10.74,
+          "end": 17.18,
+          "probability": 0.04010571166872978
+        }
+      ]
+    },
+    {
+      "start": 17.18,
+      "end": 26.06,
+      "speaker": "AGENT",
+      "text": " YouTube ini ada yang punya",
+      "words": [
+        {
+          "word": " YouTube",
+          "start": 17.18,
+          "end": 17.54,
+          "probability": 2.3064654669724405e-05
+        },
+        {
+          "word": " ini",
+          "start": 17.54,
+          "end": 17.54,
+          "probability": 0.05830878019332886
+        },
+        {
+          "word": " ada",
+          "start": 17.54,
+          "end": 17.64,
+          "probability": 0.05176218971610069
+        },
+        {
+          "word": " yang",
+          "start": 17.64,
+          "end": 25.84,
+          "probability": 0.13382519781589508
+        },
+        {
+          "word": " punya",
+          "start": 25.84,
+          "end": 26.06,
+          "probability": 0.011426019482314587
+        }
+      ]
+    }
+  ],
+  "full_text": " Bila orang  Bila orang  Atau orang-orang  Biar orang-orang mengisi ya  Dan kita  YouTube ini ada yang punya"
+}

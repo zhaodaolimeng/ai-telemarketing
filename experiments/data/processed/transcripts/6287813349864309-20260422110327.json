@@ -1,0 +1,677 @@
+{
+  "case_id": "6287813349864309-20260422110327",
+  "file_name": "6287813349864309-20260422110327.mp3",
+  "transcript": [
+    {
+      "start": 3.2400000000000007,
+      "end": 5.9,
+      "speaker": "AGENT",
+      "text": " kalau sama yang ibu lursa ada",
+      "words": [
+        {
+          "word": " kalau",
+          "start": 3.2400000000000007,
+          "end": 3.94,
+          "probability": 0.09728552401065826
+        },
+        {
+          "word": " sama",
+          "start": 3.94,
+          "end": 4.2,
+          "probability": 0.22899776697158813
+        },
+        {
+          "word": " yang",
+          "start": 4.2,
+          "end": 4.72,
+          "probability": 0.06669716536998749
+        },
+        {
+          "word": " ibu",
+          "start": 4.72,
+          "end": 5.12,
+          "probability": 0.8461670875549316
+        },
+        {
+          "word": " lursa",
+          "start": 5.12,
+          "end": 5.62,
+          "probability": 0.5962976366281509
+        },
+        {
+          "word": " ada",
+          "start": 5.62,
+          "end": 5.9,
+          "probability": 0.9552184343338013
+        }
+      ]
+    },
+    {
+      "start": 5.9,
+      "end": 7.12,
+      "speaker": "CUSTOMER",
+      "text": " ya",
+      "words": [
+        {
+          "word": " ya",
+          "start": 5.9,
+          "end": 7.12,
+          "probability": 0.24938902258872986
+        }
+      ]
+    },
+    {
+      "start": 7.880000000000001,
+      "end": 11.04,
+      "speaker": "AGENT",
+      "text": " kalau ibu lursa ada saya dari aplikasi ekstrak wangol",
+      "words": [
+        {
+          "word": " kalau",
+          "start": 7.880000000000001,
+          "end": 8.58,
+          "probability": 0.5431007146835327
+        },
+        {
+          "word": " ibu",
+          "start": 8.58,
+          "end": 8.88,
+          "probability": 0.9793378412723541
+        },
+        {
+          "word": " lursa",
+          "start": 8.88,
+          "end": 9.22,
+          "probability": 0.9913533528645834
+        },
+        {
+          "word": " ada",
+          "start": 9.22,
+          "end": 9.44,
+          "probability": 0.9934161901473999
+        },
+        {
+          "word": " saya",
+          "start": 9.44,
+          "end": 9.64,
+          "probability": 0.5569525957107544
+        },
+        {
+          "word": " dari",
+          "start": 9.64,
+          "end": 9.86,
+          "probability": 0.9502582550048828
+        },
+        {
+          "word": " aplikasi",
+          "start": 9.86,
+          "end": 10.28,
+          "probability": 0.818727175394694
+        },
+        {
+          "word": " ekstrak",
+          "start": 10.28,
+          "end": 10.66,
+          "probability": 0.42548107852538425
+        },
+        {
+          "word": " wangol",
+          "start": 10.66,
+          "end": 11.04,
+          "probability": 0.3943067068854968
+        }
+      ]
+    },
+    {
+      "start": 11.04,
+      "end": 12.76,
+      "speaker": "AGENT",
+      "text": " tadi ini dia berapa ibu diberikan",
+      "words": [
+        {
+          "word": " tadi",
+          "start": 11.04,
+          "end": 11.22,
+          "probability": 0.04783866927027702
+        },
+        {
+          "word": " ini",
+          "start": 11.22,
+          "end": 11.52,
+          "probability": 0.2481233775615692
+        },
+        {
+          "word": " dia",
+          "start": 11.52,
+          "end": 11.8,
+          "probability": 0.18689888715744019
+        },
+        {
+          "word": " berapa",
+          "start": 11.8,
+          "end": 12.06,
+          "probability": 0.8536278009414673
+        },
+        {
+          "word": " ibu",
+          "start": 12.06,
+          "end": 12.26,
+          "probability": 0.5398201383650303
+        },
+        {
+          "word": " diberikan",
+          "start": 12.26,
+          "end": 12.76,
+          "probability": 0.588624007999897
+        }
+      ]
+    },
+    {
+      "start": 13.5,
+      "end": 15.98,
+      "speaker": "AGENT",
+      "text": " kan tadi dia bilang sore pulang kerja",
+      "words": [
+        {
+          "word": " kan",
+          "start": 13.5,
+          "end": 14.2,
+          "probability": 0.380383163690567
+        },
+        {
+          "word": " tadi",
+          "start": 14.2,
+          "end": 14.42,
+          "probability": 0.7202341556549072
+        },
+        {
+          "word": " dia",
+          "start": 14.42,
+          "end": 14.62,
+          "probability": 0.8595767617225647
+        },
+        {
+          "word": " bilang",
+          "start": 14.62,
+          "end": 14.78,
+          "probability": 0.9981339573860168
+        },
+        {
+          "word": " sore",
+          "start": 14.78,
+          "end": 15.14,
+          "probability": 0.3902678117156029
+        },
+        {
+          "word": " pulang",
+          "start": 15.14,
+          "end": 15.38,
+          "probability": 0.925985723733902
+        },
+        {
+          "word": " kerja",
+          "start": 15.38,
+          "end": 15.98,
+          "probability": 0.9677029252052307
+        }
+      ]
+    },
+    {
+      "start": 15.98,
+      "end": 17.98,
+      "speaker": "AGENT",
+      "text": " kalau ibu udah berapa kali",
+      "words": [
+        {
+          "word": " kalau",
+          "start": 15.98,
+          "end": 16.72,
+          "probability": 0.73808354139328
+        },
+        {
+          "word": " ibu",
+          "start": 16.72,
+          "end": 17.08,
+          "probability": 0.9911198914051056
+        },
+        {
+          "word": " udah",
+          "start": 17.08,
+          "end": 17.26,
+          "probability": 0.1845702826976776
+        },
+        {
+          "word": " berapa",
+          "start": 17.26,
+          "end": 17.5,
+          "probability": 0.9931989312171936
+        },
+        {
+          "word": " kali",
+          "start": 17.5,
+          "end": 17.98,
+          "probability": 0.9852198362350464
+        }
+      ]
+    },
+    {
+      "start": 17.98,
+      "end": 20.18,
+      "speaker": "AGENT",
+      "text": " iya halo ah wangol tadi diberapa ibu",
+      "words": [
+        {
+          "word": " iya",
+          "start": 17.98,
+          "end": 18.34,
+          "probability": 0.6579210162162781
+        },
+        {
+          "word": " halo",
+          "start": 18.34,
+          "end": 18.58,
+          "probability": 0.5240524411201477
+        },
+        {
+          "word": " ah",
+          "start": 18.58,
+          "end": 18.7,
+          "probability": 0.05634192377328873
+        },
+        {
+          "word": " wangol",
+          "start": 18.7,
+          "end": 19.06,
+          "probability": 0.9038199186325073
+        },
+        {
+          "word": " tadi",
+          "start": 19.06,
+          "end": 19.36,
+          "probability": 0.5240305662155151
+        },
+        {
+          "word": " diberapa",
+          "start": 19.36,
+          "end": 19.86,
+          "probability": 0.5446175287167231
+        },
+        {
+          "word": " ibu",
+          "start": 19.86,
+          "end": 20.18,
+          "probability": 0.9407237768173218
+        }
+      ]
+    },
+    {
+      "start": 21.0,
+      "end": 21.54,
+      "speaker": "CUSTOMER",
+      "text": " kenapa?",
+      "words": [
+        {
+          "word": " kenapa?",
+          "start": 21.0,
+          "end": 21.54,
+          "probability": 0.8501661419868469
+        }
+      ]
+    },
+    {
+      "start": 22.68,
+      "end": 23.64,
+      "speaker": "AGENT",
+      "text": " diberapa ibu",
+      "words": [
+        {
+          "word": " diberapa",
+          "start": 22.68,
+          "end": 23.38,
+          "probability": 0.8440879384676615
+        },
+        {
+          "word": " ibu",
+          "start": 23.38,
+          "end": 23.64,
+          "probability": 0.9883452951908112
+        }
+      ]
+    },
+    {
+      "start": 24.86,
+      "end": 26.78,
+      "speaker": "CUSTOMER",
+      "text": " iya diberapa ibu",
+      "words": [
+        {
+          "word": " iya",
+          "start": 24.86,
+          "end": 25.56,
+          "probability": 0.5885676071047783
+        },
+        {
+          "word": " diberapa",
+          "start": 25.56,
+          "end": 25.78,
+          "probability": 0.7139518360296885
+        },
+        {
+          "word": " ibu",
+          "start": 25.78,
+          "end": 26.78,
+          "probability": 0.755807638168335
+        }
+      ]
+    },
+    {
+      "start": 26.78,
+      "end": 30.28,
+      "speaker": "AGENT",
+      "text": " jam lima kan tadi udah di bilang berapa kali",
+      "words": [
+        {
+          "word": " jam",
+          "start": 26.78,
+          "end": 27.9,
+          "probability": 0.23957893252372742
+        },
+        {
+          "word": " lima",
+          "start": 27.9,
+          "end": 28.5,
+          "probability": 0.588865727186203
+        },
+        {
+          "word": " kan",
+          "start": 28.5,
+          "end": 28.78,
+          "probability": 0.33867985010147095
+        },
+        {
+          "word": " tadi",
+          "start": 28.78,
+          "end": 29.06,
+          "probability": 0.9459313154220581
+        },
+        {
+          "word": " udah",
+          "start": 29.06,
+          "end": 29.2,
+          "probability": 0.7832416892051697
+        },
+        {
+          "word": " di",
+          "start": 29.2,
+          "end": 29.34,
+          "probability": 0.42214199900627136
+        },
+        {
+          "word": " bilang",
+          "start": 29.34,
+          "end": 29.54,
+          "probability": 0.23392339050769806
+        },
+        {
+          "word": " berapa",
+          "start": 29.54,
+          "end": 29.84,
+          "probability": 0.947052925825119
+        },
+        {
+          "word": " kali",
+          "start": 29.84,
+          "end": 30.28,
+          "probability": 0.9944649338722229
+        }
+      ]
+    },
+    {
+      "start": 30.28,
+      "end": 31.68,
+      "speaker": "CUSTOMER",
+      "text": " udah jam lima",
+      "words": [
+        {
+          "word": " udah",
+          "start": 30.28,
+          "end": 30.92,
+          "probability": 0.6645729541778564
+        },
+        {
+          "word": " jam",
+          "start": 30.92,
+          "end": 31.18,
+          "probability": 0.988532304763794
+        },
+        {
+          "word": " lima",
+          "start": 31.18,
+          "end": 31.68,
+          "probability": 0.9380431473255157
+        }
+      ]
+    },
+    {
+      "start": 31.68,
+      "end": 33.66,
+      "speaker": "AGENT",
+      "text": " jam lima tulis coba di telepon terus",
+      "words": [
+        {
+          "word": " jam",
+          "start": 31.68,
+          "end": 31.88,
+          "probability": 0.8157684206962585
+        },
+        {
+          "word": " lima",
+          "start": 31.88,
+          "end": 32.12,
+          "probability": 0.9930164813995361
+        },
+        {
+          "word": " tulis",
+          "start": 32.12,
+          "end": 32.38,
+          "probability": 0.9502594470977783
+        },
+        {
+          "word": " coba",
+          "start": 32.38,
+          "end": 32.8,
+          "probability": 0.9734500050544739
+        },
+        {
+          "word": " di",
+          "start": 32.8,
+          "end": 32.98,
+          "probability": 0.8807994723320007
+        },
+        {
+          "word": " telepon",
+          "start": 32.98,
+          "end": 33.3,
+          "probability": 0.7408236861228943
+        },
+        {
+          "word": " terus",
+          "start": 33.3,
+          "end": 33.66,
+          "probability": 0.985880434513092
+        }
+      ]
+    },
+    {
+      "start": 33.66,
+      "end": 35.2,
+      "speaker": "CUSTOMER",
+      "text": " dan jam lima belum jam lima ini",
+      "words": [
+        {
+          "word": " dan",
+          "start": 33.66,
+          "end": 33.84,
+          "probability": 0.8592479825019836
+        },
+        {
+          "word": " jam",
+          "start": 33.84,
+          "end": 34.06,
+          "probability": 0.9834827184677124
+        },
+        {
+          "word": " lima",
+          "start": 34.06,
+          "end": 34.36,
+          "probability": 0.9877102077007294
+        },
+        {
+          "word": " belum",
+          "start": 34.36,
+          "end": 34.46,
+          "probability": 0.9187967777252197
+        },
+        {
+          "word": " jam",
+          "start": 34.46,
+          "end": 34.72,
+          "probability": 0.8926489949226379
+        },
+        {
+          "word": " lima",
+          "start": 34.72,
+          "end": 34.96,
+          "probability": 0.9906043112277985
+        },
+        {
+          "word": " ini",
+          "start": 34.96,
+          "end": 35.2,
+          "probability": 0.927422821521759
+        }
+      ]
+    },
+    {
+      "start": 35.78,
+      "end": 37.78,
+      "speaker": "AGENT",
+      "text": " jam lima pulang kerja",
+      "words": [
+        {
+          "word": " jam",
+          "start": 35.78,
+          "end": 36.26,
+          "probability": 0.956358015537262
+        },
+        {
+          "word": " lima",
+          "start": 36.26,
+          "end": 37.16,
+          "probability": 0.9937921464443207
+        },
+        {
+          "word": " pulang",
+          "start": 37.16,
+          "end": 37.54,
+          "probability": 0.6704187542200089
+        },
+        {
+          "word": " kerja",
+          "start": 37.54,
+          "end": 37.82,
+          "probability": 0.9810526967048645
+        }
+      ]
+    },
+    {
+      "start": 38.44,
+      "end": 40.86,
+      "speaker": "CUSTOMER",
+      "text": " nih pas udah jam lima sudah dibayar kan ibu",
+      "words": [
+        {
+          "word": " nih",
+          "start": 38.44,
+          "end": 38.74,
+          "probability": 0.15704475343227386
+        },
+        {
+          "word": " pas",
+          "start": 38.74,
+          "end": 38.92,
+          "probability": 0.7941163182258606
+        },
+        {
+          "word": " udah",
+          "start": 38.92,
+          "end": 39.04,
+          "probability": 0.2646002471446991
+        },
+        {
+          "word": " jam",
+          "start": 39.04,
+          "end": 39.32,
+          "probability": 0.7833337187767029
+        },
+        {
+          "word": " lima",
+          "start": 39.32,
+          "end": 39.64,
+          "probability": 0.988472044467926
+        },
+        {
+          "word": " sudah",
+          "start": 39.64,
+          "end": 39.82,
+          "probability": 0.3119734227657318
+        },
+        {
+          "word": " dibayar",
+          "start": 39.82,
+          "end": 40.34,
+          "probability": 0.7738518317540487
+        },
+        {
+          "word": " kan",
+          "start": 40.34,
+          "end": 40.44,
+          "probability": 0.8683395385742188
+        },
+        {
+          "word": " ibu",
+          "start": 40.44,
+          "end": 40.86,
+          "probability": 0.5475016683340073
+        }
+      ]
+    },
+    {
+      "start": 41.66,
+      "end": 42.78,
+      "speaker": "CUSTOMER",
+      "text": " iya jam lima",
+      "words": [
+        {
+          "word": " iya",
+          "start": 41.66,
+          "end": 42.22,
+          "probability": 0.5227932557463646
+        },
+        {
+          "word": " jam",
+          "start": 42.22,
+          "end": 42.26,
+          "probability": 0.6798689365386963
+        },
+        {
+          "word": " lima",
+          "start": 42.26,
+          "end": 42.78,
+          "probability": 0.7641273438930511
+        }
+      ]
+    }
+  ],
+  "full_text": " kalau sama yang ibu lursa ada  ya  kalau ibu lursa ada saya dari aplikasi ekstrak wangol  tadi ini dia berapa ibu diberikan  kan tadi dia bilang sore pulang kerja  kalau ibu udah berapa kali  iya halo ah wangol tadi diberapa ibu  kenapa?  diberapa ibu  iya diberapa ibu  jam lima kan tadi udah di bilang berapa kali  udah jam lima  jam lima tulis coba di telepon terus  dan jam lima belum jam lima ini  jam lima pulang kerja  nih pas udah jam lima sudah dibayar kan ibu  iya jam lima"
+}

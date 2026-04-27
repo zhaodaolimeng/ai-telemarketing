@@ -1,0 +1,382 @@
+{
+  "case_id": "6282111476527809-20260411134223",
+  "file_name": "6282111476527809-20260411134223.mp3",
+  "transcript": [
+    {
+      "start": 1.5000000000000013,
+      "end": 2.06,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 1.5000000000000013,
+          "end": 2.06,
+          "probability": 0.08233070373535156
+        }
+      ]
+    },
+    {
+      "start": 3.04,
+      "end": 3.82,
+      "text": " Ya, halo.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 3.04,
+          "end": 3.44,
+          "probability": 0.427629292011261
+        },
+        {
+          "word": " halo.",
+          "start": 3.54,
+          "end": 3.82,
+          "probability": 0.5705111622810364
+        }
+      ]
+    },
+    {
+      "start": 5.18,
+      "end": 5.48,
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 5.18,
+          "end": 5.48,
+          "probability": 0.40532416105270386
+        }
+      ]
+    },
+    {
+      "start": 5.76,
+      "end": 7.02,
+      "text": " Lihat apa yang diterima ya.",
+      "words": [
+        {
+          "word": " Lihat",
+          "start": 5.76,
+          "end": 6.1,
+          "probability": 0.13386275619268417
+        },
+        {
+          "word": " apa",
+          "start": 6.1,
+          "end": 6.34,
+          "probability": 0.29120299220085144
+        },
+        {
+          "word": " yang",
+          "start": 6.34,
+          "end": 6.54,
+          "probability": 0.3646906018257141
+        },
+        {
+          "word": " diterima",
+          "start": 6.54,
+          "end": 6.86,
+          "probability": 0.39084924509127933
+        },
+        {
+          "word": " ya.",
+          "start": 6.86,
+          "end": 7.02,
+          "probability": 0.29134148359298706
+        }
+      ]
+    },
+    {
+      "start": 7.14,
+      "end": 8.26,
+      "text": " Rujang 3 saat ini.",
+      "words": [
+        {
+          "word": " Rujang",
+          "start": 7.14,
+          "end": 7.4,
+          "probability": 0.2490852822860082
+        },
+        {
+          "word": " 3",
+          "start": 7.4,
+          "end": 7.66,
+          "probability": 0.21878987550735474
+        },
+        {
+          "word": " saat",
+          "start": 7.66,
+          "end": 8.02,
+          "probability": 0.1999804526567459
+        },
+        {
+          "word": " ini.",
+          "start": 8.02,
+          "end": 8.26,
+          "probability": 0.835055947303772
+        }
+      ]
+    },
+    {
+      "start": 8.46,
+      "end": 9.48,
+      "text": " Satu-satunya.",
+      "words": [
+        {
+          "word": " Satu",
+          "start": 8.46,
+          "end": 8.82,
+          "probability": 0.6186972260475159
+        },
+        {
+          "word": "-satunya.",
+          "start": 8.82,
+          "end": 9.48,
+          "probability": 0.448291027918458
+        }
+      ]
+    },
+    {
+      "start": 9.86,
+      "end": 12.62,
+      "text": " Ya, ya, ya.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 9.86,
+          "end": 10.38,
+          "probability": 0.017645519226789474
+        },
+        {
+          "word": " ya,",
+          "start": 11.8,
+          "end": 11.94,
+          "probability": 0.8991841673851013
+        },
+        {
+          "word": " ya.",
+          "start": 11.94,
+          "end": 12.62,
+          "probability": 0.9149302244186401
+        }
+      ]
+    },
+    {
+      "start": 12.66,
+      "end": 13.68,
+      "text": " Sudah, sudah diobong tadi.",
+      "words": [
+        {
+          "word": " Sudah,",
+          "start": 12.66,
+          "end": 12.94,
+          "probability": 0.5472546927630901
+        },
+        {
+          "word": " sudah",
+          "start": 12.94,
+          "end": 13.14,
+          "probability": 0.9497234225273132
+        },
+        {
+          "word": " diobong",
+          "start": 13.14,
+          "end": 13.44,
+          "probability": 0.5101137707630793
+        },
+        {
+          "word": " tadi.",
+          "start": 13.44,
+          "end": 13.68,
+          "probability": 0.9940661191940308
+        }
+      ]
+    },
+    {
+      "start": 14.340000000000002,
+      "end": 16.82,
+      "text": " Oke, saya tunggu ya.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 14.340000000000002,
+          "end": 14.9,
+          "probability": 0.0010836021974682808
+        },
+        {
+          "word": " saya",
+          "start": 16.2,
+          "end": 16.36,
+          "probability": 0.7907496690750122
+        },
+        {
+          "word": " tunggu",
+          "start": 16.36,
+          "end": 16.6,
+          "probability": 0.8430868089199066
+        },
+        {
+          "word": " ya.",
+          "start": 16.6,
+          "end": 16.82,
+          "probability": 0.9174464344978333
+        }
+      ]
+    },
+    {
+      "start": 17.560000000000002,
+      "end": 18.12,
+      "text": " Pemeriksaan.",
+      "words": [
+        {
+          "word": " Pemeriksaan.",
+          "start": 17.560000000000002,
+          "end": 18.12,
+          "probability": 0.39661609977483747
+        }
+      ]
+    },
+    {
+      "start": 18.36,
+      "end": 20.14,
+      "text": " Ya, ya, ya.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 18.36,
+          "end": 18.36,
+          "probability": 0.7753994464874268
+        },
+        {
+          "word": " ya,",
+          "start": 18.38,
+          "end": 18.46,
+          "probability": 0.9104611873626709
+        },
+        {
+          "word": " ya.",
+          "start": 18.46,
+          "end": 20.14,
+          "probability": 0.9538190960884094
+        }
+      ]
+    },
+    {
+      "start": 20.82,
+      "end": 23.34,
+      "text": " Jadi, kenapa TCA dari apikasinya langsung ya?",
+      "words": [
+        {
+          "word": " Jadi,",
+          "start": 20.82,
+          "end": 20.98,
+          "probability": 0.16822923719882965
+        },
+        {
+          "word": " kenapa",
+          "start": 21.12,
+          "end": 21.46,
+          "probability": 0.8994899094104767
+        },
+        {
+          "word": " TCA",
+          "start": 21.46,
+          "end": 21.86,
+          "probability": 0.25801525078713894
+        },
+        {
+          "word": " dari",
+          "start": 21.86,
+          "end": 22.14,
+          "probability": 0.8849409222602844
+        },
+        {
+          "word": " apikasinya",
+          "start": 22.14,
+          "end": 22.7,
+          "probability": 0.41539712622761726
+        },
+        {
+          "word": " langsung",
+          "start": 22.7,
+          "end": 23.1,
+          "probability": 0.9534975290298462
+        },
+        {
+          "word": " ya?",
+          "start": 23.1,
+          "end": 23.34,
+          "probability": 0.7758944630622864
+        }
+      ]
+    },
+    {
+      "start": 24.52,
+      "end": 24.96,
+      "text": " Ya, ya.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 24.52,
+          "end": 24.8,
+          "probability": 0.8612582683563232
+        },
+        {
+          "word": " ya.",
+          "start": 24.88,
+          "end": 24.96,
+          "probability": 0.9876328706741333
+        }
+      ]
+    },
+    {
+      "start": 25.06,
+      "end": 25.48,
+      "text": " Oke, oke.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 25.06,
+          "end": 25.24,
+          "probability": 0.8586602807044983
+        },
+        {
+          "word": " oke.",
+          "start": 25.48,
+          "end": 25.48,
+          "probability": 0.9223387241363525
+        }
+      ]
+    },
+    {
+      "start": 25.48,
+      "end": 27.04,
+      "text": " Oke, apikasinya sudah diobong.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 25.48,
+          "end": 26.06,
+          "probability": 0.20605413615703583
+        },
+        {
+          "word": " apikasinya",
+          "start": 26.18,
+          "end": 26.64,
+          "probability": 0.05424156930530444
+        },
+        {
+          "word": " sudah",
+          "start": 26.64,
+          "end": 26.88,
+          "probability": 0.13599807024002075
+        },
+        {
+          "word": " diobong.",
+          "start": 26.88,
+          "end": 27.04,
+          "probability": 0.024683836226662
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo?  Ya, halo.  Ya.  Lihat apa yang diterima ya.  Rujang 3 saat ini.  Satu-satunya.  Ya, ya, ya.  Sudah, sudah diobong tadi.  Oke, saya tunggu ya.  Pemeriksaan.  Ya, ya, ya.  Jadi, kenapa TCA dari apikasinya langsung ya?  Ya, ya.  Oke, oke.  Oke, apikasinya sudah diobong."
+}

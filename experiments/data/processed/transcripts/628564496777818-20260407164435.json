@@ -1,0 +1,583 @@
+{
+  "case_id": "628564496777818-20260407164435",
+  "file_name": "628564496777818-20260407164435.mp3",
+  "transcript": [
+    {
+      "start": 1.1800000000000002,
+      "end": 4.12,
+      "speaker": "AGENT",
+      "text": " Fawal Selamat Soreba Penanjib Muhammad Disuk.",
+      "words": [
+        {
+          "word": " Fawal",
+          "start": 1.1800000000000002,
+          "end": 1.98,
+          "probability": 0.37783658504486084
+        },
+        {
+          "word": " Selamat",
+          "start": 1.98,
+          "end": 2.38,
+          "probability": 0.6481100022792816
+        },
+        {
+          "word": " Soreba",
+          "start": 2.38,
+          "end": 2.88,
+          "probability": 0.6072837710380554
+        },
+        {
+          "word": " Penanjib",
+          "start": 2.88,
+          "end": 3.3,
+          "probability": 0.5300201624631882
+        },
+        {
+          "word": " Muhammad",
+          "start": 3.3,
+          "end": 3.56,
+          "probability": 0.15909719467163086
+        },
+        {
+          "word": " Disuk.",
+          "start": 3.56,
+          "end": 4.12,
+          "probability": 0.5212540328502655
+        }
+      ]
+    },
+    {
+      "start": 4.6,
+      "end": 5.82,
+      "speaker": "CUSTOMER",
+      "text": " Ya Soreba.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 4.6,
+          "end": 4.96,
+          "probability": 0.5466541051864624
+        },
+        {
+          "word": " Soreba.",
+          "start": 4.96,
+          "end": 5.82,
+          "probability": 0.5487468192974726
+        }
+      ]
+    },
+    {
+      "start": 6.2,
+      "end": 8.12,
+      "speaker": "AGENT",
+      "text": " Ya patah gihanya kok belum dibayarkan Pak?",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 6.2,
+          "end": 6.5,
+          "probability": 0.23631976544857025
+        },
+        {
+          "word": " patah",
+          "start": 6.5,
+          "end": 6.74,
+          "probability": 0.48142941296100616
+        },
+        {
+          "word": " gihanya",
+          "start": 6.74,
+          "end": 6.98,
+          "probability": 0.5348359296719233
+        },
+        {
+          "word": " kok",
+          "start": 6.98,
+          "end": 7.16,
+          "probability": 0.46908092498779297
+        },
+        {
+          "word": " belum",
+          "start": 7.16,
+          "end": 7.38,
+          "probability": 0.9382500052452087
+        },
+        {
+          "word": " dibayarkan",
+          "start": 7.38,
+          "end": 7.82,
+          "probability": 0.9776790936787924
+        },
+        {
+          "word": " Pak?",
+          "start": 7.82,
+          "end": 8.12,
+          "probability": 0.44022661447525024
+        }
+      ]
+    },
+    {
+      "start": 9.64,
+      "end": 13.04,
+      "speaker": "CUSTOMER",
+      "text": " Ya ternyata belum ada semua. Apa bisa untuk perpanjangan?",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 9.64,
+          "end": 9.86,
+          "probability": 0.7666875123977661
+        },
+        {
+          "word": " ternyata",
+          "start": 9.86,
+          "end": 10.16,
+          "probability": 0.960076168179512
+        },
+        {
+          "word": " belum",
+          "start": 10.16,
+          "end": 10.52,
+          "probability": 0.9388956427574158
+        },
+        {
+          "word": " ada",
+          "start": 10.52,
+          "end": 11.02,
+          "probability": 0.9403645992279053
+        },
+        {
+          "word": " semua.",
+          "start": 11.02,
+          "end": 11.4,
+          "probability": 0.9844728112220764
+        },
+        {
+          "word": " Apa",
+          "start": 11.8,
+          "end": 11.98,
+          "probability": 0.6799717545509338
+        },
+        {
+          "word": " bisa",
+          "start": 11.98,
+          "end": 12.22,
+          "probability": 0.8984131217002869
+        },
+        {
+          "word": " untuk",
+          "start": 12.22,
+          "end": 12.46,
+          "probability": 0.9276179671287537
+        },
+        {
+          "word": " perpanjangan?",
+          "start": 12.46,
+          "end": 13.04,
+          "probability": 0.9443284869194031
+        }
+      ]
+    },
+    {
+      "start": 14.36,
+      "end": 16.76,
+      "speaker": "AGENT",
+      "text": " Perpanjangan bisa, perpanjangan aja dulu.",
+      "words": [
+        {
+          "word": " Perpanjangan",
+          "start": 14.36,
+          "end": 15.16,
+          "probability": 0.9818213880062103
+        },
+        {
+          "word": " bisa,",
+          "start": 15.16,
+          "end": 15.38,
+          "probability": 0.9566556215286255
+        },
+        {
+          "word": " perpanjangan",
+          "start": 15.68,
+          "end": 16.28,
+          "probability": 0.9716302752494812
+        },
+        {
+          "word": " aja",
+          "start": 16.28,
+          "end": 16.48,
+          "probability": 0.9719745516777039
+        },
+        {
+          "word": " dulu.",
+          "start": 16.48,
+          "end": 16.76,
+          "probability": 0.9677151441574097
+        }
+      ]
+    },
+    {
+      "start": 18.54,
+      "end": 18.94,
+      "speaker": "CUSTOMER",
+      "text": " Hmm.",
+      "words": [
+        {
+          "word": " Hmm.",
+          "start": 18.54,
+          "end": 18.94,
+          "probability": 0.11199773848056793
+        }
+      ]
+    },
+    {
+      "start": 19.9,
+      "end": 20.64,
+      "speaker": "CUSTOMER",
+      "text": " Caranya gimana?",
+      "words": [
+        {
+          "word": " Caranya",
+          "start": 19.9,
+          "end": 20.32,
+          "probability": 0.6635704636573792
+        },
+        {
+          "word": " gimana?",
+          "start": 20.32,
+          "end": 20.64,
+          "probability": 0.9790185391902924
+        }
+      ]
+    },
+    {
+      "start": 22.08,
+      "end": 26.42,
+      "speaker": "AGENT",
+      "text": " Di aplikasi Pak perpanjangan 231 ribu Pak.",
+      "words": [
+        {
+          "word": " Di",
+          "start": 22.08,
+          "end": 22.5,
+          "probability": 0.946885347366333
+        },
+        {
+          "word": " aplikasi",
+          "start": 22.5,
+          "end": 22.98,
+          "probability": 0.9394672910372416
+        },
+        {
+          "word": " Pak",
+          "start": 22.98,
+          "end": 23.18,
+          "probability": 0.809537947177887
+        },
+        {
+          "word": " perpanjangan",
+          "start": 23.18,
+          "end": 23.76,
+          "probability": 0.9262167662382126
+        },
+        {
+          "word": " 231",
+          "start": 23.76,
+          "end": 25.88,
+          "probability": 0.9091869592666626
+        },
+        {
+          "word": " ribu",
+          "start": 25.88,
+          "end": 26.24,
+          "probability": 0.8749178349971771
+        },
+        {
+          "word": " Pak.",
+          "start": 26.24,
+          "end": 26.42,
+          "probability": 0.8888015151023865
+        }
+      ]
+    },
+    {
+      "start": 28.000000000000004,
+      "end": 29.12,
+      "speaker": "AGENT",
+      "text": " Ha? 221?",
+      "words": [
+        {
+          "word": " Ha?",
+          "start": 28.000000000000004,
+          "end": 28.560000000000002,
+          "probability": 0.014690712094306946
+        },
+        {
+          "word": " 221?",
+          "start": 28.560000000000002,
+          "end": 29.12,
+          "probability": 0.5552299618721008
+        }
+      ]
+    },
+    {
+      "start": 29.86,
+      "end": 31.52,
+      "speaker": "CUSTOMER",
+      "text": " Iya. Untuk perpanjangan.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 29.86,
+          "end": 30.38,
+          "probability": 0.8023805022239685
+        },
+        {
+          "word": " Untuk",
+          "start": 30.62,
+          "end": 30.88,
+          "probability": 0.9835945665836334
+        },
+        {
+          "word": " perpanjangan.",
+          "start": 30.88,
+          "end": 31.52,
+          "probability": 0.9369604140520096
+        }
+      ]
+    },
+    {
+      "start": 32.84,
+      "end": 34.3,
+      "speaker": "AGENT",
+      "text": " Gak bisa kurang.",
+      "words": [
+        {
+          "word": " Gak",
+          "start": 32.84,
+          "end": 33.4,
+          "probability": 0.5417620092630386
+        },
+        {
+          "word": " bisa",
+          "start": 33.4,
+          "end": 33.68,
+          "probability": 0.9892497062683105
+        },
+        {
+          "word": " kurang.",
+          "start": 33.68,
+          "end": 34.3,
+          "probability": 0.9781946539878845
+        }
+      ]
+    },
+    {
+      "start": 35.46,
+      "end": 39.26,
+      "speaker": "CUSTOMER",
+      "text": " Gak bisa Pak itu udah kutentuk pendari sistem kaminya Pak.",
+      "words": [
+        {
+          "word": " Gak",
+          "start": 35.46,
+          "end": 35.9,
+          "probability": 0.911602109670639
+        },
+        {
+          "word": " bisa",
+          "start": 35.9,
+          "end": 36.12,
+          "probability": 0.9959843158721924
+        },
+        {
+          "word": " Pak",
+          "start": 36.12,
+          "end": 36.28,
+          "probability": 0.19525176286697388
+        },
+        {
+          "word": " itu",
+          "start": 36.28,
+          "end": 36.46,
+          "probability": 0.5876535177230835
+        },
+        {
+          "word": " udah",
+          "start": 36.46,
+          "end": 36.78,
+          "probability": 0.8848667740821838
+        },
+        {
+          "word": " kutentuk",
+          "start": 36.78,
+          "end": 37.68,
+          "probability": 0.42210110649466515
+        },
+        {
+          "word": " pendari",
+          "start": 37.68,
+          "end": 38.02,
+          "probability": 0.547632485628128
+        },
+        {
+          "word": " sistem",
+          "start": 38.02,
+          "end": 38.28,
+          "probability": 0.8172081112861633
+        },
+        {
+          "word": " kaminya",
+          "start": 38.28,
+          "end": 39.06,
+          "probability": 0.6939009974400202
+        },
+        {
+          "word": " Pak.",
+          "start": 39.06,
+          "end": 39.26,
+          "probability": 0.9166994094848633
+        }
+      ]
+    },
+    {
+      "start": 40.8,
+      "end": 42.74,
+      "speaker": "CUSTOMER",
+      "text": " Ya siap Pak, nanti saya usahakan dulu ya.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 40.8,
+          "end": 41.0,
+          "probability": 0.21871230006217957
+        },
+        {
+          "word": " siap",
+          "start": 41.0,
+          "end": 41.28,
+          "probability": 0.45153068751096725
+        },
+        {
+          "word": " Pak,",
+          "start": 41.28,
+          "end": 41.42,
+          "probability": 0.8085189461708069
+        },
+        {
+          "word": " nanti",
+          "start": 41.56,
+          "end": 41.86,
+          "probability": 0.9574761390686035
+        },
+        {
+          "word": " saya",
+          "start": 41.86,
+          "end": 42.08,
+          "probability": 0.9564202427864075
+        },
+        {
+          "word": " usahakan",
+          "start": 42.08,
+          "end": 42.42,
+          "probability": 0.8144576549530029
+        },
+        {
+          "word": " dulu",
+          "start": 42.42,
+          "end": 42.58,
+          "probability": 0.9180608987808228
+        },
+        {
+          "word": " ya.",
+          "start": 42.58,
+          "end": 42.74,
+          "probability": 0.845528781414032
+        }
+      ]
+    },
+    {
+      "start": 44.34,
+      "end": 46.32,
+      "speaker": "CUSTOMER",
+      "text": " Ditunggu Pak, tadi kan dulu bilangnya jam 5.",
+      "words": [
+        {
+          "word": " Ditunggu",
+          "start": 44.34,
+          "end": 44.9,
+          "probability": 0.5535793974995613
+        },
+        {
+          "word": " Pak,",
+          "start": 44.9,
+          "end": 45.06,
+          "probability": 0.921140193939209
+        },
+        {
+          "word": " tadi",
+          "start": 45.16,
+          "end": 45.28,
+          "probability": 0.9771774411201477
+        },
+        {
+          "word": " kan",
+          "start": 45.28,
+          "end": 45.42,
+          "probability": 0.9876543879508972
+        },
+        {
+          "word": " dulu",
+          "start": 45.42,
+          "end": 45.56,
+          "probability": 0.12971754372119904
+        },
+        {
+          "word": " bilangnya",
+          "start": 45.56,
+          "end": 45.94,
+          "probability": 0.9205245971679688
+        },
+        {
+          "word": " jam",
+          "start": 45.94,
+          "end": 46.1,
+          "probability": 0.5988820195198059
+        },
+        {
+          "word": " 5.",
+          "start": 46.1,
+          "end": 46.32,
+          "probability": 0.8705581426620483
+        }
+      ]
+    },
+    {
+      "start": 47.44,
+      "end": 48.24,
+      "speaker": "CUSTOMER",
+      "text": " Ya ya siap.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 47.44,
+          "end": 47.76,
+          "probability": 0.5942290425300598
+        },
+        {
+          "word": " ya",
+          "start": 47.76,
+          "end": 47.98,
+          "probability": 0.3609231114387512
+        },
+        {
+          "word": " siap.",
+          "start": 47.98,
+          "end": 48.24,
+          "probability": 0.5935111790895462
+        }
+      ]
+    }
+  ],
+  "full_text": " Fawal Selamat Soreba Penanjib Muhammad Disuk.  Ya Soreba.  Ya patah gihanya kok belum dibayarkan Pak?  Ya ternyata belum ada semua. Apa bisa untuk perpanjangan?  Perpanjangan bisa, perpanjangan aja dulu.  Hmm.  Caranya gimana?  Di aplikasi Pak perpanjangan 231 ribu Pak.  Ha? 221?  Iya. Untuk perpanjangan.  Gak bisa kurang.  Gak bisa Pak itu udah kutentuk pendari sistem kaminya Pak.  Ya siap Pak, nanti saya usahakan dulu ya.  Ditunggu Pak, tadi kan dulu bilangnya jam 5.  Ya ya siap."
+}

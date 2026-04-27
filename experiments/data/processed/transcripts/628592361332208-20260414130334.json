@@ -1,0 +1,319 @@
+{
+  "case_id": "628592361332208-20260414130334",
+  "file_name": "628592361332208-20260414130334.mp3",
+  "transcript": [
+    {
+      "start": 2.02,
+      "end": 2.74,
+      "speaker": "AGENT",
+      "text": " Halo, Pak.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 2.02,
+          "end": 2.52,
+          "probability": 0.4206544756889343
+        },
+        {
+          "word": " Pak.",
+          "start": 2.64,
+          "end": 2.74,
+          "probability": 0.597395658493042
+        }
+      ]
+    },
+    {
+      "start": 3.12,
+      "end": 3.5,
+      "speaker": "AGENT",
+      "text": " Halo, Pak.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 3.12,
+          "end": 3.32,
+          "probability": 0.15619908273220062
+        },
+        {
+          "word": " Pak.",
+          "start": 3.42,
+          "end": 3.5,
+          "probability": 0.9943230152130127
+        }
+      ]
+    },
+    {
+      "start": 5.56,
+      "end": 7.86,
+      "speaker": "AGENT",
+      "text": " Parah mati pemerana bisa keperaktif gak, Pak?",
+      "words": [
+        {
+          "word": " Parah",
+          "start": 5.56,
+          "end": 6.06,
+          "probability": 0.8500751852989197
+        },
+        {
+          "word": " mati",
+          "start": 6.06,
+          "end": 6.4,
+          "probability": 0.28654614835977554
+        },
+        {
+          "word": " pemerana",
+          "start": 6.4,
+          "end": 6.68,
+          "probability": 0.3914557347695033
+        },
+        {
+          "word": " bisa",
+          "start": 6.68,
+          "end": 6.92,
+          "probability": 0.7133939266204834
+        },
+        {
+          "word": " keperaktif",
+          "start": 6.92,
+          "end": 7.52,
+          "probability": 0.7115220576524734
+        },
+        {
+          "word": " gak,",
+          "start": 7.52,
+          "end": 7.7,
+          "probability": 0.11916206032037735
+        },
+        {
+          "word": " Pak?",
+          "start": 7.82,
+          "end": 7.86,
+          "probability": 0.9673075079917908
+        }
+      ]
+    },
+    {
+      "start": 10.54,
+      "end": 11.64,
+      "speaker": "CUSTOMER",
+      "text": " Saya mau tanya, Pak.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 10.54,
+          "end": 11.04,
+          "probability": 0.8146651387214661
+        },
+        {
+          "word": " mau",
+          "start": 11.04,
+          "end": 11.18,
+          "probability": 0.9574533700942993
+        },
+        {
+          "word": " tanya,",
+          "start": 11.18,
+          "end": 11.44,
+          "probability": 0.9972040355205536
+        },
+        {
+          "word": " Pak.",
+          "start": 11.58,
+          "end": 11.64,
+          "probability": 0.9812542200088501
+        }
+      ]
+    },
+    {
+      "start": 11.82,
+      "end": 14.44,
+      "speaker": "CUSTOMER",
+      "text": " Dana Bapak yang di Rp860.000 sudah dipakai belum?",
+      "words": [
+        {
+          "word": " Dana",
+          "start": 11.82,
+          "end": 11.98,
+          "probability": 0.7233349084854126
+        },
+        {
+          "word": " Bapak",
+          "start": 11.98,
+          "end": 12.28,
+          "probability": 0.8906925121943156
+        },
+        {
+          "word": " yang",
+          "start": 12.28,
+          "end": 12.48,
+          "probability": 0.8852640390396118
+        },
+        {
+          "word": " di",
+          "start": 12.48,
+          "end": 12.64,
+          "probability": 0.39004960656166077
+        },
+        {
+          "word": " Rp860",
+          "start": 12.64,
+          "end": 13.28,
+          "probability": 0.6235801801085472
+        },
+        {
+          "word": ".000",
+          "start": 13.28,
+          "end": 13.76,
+          "probability": 0.7834434509277344
+        },
+        {
+          "word": " sudah",
+          "start": 13.76,
+          "end": 13.94,
+          "probability": 0.6133650541305542
+        },
+        {
+          "word": " dipakai",
+          "start": 13.94,
+          "end": 14.24,
+          "probability": 0.8116455872853597
+        },
+        {
+          "word": " belum?",
+          "start": 14.24,
+          "end": 14.44,
+          "probability": 0.8633882999420166
+        }
+      ]
+    },
+    {
+      "start": 17.1,
+      "end": 19.06,
+      "speaker": "AGENT",
+      "text": " Kalau belum dipakai, kembalikan sekarang.",
+      "words": [
+        {
+          "word": " Kalau",
+          "start": 17.1,
+          "end": 17.6,
+          "probability": 0.9211710095405579
+        },
+        {
+          "word": " belum",
+          "start": 17.6,
+          "end": 17.82,
+          "probability": 0.988074004650116
+        },
+        {
+          "word": " dipakai,",
+          "start": 17.82,
+          "end": 18.1,
+          "probability": 0.989321211973826
+        },
+        {
+          "word": " kembalikan",
+          "start": 18.2,
+          "end": 18.58,
+          "probability": 0.952305257320404
+        },
+        {
+          "word": " sekarang.",
+          "start": 18.58,
+          "end": 19.06,
+          "probability": 0.9771629571914673
+        }
+      ]
+    },
+    {
+      "start": 22.9,
+      "end": 24.16,
+      "speaker": "CUSTOMER",
+      "text": " Bisa keperaktif? Tidak.",
+      "words": [
+        {
+          "word": " Bisa",
+          "start": 22.9,
+          "end": 23.4,
+          "probability": 0.9503956735134125
+        },
+        {
+          "word": " keperaktif?",
+          "start": 23.4,
+          "end": 23.82,
+          "probability": 0.99322809278965
+        },
+        {
+          "word": " Tidak.",
+          "start": 23.96,
+          "end": 24.16,
+          "probability": 0.9575760364532471
+        }
+      ]
+    },
+    {
+      "start": 24.58,
+      "end": 26.1,
+      "speaker": "CUSTOMER",
+      "text": " Saya bisa telepon nitri aku gak, Pak?",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 24.58,
+          "end": 24.78,
+          "probability": 0.9443386197090149
+        },
+        {
+          "word": " bisa",
+          "start": 24.78,
+          "end": 24.92,
+          "probability": 0.9356194734573364
+        },
+        {
+          "word": " telepon",
+          "start": 24.92,
+          "end": 25.22,
+          "probability": 0.5720503429571787
+        },
+        {
+          "word": " nitri",
+          "start": 25.22,
+          "end": 25.5,
+          "probability": 0.39891014248132706
+        },
+        {
+          "word": " aku",
+          "start": 25.5,
+          "end": 25.76,
+          "probability": 0.222230464220047
+        },
+        {
+          "word": " gak,",
+          "start": 25.76,
+          "end": 25.88,
+          "probability": 0.5188453197479248
+        },
+        {
+          "word": " Pak?",
+          "start": 26.02,
+          "end": 26.1,
+          "probability": 0.9900918006896973
+        }
+      ]
+    },
+    {
+      "start": 27.720000000000002,
+      "end": 29.12,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 27.720000000000002,
+          "end": 29.12,
+          "probability": 0.23969842493534088
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo, Pak.  Halo, Pak.  Parah mati pemerana bisa keperaktif gak, Pak?  Saya mau tanya, Pak.  Dana Bapak yang di Rp860.000 sudah dipakai belum?  Kalau belum dipakai, kembalikan sekarang.  Bisa keperaktif? Tidak.  Saya bisa telepon nitri aku gak, Pak?  Halo?"
+}

@@ -1,0 +1,1335 @@
+{
+  "case_id": "628123786631808-20260419104006",
+  "file_name": "628123786631808-20260419104006.mp3",
+  "transcript": [
+    {
+      "start": 1.7799999999999958,
+      "end": 3.66,
+      "text": " Halo selamat pagi.",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 1.7799999999999958,
+          "end": 2.58,
+          "probability": 0.021903544664382935
+        },
+        {
+          "word": " selamat",
+          "start": 2.58,
+          "end": 2.98,
+          "probability": 0.5389401614665985
+        },
+        {
+          "word": " pagi.",
+          "start": 2.98,
+          "end": 3.66,
+          "probability": 0.9972745180130005
+        }
+      ]
+    },
+    {
+      "start": 5.16,
+      "end": 5.56,
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 5.16,
+          "end": 5.56,
+          "probability": 0.35826483368873596
+        }
+      ]
+    },
+    {
+      "start": 6.84,
+      "end": 11.0,
+      "text": " Gak ini saya dari ekstra uang noyas, uangnya sudah ada belum pak.",
+      "words": [
+        {
+          "word": " Gak",
+          "start": 6.84,
+          "end": 7.48,
+          "probability": 0.3995852768421173
+        },
+        {
+          "word": " ini",
+          "start": 7.48,
+          "end": 7.66,
+          "probability": 0.6909382939338684
+        },
+        {
+          "word": " saya",
+          "start": 7.66,
+          "end": 7.84,
+          "probability": 0.8814982771873474
+        },
+        {
+          "word": " dari",
+          "start": 7.84,
+          "end": 8.08,
+          "probability": 0.9773097038269043
+        },
+        {
+          "word": " ekstra",
+          "start": 8.08,
+          "end": 8.64,
+          "probability": 0.7261745780706406
+        },
+        {
+          "word": " uang",
+          "start": 8.64,
+          "end": 8.98,
+          "probability": 0.8971357941627502
+        },
+        {
+          "word": " noyas,",
+          "start": 8.98,
+          "end": 9.46,
+          "probability": 0.48653995990753174
+        },
+        {
+          "word": " uangnya",
+          "start": 9.64,
+          "end": 9.96,
+          "probability": 0.988617479801178
+        },
+        {
+          "word": " sudah",
+          "start": 9.96,
+          "end": 10.14,
+          "probability": 0.9659320712089539
+        },
+        {
+          "word": " ada",
+          "start": 10.14,
+          "end": 10.34,
+          "probability": 0.96591717004776
+        },
+        {
+          "word": " belum",
+          "start": 10.34,
+          "end": 10.58,
+          "probability": 0.44167840480804443
+        },
+        {
+          "word": " pak.",
+          "start": 10.58,
+          "end": 11.0,
+          "probability": 0.722717821598053
+        }
+      ]
+    },
+    {
+      "start": 13.66,
+      "end": 25.38,
+      "text": " Uangnya sudah ada berapa masak saat tidak ada sepencari pun?",
+      "words": [
+        {
+          "word": " Uangnya",
+          "start": 13.66,
+          "end": 14.46,
+          "probability": 0.39856353402137756
+        },
+        {
+          "word": " sudah",
+          "start": 14.46,
+          "end": 15.16,
+          "probability": 0.8028541803359985
+        },
+        {
+          "word": " ada",
+          "start": 15.16,
+          "end": 20.98,
+          "probability": 0.8643150329589844
+        },
+        {
+          "word": " berapa",
+          "start": 20.98,
+          "end": 23.72,
+          "probability": 0.9482427835464478
+        },
+        {
+          "word": " masak",
+          "start": 23.72,
+          "end": 24.12,
+          "probability": 0.42020978033542633
+        },
+        {
+          "word": " saat",
+          "start": 24.12,
+          "end": 24.18,
+          "probability": 0.11566941440105438
+        },
+        {
+          "word": " tidak",
+          "start": 24.18,
+          "end": 24.3,
+          "probability": 0.8844085335731506
+        },
+        {
+          "word": " ada",
+          "start": 24.3,
+          "end": 24.6,
+          "probability": 0.9889028668403625
+        },
+        {
+          "word": " sepencari",
+          "start": 24.6,
+          "end": 25.16,
+          "probability": 0.3534044288098812
+        },
+        {
+          "word": " pun?",
+          "start": 25.16,
+          "end": 25.38,
+          "probability": 0.9765437245368958
+        }
+      ]
+    },
+    {
+      "start": 27.459999999999997,
+      "end": 30.62,
+      "text": " Rindanya saya perpanjang, saya kurang 50 lagi.",
+      "words": [
+        {
+          "word": " Rindanya",
+          "start": 27.459999999999997,
+          "end": 28.06,
+          "probability": 0.41620322689414024
+        },
+        {
+          "word": " saya",
+          "start": 28.06,
+          "end": 28.24,
+          "probability": 0.8646348714828491
+        },
+        {
+          "word": " perpanjang,",
+          "start": 28.24,
+          "end": 28.78,
+          "probability": 0.8326351046562195
+        },
+        {
+          "word": " saya",
+          "start": 28.96,
+          "end": 29.1,
+          "probability": 0.938742458820343
+        },
+        {
+          "word": " kurang",
+          "start": 29.1,
+          "end": 29.42,
+          "probability": 0.9659228622913361
+        },
+        {
+          "word": " 50",
+          "start": 29.42,
+          "end": 30.3,
+          "probability": 0.8473419547080994
+        },
+        {
+          "word": " lagi.",
+          "start": 30.3,
+          "end": 30.62,
+          "probability": 0.9411473274230957
+        }
+      ]
+    },
+    {
+      "start": 31.98,
+      "end": 32.64,
+      "text": " Oh kurang 50?",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 31.98,
+          "end": 32.0,
+          "probability": 0.09237565100193024
+        },
+        {
+          "word": " kurang",
+          "start": 32.0,
+          "end": 32.2,
+          "probability": 0.7009878903627396
+        },
+        {
+          "word": " 50?",
+          "start": 32.2,
+          "end": 32.64,
+          "probability": 0.8550967574119568
+        }
+      ]
+    },
+    {
+      "start": 33.24,
+      "end": 33.34,
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 33.24,
+          "end": 33.34,
+          "probability": 0.16476158797740936
+        }
+      ]
+    },
+    {
+      "start": 33.58,
+      "end": 34.22,
+      "text": " Anda bisa itu?",
+      "words": [
+        {
+          "word": " Anda",
+          "start": 33.58,
+          "end": 33.84,
+          "probability": 0.4679547846317291
+        },
+        {
+          "word": " bisa",
+          "start": 33.84,
+          "end": 34.08,
+          "probability": 0.9289358258247375
+        },
+        {
+          "word": " itu?",
+          "start": 34.08,
+          "end": 34.22,
+          "probability": 0.605400562286377
+        }
+      ]
+    },
+    {
+      "start": 34.42,
+      "end": 35.02,
+      "text": " Perpanjang.",
+      "words": [
+        {
+          "word": " Perpanjang.",
+          "start": 34.42,
+          "end": 35.02,
+          "probability": 0.6894139771660169
+        }
+      ]
+    },
+    {
+      "start": 35.28,
+      "end": 35.36,
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 35.28,
+          "end": 35.36,
+          "probability": 0.6305660009384155
+        }
+      ]
+    },
+    {
+      "start": 36.52,
+      "end": 41.16,
+      "text": " Itu Bapak bisa, itu cari 10.000 dari 5 orang ya.",
+      "words": [
+        {
+          "word": " Itu",
+          "start": 36.52,
+          "end": 36.96,
+          "probability": 0.5786926746368408
+        },
+        {
+          "word": " Bapak",
+          "start": 36.96,
+          "end": 37.36,
+          "probability": 0.7607447902361552
+        },
+        {
+          "word": " bisa,",
+          "start": 37.36,
+          "end": 37.68,
+          "probability": 0.97773677110672
+        },
+        {
+          "word": " itu",
+          "start": 37.94,
+          "end": 38.12,
+          "probability": 0.7937498688697815
+        },
+        {
+          "word": " cari",
+          "start": 38.12,
+          "end": 38.66,
+          "probability": 0.8050460517406464
+        },
+        {
+          "word": " 10",
+          "start": 38.66,
+          "end": 39.04,
+          "probability": 0.7819238305091858
+        },
+        {
+          "word": ".000",
+          "start": 39.04,
+          "end": 39.64,
+          "probability": 0.7163059860467911
+        },
+        {
+          "word": " dari",
+          "start": 39.64,
+          "end": 40.0,
+          "probability": 0.9508093595504761
+        },
+        {
+          "word": " 5",
+          "start": 40.0,
+          "end": 40.42,
+          "probability": 0.9352307915687561
+        },
+        {
+          "word": " orang",
+          "start": 40.42,
+          "end": 40.8,
+          "probability": 0.9982432126998901
+        },
+        {
+          "word": " ya.",
+          "start": 40.8,
+          "end": 41.16,
+          "probability": 0.3820899724960327
+        }
+      ]
+    },
+    {
+      "start": 41.32,
+      "end": 43.379999999999995,
+      "text": " Itu pasti 4.000.",
+      "words": [
+        {
+          "word": " Itu",
+          "start": 41.32,
+          "end": 41.5,
+          "probability": 0.9497570991516113
+        },
+        {
+          "word": " pasti",
+          "start": 41.5,
+          "end": 41.88,
+          "probability": 0.9902286529541016
+        },
+        {
+          "word": " 4",
+          "start": 41.88,
+          "end": 43.1,
+          "probability": 0.11703354865312576
+        },
+        {
+          "word": ".000.",
+          "start": 43.1,
+          "end": 43.400000000000006,
+          "probability": 0.7459733188152313
+        }
+      ]
+    },
+    {
+      "start": 44.16,
+      "end": 48.7,
+      "text": " Ya maksud saya orang tidak bisa nginjemir Anda 10.000 ketama luar di kawal ya.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 44.16,
+          "end": 44.3,
+          "probability": 0.4025072157382965
+        },
+        {
+          "word": " maksud",
+          "start": 44.3,
+          "end": 44.52,
+          "probability": 0.4676786959171295
+        },
+        {
+          "word": " saya",
+          "start": 44.52,
+          "end": 44.7,
+          "probability": 0.6620208621025085
+        },
+        {
+          "word": " orang",
+          "start": 44.7,
+          "end": 45.02,
+          "probability": 0.30271264910697937
+        },
+        {
+          "word": " tidak",
+          "start": 45.02,
+          "end": 45.28,
+          "probability": 0.0993163138628006
+        },
+        {
+          "word": " bisa",
+          "start": 45.28,
+          "end": 45.5,
+          "probability": 0.9908912777900696
+        },
+        {
+          "word": " nginjemir",
+          "start": 45.5,
+          "end": 46.1,
+          "probability": 0.31609376706182957
+        },
+        {
+          "word": " Anda",
+          "start": 46.1,
+          "end": 46.34,
+          "probability": 0.6365998983383179
+        },
+        {
+          "word": " 10",
+          "start": 46.34,
+          "end": 46.66,
+          "probability": 0.9580202102661133
+        },
+        {
+          "word": ".000",
+          "start": 46.66,
+          "end": 47.16,
+          "probability": 0.9928004443645477
+        },
+        {
+          "word": " ketama",
+          "start": 47.16,
+          "end": 47.98,
+          "probability": 0.34323926270008087
+        },
+        {
+          "word": " luar",
+          "start": 47.98,
+          "end": 48.26,
+          "probability": 0.5629886984825134
+        },
+        {
+          "word": " di",
+          "start": 48.26,
+          "end": 48.36,
+          "probability": 0.07569055259227753
+        },
+        {
+          "word": " kawal",
+          "start": 48.36,
+          "end": 48.48,
+          "probability": 0.5056804815928141
+        },
+        {
+          "word": " ya.",
+          "start": 48.48,
+          "end": 48.7,
+          "probability": 0.7468264102935791
+        }
+      ]
+    },
+    {
+      "start": 48.94,
+      "end": 49.08,
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 48.94,
+          "end": 49.08,
+          "probability": 0.6304222941398621
+        }
+      ]
+    },
+    {
+      "start": 49.76,
+      "end": 51.98,
+      "text": " Oke, jadi saya ini 12 sudah dibayarkan ya.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 49.76,
+          "end": 50.12,
+          "probability": 0.8321717977523804
+        },
+        {
+          "word": " jadi",
+          "start": 50.32,
+          "end": 50.34,
+          "probability": 0.14358747005462646
+        },
+        {
+          "word": " saya",
+          "start": 50.34,
+          "end": 50.52,
+          "probability": 0.9769147634506226
+        },
+        {
+          "word": " ini",
+          "start": 50.52,
+          "end": 50.7,
+          "probability": 0.32070136070251465
+        },
+        {
+          "word": " 12",
+          "start": 50.7,
+          "end": 51.0,
+          "probability": 0.3821376860141754
+        },
+        {
+          "word": " sudah",
+          "start": 51.0,
+          "end": 51.34,
+          "probability": 0.17906887829303741
+        },
+        {
+          "word": " dibayarkan",
+          "start": 51.34,
+          "end": 51.72,
+          "probability": 0.6286797523498535
+        },
+        {
+          "word": " ya.",
+          "start": 51.72,
+          "end": 51.98,
+          "probability": 0.8007701635360718
+        }
+      ]
+    },
+    {
+      "start": 53.56,
+      "end": 54.16,
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 53.56,
+          "end": 54.16,
+          "probability": 0.7979575991630554
+        }
+      ]
+    },
+    {
+      "start": 55.160000000000004,
+      "end": 57.72,
+      "text": " Harus, saya tunggu pemain orangnya.",
+      "words": [
+        {
+          "word": " Harus,",
+          "start": 55.160000000000004,
+          "end": 56.06,
+          "probability": 0.546525377780199
+        },
+        {
+          "word": " saya",
+          "start": 56.42,
+          "end": 56.64,
+          "probability": 0.8516730070114136
+        },
+        {
+          "word": " tunggu",
+          "start": 56.64,
+          "end": 56.84,
+          "probability": 0.9816266000270844
+        },
+        {
+          "word": " pemain",
+          "start": 56.84,
+          "end": 57.16,
+          "probability": 0.26360689103603363
+        },
+        {
+          "word": " orangnya.",
+          "start": 57.16,
+          "end": 57.72,
+          "probability": 0.5325514189898968
+        }
+      ]
+    },
+    {
+      "start": 58.22,
+      "end": 58.94,
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 58.22,
+          "end": 58.94,
+          "probability": 0.10611355304718018
+        }
+      ]
+    }
+  ],
+  "transcript_with_speakers": [
+    {
+      "start": 1.7799999999999958,
+      "end": 3.66,
+      "speaker": "AGENT",
+      "text": " Halo selamat pagi.",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 1.7799999999999958,
+          "end": 2.58,
+          "probability": 0.021903544664382935
+        },
+        {
+          "word": " selamat",
+          "start": 2.58,
+          "end": 2.98,
+          "probability": 0.5389401614665985
+        },
+        {
+          "word": " pagi.",
+          "start": 2.98,
+          "end": 3.66,
+          "probability": 0.9972745180130005
+        }
+      ]
+    },
+    {
+      "start": 5.16,
+      "end": 5.56,
+      "speaker": "CUSTOMER",
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 5.16,
+          "end": 5.56,
+          "probability": 0.35826483368873596
+        }
+      ]
+    },
+    {
+      "start": 6.84,
+      "end": 11.0,
+      "speaker": "CUSTOMER",
+      "text": " Gak ini saya dari ekstra uang noyas, uangnya sudah ada belum pak.",
+      "words": [
+        {
+          "word": " Gak",
+          "start": 6.84,
+          "end": 7.48,
+          "probability": 0.3995852768421173
+        },
+        {
+          "word": " ini",
+          "start": 7.48,
+          "end": 7.66,
+          "probability": 0.6909382939338684
+        },
+        {
+          "word": " saya",
+          "start": 7.66,
+          "end": 7.84,
+          "probability": 0.8814982771873474
+        },
+        {
+          "word": " dari",
+          "start": 7.84,
+          "end": 8.08,
+          "probability": 0.9773097038269043
+        },
+        {
+          "word": " ekstra",
+          "start": 8.08,
+          "end": 8.64,
+          "probability": 0.7261745780706406
+        },
+        {
+          "word": " uang",
+          "start": 8.64,
+          "end": 8.98,
+          "probability": 0.8971357941627502
+        },
+        {
+          "word": " noyas,",
+          "start": 8.98,
+          "end": 9.46,
+          "probability": 0.48653995990753174
+        },
+        {
+          "word": " uangnya",
+          "start": 9.64,
+          "end": 9.96,
+          "probability": 0.988617479801178
+        },
+        {
+          "word": " sudah",
+          "start": 9.96,
+          "end": 10.14,
+          "probability": 0.9659320712089539
+        },
+        {
+          "word": " ada",
+          "start": 10.14,
+          "end": 10.34,
+          "probability": 0.96591717004776
+        },
+        {
+          "word": " belum",
+          "start": 10.34,
+          "end": 10.58,
+          "probability": 0.44167840480804443
+        },
+        {
+          "word": " pak.",
+          "start": 10.58,
+          "end": 11.0,
+          "probability": 0.722717821598053
+        }
+      ]
+    },
+    {
+      "start": 13.66,
+      "end": 25.38,
+      "speaker": "CUSTOMER",
+      "text": " Uangnya sudah ada berapa masak saat tidak ada sepencari pun?",
+      "words": [
+        {
+          "word": " Uangnya",
+          "start": 13.66,
+          "end": 14.46,
+          "probability": 0.39856353402137756
+        },
+        {
+          "word": " sudah",
+          "start": 14.46,
+          "end": 15.16,
+          "probability": 0.8028541803359985
+        },
+        {
+          "word": " ada",
+          "start": 15.16,
+          "end": 20.98,
+          "probability": 0.8643150329589844
+        },
+        {
+          "word": " berapa",
+          "start": 20.98,
+          "end": 23.72,
+          "probability": 0.9482427835464478
+        },
+        {
+          "word": " masak",
+          "start": 23.72,
+          "end": 24.12,
+          "probability": 0.42020978033542633
+        },
+        {
+          "word": " saat",
+          "start": 24.12,
+          "end": 24.18,
+          "probability": 0.11566941440105438
+        },
+        {
+          "word": " tidak",
+          "start": 24.18,
+          "end": 24.3,
+          "probability": 0.8844085335731506
+        },
+        {
+          "word": " ada",
+          "start": 24.3,
+          "end": 24.6,
+          "probability": 0.9889028668403625
+        },
+        {
+          "word": " sepencari",
+          "start": 24.6,
+          "end": 25.16,
+          "probability": 0.3534044288098812
+        },
+        {
+          "word": " pun?",
+          "start": 25.16,
+          "end": 25.38,
+          "probability": 0.9765437245368958
+        }
+      ]
+    },
+    {
+      "start": 27.459999999999997,
+      "end": 30.62,
+      "speaker": "CUSTOMER",
+      "text": " Rindanya saya perpanjang, saya kurang 50 lagi.",
+      "words": [
+        {
+          "word": " Rindanya",
+          "start": 27.459999999999997,
+          "end": 28.06,
+          "probability": 0.41620322689414024
+        },
+        {
+          "word": " saya",
+          "start": 28.06,
+          "end": 28.24,
+          "probability": 0.8646348714828491
+        },
+        {
+          "word": " perpanjang,",
+          "start": 28.24,
+          "end": 28.78,
+          "probability": 0.8326351046562195
+        },
+        {
+          "word": " saya",
+          "start": 28.96,
+          "end": 29.1,
+          "probability": 0.938742458820343
+        },
+        {
+          "word": " kurang",
+          "start": 29.1,
+          "end": 29.42,
+          "probability": 0.9659228622913361
+        },
+        {
+          "word": " 50",
+          "start": 29.42,
+          "end": 30.3,
+          "probability": 0.8473419547080994
+        },
+        {
+          "word": " lagi.",
+          "start": 30.3,
+          "end": 30.62,
+          "probability": 0.9411473274230957
+        }
+      ]
+    },
+    {
+      "start": 31.98,
+      "end": 32.64,
+      "speaker": "CUSTOMER",
+      "text": " Oh kurang 50?",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 31.98,
+          "end": 32.0,
+          "probability": 0.09237565100193024
+        },
+        {
+          "word": " kurang",
+          "start": 32.0,
+          "end": 32.2,
+          "probability": 0.7009878903627396
+        },
+        {
+          "word": " 50?",
+          "start": 32.2,
+          "end": 32.64,
+          "probability": 0.8550967574119568
+        }
+      ]
+    },
+    {
+      "start": 33.24,
+      "end": 33.34,
+      "speaker": "CUSTOMER",
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 33.24,
+          "end": 33.34,
+          "probability": 0.16476158797740936
+        }
+      ]
+    },
+    {
+      "start": 33.58,
+      "end": 34.22,
+      "speaker": "CUSTOMER",
+      "text": " Anda bisa itu?",
+      "words": [
+        {
+          "word": " Anda",
+          "start": 33.58,
+          "end": 33.84,
+          "probability": 0.4679547846317291
+        },
+        {
+          "word": " bisa",
+          "start": 33.84,
+          "end": 34.08,
+          "probability": 0.9289358258247375
+        },
+        {
+          "word": " itu?",
+          "start": 34.08,
+          "end": 34.22,
+          "probability": 0.605400562286377
+        }
+      ]
+    },
+    {
+      "start": 34.42,
+      "end": 35.02,
+      "speaker": "AGENT",
+      "text": " Perpanjang.",
+      "words": [
+        {
+          "word": " Perpanjang.",
+          "start": 34.42,
+          "end": 35.02,
+          "probability": 0.6894139771660169
+        }
+      ]
+    },
+    {
+      "start": 35.28,
+      "end": 35.36,
+      "speaker": "CUSTOMER",
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 35.28,
+          "end": 35.36,
+          "probability": 0.6305660009384155
+        }
+      ]
+    },
+    {
+      "start": 36.52,
+      "end": 41.16,
+      "speaker": "AGENT",
+      "text": " Itu Bapak bisa, itu cari 10.000 dari 5 orang ya.",
+      "words": [
+        {
+          "word": " Itu",
+          "start": 36.52,
+          "end": 36.96,
+          "probability": 0.5786926746368408
+        },
+        {
+          "word": " Bapak",
+          "start": 36.96,
+          "end": 37.36,
+          "probability": 0.7607447902361552
+        },
+        {
+          "word": " bisa,",
+          "start": 37.36,
+          "end": 37.68,
+          "probability": 0.97773677110672
+        },
+        {
+          "word": " itu",
+          "start": 37.94,
+          "end": 38.12,
+          "probability": 0.7937498688697815
+        },
+        {
+          "word": " cari",
+          "start": 38.12,
+          "end": 38.66,
+          "probability": 0.8050460517406464
+        },
+        {
+          "word": " 10",
+          "start": 38.66,
+          "end": 39.04,
+          "probability": 0.7819238305091858
+        },
+        {
+          "word": ".000",
+          "start": 39.04,
+          "end": 39.64,
+          "probability": 0.7163059860467911
+        },
+        {
+          "word": " dari",
+          "start": 39.64,
+          "end": 40.0,
+          "probability": 0.9508093595504761
+        },
+        {
+          "word": " 5",
+          "start": 40.0,
+          "end": 40.42,
+          "probability": 0.9352307915687561
+        },
+        {
+          "word": " orang",
+          "start": 40.42,
+          "end": 40.8,
+          "probability": 0.9982432126998901
+        },
+        {
+          "word": " ya.",
+          "start": 40.8,
+          "end": 41.16,
+          "probability": 0.3820899724960327
+        }
+      ]
+    },
+    {
+      "start": 41.32,
+      "end": 43.379999999999995,
+      "speaker": "CUSTOMER",
+      "text": " Itu pasti 4.000.",
+      "words": [
+        {
+          "word": " Itu",
+          "start": 41.32,
+          "end": 41.5,
+          "probability": 0.9497570991516113
+        },
+        {
+          "word": " pasti",
+          "start": 41.5,
+          "end": 41.88,
+          "probability": 0.9902286529541016
+        },
+        {
+          "word": " 4",
+          "start": 41.88,
+          "end": 43.1,
+          "probability": 0.11703354865312576
+        },
+        {
+          "word": ".000.",
+          "start": 43.1,
+          "end": 43.400000000000006,
+          "probability": 0.7459733188152313
+        }
+      ]
+    },
+    {
+      "start": 44.16,
+      "end": 48.7,
+      "speaker": "CUSTOMER",
+      "text": " Ya maksud saya orang tidak bisa nginjemir Anda 10.000 ketama luar di kawal ya.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 44.16,
+          "end": 44.3,
+          "probability": 0.4025072157382965
+        },
+        {
+          "word": " maksud",
+          "start": 44.3,
+          "end": 44.52,
+          "probability": 0.4676786959171295
+        },
+        {
+          "word": " saya",
+          "start": 44.52,
+          "end": 44.7,
+          "probability": 0.6620208621025085
+        },
+        {
+          "word": " orang",
+          "start": 44.7,
+          "end": 45.02,
+          "probability": 0.30271264910697937
+        },
+        {
+          "word": " tidak",
+          "start": 45.02,
+          "end": 45.28,
+          "probability": 0.0993163138628006
+        },
+        {
+          "word": " bisa",
+          "start": 45.28,
+          "end": 45.5,
+          "probability": 0.9908912777900696
+        },
+        {
+          "word": " nginjemir",
+          "start": 45.5,
+          "end": 46.1,
+          "probability": 0.31609376706182957
+        },
+        {
+          "word": " Anda",
+          "start": 46.1,
+          "end": 46.34,
+          "probability": 0.6365998983383179
+        },
+        {
+          "word": " 10",
+          "start": 46.34,
+          "end": 46.66,
+          "probability": 0.9580202102661133
+        },
+        {
+          "word": ".000",
+          "start": 46.66,
+          "end": 47.16,
+          "probability": 0.9928004443645477
+        },
+        {
+          "word": " ketama",
+          "start": 47.16,
+          "end": 47.98,
+          "probability": 0.34323926270008087
+        },
+        {
+          "word": " luar",
+          "start": 47.98,
+          "end": 48.26,
+          "probability": 0.5629886984825134
+        },
+        {
+          "word": " di",
+          "start": 48.26,
+          "end": 48.36,
+          "probability": 0.07569055259227753
+        },
+        {
+          "word": " kawal",
+          "start": 48.36,
+          "end": 48.48,
+          "probability": 0.5056804815928141
+        },
+        {
+          "word": " ya.",
+          "start": 48.48,
+          "end": 48.7,
+          "probability": 0.7468264102935791
+        }
+      ]
+    },
+    {
+      "start": 48.94,
+      "end": 49.08,
+      "speaker": "CUSTOMER",
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 48.94,
+          "end": 49.08,
+          "probability": 0.6304222941398621
+        }
+      ]
+    },
+    {
+      "start": 49.76,
+      "end": 51.98,
+      "speaker": "CUSTOMER",
+      "text": " Oke, jadi saya ini 12 sudah dibayarkan ya.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 49.76,
+          "end": 50.12,
+          "probability": 0.8321717977523804
+        },
+        {
+          "word": " jadi",
+          "start": 50.32,
+          "end": 50.34,
+          "probability": 0.14358747005462646
+        },
+        {
+          "word": " saya",
+          "start": 50.34,
+          "end": 50.52,
+          "probability": 0.9769147634506226
+        },
+        {
+          "word": " ini",
+          "start": 50.52,
+          "end": 50.7,
+          "probability": 0.32070136070251465
+        },
+        {
+          "word": " 12",
+          "start": 50.7,
+          "end": 51.0,
+          "probability": 0.3821376860141754
+        },
+        {
+          "word": " sudah",
+          "start": 51.0,
+          "end": 51.34,
+          "probability": 0.17906887829303741
+        },
+        {
+          "word": " dibayarkan",
+          "start": 51.34,
+          "end": 51.72,
+          "probability": 0.6286797523498535
+        },
+        {
+          "word": " ya.",
+          "start": 51.72,
+          "end": 51.98,
+          "probability": 0.8007701635360718
+        }
+      ]
+    },
+    {
+      "start": 53.56,
+      "end": 54.16,
+      "speaker": "CUSTOMER",
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 53.56,
+          "end": 54.16,
+          "probability": 0.7979575991630554
+        }
+      ]
+    },
+    {
+      "start": 55.160000000000004,
+      "end": 57.72,
+      "speaker": "CUSTOMER",
+      "text": " Harus, saya tunggu pemain orangnya.",
+      "words": [
+        {
+          "word": " Harus,",
+          "start": 55.160000000000004,
+          "end": 56.06,
+          "probability": 0.546525377780199
+        },
+        {
+          "word": " saya",
+          "start": 56.42,
+          "end": 56.64,
+          "probability": 0.8516730070114136
+        },
+        {
+          "word": " tunggu",
+          "start": 56.64,
+          "end": 56.84,
+          "probability": 0.9816266000270844
+        },
+        {
+          "word": " pemain",
+          "start": 56.84,
+          "end": 57.16,
+          "probability": 0.26360689103603363
+        },
+        {
+          "word": " orangnya.",
+          "start": 57.16,
+          "end": 57.72,
+          "probability": 0.5325514189898968
+        }
+      ]
+    },
+    {
+      "start": 58.22,
+      "end": 58.94,
+      "speaker": "CUSTOMER",
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 58.22,
+          "end": 58.94,
+          "probability": 0.10611355304718018
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo selamat pagi.  Iya.  Gak ini saya dari ekstra uang noyas, uangnya sudah ada belum pak.  Uangnya sudah ada berapa masak saat tidak ada sepencari pun?  Rindanya saya perpanjang, saya kurang 50 lagi.  Oh kurang 50?  Iya.  Anda bisa itu?  Perpanjang.  Iya.  Itu Bapak bisa, itu cari 10.000 dari 5 orang ya.  Itu pasti 4.000.  Ya maksud saya orang tidak bisa nginjemir Anda 10.000 ketama luar di kawal ya.  Iya.  Oke, jadi saya ini 12 sudah dibayarkan ya.  Iya.  Harus, saya tunggu pemain orangnya.  Iya."
+}

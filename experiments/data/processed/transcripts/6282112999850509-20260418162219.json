@@ -1,0 +1,49 @@
+{
+  "case_id": "6282112999850509-20260418162219",
+  "file_name": "6282112999850509-20260418162219.mp3",
+  "transcript": [
+    {
+      "start": 1.8000000000000003,
+      "end": 3.2,
+      "speaker": "AGENT",
+      "text": " Hello?",
+      "words": [
+        {
+          "word": " Hello?",
+          "start": 1.8000000000000003,
+          "end": 3.2,
+          "probability": 0.1492653340101242
+        }
+      ]
+    },
+    {
+      "start": 5.16,
+      "end": 6.56,
+      "speaker": "CUSTOMER",
+      "text": " Hello?",
+      "words": [
+        {
+          "word": " Hello?",
+          "start": 5.16,
+          "end": 6.56,
+          "probability": 0.19149106740951538
+        }
+      ]
+    },
+    {
+      "start": 34.04,
+      "end": 35.44,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 34.04,
+          "end": 35.44,
+          "probability": 0.3249160349369049
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello?  Hello?  Halo?"
+}

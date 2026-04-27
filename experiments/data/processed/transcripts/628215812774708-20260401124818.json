@@ -1,0 +1,261 @@
+{
+  "case_id": "628215812774708-20260401124818",
+  "file_name": "628215812774708-20260401124818.mp3",
+  "transcript": [
+    {
+      "start": 0.9600000000000002,
+      "end": 8.06,
+      "speaker": "AGENT",
+      "text": " Halo, Pak Lutfi, ini segiannya dibayar tansi yang ini apa ya?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 0.9600000000000002,
+          "end": 1.84,
+          "probability": 0.3089231848716736
+        },
+        {
+          "word": " Pak",
+          "start": 2.52,
+          "end": 2.82,
+          "probability": 0.09173739701509476
+        },
+        {
+          "word": " Lutfi,",
+          "start": 2.82,
+          "end": 3.26,
+          "probability": 0.4663216173648834
+        },
+        {
+          "word": " ini",
+          "start": 4.86,
+          "end": 5.08,
+          "probability": 0.13929574191570282
+        },
+        {
+          "word": " segiannya",
+          "start": 5.08,
+          "end": 5.68,
+          "probability": 0.682918498913447
+        },
+        {
+          "word": " dibayar",
+          "start": 5.68,
+          "end": 6.16,
+          "probability": 0.8526967167854309
+        },
+        {
+          "word": " tansi",
+          "start": 6.16,
+          "end": 6.52,
+          "probability": 0.5141809185345968
+        },
+        {
+          "word": " yang",
+          "start": 6.52,
+          "end": 6.64,
+          "probability": 0.9711347818374634
+        },
+        {
+          "word": " ini",
+          "start": 6.64,
+          "end": 6.84,
+          "probability": 0.9640647768974304
+        },
+        {
+          "word": " apa",
+          "start": 6.84,
+          "end": 7.1,
+          "probability": 0.4099854826927185
+        },
+        {
+          "word": " ya?",
+          "start": 7.1,
+          "end": 8.06,
+          "probability": 0.7087273597717285
+        }
+      ]
+    },
+    {
+      "start": 8.06,
+      "end": 10.56,
+      "speaker": "CUSTOMER",
+      "text": " Yang dibayar tansi yang ini apa ya?",
+      "words": [
+        {
+          "word": " Yang",
+          "start": 8.06,
+          "end": 8.36,
+          "probability": 0.11384011059999466
+        },
+        {
+          "word": " dibayar",
+          "start": 8.36,
+          "end": 8.8,
+          "probability": 0.7177488058805466
+        },
+        {
+          "word": " tansi",
+          "start": 8.8,
+          "end": 10.56,
+          "probability": 0.8250970443089803
+        },
+        {
+          "word": " yang",
+          "start": 10.56,
+          "end": 10.56,
+          "probability": 0.7466710209846497
+        },
+        {
+          "word": " ini",
+          "start": 10.56,
+          "end": 10.56,
+          "probability": 0.90970379114151
+        },
+        {
+          "word": " apa",
+          "start": 10.56,
+          "end": 10.56,
+          "probability": 0.9170730113983154
+        },
+        {
+          "word": " ya?",
+          "start": 10.56,
+          "end": 10.56,
+          "probability": 0.8488072752952576
+        }
+      ]
+    },
+    {
+      "start": 10.56,
+      "end": 11.04,
+      "speaker": "AGENT",
+      "text": " Kenapa?",
+      "words": [
+        {
+          "word": " Kenapa?",
+          "start": 10.56,
+          "end": 11.04,
+          "probability": 0.6297336220741272
+        }
+      ]
+    },
+    {
+      "start": 12.66,
+      "end": 14.0,
+      "speaker": "CUSTOMER",
+      "text": " Sewarahnya kecil?",
+      "words": [
+        {
+          "word": " Sewarahnya",
+          "start": 12.66,
+          "end": 13.54,
+          "probability": 0.5512090139091015
+        },
+        {
+          "word": " kecil?",
+          "start": 13.54,
+          "end": 14.0,
+          "probability": 0.7369992136955261
+        }
+      ]
+    },
+    {
+      "start": 15.440000000000001,
+      "end": 17.44,
+      "speaker": "AGENT",
+      "text": " Tidak, tidak sekarang Pak.",
+      "words": [
+        {
+          "word": " Tidak,",
+          "start": 15.440000000000001,
+          "end": 16.32,
+          "probability": 0.654943889627854
+        },
+        {
+          "word": " tidak",
+          "start": 16.38,
+          "end": 16.42,
+          "probability": 0.13064834475517273
+        },
+        {
+          "word": " sekarang",
+          "start": 16.42,
+          "end": 16.78,
+          "probability": 0.8952100872993469
+        },
+        {
+          "word": " Pak.",
+          "start": 16.78,
+          "end": 17.44,
+          "probability": 0.5097163915634155
+        }
+      ]
+    },
+    {
+      "start": 17.62,
+      "end": 18.8,
+      "speaker": "CUSTOMER",
+      "text": " Ya sudah, saya sebar ya.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 17.62,
+          "end": 17.72,
+          "probability": 0.40521755814552307
+        },
+        {
+          "word": " sudah,",
+          "start": 17.72,
+          "end": 17.86,
+          "probability": 0.4246433675289154
+        },
+        {
+          "word": " saya",
+          "start": 18.0,
+          "end": 18.0,
+          "probability": 0.9403477311134338
+        },
+        {
+          "word": " sebar",
+          "start": 18.0,
+          "end": 18.3,
+          "probability": 0.4417778104543686
+        },
+        {
+          "word": " ya.",
+          "start": 18.3,
+          "end": 18.8,
+          "probability": 0.5663391351699829
+        }
+      ]
+    },
+    {
+      "start": 19.02,
+      "end": 20.26,
+      "speaker": "CUSTOMER",
+      "text": " Sebenarnya saya sebar.",
+      "words": [
+        {
+          "word": " Sebenarnya",
+          "start": 19.02,
+          "end": 19.24,
+          "probability": 0.3466984083255132
+        },
+        {
+          "word": " saya",
+          "start": 19.24,
+          "end": 19.82,
+          "probability": 0.27499425411224365
+        },
+        {
+          "word": " sebar.",
+          "start": 19.82,
+          "end": 20.26,
+          "probability": 0.9470416009426117
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo, Pak Lutfi, ini segiannya dibayar tansi yang ini apa ya?  Yang dibayar tansi yang ini apa ya?  Kenapa?  Sewarahnya kecil?  Tidak, tidak sekarang Pak.  Ya sudah, saya sebar ya.  Sebenarnya saya sebar."
+}

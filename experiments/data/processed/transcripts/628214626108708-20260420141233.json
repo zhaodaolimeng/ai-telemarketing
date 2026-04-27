@@ -1,0 +1,583 @@
+{
+  "case_id": "628214626108708-20260420141233",
+  "file_name": "628214626108708-20260420141233.mp3",
+  "transcript": [
+    {
+      "start": 6.82,
+      "end": 10.44,
+      "speaker": "CUSTOMER",
+      "text": " Hello, Sama. Ya? Ya.",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 6.82,
+          "end": 7.5,
+          "probability": 0.0440266877412796
+        },
+        {
+          "word": " Sama.",
+          "start": 7.66,
+          "end": 7.92,
+          "probability": 0.48748439364135265
+        },
+        {
+          "word": " Ya?",
+          "start": 8.7,
+          "end": 9.08,
+          "probability": 0.6591333746910095
+        },
+        {
+          "word": " Ya.",
+          "start": 9.9,
+          "end": 10.44,
+          "probability": 0.7673935890197754
+        }
+      ]
+    },
+    {
+      "start": 11.860000000000001,
+      "end": 14.48,
+      "speaker": "CUSTOMER",
+      "text": " Jadi umpapamu hampir dikipir mencet?",
+      "words": [
+        {
+          "word": " Jadi",
+          "start": 11.860000000000001,
+          "end": 12.540000000000001,
+          "probability": 0.118509441614151
+        },
+        {
+          "word": " umpapamu",
+          "start": 12.540000000000001,
+          "end": 13.22,
+          "probability": 0.3366188287734985
+        },
+        {
+          "word": " hampir",
+          "start": 13.22,
+          "end": 13.4,
+          "probability": 0.6638205349445343
+        },
+        {
+          "word": " dikipir",
+          "start": 13.4,
+          "end": 13.9,
+          "probability": 0.8016385287046432
+        },
+        {
+          "word": " mencet?",
+          "start": 13.9,
+          "end": 14.48,
+          "probability": 0.4872415065765381
+        }
+      ]
+    },
+    {
+      "start": 15.74,
+      "end": 16.62,
+      "speaker": "AGENT",
+      "text": " Jadi apa?",
+      "words": [
+        {
+          "word": " Jadi",
+          "start": 15.74,
+          "end": 16.32,
+          "probability": 0.2730809152126312
+        },
+        {
+          "word": " apa?",
+          "start": 16.32,
+          "end": 16.62,
+          "probability": 0.4237397611141205
+        }
+      ]
+    },
+    {
+      "start": 18.48,
+      "end": 20.24,
+      "speaker": "AGENT",
+      "text": " Jadi aplikasi ekstra, Pak.",
+      "words": [
+        {
+          "word": " Jadi",
+          "start": 18.48,
+          "end": 18.94,
+          "probability": 0.2763243019580841
+        },
+        {
+          "word": " aplikasi",
+          "start": 18.94,
+          "end": 19.54,
+          "probability": 0.9123428066571554
+        },
+        {
+          "word": " ekstra,",
+          "start": 19.54,
+          "end": 19.98,
+          "probability": 0.8068127036094666
+        },
+        {
+          "word": " Pak.",
+          "start": 20.18,
+          "end": 20.24,
+          "probability": 0.43347206711769104
+        }
+      ]
+    },
+    {
+      "start": 21.5,
+      "end": 23.04,
+      "speaker": "AGENT",
+      "text": " Jadi kan udah kok bilang ini?",
+      "words": [
+        {
+          "word": " Jadi",
+          "start": 21.5,
+          "end": 21.8,
+          "probability": 0.12452731281518936
+        },
+        {
+          "word": " kan",
+          "start": 21.8,
+          "end": 22.0,
+          "probability": 0.6513854265213013
+        },
+        {
+          "word": " udah",
+          "start": 22.0,
+          "end": 22.26,
+          "probability": 0.8697841763496399
+        },
+        {
+          "word": " kok",
+          "start": 22.26,
+          "end": 22.46,
+          "probability": 0.6539318561553955
+        },
+        {
+          "word": " bilang",
+          "start": 22.46,
+          "end": 22.8,
+          "probability": 0.9549140930175781
+        },
+        {
+          "word": " ini?",
+          "start": 22.8,
+          "end": 23.04,
+          "probability": 0.5424703359603882
+        }
+      ]
+    },
+    {
+      "start": 23.54,
+      "end": 25.56,
+      "speaker": "CUSTOMER",
+      "text": " Iya, sekarang udah nanya sudah siap berapa, Pak?",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 23.54,
+          "end": 23.92,
+          "probability": 0.5189558863639832
+        },
+        {
+          "word": " sekarang",
+          "start": 24.06,
+          "end": 24.3,
+          "probability": 0.9646250605583191
+        },
+        {
+          "word": " udah",
+          "start": 24.3,
+          "end": 24.48,
+          "probability": 0.2153843492269516
+        },
+        {
+          "word": " nanya",
+          "start": 24.48,
+          "end": 24.66,
+          "probability": 0.8949548900127411
+        },
+        {
+          "word": " sudah",
+          "start": 24.66,
+          "end": 24.84,
+          "probability": 0.48357927799224854
+        },
+        {
+          "word": " siap",
+          "start": 24.84,
+          "end": 25.1,
+          "probability": 0.9299119710922241
+        },
+        {
+          "word": " berapa,",
+          "start": 25.1,
+          "end": 25.36,
+          "probability": 0.7594158947467804
+        },
+        {
+          "word": " Pak?",
+          "start": 25.4,
+          "end": 25.56,
+          "probability": 0.9794353246688843
+        }
+      ]
+    },
+    {
+      "start": 28.08,
+      "end": 29.52,
+      "speaker": "CUSTOMER",
+      "text": " Jadi katanya jam 9.",
+      "words": [
+        {
+          "word": " Jadi",
+          "start": 28.08,
+          "end": 28.6,
+          "probability": 0.009455203078687191
+        },
+        {
+          "word": " katanya",
+          "start": 28.6,
+          "end": 28.98,
+          "probability": 0.930583268404007
+        },
+        {
+          "word": " jam",
+          "start": 28.98,
+          "end": 29.24,
+          "probability": 0.9033055305480957
+        },
+        {
+          "word": " 9.",
+          "start": 29.24,
+          "end": 29.52,
+          "probability": 0.3790268898010254
+        }
+      ]
+    },
+    {
+      "start": 31.1,
+      "end": 33.38,
+      "speaker": "AGENT",
+      "text": " Tolong balik jam over show kami saja, Pak.",
+      "words": [
+        {
+          "word": " Tolong",
+          "start": 31.1,
+          "end": 31.62,
+          "probability": 0.7311055362224579
+        },
+        {
+          "word": " balik",
+          "start": 31.62,
+          "end": 31.88,
+          "probability": 0.7887709438800812
+        },
+        {
+          "word": " jam",
+          "start": 31.88,
+          "end": 32.06,
+          "probability": 0.9636808037757874
+        },
+        {
+          "word": " over",
+          "start": 32.06,
+          "end": 32.32,
+          "probability": 0.11185961216688156
+        },
+        {
+          "word": " show",
+          "start": 32.32,
+          "end": 32.54,
+          "probability": 0.2488250732421875
+        },
+        {
+          "word": " kami",
+          "start": 32.54,
+          "end": 32.8,
+          "probability": 0.5418781042098999
+        },
+        {
+          "word": " saja,",
+          "start": 32.8,
+          "end": 33.1,
+          "probability": 0.9698627591133118
+        },
+        {
+          "word": " Pak.",
+          "start": 33.26,
+          "end": 33.38,
+          "probability": 0.7028765678405762
+        }
+      ]
+    },
+    {
+      "start": 33.68,
+      "end": 34.56,
+      "speaker": "CUSTOMER",
+      "text": " Jam 9 sudah usia istirahat.",
+      "words": [
+        {
+          "word": " Jam",
+          "start": 33.68,
+          "end": 33.8,
+          "probability": 0.8586415648460388
+        },
+        {
+          "word": " 9",
+          "start": 33.8,
+          "end": 34.0,
+          "probability": 0.18757249414920807
+        },
+        {
+          "word": " sudah",
+          "start": 34.0,
+          "end": 34.26,
+          "probability": 0.8756828308105469
+        },
+        {
+          "word": " usia",
+          "start": 34.26,
+          "end": 34.52,
+          "probability": 0.13462942093610764
+        },
+        {
+          "word": " istirahat.",
+          "start": 34.52,
+          "end": 34.78,
+          "probability": 0.7479199804365635
+        }
+      ]
+    },
+    {
+      "start": 35.9,
+      "end": 37.74,
+      "speaker": "CUSTOMER",
+      "text": " Pak, teman lo bilangnya jam 9 kok.",
+      "words": [
+        {
+          "word": " Pak,",
+          "start": 35.9,
+          "end": 36.14,
+          "probability": 0.04685654863715172
+        },
+        {
+          "word": " teman",
+          "start": 36.18,
+          "end": 36.44,
+          "probability": 0.9708108007907867
+        },
+        {
+          "word": " lo",
+          "start": 36.44,
+          "end": 36.56,
+          "probability": 0.5573784112930298
+        },
+        {
+          "word": " bilangnya",
+          "start": 36.56,
+          "end": 36.94,
+          "probability": 0.9257881045341492
+        },
+        {
+          "word": " jam",
+          "start": 36.94,
+          "end": 37.1,
+          "probability": 0.9610830545425415
+        },
+        {
+          "word": " 9",
+          "start": 37.1,
+          "end": 37.34,
+          "probability": 0.49730756878852844
+        },
+        {
+          "word": " kok.",
+          "start": 37.34,
+          "end": 37.74,
+          "probability": 0.7258701920509338
+        }
+      ]
+    },
+    {
+      "start": 38.5,
+      "end": 40.18,
+      "speaker": "AGENT",
+      "text": " Jangan terbeda-beda, Pak.",
+      "words": [
+        {
+          "word": " Jangan",
+          "start": 38.5,
+          "end": 38.82,
+          "probability": 0.6887993365526199
+        },
+        {
+          "word": " terbeda",
+          "start": 38.82,
+          "end": 39.22,
+          "probability": 0.7099291284879049
+        },
+        {
+          "word": "-beda,",
+          "start": 39.22,
+          "end": 39.62,
+          "probability": 0.900054136912028
+        },
+        {
+          "word": " Pak.",
+          "start": 40.18,
+          "end": 40.18,
+          "probability": 0.4638732671737671
+        }
+      ]
+    },
+    {
+      "start": 40.18,
+      "end": 41.94,
+      "speaker": "AGENT",
+      "text": " Ambil ini bukan penergian satu-dua saja.",
+      "words": [
+        {
+          "word": " Ambil",
+          "start": 40.18,
+          "end": 40.44,
+          "probability": 0.48411840200424194
+        },
+        {
+          "word": " ini",
+          "start": 40.44,
+          "end": 40.6,
+          "probability": 0.5753282904624939
+        },
+        {
+          "word": " bukan",
+          "start": 40.6,
+          "end": 40.9,
+          "probability": 0.24327315390110016
+        },
+        {
+          "word": " penergian",
+          "start": 40.9,
+          "end": 41.28,
+          "probability": 0.43067564256489277
+        },
+        {
+          "word": " satu",
+          "start": 41.28,
+          "end": 41.52,
+          "probability": 0.8473683595657349
+        },
+        {
+          "word": "-dua",
+          "start": 41.52,
+          "end": 41.78,
+          "probability": 0.909596840540568
+        },
+        {
+          "word": " saja.",
+          "start": 41.78,
+          "end": 41.94,
+          "probability": 0.7588035464286804
+        }
+      ]
+    },
+    {
+      "start": 42.18,
+      "end": 43.8,
+      "speaker": "CUSTOMER",
+      "text": " Jangan banyak yang istirahat.",
+      "words": [
+        {
+          "word": " Jangan",
+          "start": 42.18,
+          "end": 42.26,
+          "probability": 0.8988004326820374
+        },
+        {
+          "word": " banyak",
+          "start": 42.26,
+          "end": 42.54,
+          "probability": 0.14021429419517517
+        },
+        {
+          "word": " yang",
+          "start": 42.54,
+          "end": 42.72,
+          "probability": 0.26310068368911743
+        },
+        {
+          "word": " istirahat.",
+          "start": 42.72,
+          "end": 43.8,
+          "probability": 0.7382840141654015
+        }
+      ]
+    },
+    {
+      "start": 45.5,
+      "end": 46.98,
+      "speaker": "CUSTOMER",
+      "text": " Sekarang dalamnya selesia berapa?",
+      "words": [
+        {
+          "word": " Sekarang",
+          "start": 45.5,
+          "end": 46.02,
+          "probability": 0.7808557748794556
+        },
+        {
+          "word": " dalamnya",
+          "start": 46.02,
+          "end": 46.3,
+          "probability": 0.31072721257805824
+        },
+        {
+          "word": " selesia",
+          "start": 46.3,
+          "end": 46.66,
+          "probability": 0.663719450434049
+        },
+        {
+          "word": " berapa?",
+          "start": 46.66,
+          "end": 46.98,
+          "probability": 0.9953375160694122
+        }
+      ]
+    },
+    {
+      "start": 48.48,
+      "end": 49.66,
+      "speaker": "AGENT",
+      "text": " Pak, nanti aja, Pak.",
+      "words": [
+        {
+          "word": " Pak,",
+          "start": 48.48,
+          "end": 48.84,
+          "probability": 0.33199572563171387
+        },
+        {
+          "word": " nanti",
+          "start": 49.02,
+          "end": 49.3,
+          "probability": 0.8759936094284058
+        },
+        {
+          "word": " aja,",
+          "start": 49.3,
+          "end": 49.5,
+          "probability": 0.3089589476585388
+        },
+        {
+          "word": " Pak.",
+          "start": 49.62,
+          "end": 49.66,
+          "probability": 0.7920913100242615
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello, Sama. Ya? Ya.  Jadi umpapamu hampir dikipir mencet?  Jadi apa?  Jadi aplikasi ekstra, Pak.  Jadi kan udah kok bilang ini?  Iya, sekarang udah nanya sudah siap berapa, Pak?  Jadi katanya jam 9.  Tolong balik jam over show kami saja, Pak.  Jam 9 sudah usia istirahat.  Pak, teman lo bilangnya jam 9 kok.  Jangan terbeda-beda, Pak.  Ambil ini bukan penergian satu-dua saja.  Jangan banyak yang istirahat.  Sekarang dalamnya selesia berapa?  Pak, nanti aja, Pak."
+}

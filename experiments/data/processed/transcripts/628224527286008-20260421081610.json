@@ -1,0 +1,561 @@
+{
+  "case_id": "628224527286008-20260421081610",
+  "file_name": "628224527286008-20260421081610.mp3",
+  "transcript": [
+    {
+      "start": 1.079999999999999,
+      "end": 2.5,
+      "speaker": "AGENT",
+      "text": " Hello, Selamat pagi",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 1.079999999999999,
+          "end": 1.7,
+          "probability": 0.06087940186262131
+        },
+        {
+          "word": " Selamat",
+          "start": 1.88,
+          "end": 2.02,
+          "probability": 0.6026247590780258
+        },
+        {
+          "word": " pagi",
+          "start": 2.02,
+          "end": 2.5,
+          "probability": 0.9309433400630951
+        }
+      ]
+    },
+    {
+      "start": 3.3999999999999986,
+      "end": 4.02,
+      "speaker": "CUSTOMER",
+      "text": " Pagi",
+      "words": [
+        {
+          "word": " Pagi",
+          "start": 3.3999999999999986,
+          "end": 4.02,
+          "probability": 0.4719785638153553
+        }
+      ]
+    },
+    {
+      "start": 4.02,
+      "end": 6.5,
+      "speaker": "AGENT",
+      "text": " Ya, saya dari aplikasi Extra",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 4.02,
+          "end": 4.74,
+          "probability": 0.03847404196858406
+        },
+        {
+          "word": " saya",
+          "start": 5.2,
+          "end": 5.34,
+          "probability": 0.8741886019706726
+        },
+        {
+          "word": " dari",
+          "start": 5.34,
+          "end": 5.54,
+          "probability": 0.9935742020606995
+        },
+        {
+          "word": " aplikasi",
+          "start": 5.54,
+          "end": 6.1,
+          "probability": 0.9476895531018575
+        },
+        {
+          "word": " Extra",
+          "start": 6.1,
+          "end": 6.5,
+          "probability": 0.23656295239925385
+        }
+      ]
+    },
+    {
+      "start": 6.5,
+      "end": 9.76,
+      "speaker": "AGENT",
+      "text": " Ini betul-betul dengan nomor telepon Bapak Yadimul Yadibu",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 6.5,
+          "end": 7.0,
+          "probability": 0.6263027787208557
+        },
+        {
+          "word": " betul",
+          "start": 7.0,
+          "end": 7.32,
+          "probability": 0.9078377485275269
+        },
+        {
+          "word": "-betul",
+          "start": 7.32,
+          "end": 7.42,
+          "probability": 0.7270789494117101
+        },
+        {
+          "word": " dengan",
+          "start": 7.42,
+          "end": 7.52,
+          "probability": 0.13127325475215912
+        },
+        {
+          "word": " nomor",
+          "start": 7.52,
+          "end": 7.84,
+          "probability": 0.7309155017137527
+        },
+        {
+          "word": " telepon",
+          "start": 7.84,
+          "end": 8.16,
+          "probability": 0.6832823505004247
+        },
+        {
+          "word": " Bapak",
+          "start": 8.16,
+          "end": 8.58,
+          "probability": 0.7720837791760763
+        },
+        {
+          "word": " Yadimul",
+          "start": 8.58,
+          "end": 9.12,
+          "probability": 0.6960440576076508
+        },
+        {
+          "word": " Yadibu",
+          "start": 9.12,
+          "end": 9.76,
+          "probability": 0.806736096739769
+        }
+      ]
+    },
+    {
+      "start": 10.52,
+      "end": 11.14,
+      "speaker": "CUSTOMER",
+      "text": " Ya",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 10.52,
+          "end": 11.14,
+          "probability": 0.8767914175987244
+        }
+      ]
+    },
+    {
+      "start": 12.0,
+      "end": 13.84,
+      "speaker": "AGENT",
+      "text": " Ya, saya dari aplikasi Extra, Ibu",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 11.729999999999999,
+          "end": 12.04,
+          "probability": 0.08816847950220108
+        },
+        {
+          "word": " saya",
+          "start": 12.16,
+          "end": 12.34,
+          "probability": 0.9638702273368835
+        },
+        {
+          "word": " dari",
+          "start": 12.34,
+          "end": 12.54,
+          "probability": 0.999674916267395
+        },
+        {
+          "word": " aplikasi",
+          "start": 12.54,
+          "end": 13.08,
+          "probability": 0.9938043554623922
+        },
+        {
+          "word": " Extra,",
+          "start": 13.08,
+          "end": 13.5,
+          "probability": 0.947757363319397
+        },
+        {
+          "word": " Ibu",
+          "start": 13.66,
+          "end": 13.84,
+          "probability": 0.6693620085716248
+        }
+      ]
+    },
+    {
+      "start": 13.84,
+      "end": 15.22,
+      "speaker": "AGENT",
+      "text": " Ini Bapak Yadimul Yadidnya ada tidak?",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 13.84,
+          "end": 14.12,
+          "probability": 0.8602204918861389
+        },
+        {
+          "word": " Bapak",
+          "start": 14.12,
+          "end": 14.46,
+          "probability": 0.9491607348124186
+        },
+        {
+          "word": " Yadimul",
+          "start": 14.46,
+          "end": 14.84,
+          "probability": 0.8113268911838531
+        },
+        {
+          "word": " Yadidnya",
+          "start": 14.84,
+          "end": 14.86,
+          "probability": 0.6855958858504891
+        },
+        {
+          "word": " ada",
+          "start": 14.86,
+          "end": 15.0,
+          "probability": 0.6902890205383301
+        },
+        {
+          "word": " tidak?",
+          "start": 15.0,
+          "end": 15.22,
+          "probability": 0.9402127265930176
+        }
+      ]
+    },
+    {
+      "start": 16.66,
+      "end": 17.8,
+      "speaker": "CUSTOMER",
+      "text": " Bagi dia, ayo",
+      "words": [
+        {
+          "word": " Bagi",
+          "start": 16.66,
+          "end": 17.28,
+          "probability": 0.5123012661933899
+        },
+        {
+          "word": " dia,",
+          "start": 17.28,
+          "end": 17.44,
+          "probability": 0.6992163062095642
+        },
+        {
+          "word": " ayo",
+          "start": 17.72,
+          "end": 17.8,
+          "probability": 0.682284414768219
+        }
+      ]
+    },
+    {
+      "start": 18.619999999999997,
+      "end": 19.86,
+      "speaker": "AGENT",
+      "text": " Oh begitu",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 18.619999999999997,
+          "end": 19.24,
+          "probability": 0.1822691112756729
+        },
+        {
+          "word": " begitu",
+          "start": 19.24,
+          "end": 19.86,
+          "probability": 0.6438831090927124
+        }
+      ]
+    },
+    {
+      "start": 19.86,
+      "end": 21.42,
+      "speaker": "AGENT",
+      "text": " Ya, saya di sini",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 19.86,
+          "end": 20.5,
+          "probability": 0.09438853710889816
+        },
+        {
+          "word": " saya",
+          "start": 20.6,
+          "end": 20.72,
+          "probability": 0.26068636775016785
+        },
+        {
+          "word": " di",
+          "start": 20.72,
+          "end": 21.12,
+          "probability": 0.14611901342868805
+        },
+        {
+          "word": " sini",
+          "start": 21.12,
+          "end": 21.42,
+          "probability": 0.9961789846420288
+        }
+      ]
+    },
+    {
+      "start": 22.0,
+      "end": 24.16,
+      "speaker": "AGENT",
+      "text": " Bapak Yadid ya, tajian di aplikasi Extra",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 22.0,
+          "end": 22.38,
+          "probability": 0.9618541598320007
+        },
+        {
+          "word": " Yadid",
+          "start": 22.38,
+          "end": 22.62,
+          "probability": 0.9040395220120748
+        },
+        {
+          "word": " ya,",
+          "start": 22.62,
+          "end": 22.78,
+          "probability": 0.09482359886169434
+        },
+        {
+          "word": " tajian",
+          "start": 22.88,
+          "end": 23.04,
+          "probability": 0.3888511185844739
+        },
+        {
+          "word": " di",
+          "start": 23.04,
+          "end": 23.2,
+          "probability": 0.9732687473297119
+        },
+        {
+          "word": " aplikasi",
+          "start": 23.2,
+          "end": 23.6,
+          "probability": 0.9955040415128072
+        },
+        {
+          "word": " Extra",
+          "start": 23.6,
+          "end": 24.16,
+          "probability": 0.9478586912155151
+        }
+      ]
+    },
+    {
+      "start": 24.16,
+      "end": 26.38,
+      "speaker": "CUSTOMER",
+      "text": " Tuh, hari ini sudah punya bayar, Ibu",
+      "words": [
+        {
+          "word": " Tuh,",
+          "start": 24.16,
+          "end": 24.56,
+          "probability": 0.5599492788314819
+        },
+        {
+          "word": " hari",
+          "start": 24.6,
+          "end": 24.76,
+          "probability": 0.8670176267623901
+        },
+        {
+          "word": " ini",
+          "start": 24.76,
+          "end": 24.88,
+          "probability": 0.994569718837738
+        },
+        {
+          "word": " sudah",
+          "start": 24.88,
+          "end": 25.06,
+          "probability": 0.872657060623169
+        },
+        {
+          "word": " punya",
+          "start": 25.06,
+          "end": 25.34,
+          "probability": 0.5205394625663757
+        },
+        {
+          "word": " bayar,",
+          "start": 25.34,
+          "end": 25.72,
+          "probability": 0.9841007590293884
+        },
+        {
+          "word": " Ibu",
+          "start": 25.8,
+          "end": 26.38,
+          "probability": 0.7744897603988647
+        }
+      ]
+    },
+    {
+      "start": 27.4,
+      "end": 29.68,
+      "speaker": "CUSTOMER",
+      "text": " Oh gitu, nanti 60-an ya?",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 27.4,
+          "end": 28.08,
+          "probability": 0.024633415043354034
+        },
+        {
+          "word": " gitu,",
+          "start": 28.08,
+          "end": 28.22,
+          "probability": 0.5254004001617432
+        },
+        {
+          "word": " nanti",
+          "start": 28.56,
+          "end": 28.88,
+          "probability": 0.8040033280849457
+        },
+        {
+          "word": " 60",
+          "start": 28.88,
+          "end": 29.24,
+          "probability": 0.4362204968929291
+        },
+        {
+          "word": "-an",
+          "start": 29.24,
+          "end": 29.56,
+          "probability": 0.27152251079678535
+        },
+        {
+          "word": " ya?",
+          "start": 29.56,
+          "end": 29.68,
+          "probability": 0.5354321599006653
+        }
+      ]
+    },
+    {
+      "start": 30.32,
+      "end": 34.02,
+      "speaker": "CUSTOMER",
+      "text": " Oke, nanti 30-an ya Ibu",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 30.32,
+          "end": 30.78,
+          "probability": 0.8928978443145752
+        },
+        {
+          "word": " nanti",
+          "start": 31.12,
+          "end": 31.34,
+          "probability": 0.5792151167988777
+        },
+        {
+          "word": " 30",
+          "start": 31.34,
+          "end": 31.52,
+          "probability": 0.032367996871471405
+        },
+        {
+          "word": "-an",
+          "start": 31.52,
+          "end": 32.38,
+          "probability": 0.7368209362030029
+        },
+        {
+          "word": " ya",
+          "start": 32.38,
+          "end": 32.46,
+          "probability": 0.23092438280582428
+        },
+        {
+          "word": " Ibu",
+          "start": 32.46,
+          "end": 34.02,
+          "probability": 0.03339491883525625
+        }
+      ]
+    },
+    {
+      "start": 34.02,
+      "end": 36.28,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih sama Tagi",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 34.02,
+          "end": 34.96,
+          "probability": 0.6801209002733231
+        },
+        {
+          "word": " kasih",
+          "start": 34.96,
+          "end": 35.26,
+          "probability": 0.9764100313186646
+        },
+        {
+          "word": " sama",
+          "start": 35.26,
+          "end": 35.6,
+          "probability": 0.920637309551239
+        },
+        {
+          "word": " Tagi",
+          "start": 35.6,
+          "end": 36.28,
+          "probability": 0.2798336148262024
+        }
+      ]
+    },
+    {
+      "start": 37.14,
+      "end": 37.82,
+      "speaker": "AGENT",
+      "text": " Tagi",
+      "words": [
+        {
+          "word": " Tagi",
+          "start": 37.14,
+          "end": 37.82,
+          "probability": 0.8576057553291321
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello, Selamat pagi  Pagi  Ya, saya dari aplikasi Extra  Ini betul-betul dengan nomor telepon Bapak Yadimul Yadibu  Ya  Ya, saya dari aplikasi Extra, Ibu  Ini Bapak Yadimul Yadidnya ada tidak?  Bagi dia, ayo  Oh begitu  Ya, saya di sini  Bapak Yadid ya, tajian di aplikasi Extra  Tuh, hari ini sudah punya bayar, Ibu  Oh gitu, nanti 60-an ya?  Oke, nanti 30-an ya Ibu  Terima kasih sama Tagi  Tagi"
+}

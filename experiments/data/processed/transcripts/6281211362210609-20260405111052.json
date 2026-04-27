@@ -1,0 +1,1668 @@
+{
+  "case_id": "6281211362210609-20260405111052",
+  "file_name": "6281211362210609-20260405111052.mp3",
+  "transcript": [
+    {
+      "start": 6.780000000000001,
+      "end": 8.2,
+      "text": " Hello, selamat siap ya?",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 6.780000000000001,
+          "end": 7.32,
+          "probability": 0.04866150766611099
+        },
+        {
+          "word": " selamat",
+          "start": 7.54,
+          "end": 7.74,
+          "probability": 0.6160596683621407
+        },
+        {
+          "word": " siap",
+          "start": 7.74,
+          "end": 8.04,
+          "probability": 0.36886997520923615
+        },
+        {
+          "word": " ya?",
+          "start": 8.04,
+          "end": 8.2,
+          "probability": 0.6514683961868286
+        }
+      ]
+    },
+    {
+      "start": 9.24,
+      "end": 10.28,
+      "text": " Siap ya, Bapak?",
+      "words": [
+        {
+          "word": " Siap",
+          "start": 9.24,
+          "end": 9.78,
+          "probability": 0.6259323209524155
+        },
+        {
+          "word": " ya,",
+          "start": 9.78,
+          "end": 9.94,
+          "probability": 0.7646545171737671
+        },
+        {
+          "word": " Bapak?",
+          "start": 9.94,
+          "end": 10.28,
+          "probability": 0.6247211843729019
+        }
+      ]
+    },
+    {
+      "start": 12.120000000000001,
+      "end": 14.06,
+      "text": " Ya, ini Bapak Sudang Dan.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 12.120000000000001,
+          "end": 12.66,
+          "probability": 0.6982755064964294
+        },
+        {
+          "word": " ini",
+          "start": 12.72,
+          "end": 12.82,
+          "probability": 0.1620837152004242
+        },
+        {
+          "word": " Bapak",
+          "start": 12.82,
+          "end": 13.38,
+          "probability": 0.9077251354853312
+        },
+        {
+          "word": " Sudang",
+          "start": 13.38,
+          "end": 13.82,
+          "probability": 0.361429899930954
+        },
+        {
+          "word": " Dan.",
+          "start": 13.82,
+          "end": 14.06,
+          "probability": 0.16392163932323456
+        }
+      ]
+    },
+    {
+      "start": 15.120000000000001,
+      "end": 17.4,
+      "text": " Oh ya, benar, Bapak.",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 15.120000000000001,
+          "end": 15.66,
+          "probability": 0.5802866816520691
+        },
+        {
+          "word": " ya,",
+          "start": 15.66,
+          "end": 15.8,
+          "probability": 0.47502967715263367
+        },
+        {
+          "word": " benar,",
+          "start": 15.88,
+          "end": 16.12,
+          "probability": 0.9257360696792603
+        },
+        {
+          "word": " Bapak.",
+          "start": 16.24,
+          "end": 17.4,
+          "probability": 0.9269392093022665
+        }
+      ]
+    },
+    {
+      "start": 17.62,
+      "end": 20.32,
+      "text": " Saya dari aplikasi ekstra pinjam, Bapak.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 17.62,
+          "end": 17.9,
+          "probability": 0.8646478652954102
+        },
+        {
+          "word": " dari",
+          "start": 17.9,
+          "end": 18.06,
+          "probability": 0.9360495209693909
+        },
+        {
+          "word": " aplikasi",
+          "start": 18.06,
+          "end": 18.62,
+          "probability": 0.9517617424329122
+        },
+        {
+          "word": " ekstra",
+          "start": 18.62,
+          "end": 19.12,
+          "probability": 0.8639208972454071
+        },
+        {
+          "word": " pinjam,",
+          "start": 19.12,
+          "end": 19.74,
+          "probability": 0.6920522451400757
+        },
+        {
+          "word": " Bapak.",
+          "start": 19.88,
+          "end": 20.32,
+          "probability": 0.8027809460957845
+        }
+      ]
+    },
+    {
+      "start": 21.36,
+      "end": 22.78,
+      "text": " Oh ya, gimana, Bapak?",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 21.36,
+          "end": 21.66,
+          "probability": 0.9160360097885132
+        },
+        {
+          "word": " ya,",
+          "start": 21.66,
+          "end": 21.92,
+          "probability": 0.806556224822998
+        },
+        {
+          "word": " gimana,",
+          "start": 22.02,
+          "end": 22.34,
+          "probability": 0.9552629888057709
+        },
+        {
+          "word": " Bapak?",
+          "start": 22.44,
+          "end": 22.78,
+          "probability": 0.9928093751271566
+        }
+      ]
+    },
+    {
+      "start": 23.28,
+      "end": 25.22,
+      "text": " Ya, taginnya mesti tiba-tiba jam berapa, Bapak?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 23.28,
+          "end": 23.58,
+          "probability": 0.871797502040863
+        },
+        {
+          "word": " taginnya",
+          "start": 23.8,
+          "end": 24.12,
+          "probability": 0.2690602590640386
+        },
+        {
+          "word": " mesti",
+          "start": 24.12,
+          "end": 24.28,
+          "probability": 0.6042457520961761
+        },
+        {
+          "word": " tiba",
+          "start": 24.28,
+          "end": 24.5,
+          "probability": 0.5620638728141785
+        },
+        {
+          "word": "-tiba",
+          "start": 24.5,
+          "end": 24.6,
+          "probability": 0.7956844369570414
+        },
+        {
+          "word": " jam",
+          "start": 24.6,
+          "end": 24.76,
+          "probability": 0.7703281044960022
+        },
+        {
+          "word": " berapa,",
+          "start": 24.76,
+          "end": 24.98,
+          "probability": 0.9634653925895691
+        },
+        {
+          "word": " Bapak?",
+          "start": 25.02,
+          "end": 25.22,
+          "probability": 0.9705748756726583
+        }
+      ]
+    },
+    {
+      "start": 26.62,
+      "end": 29.36,
+      "text": " Saya mau bayar nanti pas jatuh timpuk, Bapak.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 26.62,
+          "end": 27.26,
+          "probability": 0.06972413510084152
+        },
+        {
+          "word": " mau",
+          "start": 27.26,
+          "end": 27.6,
+          "probability": 0.8893182277679443
+        },
+        {
+          "word": " bayar",
+          "start": 27.6,
+          "end": 28.04,
+          "probability": 0.750585526227951
+        },
+        {
+          "word": " nanti",
+          "start": 28.04,
+          "end": 28.32,
+          "probability": 0.542840987443924
+        },
+        {
+          "word": " pas",
+          "start": 28.32,
+          "end": 28.52,
+          "probability": 0.896915853023529
+        },
+        {
+          "word": " jatuh",
+          "start": 28.52,
+          "end": 28.8,
+          "probability": 0.6957074006398519
+        },
+        {
+          "word": " timpuk,",
+          "start": 28.8,
+          "end": 29.12,
+          "probability": 0.6906776229540507
+        },
+        {
+          "word": " Bapak.",
+          "start": 29.18,
+          "end": 29.36,
+          "probability": 0.3755010599270463
+        }
+      ]
+    },
+    {
+      "start": 29.42,
+      "end": 30.62,
+      "text": " Kan belum tanggal jatuh timpuk?",
+      "words": [
+        {
+          "word": " Kan",
+          "start": 29.42,
+          "end": 29.48,
+          "probability": 0.7965623140335083
+        },
+        {
+          "word": " belum",
+          "start": 29.48,
+          "end": 29.64,
+          "probability": 0.9336318969726562
+        },
+        {
+          "word": " tanggal",
+          "start": 29.64,
+          "end": 29.94,
+          "probability": 0.7743921279907227
+        },
+        {
+          "word": " jatuh",
+          "start": 29.94,
+          "end": 30.2,
+          "probability": 0.9809601108233134
+        },
+        {
+          "word": " timpuk?",
+          "start": 30.2,
+          "end": 30.62,
+          "probability": 0.9986533522605896
+        }
+      ]
+    },
+    {
+      "start": 31.42,
+      "end": 35.44,
+      "text": " Ya, tapi kan di sini kan harus bayar wajib di Amin 2, Bapak.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 31.42,
+          "end": 31.9,
+          "probability": 0.6695175170898438
+        },
+        {
+          "word": " tapi",
+          "start": 32.12,
+          "end": 32.36,
+          "probability": 0.93138188123703
+        },
+        {
+          "word": " kan",
+          "start": 32.36,
+          "end": 32.5,
+          "probability": 0.9545931816101074
+        },
+        {
+          "word": " di",
+          "start": 32.5,
+          "end": 32.6,
+          "probability": 0.4350995421409607
+        },
+        {
+          "word": " sini",
+          "start": 32.6,
+          "end": 32.76,
+          "probability": 0.9982271790504456
+        },
+        {
+          "word": " kan",
+          "start": 32.76,
+          "end": 32.9,
+          "probability": 0.9461902976036072
+        },
+        {
+          "word": " harus",
+          "start": 32.9,
+          "end": 33.22,
+          "probability": 0.6988622546195984
+        },
+        {
+          "word": " bayar",
+          "start": 33.22,
+          "end": 33.94,
+          "probability": 0.9884363114833832
+        },
+        {
+          "word": " wajib",
+          "start": 33.94,
+          "end": 34.34,
+          "probability": 0.9713081121444702
+        },
+        {
+          "word": " di",
+          "start": 34.34,
+          "end": 34.5,
+          "probability": 0.9069840908050537
+        },
+        {
+          "word": " Amin",
+          "start": 34.5,
+          "end": 34.7,
+          "probability": 0.6271629482507706
+        },
+        {
+          "word": " 2,",
+          "start": 34.7,
+          "end": 34.94,
+          "probability": 0.535311758518219
+        },
+        {
+          "word": " Bapak.",
+          "start": 35.08,
+          "end": 35.44,
+          "probability": 0.8931079904238383
+        }
+      ]
+    },
+    {
+      "start": 35.62,
+      "end": 37.34,
+      "text": " Bapak juga di sini bukan peminyam pertama.",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 35.62,
+          "end": 35.62,
+          "probability": 0.7363467961549759
+        },
+        {
+          "word": " juga",
+          "start": 35.62,
+          "end": 35.7,
+          "probability": 0.9685800075531006
+        },
+        {
+          "word": " di",
+          "start": 35.7,
+          "end": 35.86,
+          "probability": 0.8745414018630981
+        },
+        {
+          "word": " sini",
+          "start": 35.86,
+          "end": 36.06,
+          "probability": 0.9992795586585999
+        },
+        {
+          "word": " bukan",
+          "start": 36.06,
+          "end": 36.36,
+          "probability": 0.9824932813644409
+        },
+        {
+          "word": " peminyam",
+          "start": 36.36,
+          "end": 36.84,
+          "probability": 0.5926108906666437
+        },
+        {
+          "word": " pertama.",
+          "start": 36.84,
+          "end": 37.34,
+          "probability": 0.9759677648544312
+        }
+      ]
+    },
+    {
+      "start": 37.78,
+      "end": 40.5,
+      "text": " Masa harus pemujakan terus, Bapak.",
+      "words": [
+        {
+          "word": " Masa",
+          "start": 37.78,
+          "end": 38.14,
+          "probability": 0.8582734167575836
+        },
+        {
+          "word": " harus",
+          "start": 38.14,
+          "end": 38.36,
+          "probability": 0.9852402210235596
+        },
+        {
+          "word": " pemujakan",
+          "start": 38.36,
+          "end": 38.82,
+          "probability": 0.1743120551109314
+        },
+        {
+          "word": " terus,",
+          "start": 38.82,
+          "end": 39.36,
+          "probability": 0.8324605226516724
+        },
+        {
+          "word": " Bapak.",
+          "start": 39.78,
+          "end": 40.5,
+          "probability": 0.8910929560661316
+        }
+      ]
+    },
+    {
+      "start": 40.5,
+      "end": 41.48,
+      "text": " Ya, jatuh itu.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 40.5,
+          "end": 40.54,
+          "probability": 0.2667299509048462
+        },
+        {
+          "word": " jatuh",
+          "start": 40.92,
+          "end": 41.16,
+          "probability": 0.6767040515939394
+        },
+        {
+          "word": " itu.",
+          "start": 41.16,
+          "end": 41.48,
+          "probability": 0.4743114113807678
+        }
+      ]
+    },
+    {
+      "start": 42.06,
+      "end": 45.44,
+      "text": " Kalau, kalau Bapak, Bapak tahu ya,",
+      "words": [
+        {
+          "word": " Kalau,",
+          "start": 42.06,
+          "end": 42.7,
+          "probability": 0.7005993723869324
+        },
+        {
+          "word": " kalau",
+          "start": 42.7,
+          "end": 43.16,
+          "probability": 0.9749625325202942
+        },
+        {
+          "word": " Bapak,",
+          "start": 43.16,
+          "end": 43.86,
+          "probability": 0.6957111060619354
+        },
+        {
+          "word": " Bapak",
+          "start": 43.86,
+          "end": 45.04,
+          "probability": 0.9270962079366049
+        },
+        {
+          "word": " tahu",
+          "start": 45.04,
+          "end": 45.04,
+          "probability": 0.4442707300186157
+        },
+        {
+          "word": " ya,",
+          "start": 45.04,
+          "end": 45.44,
+          "probability": 0.77898770570755
+        }
+      ]
+    },
+    {
+      "start": 45.8,
+      "end": 48.42,
+      "text": " Bapak tahu saya setiap saya minjam,",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 45.8,
+          "end": 46.18,
+          "probability": 0.9329377810160319
+        },
+        {
+          "word": " tahu",
+          "start": 46.18,
+          "end": 46.48,
+          "probability": 0.9035032987594604
+        },
+        {
+          "word": " saya",
+          "start": 46.48,
+          "end": 46.98,
+          "probability": 0.6483967900276184
+        },
+        {
+          "word": " setiap",
+          "start": 46.98,
+          "end": 47.6,
+          "probability": 0.9869767824808756
+        },
+        {
+          "word": " saya",
+          "start": 47.6,
+          "end": 47.94,
+          "probability": 0.9593924283981323
+        },
+        {
+          "word": " minjam,",
+          "start": 47.94,
+          "end": 48.42,
+          "probability": 0.6842052936553955
+        }
+      ]
+    },
+    {
+      "start": 48.62,
+      "end": 50.5,
+      "text": " saya selalu bayar pas jatuh timpuk.",
+      "words": [
+        {
+          "word": " saya",
+          "start": 48.62,
+          "end": 48.78,
+          "probability": 0.8192552328109741
+        },
+        {
+          "word": " selalu",
+          "start": 48.78,
+          "end": 49.12,
+          "probability": 0.9884426593780518
+        },
+        {
+          "word": " bayar",
+          "start": 49.12,
+          "end": 49.44,
+          "probability": 0.9948038756847382
+        },
+        {
+          "word": " pas",
+          "start": 49.44,
+          "end": 49.64,
+          "probability": 0.884476900100708
+        },
+        {
+          "word": " jatuh",
+          "start": 49.64,
+          "end": 49.9,
+          "probability": 0.9853977163632711
+        },
+        {
+          "word": " timpuk.",
+          "start": 49.9,
+          "end": 50.5,
+          "probability": 0.9994246164957682
+        }
+      ]
+    },
+    {
+      "start": 50.76,
+      "end": 51.22,
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 50.76,
+          "end": 51.22,
+          "probability": 0.5376303791999817
+        }
+      ]
+    },
+    {
+      "start": 51.4,
+      "end": 52.92,
+      "text": " Bapak perhapikan pembayaran saya.",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 51.4,
+          "end": 51.62,
+          "probability": 0.7152426838874817
+        },
+        {
+          "word": " perhapikan",
+          "start": 51.62,
+          "end": 52.14,
+          "probability": 0.5842122957110405
+        },
+        {
+          "word": " pembayaran",
+          "start": 52.14,
+          "end": 52.66,
+          "probability": 0.9134758710861206
+        },
+        {
+          "word": " saya.",
+          "start": 52.66,
+          "end": 52.92,
+          "probability": 0.9813238978385925
+        }
+      ]
+    },
+    {
+      "start": 52.92,
+      "end": 54.78,
+      "text": " Di Amin 2, Bapak. Di sini tuh, Bapak.",
+      "words": [
+        {
+          "word": " Di",
+          "start": 52.92,
+          "end": 53.2,
+          "probability": 0.004489222541451454
+        },
+        {
+          "word": " Amin",
+          "start": 53.2,
+          "end": 53.44,
+          "probability": 0.483443193603307
+        },
+        {
+          "word": " 2,",
+          "start": 53.44,
+          "end": 53.7,
+          "probability": 0.613723874092102
+        },
+        {
+          "word": " Bapak.",
+          "start": 53.82,
+          "end": 54.22,
+          "probability": 0.5347662525455235
+        },
+        {
+          "word": " Di",
+          "start": 54.32,
+          "end": 54.36,
+          "probability": 0.6989522576332092
+        },
+        {
+          "word": " sini",
+          "start": 54.36,
+          "end": 54.56,
+          "probability": 0.00711839459836483
+        },
+        {
+          "word": " tuh,",
+          "start": 54.56,
+          "end": 54.72,
+          "probability": 0.25708574056625366
+        },
+        {
+          "word": " Bapak.",
+          "start": 54.78,
+          "end": 54.78,
+          "probability": 0.6673659731944402
+        }
+      ]
+    },
+    {
+      "start": 54.78,
+      "end": 55.56,
+      "text": " Oh, nggak bisa.",
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 54.78,
+          "end": 54.9,
+          "probability": 0.30957064032554626
+        },
+        {
+          "word": " nggak",
+          "start": 55.1,
+          "end": 55.14,
+          "probability": 0.34785065054893494
+        },
+        {
+          "word": " bisa.",
+          "start": 55.14,
+          "end": 55.56,
+          "probability": 0.9517642259597778
+        }
+      ]
+    },
+    {
+      "start": 57.02,
+      "end": 58.32,
+      "text": " Haturannya jatuh timpuk.",
+      "words": [
+        {
+          "word": " Haturannya",
+          "start": 57.02,
+          "end": 57.42,
+          "probability": 0.596440409620603
+        },
+        {
+          "word": " jatuh",
+          "start": 57.42,
+          "end": 57.8,
+          "probability": 0.6340422729651133
+        },
+        {
+          "word": " timpuk.",
+          "start": 57.8,
+          "end": 58.32,
+          "probability": 0.3114279856284459
+        }
+      ]
+    }
+  ],
+  "transcript_with_speakers": [
+    {
+      "start": 6.780000000000001,
+      "end": 8.2,
+      "speaker": "CUSTOMER",
+      "text": " Hello, selamat siap ya?",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 6.780000000000001,
+          "end": 7.32,
+          "probability": 0.04866150766611099
+        },
+        {
+          "word": " selamat",
+          "start": 7.54,
+          "end": 7.74,
+          "probability": 0.6160596683621407
+        },
+        {
+          "word": " siap",
+          "start": 7.74,
+          "end": 8.04,
+          "probability": 0.36886997520923615
+        },
+        {
+          "word": " ya?",
+          "start": 8.04,
+          "end": 8.2,
+          "probability": 0.6514683961868286
+        }
+      ]
+    },
+    {
+      "start": 9.24,
+      "end": 10.28,
+      "speaker": "CUSTOMER",
+      "text": " Siap ya, Bapak?",
+      "words": [
+        {
+          "word": " Siap",
+          "start": 9.24,
+          "end": 9.78,
+          "probability": 0.6259323209524155
+        },
+        {
+          "word": " ya,",
+          "start": 9.78,
+          "end": 9.94,
+          "probability": 0.7646545171737671
+        },
+        {
+          "word": " Bapak?",
+          "start": 9.94,
+          "end": 10.28,
+          "probability": 0.6247211843729019
+        }
+      ]
+    },
+    {
+      "start": 12.120000000000001,
+      "end": 14.06,
+      "speaker": "AGENT",
+      "text": " Ya, ini Bapak Sudang Dan.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 12.120000000000001,
+          "end": 12.66,
+          "probability": 0.6982755064964294
+        },
+        {
+          "word": " ini",
+          "start": 12.72,
+          "end": 12.82,
+          "probability": 0.1620837152004242
+        },
+        {
+          "word": " Bapak",
+          "start": 12.82,
+          "end": 13.38,
+          "probability": 0.9077251354853312
+        },
+        {
+          "word": " Sudang",
+          "start": 13.38,
+          "end": 13.82,
+          "probability": 0.361429899930954
+        },
+        {
+          "word": " Dan.",
+          "start": 13.82,
+          "end": 14.06,
+          "probability": 0.16392163932323456
+        }
+      ]
+    },
+    {
+      "start": 15.120000000000001,
+      "end": 17.4,
+      "speaker": "CUSTOMER",
+      "text": " Oh ya, benar, Bapak.",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 15.120000000000001,
+          "end": 15.66,
+          "probability": 0.5802866816520691
+        },
+        {
+          "word": " ya,",
+          "start": 15.66,
+          "end": 15.8,
+          "probability": 0.47502967715263367
+        },
+        {
+          "word": " benar,",
+          "start": 15.88,
+          "end": 16.12,
+          "probability": 0.9257360696792603
+        },
+        {
+          "word": " Bapak.",
+          "start": 16.24,
+          "end": 17.4,
+          "probability": 0.9269392093022665
+        }
+      ]
+    },
+    {
+      "start": 17.62,
+      "end": 20.32,
+      "speaker": "AGENT",
+      "text": " Saya dari aplikasi ekstra pinjam, Bapak.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 17.62,
+          "end": 17.9,
+          "probability": 0.8646478652954102
+        },
+        {
+          "word": " dari",
+          "start": 17.9,
+          "end": 18.06,
+          "probability": 0.9360495209693909
+        },
+        {
+          "word": " aplikasi",
+          "start": 18.06,
+          "end": 18.62,
+          "probability": 0.9517617424329122
+        },
+        {
+          "word": " ekstra",
+          "start": 18.62,
+          "end": 19.12,
+          "probability": 0.8639208972454071
+        },
+        {
+          "word": " pinjam,",
+          "start": 19.12,
+          "end": 19.74,
+          "probability": 0.6920522451400757
+        },
+        {
+          "word": " Bapak.",
+          "start": 19.88,
+          "end": 20.32,
+          "probability": 0.8027809460957845
+        }
+      ]
+    },
+    {
+      "start": 21.36,
+      "end": 22.78,
+      "speaker": "CUSTOMER",
+      "text": " Oh ya, gimana, Bapak?",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 21.36,
+          "end": 21.66,
+          "probability": 0.9160360097885132
+        },
+        {
+          "word": " ya,",
+          "start": 21.66,
+          "end": 21.92,
+          "probability": 0.806556224822998
+        },
+        {
+          "word": " gimana,",
+          "start": 22.02,
+          "end": 22.34,
+          "probability": 0.9552629888057709
+        },
+        {
+          "word": " Bapak?",
+          "start": 22.44,
+          "end": 22.78,
+          "probability": 0.9928093751271566
+        }
+      ]
+    },
+    {
+      "start": 23.28,
+      "end": 25.22,
+      "speaker": "AGENT",
+      "text": " Ya, taginnya mesti tiba-tiba jam berapa, Bapak?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 23.28,
+          "end": 23.58,
+          "probability": 0.871797502040863
+        },
+        {
+          "word": " taginnya",
+          "start": 23.8,
+          "end": 24.12,
+          "probability": 0.2690602590640386
+        },
+        {
+          "word": " mesti",
+          "start": 24.12,
+          "end": 24.28,
+          "probability": 0.6042457520961761
+        },
+        {
+          "word": " tiba",
+          "start": 24.28,
+          "end": 24.5,
+          "probability": 0.5620638728141785
+        },
+        {
+          "word": "-tiba",
+          "start": 24.5,
+          "end": 24.6,
+          "probability": 0.7956844369570414
+        },
+        {
+          "word": " jam",
+          "start": 24.6,
+          "end": 24.76,
+          "probability": 0.7703281044960022
+        },
+        {
+          "word": " berapa,",
+          "start": 24.76,
+          "end": 24.98,
+          "probability": 0.9634653925895691
+        },
+        {
+          "word": " Bapak?",
+          "start": 25.02,
+          "end": 25.22,
+          "probability": 0.9705748756726583
+        }
+      ]
+    },
+    {
+      "start": 26.62,
+      "end": 29.36,
+      "speaker": "CUSTOMER",
+      "text": " Saya mau bayar nanti pas jatuh timpuk, Bapak.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 26.62,
+          "end": 27.26,
+          "probability": 0.06972413510084152
+        },
+        {
+          "word": " mau",
+          "start": 27.26,
+          "end": 27.6,
+          "probability": 0.8893182277679443
+        },
+        {
+          "word": " bayar",
+          "start": 27.6,
+          "end": 28.04,
+          "probability": 0.750585526227951
+        },
+        {
+          "word": " nanti",
+          "start": 28.04,
+          "end": 28.32,
+          "probability": 0.542840987443924
+        },
+        {
+          "word": " pas",
+          "start": 28.32,
+          "end": 28.52,
+          "probability": 0.896915853023529
+        },
+        {
+          "word": " jatuh",
+          "start": 28.52,
+          "end": 28.8,
+          "probability": 0.6957074006398519
+        },
+        {
+          "word": " timpuk,",
+          "start": 28.8,
+          "end": 29.12,
+          "probability": 0.6906776229540507
+        },
+        {
+          "word": " Bapak.",
+          "start": 29.18,
+          "end": 29.36,
+          "probability": 0.3755010599270463
+        }
+      ]
+    },
+    {
+      "start": 29.42,
+      "end": 30.62,
+      "speaker": "CUSTOMER",
+      "text": " Kan belum tanggal jatuh timpuk?",
+      "words": [
+        {
+          "word": " Kan",
+          "start": 29.42,
+          "end": 29.48,
+          "probability": 0.7965623140335083
+        },
+        {
+          "word": " belum",
+          "start": 29.48,
+          "end": 29.64,
+          "probability": 0.9336318969726562
+        },
+        {
+          "word": " tanggal",
+          "start": 29.64,
+          "end": 29.94,
+          "probability": 0.7743921279907227
+        },
+        {
+          "word": " jatuh",
+          "start": 29.94,
+          "end": 30.2,
+          "probability": 0.9809601108233134
+        },
+        {
+          "word": " timpuk?",
+          "start": 30.2,
+          "end": 30.62,
+          "probability": 0.9986533522605896
+        }
+      ]
+    },
+    {
+      "start": 31.42,
+      "end": 35.44,
+      "speaker": "AGENT",
+      "text": " Ya, tapi kan di sini kan harus bayar wajib di Amin 2, Bapak.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 31.42,
+          "end": 31.9,
+          "probability": 0.6695175170898438
+        },
+        {
+          "word": " tapi",
+          "start": 32.12,
+          "end": 32.36,
+          "probability": 0.93138188123703
+        },
+        {
+          "word": " kan",
+          "start": 32.36,
+          "end": 32.5,
+          "probability": 0.9545931816101074
+        },
+        {
+          "word": " di",
+          "start": 32.5,
+          "end": 32.6,
+          "probability": 0.4350995421409607
+        },
+        {
+          "word": " sini",
+          "start": 32.6,
+          "end": 32.76,
+          "probability": 0.9982271790504456
+        },
+        {
+          "word": " kan",
+          "start": 32.76,
+          "end": 32.9,
+          "probability": 0.9461902976036072
+        },
+        {
+          "word": " harus",
+          "start": 32.9,
+          "end": 33.22,
+          "probability": 0.6988622546195984
+        },
+        {
+          "word": " bayar",
+          "start": 33.22,
+          "end": 33.94,
+          "probability": 0.9884363114833832
+        },
+        {
+          "word": " wajib",
+          "start": 33.94,
+          "end": 34.34,
+          "probability": 0.9713081121444702
+        },
+        {
+          "word": " di",
+          "start": 34.34,
+          "end": 34.5,
+          "probability": 0.9069840908050537
+        },
+        {
+          "word": " Amin",
+          "start": 34.5,
+          "end": 34.7,
+          "probability": 0.6271629482507706
+        },
+        {
+          "word": " 2,",
+          "start": 34.7,
+          "end": 34.94,
+          "probability": 0.535311758518219
+        },
+        {
+          "word": " Bapak.",
+          "start": 35.08,
+          "end": 35.44,
+          "probability": 0.8931079904238383
+        }
+      ]
+    },
+    {
+      "start": 35.62,
+      "end": 37.34,
+      "speaker": "AGENT",
+      "text": " Bapak juga di sini bukan peminyam pertama.",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 35.62,
+          "end": 35.62,
+          "probability": 0.7363467961549759
+        },
+        {
+          "word": " juga",
+          "start": 35.62,
+          "end": 35.7,
+          "probability": 0.9685800075531006
+        },
+        {
+          "word": " di",
+          "start": 35.7,
+          "end": 35.86,
+          "probability": 0.8745414018630981
+        },
+        {
+          "word": " sini",
+          "start": 35.86,
+          "end": 36.06,
+          "probability": 0.9992795586585999
+        },
+        {
+          "word": " bukan",
+          "start": 36.06,
+          "end": 36.36,
+          "probability": 0.9824932813644409
+        },
+        {
+          "word": " peminyam",
+          "start": 36.36,
+          "end": 36.84,
+          "probability": 0.5926108906666437
+        },
+        {
+          "word": " pertama.",
+          "start": 36.84,
+          "end": 37.34,
+          "probability": 0.9759677648544312
+        }
+      ]
+    },
+    {
+      "start": 37.78,
+      "end": 40.5,
+      "speaker": "AGENT",
+      "text": " Masa harus pemujakan terus, Bapak.",
+      "words": [
+        {
+          "word": " Masa",
+          "start": 37.78,
+          "end": 38.14,
+          "probability": 0.8582734167575836
+        },
+        {
+          "word": " harus",
+          "start": 38.14,
+          "end": 38.36,
+          "probability": 0.9852402210235596
+        },
+        {
+          "word": " pemujakan",
+          "start": 38.36,
+          "end": 38.82,
+          "probability": 0.1743120551109314
+        },
+        {
+          "word": " terus,",
+          "start": 38.82,
+          "end": 39.36,
+          "probability": 0.8324605226516724
+        },
+        {
+          "word": " Bapak.",
+          "start": 39.78,
+          "end": 40.5,
+          "probability": 0.8910929560661316
+        }
+      ]
+    },
+    {
+      "start": 40.5,
+      "end": 41.48,
+      "speaker": "CUSTOMER",
+      "text": " Ya, jatuh itu.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 40.5,
+          "end": 40.54,
+          "probability": 0.2667299509048462
+        },
+        {
+          "word": " jatuh",
+          "start": 40.92,
+          "end": 41.16,
+          "probability": 0.6767040515939394
+        },
+        {
+          "word": " itu.",
+          "start": 41.16,
+          "end": 41.48,
+          "probability": 0.4743114113807678
+        }
+      ]
+    },
+    {
+      "start": 42.06,
+      "end": 45.44,
+      "speaker": "CUSTOMER",
+      "text": " Kalau, kalau Bapak, Bapak tahu ya,",
+      "words": [
+        {
+          "word": " Kalau,",
+          "start": 42.06,
+          "end": 42.7,
+          "probability": 0.7005993723869324
+        },
+        {
+          "word": " kalau",
+          "start": 42.7,
+          "end": 43.16,
+          "probability": 0.9749625325202942
+        },
+        {
+          "word": " Bapak,",
+          "start": 43.16,
+          "end": 43.86,
+          "probability": 0.6957111060619354
+        },
+        {
+          "word": " Bapak",
+          "start": 43.86,
+          "end": 45.04,
+          "probability": 0.9270962079366049
+        },
+        {
+          "word": " tahu",
+          "start": 45.04,
+          "end": 45.04,
+          "probability": 0.4442707300186157
+        },
+        {
+          "word": " ya,",
+          "start": 45.04,
+          "end": 45.44,
+          "probability": 0.77898770570755
+        }
+      ]
+    },
+    {
+      "start": 45.8,
+      "end": 48.42,
+      "speaker": "CUSTOMER",
+      "text": " Bapak tahu saya setiap saya minjam,",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 45.8,
+          "end": 46.18,
+          "probability": 0.9329377810160319
+        },
+        {
+          "word": " tahu",
+          "start": 46.18,
+          "end": 46.48,
+          "probability": 0.9035032987594604
+        },
+        {
+          "word": " saya",
+          "start": 46.48,
+          "end": 46.98,
+          "probability": 0.6483967900276184
+        },
+        {
+          "word": " setiap",
+          "start": 46.98,
+          "end": 47.6,
+          "probability": 0.9869767824808756
+        },
+        {
+          "word": " saya",
+          "start": 47.6,
+          "end": 47.94,
+          "probability": 0.9593924283981323
+        },
+        {
+          "word": " minjam,",
+          "start": 47.94,
+          "end": 48.42,
+          "probability": 0.6842052936553955
+        }
+      ]
+    },
+    {
+      "start": 48.62,
+      "end": 50.5,
+      "speaker": "CUSTOMER",
+      "text": " saya selalu bayar pas jatuh timpuk.",
+      "words": [
+        {
+          "word": " saya",
+          "start": 48.62,
+          "end": 48.78,
+          "probability": 0.8192552328109741
+        },
+        {
+          "word": " selalu",
+          "start": 48.78,
+          "end": 49.12,
+          "probability": 0.9884426593780518
+        },
+        {
+          "word": " bayar",
+          "start": 49.12,
+          "end": 49.44,
+          "probability": 0.9948038756847382
+        },
+        {
+          "word": " pas",
+          "start": 49.44,
+          "end": 49.64,
+          "probability": 0.884476900100708
+        },
+        {
+          "word": " jatuh",
+          "start": 49.64,
+          "end": 49.9,
+          "probability": 0.9853977163632711
+        },
+        {
+          "word": " timpuk.",
+          "start": 49.9,
+          "end": 50.5,
+          "probability": 0.9994246164957682
+        }
+      ]
+    },
+    {
+      "start": 50.76,
+      "end": 51.22,
+      "speaker": "CUSTOMER",
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 50.76,
+          "end": 51.22,
+          "probability": 0.5376303791999817
+        }
+      ]
+    },
+    {
+      "start": 51.4,
+      "end": 52.92,
+      "speaker": "CUSTOMER",
+      "text": " Bapak perhapikan pembayaran saya.",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 51.4,
+          "end": 51.62,
+          "probability": 0.7152426838874817
+        },
+        {
+          "word": " perhapikan",
+          "start": 51.62,
+          "end": 52.14,
+          "probability": 0.5842122957110405
+        },
+        {
+          "word": " pembayaran",
+          "start": 52.14,
+          "end": 52.66,
+          "probability": 0.9134758710861206
+        },
+        {
+          "word": " saya.",
+          "start": 52.66,
+          "end": 52.92,
+          "probability": 0.9813238978385925
+        }
+      ]
+    },
+    {
+      "start": 52.92,
+      "end": 54.78,
+      "speaker": "AGENT",
+      "text": " Di Amin 2, Bapak. Di sini tuh, Bapak.",
+      "words": [
+        {
+          "word": " Di",
+          "start": 52.92,
+          "end": 53.2,
+          "probability": 0.004489222541451454
+        },
+        {
+          "word": " Amin",
+          "start": 53.2,
+          "end": 53.44,
+          "probability": 0.483443193603307
+        },
+        {
+          "word": " 2,",
+          "start": 53.44,
+          "end": 53.7,
+          "probability": 0.613723874092102
+        },
+        {
+          "word": " Bapak.",
+          "start": 53.82,
+          "end": 54.22,
+          "probability": 0.5347662525455235
+        },
+        {
+          "word": " Di",
+          "start": 54.32,
+          "end": 54.36,
+          "probability": 0.6989522576332092
+        },
+        {
+          "word": " sini",
+          "start": 54.36,
+          "end": 54.56,
+          "probability": 0.00711839459836483
+        },
+        {
+          "word": " tuh,",
+          "start": 54.56,
+          "end": 54.72,
+          "probability": 0.25708574056625366
+        },
+        {
+          "word": " Bapak.",
+          "start": 54.78,
+          "end": 54.78,
+          "probability": 0.6673659731944402
+        }
+      ]
+    },
+    {
+      "start": 54.78,
+      "end": 55.56,
+      "speaker": "CUSTOMER",
+      "text": " Oh, nggak bisa.",
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 54.78,
+          "end": 54.9,
+          "probability": 0.30957064032554626
+        },
+        {
+          "word": " nggak",
+          "start": 55.1,
+          "end": 55.14,
+          "probability": 0.34785065054893494
+        },
+        {
+          "word": " bisa.",
+          "start": 55.14,
+          "end": 55.56,
+          "probability": 0.9517642259597778
+        }
+      ]
+    },
+    {
+      "start": 57.02,
+      "end": 58.32,
+      "speaker": "CUSTOMER",
+      "text": " Haturannya jatuh timpuk.",
+      "words": [
+        {
+          "word": " Haturannya",
+          "start": 57.02,
+          "end": 57.42,
+          "probability": 0.596440409620603
+        },
+        {
+          "word": " jatuh",
+          "start": 57.42,
+          "end": 57.8,
+          "probability": 0.6340422729651133
+        },
+        {
+          "word": " timpuk.",
+          "start": 57.8,
+          "end": 58.32,
+          "probability": 0.3114279856284459
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello, selamat siap ya?  Siap ya, Bapak?  Ya, ini Bapak Sudang Dan.  Oh ya, benar, Bapak.  Saya dari aplikasi ekstra pinjam, Bapak.  Oh ya, gimana, Bapak?  Ya, taginnya mesti tiba-tiba jam berapa, Bapak?  Saya mau bayar nanti pas jatuh timpuk, Bapak.  Kan belum tanggal jatuh timpuk?  Ya, tapi kan di sini kan harus bayar wajib di Amin 2, Bapak.  Bapak juga di sini bukan peminyam pertama.  Masa harus pemujakan terus, Bapak.  Ya, jatuh itu.  Kalau, kalau Bapak, Bapak tahu ya,  Bapak tahu saya setiap saya minjam,  saya selalu bayar pas jatuh timpuk.  Iya.  Bapak perhapikan pembayaran saya.  Di Amin 2, Bapak. Di sini tuh, Bapak.  Oh, nggak bisa.  Haturannya jatuh timpuk."
+}

@@ -1,0 +1,228 @@
+{
+  "case_id": "6281212992060209-20260401140334",
+  "file_name": "6281212992060209-20260401140334.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 2.8,
+      "text": " Halo Salah Tia",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 0.0,
+          "end": 2.02,
+          "probability": 0.2565588355064392
+        },
+        {
+          "word": " Salah",
+          "start": 2.02,
+          "end": 2.44,
+          "probability": 0.2351897582411766
+        },
+        {
+          "word": " Tia",
+          "start": 2.44,
+          "end": 2.8,
+          "probability": 0.7540070414543152
+        }
+      ]
+    },
+    {
+      "start": 5.119999999999999,
+      "end": 6.26,
+      "text": " Halo",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 5.119999999999999,
+          "end": 6.26,
+          "probability": 0.11279342323541641
+        }
+      ]
+    },
+    {
+      "start": 7.0,
+      "end": 9.0,
+      "text": " Dengan Bapak Dan Adiarto",
+      "words": [
+        {
+          "word": " Dengan",
+          "start": 7.0,
+          "end": 7.62,
+          "probability": 0.5169979929924011
+        },
+        {
+          "word": " Bapak",
+          "start": 7.62,
+          "end": 8.08,
+          "probability": 0.7048969914515814
+        },
+        {
+          "word": " Dan",
+          "start": 8.08,
+          "end": 8.32,
+          "probability": 0.37123987078666687
+        },
+        {
+          "word": " Adiarto",
+          "start": 8.32,
+          "end": 9.0,
+          "probability": 0.699056347211202
+        }
+      ]
+    },
+    {
+      "start": 11.7,
+      "end": 12.84,
+      "text": " Halo",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 11.7,
+          "end": 12.84,
+          "probability": 0.7838350534439087
+        }
+      ]
+    },
+    {
+      "start": 15.739999999999998,
+      "end": 17.62,
+      "text": " Halo Salah Tia",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 15.739999999999998,
+          "end": 16.88,
+          "probability": 0.2855508625507355
+        },
+        {
+          "word": " Salah",
+          "start": 16.88,
+          "end": 17.16,
+          "probability": 0.9934109151363373
+        },
+        {
+          "word": " Tia",
+          "start": 17.16,
+          "end": 17.62,
+          "probability": 0.9954861104488373
+        }
+      ]
+    }
+  ],
+  "transcript_with_speakers": [
+    {
+      "start": 0.0,
+      "end": 2.8,
+      "speaker": "AGENT",
+      "text": " Halo Salah Tia",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 0.0,
+          "end": 2.02,
+          "probability": 0.2565588355064392
+        },
+        {
+          "word": " Salah",
+          "start": 2.02,
+          "end": 2.44,
+          "probability": 0.2351897582411766
+        },
+        {
+          "word": " Tia",
+          "start": 2.44,
+          "end": 2.8,
+          "probability": 0.7540070414543152
+        }
+      ]
+    },
+    {
+      "start": 5.119999999999999,
+      "end": 6.26,
+      "speaker": "AGENT",
+      "text": " Halo",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 5.119999999999999,
+          "end": 6.26,
+          "probability": 0.11279342323541641
+        }
+      ]
+    },
+    {
+      "start": 7.0,
+      "end": 9.0,
+      "speaker": "AGENT",
+      "text": " Dengan Bapak Dan Adiarto",
+      "words": [
+        {
+          "word": " Dengan",
+          "start": 7.0,
+          "end": 7.62,
+          "probability": 0.5169979929924011
+        },
+        {
+          "word": " Bapak",
+          "start": 7.62,
+          "end": 8.08,
+          "probability": 0.7048969914515814
+        },
+        {
+          "word": " Dan",
+          "start": 8.08,
+          "end": 8.32,
+          "probability": 0.37123987078666687
+        },
+        {
+          "word": " Adiarto",
+          "start": 8.32,
+          "end": 9.0,
+          "probability": 0.699056347211202
+        }
+      ]
+    },
+    {
+      "start": 11.7,
+      "end": 12.84,
+      "speaker": "AGENT",
+      "text": " Halo",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 11.7,
+          "end": 12.84,
+          "probability": 0.7838350534439087
+        }
+      ]
+    },
+    {
+      "start": 15.739999999999998,
+      "end": 17.62,
+      "speaker": "AGENT",
+      "text": " Halo Salah Tia",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 15.739999999999998,
+          "end": 16.88,
+          "probability": 0.2855508625507355
+        },
+        {
+          "word": " Salah",
+          "start": 16.88,
+          "end": 17.16,
+          "probability": 0.9934109151363373
+        },
+        {
+          "word": " Tia",
+          "start": 17.16,
+          "end": 17.62,
+          "probability": 0.9954861104488373
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo Salah Tia  Halo  Dengan Bapak Dan Adiarto  Halo  Halo Salah Tia"
+}

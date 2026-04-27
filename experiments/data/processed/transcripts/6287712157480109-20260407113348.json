@@ -1,0 +1,53 @@
+{
+  "case_id": "6287712157480109-20260407113348",
+  "file_name": "6287712157480109-20260407113348.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 1.28,
+      "speaker": "AGENT",
+      "text": " Teman-teman keren, kesempatan.",
+      "words": [
+        {
+          "word": " Teman",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.3523949501104653
+        },
+        {
+          "word": "-teman",
+          "start": 0.32,
+          "end": 0.46,
+          "probability": 0.604616699119409
+        },
+        {
+          "word": " keren,",
+          "start": 0.46,
+          "end": 0.72,
+          "probability": 0.1234027948230505
+        },
+        {
+          "word": " kesempatan.",
+          "start": 0.82,
+          "end": 1.28,
+          "probability": 0.4949852004647255
+        }
+      ]
+    },
+    {
+      "start": 13.0,
+      "end": 13.14,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 12.75,
+          "end": 13.14,
+          "probability": 0.5370285511016846
+        }
+      ]
+    }
+  ],
+  "full_text": " Teman-teman keren, kesempatan.  Halo?"
+}

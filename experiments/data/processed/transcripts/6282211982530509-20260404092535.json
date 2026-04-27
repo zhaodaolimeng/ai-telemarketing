@@ -1,0 +1,413 @@
+{
+  "case_id": "6282211982530509-20260404092535",
+  "file_name": "6282211982530509-20260404092535.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 2.0,
+      "speaker": "AGENT",
+      "text": " Bisa kutubungi bagi sama kakak.",
+      "words": [
+        {
+          "word": " Bisa",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.3255437077023089
+        },
+        {
+          "word": " kutubungi",
+          "start": 0.3,
+          "end": 1.2,
+          "probability": 0.20588147044181823
+        },
+        {
+          "word": " bagi",
+          "start": 1.2,
+          "end": 1.54,
+          "probability": 0.6094365119934082
+        },
+        {
+          "word": " sama",
+          "start": 1.54,
+          "end": 1.76,
+          "probability": 0.2410079389810562
+        },
+        {
+          "word": " kakak.",
+          "start": 1.76,
+          "end": 2.06,
+          "probability": 0.4125327294071515
+        }
+      ]
+    },
+    {
+      "start": 2.68,
+      "end": 3.1,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 2.68,
+          "end": 3.1,
+          "probability": 0.5394873023033142
+        }
+      ]
+    },
+    {
+      "start": 4.680000000000001,
+      "end": 5.54,
+      "speaker": "AGENT",
+      "text": " Ya, halo?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 4.680000000000001,
+          "end": 5.28,
+          "probability": 0.4705747067928314
+        },
+        {
+          "word": " halo?",
+          "start": 5.34,
+          "end": 5.54,
+          "probability": 0.7368061542510986
+        }
+      ]
+    },
+    {
+      "start": 6.72,
+      "end": 9.7,
+      "speaker": "CUSTOMER",
+      "text": " Saya dari ekstra uang, no kak. Ini pemerian mau di jam berapa?",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 6.72,
+          "end": 7.14,
+          "probability": 0.6052327156066895
+        },
+        {
+          "word": " dari",
+          "start": 7.14,
+          "end": 7.34,
+          "probability": 0.9108736515045166
+        },
+        {
+          "word": " ekstra",
+          "start": 7.34,
+          "end": 7.64,
+          "probability": 0.7008512318134308
+        },
+        {
+          "word": " uang,",
+          "start": 7.64,
+          "end": 7.94,
+          "probability": 0.6250198781490326
+        },
+        {
+          "word": " no",
+          "start": 8.02,
+          "end": 8.14,
+          "probability": 0.10246498137712479
+        },
+        {
+          "word": " kak.",
+          "start": 8.14,
+          "end": 8.36,
+          "probability": 0.6641688793897629
+        },
+        {
+          "word": " Ini",
+          "start": 8.54,
+          "end": 8.7,
+          "probability": 0.9459423422813416
+        },
+        {
+          "word": " pemerian",
+          "start": 8.7,
+          "end": 9.08,
+          "probability": 0.5395736992359161
+        },
+        {
+          "word": " mau",
+          "start": 9.08,
+          "end": 9.22,
+          "probability": 0.2563203275203705
+        },
+        {
+          "word": " di",
+          "start": 9.22,
+          "end": 9.32,
+          "probability": 0.649232029914856
+        },
+        {
+          "word": " jam",
+          "start": 9.32,
+          "end": 9.44,
+          "probability": 0.7112714648246765
+        },
+        {
+          "word": " berapa?",
+          "start": 9.44,
+          "end": 9.7,
+          "probability": 0.8899520635604858
+        }
+      ]
+    },
+    {
+      "start": 10.86,
+      "end": 12.52,
+      "speaker": "CUSTOMER",
+      "text": " Tunggu, ada bentar yang mau di layar.",
+      "words": [
+        {
+          "word": " Tunggu,",
+          "start": 10.86,
+          "end": 11.34,
+          "probability": 0.8529568711916605
+        },
+        {
+          "word": " ada",
+          "start": 11.44,
+          "end": 11.58,
+          "probability": 0.14633575081825256
+        },
+        {
+          "word": " bentar",
+          "start": 11.58,
+          "end": 11.84,
+          "probability": 0.6867157518863678
+        },
+        {
+          "word": " yang",
+          "start": 11.84,
+          "end": 11.96,
+          "probability": 0.12402275949716568
+        },
+        {
+          "word": " mau",
+          "start": 11.96,
+          "end": 12.04,
+          "probability": 0.8070054054260254
+        },
+        {
+          "word": " di",
+          "start": 12.04,
+          "end": 12.14,
+          "probability": 0.9097200036048889
+        },
+        {
+          "word": " layar.",
+          "start": 12.14,
+          "end": 12.52,
+          "probability": 0.8415643870830536
+        }
+      ]
+    },
+    {
+      "start": 14.82,
+      "end": 16.36,
+      "speaker": "CUSTOMER",
+      "text": " Nunggu sampai kapan lagi?",
+      "words": [
+        {
+          "word": " Nunggu",
+          "start": 14.82,
+          "end": 15.42,
+          "probability": 0.8589516679445902
+        },
+        {
+          "word": " sampai",
+          "start": 15.42,
+          "end": 15.72,
+          "probability": 0.7527645826339722
+        },
+        {
+          "word": " kapan",
+          "start": 15.72,
+          "end": 15.98,
+          "probability": 0.7903396785259247
+        },
+        {
+          "word": " lagi?",
+          "start": 15.98,
+          "end": 16.36,
+          "probability": 0.9924669861793518
+        }
+      ]
+    },
+    {
+      "start": 17.6,
+      "end": 18.16,
+      "speaker": "AGENT",
+      "text": " Jam 17.",
+      "words": [
+        {
+          "word": " Jam",
+          "start": 17.6,
+          "end": 17.88,
+          "probability": 0.8630773425102234
+        },
+        {
+          "word": " 17.",
+          "start": 17.88,
+          "end": 18.16,
+          "probability": 0.18960866332054138
+        }
+      ]
+    },
+    {
+      "start": 20.74,
+      "end": 23.6,
+      "speaker": "CUSTOMER",
+      "text": " Tadi kadangnya sebentar. Sekarang mau ngundur waktu mulu.",
+      "words": [
+        {
+          "word": " Tadi",
+          "start": 20.74,
+          "end": 21.34,
+          "probability": 0.2967324052006006
+        },
+        {
+          "word": " kadangnya",
+          "start": 21.34,
+          "end": 21.68,
+          "probability": 0.7479050954182943
+        },
+        {
+          "word": " sebentar.",
+          "start": 21.68,
+          "end": 22.02,
+          "probability": 0.6938864588737488
+        },
+        {
+          "word": " Sekarang",
+          "start": 22.34,
+          "end": 22.52,
+          "probability": 0.9550666213035583
+        },
+        {
+          "word": " mau",
+          "start": 22.52,
+          "end": 22.64,
+          "probability": 0.7188146114349365
+        },
+        {
+          "word": " ngundur",
+          "start": 22.64,
+          "end": 22.86,
+          "probability": 0.5467311044534048
+        },
+        {
+          "word": " waktu",
+          "start": 22.86,
+          "end": 23.24,
+          "probability": 0.9902569055557251
+        },
+        {
+          "word": " mulu.",
+          "start": 23.24,
+          "end": 23.6,
+          "probability": 0.6777611672878265
+        }
+      ]
+    },
+    {
+      "start": 24.56,
+      "end": 25.4,
+      "speaker": "CUSTOMER",
+      "text": " Ya, tunggu.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 24.56,
+          "end": 25.16,
+          "probability": 0.8441612720489502
+        },
+        {
+          "word": " tunggu.",
+          "start": 25.28,
+          "end": 25.4,
+          "probability": 0.9954765439033508
+        }
+      ]
+    },
+    {
+      "start": 31.840000000000003,
+      "end": 33.18,
+      "speaker": "CUSTOMER",
+      "text": " Tunggu, tunggu, tunggu!",
+      "words": [
+        {
+          "word": " Tunggu,",
+          "start": 31.840000000000003,
+          "end": 32.42,
+          "probability": 0.5998524812360605
+        },
+        {
+          "word": " tunggu,",
+          "start": 32.48,
+          "end": 32.72,
+          "probability": 0.8109072744846344
+        },
+        {
+          "word": " tunggu!",
+          "start": 32.86,
+          "end": 33.18,
+          "probability": 0.9358553886413574
+        }
+      ]
+    },
+    {
+      "start": 36.72,
+      "end": 38.82,
+      "speaker": "AGENT",
+      "text": " Ini si mandara mau di proses tunggu.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 36.72,
+          "end": 37.3,
+          "probability": 0.039645418524742126
+        },
+        {
+          "word": " si",
+          "start": 37.3,
+          "end": 37.46,
+          "probability": 0.5493712425231934
+        },
+        {
+          "word": " mandara",
+          "start": 37.46,
+          "end": 37.72,
+          "probability": 0.1488187611103058
+        },
+        {
+          "word": " mau",
+          "start": 37.72,
+          "end": 37.9,
+          "probability": 0.036032237112522125
+        },
+        {
+          "word": " di",
+          "start": 37.9,
+          "end": 37.98,
+          "probability": 0.2022961527109146
+        },
+        {
+          "word": " proses",
+          "start": 37.98,
+          "end": 38.38,
+          "probability": 0.5212164986878633
+        },
+        {
+          "word": " tunggu.",
+          "start": 38.38,
+          "end": 38.82,
+          "probability": 0.8690530359745026
+        }
+      ]
+    }
+  ],
+  "full_text": " Bisa kutubungi bagi sama kakak.  Halo?  Ya, halo?  Saya dari ekstra uang, no kak. Ini pemerian mau di jam berapa?  Tunggu, ada bentar yang mau di layar.  Nunggu sampai kapan lagi?  Jam 17.  Tadi kadangnya sebentar. Sekarang mau ngundur waktu mulu.  Ya, tunggu.  Tunggu, tunggu, tunggu!  Ini si mandara mau di proses tunggu."
+}

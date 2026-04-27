@@ -1,0 +1,343 @@
+{
+  "case_id": "6287813349864309-20260422171104",
+  "file_name": "6287813349864309-20260422171104.mp3",
+  "transcript": [
+    {
+      "start": 8.420000000000002,
+      "end": 13.0,
+      "speaker": "AGENT",
+      "text": " ini mau dibayar, jangan marah-marah dulu, soalnya kan kamu kan berpakaian berkesetakai di tempatnya",
+      "words": [
+        {
+          "word": " ini",
+          "start": 8.420000000000002,
+          "end": 8.940000000000001,
+          "probability": 0.02140503190457821
+        },
+        {
+          "word": " mau",
+          "start": 8.940000000000001,
+          "end": 9.46,
+          "probability": 0.4997520446777344
+        },
+        {
+          "word": " dibayar,",
+          "start": 9.46,
+          "end": 10.04,
+          "probability": 0.9296950101852417
+        },
+        {
+          "word": " jangan",
+          "start": 10.06,
+          "end": 10.24,
+          "probability": 0.9198136925697327
+        },
+        {
+          "word": " marah",
+          "start": 10.24,
+          "end": 10.5,
+          "probability": 0.9484735727310181
+        },
+        {
+          "word": "-marah",
+          "start": 10.5,
+          "end": 10.72,
+          "probability": 0.7396470109621683
+        },
+        {
+          "word": " dulu,",
+          "start": 10.72,
+          "end": 10.9,
+          "probability": 0.9708314538002014
+        },
+        {
+          "word": " soalnya",
+          "start": 11.06,
+          "end": 11.32,
+          "probability": 0.5612387135624886
+        },
+        {
+          "word": " kan",
+          "start": 11.32,
+          "end": 11.44,
+          "probability": 0.8196832537651062
+        },
+        {
+          "word": " kamu",
+          "start": 11.44,
+          "end": 11.66,
+          "probability": 0.8825255036354065
+        },
+        {
+          "word": " kan",
+          "start": 11.66,
+          "end": 11.8,
+          "probability": 0.8384523987770081
+        },
+        {
+          "word": " berpakaian",
+          "start": 11.8,
+          "end": 12.24,
+          "probability": 0.34147188160568476
+        },
+        {
+          "word": " berkesetakai",
+          "start": 12.24,
+          "end": 12.8,
+          "probability": 0.19318737238645553
+        },
+        {
+          "word": " di",
+          "start": 12.8,
+          "end": 12.84,
+          "probability": 0.5028123259544373
+        },
+        {
+          "word": " tempatnya",
+          "start": 12.84,
+          "end": 13.1,
+          "probability": 0.4498710681994756
+        }
+      ]
+    },
+    {
+      "start": 13.72,
+      "end": 18.76,
+      "speaker": "AGENT",
+      "text": " iya, halo, halo, ini mau dibayar, lagi di pencet-pencet tunggu",
+      "words": [
+        {
+          "word": " iya,",
+          "start": 13.72,
+          "end": 14.12,
+          "probability": 0.5036972621455789
+        },
+        {
+          "word": " halo,",
+          "start": 14.18,
+          "end": 14.4,
+          "probability": 0.7402883172035217
+        },
+        {
+          "word": " halo,",
+          "start": 14.46,
+          "end": 14.7,
+          "probability": 0.779513955116272
+        },
+        {
+          "word": " ini",
+          "start": 14.7,
+          "end": 15.04,
+          "probability": 0.9792030453681946
+        },
+        {
+          "word": " mau",
+          "start": 15.04,
+          "end": 15.24,
+          "probability": 0.9985085129737854
+        },
+        {
+          "word": " dibayar,",
+          "start": 15.24,
+          "end": 16.46,
+          "probability": 0.9947048226992289
+        },
+        {
+          "word": " lagi",
+          "start": 16.54,
+          "end": 17.36,
+          "probability": 0.8540586829185486
+        },
+        {
+          "word": " di",
+          "start": 17.36,
+          "end": 17.5,
+          "probability": 0.7567303776741028
+        },
+        {
+          "word": " pencet",
+          "start": 17.5,
+          "end": 17.88,
+          "probability": 0.9321485360463461
+        },
+        {
+          "word": "-pencet",
+          "start": 17.88,
+          "end": 18.28,
+          "probability": 0.9703542590141296
+        },
+        {
+          "word": " tunggu",
+          "start": 18.28,
+          "end": 18.76,
+          "probability": 0.7735542058944702
+        }
+      ]
+    },
+    {
+      "start": 18.76,
+      "end": 22.84,
+      "speaker": "CUSTOMER",
+      "text": " iya, juga nyampe, sabar sebentar, sabar sebentar",
+      "words": [
+        {
+          "word": " iya,",
+          "start": 18.76,
+          "end": 19.4,
+          "probability": 0.5087990686297417
+        },
+        {
+          "word": " juga",
+          "start": 19.4,
+          "end": 19.8,
+          "probability": 0.08773820102214813
+        },
+        {
+          "word": " nyampe,",
+          "start": 19.8,
+          "end": 20.38,
+          "probability": 0.9726835091908773
+        },
+        {
+          "word": " sabar",
+          "start": 20.54,
+          "end": 21.64,
+          "probability": 0.9324834048748016
+        },
+        {
+          "word": " sebentar,",
+          "start": 21.64,
+          "end": 21.96,
+          "probability": 0.8532843589782715
+        },
+        {
+          "word": " sabar",
+          "start": 22.36,
+          "end": 22.62,
+          "probability": 0.9354189038276672
+        },
+        {
+          "word": " sebentar",
+          "start": 22.62,
+          "end": 22.84,
+          "probability": 0.561572827398777
+        }
+      ]
+    },
+    {
+      "start": 22.84,
+      "end": 25.1,
+      "speaker": "CUSTOMER",
+      "text": " iya, ini udah di pencet, oke doang",
+      "words": [
+        {
+          "word": " iya,",
+          "start": 22.84,
+          "end": 23.58,
+          "probability": 0.5810048133134842
+        },
+        {
+          "word": " ini",
+          "start": 23.58,
+          "end": 23.74,
+          "probability": 0.8978897929191589
+        },
+        {
+          "word": " udah",
+          "start": 23.74,
+          "end": 23.9,
+          "probability": 0.45126843452453613
+        },
+        {
+          "word": " di",
+          "start": 23.9,
+          "end": 24.02,
+          "probability": 0.37442606687545776
+        },
+        {
+          "word": " pencet,",
+          "start": 24.02,
+          "end": 24.38,
+          "probability": 0.7643596430619558
+        },
+        {
+          "word": " oke",
+          "start": 24.44,
+          "end": 24.58,
+          "probability": 0.9028844237327576
+        },
+        {
+          "word": " doang",
+          "start": 24.58,
+          "end": 25.1,
+          "probability": 0.9581918716430664
+        }
+      ]
+    },
+    {
+      "start": 26.1,
+      "end": 27.8,
+      "speaker": "AGENT",
+      "text": " di tunggu ini mau dibayarnya",
+      "words": [
+        {
+          "word": " di",
+          "start": 26.1,
+          "end": 26.76,
+          "probability": 0.05197879299521446
+        },
+        {
+          "word": " tunggu",
+          "start": 26.76,
+          "end": 27.0,
+          "probability": 0.5052736569195986
+        },
+        {
+          "word": " ini",
+          "start": 27.0,
+          "end": 27.1,
+          "probability": 0.08479999750852585
+        },
+        {
+          "word": " mau",
+          "start": 27.1,
+          "end": 27.24,
+          "probability": 0.009328207932412624
+        },
+        {
+          "word": " dibayarnya",
+          "start": 27.24,
+          "end": 27.8,
+          "probability": 0.38591228565201163
+        }
+      ]
+    },
+    {
+      "start": 27.8,
+      "end": 29.7,
+      "speaker": "CUSTOMER",
+      "text": " iya oke oke",
+      "words": [
+        {
+          "word": " iya",
+          "start": 27.8,
+          "end": 28.44,
+          "probability": 0.5215945970267057
+        },
+        {
+          "word": " oke",
+          "start": 28.44,
+          "end": 28.72,
+          "probability": 0.5412633419036865
+        },
+        {
+          "word": " oke",
+          "start": 28.72,
+          "end": 29.7,
+          "probability": 0.8516005873680115
+        }
+      ]
+    }
+  ],
+  "full_text": " ini mau dibayar, jangan marah-marah dulu, soalnya kan kamu kan berpakaian berkesetakai di tempatnya  iya, halo, halo, ini mau dibayar, lagi di pencet-pencet tunggu  iya, juga nyampe, sabar sebentar, sabar sebentar  iya, ini udah di pencet, oke doang  di tunggu ini mau dibayarnya  iya oke oke"
+}

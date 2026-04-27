@@ -1,0 +1,223 @@
+{
+  "case_id": "628563784505318-20260422151205",
+  "file_name": "628563784505318-20260422151205.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 0.58,
+      "speaker": "AGENT",
+      "text": " Selamat siap!",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.8925382196903229
+        },
+        {
+          "word": " siap!",
+          "start": 0.3,
+          "end": 0.58,
+          "probability": 0.9343679845333099
+        }
+      ]
+    },
+    {
+      "start": 0.64,
+      "end": 3.06,
+      "speaker": "CUSTOMER",
+      "text": " Selamat datang di layanan pesan suara.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 0.64,
+          "end": 0.94,
+          "probability": 0.9471768140792847
+        },
+        {
+          "word": " datang",
+          "start": 0.94,
+          "end": 1.4,
+          "probability": 0.9823922216892242
+        },
+        {
+          "word": " di",
+          "start": 1.4,
+          "end": 1.6,
+          "probability": 0.9554953575134277
+        },
+        {
+          "word": " layanan",
+          "start": 1.6,
+          "end": 1.96,
+          "probability": 0.9533787965774536
+        },
+        {
+          "word": " pesan",
+          "start": 1.96,
+          "end": 2.58,
+          "probability": 0.9464450478553772
+        },
+        {
+          "word": " suara.",
+          "start": 2.58,
+          "end": 3.06,
+          "probability": 0.9843967854976654
+        }
+      ]
+    },
+    {
+      "start": 3.22,
+      "end": 5.14,
+      "speaker": "AGENT",
+      "text": " Welcome to voicemail service.",
+      "words": [
+        {
+          "word": " Welcome",
+          "start": 3.22,
+          "end": 3.6,
+          "probability": 0.8056437969207764
+        },
+        {
+          "word": " to",
+          "start": 3.6,
+          "end": 3.96,
+          "probability": 0.9721875786781311
+        },
+        {
+          "word": " voicemail",
+          "start": 3.96,
+          "end": 4.6,
+          "probability": 0.6882691408197085
+        },
+        {
+          "word": " service.",
+          "start": 4.6,
+          "end": 5.14,
+          "probability": 0.8286554217338562
+        }
+      ]
+    },
+    {
+      "start": 5.48,
+      "end": 8.8,
+      "speaker": "CUSTOMER",
+      "text": " Silahkan rekam pesan suara setelah mendengar nada berikut.",
+      "words": [
+        {
+          "word": " Silahkan",
+          "start": 5.48,
+          "end": 5.96,
+          "probability": 0.9379210869471232
+        },
+        {
+          "word": " rekam",
+          "start": 5.96,
+          "end": 6.28,
+          "probability": 0.934065580368042
+        },
+        {
+          "word": " pesan",
+          "start": 6.28,
+          "end": 6.6,
+          "probability": 0.9924986660480499
+        },
+        {
+          "word": " suara",
+          "start": 6.6,
+          "end": 7.0,
+          "probability": 0.992586076259613
+        },
+        {
+          "word": " setelah",
+          "start": 7.0,
+          "end": 7.62,
+          "probability": 0.9643229047457377
+        },
+        {
+          "word": " mendengar",
+          "start": 7.62,
+          "end": 8.04,
+          "probability": 0.9854532480239868
+        },
+        {
+          "word": " nada",
+          "start": 8.04,
+          "end": 8.36,
+          "probability": 0.5703103542327881
+        },
+        {
+          "word": " berikut.",
+          "start": 8.36,
+          "end": 8.8,
+          "probability": 0.9969731271266937
+        }
+      ]
+    },
+    {
+      "start": 8.96,
+      "end": 12.16,
+      "speaker": "AGENT",
+      "text": " Tekan tombol apapun untuk menyelesaikan rekaman.",
+      "words": [
+        {
+          "word": " Tekan",
+          "start": 8.96,
+          "end": 9.38,
+          "probability": 0.5600601807236671
+        },
+        {
+          "word": " tombol",
+          "start": 9.38,
+          "end": 9.7,
+          "probability": 0.9006047546863556
+        },
+        {
+          "word": " apapun",
+          "start": 9.7,
+          "end": 10.36,
+          "probability": 0.8574104309082031
+        },
+        {
+          "word": " untuk",
+          "start": 10.36,
+          "end": 10.78,
+          "probability": 0.9193378686904907
+        },
+        {
+          "word": " menyelesaikan",
+          "start": 10.78,
+          "end": 11.54,
+          "probability": 0.9535543322563171
+        },
+        {
+          "word": " rekaman.",
+          "start": 11.54,
+          "end": 12.16,
+          "probability": 0.9768014252185822
+        }
+      ]
+    },
+    {
+      "start": 30.86,
+      "end": 32.26,
+      "speaker": "CUSTOMER",
+      "text": " Selamat datang!",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 30.86,
+          "end": 32.26,
+          "probability": 0.48615560308098793
+        },
+        {
+          "word": " datang!",
+          "start": 32.26,
+          "end": 32.26,
+          "probability": 0.5279876664280891
+        }
+      ]
+    }
+  ],
+  "full_text": " Selamat siap!  Selamat datang di layanan pesan suara.  Welcome to voicemail service.  Silahkan rekam pesan suara setelah mendengar nada berikut.  Tekan tombol apapun untuk menyelesaikan rekaman.  Selamat datang!"
+}

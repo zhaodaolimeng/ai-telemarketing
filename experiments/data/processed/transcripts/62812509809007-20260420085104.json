@@ -1,0 +1,531 @@
+{
+  "case_id": "62812509809007-20260420085104",
+  "file_name": "62812509809007-20260420085104.mp3",
+  "transcript": [
+    {
+      "start": 1.6399999999999966,
+      "end": 3.54,
+      "text": " Halo, Selamat pagi.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 1.6399999999999966,
+          "end": 2.48,
+          "probability": 0.4525718688964844
+        },
+        {
+          "word": " Selamat",
+          "start": 2.6,
+          "end": 2.92,
+          "probability": 0.6738621741533279
+        },
+        {
+          "word": " pagi.",
+          "start": 2.92,
+          "end": 3.54,
+          "probability": 0.94842928647995
+        }
+      ]
+    },
+    {
+      "start": 5.02,
+      "end": 6.22,
+      "text": " Iya pagi.",
+      "words": [
+        {
+          "word": " Iya",
+          "start": 5.02,
+          "end": 5.86,
+          "probability": 0.20286217331886292
+        },
+        {
+          "word": " pagi.",
+          "start": 5.86,
+          "end": 6.22,
+          "probability": 0.8605031967163086
+        }
+      ]
+    },
+    {
+      "start": 6.68,
+      "end": 9.04,
+      "text": " Dengar bakal Orphilinus.",
+      "words": [
+        {
+          "word": " Dengar",
+          "start": 6.68,
+          "end": 6.98,
+          "probability": 0.6210565567016602
+        },
+        {
+          "word": " bakal",
+          "start": 6.98,
+          "end": 7.56,
+          "probability": 0.5979000329971313
+        },
+        {
+          "word": " Orphilinus.",
+          "start": 7.56,
+          "end": 9.04,
+          "probability": 0.43344026803970337
+        }
+      ]
+    },
+    {
+      "start": 9.68,
+      "end": 10.66,
+      "text": " Betul pak.",
+      "words": [
+        {
+          "word": " Betul",
+          "start": 9.68,
+          "end": 10.52,
+          "probability": 0.8899111747741699
+        },
+        {
+          "word": " pak.",
+          "start": 10.52,
+          "end": 10.66,
+          "probability": 0.31170397996902466
+        }
+      ]
+    },
+    {
+      "start": 13.0,
+      "end": 15.88,
+      "text": " Iya, dari aplikasi extra pak.",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 12.799999999999999,
+          "end": 13.22,
+          "probability": 0.14547203481197357
+        },
+        {
+          "word": " dari",
+          "start": 14.36,
+          "end": 14.56,
+          "probability": 0.269999235868454
+        },
+        {
+          "word": " aplikasi",
+          "start": 14.56,
+          "end": 15.1,
+          "probability": 0.7359753549098969
+        },
+        {
+          "word": " extra",
+          "start": 15.1,
+          "end": 15.46,
+          "probability": 0.21191054582595825
+        },
+        {
+          "word": " pak.",
+          "start": 15.46,
+          "end": 15.88,
+          "probability": 0.795461893081665
+        }
+      ]
+    },
+    {
+      "start": 19.62,
+      "end": 20.46,
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 19.62,
+          "end": 20.46,
+          "probability": 0.1284719705581665
+        }
+      ]
+    },
+    {
+      "start": 20.56,
+      "end": 23.3,
+      "text": " Dari aplikasi extra. Ini tagian yang bisa diberejen apa?",
+      "words": [
+        {
+          "word": " Dari",
+          "start": 20.56,
+          "end": 20.68,
+          "probability": 0.7041348367929459
+        },
+        {
+          "word": " aplikasi",
+          "start": 20.68,
+          "end": 21.08,
+          "probability": 0.995978832244873
+        },
+        {
+          "word": " extra.",
+          "start": 21.08,
+          "end": 21.5,
+          "probability": 0.9744845032691956
+        },
+        {
+          "word": " Ini",
+          "start": 21.66,
+          "end": 21.76,
+          "probability": 0.9100438952445984
+        },
+        {
+          "word": " tagian",
+          "start": 21.76,
+          "end": 22.12,
+          "probability": 0.2696317583322525
+        },
+        {
+          "word": " yang",
+          "start": 22.12,
+          "end": 22.2,
+          "probability": 0.26834166049957275
+        },
+        {
+          "word": " bisa",
+          "start": 22.2,
+          "end": 22.38,
+          "probability": 0.9901092052459717
+        },
+        {
+          "word": " diberejen",
+          "start": 22.38,
+          "end": 23.06,
+          "probability": 0.34874950846036273
+        },
+        {
+          "word": " apa?",
+          "start": 23.06,
+          "end": 23.3,
+          "probability": 0.23121243715286255
+        }
+      ]
+    },
+    {
+      "start": 27.4,
+      "end": 28.24,
+      "text": " Halo.",
+      "words": [
+        {
+          "word": " Halo.",
+          "start": 27.4,
+          "end": 28.24,
+          "probability": 0.7866222858428955
+        }
+      ]
+    },
+    {
+      "start": 29.240000000000002,
+      "end": 29.76,
+      "text": " Halo.",
+      "words": [
+        {
+          "word": " Halo.",
+          "start": 29.240000000000002,
+          "end": 29.76,
+          "probability": 0.42495205998420715
+        }
+      ]
+    },
+    {
+      "start": 32.040000000000006,
+      "end": 33.86,
+      "text": " Halo, masih tengok resepa.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 32.040000000000006,
+          "end": 32.56,
+          "probability": 0.8840296864509583
+        },
+        {
+          "word": " masih",
+          "start": 32.82,
+          "end": 33.0,
+          "probability": 0.24938689172267914
+        },
+        {
+          "word": " tengok",
+          "start": 33.0,
+          "end": 33.24,
+          "probability": 0.32513653486967087
+        },
+        {
+          "word": " resepa.",
+          "start": 33.24,
+          "end": 33.86,
+          "probability": 0.1601560367271304
+        }
+      ]
+    }
+  ],
+  "transcript_with_speakers": [
+    {
+      "start": 1.6399999999999966,
+      "end": 3.54,
+      "speaker": "AGENT",
+      "text": " Halo, Selamat pagi.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 1.6399999999999966,
+          "end": 2.48,
+          "probability": 0.4525718688964844
+        },
+        {
+          "word": " Selamat",
+          "start": 2.6,
+          "end": 2.92,
+          "probability": 0.6738621741533279
+        },
+        {
+          "word": " pagi.",
+          "start": 2.92,
+          "end": 3.54,
+          "probability": 0.94842928647995
+        }
+      ]
+    },
+    {
+      "start": 5.02,
+      "end": 6.22,
+      "speaker": "CUSTOMER",
+      "text": " Iya pagi.",
+      "words": [
+        {
+          "word": " Iya",
+          "start": 5.02,
+          "end": 5.86,
+          "probability": 0.20286217331886292
+        },
+        {
+          "word": " pagi.",
+          "start": 5.86,
+          "end": 6.22,
+          "probability": 0.8605031967163086
+        }
+      ]
+    },
+    {
+      "start": 6.68,
+      "end": 9.04,
+      "speaker": "AGENT",
+      "text": " Dengar bakal Orphilinus.",
+      "words": [
+        {
+          "word": " Dengar",
+          "start": 6.68,
+          "end": 6.98,
+          "probability": 0.6210565567016602
+        },
+        {
+          "word": " bakal",
+          "start": 6.98,
+          "end": 7.56,
+          "probability": 0.5979000329971313
+        },
+        {
+          "word": " Orphilinus.",
+          "start": 7.56,
+          "end": 9.04,
+          "probability": 0.43344026803970337
+        }
+      ]
+    },
+    {
+      "start": 9.68,
+      "end": 10.66,
+      "speaker": "AGENT",
+      "text": " Betul pak.",
+      "words": [
+        {
+          "word": " Betul",
+          "start": 9.68,
+          "end": 10.52,
+          "probability": 0.8899111747741699
+        },
+        {
+          "word": " pak.",
+          "start": 10.52,
+          "end": 10.66,
+          "probability": 0.31170397996902466
+        }
+      ]
+    },
+    {
+      "start": 13.0,
+      "end": 15.88,
+      "speaker": "AGENT",
+      "text": " Iya, dari aplikasi extra pak.",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 12.799999999999999,
+          "end": 13.22,
+          "probability": 0.14547203481197357
+        },
+        {
+          "word": " dari",
+          "start": 14.36,
+          "end": 14.56,
+          "probability": 0.269999235868454
+        },
+        {
+          "word": " aplikasi",
+          "start": 14.56,
+          "end": 15.1,
+          "probability": 0.7359753549098969
+        },
+        {
+          "word": " extra",
+          "start": 15.1,
+          "end": 15.46,
+          "probability": 0.21191054582595825
+        },
+        {
+          "word": " pak.",
+          "start": 15.46,
+          "end": 15.88,
+          "probability": 0.795461893081665
+        }
+      ]
+    },
+    {
+      "start": 19.62,
+      "end": 20.46,
+      "speaker": "CUSTOMER",
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 19.62,
+          "end": 20.46,
+          "probability": 0.1284719705581665
+        }
+      ]
+    },
+    {
+      "start": 20.56,
+      "end": 23.3,
+      "speaker": "AGENT",
+      "text": " Dari aplikasi extra. Ini tagian yang bisa diberejen apa?",
+      "words": [
+        {
+          "word": " Dari",
+          "start": 20.56,
+          "end": 20.68,
+          "probability": 0.7041348367929459
+        },
+        {
+          "word": " aplikasi",
+          "start": 20.68,
+          "end": 21.08,
+          "probability": 0.995978832244873
+        },
+        {
+          "word": " extra.",
+          "start": 21.08,
+          "end": 21.5,
+          "probability": 0.9744845032691956
+        },
+        {
+          "word": " Ini",
+          "start": 21.66,
+          "end": 21.76,
+          "probability": 0.9100438952445984
+        },
+        {
+          "word": " tagian",
+          "start": 21.76,
+          "end": 22.12,
+          "probability": 0.2696317583322525
+        },
+        {
+          "word": " yang",
+          "start": 22.12,
+          "end": 22.2,
+          "probability": 0.26834166049957275
+        },
+        {
+          "word": " bisa",
+          "start": 22.2,
+          "end": 22.38,
+          "probability": 0.9901092052459717
+        },
+        {
+          "word": " diberejen",
+          "start": 22.38,
+          "end": 23.06,
+          "probability": 0.34874950846036273
+        },
+        {
+          "word": " apa?",
+          "start": 23.06,
+          "end": 23.3,
+          "probability": 0.23121243715286255
+        }
+      ]
+    },
+    {
+      "start": 27.4,
+      "end": 28.24,
+      "speaker": "AGENT",
+      "text": " Halo.",
+      "words": [
+        {
+          "word": " Halo.",
+          "start": 27.4,
+          "end": 28.24,
+          "probability": 0.7866222858428955
+        }
+      ]
+    },
+    {
+      "start": 29.240000000000002,
+      "end": 29.76,
+      "speaker": "AGENT",
+      "text": " Halo.",
+      "words": [
+        {
+          "word": " Halo.",
+          "start": 29.240000000000002,
+          "end": 29.76,
+          "probability": 0.42495205998420715
+        }
+      ]
+    },
+    {
+      "start": 32.040000000000006,
+      "end": 33.86,
+      "speaker": "AGENT",
+      "text": " Halo, masih tengok resepa.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 32.040000000000006,
+          "end": 32.56,
+          "probability": 0.8840296864509583
+        },
+        {
+          "word": " masih",
+          "start": 32.82,
+          "end": 33.0,
+          "probability": 0.24938689172267914
+        },
+        {
+          "word": " tengok",
+          "start": 33.0,
+          "end": 33.24,
+          "probability": 0.32513653486967087
+        },
+        {
+          "word": " resepa.",
+          "start": 33.24,
+          "end": 33.86,
+          "probability": 0.1601560367271304
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo, Selamat pagi.  Iya pagi.  Dengar bakal Orphilinus.  Betul pak.  Iya, dari aplikasi extra pak.  Iya.  Dari aplikasi extra. Ini tagian yang bisa diberejen apa?  Halo.  Halo.  Halo, masih tengok resepa."
+}

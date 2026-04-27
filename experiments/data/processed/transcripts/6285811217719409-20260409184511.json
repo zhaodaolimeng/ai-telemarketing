@@ -1,0 +1,59 @@
+{
+  "case_id": "6285811217719409-20260409184511",
+  "file_name": "6285811217719409-20260409184511.mp3",
+  "transcript": [
+    {
+      "start": 27.120000000000005,
+      "end": 29.92,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 27.120000000000005,
+          "end": 28.520000000000003,
+          "probability": 0.4585208906792104
+        },
+        {
+          "word": " kasih.",
+          "start": 28.520000000000003,
+          "end": 29.92,
+          "probability": 0.9279424548149109
+        }
+      ]
+    },
+    {
+      "start": 30.0,
+      "end": 32.26,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih kerana menonton.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 30.0,
+          "end": 32.26,
+          "probability": 0.47811121866106987
+        },
+        {
+          "word": " kasih",
+          "start": 32.26,
+          "end": 32.26,
+          "probability": 0.9025845527648926
+        },
+        {
+          "word": " kerana",
+          "start": 32.26,
+          "end": 32.26,
+          "probability": 0.5445435643196106
+        },
+        {
+          "word": " menonton.",
+          "start": 32.26,
+          "end": 32.26,
+          "probability": 0.885600209236145
+        }
+      ]
+    }
+  ],
+  "full_text": " Terima kasih.  Terima kasih kerana menonton."
+}

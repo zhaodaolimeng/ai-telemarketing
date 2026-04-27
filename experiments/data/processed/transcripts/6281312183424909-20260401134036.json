@@ -1,0 +1,185 @@
+{
+  "case_id": "6281312183424909-20260401134036",
+  "file_name": "6281312183424909-20260401134036.mp3",
+  "transcript": [
+    {
+      "start": 1.340000000000002,
+      "end": 1.94,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 1.340000000000002,
+          "end": 1.94,
+          "probability": 0.24873660504817963
+        }
+      ]
+    },
+    {
+      "start": 4.360000000000002,
+      "end": 8.24,
+      "text": " Halo, mana ini masih belum dibayarkan juga tegian Anda?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 4.360000000000002,
+          "end": 4.96,
+          "probability": 0.6794611811637878
+        },
+        {
+          "word": " mana",
+          "start": 5.38,
+          "end": 5.58,
+          "probability": 0.9825797080993652
+        },
+        {
+          "word": " ini",
+          "start": 5.58,
+          "end": 5.84,
+          "probability": 0.6648858189582825
+        },
+        {
+          "word": " masih",
+          "start": 5.84,
+          "end": 6.08,
+          "probability": 0.9276534914970398
+        },
+        {
+          "word": " belum",
+          "start": 6.08,
+          "end": 6.34,
+          "probability": 0.9908474683761597
+        },
+        {
+          "word": " dibayarkan",
+          "start": 6.34,
+          "end": 6.84,
+          "probability": 0.8994561235109965
+        },
+        {
+          "word": " juga",
+          "start": 6.84,
+          "end": 7.24,
+          "probability": 0.9320703744888306
+        },
+        {
+          "word": " tegian",
+          "start": 7.24,
+          "end": 7.74,
+          "probability": 0.7248210112253824
+        },
+        {
+          "word": " Anda?",
+          "start": 7.74,
+          "end": 8.24,
+          "probability": 0.6383278369903564
+        }
+      ]
+    },
+    {
+      "start": 8.4,
+      "end": 10.98,
+      "text": " Oh nih, baru sampai rumah, kita mau TF.",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 8.4,
+          "end": 8.54,
+          "probability": 0.17935562133789062
+        },
+        {
+          "word": " nih,",
+          "start": 8.54,
+          "end": 8.8,
+          "probability": 0.8890464305877686
+        },
+        {
+          "word": " baru",
+          "start": 9.0,
+          "end": 9.26,
+          "probability": 0.7759143114089966
+        },
+        {
+          "word": " sampai",
+          "start": 9.26,
+          "end": 9.6,
+          "probability": 0.9419724941253662
+        },
+        {
+          "word": " rumah,",
+          "start": 9.6,
+          "end": 9.98,
+          "probability": 0.9973981380462646
+        },
+        {
+          "word": " kita",
+          "start": 10.2,
+          "end": 10.46,
+          "probability": 0.957334041595459
+        },
+        {
+          "word": " mau",
+          "start": 10.46,
+          "end": 10.66,
+          "probability": 0.9900941252708435
+        },
+        {
+          "word": " TF.",
+          "start": 10.66,
+          "end": 10.98,
+          "probability": 0.1802084594964981
+        }
+      ]
+    },
+    {
+      "start": 11.28,
+      "end": 15.36,
+      "text": " Minta itu Virtual Mandiri dong, kirim KWA.",
+      "words": [
+        {
+          "word": " Minta",
+          "start": 11.28,
+          "end": 11.56,
+          "probability": 0.9604276120662689
+        },
+        {
+          "word": " itu",
+          "start": 11.56,
+          "end": 12.12,
+          "probability": 0.7733213305473328
+        },
+        {
+          "word": " Virtual",
+          "start": 12.12,
+          "end": 13.52,
+          "probability": 0.1840907335281372
+        },
+        {
+          "word": " Mandiri",
+          "start": 13.52,
+          "end": 14.16,
+          "probability": 0.8494342267513275
+        },
+        {
+          "word": " dong,",
+          "start": 14.16,
+          "end": 14.36,
+          "probability": 0.18167495727539062
+        },
+        {
+          "word": " kirim",
+          "start": 14.84,
+          "end": 15.06,
+          "probability": 0.5594948530197144
+        },
+        {
+          "word": " KWA.",
+          "start": 15.06,
+          "end": 15.36,
+          "probability": 0.4673667997121811
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo?  Halo, mana ini masih belum dibayarkan juga tegian Anda?  Oh nih, baru sampai rumah, kita mau TF.  Minta itu Virtual Mandiri dong, kirim KWA."
+}

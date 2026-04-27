@@ -1,0 +1,437 @@
+{
+  "case_id": "628531568682608-20260418084601",
+  "file_name": "628531568682608-20260418084601.mp3",
+  "transcript": [
+    {
+      "start": 1.2600000000000033,
+      "end": 2.2,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 1.2600000000000033,
+          "end": 2.2,
+          "probability": 0.16695213317871094
+        }
+      ]
+    },
+    {
+      "start": 2.92,
+      "end": 4.08,
+      "speaker": "AGENT",
+      "text": " Halo selamat datang",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 2.92,
+          "end": 3.62,
+          "probability": 0.4960021674633026
+        },
+        {
+          "word": " selamat",
+          "start": 3.62,
+          "end": 4.0,
+          "probability": 0.44060926139354706
+        },
+        {
+          "word": " datang",
+          "start": 4.0,
+          "end": 4.08,
+          "probability": 0.854822427034378
+        }
+      ]
+    },
+    {
+      "start": 4.08,
+      "end": 5.5,
+      "speaker": "AGENT",
+      "text": " Salam",
+      "words": [
+        {
+          "word": " Salam",
+          "start": 4.08,
+          "end": 5.5,
+          "probability": 0.5465810932219028
+        }
+      ]
+    },
+    {
+      "start": 5.5,
+      "end": 8.0,
+      "speaker": "CUSTOMER",
+      "text": " Iya ini mas pinjamannya",
+      "words": [
+        {
+          "word": " Iya",
+          "start": 5.5,
+          "end": 6.94,
+          "probability": 0.10725605487823486
+        },
+        {
+          "word": " ini",
+          "start": 6.94,
+          "end": 7.24,
+          "probability": 0.7137254476547241
+        },
+        {
+          "word": " mas",
+          "start": 7.24,
+          "end": 7.72,
+          "probability": 0.549957275390625
+        },
+        {
+          "word": " pinjamannya",
+          "start": 7.72,
+          "end": 8.189999999999998,
+          "probability": 0.6846710244814554
+        }
+      ]
+    },
+    {
+      "start": 8.82,
+      "end": 11.62,
+      "speaker": "AGENT",
+      "text": " Dibayarkan hari ini ya",
+      "words": [
+        {
+          "word": " Dibayarkan",
+          "start": 8.82,
+          "end": 9.82,
+          "probability": 0.7164427954703569
+        },
+        {
+          "word": " hari",
+          "start": 9.82,
+          "end": 10.06,
+          "probability": 0.4799744784832001
+        },
+        {
+          "word": " ini",
+          "start": 10.06,
+          "end": 10.26,
+          "probability": 0.911952793598175
+        },
+        {
+          "word": " ya",
+          "start": 10.26,
+          "end": 11.62,
+          "probability": 0.6457489132881165
+        }
+      ]
+    },
+    {
+      "start": 12.560000000000002,
+      "end": 15.24,
+      "speaker": "CUSTOMER",
+      "text": " Oh iya iya iya",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 12.560000000000002,
+          "end": 13.5,
+          "probability": 0.37092146277427673
+        },
+        {
+          "word": " iya",
+          "start": 13.5,
+          "end": 13.74,
+          "probability": 0.7719943821430206
+        },
+        {
+          "word": " iya",
+          "start": 13.74,
+          "end": 14.18,
+          "probability": 0.9513550102710724
+        },
+        {
+          "word": " iya",
+          "start": 14.18,
+          "end": 15.24,
+          "probability": 0.6761896908283234
+        }
+      ]
+    },
+    {
+      "start": 15.24,
+      "end": 16.9,
+      "speaker": "AGENT",
+      "text": " Iya bebas mas mau bayar",
+      "words": [
+        {
+          "word": " Iya",
+          "start": 15.24,
+          "end": 15.24,
+          "probability": 0.13149836659431458
+        },
+        {
+          "word": " bebas",
+          "start": 15.24,
+          "end": 15.96,
+          "probability": 0.6063767075538635
+        },
+        {
+          "word": " mas",
+          "start": 15.96,
+          "end": 16.2,
+          "probability": 0.9350165128707886
+        },
+        {
+          "word": " mau",
+          "start": 16.2,
+          "end": 16.4,
+          "probability": 0.971961259841919
+        },
+        {
+          "word": " bayar",
+          "start": 16.4,
+          "end": 16.9,
+          "probability": 0.9939316213130951
+        }
+      ]
+    },
+    {
+      "start": 16.9,
+      "end": 18.84,
+      "speaker": "AGENT",
+      "text": " Lunas 500 ribu atau",
+      "words": [
+        {
+          "word": " Lunas",
+          "start": 16.9,
+          "end": 17.78,
+          "probability": 0.6095549613237381
+        },
+        {
+          "word": " 500",
+          "start": 17.78,
+          "end": 18.06,
+          "probability": 0.25581640005111694
+        },
+        {
+          "word": " ribu",
+          "start": 18.06,
+          "end": 18.62,
+          "probability": 0.7266974747180939
+        },
+        {
+          "word": " atau",
+          "start": 18.62,
+          "end": 18.84,
+          "probability": 0.9674652814865112
+        }
+      ]
+    },
+    {
+      "start": 18.84,
+      "end": 20.6,
+      "speaker": "AGENT",
+      "text": " 192 ribu mas",
+      "words": [
+        {
+          "word": " 192",
+          "start": 18.84,
+          "end": 20.08,
+          "probability": 0.7675697803497314
+        },
+        {
+          "word": " ribu",
+          "start": 20.08,
+          "end": 20.28,
+          "probability": 0.9827158451080322
+        },
+        {
+          "word": " mas",
+          "start": 20.28,
+          "end": 20.6,
+          "probability": 0.9167078137397766
+        }
+      ]
+    },
+    {
+      "start": 20.6,
+      "end": 22.68,
+      "speaker": "CUSTOMER",
+      "text": " Iya iya",
+      "words": [
+        {
+          "word": " Iya",
+          "start": 20.6,
+          "end": 22.06,
+          "probability": 0.7863463163375854
+        },
+        {
+          "word": " iya",
+          "start": 22.06,
+          "end": 22.68,
+          "probability": 0.9127431809902191
+        }
+      ]
+    },
+    {
+      "start": 22.68,
+      "end": 25.74,
+      "speaker": "AGENT",
+      "text": " Iya aplikasinya masih ada mas",
+      "words": [
+        {
+          "word": " Iya",
+          "start": 22.68,
+          "end": 22.94,
+          "probability": 0.030264325439929962
+        },
+        {
+          "word": " aplikasinya",
+          "start": 22.94,
+          "end": 24.94,
+          "probability": 0.8986595720052719
+        },
+        {
+          "word": " masih",
+          "start": 24.94,
+          "end": 25.14,
+          "probability": 0.8393245339393616
+        },
+        {
+          "word": " ada",
+          "start": 25.14,
+          "end": 25.28,
+          "probability": 0.9957246780395508
+        },
+        {
+          "word": " mas",
+          "start": 25.28,
+          "end": 25.74,
+          "probability": 0.9741669297218323
+        }
+      ]
+    },
+    {
+      "start": 25.74,
+      "end": 28.08,
+      "speaker": "CUSTOMER",
+      "text": " Iya iya masih ada",
+      "words": [
+        {
+          "word": " Iya",
+          "start": 25.74,
+          "end": 27.3,
+          "probability": 0.35597488284111023
+        },
+        {
+          "word": " iya",
+          "start": 27.3,
+          "end": 27.5,
+          "probability": 0.9833599627017975
+        },
+        {
+          "word": " masih",
+          "start": 27.5,
+          "end": 27.72,
+          "probability": 0.746783435344696
+        },
+        {
+          "word": " ada",
+          "start": 27.72,
+          "end": 28.08,
+          "probability": 0.9989307522773743
+        }
+      ]
+    },
+    {
+      "start": 29.080000000000002,
+      "end": 29.74,
+      "speaker": "AGENT",
+      "text": " Oke",
+      "words": [
+        {
+          "word": " Oke",
+          "start": 29.080000000000002,
+          "end": 29.74,
+          "probability": 0.2379324734210968
+        }
+      ]
+    },
+    {
+      "start": 29.74,
+      "end": 31.46,
+      "speaker": "CUSTOMER",
+      "text": " Langsung sekarang ya mas",
+      "words": [
+        {
+          "word": " Langsung",
+          "start": 29.74,
+          "end": 30.82,
+          "probability": 0.6017381846904755
+        },
+        {
+          "word": " sekarang",
+          "start": 30.82,
+          "end": 31.08,
+          "probability": 0.3986261487007141
+        },
+        {
+          "word": " ya",
+          "start": 31.08,
+          "end": 31.24,
+          "probability": 0.7012976408004761
+        },
+        {
+          "word": " mas",
+          "start": 31.24,
+          "end": 31.46,
+          "probability": 0.34225398302078247
+        }
+      ]
+    },
+    {
+      "start": 31.46,
+      "end": 32.38,
+      "speaker": "CUSTOMER",
+      "text": " Saya tunggu",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 31.46,
+          "end": 31.98,
+          "probability": 0.14320409297943115
+        },
+        {
+          "word": " tunggu",
+          "start": 31.98,
+          "end": 32.38,
+          "probability": 0.9245078861713409
+        }
+      ]
+    },
+    {
+      "start": 32.38,
+      "end": 33.54,
+      "speaker": "CUSTOMER",
+      "text": " Oke",
+      "words": [
+        {
+          "word": " Oke",
+          "start": 32.38,
+          "end": 33.54,
+          "probability": 0.04463612288236618
+        }
+      ]
+    },
+    {
+      "start": 34.86,
+      "end": 35.9,
+      "speaker": "AGENT",
+      "text": " aplikasinya",
+      "words": [
+        {
+          "word": " aplikasinya",
+          "start": 34.86,
+          "end": 35.9,
+          "probability": 0.7539182025939226
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo?  Halo selamat datang  Salam  Iya ini mas pinjamannya  Dibayarkan hari ini ya  Oh iya iya iya  Iya bebas mas mau bayar  Lunas 500 ribu atau  192 ribu mas  Iya iya  Iya aplikasinya masih ada mas  Iya iya masih ada  Oke  Langsung sekarang ya mas  Saya tunggu  Oke  aplikasinya"
+}

@@ -1,0 +1,267 @@
+{
+  "case_id": "628151954514308-20260418082451",
+  "file_name": "628151954514308-20260418082451.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 3.14,
+      "text": " Sama datang ke layanan tempat suara.",
+      "words": [
+        {
+          "word": " Sama",
+          "start": 0.0,
+          "end": 0.98,
+          "probability": 0.2864369871094823
+        },
+        {
+          "word": " datang",
+          "start": 0.98,
+          "end": 1.42,
+          "probability": 0.8561926484107971
+        },
+        {
+          "word": " ke",
+          "start": 1.42,
+          "end": 1.68,
+          "probability": 0.3012290596961975
+        },
+        {
+          "word": " layanan",
+          "start": 1.68,
+          "end": 2.04,
+          "probability": 0.6320263147354126
+        },
+        {
+          "word": " tempat",
+          "start": 2.04,
+          "end": 2.68,
+          "probability": 0.27161684073507786
+        },
+        {
+          "word": " suara.",
+          "start": 2.68,
+          "end": 3.14,
+          "probability": 0.9595343470573425
+        }
+      ]
+    },
+    {
+      "start": 3.36,
+      "end": 5.18,
+      "text": " Welcome to voicemail service.",
+      "words": [
+        {
+          "word": " Welcome",
+          "start": 3.36,
+          "end": 3.7,
+          "probability": 0.21940314769744873
+        },
+        {
+          "word": " to",
+          "start": 3.7,
+          "end": 4.06,
+          "probability": 0.7659785747528076
+        },
+        {
+          "word": " voicemail",
+          "start": 4.06,
+          "end": 4.7,
+          "probability": 0.7949127157529196
+        },
+        {
+          "word": " service.",
+          "start": 4.7,
+          "end": 5.18,
+          "probability": 0.8582527041435242
+        }
+      ]
+    },
+    {
+      "start": 5.56,
+      "end": 8.9,
+      "text": " Silahkan rekam pesan suara setelah mendengar nada berikut.",
+      "words": [
+        {
+          "word": " Silahkan",
+          "start": 5.56,
+          "end": 6.02,
+          "probability": 0.9378287196159363
+        },
+        {
+          "word": " rekam",
+          "start": 6.02,
+          "end": 6.34,
+          "probability": 0.5972358882427216
+        },
+        {
+          "word": " pesan",
+          "start": 6.34,
+          "end": 6.66,
+          "probability": 0.9156015813350677
+        },
+        {
+          "word": " suara",
+          "start": 6.66,
+          "end": 7.04,
+          "probability": 0.9892193377017975
+        },
+        {
+          "word": " setelah",
+          "start": 7.04,
+          "end": 7.68,
+          "probability": 0.9119742314020792
+        },
+        {
+          "word": " mendengar",
+          "start": 7.68,
+          "end": 8.12,
+          "probability": 0.9878392020861307
+        },
+        {
+          "word": " nada",
+          "start": 8.12,
+          "end": 8.42,
+          "probability": 0.5236294269561768
+        },
+        {
+          "word": " berikut.",
+          "start": 8.42,
+          "end": 8.9,
+          "probability": 0.9941252768039703
+        }
+      ]
+    },
+    {
+      "start": 9.14,
+      "end": 12.22,
+      "text": " Dikan pambol apapun untuk menyelesaikan rekaman.",
+      "words": [
+        {
+          "word": " Dikan",
+          "start": 9.14,
+          "end": 9.44,
+          "probability": 0.24252094825108847
+        },
+        {
+          "word": " pambol",
+          "start": 9.44,
+          "end": 9.8,
+          "probability": 0.7277331451574961
+        },
+        {
+          "word": " apapun",
+          "start": 9.8,
+          "end": 10.42,
+          "probability": 0.8019436995188395
+        },
+        {
+          "word": " untuk",
+          "start": 10.42,
+          "end": 10.86,
+          "probability": 0.8569285273551941
+        },
+        {
+          "word": " menyelesaikan",
+          "start": 10.86,
+          "end": 11.64,
+          "probability": 0.9741503745317459
+        },
+        {
+          "word": " rekaman.",
+          "start": 11.64,
+          "end": 12.22,
+          "probability": 0.7661852538585663
+        }
+      ]
+    },
+    {
+      "start": 12.22,
+      "end": 13.64,
+      "text": " Bersama saya, Silahkan rekaman.",
+      "words": [
+        {
+          "word": " Bersama",
+          "start": 12.22,
+          "end": 13.44,
+          "probability": 0.18504907749593258
+        },
+        {
+          "word": " saya,",
+          "start": 13.44,
+          "end": 13.64,
+          "probability": 0.6840042471885681
+        },
+        {
+          "word": " Silahkan",
+          "start": 13.64,
+          "end": 13.64,
+          "probability": 0.3043397755827755
+        },
+        {
+          "word": " rekaman.",
+          "start": 13.64,
+          "end": 13.64,
+          "probability": 0.12164088230929337
+        }
+      ]
+    },
+    {
+      "start": 13.64,
+      "end": 13.88,
+      "text": " Silahkan rekaman.",
+      "words": [
+        {
+          "word": " Silahkan",
+          "start": 13.64,
+          "end": 13.86,
+          "probability": 0.7749252518018087
+        },
+        {
+          "word": " rekaman.",
+          "start": 13.86,
+          "end": 13.88,
+          "probability": 0.9680537283420563
+        }
+      ]
+    },
+    {
+      "start": 18.12,
+      "end": 20.86,
+      "text": " Silahkan rekaman.",
+      "words": [
+        {
+          "word": " Silahkan",
+          "start": 18.12,
+          "end": 19.52,
+          "probability": 0.792690654595693
+        },
+        {
+          "word": " rekaman.",
+          "start": 19.52,
+          "end": 20.86,
+          "probability": 0.9827815890312195
+        }
+      ]
+    },
+    {
+      "start": 29.22,
+      "end": 29.86,
+      "text": " Selamat datang.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 29.16,
+          "end": 29.86,
+          "probability": 0.47527011577039957
+        },
+        {
+          "word": " datang.",
+          "start": 29.86,
+          "end": 29.86,
+          "probability": 0.6536706984043121
+        }
+      ]
+    }
+  ],
+  "full_text": " Sama datang ke layanan tempat suara.  Welcome to voicemail service.  Silahkan rekam pesan suara setelah mendengar nada berikut.  Dikan pambol apapun untuk menyelesaikan rekaman.  Bersama saya, Silahkan rekaman.  Silahkan rekaman.  Silahkan rekaman.  Selamat datang."
+}

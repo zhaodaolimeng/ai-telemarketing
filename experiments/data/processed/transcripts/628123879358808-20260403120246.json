@@ -1,0 +1,555 @@
+{
+  "case_id": "628123879358808-20260403120246",
+  "file_name": "628123879358808-20260403120246.mp3",
+  "transcript": [
+    {
+      "start": 7.719999999999997,
+      "end": 9.0,
+      "text": " Halo, selamat tiang.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 7.719999999999997,
+          "end": 8.2,
+          "probability": 0.35209619998931885
+        },
+        {
+          "word": " selamat",
+          "start": 8.34,
+          "end": 8.54,
+          "probability": 0.7721742987632751
+        },
+        {
+          "word": " tiang.",
+          "start": 8.54,
+          "end": 9.0,
+          "probability": 0.576744794845581
+        }
+      ]
+    },
+    {
+      "start": 10.66,
+      "end": 13.58,
+      "text": " Selamat tiang, Bapak iklik semua hari.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 10.66,
+          "end": 11.14,
+          "probability": 0.9564952254295349
+        },
+        {
+          "word": " tiang,",
+          "start": 11.14,
+          "end": 11.5,
+          "probability": 0.9903305470943451
+        },
+        {
+          "word": " Bapak",
+          "start": 11.58,
+          "end": 11.8,
+          "probability": 0.8966986139615377
+        },
+        {
+          "word": " iklik",
+          "start": 11.8,
+          "end": 12.48,
+          "probability": 0.10059557482600212
+        },
+        {
+          "word": " semua",
+          "start": 12.48,
+          "end": 13.0,
+          "probability": 0.647143542766571
+        },
+        {
+          "word": " hari.",
+          "start": 13.0,
+          "end": 13.58,
+          "probability": 0.9865168333053589
+        }
+      ]
+    },
+    {
+      "start": 16.78,
+      "end": 19.48,
+      "text": " Halo, Pak. Saya dari aplikasi Extra Uang Now.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 16.78,
+          "end": 17.26,
+          "probability": 0.7614235877990723
+        },
+        {
+          "word": " Pak.",
+          "start": 17.4,
+          "end": 17.48,
+          "probability": 0.8069528937339783
+        },
+        {
+          "word": " Saya",
+          "start": 17.7,
+          "end": 17.78,
+          "probability": 0.9828299880027771
+        },
+        {
+          "word": " dari",
+          "start": 17.78,
+          "end": 17.98,
+          "probability": 0.9961677193641663
+        },
+        {
+          "word": " aplikasi",
+          "start": 17.98,
+          "end": 18.52,
+          "probability": 0.9428622325261434
+        },
+        {
+          "word": " Extra",
+          "start": 18.52,
+          "end": 18.86,
+          "probability": 0.29211723804473877
+        },
+        {
+          "word": " Uang",
+          "start": 18.86,
+          "end": 19.2,
+          "probability": 0.6234910637140274
+        },
+        {
+          "word": " Now.",
+          "start": 19.2,
+          "end": 19.48,
+          "probability": 0.303451806306839
+        }
+      ]
+    },
+    {
+      "start": 19.58,
+      "end": 21.28,
+      "text": " Tadi, Hali, kalau penasaran dibuat tempat.",
+      "words": [
+        {
+          "word": " Tadi,",
+          "start": 19.58,
+          "end": 19.76,
+          "probability": 0.8575362265110016
+        },
+        {
+          "word": " Hali,",
+          "start": 19.86,
+          "end": 19.98,
+          "probability": 0.404209241271019
+        },
+        {
+          "word": " kalau",
+          "start": 20.06,
+          "end": 20.16,
+          "probability": 0.33028456568717957
+        },
+        {
+          "word": " penasaran",
+          "start": 20.16,
+          "end": 20.58,
+          "probability": 0.4693047031760216
+        },
+        {
+          "word": " dibuat",
+          "start": 20.58,
+          "end": 20.86,
+          "probability": 0.40936247259378433
+        },
+        {
+          "word": " tempat.",
+          "start": 20.86,
+          "end": 21.28,
+          "probability": 0.650674045085907
+        }
+      ]
+    },
+    {
+      "start": 23.48,
+      "end": 26.02,
+      "text": " Halo, Bapak. Bapak, jangan kurang-kurang mendengar, Pak.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 23.48,
+          "end": 23.96,
+          "probability": 0.8433791399002075
+        },
+        {
+          "word": " Bapak.",
+          "start": 24.04,
+          "end": 24.36,
+          "probability": 0.9846804738044739
+        },
+        {
+          "word": " Bapak,",
+          "start": 24.58,
+          "end": 24.78,
+          "probability": 0.8110439479351044
+        },
+        {
+          "word": " jangan",
+          "start": 24.84,
+          "end": 24.96,
+          "probability": 0.9855314493179321
+        },
+        {
+          "word": " kurang",
+          "start": 24.96,
+          "end": 25.18,
+          "probability": 0.7141519486904144
+        },
+        {
+          "word": "-kurang",
+          "start": 25.18,
+          "end": 25.44,
+          "probability": 0.977756122748057
+        },
+        {
+          "word": " mendengar,",
+          "start": 25.44,
+          "end": 25.82,
+          "probability": 0.6721214602390925
+        },
+        {
+          "word": " Pak.",
+          "start": 25.9,
+          "end": 26.02,
+          "probability": 0.9869136214256287
+        }
+      ]
+    },
+    {
+      "start": 28.900000000000002,
+      "end": 31.94,
+      "text": " Halo, Bapak pikir, jangan sampai saya hubung.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 28.900000000000002,
+          "end": 29.46,
+          "probability": 0.21009854972362518
+        },
+        {
+          "word": " Bapak",
+          "start": 29.94,
+          "end": 30.44,
+          "probability": 0.7699543039004008
+        },
+        {
+          "word": " pikir,",
+          "start": 30.44,
+          "end": 30.8,
+          "probability": 0.45407835114747286
+        },
+        {
+          "word": " jangan",
+          "start": 31.0,
+          "end": 31.18,
+          "probability": 0.9790105819702148
+        },
+        {
+          "word": " sampai",
+          "start": 31.18,
+          "end": 31.48,
+          "probability": 0.9822133779525757
+        },
+        {
+          "word": " saya",
+          "start": 31.48,
+          "end": 31.68,
+          "probability": 0.8893147110939026
+        },
+        {
+          "word": " hubung.",
+          "start": 31.68,
+          "end": 31.94,
+          "probability": 0.8058929145336151
+        }
+      ]
+    }
+  ],
+  "transcript_with_speakers": [
+    {
+      "start": 7.719999999999997,
+      "end": 9.0,
+      "speaker": "AGENT",
+      "text": " Halo, selamat tiang.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 7.719999999999997,
+          "end": 8.2,
+          "probability": 0.35209619998931885
+        },
+        {
+          "word": " selamat",
+          "start": 8.34,
+          "end": 8.54,
+          "probability": 0.7721742987632751
+        },
+        {
+          "word": " tiang.",
+          "start": 8.54,
+          "end": 9.0,
+          "probability": 0.576744794845581
+        }
+      ]
+    },
+    {
+      "start": 10.66,
+      "end": 13.58,
+      "speaker": "AGENT",
+      "text": " Selamat tiang, Bapak iklik semua hari.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 10.66,
+          "end": 11.14,
+          "probability": 0.9564952254295349
+        },
+        {
+          "word": " tiang,",
+          "start": 11.14,
+          "end": 11.5,
+          "probability": 0.9903305470943451
+        },
+        {
+          "word": " Bapak",
+          "start": 11.58,
+          "end": 11.8,
+          "probability": 0.8966986139615377
+        },
+        {
+          "word": " iklik",
+          "start": 11.8,
+          "end": 12.48,
+          "probability": 0.10059557482600212
+        },
+        {
+          "word": " semua",
+          "start": 12.48,
+          "end": 13.0,
+          "probability": 0.647143542766571
+        },
+        {
+          "word": " hari.",
+          "start": 13.0,
+          "end": 13.58,
+          "probability": 0.9865168333053589
+        }
+      ]
+    },
+    {
+      "start": 16.78,
+      "end": 19.48,
+      "speaker": "AGENT",
+      "text": " Halo, Pak. Saya dari aplikasi Extra Uang Now.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 16.78,
+          "end": 17.26,
+          "probability": 0.7614235877990723
+        },
+        {
+          "word": " Pak.",
+          "start": 17.4,
+          "end": 17.48,
+          "probability": 0.8069528937339783
+        },
+        {
+          "word": " Saya",
+          "start": 17.7,
+          "end": 17.78,
+          "probability": 0.9828299880027771
+        },
+        {
+          "word": " dari",
+          "start": 17.78,
+          "end": 17.98,
+          "probability": 0.9961677193641663
+        },
+        {
+          "word": " aplikasi",
+          "start": 17.98,
+          "end": 18.52,
+          "probability": 0.9428622325261434
+        },
+        {
+          "word": " Extra",
+          "start": 18.52,
+          "end": 18.86,
+          "probability": 0.29211723804473877
+        },
+        {
+          "word": " Uang",
+          "start": 18.86,
+          "end": 19.2,
+          "probability": 0.6234910637140274
+        },
+        {
+          "word": " Now.",
+          "start": 19.2,
+          "end": 19.48,
+          "probability": 0.303451806306839
+        }
+      ]
+    },
+    {
+      "start": 19.58,
+      "end": 21.28,
+      "speaker": "AGENT",
+      "text": " Tadi, Hali, kalau penasaran dibuat tempat.",
+      "words": [
+        {
+          "word": " Tadi,",
+          "start": 19.58,
+          "end": 19.76,
+          "probability": 0.8575362265110016
+        },
+        {
+          "word": " Hali,",
+          "start": 19.86,
+          "end": 19.98,
+          "probability": 0.404209241271019
+        },
+        {
+          "word": " kalau",
+          "start": 20.06,
+          "end": 20.16,
+          "probability": 0.33028456568717957
+        },
+        {
+          "word": " penasaran",
+          "start": 20.16,
+          "end": 20.58,
+          "probability": 0.4693047031760216
+        },
+        {
+          "word": " dibuat",
+          "start": 20.58,
+          "end": 20.86,
+          "probability": 0.40936247259378433
+        },
+        {
+          "word": " tempat.",
+          "start": 20.86,
+          "end": 21.28,
+          "probability": 0.650674045085907
+        }
+      ]
+    },
+    {
+      "start": 23.48,
+      "end": 26.02,
+      "speaker": "AGENT",
+      "text": " Halo, Bapak. Bapak, jangan kurang-kurang mendengar, Pak.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 23.48,
+          "end": 23.96,
+          "probability": 0.8433791399002075
+        },
+        {
+          "word": " Bapak.",
+          "start": 24.04,
+          "end": 24.36,
+          "probability": 0.9846804738044739
+        },
+        {
+          "word": " Bapak,",
+          "start": 24.58,
+          "end": 24.78,
+          "probability": 0.8110439479351044
+        },
+        {
+          "word": " jangan",
+          "start": 24.84,
+          "end": 24.96,
+          "probability": 0.9855314493179321
+        },
+        {
+          "word": " kurang",
+          "start": 24.96,
+          "end": 25.18,
+          "probability": 0.7141519486904144
+        },
+        {
+          "word": "-kurang",
+          "start": 25.18,
+          "end": 25.44,
+          "probability": 0.977756122748057
+        },
+        {
+          "word": " mendengar,",
+          "start": 25.44,
+          "end": 25.82,
+          "probability": 0.6721214602390925
+        },
+        {
+          "word": " Pak.",
+          "start": 25.9,
+          "end": 26.02,
+          "probability": 0.9869136214256287
+        }
+      ]
+    },
+    {
+      "start": 28.900000000000002,
+      "end": 31.94,
+      "speaker": "AGENT",
+      "text": " Halo, Bapak pikir, jangan sampai saya hubung.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 28.900000000000002,
+          "end": 29.46,
+          "probability": 0.21009854972362518
+        },
+        {
+          "word": " Bapak",
+          "start": 29.94,
+          "end": 30.44,
+          "probability": 0.7699543039004008
+        },
+        {
+          "word": " pikir,",
+          "start": 30.44,
+          "end": 30.8,
+          "probability": 0.45407835114747286
+        },
+        {
+          "word": " jangan",
+          "start": 31.0,
+          "end": 31.18,
+          "probability": 0.9790105819702148
+        },
+        {
+          "word": " sampai",
+          "start": 31.18,
+          "end": 31.48,
+          "probability": 0.9822133779525757
+        },
+        {
+          "word": " saya",
+          "start": 31.48,
+          "end": 31.68,
+          "probability": 0.8893147110939026
+        },
+        {
+          "word": " hubung.",
+          "start": 31.68,
+          "end": 31.94,
+          "probability": 0.8058929145336151
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo, selamat tiang.  Selamat tiang, Bapak iklik semua hari.  Halo, Pak. Saya dari aplikasi Extra Uang Now.  Tadi, Hali, kalau penasaran dibuat tempat.  Halo, Bapak. Bapak, jangan kurang-kurang mendengar, Pak.  Halo, Bapak pikir, jangan sampai saya hubung."
+}

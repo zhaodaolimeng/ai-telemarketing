@@ -1,0 +1,320 @@
+{
+  "case_id": "628132226030308-20260421123137",
+  "file_name": "628132226030308-20260421123137.mp3",
+  "transcript": [
+    {
+      "start": 6.7399999999999975,
+      "end": 9.64,
+      "text": " Oh iya bu, saya kirim mutingnya ya bu.",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 6.7399999999999975,
+          "end": 7.179999999999999,
+          "probability": 0.07669289410114288
+        },
+        {
+          "word": " iya",
+          "start": 7.179999999999999,
+          "end": 7.62,
+          "probability": 0.6218567788600922
+        },
+        {
+          "word": " bu,",
+          "start": 7.62,
+          "end": 7.62,
+          "probability": 0.2115895301103592
+        },
+        {
+          "word": " saya",
+          "start": 8.38,
+          "end": 8.52,
+          "probability": 0.778942346572876
+        },
+        {
+          "word": " kirim",
+          "start": 8.52,
+          "end": 8.78,
+          "probability": 0.8117829859256744
+        },
+        {
+          "word": " mutingnya",
+          "start": 8.78,
+          "end": 9.14,
+          "probability": 0.5110723972320557
+        },
+        {
+          "word": " ya",
+          "start": 9.14,
+          "end": 9.24,
+          "probability": 0.6393251419067383
+        },
+        {
+          "word": " bu.",
+          "start": 9.24,
+          "end": 9.64,
+          "probability": 0.6076968908309937
+        }
+      ]
+    },
+    {
+      "start": 10.58,
+      "end": 11.4,
+      "text": " Bu, dibayar.",
+      "words": [
+        {
+          "word": " Bu,",
+          "start": 10.58,
+          "end": 10.82,
+          "probability": 0.09140030294656754
+        },
+        {
+          "word": " dibayar.",
+          "start": 10.92,
+          "end": 11.4,
+          "probability": 0.6850695336858431
+        }
+      ]
+    },
+    {
+      "start": 12.94,
+      "end": 15.56,
+      "text": " Biar saya tanya, biar saya kirim mutingnya ya bu, tunggu ya bu.",
+      "words": [
+        {
+          "word": " Biar",
+          "start": 12.94,
+          "end": 13.32,
+          "probability": 0.8274828195571899
+        },
+        {
+          "word": " saya",
+          "start": 13.32,
+          "end": 13.5,
+          "probability": 0.9941984415054321
+        },
+        {
+          "word": " tanya,",
+          "start": 13.5,
+          "end": 13.78,
+          "probability": 0.9660278856754303
+        },
+        {
+          "word": " biar",
+          "start": 13.96,
+          "end": 14.12,
+          "probability": 0.8815999627113342
+        },
+        {
+          "word": " saya",
+          "start": 14.12,
+          "end": 14.28,
+          "probability": 0.9906118512153625
+        },
+        {
+          "word": " kirim",
+          "start": 14.28,
+          "end": 14.5,
+          "probability": 0.9923101663589478
+        },
+        {
+          "word": " mutingnya",
+          "start": 14.5,
+          "end": 14.86,
+          "probability": 0.9829367796579996
+        },
+        {
+          "word": " ya",
+          "start": 14.86,
+          "end": 14.94,
+          "probability": 0.9397038221359253
+        },
+        {
+          "word": " bu,",
+          "start": 14.94,
+          "end": 15.04,
+          "probability": 0.8818019032478333
+        },
+        {
+          "word": " tunggu",
+          "start": 15.14,
+          "end": 15.28,
+          "probability": 0.9846866130828857
+        },
+        {
+          "word": " ya",
+          "start": 15.28,
+          "end": 15.4,
+          "probability": 0.9014756083488464
+        },
+        {
+          "word": " bu.",
+          "start": 15.4,
+          "end": 15.56,
+          "probability": 0.9249247908592224
+        }
+      ]
+    },
+    {
+      "start": 16.72,
+      "end": 18.96,
+      "text": " Melalui ayam mencet ekstra saya kan?",
+      "words": [
+        {
+          "word": " Melalui",
+          "start": 16.72,
+          "end": 17.16,
+          "probability": 0.8635549743970236
+        },
+        {
+          "word": " ayam",
+          "start": 17.16,
+          "end": 17.6,
+          "probability": 0.8016895353794098
+        },
+        {
+          "word": " mencet",
+          "start": 17.6,
+          "end": 18.08,
+          "probability": 0.7901016076405843
+        },
+        {
+          "word": " ekstra",
+          "start": 18.08,
+          "end": 18.44,
+          "probability": 0.8913895785808563
+        },
+        {
+          "word": " saya",
+          "start": 18.44,
+          "end": 18.76,
+          "probability": 0.9818955063819885
+        },
+        {
+          "word": " kan?",
+          "start": 18.76,
+          "end": 18.96,
+          "probability": 0.8195747137069702
+        }
+      ]
+    },
+    {
+      "start": 19.48,
+      "end": 21.88,
+      "text": " Nanti saya bayar saja bu, namanya beda lagi ya bu ya.",
+      "words": [
+        {
+          "word": " Nanti",
+          "start": 19.48,
+          "end": 19.74,
+          "probability": 0.9097197949886322
+        },
+        {
+          "word": " saya",
+          "start": 19.74,
+          "end": 19.92,
+          "probability": 0.9685196280479431
+        },
+        {
+          "word": " bayar",
+          "start": 19.92,
+          "end": 20.1,
+          "probability": 0.9081037640571594
+        },
+        {
+          "word": " saja",
+          "start": 20.1,
+          "end": 20.34,
+          "probability": 0.8658093810081482
+        },
+        {
+          "word": " bu,",
+          "start": 20.34,
+          "end": 20.56,
+          "probability": 0.9354175925254822
+        },
+        {
+          "word": " namanya",
+          "start": 20.66,
+          "end": 20.98,
+          "probability": 0.2932550609111786
+        },
+        {
+          "word": " beda",
+          "start": 20.98,
+          "end": 21.32,
+          "probability": 0.9372124671936035
+        },
+        {
+          "word": " lagi",
+          "start": 21.32,
+          "end": 21.54,
+          "probability": 0.9925271272659302
+        },
+        {
+          "word": " ya",
+          "start": 21.54,
+          "end": 21.66,
+          "probability": 0.9156173467636108
+        },
+        {
+          "word": " bu",
+          "start": 21.66,
+          "end": 21.76,
+          "probability": 0.9071619510650635
+        },
+        {
+          "word": " ya.",
+          "start": 21.76,
+          "end": 21.88,
+          "probability": 0.6184929013252258
+        }
+      ]
+    },
+    {
+      "start": 22.62,
+      "end": 23.38,
+      "text": " Oh beda lagi bu?",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 22.62,
+          "end": 22.76,
+          "probability": 0.8532947301864624
+        },
+        {
+          "word": " beda",
+          "start": 22.76,
+          "end": 22.98,
+          "probability": 0.9674146771430969
+        },
+        {
+          "word": " lagi",
+          "start": 22.98,
+          "end": 23.18,
+          "probability": 0.9959329962730408
+        },
+        {
+          "word": " bu?",
+          "start": 23.18,
+          "end": 23.38,
+          "probability": 0.9212268590927124
+        }
+      ]
+    },
+    {
+      "start": 23.98,
+      "end": 24.16,
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 23.98,
+          "end": 24.16,
+          "probability": 0.39406096935272217
+        }
+      ]
+    }
+  ],
+  "full_text": " Oh iya bu, saya kirim mutingnya ya bu.  Bu, dibayar.  Biar saya tanya, biar saya kirim mutingnya ya bu, tunggu ya bu.  Melalui ayam mencet ekstra saya kan?  Nanti saya bayar saja bu, namanya beda lagi ya bu ya.  Oh beda lagi bu?  Iya."
+}

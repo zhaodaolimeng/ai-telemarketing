@@ -1,0 +1,201 @@
+{
+  "case_id": "62821987047407-20260414082537",
+  "file_name": "62821987047407-20260414082537.mp3",
+  "transcript": [
+    {
+      "start": 1.0,
+      "end": 2.38,
+      "speaker": "AGENT",
+      "text": " Halo..",
+      "words": [
+        {
+          "word": " Halo..",
+          "start": 1.0,
+          "end": 2.38,
+          "probability": 0.2631574273109436
+        }
+      ]
+    },
+    {
+      "start": 4.0,
+      "end": 4.04,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 3.34,
+          "end": 4.04,
+          "probability": 0.7261471748352051
+        }
+      ]
+    },
+    {
+      "start": 6.0,
+      "end": 6.7,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 6.0,
+          "end": 6.7,
+          "probability": 0.8852301239967346
+        }
+      ]
+    },
+    {
+      "start": 12.16,
+      "end": 13.56,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 12.16,
+          "end": 13.56,
+          "probability": 0.8464751839637756
+        }
+      ]
+    },
+    {
+      "start": 18.0,
+      "end": 19.86,
+      "speaker": "AGENT",
+      "text": " Kenapa kau mau tahu mengenal ya dispensi?",
+      "words": [
+        {
+          "word": " Kenapa",
+          "start": 17.720000000000002,
+          "end": 18.42,
+          "probability": 0.5072967316955328
+        },
+        {
+          "word": " kau",
+          "start": 18.42,
+          "end": 18.56,
+          "probability": 0.022667108103632927
+        },
+        {
+          "word": " mau",
+          "start": 18.56,
+          "end": 18.64,
+          "probability": 0.13861960172653198
+        },
+        {
+          "word": " tahu",
+          "start": 18.64,
+          "end": 18.86,
+          "probability": 0.013773621991276741
+        },
+        {
+          "word": " mengenal",
+          "start": 18.86,
+          "end": 19.38,
+          "probability": 0.15928340765337148
+        },
+        {
+          "word": " ya",
+          "start": 19.38,
+          "end": 19.54,
+          "probability": 0.0014794513117522001
+        },
+        {
+          "word": " dispensi?",
+          "start": 19.54,
+          "end": 19.86,
+          "probability": 0.32422740121061605
+        }
+      ]
+    },
+    {
+      "start": 20.94,
+      "end": 21.36,
+      "speaker": "CUSTOMER",
+      "text": " Apa?",
+      "words": [
+        {
+          "word": " Apa?",
+          "start": 20.94,
+          "end": 21.36,
+          "probability": 0.7227970957756042
+        }
+      ]
+    },
+    {
+      "start": 26.0,
+      "end": 26.22,
+      "speaker": "UNKNOWN",
+      "text": " Gini?",
+      "words": [
+        {
+          "word": " Gini?",
+          "start": 25.52,
+          "end": 26.22,
+          "probability": 0.12479894235730171
+        }
+      ]
+    },
+    {
+      "start": 27.14,
+      "end": 27.7,
+      "speaker": "CUSTOMER",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 27.14,
+          "end": 27.7,
+          "probability": 0.9443618059158325
+        }
+      ]
+    },
+    {
+      "start": 27.7,
+      "end": 29.94,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih, amor.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 27.7,
+          "end": 29.04,
+          "probability": 0.3314921660348773
+        },
+        {
+          "word": " kasih,",
+          "start": 29.04,
+          "end": 29.28,
+          "probability": 0.9702073931694031
+        },
+        {
+          "word": " amor.",
+          "start": 29.6,
+          "end": 29.94,
+          "probability": 0.09445925056934357
+        }
+      ]
+    },
+    {
+      "start": 30.78,
+      "end": 31.54,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 30.78,
+          "end": 31.06,
+          "probability": 0.6069974601268768
+        },
+        {
+          "word": " kasih.",
+          "start": 31.06,
+          "end": 31.54,
+          "probability": 0.9919958114624023
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo..  Halo?  Halo?  Halo?  Kenapa kau mau tahu mengenal ya dispensi?  Apa?  Gini?  Halo?  Terima kasih, amor.  Terima kasih."
+}

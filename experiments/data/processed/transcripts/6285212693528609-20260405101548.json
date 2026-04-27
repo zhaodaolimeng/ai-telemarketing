@@ -1,0 +1,287 @@
+{
+  "case_id": "6285212693528609-20260405101548",
+  "file_name": "6285212693528609-20260405101548.mp3",
+  "transcript": [
+    {
+      "start": 2.439999999999996,
+      "end": 3.24,
+      "speaker": "AGENT",
+      "text": " Selamat pagi.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 2.439999999999996,
+          "end": 2.92,
+          "probability": 0.5249826032668352
+        },
+        {
+          "word": " pagi.",
+          "start": 2.92,
+          "end": 3.24,
+          "probability": 0.6518344730138779
+        }
+      ]
+    },
+    {
+      "start": 5.66,
+      "end": 6.14,
+      "speaker": "CUSTOMER",
+      "text": " Selamat pagi.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 5.66,
+          "end": 6.14,
+          "probability": 0.5738494545221329
+        },
+        {
+          "word": " pagi.",
+          "start": 6.14,
+          "end": 6.14,
+          "probability": 0.7727504074573517
+        }
+      ]
+    },
+    {
+      "start": 6.14,
+      "end": 7.14,
+      "speaker": "CUSTOMER",
+      "text": " Ya, selamat pagi.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 6.14,
+          "end": 6.14,
+          "probability": 0.20123834908008575
+        },
+        {
+          "word": " selamat",
+          "start": 6.16,
+          "end": 6.52,
+          "probability": 0.5031942273490131
+        },
+        {
+          "word": " pagi.",
+          "start": 6.52,
+          "end": 7.14,
+          "probability": 0.837301641702652
+        }
+      ]
+    },
+    {
+      "start": 7.64,
+      "end": 11.44,
+      "speaker": "CUSTOMER",
+      "text": " Iya, ini Bapak, saya dari Extra-Uang Now, tegian Bapak 500 ribu,",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 7.64,
+          "end": 7.94,
+          "probability": 0.2079518586397171
+        },
+        {
+          "word": " ini",
+          "start": 8.06,
+          "end": 8.18,
+          "probability": 0.942512035369873
+        },
+        {
+          "word": " Bapak,",
+          "start": 8.18,
+          "end": 8.5,
+          "probability": 0.8122080365816752
+        },
+        {
+          "word": " saya",
+          "start": 8.62,
+          "end": 8.78,
+          "probability": 0.9715930223464966
+        },
+        {
+          "word": " dari",
+          "start": 8.78,
+          "end": 9.06,
+          "probability": 0.9768660068511963
+        },
+        {
+          "word": " Extra",
+          "start": 9.06,
+          "end": 9.34,
+          "probability": 0.5012732148170471
+        },
+        {
+          "word": "-Uang",
+          "start": 9.34,
+          "end": 9.7,
+          "probability": 0.4269005407889684
+        },
+        {
+          "word": " Now,",
+          "start": 9.7,
+          "end": 9.92,
+          "probability": 0.3214714527130127
+        },
+        {
+          "word": " tegian",
+          "start": 10.04,
+          "end": 10.3,
+          "probability": 0.5054125885168711
+        },
+        {
+          "word": " Bapak",
+          "start": 10.3,
+          "end": 10.6,
+          "probability": 0.993148684501648
+        },
+        {
+          "word": " 500",
+          "start": 10.6,
+          "end": 10.92,
+          "probability": 0.47765231132507324
+        },
+        {
+          "word": " ribu,",
+          "start": 10.92,
+          "end": 11.44,
+          "probability": 0.8672952055931091
+        }
+      ]
+    },
+    {
+      "start": 11.58,
+      "end": 12.82,
+      "speaker": "AGENT",
+      "text": " tolong dibayarkan sekarang, ya.",
+      "words": [
+        {
+          "word": " tolong",
+          "start": 11.58,
+          "end": 11.72,
+          "probability": 0.7022137343883514
+        },
+        {
+          "word": " dibayarkan",
+          "start": 11.72,
+          "end": 12.12,
+          "probability": 0.9104341069857279
+        },
+        {
+          "word": " sekarang,",
+          "start": 12.12,
+          "end": 12.54,
+          "probability": 0.9863812327384949
+        },
+        {
+          "word": " ya.",
+          "start": 12.68,
+          "end": 12.82,
+          "probability": 0.9716469645500183
+        }
+      ]
+    },
+    {
+      "start": 15.8,
+      "end": 17.06,
+      "speaker": "CUSTOMER",
+      "text": " Oh, ya baik, Buk.",
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 15.8,
+          "end": 16.28,
+          "probability": 0.38030850887298584
+        },
+        {
+          "word": " ya",
+          "start": 16.42,
+          "end": 16.54,
+          "probability": 0.8997316956520081
+        },
+        {
+          "word": " baik,",
+          "start": 16.54,
+          "end": 16.78,
+          "probability": 0.450425386428833
+        },
+        {
+          "word": " Buk.",
+          "start": 16.9,
+          "end": 17.06,
+          "probability": 0.4536888003349304
+        }
+      ]
+    },
+    {
+      "start": 18.02,
+      "end": 19.48,
+      "speaker": "CUSTOMER",
+      "text": " Ya, uangnya sudah ada, Pak.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 18.02,
+          "end": 18.16,
+          "probability": 0.35486629605293274
+        },
+        {
+          "word": " uangnya",
+          "start": 18.72,
+          "end": 18.94,
+          "probability": 0.9498369495073954
+        },
+        {
+          "word": " sudah",
+          "start": 18.94,
+          "end": 19.08,
+          "probability": 0.9772301316261292
+        },
+        {
+          "word": " ada,",
+          "start": 19.08,
+          "end": 19.28,
+          "probability": 0.9928241968154907
+        },
+        {
+          "word": " Pak.",
+          "start": 19.4,
+          "end": 19.48,
+          "probability": 0.7459866404533386
+        }
+      ]
+    },
+    {
+      "start": 23.38,
+      "end": 24.42,
+      "speaker": "CUSTOMER",
+      "text": " Uangnya sudah ada, Pak.",
+      "words": [
+        {
+          "word": " Uangnya",
+          "start": 23.38,
+          "end": 23.86,
+          "probability": 0.9007088541984558
+        },
+        {
+          "word": " sudah",
+          "start": 23.86,
+          "end": 24.0,
+          "probability": 0.9957520961761475
+        },
+        {
+          "word": " ada,",
+          "start": 24.0,
+          "end": 24.24,
+          "probability": 0.9985507130622864
+        },
+        {
+          "word": " Pak.",
+          "start": 24.34,
+          "end": 24.42,
+          "probability": 0.9969980716705322
+        }
+      ]
+    }
+  ],
+  "full_text": " Selamat pagi.  Selamat pagi.  Ya, selamat pagi.  Iya, ini Bapak, saya dari Extra-Uang Now, tegian Bapak 500 ribu,  tolong dibayarkan sekarang, ya.  Oh, ya baik, Buk.  Ya, uangnya sudah ada, Pak.  Uangnya sudah ada, Pak."
+}

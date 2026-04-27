@@ -1,0 +1,45 @@
+{
+  "case_id": "6285211699694209-20260405171414",
+  "file_name": "6285211699694209-20260405171414.mp3",
+  "transcript": [
+    {
+      "start": 2.8800000000000003,
+      "end": 23.4,
+      "speaker": "AGENT",
+      "text": " Halo? Halo? Halo? Halo? Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 2.8800000000000003,
+          "end": 4.28,
+          "probability": 0.5812979340553284
+        },
+        {
+          "word": " Halo?",
+          "start": 7.46,
+          "end": 8.86,
+          "probability": 0.9569109678268433
+        },
+        {
+          "word": " Halo?",
+          "start": 15.5,
+          "end": 16.9,
+          "probability": 0.9761421084403992
+        },
+        {
+          "word": " Halo?",
+          "start": 21.86,
+          "end": 23.26,
+          "probability": 0.9782758951187134
+        },
+        {
+          "word": " Halo?",
+          "start": 23.4,
+          "end": 23.4,
+          "probability": 0.9326922297477722
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo? Halo? Halo? Halo? Halo?"
+}

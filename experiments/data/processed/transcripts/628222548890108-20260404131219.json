@@ -1,0 +1,291 @@
+{
+  "case_id": "628222548890108-20260404131219",
+  "file_name": "628222548890108-20260404131219.mp3",
+  "transcript": [
+    {
+      "start": 1.6399999999999988,
+      "end": 2.24,
+      "speaker": "AGENT",
+      "text": " Halo.",
+      "words": [
+        {
+          "word": " Halo.",
+          "start": 1.6399999999999988,
+          "end": 2.24,
+          "probability": 0.5285831689834595
+        }
+      ]
+    },
+    {
+      "start": 4.22,
+      "end": 5.52,
+      "speaker": "AGENT",
+      "text": " Halo, selamat siang.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 4.22,
+          "end": 4.82,
+          "probability": 0.4417243003845215
+        },
+        {
+          "word": " selamat",
+          "start": 4.94,
+          "end": 5.14,
+          "probability": 0.6799755692481995
+        },
+        {
+          "word": " siang.",
+          "start": 5.14,
+          "end": 5.52,
+          "probability": 0.9200490117073059
+        }
+      ]
+    },
+    {
+      "start": 6.82,
+      "end": 7.3,
+      "speaker": "AGENT",
+      "text": " Siang.",
+      "words": [
+        {
+          "word": " Siang.",
+          "start": 6.82,
+          "end": 7.3,
+          "probability": 0.9754771292209625
+        }
+      ]
+    },
+    {
+      "start": 7.7,
+      "end": 9.16,
+      "speaker": "AGENT",
+      "text": " Siang, Pak, abu salam.",
+      "words": [
+        {
+          "word": " Siang,",
+          "start": 7.7,
+          "end": 8.18,
+          "probability": 0.9885130524635315
+        },
+        {
+          "word": " Pak,",
+          "start": 8.28,
+          "end": 8.38,
+          "probability": 0.580072820186615
+        },
+        {
+          "word": " abu",
+          "start": 8.58,
+          "end": 8.62,
+          "probability": 0.3896726816892624
+        },
+        {
+          "word": " salam.",
+          "start": 8.62,
+          "end": 9.16,
+          "probability": 0.7056426703929901
+        }
+      ]
+    },
+    {
+      "start": 9.7,
+      "end": 10.8,
+      "speaker": "AGENT",
+      "text": " Biar di ruang lo ekstra.",
+      "words": [
+        {
+          "word": " Biar",
+          "start": 9.7,
+          "end": 9.98,
+          "probability": 0.5040134638547897
+        },
+        {
+          "word": " di",
+          "start": 9.98,
+          "end": 10.08,
+          "probability": 0.3551413416862488
+        },
+        {
+          "word": " ruang",
+          "start": 10.08,
+          "end": 10.28,
+          "probability": 0.5957511514425278
+        },
+        {
+          "word": " lo",
+          "start": 10.28,
+          "end": 10.42,
+          "probability": 0.05309418588876724
+        },
+        {
+          "word": " ekstra.",
+          "start": 10.42,
+          "end": 10.8,
+          "probability": 0.6022817194461823
+        }
+      ]
+    },
+    {
+      "start": 12.52,
+      "end": 12.96,
+      "speaker": "CUSTOMER",
+      "text": " Oke.",
+      "words": [
+        {
+          "word": " Oke.",
+          "start": 12.52,
+          "end": 12.96,
+          "probability": 0.11810637265443802
+        }
+      ]
+    },
+    {
+      "start": 13.04,
+      "end": 15.12,
+      "speaker": "AGENT",
+      "text": " Pajangnya sudah jatuh tempah belum dibayar, Pak.",
+      "words": [
+        {
+          "word": " Pajangnya",
+          "start": 13.04,
+          "end": 13.46,
+          "probability": 0.4606327824294567
+        },
+        {
+          "word": " sudah",
+          "start": 13.46,
+          "end": 13.66,
+          "probability": 0.8529434204101562
+        },
+        {
+          "word": " jatuh",
+          "start": 13.66,
+          "end": 13.96,
+          "probability": 0.7064010500907898
+        },
+        {
+          "word": " tempah",
+          "start": 13.96,
+          "end": 14.32,
+          "probability": 0.5017988085746765
+        },
+        {
+          "word": " belum",
+          "start": 14.32,
+          "end": 14.54,
+          "probability": 0.6222272515296936
+        },
+        {
+          "word": " dibayar,",
+          "start": 14.54,
+          "end": 14.98,
+          "probability": 0.9747492671012878
+        },
+        {
+          "word": " Pak.",
+          "start": 15.06,
+          "end": 15.12,
+          "probability": 0.926118791103363
+        }
+      ]
+    },
+    {
+      "start": 16.62,
+      "end": 17.84,
+      "speaker": "CUSTOMER",
+      "text": " Oke, tunggu hari ini ya.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 16.62,
+          "end": 17.0,
+          "probability": 0.9318481683731079
+        },
+        {
+          "word": " tunggu",
+          "start": 17.16,
+          "end": 17.26,
+          "probability": 0.9779881536960602
+        },
+        {
+          "word": " hari",
+          "start": 17.26,
+          "end": 17.46,
+          "probability": 0.352591335773468
+        },
+        {
+          "word": " ini",
+          "start": 17.46,
+          "end": 17.68,
+          "probability": 0.9970791339874268
+        },
+        {
+          "word": " ya.",
+          "start": 17.68,
+          "end": 17.84,
+          "probability": 0.7514009475708008
+        }
+      ]
+    },
+    {
+      "start": 18.34,
+      "end": 19.64,
+      "speaker": "AGENT",
+      "text": " Jam berapa kita tunggu?",
+      "words": [
+        {
+          "word": " Jam",
+          "start": 18.34,
+          "end": 18.66,
+          "probability": 0.7180068492889404
+        },
+        {
+          "word": " berapa",
+          "start": 18.66,
+          "end": 18.96,
+          "probability": 0.9741212427616119
+        },
+        {
+          "word": " kita",
+          "start": 18.96,
+          "end": 19.18,
+          "probability": 0.9932196736335754
+        },
+        {
+          "word": " tunggu?",
+          "start": 19.18,
+          "end": 19.64,
+          "probability": 0.9938147664070129
+        }
+      ]
+    },
+    {
+      "start": 21.639999999999997,
+      "end": 23.02,
+      "speaker": "AGENT",
+      "text": " Jam berapa, Pak?",
+      "words": [
+        {
+          "word": " Jam",
+          "start": 21.639999999999997,
+          "end": 22.24,
+          "probability": 0.5771288275718689
+        },
+        {
+          "word": " berapa,",
+          "start": 22.24,
+          "end": 22.84,
+          "probability": 0.9798739552497864
+        },
+        {
+          "word": " Pak?",
+          "start": 22.98,
+          "end": 23.02,
+          "probability": 0.9794006943702698
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo.  Halo, selamat siang.  Siang.  Siang, Pak, abu salam.  Biar di ruang lo ekstra.  Oke.  Pajangnya sudah jatuh tempah belum dibayar, Pak.  Oke, tunggu hari ini ya.  Jam berapa kita tunggu?  Jam berapa, Pak?"
+}

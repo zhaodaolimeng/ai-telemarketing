@@ -1,0 +1,211 @@
+{
+  "case_id": "628311922758508-20260420080724",
+  "file_name": "628311922758508-20260420080724.mp3",
+  "transcript": [
+    {
+      "start": 3.4200000000000053,
+      "end": 10.5,
+      "speaker": "AGENT",
+      "text": " Hello, semuanya cum. Ibu Linda, semuanya cum. Ini jawabu.",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 3.4200000000000053,
+          "end": 4.02,
+          "probability": 0.02860775776207447
+        },
+        {
+          "word": " semuanya",
+          "start": 4.16,
+          "end": 4.34,
+          "probability": 0.5442076474428177
+        },
+        {
+          "word": " cum.",
+          "start": 4.34,
+          "end": 4.56,
+          "probability": 0.14573542773723602
+        },
+        {
+          "word": " Ibu",
+          "start": 7.64,
+          "end": 8.24,
+          "probability": 0.9075740575790405
+        },
+        {
+          "word": " Linda,",
+          "start": 8.24,
+          "end": 8.52,
+          "probability": 0.9099900126457214
+        },
+        {
+          "word": " semuanya",
+          "start": 8.7,
+          "end": 8.92,
+          "probability": 0.9583059946695963
+        },
+        {
+          "word": " cum.",
+          "start": 8.92,
+          "end": 9.24,
+          "probability": 0.9863172173500061
+        },
+        {
+          "word": " Ini",
+          "start": 9.9,
+          "end": 10.08,
+          "probability": 0.19433948397636414
+        },
+        {
+          "word": " jawabu.",
+          "start": 10.08,
+          "end": 10.5,
+          "probability": 0.7905479768911997
+        }
+      ]
+    },
+    {
+      "start": 12.980000000000006,
+      "end": 18.26,
+      "speaker": "AGENT",
+      "text": " Jangan kaya gitu, dijawabu jadi bangsa, Tana. Bayar utang.",
+      "words": [
+        {
+          "word": " Jangan",
+          "start": 12.980000000000006,
+          "end": 13.58,
+          "probability": 0.6076977774500847
+        },
+        {
+          "word": " kaya",
+          "start": 13.58,
+          "end": 13.76,
+          "probability": 0.5189931765198708
+        },
+        {
+          "word": " gitu,",
+          "start": 13.76,
+          "end": 14.08,
+          "probability": 0.8884546756744385
+        },
+        {
+          "word": " dijawabu",
+          "start": 14.38,
+          "end": 14.96,
+          "probability": 0.7452564015984535
+        },
+        {
+          "word": " jadi",
+          "start": 14.96,
+          "end": 15.12,
+          "probability": 0.7094348073005676
+        },
+        {
+          "word": " bangsa,",
+          "start": 15.12,
+          "end": 15.5,
+          "probability": 0.850585013628006
+        },
+        {
+          "word": " Tana.",
+          "start": 15.62,
+          "end": 15.76,
+          "probability": 0.26919832825660706
+        },
+        {
+          "word": " Bayar",
+          "start": 17.28,
+          "end": 17.88,
+          "probability": 0.9233653843402863
+        },
+        {
+          "word": " utang.",
+          "start": 17.88,
+          "end": 18.26,
+          "probability": 0.6521119624376297
+        }
+      ]
+    },
+    {
+      "start": 20.600000000000005,
+      "end": 23.94,
+      "speaker": "CUSTOMER",
+      "text": " Oke, anda tidak respon, akan saya sebar foto-foto selfie, foto kfp.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 20.600000000000005,
+          "end": 21.2,
+          "probability": 0.9330220222473145
+        },
+        {
+          "word": " anda",
+          "start": 21.32,
+          "end": 21.42,
+          "probability": 0.25759491324424744
+        },
+        {
+          "word": " tidak",
+          "start": 21.42,
+          "end": 21.58,
+          "probability": 0.9824387431144714
+        },
+        {
+          "word": " respon,",
+          "start": 21.58,
+          "end": 21.92,
+          "probability": 0.9191599190235138
+        },
+        {
+          "word": " akan",
+          "start": 21.98,
+          "end": 22.06,
+          "probability": 0.6156159043312073
+        },
+        {
+          "word": " saya",
+          "start": 22.06,
+          "end": 22.2,
+          "probability": 0.921927809715271
+        },
+        {
+          "word": " sebar",
+          "start": 22.2,
+          "end": 22.54,
+          "probability": 0.9129872620105743
+        },
+        {
+          "word": " foto",
+          "start": 22.54,
+          "end": 22.74,
+          "probability": 0.6137065291404724
+        },
+        {
+          "word": "-foto",
+          "start": 22.74,
+          "end": 22.92,
+          "probability": 0.822496235370636
+        },
+        {
+          "word": " selfie,",
+          "start": 22.92,
+          "end": 23.32,
+          "probability": 0.8163347840309143
+        },
+        {
+          "word": " foto",
+          "start": 23.44,
+          "end": 23.52,
+          "probability": 0.9501208066940308
+        },
+        {
+          "word": " kfp.",
+          "start": 23.52,
+          "end": 23.94,
+          "probability": 0.5221967001756033
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello, semuanya cum. Ibu Linda, semuanya cum. Ini jawabu.  Jangan kaya gitu, dijawabu jadi bangsa, Tana. Bayar utang.  Oke, anda tidak respon, akan saya sebar foto-foto selfie, foto kfp."
+}

@@ -1,0 +1,59 @@
+{
+  "case_id": "628224054788108-20260420080459",
+  "file_name": "628224054788108-20260420080459.mp3",
+  "transcript": [
+    {
+      "start": 12.239999999999998,
+      "end": 15.04,
+      "speaker": "AGENT",
+      "text": " KAMU MENJUKAN",
+      "words": [
+        {
+          "word": " KAMU",
+          "start": 12.239999999999998,
+          "end": 13.639999999999999,
+          "probability": 0.3153985633204381
+        },
+        {
+          "word": " MENJUKAN",
+          "start": 13.639999999999999,
+          "end": 15.04,
+          "probability": 0.3577750660479069
+        }
+      ]
+    },
+    {
+      "start": 26.12,
+      "end": 27.52,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih kerana menonton!",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 26.12,
+          "end": 27.52,
+          "probability": 0.4596629198640585
+        },
+        {
+          "word": " kasih",
+          "start": 27.52,
+          "end": 27.52,
+          "probability": 0.8818261027336121
+        },
+        {
+          "word": " kerana",
+          "start": 27.52,
+          "end": 27.52,
+          "probability": 0.5249394923448563
+        },
+        {
+          "word": " menonton!",
+          "start": 27.52,
+          "end": 27.52,
+          "probability": 0.9179351627826691
+        }
+      ]
+    }
+  ],
+  "full_text": " KAMU MENJUKAN  Terima kasih kerana menonton!"
+}

@@ -1,0 +1,681 @@
+{
+  "case_id": "628214795617708-20260422073637",
+  "file_name": "628214795617708-20260422073637.mp3",
+  "transcript": [
+    {
+      "start": 2.600000000000001,
+      "end": 3.36,
+      "speaker": "AGENT",
+      "text": " Hello?",
+      "words": [
+        {
+          "word": " Hello?",
+          "start": 2.600000000000001,
+          "end": 3.36,
+          "probability": 0.07077790051698685
+        }
+      ]
+    },
+    {
+      "start": 4.4,
+      "end": 5.12,
+      "speaker": "CUSTOMER",
+      "text": " Hello?",
+      "words": [
+        {
+          "word": " Hello?",
+          "start": 4.4,
+          "end": 5.12,
+          "probability": 0.3111872673034668
+        }
+      ]
+    },
+    {
+      "start": 5.72,
+      "end": 8.02,
+      "speaker": "AGENT",
+      "text": " Hello, Assalamualaikum, Bapak Nebi.",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 5.72,
+          "end": 6.48,
+          "probability": 0.3178146183490753
+        },
+        {
+          "word": " Assalamualaikum,",
+          "start": 6.58,
+          "end": 6.96,
+          "probability": 0.7647522866725922
+        },
+        {
+          "word": " Bapak",
+          "start": 7.44,
+          "end": 7.74,
+          "probability": 0.9176682829856873
+        },
+        {
+          "word": " Nebi.",
+          "start": 7.74,
+          "end": 8.02,
+          "probability": 0.3662031330168247
+        }
+      ]
+    },
+    {
+      "start": 8.08,
+      "end": 8.2,
+      "speaker": "CUSTOMER",
+      "text": " Tidak salah.",
+      "words": [
+        {
+          "word": " Tidak",
+          "start": 8.08,
+          "end": 8.1,
+          "probability": 0.4280558166404565
+        },
+        {
+          "word": " salah.",
+          "start": 8.1,
+          "end": 8.2,
+          "probability": 0.713043749332428
+        }
+      ]
+    },
+    {
+      "start": 10.420000000000002,
+      "end": 11.8,
+      "speaker": "AGENT",
+      "text": " Ini Bapak Nebi.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 10.420000000000002,
+          "end": 11.18,
+          "probability": 0.05654362961649895
+        },
+        {
+          "word": " Bapak",
+          "start": 11.18,
+          "end": 11.5,
+          "probability": 0.7292817930380503
+        },
+        {
+          "word": " Nebi.",
+          "start": 11.5,
+          "end": 11.8,
+          "probability": 0.9732948541641235
+        }
+      ]
+    },
+    {
+      "start": 12.24,
+      "end": 14.04,
+      "speaker": "CUSTOMER",
+      "text": " Ini pinjamannya bisa diberi jam berapa?",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 12.24,
+          "end": 12.4,
+          "probability": 0.6815747022628784
+        },
+        {
+          "word": " pinjamannya",
+          "start": 12.4,
+          "end": 12.98,
+          "probability": 0.8251970807711283
+        },
+        {
+          "word": " bisa",
+          "start": 12.98,
+          "end": 13.22,
+          "probability": 0.8537348508834839
+        },
+        {
+          "word": " diberi",
+          "start": 13.22,
+          "end": 13.52,
+          "probability": 0.35411623617013294
+        },
+        {
+          "word": " jam",
+          "start": 13.52,
+          "end": 13.76,
+          "probability": 0.9355530142784119
+        },
+        {
+          "word": " berapa?",
+          "start": 13.76,
+          "end": 14.04,
+          "probability": 0.7535742819309235
+        }
+      ]
+    },
+    {
+      "start": 16.340000000000003,
+      "end": 17.94,
+      "speaker": "AGENT",
+      "text": " Ini aplikasi yang mana, Pak?",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 16.340000000000003,
+          "end": 17.1,
+          "probability": 0.9198553562164307
+        },
+        {
+          "word": " aplikasi",
+          "start": 17.1,
+          "end": 17.46,
+          "probability": 0.9731490810712179
+        },
+        {
+          "word": " yang",
+          "start": 17.46,
+          "end": 17.62,
+          "probability": 0.5917747020721436
+        },
+        {
+          "word": " mana,",
+          "start": 17.62,
+          "end": 17.76,
+          "probability": 0.9838663935661316
+        },
+        {
+          "word": " Pak?",
+          "start": 17.9,
+          "end": 17.94,
+          "probability": 0.7391910552978516
+        }
+      ]
+    },
+    {
+      "start": 18.04,
+      "end": 19.18,
+      "speaker": "CUSTOMER",
+      "text": " Memohonpun itu kereset.",
+      "words": [
+        {
+          "word": " Memohonpun",
+          "start": 18.04,
+          "end": 18.6,
+          "probability": 0.5409092724323272
+        },
+        {
+          "word": " itu",
+          "start": 18.6,
+          "end": 18.7,
+          "probability": 0.2189391702413559
+        },
+        {
+          "word": " kereset.",
+          "start": 18.7,
+          "end": 19.18,
+          "probability": 0.8325356443723043
+        }
+      ]
+    },
+    {
+      "start": 20.44,
+      "end": 21.2,
+      "speaker": "AGENT",
+      "text": " Gimana?",
+      "words": [
+        {
+          "word": " Gimana?",
+          "start": 20.44,
+          "end": 21.2,
+          "probability": 0.6481116265058517
+        }
+      ]
+    },
+    {
+      "start": 22.360000000000003,
+      "end": 24.14,
+      "speaker": "CUSTOMER",
+      "text": " Memohonpun apanya kereset?",
+      "words": [
+        {
+          "word": " Memohonpun",
+          "start": 22.360000000000003,
+          "end": 23.12,
+          "probability": 0.7916613221168518
+        },
+        {
+          "word": " apanya",
+          "start": 23.12,
+          "end": 23.5,
+          "probability": 0.44025277346372604
+        },
+        {
+          "word": " kereset?",
+          "start": 23.5,
+          "end": 24.14,
+          "probability": 0.9880601167678833
+        }
+      ]
+    },
+    {
+      "start": 24.22,
+      "end": 24.98,
+      "speaker": "AGENT",
+      "text": " Memohon berusak?",
+      "words": [
+        {
+          "word": " Memohon",
+          "start": 24.22,
+          "end": 24.52,
+          "probability": 0.6767737256983916
+        },
+        {
+          "word": " berusak?",
+          "start": 24.52,
+          "end": 24.98,
+          "probability": 0.5775148173173269
+        }
+      ]
+    },
+    {
+      "start": 25.6,
+      "end": 26.18,
+      "speaker": "CUSTOMER",
+      "text": " Di kontor?",
+      "words": [
+        {
+          "word": " Di",
+          "start": 25.6,
+          "end": 25.78,
+          "probability": 0.5594930648803711
+        },
+        {
+          "word": " kontor?",
+          "start": 25.78,
+          "end": 26.18,
+          "probability": 0.492215633392334
+        }
+      ]
+    },
+    {
+      "start": 27.72,
+      "end": 30.92,
+      "speaker": "AGENT",
+      "text": " Iya, ini pinjaman Bapak. Bisa dibayarkan jam berapa?",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 27.72,
+          "end": 28.24,
+          "probability": 0.017758969217538834
+        },
+        {
+          "word": " ini",
+          "start": 28.44,
+          "end": 28.56,
+          "probability": 0.9703594446182251
+        },
+        {
+          "word": " pinjaman",
+          "start": 28.56,
+          "end": 29.1,
+          "probability": 0.9486099481582642
+        },
+        {
+          "word": " Bapak.",
+          "start": 29.1,
+          "end": 29.5,
+          "probability": 0.7751669486363729
+        },
+        {
+          "word": " Bisa",
+          "start": 29.64,
+          "end": 29.84,
+          "probability": 0.9591554999351501
+        },
+        {
+          "word": " dibayarkan",
+          "start": 29.84,
+          "end": 30.22,
+          "probability": 0.8474943439165751
+        },
+        {
+          "word": " jam",
+          "start": 30.22,
+          "end": 30.54,
+          "probability": 0.9704081416130066
+        },
+        {
+          "word": " berapa?",
+          "start": 30.54,
+          "end": 30.92,
+          "probability": 0.9874948561191559
+        }
+      ]
+    },
+    {
+      "start": 32.88,
+      "end": 33.98,
+      "speaker": "CUSTOMER",
+      "text": " Apikasi yang mana, Pak?",
+      "words": [
+        {
+          "word": " Apikasi",
+          "start": 32.88,
+          "end": 33.4,
+          "probability": 0.28692914235095185
+        },
+        {
+          "word": " yang",
+          "start": 33.4,
+          "end": 33.54,
+          "probability": 0.0398268885910511
+        },
+        {
+          "word": " mana,",
+          "start": 33.54,
+          "end": 33.72,
+          "probability": 0.5826508402824402
+        },
+        {
+          "word": " Pak?",
+          "start": 33.9,
+          "end": 33.98,
+          "probability": 0.3178696930408478
+        }
+      ]
+    },
+    {
+      "start": 34.68,
+      "end": 36.36,
+      "speaker": "AGENT",
+      "text": " Memohon kereset, aplikasi yang ilang.",
+      "words": [
+        {
+          "word": " Memohon",
+          "start": 34.68,
+          "end": 34.94,
+          "probability": 0.2957506368644924
+        },
+        {
+          "word": " kereset,",
+          "start": 34.94,
+          "end": 35.44,
+          "probability": 0.3661405202001333
+        },
+        {
+          "word": " aplikasi",
+          "start": 35.46,
+          "end": 35.88,
+          "probability": 0.636524831255277
+        },
+        {
+          "word": " yang",
+          "start": 35.88,
+          "end": 36.02,
+          "probability": 0.45312339067459106
+        },
+        {
+          "word": " ilang.",
+          "start": 36.02,
+          "end": 36.36,
+          "probability": 0.5942961275577545
+        }
+      ]
+    },
+    {
+      "start": 37.14,
+      "end": 40.5,
+      "speaker": "CUSTOMER",
+      "text": " Oh, iya nanti saya kirimkan aja ininya.",
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 37.14,
+          "end": 37.66,
+          "probability": 0.6566863656044006
+        },
+        {
+          "word": " iya",
+          "start": 38.3,
+          "end": 38.52,
+          "probability": 0.7111819386482239
+        },
+        {
+          "word": " nanti",
+          "start": 38.52,
+          "end": 38.76,
+          "probability": 0.8744911253452301
+        },
+        {
+          "word": " saya",
+          "start": 38.76,
+          "end": 39.0,
+          "probability": 0.9550181031227112
+        },
+        {
+          "word": " kirimkan",
+          "start": 39.0,
+          "end": 39.96,
+          "probability": 0.7840011318524679
+        },
+        {
+          "word": " aja",
+          "start": 39.96,
+          "end": 40.18,
+          "probability": 0.7259438633918762
+        },
+        {
+          "word": " ininya.",
+          "start": 40.18,
+          "end": 40.5,
+          "probability": 0.8052425682544708
+        }
+      ]
+    },
+    {
+      "start": 40.96,
+      "end": 41.48,
+      "speaker": "AGENT",
+      "text": " Bukti...",
+      "words": [
+        {
+          "word": " Bukti...",
+          "start": 40.96,
+          "end": 41.48,
+          "probability": 0.615922100841999
+        }
+      ]
+    },
+    {
+      "start": 42.2,
+      "end": 46.52,
+      "speaker": "AGENT",
+      "text": " Iya, bukti pinjamannya, bukti kontrak, dan semuanya ya Pak?",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 42.2,
+          "end": 42.72,
+          "probability": 0.43395840749144554
+        },
+        {
+          "word": " bukti",
+          "start": 42.9,
+          "end": 43.22,
+          "probability": 0.9599260886510214
+        },
+        {
+          "word": " pinjamannya,",
+          "start": 43.22,
+          "end": 43.98,
+          "probability": 0.7575193842252096
+        },
+        {
+          "word": " bukti",
+          "start": 44.18,
+          "end": 44.46,
+          "probability": 0.9828741749127706
+        },
+        {
+          "word": " kontrak,",
+          "start": 44.46,
+          "end": 45.06,
+          "probability": 0.80598384141922
+        },
+        {
+          "word": " dan",
+          "start": 45.3,
+          "end": 45.56,
+          "probability": 0.9410854578018188
+        },
+        {
+          "word": " semuanya",
+          "start": 45.56,
+          "end": 46.24,
+          "probability": 0.9872355858484904
+        },
+        {
+          "word": " ya",
+          "start": 46.24,
+          "end": 46.44,
+          "probability": 0.7900382280349731
+        },
+        {
+          "word": " Pak?",
+          "start": 46.44,
+          "end": 46.52,
+          "probability": 0.786037802696228
+        }
+      ]
+    },
+    {
+      "start": 47.24,
+      "end": 48.3,
+      "speaker": "AGENT",
+      "text": " Pak, siap, siap, siap.",
+      "words": [
+        {
+          "word": " Pak,",
+          "start": 47.24,
+          "end": 47.5,
+          "probability": 0.543872594833374
+        },
+        {
+          "word": " siap,",
+          "start": 47.62,
+          "end": 47.9,
+          "probability": 0.7030338943004608
+        },
+        {
+          "word": " siap,",
+          "start": 47.92,
+          "end": 48.08,
+          "probability": 0.9990860819816589
+        },
+        {
+          "word": " siap.",
+          "start": 48.2,
+          "end": 48.3,
+          "probability": 0.9978343844413757
+        }
+      ]
+    },
+    {
+      "start": 48.74,
+      "end": 49.98,
+      "speaker": "CUSTOMER",
+      "text": " Oke, nanti saya makasih Pak.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 48.74,
+          "end": 49.2,
+          "probability": 0.1658012717962265
+        },
+        {
+          "word": " nanti",
+          "start": 49.3,
+          "end": 49.4,
+          "probability": 0.9873066544532776
+        },
+        {
+          "word": " saya",
+          "start": 49.4,
+          "end": 49.62,
+          "probability": 0.9623388051986694
+        },
+        {
+          "word": " makasih",
+          "start": 49.62,
+          "end": 49.86,
+          "probability": 0.6198514997959137
+        },
+        {
+          "word": " Pak.",
+          "start": 49.86,
+          "end": 49.98,
+          "probability": 0.7532249093055725
+        }
+      ]
+    },
+    {
+      "start": 50.36,
+      "end": 51.86,
+      "speaker": "AGENT",
+      "text": " Terima kasih, Pak. Selamat pagi.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 50.36,
+          "end": 50.56,
+          "probability": 0.9556971490383148
+        },
+        {
+          "word": " kasih,",
+          "start": 50.56,
+          "end": 50.78,
+          "probability": 0.9659775495529175
+        },
+        {
+          "word": " Pak.",
+          "start": 50.94,
+          "end": 51.02,
+          "probability": 0.9605518579483032
+        },
+        {
+          "word": " Selamat",
+          "start": 51.42,
+          "end": 51.5,
+          "probability": 0.900735467672348
+        },
+        {
+          "word": " pagi.",
+          "start": 51.5,
+          "end": 51.86,
+          "probability": 0.9970425665378571
+        }
+      ]
+    },
+    {
+      "start": 52.32,
+      "end": 52.92,
+      "speaker": "CUSTOMER",
+      "text": " Selamat pagi.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 52.32,
+          "end": 52.66,
+          "probability": 0.6375463604927063
+        },
+        {
+          "word": " pagi.",
+          "start": 52.66,
+          "end": 52.92,
+          "probability": 0.9977855086326599
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello?  Hello?  Hello, Assalamualaikum, Bapak Nebi.  Tidak salah.  Ini Bapak Nebi.  Ini pinjamannya bisa diberi jam berapa?  Ini aplikasi yang mana, Pak?  Memohonpun itu kereset.  Gimana?  Memohonpun apanya kereset?  Memohon berusak?  Di kontor?  Iya, ini pinjaman Bapak. Bisa dibayarkan jam berapa?  Apikasi yang mana, Pak?  Memohon kereset, aplikasi yang ilang.  Oh, iya nanti saya kirimkan aja ininya.  Bukti...  Iya, bukti pinjamannya, bukti kontrak, dan semuanya ya Pak?  Pak, siap, siap, siap.  Oke, nanti saya makasih Pak.  Terima kasih, Pak. Selamat pagi.  Selamat pagi."
+}

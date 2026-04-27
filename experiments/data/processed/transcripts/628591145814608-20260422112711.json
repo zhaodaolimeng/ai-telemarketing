@@ -1,0 +1,537 @@
+{
+  "case_id": "628591145814608-20260422112711",
+  "file_name": "628591145814608-20260422112711.mp3",
+  "transcript": [
+    {
+      "start": 1.8400000000000025,
+      "end": 2.96,
+      "speaker": "AGENT",
+      "text": " Hello, Bajepri.",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 1.8400000000000025,
+          "end": 2.4000000000000012,
+          "probability": 0.056004270911216736
+        },
+        {
+          "word": " Bajepri.",
+          "start": 2.4000000000000012,
+          "end": 2.96,
+          "probability": 0.5258284751325846
+        }
+      ]
+    },
+    {
+      "start": 4.360000000000001,
+      "end": 4.92,
+      "speaker": "CUSTOMER",
+      "text": " Hello.",
+      "words": [
+        {
+          "word": " Hello.",
+          "start": 4.360000000000001,
+          "end": 4.92,
+          "probability": 0.3338429629802704
+        }
+      ]
+    },
+    {
+      "start": 6.460000000000001,
+      "end": 11.3,
+      "speaker": "AGENT",
+      "text": " Bajepri, ini tajiannya di ekstra bayarkan siang ini, apa ya? Ditungguin.",
+      "words": [
+        {
+          "word": " Bajepri,",
+          "start": 6.460000000000001,
+          "end": 7.02,
+          "probability": 0.8106716200709343
+        },
+        {
+          "word": " ini",
+          "start": 7.18,
+          "end": 7.38,
+          "probability": 0.9710864424705505
+        },
+        {
+          "word": " tajiannya",
+          "start": 7.38,
+          "end": 8.06,
+          "probability": 0.6930262371897697
+        },
+        {
+          "word": " di",
+          "start": 8.06,
+          "end": 8.2,
+          "probability": 0.9717018604278564
+        },
+        {
+          "word": " ekstra",
+          "start": 8.2,
+          "end": 8.66,
+          "probability": 0.7976227402687073
+        },
+        {
+          "word": " bayarkan",
+          "start": 8.66,
+          "end": 9.14,
+          "probability": 0.7866573929786682
+        },
+        {
+          "word": " siang",
+          "start": 9.14,
+          "end": 9.58,
+          "probability": 0.8621044456958771
+        },
+        {
+          "word": " ini,",
+          "start": 9.58,
+          "end": 9.84,
+          "probability": 0.9576325416564941
+        },
+        {
+          "word": " apa",
+          "start": 9.94,
+          "end": 10.12,
+          "probability": 0.5266954302787781
+        },
+        {
+          "word": " ya?",
+          "start": 10.12,
+          "end": 10.36,
+          "probability": 0.8875157237052917
+        },
+        {
+          "word": " Ditungguin.",
+          "start": 10.74,
+          "end": 11.3,
+          "probability": 0.9344390779733658
+        }
+      ]
+    },
+    {
+      "start": 11.96,
+      "end": 14.48,
+      "speaker": "CUSTOMER",
+      "text": " Sampai jam 2 tahun udah harus dibayar, ya?",
+      "words": [
+        {
+          "word": " Sampai",
+          "start": 11.96,
+          "end": 12.38,
+          "probability": 0.8242747584978739
+        },
+        {
+          "word": " jam",
+          "start": 12.38,
+          "end": 12.56,
+          "probability": 0.7230257391929626
+        },
+        {
+          "word": " 2",
+          "start": 12.56,
+          "end": 12.74,
+          "probability": 0.4999382495880127
+        },
+        {
+          "word": " tahun",
+          "start": 12.74,
+          "end": 12.96,
+          "probability": 0.0959283858537674
+        },
+        {
+          "word": " udah",
+          "start": 12.96,
+          "end": 13.24,
+          "probability": 0.6398746967315674
+        },
+        {
+          "word": " harus",
+          "start": 13.24,
+          "end": 13.42,
+          "probability": 0.4321485757827759
+        },
+        {
+          "word": " dibayar,",
+          "start": 13.42,
+          "end": 14.06,
+          "probability": 0.9053176244099935
+        },
+        {
+          "word": " ya?",
+          "start": 14.3,
+          "end": 14.48,
+          "probability": 0.9269363284111023
+        }
+      ]
+    },
+    {
+      "start": 15.34,
+      "end": 17.8,
+      "speaker": "AGENT",
+      "text": " Kalau bapak, ini kan tajian bapak 2 juta.",
+      "words": [
+        {
+          "word": " Kalau",
+          "start": 15.34,
+          "end": 15.62,
+          "probability": 0.5852242708206177
+        },
+        {
+          "word": " bapak,",
+          "start": 15.62,
+          "end": 16.18,
+          "probability": 0.7653965055942535
+        },
+        {
+          "word": " ini",
+          "start": 16.34,
+          "end": 16.5,
+          "probability": 0.9904708862304688
+        },
+        {
+          "word": " kan",
+          "start": 16.5,
+          "end": 16.64,
+          "probability": 0.9761491417884827
+        },
+        {
+          "word": " tajian",
+          "start": 16.64,
+          "end": 16.94,
+          "probability": 0.9639545679092407
+        },
+        {
+          "word": " bapak",
+          "start": 16.94,
+          "end": 17.32,
+          "probability": 0.9642714063326517
+        },
+        {
+          "word": " 2",
+          "start": 17.32,
+          "end": 17.44,
+          "probability": 0.817590057849884
+        },
+        {
+          "word": " juta.",
+          "start": 17.44,
+          "end": 17.8,
+          "probability": 0.9892249703407288
+        }
+      ]
+    },
+    {
+      "start": 18.38,
+      "end": 21.26,
+      "speaker": "CUSTOMER",
+      "text": " Kalau belum bisa lunasin, bayar perpanjangan dulu aja.",
+      "words": [
+        {
+          "word": " Kalau",
+          "start": 18.38,
+          "end": 18.7,
+          "probability": 0.9875661134719849
+        },
+        {
+          "word": " belum",
+          "start": 18.7,
+          "end": 18.9,
+          "probability": 0.9524499773979187
+        },
+        {
+          "word": " bisa",
+          "start": 18.9,
+          "end": 19.18,
+          "probability": 0.9934238195419312
+        },
+        {
+          "word": " lunasin,",
+          "start": 19.18,
+          "end": 19.7,
+          "probability": 0.8922816514968872
+        },
+        {
+          "word": " bayar",
+          "start": 19.78,
+          "end": 20.0,
+          "probability": 0.9669510424137115
+        },
+        {
+          "word": " perpanjangan",
+          "start": 20.0,
+          "end": 20.68,
+          "probability": 0.8544187694787979
+        },
+        {
+          "word": " dulu",
+          "start": 20.68,
+          "end": 20.92,
+          "probability": 0.9581089615821838
+        },
+        {
+          "word": " aja.",
+          "start": 20.92,
+          "end": 21.26,
+          "probability": 0.9416083693504333
+        }
+      ]
+    },
+    {
+      "start": 23.34,
+      "end": 24.42,
+      "speaker": "CUSTOMER",
+      "text": " Bisa ya, apa ya?",
+      "words": [
+        {
+          "word": " Bisa",
+          "start": 23.34,
+          "end": 23.9,
+          "probability": 0.9128476977348328
+        },
+        {
+          "word": " ya,",
+          "start": 23.9,
+          "end": 24.1,
+          "probability": 0.741712212562561
+        },
+        {
+          "word": " apa",
+          "start": 24.16,
+          "end": 24.26,
+          "probability": 0.5361239910125732
+        },
+        {
+          "word": " ya?",
+          "start": 24.26,
+          "end": 24.42,
+          "probability": 0.9723621606826782
+        }
+      ]
+    },
+    {
+      "start": 27.919999999999998,
+      "end": 28.4,
+      "speaker": "AGENT",
+      "text": " Halo.",
+      "words": [
+        {
+          "word": " Halo.",
+          "start": 27.919999999999998,
+          "end": 28.4,
+          "probability": 0.1082344800233841
+        }
+      ]
+    },
+    {
+      "start": 30.5,
+      "end": 31.46,
+      "speaker": "AGENT",
+      "text": " Halo, Bajepri.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 30.5,
+          "end": 30.98,
+          "probability": 0.7066339254379272
+        },
+        {
+          "word": " Bajepri.",
+          "start": 30.98,
+          "end": 31.46,
+          "probability": 0.48670639682677574
+        }
+      ]
+    },
+    {
+      "start": 33.78,
+      "end": 34.26,
+      "speaker": "CUSTOMER",
+      "text": " Bajepri.",
+      "words": [
+        {
+          "word": " Bajepri.",
+          "start": 33.78,
+          "end": 34.26,
+          "probability": 0.9620940089225769
+        }
+      ]
+    },
+    {
+      "start": 35.62,
+      "end": 36.62,
+      "speaker": "CUSTOMER",
+      "text": " Bisa ya, apa ya?",
+      "words": [
+        {
+          "word": " Bisa",
+          "start": 35.62,
+          "end": 36.02,
+          "probability": 0.960629940032959
+        },
+        {
+          "word": " ya,",
+          "start": 36.02,
+          "end": 36.24,
+          "probability": 0.8312264084815979
+        },
+        {
+          "word": " apa",
+          "start": 36.3,
+          "end": 36.4,
+          "probability": 0.002264762995764613
+        },
+        {
+          "word": " ya?",
+          "start": 36.4,
+          "end": 36.62,
+          "probability": 0.8739790320396423
+        }
+      ]
+    },
+    {
+      "start": 37.24,
+      "end": 40.48,
+      "speaker": "CUSTOMER",
+      "text": " Bapak, jangan didiamin aja, Pak. Ini saya lagi kerja lho, Pak.",
+      "words": [
+        {
+          "word": " Bapak,",
+          "start": 37.24,
+          "end": 37.52,
+          "probability": 0.3849673978984356
+        },
+        {
+          "word": " jangan",
+          "start": 37.52,
+          "end": 37.7,
+          "probability": 0.9869776368141174
+        },
+        {
+          "word": " didiamin",
+          "start": 37.7,
+          "end": 38.26,
+          "probability": 0.7921558817227682
+        },
+        {
+          "word": " aja,",
+          "start": 38.26,
+          "end": 38.5,
+          "probability": 0.8650329113006592
+        },
+        {
+          "word": " Pak.",
+          "start": 38.68,
+          "end": 38.76,
+          "probability": 0.6259045004844666
+        },
+        {
+          "word": " Ini",
+          "start": 39.0,
+          "end": 39.12,
+          "probability": 0.9846975803375244
+        },
+        {
+          "word": " saya",
+          "start": 39.12,
+          "end": 39.34,
+          "probability": 0.9791045188903809
+        },
+        {
+          "word": " lagi",
+          "start": 39.34,
+          "end": 39.6,
+          "probability": 0.9850683808326721
+        },
+        {
+          "word": " kerja",
+          "start": 39.6,
+          "end": 40.06,
+          "probability": 0.9303094148635864
+        },
+        {
+          "word": " lho,",
+          "start": 40.06,
+          "end": 40.28,
+          "probability": 0.6558422297239304
+        },
+        {
+          "word": " Pak.",
+          "start": 40.38,
+          "end": 40.48,
+          "probability": 0.9834312796592712
+        }
+      ]
+    },
+    {
+      "start": 42.3,
+      "end": 45.34,
+      "speaker": "CUSTOMER",
+      "text": " Saya lagi bapak kerja, Pak. Jangan kayak gini dong, Pak.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 42.3,
+          "end": 42.78,
+          "probability": 0.9671009182929993
+        },
+        {
+          "word": " lagi",
+          "start": 42.78,
+          "end": 43.04,
+          "probability": 0.7321954369544983
+        },
+        {
+          "word": " bapak",
+          "start": 43.04,
+          "end": 43.38,
+          "probability": 0.944296141465505
+        },
+        {
+          "word": " kerja,",
+          "start": 43.38,
+          "end": 43.74,
+          "probability": 0.9954131841659546
+        },
+        {
+          "word": " Pak.",
+          "start": 43.9,
+          "end": 43.98,
+          "probability": 0.9782339930534363
+        },
+        {
+          "word": " Jangan",
+          "start": 44.28,
+          "end": 44.46,
+          "probability": 0.9910766184329987
+        },
+        {
+          "word": " kayak",
+          "start": 44.46,
+          "end": 44.68,
+          "probability": 0.4945243000984192
+        },
+        {
+          "word": " gini",
+          "start": 44.68,
+          "end": 44.94,
+          "probability": 0.7144576907157898
+        },
+        {
+          "word": " dong,",
+          "start": 44.94,
+          "end": 45.1,
+          "probability": 0.5412036180496216
+        },
+        {
+          "word": " Pak.",
+          "start": 45.24,
+          "end": 45.34,
+          "probability": 0.9753299355506897
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello, Bajepri.  Hello.  Bajepri, ini tajiannya di ekstra bayarkan siang ini, apa ya? Ditungguin.  Sampai jam 2 tahun udah harus dibayar, ya?  Kalau bapak, ini kan tajian bapak 2 juta.  Kalau belum bisa lunasin, bayar perpanjangan dulu aja.  Bisa ya, apa ya?  Halo.  Halo, Bajepri.  Bajepri.  Bisa ya, apa ya?  Bapak, jangan didiamin aja, Pak. Ini saya lagi kerja lho, Pak.  Saya lagi bapak kerja, Pak. Jangan kayak gini dong, Pak."
+}

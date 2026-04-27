@@ -1,0 +1,591 @@
+{
+  "case_id": "628910507912909-20260419100127",
+  "file_name": "628910507912909-20260419100127.mp3",
+  "transcript": [
+    {
+      "start": 1.3799999999999994,
+      "end": 4.12,
+      "speaker": "AGENT",
+      "text": " Halo Selamat pagi",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 1.3799999999999994,
+          "end": 2.02,
+          "probability": 0.05039087310433388
+        },
+        {
+          "word": " Selamat",
+          "start": 2.02,
+          "end": 2.6,
+          "probability": 0.6618516147136688
+        },
+        {
+          "word": " pagi",
+          "start": 2.6,
+          "end": 4.12,
+          "probability": 0.5386791229248047
+        }
+      ]
+    },
+    {
+      "start": 4.999999999999999,
+      "end": 6.1,
+      "speaker": "AGENT",
+      "text": " Pak Pebrian",
+      "words": [
+        {
+          "word": " Pak",
+          "start": 4.999999999999999,
+          "end": 5.64,
+          "probability": 0.1211540549993515
+        },
+        {
+          "word": " Pebrian",
+          "start": 5.64,
+          "end": 6.1,
+          "probability": 0.5777469376722971
+        }
+      ]
+    },
+    {
+      "start": 8.7,
+      "end": 10.7,
+      "speaker": "AGENT",
+      "text": " Pak Pebrian, selamat pagi",
+      "words": [
+        {
+          "word": " Pak",
+          "start": 8.7,
+          "end": 9.34,
+          "probability": 0.08991137146949768
+        },
+        {
+          "word": " Pebrian,",
+          "start": 9.34,
+          "end": 9.7,
+          "probability": 0.9613206187884012
+        },
+        {
+          "word": " selamat",
+          "start": 10.14,
+          "end": 10.3,
+          "probability": 0.8505139648914337
+        },
+        {
+          "word": " pagi",
+          "start": 10.3,
+          "end": 10.7,
+          "probability": 0.9966196119785309
+        }
+      ]
+    },
+    {
+      "start": 11.559999999999999,
+      "end": 14.4,
+      "speaker": "AGENT",
+      "text": " Tagiannya gimana Pak di Extra ini kenapa belum dibayar juga?",
+      "words": [
+        {
+          "word": " Tagiannya",
+          "start": 11.559999999999999,
+          "end": 12.2,
+          "probability": 0.5093148831898967
+        },
+        {
+          "word": " gimana",
+          "start": 12.2,
+          "end": 12.5,
+          "probability": 0.8608225584030151
+        },
+        {
+          "word": " Pak",
+          "start": 12.5,
+          "end": 12.74,
+          "probability": 0.7473316788673401
+        },
+        {
+          "word": " di",
+          "start": 12.74,
+          "end": 12.9,
+          "probability": 0.5798760652542114
+        },
+        {
+          "word": " Extra",
+          "start": 12.9,
+          "end": 13.14,
+          "probability": 0.2702203094959259
+        },
+        {
+          "word": " ini",
+          "start": 13.14,
+          "end": 13.4,
+          "probability": 0.6810007691383362
+        },
+        {
+          "word": " kenapa",
+          "start": 13.4,
+          "end": 13.68,
+          "probability": 0.750529944896698
+        },
+        {
+          "word": " belum",
+          "start": 13.68,
+          "end": 13.86,
+          "probability": 0.9447826743125916
+        },
+        {
+          "word": " dibayar",
+          "start": 13.86,
+          "end": 14.18,
+          "probability": 0.9521045883496603
+        },
+        {
+          "word": " juga?",
+          "start": 14.18,
+          "end": 14.4,
+          "probability": 0.9784237742424011
+        }
+      ]
+    },
+    {
+      "start": 17.54,
+      "end": 20.96,
+      "speaker": "AGENT",
+      "text": " Ini kita tagi kemana, ini tagian Anda di aplikasi Extra",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 17.54,
+          "end": 18.18,
+          "probability": 0.17544430494308472
+        },
+        {
+          "word": " kita",
+          "start": 18.18,
+          "end": 18.82,
+          "probability": 0.9676061272621155
+        },
+        {
+          "word": " tagi",
+          "start": 18.82,
+          "end": 19.1,
+          "probability": 0.6662245690822601
+        },
+        {
+          "word": " kemana,",
+          "start": 19.1,
+          "end": 19.38,
+          "probability": 0.7962987422943115
+        },
+        {
+          "word": " ini",
+          "start": 19.48,
+          "end": 19.58,
+          "probability": 0.8703359961509705
+        },
+        {
+          "word": " tagian",
+          "start": 19.58,
+          "end": 19.94,
+          "probability": 0.9500592648983002
+        },
+        {
+          "word": " Anda",
+          "start": 19.94,
+          "end": 20.14,
+          "probability": 0.2732599079608917
+        },
+        {
+          "word": " di",
+          "start": 20.14,
+          "end": 20.32,
+          "probability": 0.961955726146698
+        },
+        {
+          "word": " aplikasi",
+          "start": 20.32,
+          "end": 20.66,
+          "probability": 0.9473872184753418
+        },
+        {
+          "word": " Extra",
+          "start": 20.66,
+          "end": 20.96,
+          "probability": 0.9347219467163086
+        }
+      ]
+    },
+    {
+      "start": 22.34,
+      "end": 22.98,
+      "speaker": "CUSTOMER",
+      "text": " Apa?",
+      "words": [
+        {
+          "word": " Apa?",
+          "start": 22.34,
+          "end": 22.98,
+          "probability": 0.05932660400867462
+        }
+      ]
+    },
+    {
+      "start": 24.28,
+      "end": 28.46,
+      "speaker": "AGENT",
+      "text": " Tagian Anda di aplikasi Extra ini kita tagi kemana, kenapa belum dibayar juga?",
+      "words": [
+        {
+          "word": " Tagian",
+          "start": 24.28,
+          "end": 24.92,
+          "probability": 0.9335348010063171
+        },
+        {
+          "word": " Anda",
+          "start": 24.92,
+          "end": 25.16,
+          "probability": 0.9304643869400024
+        },
+        {
+          "word": " di",
+          "start": 25.16,
+          "end": 25.34,
+          "probability": 0.9966997504234314
+        },
+        {
+          "word": " aplikasi",
+          "start": 25.34,
+          "end": 25.74,
+          "probability": 0.9963323473930359
+        },
+        {
+          "word": " Extra",
+          "start": 25.74,
+          "end": 26.06,
+          "probability": 0.932685911655426
+        },
+        {
+          "word": " ini",
+          "start": 26.06,
+          "end": 26.24,
+          "probability": 0.9848894476890564
+        },
+        {
+          "word": " kita",
+          "start": 26.24,
+          "end": 26.46,
+          "probability": 0.9752041101455688
+        },
+        {
+          "word": " tagi",
+          "start": 26.46,
+          "end": 26.74,
+          "probability": 0.9647881388664246
+        },
+        {
+          "word": " kemana,",
+          "start": 26.74,
+          "end": 27.08,
+          "probability": 0.9277848303318024
+        },
+        {
+          "word": " kenapa",
+          "start": 27.4,
+          "end": 27.72,
+          "probability": 0.9692604839801788
+        },
+        {
+          "word": " belum",
+          "start": 27.72,
+          "end": 27.92,
+          "probability": 0.9899290204048157
+        },
+        {
+          "word": " dibayar",
+          "start": 27.92,
+          "end": 28.22,
+          "probability": 0.992889920870463
+        },
+        {
+          "word": " juga?",
+          "start": 28.22,
+          "end": 28.46,
+          "probability": 0.9978063702583313
+        }
+      ]
+    },
+    {
+      "start": 29.28,
+      "end": 29.82,
+      "speaker": "CUSTOMER",
+      "text": " Eh?",
+      "words": [
+        {
+          "word": " Eh?",
+          "start": 29.28,
+          "end": 29.82,
+          "probability": 0.00437095807865262
+        }
+      ]
+    },
+    {
+      "start": 32.12,
+      "end": 35.06,
+      "speaker": "AGENT",
+      "text": " Kita tunggu sebelum jam 12 yang ini dibayarkan Pak",
+      "words": [
+        {
+          "word": " Kita",
+          "start": 32.12,
+          "end": 32.66,
+          "probability": 0.8785043358802795
+        },
+        {
+          "word": " tunggu",
+          "start": 32.66,
+          "end": 33.04,
+          "probability": 0.9910905063152313
+        },
+        {
+          "word": " sebelum",
+          "start": 33.04,
+          "end": 33.46,
+          "probability": 0.7666389048099518
+        },
+        {
+          "word": " jam",
+          "start": 33.46,
+          "end": 33.6,
+          "probability": 0.9654027223587036
+        },
+        {
+          "word": " 12",
+          "start": 33.6,
+          "end": 33.84,
+          "probability": 0.8488202691078186
+        },
+        {
+          "word": " yang",
+          "start": 33.84,
+          "end": 34.08,
+          "probability": 0.6250249147415161
+        },
+        {
+          "word": " ini",
+          "start": 34.08,
+          "end": 34.22,
+          "probability": 0.9760905504226685
+        },
+        {
+          "word": " dibayarkan",
+          "start": 34.22,
+          "end": 34.68,
+          "probability": 0.9024089773495992
+        },
+        {
+          "word": " Pak",
+          "start": 34.68,
+          "end": 35.06,
+          "probability": 0.40308013558387756
+        }
+      ]
+    },
+    {
+      "start": 35.74,
+      "end": 36.28,
+      "speaker": "CUSTOMER",
+      "text": " Pebrian",
+      "words": [
+        {
+          "word": " Pebrian",
+          "start": 35.74,
+          "end": 36.28,
+          "probability": 0.1697186510815906
+        }
+      ]
+    },
+    {
+      "start": 38.04,
+      "end": 41.12,
+      "speaker": "CUSTOMER",
+      "text": " Jangan sampai tidak ada pembayaran sebelum jam 12 yang ini",
+      "words": [
+        {
+          "word": " Jangan",
+          "start": 38.04,
+          "end": 38.58,
+          "probability": 0.5797485038638115
+        },
+        {
+          "word": " sampai",
+          "start": 38.58,
+          "end": 38.88,
+          "probability": 0.9680100679397583
+        },
+        {
+          "word": " tidak",
+          "start": 38.88,
+          "end": 39.12,
+          "probability": 0.9910438060760498
+        },
+        {
+          "word": " ada",
+          "start": 39.12,
+          "end": 39.34,
+          "probability": 0.9936514496803284
+        },
+        {
+          "word": " pembayaran",
+          "start": 39.34,
+          "end": 39.84,
+          "probability": 0.9281552284955978
+        },
+        {
+          "word": " sebelum",
+          "start": 39.84,
+          "end": 40.22,
+          "probability": 0.9824069738388062
+        },
+        {
+          "word": " jam",
+          "start": 40.22,
+          "end": 40.38,
+          "probability": 0.9922675490379333
+        },
+        {
+          "word": " 12",
+          "start": 40.38,
+          "end": 40.64,
+          "probability": 0.972149133682251
+        },
+        {
+          "word": " yang",
+          "start": 40.64,
+          "end": 40.88,
+          "probability": 0.9065893888473511
+        },
+        {
+          "word": " ini",
+          "start": 40.88,
+          "end": 41.12,
+          "probability": 0.9909341335296631
+        }
+      ]
+    },
+    {
+      "start": 41.12,
+      "end": 44.0,
+      "speaker": "CUSTOMER",
+      "text": " collector lapangan yang akan aja ke kontak-kontak dan keluarga Anda",
+      "words": [
+        {
+          "word": " collector",
+          "start": 41.12,
+          "end": 41.42,
+          "probability": 0.18483708798885345
+        },
+        {
+          "word": " lapangan",
+          "start": 41.42,
+          "end": 41.94,
+          "probability": 0.7365727126598358
+        },
+        {
+          "word": " yang",
+          "start": 41.94,
+          "end": 42.06,
+          "probability": 0.9797908663749695
+        },
+        {
+          "word": " akan",
+          "start": 42.06,
+          "end": 42.2,
+          "probability": 0.9903199076652527
+        },
+        {
+          "word": " aja",
+          "start": 42.2,
+          "end": 42.54,
+          "probability": 0.265877902507782
+        },
+        {
+          "word": " ke",
+          "start": 42.54,
+          "end": 42.82,
+          "probability": 0.8590324521064758
+        },
+        {
+          "word": " kontak",
+          "start": 42.82,
+          "end": 43.1,
+          "probability": 0.5745664834976196
+        },
+        {
+          "word": "-kontak",
+          "start": 43.1,
+          "end": 43.34,
+          "probability": 0.9497073441743851
+        },
+        {
+          "word": " dan",
+          "start": 43.34,
+          "end": 43.48,
+          "probability": 0.9033740162849426
+        },
+        {
+          "word": " keluarga",
+          "start": 43.48,
+          "end": 43.84,
+          "probability": 0.9820608198642731
+        },
+        {
+          "word": " Anda",
+          "start": 43.84,
+          "end": 44.0,
+          "probability": 0.5786423087120056
+        }
+      ]
+    },
+    {
+      "start": 44.0,
+      "end": 45.06,
+      "speaker": "AGENT",
+      "text": " Kita tunggu itu ke baik",
+      "words": [
+        {
+          "word": " Kita",
+          "start": 44.0,
+          "end": 44.24,
+          "probability": 0.3859085440635681
+        },
+        {
+          "word": " tunggu",
+          "start": 44.24,
+          "end": 44.54,
+          "probability": 0.9927992224693298
+        },
+        {
+          "word": " itu",
+          "start": 44.54,
+          "end": 44.74,
+          "probability": 0.8344479203224182
+        },
+        {
+          "word": " ke",
+          "start": 44.74,
+          "end": 44.84,
+          "probability": 0.9603748321533203
+        },
+        {
+          "word": " baik",
+          "start": 44.84,
+          "end": 45.06,
+          "probability": 0.20505279302597046
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo Selamat pagi  Pak Pebrian  Pak Pebrian, selamat pagi  Tagiannya gimana Pak di Extra ini kenapa belum dibayar juga?  Ini kita tagi kemana, ini tagian Anda di aplikasi Extra  Apa?  Tagian Anda di aplikasi Extra ini kita tagi kemana, kenapa belum dibayar juga?  Eh?  Kita tunggu sebelum jam 12 yang ini dibayarkan Pak  Pebrian  Jangan sampai tidak ada pembayaran sebelum jam 12 yang ini  collector lapangan yang akan aja ke kontak-kontak dan keluarga Anda  Kita tunggu itu ke baik"
+}

@@ -1,0 +1,453 @@
+{
+  "case_id": "628910507912909-20260410101920",
+  "file_name": "628910507912909-20260410101920.mp3",
+  "transcript": [
+    {
+      "start": 2.4600000000000004,
+      "end": 3.14,
+      "speaker": "AGENT",
+      "text": " Hello?",
+      "words": [
+        {
+          "word": " Hello?",
+          "start": 2.4600000000000004,
+          "end": 3.14,
+          "probability": 0.1003425270318985
+        }
+      ]
+    },
+    {
+      "start": 6.72,
+      "end": 7.58,
+      "speaker": "CUSTOMER",
+      "text": " Halo, Peberian.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 6.72,
+          "end": 7.06,
+          "probability": 0.12715619802474976
+        },
+        {
+          "word": " Peberian.",
+          "start": 7.14,
+          "end": 7.58,
+          "probability": 0.5044824282328287
+        }
+      ]
+    },
+    {
+      "start": 10.1,
+      "end": 10.78,
+      "speaker": "CUSTOMER",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 10.1,
+          "end": 10.78,
+          "probability": 0.42046499252319336
+        }
+      ]
+    },
+    {
+      "start": 11.48,
+      "end": 15.06,
+      "speaker": "AGENT",
+      "text": " Ya, mau dibayar jam berapa, mas Peberian? Kenyamannya?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 11.48,
+          "end": 11.82,
+          "probability": 0.7320846915245056
+        },
+        {
+          "word": " mau",
+          "start": 11.94,
+          "end": 12.06,
+          "probability": 0.9747453927993774
+        },
+        {
+          "word": " dibayar",
+          "start": 12.06,
+          "end": 12.54,
+          "probability": 0.9413875540097555
+        },
+        {
+          "word": " jam",
+          "start": 12.54,
+          "end": 12.78,
+          "probability": 0.9830536246299744
+        },
+        {
+          "word": " berapa,",
+          "start": 12.78,
+          "end": 13.14,
+          "probability": 0.9887872040271759
+        },
+        {
+          "word": " mas",
+          "start": 13.42,
+          "end": 13.84,
+          "probability": 0.39703720808029175
+        },
+        {
+          "word": " Peberian?",
+          "start": 13.84,
+          "end": 14.4,
+          "probability": 0.9582747022310892
+        },
+        {
+          "word": " Kenyamannya?",
+          "start": 14.54,
+          "end": 15.06,
+          "probability": 0.7020282670855522
+        }
+      ]
+    },
+    {
+      "start": 15.940000000000001,
+      "end": 16.88,
+      "speaker": "AGENT",
+      "text": " Apa ini?",
+      "words": [
+        {
+          "word": " Apa",
+          "start": 15.940000000000001,
+          "end": 16.62,
+          "probability": 0.9467542171478271
+        },
+        {
+          "word": " ini?",
+          "start": 16.62,
+          "end": 16.88,
+          "probability": 0.9882398843765259
+        }
+      ]
+    },
+    {
+      "start": 17.94,
+      "end": 21.82,
+      "speaker": "CUSTOMER",
+      "text": " Oh, ya, ya, ya, gimana mas?",
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 17.94,
+          "end": 18.62,
+          "probability": 0.00029545280267484486
+        },
+        {
+          "word": " ya,",
+          "start": 20.78,
+          "end": 20.8,
+          "probability": 0.6530328392982483
+        },
+        {
+          "word": " ya,",
+          "start": 20.94,
+          "end": 21.08,
+          "probability": 0.6067469120025635
+        },
+        {
+          "word": " ya,",
+          "start": 21.08,
+          "end": 21.24,
+          "probability": 0.3724917769432068
+        },
+        {
+          "word": " gimana",
+          "start": 21.24,
+          "end": 21.58,
+          "probability": 0.8898669481277466
+        },
+        {
+          "word": " mas?",
+          "start": 21.58,
+          "end": 21.82,
+          "probability": 0.8517253398895264
+        }
+      ]
+    },
+    {
+      "start": 22.8,
+      "end": 24.24,
+      "speaker": "CUSTOMER",
+      "text": " Ya, mau dibayar jam berapa mas?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 22.8,
+          "end": 23.02,
+          "probability": 0.8588975667953491
+        },
+        {
+          "word": " mau",
+          "start": 23.16,
+          "end": 23.26,
+          "probability": 0.9956206679344177
+        },
+        {
+          "word": " dibayar",
+          "start": 23.26,
+          "end": 23.56,
+          "probability": 0.9947286248207092
+        },
+        {
+          "word": " jam",
+          "start": 23.56,
+          "end": 23.84,
+          "probability": 0.9959937334060669
+        },
+        {
+          "word": " berapa",
+          "start": 23.84,
+          "end": 24.04,
+          "probability": 0.9991934299468994
+        },
+        {
+          "word": " mas?",
+          "start": 24.04,
+          "end": 24.24,
+          "probability": 0.6083536744117737
+        }
+      ]
+    },
+    {
+      "start": 26.22,
+      "end": 28.14,
+      "speaker": "CUSTOMER",
+      "text": " Nanti lah, ini lagi kerja.",
+      "words": [
+        {
+          "word": " Nanti",
+          "start": 26.22,
+          "end": 26.74,
+          "probability": 0.4844523146748543
+        },
+        {
+          "word": " lah,",
+          "start": 26.74,
+          "end": 27.16,
+          "probability": 0.6000508069992065
+        },
+        {
+          "word": " ini",
+          "start": 27.38,
+          "end": 27.56,
+          "probability": 0.9219660758972168
+        },
+        {
+          "word": " lagi",
+          "start": 27.56,
+          "end": 27.72,
+          "probability": 0.9665183424949646
+        },
+        {
+          "word": " kerja.",
+          "start": 27.72,
+          "end": 28.14,
+          "probability": 0.8860001862049103
+        }
+      ]
+    },
+    {
+      "start": 29.18,
+      "end": 31.66,
+      "speaker": "CUSTOMER",
+      "text": " Ya, biasa tidak mengganggu bisa jam berapa.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 29.18,
+          "end": 29.62,
+          "probability": 0.3269171714782715
+        },
+        {
+          "word": " biasa",
+          "start": 29.82,
+          "end": 30.06,
+          "probability": 0.7752867043018341
+        },
+        {
+          "word": " tidak",
+          "start": 30.06,
+          "end": 30.32,
+          "probability": 0.9245225191116333
+        },
+        {
+          "word": " mengganggu",
+          "start": 30.32,
+          "end": 30.9,
+          "probability": 0.988243301709493
+        },
+        {
+          "word": " bisa",
+          "start": 30.9,
+          "end": 31.1,
+          "probability": 0.9361963868141174
+        },
+        {
+          "word": " jam",
+          "start": 31.1,
+          "end": 31.34,
+          "probability": 0.9503413438796997
+        },
+        {
+          "word": " berapa.",
+          "start": 31.34,
+          "end": 31.66,
+          "probability": 0.9503476619720459
+        }
+      ]
+    },
+    {
+      "start": 34.86,
+      "end": 35.9,
+      "speaker": "CUSTOMER",
+      "text": " Hmm, soreng.",
+      "words": [
+        {
+          "word": " Hmm,",
+          "start": 34.86,
+          "end": 35.379999999999995,
+          "probability": 0.05703035742044449
+        },
+        {
+          "word": " soreng.",
+          "start": 35.379999999999995,
+          "end": 35.9,
+          "probability": 0.3564588675896327
+        }
+      ]
+    },
+    {
+      "start": 36.72,
+      "end": 38.0,
+      "speaker": "CUSTOMER",
+      "text": " Oke, jam tiga ya mas?",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 36.72,
+          "end": 37.24,
+          "probability": 0.850841224193573
+        },
+        {
+          "word": " jam",
+          "start": 37.38,
+          "end": 37.5,
+          "probability": 0.9805812835693359
+        },
+        {
+          "word": " tiga",
+          "start": 37.5,
+          "end": 37.68,
+          "probability": 0.6757045686244965
+        },
+        {
+          "word": " ya",
+          "start": 37.68,
+          "end": 37.8,
+          "probability": 0.9529683589935303
+        },
+        {
+          "word": " mas?",
+          "start": 37.8,
+          "end": 38.0,
+          "probability": 0.5342090129852295
+        }
+      ]
+    },
+    {
+      "start": 39.12,
+      "end": 39.44,
+      "speaker": "CUSTOMER",
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 39.12,
+          "end": 39.44,
+          "probability": 0.7363428473472595
+        }
+      ]
+    },
+    {
+      "start": 40.2,
+      "end": 44.18,
+      "speaker": "AGENT",
+      "text": " Oke, baik mas, saya akan di lanjut. Terima kasih, terima kasih.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 40.2,
+          "end": 40.72,
+          "probability": 0.7973803281784058
+        },
+        {
+          "word": " baik",
+          "start": 40.98,
+          "end": 41.14,
+          "probability": 0.9852879047393799
+        },
+        {
+          "word": " mas,",
+          "start": 41.14,
+          "end": 41.4,
+          "probability": 0.6693254113197327
+        },
+        {
+          "word": " saya",
+          "start": 41.98,
+          "end": 42.1,
+          "probability": 0.6893909573554993
+        },
+        {
+          "word": " akan",
+          "start": 42.1,
+          "end": 42.24,
+          "probability": 0.9721731543540955
+        },
+        {
+          "word": " di",
+          "start": 42.24,
+          "end": 42.34,
+          "probability": 0.3382023870944977
+        },
+        {
+          "word": " lanjut.",
+          "start": 42.34,
+          "end": 42.66,
+          "probability": 0.9870043694972992
+        },
+        {
+          "word": " Terima",
+          "start": 43.08,
+          "end": 43.26,
+          "probability": 0.9619896709918976
+        },
+        {
+          "word": " kasih,",
+          "start": 43.26,
+          "end": 43.5,
+          "probability": 0.9551514387130737
+        },
+        {
+          "word": " terima",
+          "start": 43.74,
+          "end": 43.9,
+          "probability": 0.6343919932842255
+        },
+        {
+          "word": " kasih.",
+          "start": 43.9,
+          "end": 44.18,
+          "probability": 0.9624438881874084
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello?  Halo, Peberian.  Halo?  Ya, mau dibayar jam berapa, mas Peberian? Kenyamannya?  Apa ini?  Oh, ya, ya, ya, gimana mas?  Ya, mau dibayar jam berapa mas?  Nanti lah, ini lagi kerja.  Ya, biasa tidak mengganggu bisa jam berapa.  Hmm, soreng.  Oke, jam tiga ya mas?  Ya.  Oke, baik mas, saya akan di lanjut. Terima kasih, terima kasih."
+}

@@ -1,0 +1,47 @@
+{
+  "case_id": "628913063862009-20260416080231",
+  "file_name": "628913063862009-20260416080231.mp3",
+  "transcript": [
+    {
+      "start": 12.319999999999999,
+      "end": 15.12,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 12.319999999999999,
+          "end": 13.719999999999999,
+          "probability": 0.4910379499197006
+        },
+        {
+          "word": " kasih.",
+          "start": 13.719999999999999,
+          "end": 15.12,
+          "probability": 0.9384407997131348
+        }
+      ]
+    },
+    {
+      "start": 15.44,
+      "end": 18.36,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 15.44,
+          "end": 16.74,
+          "probability": 0.574954017996788
+        },
+        {
+          "word": " kasih.",
+          "start": 16.74,
+          "end": 18.36,
+          "probability": 0.9723345041275024
+        }
+      ]
+    }
+  ],
+  "full_text": " Terima kasih.  Terima kasih."
+}

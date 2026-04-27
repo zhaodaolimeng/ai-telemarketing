@@ -1,0 +1,253 @@
+{
+  "case_id": "6285210394876109-20260423073646",
+  "file_name": "6285210394876109-20260423073646.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 1.0,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 0.0,
+          "end": 1.0,
+          "probability": 0.3880065679550171
+        }
+      ]
+    },
+    {
+      "start": 1.9200000000000004,
+      "end": 3.56,
+      "speaker": "AGENT",
+      "text": " Halo, Selamat pagi Pak.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 1.9200000000000004,
+          "end": 2.6,
+          "probability": 0.5377257466316223
+        },
+        {
+          "word": " Selamat",
+          "start": 2.72,
+          "end": 2.98,
+          "probability": 0.6876010149717331
+        },
+        {
+          "word": " pagi",
+          "start": 2.98,
+          "end": 3.32,
+          "probability": 0.9709845185279846
+        },
+        {
+          "word": " Pak.",
+          "start": 3.32,
+          "end": 3.56,
+          "probability": 0.4542536735534668
+        }
+      ]
+    },
+    {
+      "start": 6.0,
+      "end": 10.48,
+      "speaker": "CUSTOMER",
+      "text": " Iya, Bapak ini saya dari tim penagi pinjaman online extra pinjam pro.",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 5.760000000000001,
+          "end": 6.1000000000000005,
+          "probability": 0.4979800879955292
+        },
+        {
+          "word": " Bapak",
+          "start": 6.1000000000000005,
+          "end": 6.78,
+          "probability": 0.7967958847681681
+        },
+        {
+          "word": " ini",
+          "start": 6.78,
+          "end": 6.96,
+          "probability": 0.9479542374610901
+        },
+        {
+          "word": " saya",
+          "start": 6.96,
+          "end": 7.18,
+          "probability": 0.962694525718689
+        },
+        {
+          "word": " dari",
+          "start": 7.18,
+          "end": 7.48,
+          "probability": 0.9937664270401001
+        },
+        {
+          "word": " tim",
+          "start": 7.48,
+          "end": 7.86,
+          "probability": 0.31373798847198486
+        },
+        {
+          "word": " penagi",
+          "start": 7.86,
+          "end": 8.18,
+          "probability": 0.7413345277309418
+        },
+        {
+          "word": " pinjaman",
+          "start": 8.18,
+          "end": 8.7,
+          "probability": 0.8707386255264282
+        },
+        {
+          "word": " online",
+          "start": 8.7,
+          "end": 9.1,
+          "probability": 0.7619422078132629
+        },
+        {
+          "word": " extra",
+          "start": 9.1,
+          "end": 9.66,
+          "probability": 0.8128423690795898
+        },
+        {
+          "word": " pinjam",
+          "start": 9.66,
+          "end": 10.2,
+          "probability": 0.8525302708148956
+        },
+        {
+          "word": " pro.",
+          "start": 10.2,
+          "end": 10.48,
+          "probability": 0.48263019323349
+        }
+      ]
+    },
+    {
+      "start": 10.94,
+      "end": 12.84,
+      "speaker": "AGENT",
+      "text": " Jadi ini bisa dibayarkan jam berapa Pak?",
+      "words": [
+        {
+          "word": " Jadi",
+          "start": 10.94,
+          "end": 11.24,
+          "probability": 0.19456759095191956
+        },
+        {
+          "word": " ini",
+          "start": 11.24,
+          "end": 11.44,
+          "probability": 0.8368286490440369
+        },
+        {
+          "word": " bisa",
+          "start": 11.44,
+          "end": 11.68,
+          "probability": 0.9721883535385132
+        },
+        {
+          "word": " dibayarkan",
+          "start": 11.68,
+          "end": 12.08,
+          "probability": 0.8898875117301941
+        },
+        {
+          "word": " jam",
+          "start": 12.08,
+          "end": 12.36,
+          "probability": 0.9874147772789001
+        },
+        {
+          "word": " berapa",
+          "start": 12.36,
+          "end": 12.64,
+          "probability": 0.9105947315692902
+        },
+        {
+          "word": " Pak?",
+          "start": 12.64,
+          "end": 12.84,
+          "probability": 0.7665443420410156
+        }
+      ]
+    },
+    {
+      "start": 17.0,
+      "end": 17.74,
+      "speaker": "AGENT",
+      "text": " Jam berapa?",
+      "words": [
+        {
+          "word": " Jam",
+          "start": 16.72,
+          "end": 17.06,
+          "probability": 0.2602119743824005
+        },
+        {
+          "word": " berapa?",
+          "start": 17.06,
+          "end": 17.74,
+          "probability": 0.82093146443367
+        }
+      ]
+    },
+    {
+      "start": 21.080000000000002,
+      "end": 23.48,
+      "speaker": "CUSTOMER",
+      "text": " Bapak yang keras suaranya itu tidak terdemar.",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 21.080000000000002,
+          "end": 21.76,
+          "probability": 0.8245167930920919
+        },
+        {
+          "word": " yang",
+          "start": 21.76,
+          "end": 21.88,
+          "probability": 0.9843621253967285
+        },
+        {
+          "word": " keras",
+          "start": 21.88,
+          "end": 22.14,
+          "probability": 0.7321518361568451
+        },
+        {
+          "word": " suaranya",
+          "start": 22.14,
+          "end": 22.54,
+          "probability": 0.7478636801242828
+        },
+        {
+          "word": " itu",
+          "start": 22.54,
+          "end": 22.78,
+          "probability": 0.9400463700294495
+        },
+        {
+          "word": " tidak",
+          "start": 22.78,
+          "end": 22.96,
+          "probability": 0.9943332672119141
+        },
+        {
+          "word": " terdemar.",
+          "start": 22.96,
+          "end": 23.48,
+          "probability": 0.7751143078009287
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo?  Halo, Selamat pagi Pak.  Iya, Bapak ini saya dari tim penagi pinjaman online extra pinjam pro.  Jadi ini bisa dibayarkan jam berapa Pak?  Jam berapa?  Bapak yang keras suaranya itu tidak terdemar."
+}

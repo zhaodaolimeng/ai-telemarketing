@@ -1,0 +1,288 @@
+{
+  "case_id": "6281312183424909-20260401130929",
+  "file_name": "6281312183424909-20260401130929.mp3",
+  "transcript": [
+    {
+      "start": 2.620000000000002,
+      "end": 11.94,
+      "text": " Halo Pak, ini mana pembayarannya? Desi yang cepat dong bayarkan. Anda di jalan bisa berhenti dulu ke brilling, isi saldo. Bayar di brilling juga itu.",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 2.620000000000002,
+          "end": 3.2,
+          "probability": 0.26172882318496704
+        },
+        {
+          "word": " Pak,",
+          "start": 3.2,
+          "end": 3.44,
+          "probability": 0.47636616230010986
+        },
+        {
+          "word": " ini",
+          "start": 3.64,
+          "end": 3.74,
+          "probability": 0.7935370802879333
+        },
+        {
+          "word": " mana",
+          "start": 3.74,
+          "end": 3.96,
+          "probability": 0.9895301461219788
+        },
+        {
+          "word": " pembayarannya?",
+          "start": 3.96,
+          "end": 4.8,
+          "probability": 0.8762555956840515
+        },
+        {
+          "word": " Desi",
+          "start": 5.1,
+          "end": 5.44,
+          "probability": 0.6811299175024033
+        },
+        {
+          "word": " yang",
+          "start": 5.44,
+          "end": 5.6,
+          "probability": 0.9753731489181519
+        },
+        {
+          "word": " cepat",
+          "start": 5.6,
+          "end": 5.96,
+          "probability": 0.987849086523056
+        },
+        {
+          "word": " dong",
+          "start": 5.96,
+          "end": 6.18,
+          "probability": 0.9478291273117065
+        },
+        {
+          "word": " bayarkan.",
+          "start": 6.18,
+          "end": 6.74,
+          "probability": 0.9286753237247467
+        },
+        {
+          "word": " Anda",
+          "start": 7.24,
+          "end": 7.68,
+          "probability": 0.9696093201637268
+        },
+        {
+          "word": " di",
+          "start": 7.68,
+          "end": 7.88,
+          "probability": 0.9383808970451355
+        },
+        {
+          "word": " jalan",
+          "start": 7.88,
+          "end": 8.12,
+          "probability": 0.9052281677722931
+        },
+        {
+          "word": " bisa",
+          "start": 8.12,
+          "end": 8.38,
+          "probability": 0.9836529493331909
+        },
+        {
+          "word": " berhenti",
+          "start": 8.38,
+          "end": 8.78,
+          "probability": 0.9301014145215353
+        },
+        {
+          "word": " dulu",
+          "start": 8.78,
+          "end": 9.04,
+          "probability": 0.9954221844673157
+        },
+        {
+          "word": " ke",
+          "start": 9.04,
+          "end": 9.22,
+          "probability": 0.9916866421699524
+        },
+        {
+          "word": " brilling,",
+          "start": 9.22,
+          "end": 9.72,
+          "probability": 0.3821250610053539
+        },
+        {
+          "word": " isi",
+          "start": 10.02,
+          "end": 10.14,
+          "probability": 0.6662483513355255
+        },
+        {
+          "word": " saldo.",
+          "start": 10.14,
+          "end": 10.64,
+          "probability": 0.6864810585975647
+        },
+        {
+          "word": " Bayar",
+          "start": 10.88,
+          "end": 11.16,
+          "probability": 0.8587027192115784
+        },
+        {
+          "word": " di",
+          "start": 11.16,
+          "end": 11.32,
+          "probability": 0.9551213979721069
+        },
+        {
+          "word": " brilling",
+          "start": 11.32,
+          "end": 11.66,
+          "probability": 0.8638518154621124
+        },
+        {
+          "word": " juga",
+          "start": 11.66,
+          "end": 11.9,
+          "probability": 0.8129351735115051
+        },
+        {
+          "word": " itu.",
+          "start": 11.9,
+          "end": 11.94,
+          "probability": 0.042416829615831375
+        }
+      ]
+    },
+    {
+      "start": 11.94,
+      "end": 12.96,
+      "text": " Ini dia emosi saldo.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 11.94,
+          "end": 12.1,
+          "probability": 0.35126325488090515
+        },
+        {
+          "word": " dia",
+          "start": 12.1,
+          "end": 12.36,
+          "probability": 0.25676989555358887
+        },
+        {
+          "word": " emosi",
+          "start": 12.36,
+          "end": 12.62,
+          "probability": 0.9513278007507324
+        },
+        {
+          "word": " saldo.",
+          "start": 12.62,
+          "end": 12.96,
+          "probability": 0.9134659469127655
+        }
+      ]
+    },
+    {
+      "start": 14.0,
+      "end": 16.4,
+      "text": " Ya udah cepat ini berapa menikah gini?",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 14.0,
+          "end": 14.54,
+          "probability": 0.5044625401496887
+        },
+        {
+          "word": " udah",
+          "start": 14.54,
+          "end": 14.72,
+          "probability": 0.540825605392456
+        },
+        {
+          "word": " cepat",
+          "start": 14.72,
+          "end": 15.22,
+          "probability": 0.9742493629455566
+        },
+        {
+          "word": " ini",
+          "start": 15.22,
+          "end": 15.38,
+          "probability": 0.6565892696380615
+        },
+        {
+          "word": " berapa",
+          "start": 15.38,
+          "end": 15.74,
+          "probability": 0.9555718302726746
+        },
+        {
+          "word": " menikah",
+          "start": 15.74,
+          "end": 16.16,
+          "probability": 0.4959147696693738
+        },
+        {
+          "word": " gini?",
+          "start": 16.16,
+          "end": 16.4,
+          "probability": 0.6393359899520874
+        }
+      ]
+    },
+    {
+      "start": 16.76,
+      "end": 18.66,
+      "text": " Ya emosi saldo nih.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 16.76,
+          "end": 17.02,
+          "probability": 0.5379785895347595
+        },
+        {
+          "word": " emosi",
+          "start": 17.02,
+          "end": 18.12,
+          "probability": 0.6749849617481232
+        },
+        {
+          "word": " saldo",
+          "start": 18.12,
+          "end": 18.5,
+          "probability": 0.8265015780925751
+        },
+        {
+          "word": " nih.",
+          "start": 18.5,
+          "end": 18.66,
+          "probability": 0.47609585523605347
+        }
+      ]
+    },
+    {
+      "start": 19.56,
+      "end": 20.08,
+      "text": " Oke.",
+      "words": [
+        {
+          "word": " Oke.",
+          "start": 19.56,
+          "end": 20.08,
+          "probability": 0.8787485361099243
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo Pak, ini mana pembayarannya? Desi yang cepat dong bayarkan. Anda di jalan bisa berhenti dulu ke brilling, isi saldo. Bayar di brilling juga itu.  Ini dia emosi saldo.  Ya udah cepat ini berapa menikah gini?  Ya emosi saldo nih.  Oke."
+}

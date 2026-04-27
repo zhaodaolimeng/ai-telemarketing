@@ -1,0 +1,575 @@
+{
+  "case_id": "628523826785708-20260423081932",
+  "file_name": "628523826785708-20260423081932.mp3",
+  "transcript": [
+    {
+      "start": 7.659999999999998,
+      "end": 8.26,
+      "speaker": "AGENT",
+      "text": " kalau misalnya Ibu sampai jam 1 belum ada pembayaran nanti datangnya disebar, jadi usahakan di jam 10",
+      "words": [
+        {
+          "word": " kalau",
+          "start": 7.659999999999998,
+          "end": 8.26,
+          "probability": 0.02451004832983017
+        },
+        {
+          "word": " misalnya",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.6371590942144394
+        },
+        {
+          "word": " Ibu",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.5268030390143394
+        },
+        {
+          "word": " sampai",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.7080907225608826
+        },
+        {
+          "word": " jam",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.8075768947601318
+        },
+        {
+          "word": " 1",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.6840832829475403
+        },
+        {
+          "word": " belum",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.7398334741592407
+        },
+        {
+          "word": " ada",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.9921588897705078
+        },
+        {
+          "word": " pembayaran",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.8596319183707237
+        },
+        {
+          "word": " nanti",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.7662329077720642
+        },
+        {
+          "word": " datangnya",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.7663695017496744
+        },
+        {
+          "word": " disebar,",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.8647614419460297
+        },
+        {
+          "word": " jadi",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.9797031283378601
+        },
+        {
+          "word": " usahakan",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.7211028536160787
+        },
+        {
+          "word": " di",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.9000752568244934
+        },
+        {
+          "word": " jam",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.986820638179779
+        },
+        {
+          "word": " 10",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.8807946443557739
+        }
+      ]
+    },
+    {
+      "start": 8.26,
+      "end": 13.78,
+      "speaker": "CUSTOMER",
+      "text": " ya, saya dengan piharapu dari aplikasi CSTRA, tagiannya hari ini dibayarkan ya,",
+      "words": [
+        {
+          "word": " ya,",
+          "start": 8.26,
+          "end": 8.26,
+          "probability": 0.007332225795835257
+        },
+        {
+          "word": " saya",
+          "start": 8.38,
+          "end": 8.38,
+          "probability": 0.021167367696762085
+        },
+        {
+          "word": " dengan",
+          "start": 8.38,
+          "end": 9.32,
+          "probability": 0.27591603994369507
+        },
+        {
+          "word": " piharapu",
+          "start": 9.32,
+          "end": 10.1,
+          "probability": 0.5743643417954445
+        },
+        {
+          "word": " dari",
+          "start": 10.1,
+          "end": 10.34,
+          "probability": 0.9659900069236755
+        },
+        {
+          "word": " aplikasi",
+          "start": 10.34,
+          "end": 10.88,
+          "probability": 0.9044942657152811
+        },
+        {
+          "word": " CSTRA,",
+          "start": 10.88,
+          "end": 11.5,
+          "probability": 0.42780094345410663
+        },
+        {
+          "word": " tagiannya",
+          "start": 11.8,
+          "end": 12.54,
+          "probability": 0.5012054393688837
+        },
+        {
+          "word": " hari",
+          "start": 12.54,
+          "end": 12.76,
+          "probability": 0.9666124582290649
+        },
+        {
+          "word": " ini",
+          "start": 12.76,
+          "end": 12.94,
+          "probability": 0.9921539425849915
+        },
+        {
+          "word": " dibayarkan",
+          "start": 12.94,
+          "end": 13.52,
+          "probability": 0.9418336153030396
+        },
+        {
+          "word": " ya,",
+          "start": 13.52,
+          "end": 13.78,
+          "probability": 0.5831580758094788
+        }
+      ]
+    },
+    {
+      "start": 13.86,
+      "end": 17.86,
+      "speaker": "CUSTOMER",
+      "text": " punya masing-mang di jam 10 atau nggak di jam 11 yang bisa evo",
+      "words": [
+        {
+          "word": " punya",
+          "start": 13.86,
+          "end": 14.02,
+          "probability": 0.05163262039422989
+        },
+        {
+          "word": " masing",
+          "start": 14.02,
+          "end": 14.5,
+          "probability": 0.4949900954961777
+        },
+        {
+          "word": "-mang",
+          "start": 14.5,
+          "end": 14.6,
+          "probability": 0.7092535595099131
+        },
+        {
+          "word": " di",
+          "start": 14.6,
+          "end": 14.84,
+          "probability": 0.4002822935581207
+        },
+        {
+          "word": " jam",
+          "start": 14.84,
+          "end": 15.0,
+          "probability": 0.9950798749923706
+        },
+        {
+          "word": " 10",
+          "start": 15.0,
+          "end": 15.44,
+          "probability": 0.99013352394104
+        },
+        {
+          "word": " atau",
+          "start": 15.44,
+          "end": 16.08,
+          "probability": 0.5040261745452881
+        },
+        {
+          "word": " nggak",
+          "start": 16.08,
+          "end": 16.32,
+          "probability": 0.5909652709960938
+        },
+        {
+          "word": " di",
+          "start": 16.32,
+          "end": 16.4,
+          "probability": 0.8866928219795227
+        },
+        {
+          "word": " jam",
+          "start": 16.4,
+          "end": 16.58,
+          "probability": 0.8734398484230042
+        },
+        {
+          "word": " 11",
+          "start": 16.58,
+          "end": 16.88,
+          "probability": 0.9657058715820312
+        },
+        {
+          "word": " yang",
+          "start": 16.88,
+          "end": 17.18,
+          "probability": 0.4473320245742798
+        },
+        {
+          "word": " bisa",
+          "start": 17.18,
+          "end": 17.46,
+          "probability": 0.9695432186126709
+        },
+        {
+          "word": " evo",
+          "start": 17.46,
+          "end": 17.86,
+          "probability": 0.4235551431775093
+        }
+      ]
+    },
+    {
+      "start": 19.819999999999997,
+      "end": 23.72,
+      "speaker": "AGENT",
+      "text": " untuk kalau ada virtualakan wajib ambil dari aplikasi",
+      "words": [
+        {
+          "word": " untuk",
+          "start": 19.819999999999997,
+          "end": 20.419999999999998,
+          "probability": 0.13666294515132904
+        },
+        {
+          "word": " kalau",
+          "start": 20.419999999999998,
+          "end": 21.02,
+          "probability": 0.7185088396072388
+        },
+        {
+          "word": " ada",
+          "start": 21.02,
+          "end": 21.18,
+          "probability": 0.9898098707199097
+        },
+        {
+          "word": " virtualakan",
+          "start": 21.18,
+          "end": 21.88,
+          "probability": 0.37082475423812866
+        },
+        {
+          "word": " wajib",
+          "start": 21.88,
+          "end": 22.38,
+          "probability": 0.8921676675478617
+        },
+        {
+          "word": " ambil",
+          "start": 22.38,
+          "end": 22.68,
+          "probability": 0.8669645488262177
+        },
+        {
+          "word": " dari",
+          "start": 22.68,
+          "end": 22.94,
+          "probability": 0.9903291463851929
+        },
+        {
+          "word": " aplikasi",
+          "start": 22.94,
+          "end": 23.72,
+          "probability": 0.9960062305132548
+        }
+      ]
+    },
+    {
+      "start": 23.72,
+      "end": 28.38,
+      "speaker": "AGENT",
+      "text": " kalau misalnya Ibu sampai jam 1 belum ada pembayaran nanti datangnya disebar",
+      "words": [
+        {
+          "word": " kalau",
+          "start": 23.72,
+          "end": 24.6,
+          "probability": 0.5401795506477356
+        },
+        {
+          "word": " misalnya",
+          "start": 24.6,
+          "end": 25.0,
+          "probability": 0.9899060130119324
+        },
+        {
+          "word": " Ibu",
+          "start": 25.0,
+          "end": 25.3,
+          "probability": 0.9417811036109924
+        },
+        {
+          "word": " sampai",
+          "start": 25.3,
+          "end": 25.58,
+          "probability": 0.9747312068939209
+        },
+        {
+          "word": " jam",
+          "start": 25.58,
+          "end": 25.8,
+          "probability": 0.9920143485069275
+        },
+        {
+          "word": " 1",
+          "start": 25.8,
+          "end": 26.16,
+          "probability": 0.9747562408447266
+        },
+        {
+          "word": " belum",
+          "start": 26.16,
+          "end": 26.4,
+          "probability": 0.815356969833374
+        },
+        {
+          "word": " ada",
+          "start": 26.4,
+          "end": 26.7,
+          "probability": 0.997597873210907
+        },
+        {
+          "word": " pembayaran",
+          "start": 26.7,
+          "end": 27.22,
+          "probability": 0.9799247831106186
+        },
+        {
+          "word": " nanti",
+          "start": 27.22,
+          "end": 27.54,
+          "probability": 0.896634429693222
+        },
+        {
+          "word": " datangnya",
+          "start": 27.54,
+          "end": 27.98,
+          "probability": 0.8381471236546835
+        },
+        {
+          "word": " disebar",
+          "start": 27.98,
+          "end": 28.38,
+          "probability": 0.948614239692688
+        }
+      ]
+    },
+    {
+      "start": 28.38,
+      "end": 32.44,
+      "speaker": "CUSTOMER",
+      "text": " jadi usahakan di jam 10 atau nggak jam 11 sudah di jam 10",
+      "words": [
+        {
+          "word": " jadi",
+          "start": 28.38,
+          "end": 28.66,
+          "probability": 0.32753676176071167
+        },
+        {
+          "word": " usahakan",
+          "start": 28.66,
+          "end": 29.28,
+          "probability": 0.6007948418458303
+        },
+        {
+          "word": " di",
+          "start": 29.28,
+          "end": 29.48,
+          "probability": 0.9166306853294373
+        },
+        {
+          "word": " jam",
+          "start": 29.48,
+          "end": 29.6,
+          "probability": 0.9811539053916931
+        },
+        {
+          "word": " 10",
+          "start": 29.6,
+          "end": 29.94,
+          "probability": 0.8957503437995911
+        },
+        {
+          "word": " atau",
+          "start": 29.94,
+          "end": 30.18,
+          "probability": 0.8947580456733704
+        },
+        {
+          "word": " nggak",
+          "start": 30.18,
+          "end": 30.38,
+          "probability": 0.20488405227661133
+        },
+        {
+          "word": " jam",
+          "start": 30.38,
+          "end": 30.62,
+          "probability": 0.9380221962928772
+        },
+        {
+          "word": " 11",
+          "start": 30.62,
+          "end": 30.88,
+          "probability": 0.9343920946121216
+        },
+        {
+          "word": " sudah",
+          "start": 30.88,
+          "end": 31.24,
+          "probability": 0.28223228454589844
+        },
+        {
+          "word": " di",
+          "start": 31.24,
+          "end": 31.56,
+          "probability": 0.05342572182416916
+        },
+        {
+          "word": " jam",
+          "start": 31.56,
+          "end": 31.84,
+          "probability": 0.0054252189584076405
+        },
+        {
+          "word": " 10",
+          "start": 31.84,
+          "end": 32.44,
+          "probability": 0.3634880483150482
+        }
+      ]
+    },
+    {
+      "start": 32.44,
+      "end": 33.02,
+      "speaker": "CUSTOMER",
+      "text": " ya",
+      "words": [
+        {
+          "word": " ya",
+          "start": 32.44,
+          "end": 33.02,
+          "probability": 0.02492089942097664
+        }
+      ]
+    },
+    {
+      "start": 34.099999999999994,
+      "end": 37.2,
+      "speaker": "CUSTOMER",
+      "text": " oke, udah saya tunggu pembayarannya, Selamat pagi",
+      "words": [
+        {
+          "word": " oke,",
+          "start": 34.099999999999994,
+          "end": 34.66,
+          "probability": 0.22284676134586334
+        },
+        {
+          "word": " udah",
+          "start": 34.9,
+          "end": 35.04,
+          "probability": 0.6631613373756409
+        },
+        {
+          "word": " saya",
+          "start": 35.04,
+          "end": 35.22,
+          "probability": 0.9631006121635437
+        },
+        {
+          "word": " tunggu",
+          "start": 35.22,
+          "end": 35.52,
+          "probability": 0.9617133438587189
+        },
+        {
+          "word": " pembayarannya,",
+          "start": 35.52,
+          "end": 36.24,
+          "probability": 0.7618354212492704
+        },
+        {
+          "word": " Selamat",
+          "start": 36.44,
+          "end": 36.66,
+          "probability": 0.8198607563972473
+        },
+        {
+          "word": " pagi",
+          "start": 36.66,
+          "end": 37.2,
+          "probability": 0.8839391767978668
+        }
+      ]
+    }
+  ],
+  "full_text": " kalau misalnya Ibu sampai jam 1 belum ada pembayaran nanti datangnya disebar, jadi usahakan di jam 10  ya, saya dengan piharapu dari aplikasi CSTRA, tagiannya hari ini dibayarkan ya,  punya masing-mang di jam 10 atau nggak di jam 11 yang bisa evo  untuk kalau ada virtualakan wajib ambil dari aplikasi  kalau misalnya Ibu sampai jam 1 belum ada pembayaran nanti datangnya disebar  jadi usahakan di jam 10 atau nggak jam 11 sudah di jam 10  ya  oke, udah saya tunggu pembayarannya, Selamat pagi"
+}

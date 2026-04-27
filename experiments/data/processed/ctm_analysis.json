@@ -1,0 +1,110 @@
+{
+  "ctm_stats": {
+    "CTM-014": {
+      "success": 7,
+      "failed": 13,
+      "total": 20,
+      "success_rate": 0.35
+    },
+    "CTM-044": {
+      "success": 2,
+      "failed": 9,
+      "total": 11,
+      "success_rate": 0.18181818181818182
+    },
+    "CTM-040": {
+      "success": 43,
+      "failed": 15,
+      "total": 58,
+      "success_rate": 0.7413793103448276
+    },
+    "CTM-070": {
+      "success": 20,
+      "failed": 10,
+      "total": 30,
+      "success_rate": 0.6666666666666666
+    },
+    "CTM-088": {
+      "success": 1,
+      "failed": 3,
+      "total": 4,
+      "success_rate": 0.25
+    },
+    "CTM-039": {
+      "success": 30,
+      "failed": 4,
+      "total": 34,
+      "success_rate": 0.8823529411764706
+    },
+    "CTM-077": {
+      "success": 13,
+      "failed": 17,
+      "total": 30,
+      "success_rate": 0.43333333333333335
+    },
+    "CTM-022": {
+      "success": 10,
+      "failed": 9,
+      "total": 19,
+      "success_rate": 0.5263157894736842
+    },
+    "CTM-076": {
+      "success": 5,
+      "failed": 8,
+      "total": 13,
+      "success_rate": 0.38461538461538464
+    },
+    "CTM-087": {
+      "success": 2,
+      "failed": 0,
+      "total": 2,
+      "success_rate": 1.0
+    },
+    "CTM-049": {
+      "success": 0,
+      "failed": 2,
+      "total": 2,
+      "success_rate": 0.0
+    },
+    "CTM-020": {
+      "success": 3,
+      "failed": 3,
+      "total": 6,
+      "success_rate": 0.5
+    },
+    "CTM-053": {
+      "success": 1,
+      "failed": 1,
+      "total": 2,
+      "success_rate": 0.5
+    },
+    "CTM-011": {
+      "success": 3,
+      "failed": 0,
+      "total": 3,
+      "success_rate": 1.0
+    },
+    "CTM-073": {
+      "success": 3,
+      "failed": 4,
+      "total": 7,
+      "success_rate": 0.42857142857142855
+    },
+    "CTM-033": {
+      "success": 1,
+      "failed": 0,
+      "total": 1,
+      "success_rate": 1.0
+    }
+  },
+  "high_success_ctms": [
+    "CTM-040",
+    "CTM-039"
+  ],
+  "low_success_ctms": [
+    "CTM-077",
+    "CTM-014",
+    "CTM-076",
+    "CTM-044"
+  ]
+}

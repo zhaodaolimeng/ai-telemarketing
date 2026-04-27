@@ -1,0 +1,27 @@
+{
+  "case_id": "628214154037408-20260412091803",
+  "file_name": "628214154037408-20260412091803.mp3",
+  "transcript": [
+    {
+      "start": 14.54,
+      "end": 16.42,
+      "speaker": "CUSTOMER",
+      "text": " Selamat tinggal.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 14.54,
+          "end": 15.94,
+          "probability": 0.5023197485134006
+        },
+        {
+          "word": " tinggal.",
+          "start": 15.94,
+          "end": 16.42,
+          "probability": 0.7187505215406418
+        }
+      ]
+    }
+  ],
+  "full_text": " Selamat tinggal."
+}

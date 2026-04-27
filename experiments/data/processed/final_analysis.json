@@ -1,0 +1,288 @@
+{
+  "success_count": 49,
+  "failed_count": 24,
+  "success_keywords": {
+    "ya": 153,
+    "saya": 83,
+    "halo": 69,
+    "pak": 64,
+    "ini": 63,
+    "iya": 60,
+    "bapak": 46,
+    "oke": 42,
+    "ibu": 41,
+    "": 38,
+    "jam": 37,
+    "udah": 28,
+    "dari": 26,
+    "selamat": 25,
+    "bu": 25,
+    "bisa": 23,
+    "terima": 23,
+    "kasih": 22,
+    "ada": 22,
+    "bayar": 22,
+    "ekstra": 21,
+    "lagi": 21,
+    "dengan": 21,
+    "nanti": 21,
+    "yang": 20,
+    "kan": 20,
+    "berapa": 20,
+    "mau": 20,
+    "itu": 20,
+    "tunggu": 19
+  },
+  "failed_keywords": {
+    "ya": 59,
+    "saya": 43,
+    "pak": 42,
+    "ini": 36,
+    "halo": 29,
+    "iya": 29,
+    "jam": 27,
+    "dari": 18,
+    "bapak": 18,
+    "aplikasi": 17,
+    "ibu": 17,
+    "lagi": 16,
+    "bisa": 16,
+    "dibayar": 14,
+    "pagi": 13,
+    "apa": 13,
+    "selamat": 12,
+    "ada": 11,
+    "ekstra": 10,
+    "kan": 10,
+    "bukan": 10,
+    "hari": 9,
+    "oke": 9,
+    "kasih": 9,
+    "uang": 9,
+    "sama": 9,
+    "sudah": 9,
+    "itu": 9,
+    "hello": 9,
+    "nanti": 8
+  },
+  "diff_words": [
+    [
+      "",
+      0.7755102040816326,
+      38,
+      0
+    ],
+    [
+      "ya",
+      0.6641156462585034,
+      153,
+      59
+    ],
+    [
+      "oke",
+      0.4821428571428571,
+      42,
+      9
+    ],
+    [
+      "pak",
+      -0.44387755102040827,
+      64,
+      42
+    ],
+    [
+      "dibayar",
+      -0.42006802721088443,
+      8,
+      14
+    ],
+    [
+      "udah",
+      0.40476190476190477,
+      28,
+      4
+    ],
+    [
+      "bu",
+      0.3852040816326531,
+      25,
+      3
+    ],
+    [
+      "aplikasi",
+      -0.38180272108843544,
+      16,
+      17
+    ],
+    [
+      "jam",
+      -0.3698979591836735,
+      37,
+      27
+    ],
+    [
+      "tunggu",
+      0.34608843537414963,
+      19,
+      1
+    ],
+    [
+      "bukan",
+      -0.31462585034013607,
+      5,
+      10
+    ],
+    [
+      "aman",
+      -0.2925170068027211,
+      2,
+      8
+    ],
+    [
+      "alamakalem",
+      -0.2916666666666667,
+      0,
+      7
+    ],
+    [
+      "apa",
+      -0.25595238095238093,
+      14,
+      13
+    ],
+    [
+      "untuk",
+      -0.25085034013605445,
+      2,
+      7
+    ],
+    [
+      "waktu",
+      -0.25,
+      0,
+      6
+    ],
+    [
+      "yang",
+      0.2414965986394558,
+      20,
+      4
+    ],
+    [
+      "lagi",
+      -0.23809523809523808,
+      21,
+      16
+    ],
+    [
+      "hari",
+      -0.23214285714285715,
+      7,
+      9
+    ],
+    [
+      "nggak",
+      -0.2312925170068027,
+      5,
+      8
+    ]
+  ],
+  "success_patterns": [
+    [
+      "否定表达",
+      4
+    ],
+    [
+      "确认用语",
+      3
+    ],
+    [
+      "约定时间 + 礼貌问候 + 提及应用",
+      3
+    ],
+    [
+      "约定时间 + 确认用语 + 提及应用",
+      2
+    ],
+    [
+      "约定时间 + 确认用语",
+      2
+    ],
+    [
+      "提及应用",
+      2
+    ],
+    [
+      "礼貌问候",
+      2
+    ],
+    [
+      "约定时间 + 提及应用 + 状态描述",
+      2
+    ],
+    [
+      "约定时间 + 确认用语 + 否定表达 + 提及应用",
+      2
+    ],
+    [
+      "约定时间 + 确认用语 + 礼貌问候 + 提及应用",
+      2
+    ]
+  ],
+  "failed_patterns": [
+    [
+      "约定时间 + 提及应用",
+      3
+    ],
+    [
+      "礼貌问候 + 提及应用",
+      2
+    ],
+    [
+      "提及应用",
+      2
+    ],
+    [
+      "约定时间 + 确认用语 + 否定表达 + 礼貌问候 + 提及应用",
+      1
+    ],
+    [
+      "约定时间 + 确认用语 + 礼貌问候",
+      1
+    ],
+    [
+      "约定时间 + 确认用语",
+      1
+    ],
+    [
+      "约定时间 + 礼貌问候 + 提及应用",
+      1
+    ],
+    [
+      "约定时间 + 确认用语 + 提及应用",
+      1
+    ],
+    [
+      "约定时间 + 确认用语 + 否定表达 + 提及应用 + 状态描述",
+      1
+    ],
+    [
+      "否定表达 + 状态描述",
+      1
+    ]
+  ],
+  "success_samples": [
+    " Halo Selamat Sore Pak  Sore  Ya Pak Rilan tau kurba dari uang sama ekstra  Oh ingatnya lagi belum lupa jam 5 sudah dibayar ya Pak  Siap siap  Aksi kerja makanya Bu  Ya  Bagaimana?  Aksi kerja belum bisa keluar  Oke jam 5 maksimal ya Pak, terang kerja samannya ya  Pasti hari ini pasti saya kelimlah  Ya jam 5 Pak, saya komitmen awal  Baik saya tunggu ya  Oke terima kasih, sama Sore",
+    " Hello sama Sia?  Ya dengan Bapak Will Petri Dawus.  Ya benar-benar ini, kenapa?  Ya, saya dari api-festi ekstra, pinjam, ropa.  Ya.  Di jam 8 malam yang apa, saya tukung bayarannya.  Terima kasih.  Terima kasih sama Sia.",
+    " Halo, sama Tia?  Halo?  Iya?  Iya, dengan bapak WIWP dulu siapa ya?  Iya, iya.  Tapi apikasi ekstra pinjam probari, jaman-jaman malamnya apa?  Saya tunggu pukmar airannya.  Oke, siap, siap.  Terima kasih, sama Tia.",
+    " Hello, sorry.  Hello?  Ya, dengan Papa will produce.  Ya.  Ya, digamawan malam, ya kan?  Ya.  Karena ini dia pake stack trapping jam pro.  Oke.  Ya ini bakal.  Ya, ya, ya.  Ini pake stack trapping siapa ya?  Ya, ya, ya, ya.  Ya, ya, ya.  Oke, entar, entar, entar.",
+    " Halo, selamat pagi.  Ya, selamat pagi dengan Bapak.  Ya, benar-benar gimana, Pak?  Ya, benar-benar, saya serang berapa, Pak?  Ya, saya serang berapa.  Ya, tapi kan di sini berapa?  Ya, tapi kan di sini berapa?  Ya, di ambil dua, Pak. Minimal banyak.  Ya, tapi belum jatuh tempoh kan?  Ya, belum jatuh tempoh kan?  Belum, tapi kan di sini berapa?  Ya, di ambil dua.  Ya, ada yang namanya jatuh tempoh, tetap jatuh tempoh.  Jadi, jangan bapak kata-kata apa-apa.  Karena ini bukan penginjian pertama."
+  ],
+  "failed_samples": [
+    " Halo, selamat pagi.  Ya, lagi.  Muhammad Sayroho, ya Pak Sayreng nanti dari aplikasi ekstra.  Tadi hanya hari ini dibajarkan apa ya, di jam 10 atau nggak di jam 11.00?  Oke.  Jangan sampai lewat dari jam 2, Pak. Takutnya nanti nggak sabar lagi.  Oke.  Untuk kodokir-kodokir aplikasi, wajib anda dari aplikasi apa ya?  Ya.  Oke, udah selamat. Terima kasih, selamat pagi.  Ya, pagi.",
+    " Halo, selamat pagi.  Ya.  Bapak Maruzuki.  Ya.  Saya dari aplikasi ekstra, Pak. Ini tagian yang bisa dibayar jemput apa di aplikasi ekstra.  Tagian apa?  Di sini adalah tagian atas nama Bapak Maruzuki.  Aplikasi ekstra uang no, Pak.  Terima kasih.",
+    " iya maksih nih  halo  halo  ya halo  mau dibayar jam berapa bu pinjam pro?  kalau jam 5 bisa atau jam 3?  gimana?  jam 5 atau jam 3 bisa  oke boleh bu bayi  siap bu aman, aman bu aman  oke terima kasih kan untuk keringan ini  iya aman-aman aja ibu  terima kasih ibu yuk, selamat tak sama tiang",
+    " ini bisa dibayarkan jam berapa pak? pin jam mana?  sorry sorry  oke sorry 3.9 ya pak?  iya iya iya  ya sorry nya jam 3 ya pak kan tuh saya mau bunuh lagi jam 3 ya  ya bukan jam 3 pak  dari atas jam 3 pak  iya oke nantisnya bunuh lagi  jam 3 pokoknya hari ini aja tapi di atas jam 3  iya aman aman aman  ayo terima kasih pak pagi aman  siap siap",
+    " Halo, selamat tiang.  Selamat tiang, Bapak iklik semua hari.  Halo, Pak. Saya dari aplikasi Extra Uang Now.  Tadi, Hali, kalau penasaran dibuat tempat.  Halo, Bapak. Bapak, jangan kurang-kurang mendengar, Pak.  Halo, Bapak pikir, jangan sampai saya hubung."
+  ]
+}

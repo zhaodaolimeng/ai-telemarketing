@@ -1,0 +1,355 @@
+{
+  "case_id": "6282112999850509-20260418084423",
+  "file_name": "6282112999850509-20260418084423.mp3",
+  "transcript": [
+    {
+      "start": 1.1199999999999999,
+      "end": 2.4,
+      "speaker": "AGENT",
+      "text": " Hello pagi",
+      "words": [
+        {
+          "word": " Hello",
+          "start": 1.1199999999999999,
+          "end": 1.86,
+          "probability": 0.05426871031522751
+        },
+        {
+          "word": " pagi",
+          "start": 1.86,
+          "end": 2.4,
+          "probability": 0.7961061894893646
+        }
+      ]
+    },
+    {
+      "start": 2.4,
+      "end": 5.1,
+      "speaker": "CUSTOMER",
+      "text": " Ya, lo selamat pagi bu",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 2.4,
+          "end": 3.88,
+          "probability": 0.08701743930578232
+        },
+        {
+          "word": " lo",
+          "start": 4.04,
+          "end": 4.14,
+          "probability": 0.20546388626098633
+        },
+        {
+          "word": " selamat",
+          "start": 4.14,
+          "end": 4.5,
+          "probability": 0.6607181876897812
+        },
+        {
+          "word": " pagi",
+          "start": 4.5,
+          "end": 4.98,
+          "probability": 0.9963535070419312
+        },
+        {
+          "word": " bu",
+          "start": 4.98,
+          "end": 5.1,
+          "probability": 0.2501034438610077
+        }
+      ]
+    },
+    {
+      "start": 5.1,
+      "end": 6.26,
+      "speaker": "CUSTOMER",
+      "text": " Iya",
+      "words": [
+        {
+          "word": " Iya",
+          "start": 5.1,
+          "end": 6.26,
+          "probability": 0.333209753036499
+        }
+      ]
+    },
+    {
+      "start": 6.26,
+      "end": 8.02,
+      "speaker": "CUSTOMER",
+      "text": " Iya ini",
+      "words": [
+        {
+          "word": " Iya",
+          "start": 6.26,
+          "end": 7.74,
+          "probability": 0.8659063577651978
+        },
+        {
+          "word": " ini",
+          "start": 7.74,
+          "end": 8.02,
+          "probability": 0.6639091372489929
+        }
+      ]
+    },
+    {
+      "start": 8.02,
+      "end": 10.0,
+      "speaker": "AGENT",
+      "text": " Saya dari aplikasi ekstra bu, pinjamannya",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 8.02,
+          "end": 8.58,
+          "probability": 0.17756305634975433
+        },
+        {
+          "word": " dari",
+          "start": 8.58,
+          "end": 8.74,
+          "probability": 0.9635031223297119
+        },
+        {
+          "word": " aplikasi",
+          "start": 8.74,
+          "end": 9.2,
+          "probability": 0.9835634827613831
+        },
+        {
+          "word": " ekstra",
+          "start": 9.2,
+          "end": 9.56,
+          "probability": 0.8388016223907471
+        },
+        {
+          "word": " bu,",
+          "start": 9.56,
+          "end": 9.76,
+          "probability": 0.8028612732887268
+        },
+        {
+          "word": " pinjamannya",
+          "start": 9.94,
+          "end": 10.309999999999999,
+          "probability": 0.7758306264877319
+        }
+      ]
+    },
+    {
+      "start": 10.52,
+      "end": 11.82,
+      "speaker": "CUSTOMER",
+      "text": " Rung biarkan hari ini ya",
+      "words": [
+        {
+          "word": " Rung",
+          "start": 10.52,
+          "end": 10.94,
+          "probability": 0.10223983228206635
+        },
+        {
+          "word": " biarkan",
+          "start": 10.94,
+          "end": 11.24,
+          "probability": 0.4955507916165516
+        },
+        {
+          "word": " hari",
+          "start": 11.24,
+          "end": 11.56,
+          "probability": 0.9751312136650085
+        },
+        {
+          "word": " ini",
+          "start": 11.56,
+          "end": 11.68,
+          "probability": 0.8842813968658447
+        },
+        {
+          "word": " ya",
+          "start": 11.68,
+          "end": 11.82,
+          "probability": 0.6593019366264343
+        }
+      ]
+    },
+    {
+      "start": 11.82,
+      "end": 13.62,
+      "speaker": "CUSTOMER",
+      "text": " Oh iya",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 11.82,
+          "end": 13.22,
+          "probability": 0.5102950930595398
+        },
+        {
+          "word": " iya",
+          "start": 13.22,
+          "end": 13.62,
+          "probability": 0.8881106078624725
+        }
+      ]
+    },
+    {
+      "start": 13.62,
+      "end": 16.44,
+      "speaker": "CUSTOMER",
+      "text": " Ya bebas ibu mau lunas",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 13.62,
+          "end": 14.5,
+          "probability": 0.06374196708202362
+        },
+        {
+          "word": " bebas",
+          "start": 14.5,
+          "end": 14.96,
+          "probability": 0.7880286872386932
+        },
+        {
+          "word": " ibu",
+          "start": 14.96,
+          "end": 15.16,
+          "probability": 0.8421062231063843
+        },
+        {
+          "word": " mau",
+          "start": 15.16,
+          "end": 15.36,
+          "probability": 0.8984474539756775
+        },
+        {
+          "word": " lunas",
+          "start": 15.36,
+          "end": 16.44,
+          "probability": 0.8179455697536469
+        }
+      ]
+    },
+    {
+      "start": 16.44,
+      "end": 18.0,
+      "speaker": "AGENT",
+      "text": " atau perpanjangan 385",
+      "words": [
+        {
+          "word": " atau",
+          "start": 16.44,
+          "end": 16.76,
+          "probability": 0.8829134106636047
+        },
+        {
+          "word": " perpanjangan",
+          "start": 16.76,
+          "end": 17.48,
+          "probability": 0.8647095859050751
+        },
+        {
+          "word": " 385",
+          "start": 17.48,
+          "end": 18.0,
+          "probability": 0.7031556367874146
+        }
+      ]
+    },
+    {
+      "start": 18.839999999999996,
+      "end": 20.38,
+      "speaker": "CUSTOMER",
+      "text": " Terserah yang penting bayar",
+      "words": [
+        {
+          "word": " Terserah",
+          "start": 18.839999999999996,
+          "end": 19.58,
+          "probability": 0.8088155537843704
+        },
+        {
+          "word": " yang",
+          "start": 19.58,
+          "end": 19.7,
+          "probability": 0.8655838966369629
+        },
+        {
+          "word": " penting",
+          "start": 19.7,
+          "end": 20.0,
+          "probability": 0.9991041123867035
+        },
+        {
+          "word": " bayar",
+          "start": 20.0,
+          "end": 20.38,
+          "probability": 0.8576428294181824
+        }
+      ]
+    },
+    {
+      "start": 21.22,
+      "end": 22.0,
+      "speaker": "CUSTOMER",
+      "text": " Oh iya",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 21.22,
+          "end": 21.96,
+          "probability": 0.3398321866989136
+        },
+        {
+          "word": " iya",
+          "start": 21.96,
+          "end": 22.330000000000002,
+          "probability": 0.9740587174892426
+        }
+      ]
+    },
+    {
+      "start": 22.9,
+      "end": 24.56,
+      "speaker": "AGENT",
+      "text": " Oke bisa jam berapa bu",
+      "words": [
+        {
+          "word": " Oke",
+          "start": 22.9,
+          "end": 23.64,
+          "probability": 0.727367639541626
+        },
+        {
+          "word": " bisa",
+          "start": 23.64,
+          "end": 23.9,
+          "probability": 0.5517144203186035
+        },
+        {
+          "word": " jam",
+          "start": 23.9,
+          "end": 24.14,
+          "probability": 0.8445733189582825
+        },
+        {
+          "word": " berapa",
+          "start": 24.14,
+          "end": 24.36,
+          "probability": 0.8936039805412292
+        },
+        {
+          "word": " bu",
+          "start": 24.36,
+          "end": 24.56,
+          "probability": 0.9435532093048096
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello pagi  Ya, lo selamat pagi bu  Iya  Iya ini  Saya dari aplikasi ekstra bu, pinjamannya  Rung biarkan hari ini ya  Oh iya  Ya bebas ibu mau lunas  atau perpanjangan 385  Terserah yang penting bayar  Oh iya  Oke bisa jam berapa bu"
+}

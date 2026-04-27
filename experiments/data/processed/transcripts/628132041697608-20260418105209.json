@@ -1,0 +1,588 @@
+{
+  "case_id": "628132041697608-20260418105209",
+  "file_name": "628132041697608-20260418105209.mp3",
+  "transcript": [
+    {
+      "start": 1.6599999999999975,
+      "end": 2.54,
+      "text": " Halo, Samathya.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 1.6599999999999975,
+          "end": 2.0999999999999988,
+          "probability": 0.08451006561517715
+        },
+        {
+          "word": " Samathya.",
+          "start": 2.0999999999999988,
+          "end": 2.54,
+          "probability": 0.15180793404579163
+        }
+      ]
+    },
+    {
+      "start": 5.939999999999998,
+      "end": 8.78,
+      "text": " Halo, Ngini Mbaga Sari, Lahagu.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 5.939999999999998,
+          "end": 6.379999999999999,
+          "probability": 0.12409054487943649
+        },
+        {
+          "word": " Ngini",
+          "start": 6.379999999999999,
+          "end": 6.82,
+          "probability": 0.33553704743583995
+        },
+        {
+          "word": " Mbaga",
+          "start": 6.82,
+          "end": 7.26,
+          "probability": 0.12073561549186707
+        },
+        {
+          "word": " Sari,",
+          "start": 7.26,
+          "end": 7.82,
+          "probability": 0.646842435002327
+        },
+        {
+          "word": " Lahagu.",
+          "start": 8.08,
+          "end": 8.78,
+          "probability": 0.4326412280400594
+        }
+      ]
+    },
+    {
+      "start": 10.12,
+      "end": 10.56,
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 10.12,
+          "end": 10.56,
+          "probability": 0.5022456645965576
+        }
+      ]
+    },
+    {
+      "start": 11.12,
+      "end": 14.96,
+      "text": " Saya dari aplikasi ekstrem, Bu. Ini sayangnya bisa dibayar di jam berapa?",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 11.12,
+          "end": 11.42,
+          "probability": 0.27228885889053345
+        },
+        {
+          "word": " dari",
+          "start": 11.42,
+          "end": 11.7,
+          "probability": 0.9674183130264282
+        },
+        {
+          "word": " aplikasi",
+          "start": 11.7,
+          "end": 12.28,
+          "probability": 0.9817668795585632
+        },
+        {
+          "word": " ekstrem,",
+          "start": 12.28,
+          "end": 12.74,
+          "probability": 0.6894087592760721
+        },
+        {
+          "word": " Bu.",
+          "start": 12.86,
+          "end": 13.04,
+          "probability": 0.3415811359882355
+        },
+        {
+          "word": " Ini",
+          "start": 13.2,
+          "end": 13.32,
+          "probability": 0.9646573066711426
+        },
+        {
+          "word": " sayangnya",
+          "start": 13.32,
+          "end": 13.88,
+          "probability": 0.5220251679420471
+        },
+        {
+          "word": " bisa",
+          "start": 13.88,
+          "end": 14.1,
+          "probability": 0.9826948046684265
+        },
+        {
+          "word": " dibayar",
+          "start": 14.1,
+          "end": 14.52,
+          "probability": 0.9402722716331482
+        },
+        {
+          "word": " di",
+          "start": 14.52,
+          "end": 14.62,
+          "probability": 0.5007020831108093
+        },
+        {
+          "word": " jam",
+          "start": 14.62,
+          "end": 14.72,
+          "probability": 0.30154550075531006
+        },
+        {
+          "word": " berapa?",
+          "start": 14.72,
+          "end": 14.96,
+          "probability": 0.9567033052444458
+        }
+      ]
+    },
+    {
+      "start": 16.28,
+      "end": 20.06,
+      "text": " Maaf ya, Kak. Kemarang kan saya udah bayar. Saya udah mendingin waktu bayar.",
+      "words": [
+        {
+          "word": " Maaf",
+          "start": 16.28,
+          "end": 16.7,
+          "probability": 0.9838370382785797
+        },
+        {
+          "word": " ya,",
+          "start": 16.7,
+          "end": 16.84,
+          "probability": 0.7999782562255859
+        },
+        {
+          "word": " Kak.",
+          "start": 16.92,
+          "end": 17.0,
+          "probability": 0.5059984922409058
+        },
+        {
+          "word": " Kemarang",
+          "start": 17.24,
+          "end": 17.44,
+          "probability": 0.6590213974316915
+        },
+        {
+          "word": " kan",
+          "start": 17.44,
+          "end": 17.56,
+          "probability": 0.8239204287528992
+        },
+        {
+          "word": " saya",
+          "start": 17.56,
+          "end": 17.78,
+          "probability": 0.9593598246574402
+        },
+        {
+          "word": " udah",
+          "start": 17.78,
+          "end": 17.98,
+          "probability": 0.7937363982200623
+        },
+        {
+          "word": " bayar.",
+          "start": 17.98,
+          "end": 18.42,
+          "probability": 0.993702620267868
+        },
+        {
+          "word": " Saya",
+          "start": 18.6,
+          "end": 18.74,
+          "probability": 0.9858773946762085
+        },
+        {
+          "word": " udah",
+          "start": 18.74,
+          "end": 18.88,
+          "probability": 0.9355758428573608
+        },
+        {
+          "word": " mendingin",
+          "start": 18.88,
+          "end": 19.36,
+          "probability": 0.4175687332948049
+        },
+        {
+          "word": " waktu",
+          "start": 19.36,
+          "end": 19.52,
+          "probability": 0.6830483078956604
+        },
+        {
+          "word": " bayar.",
+          "start": 19.52,
+          "end": 20.06,
+          "probability": 0.6978779733181
+        }
+      ]
+    },
+    {
+      "start": 20.22,
+      "end": 23.48,
+      "text": " Terus, pas saya bayar, kenapa langsung dikontormasi pindah, Men? Saya kan gak minjam.",
+      "words": [
+        {
+          "word": " Terus,",
+          "start": 20.22,
+          "end": 20.34,
+          "probability": 0.9440406262874603
+        },
+        {
+          "word": " pas",
+          "start": 20.4,
+          "end": 20.54,
+          "probability": 0.3721843957901001
+        },
+        {
+          "word": " saya",
+          "start": 20.54,
+          "end": 20.68,
+          "probability": 0.9949237704277039
+        },
+        {
+          "word": " bayar,",
+          "start": 20.68,
+          "end": 20.92,
+          "probability": 0.9947570264339447
+        },
+        {
+          "word": " kenapa",
+          "start": 21.0,
+          "end": 21.2,
+          "probability": 0.9858091771602631
+        },
+        {
+          "word": " langsung",
+          "start": 21.2,
+          "end": 21.44,
+          "probability": 0.9752308130264282
+        },
+        {
+          "word": " dikontormasi",
+          "start": 21.44,
+          "end": 22.12,
+          "probability": 0.7487153962254525
+        },
+        {
+          "word": " pindah,",
+          "start": 22.12,
+          "end": 22.48,
+          "probability": 0.5432851066191992
+        },
+        {
+          "word": " Men?",
+          "start": 22.58,
+          "end": 22.64,
+          "probability": 0.09413429349660873
+        },
+        {
+          "word": " Saya",
+          "start": 22.76,
+          "end": 22.84,
+          "probability": 0.9745404124259949
+        },
+        {
+          "word": " kan",
+          "start": 22.84,
+          "end": 22.98,
+          "probability": 0.9326943159103394
+        },
+        {
+          "word": " gak",
+          "start": 22.98,
+          "end": 23.1,
+          "probability": 0.4042593240737915
+        },
+        {
+          "word": " minjam.",
+          "start": 23.1,
+          "end": 23.48,
+          "probability": 0.47519170492887497
+        }
+      ]
+    },
+    {
+      "start": 24.28,
+      "end": 26.06,
+      "text": " Oh, saya kurang tahu soal itu, Bu.",
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 24.28,
+          "end": 24.6,
+          "probability": 0.8634001612663269
+        },
+        {
+          "word": " saya",
+          "start": 24.7,
+          "end": 24.82,
+          "probability": 0.9297887682914734
+        },
+        {
+          "word": " kurang",
+          "start": 24.82,
+          "end": 25.12,
+          "probability": 0.9961821734905243
+        },
+        {
+          "word": " tahu",
+          "start": 25.12,
+          "end": 25.34,
+          "probability": 0.8872033357620239
+        },
+        {
+          "word": " soal",
+          "start": 25.34,
+          "end": 25.58,
+          "probability": 0.8138425946235657
+        },
+        {
+          "word": " itu,",
+          "start": 25.58,
+          "end": 25.8,
+          "probability": 0.9922130703926086
+        },
+        {
+          "word": " Bu.",
+          "start": 25.92,
+          "end": 26.06,
+          "probability": 0.9968693852424622
+        }
+      ]
+    },
+    {
+      "start": 27.62,
+      "end": 30.36,
+      "text": " Maksud, gimana dong ini aplikasi legal nih?",
+      "words": [
+        {
+          "word": " Maksud,",
+          "start": 27.62,
+          "end": 28.1,
+          "probability": 0.493532653277119
+        },
+        {
+          "word": " gimana",
+          "start": 28.22,
+          "end": 28.46,
+          "probability": 0.9518371224403381
+        },
+        {
+          "word": " dong",
+          "start": 28.46,
+          "end": 28.74,
+          "probability": 0.7492406964302063
+        },
+        {
+          "word": " ini",
+          "start": 28.74,
+          "end": 29.0,
+          "probability": 0.7820315361022949
+        },
+        {
+          "word": " aplikasi",
+          "start": 29.0,
+          "end": 29.6,
+          "probability": 0.8462512691815695
+        },
+        {
+          "word": " legal",
+          "start": 29.6,
+          "end": 29.98,
+          "probability": 0.9777423739433289
+        },
+        {
+          "word": " nih?",
+          "start": 29.98,
+          "end": 30.36,
+          "probability": 0.8943967819213867
+        }
+      ]
+    },
+    {
+      "start": 30.88,
+      "end": 33.06,
+      "text": " Saya lakurkan kelinan, sih aplikasi legal.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 30.88,
+          "end": 31.14,
+          "probability": 0.5929679274559021
+        },
+        {
+          "word": " lakurkan",
+          "start": 31.14,
+          "end": 31.66,
+          "probability": 0.5593717321753502
+        },
+        {
+          "word": " kelinan,",
+          "start": 31.66,
+          "end": 32.04,
+          "probability": 0.4170362601677577
+        },
+        {
+          "word": " sih",
+          "start": 32.18,
+          "end": 32.24,
+          "probability": 0.19413134455680847
+        },
+        {
+          "word": " aplikasi",
+          "start": 32.24,
+          "end": 32.76,
+          "probability": 0.9103787342707316
+        },
+        {
+          "word": " legal.",
+          "start": 32.76,
+          "end": 33.06,
+          "probability": 0.9956128597259521
+        }
+      ]
+    },
+    {
+      "start": 33.2,
+      "end": 35.26,
+      "text": " Ya, dibayar dulu ya, Bu. Kalau mau lakur, dibayar dulu.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 33.2,
+          "end": 33.32,
+          "probability": 0.23954081535339355
+        },
+        {
+          "word": " dibayar",
+          "start": 33.46,
+          "end": 33.66,
+          "probability": 0.7718180815378824
+        },
+        {
+          "word": " dulu",
+          "start": 33.66,
+          "end": 33.82,
+          "probability": 0.9878785014152527
+        },
+        {
+          "word": " ya,",
+          "start": 33.82,
+          "end": 33.98,
+          "probability": 0.5769456624984741
+        },
+        {
+          "word": " Bu.",
+          "start": 34.0,
+          "end": 34.08,
+          "probability": 0.027618031948804855
+        },
+        {
+          "word": " Kalau",
+          "start": 34.14,
+          "end": 34.28,
+          "probability": 0.540789783000946
+        },
+        {
+          "word": " mau",
+          "start": 34.28,
+          "end": 34.44,
+          "probability": 0.926995575428009
+        },
+        {
+          "word": " lakur,",
+          "start": 34.44,
+          "end": 34.72,
+          "probability": 0.9639110167821249
+        },
+        {
+          "word": " dibayar",
+          "start": 34.82,
+          "end": 35.1,
+          "probability": 0.9889658888181051
+        },
+        {
+          "word": " dulu.",
+          "start": 35.1,
+          "end": 35.26,
+          "probability": 0.9919769167900085
+        }
+      ]
+    },
+    {
+      "start": 35.4,
+      "end": 37.76,
+      "text": " Tangin ya, beri Bunga Malu juga pas lapornya.",
+      "words": [
+        {
+          "word": " Tangin",
+          "start": 35.4,
+          "end": 35.7,
+          "probability": 0.4293158948421478
+        },
+        {
+          "word": " ya,",
+          "start": 35.7,
+          "end": 35.78,
+          "probability": 0.6227843165397644
+        },
+        {
+          "word": " beri",
+          "start": 35.9,
+          "end": 36.04,
+          "probability": 0.45909370481967926
+        },
+        {
+          "word": " Bunga",
+          "start": 36.04,
+          "end": 36.28,
+          "probability": 0.6353780503074328
+        },
+        {
+          "word": " Malu",
+          "start": 36.28,
+          "end": 36.6,
+          "probability": 0.7500380873680115
+        },
+        {
+          "word": " juga",
+          "start": 36.6,
+          "end": 36.88,
+          "probability": 0.9793328642845154
+        },
+        {
+          "word": " pas",
+          "start": 36.88,
+          "end": 37.24,
+          "probability": 0.6946389079093933
+        },
+        {
+          "word": " lapornya.",
+          "start": 37.24,
+          "end": 37.76,
+          "probability": 0.7616695562998453
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo, Samathya.  Halo, Ngini Mbaga Sari, Lahagu.  Ya.  Saya dari aplikasi ekstrem, Bu. Ini sayangnya bisa dibayar di jam berapa?  Maaf ya, Kak. Kemarang kan saya udah bayar. Saya udah mendingin waktu bayar.  Terus, pas saya bayar, kenapa langsung dikontormasi pindah, Men? Saya kan gak minjam.  Oh, saya kurang tahu soal itu, Bu.  Maksud, gimana dong ini aplikasi legal nih?  Saya lakurkan kelinan, sih aplikasi legal.  Ya, dibayar dulu ya, Bu. Kalau mau lakur, dibayar dulu.  Tangin ya, beri Bunga Malu juga pas lapornya."
+}

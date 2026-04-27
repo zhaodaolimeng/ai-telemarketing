@@ -1,0 +1,341 @@
+{
+  "case_id": "628581203004808-20260416074327",
+  "file_name": "628581203004808-20260416074327.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 1.84,
+      "speaker": "CUSTOMER",
+      "text": " Sama datang, Milai.",
+      "words": [
+        {
+          "word": " Sama",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.3530477089807391
+        },
+        {
+          "word": " datang,",
+          "start": 0.3,
+          "end": 1.52,
+          "probability": 0.9288355708122253
+        },
+        {
+          "word": " Milai.",
+          "start": 1.62,
+          "end": 1.84,
+          "probability": 0.08069497346878052
+        }
+      ]
+    },
+    {
+      "start": 2.12,
+      "end": 2.92,
+      "speaker": "CUSTOMER",
+      "text": " Pesambaran!",
+      "words": [
+        {
+          "word": " Pesambaran!",
+          "start": 2.12,
+          "end": 2.92,
+          "probability": 0.29881527042016387
+        }
+      ]
+    },
+    {
+      "start": 3.38,
+      "end": 3.56,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih, Milai.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 3.38,
+          "end": 3.56,
+          "probability": 0.4465824468061328
+        },
+        {
+          "word": " kasih,",
+          "start": 3.56,
+          "end": 3.56,
+          "probability": 0.9875466227531433
+        },
+        {
+          "word": " Milai.",
+          "start": 3.56,
+          "end": 3.56,
+          "probability": 0.6529206335544586
+        }
+      ]
+    },
+    {
+      "start": 3.56,
+      "end": 4.98,
+      "speaker": "CUSTOMER",
+      "text": " Saya juga mengerikan.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 3.56,
+          "end": 3.56,
+          "probability": 0.04082692787051201
+        },
+        {
+          "word": " juga",
+          "start": 3.56,
+          "end": 3.96,
+          "probability": 0.0183442160487175
+        },
+        {
+          "word": " mengerikan.",
+          "start": 3.96,
+          "end": 4.98,
+          "probability": 0.0901223241041104
+        }
+      ]
+    },
+    {
+      "start": 5.16,
+      "end": 7.94,
+      "speaker": "AGENT",
+      "text": " Dan saya membina.",
+      "words": [
+        {
+          "word": " Dan",
+          "start": 5.16,
+          "end": 5.56,
+          "probability": 0.02558876760303974
+        },
+        {
+          "word": " saya",
+          "start": 5.56,
+          "end": 7.58,
+          "probability": 0.05999748408794403
+        },
+        {
+          "word": " membina.",
+          "start": 7.58,
+          "end": 7.94,
+          "probability": 0.029600243375170976
+        }
+      ]
+    },
+    {
+      "start": 8.16,
+      "end": 10.36,
+      "speaker": "AGENT",
+      "text": " Dan saya membuat apa-apa.",
+      "words": [
+        {
+          "word": " Dan",
+          "start": 8.16,
+          "end": 8.4,
+          "probability": 0.026376690715551376
+        },
+        {
+          "word": " saya",
+          "start": 8.4,
+          "end": 8.6,
+          "probability": 0.45728495717048645
+        },
+        {
+          "word": " membuat",
+          "start": 8.6,
+          "end": 9.3,
+          "probability": 0.03927316889166832
+        },
+        {
+          "word": " apa",
+          "start": 9.3,
+          "end": 10.02,
+          "probability": 0.2889519929885864
+        },
+        {
+          "word": "-apa.",
+          "start": 10.02,
+          "end": 10.36,
+          "probability": 0.5909042060375214
+        }
+      ]
+    },
+    {
+      "start": 10.42,
+      "end": 11.32,
+      "speaker": "AGENT",
+      "text": " Saya juga membina.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 10.42,
+          "end": 10.8,
+          "probability": 0.2056073248386383
+        },
+        {
+          "word": " juga",
+          "start": 10.8,
+          "end": 10.98,
+          "probability": 0.07322074472904205
+        },
+        {
+          "word": " membina.",
+          "start": 10.98,
+          "end": 11.32,
+          "probability": 0.5230879969894886
+        }
+      ]
+    },
+    {
+      "start": 12.34,
+      "end": 13.12,
+      "speaker": "AGENT",
+      "text": " Saya membina.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 12.34,
+          "end": 13.12,
+          "probability": 0.06072132661938667
+        },
+        {
+          "word": " membina.",
+          "start": 13.12,
+          "end": 13.12,
+          "probability": 0.5143351405858994
+        }
+      ]
+    },
+    {
+      "start": 13.12,
+      "end": 14.04,
+      "speaker": "UNKNOWN",
+      "text": " Saya membina.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 13.12,
+          "end": 13.78,
+          "probability": 0.3085729479789734
+        },
+        {
+          "word": " membina.",
+          "start": 13.78,
+          "end": 14.04,
+          "probability": 0.897271066904068
+        }
+      ]
+    },
+    {
+      "start": 16.0,
+      "end": 16.36,
+      "speaker": "CUSTOMER",
+      "text": " Saya membina.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 15.819999999999999,
+          "end": 16.22,
+          "probability": 0.5540891885757446
+        },
+        {
+          "word": " membina.",
+          "start": 16.22,
+          "end": 16.36,
+          "probability": 0.9659509658813477
+        }
+      ]
+    },
+    {
+      "start": 16.92,
+      "end": 17.56,
+      "speaker": "CUSTOMER",
+      "text": " Saya membina.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 16.92,
+          "end": 17.38,
+          "probability": 0.6767478585243225
+        },
+        {
+          "word": " membina.",
+          "start": 17.38,
+          "end": 17.56,
+          "probability": 0.9798955321311951
+        }
+      ]
+    },
+    {
+      "start": 18.22,
+      "end": 18.92,
+      "speaker": "UNKNOWN",
+      "text": " Saya membina.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 18.22,
+          "end": 18.86,
+          "probability": 0.7846940755844116
+        },
+        {
+          "word": " membina.",
+          "start": 18.86,
+          "end": 18.92,
+          "probability": 0.9859308302402496
+        }
+      ]
+    },
+    {
+      "start": 22.1,
+      "end": 23.68,
+      "speaker": "CUSTOMER",
+      "text": " Saya membina.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 22.1,
+          "end": 22.9,
+          "probability": 0.8309809565544128
+        },
+        {
+          "word": " membina.",
+          "start": 22.9,
+          "end": 23.68,
+          "probability": 0.9892352521419525
+        }
+      ]
+    },
+    {
+      "start": 23.68,
+      "end": 26.46,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih kerana menonton.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 23.68,
+          "end": 25.02,
+          "probability": 0.47081388998776674
+        },
+        {
+          "word": " kasih",
+          "start": 25.02,
+          "end": 25.38,
+          "probability": 0.8809261918067932
+        },
+        {
+          "word": " kerana",
+          "start": 25.38,
+          "end": 26.44,
+          "probability": 0.5688358396291733
+        },
+        {
+          "word": " menonton.",
+          "start": 26.44,
+          "end": 26.46,
+          "probability": 0.8687302768230438
+        }
+      ]
+    }
+  ],
+  "full_text": " Sama datang, Milai.  Pesambaran!  Terima kasih, Milai.  Saya juga mengerikan.  Dan saya membina.  Dan saya membuat apa-apa.  Saya juga membina.  Saya membina.  Saya membina.  Saya membina.  Saya membina.  Saya membina.  Saya membina.  Terima kasih kerana menonton."
+}

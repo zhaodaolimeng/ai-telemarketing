@@ -1,0 +1,461 @@
+{
+  "case_id": "628564780205918-20260420084750",
+  "file_name": "628564780205918-20260420084750.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 2.96,
+      "speaker": "CUSTOMER",
+      "text": " Sama datang di layanan pesan selan",
+      "words": [
+        {
+          "word": " Sama",
+          "start": 0.0,
+          "end": 0.86,
+          "probability": 0.212547751609236
+        },
+        {
+          "word": " datang",
+          "start": 0.86,
+          "end": 1.3,
+          "probability": 0.9308913946151733
+        },
+        {
+          "word": " di",
+          "start": 1.3,
+          "end": 1.58,
+          "probability": 0.7505329847335815
+        },
+        {
+          "word": " layanan",
+          "start": 1.58,
+          "end": 1.94,
+          "probability": 0.7887649536132812
+        },
+        {
+          "word": " pesan",
+          "start": 1.94,
+          "end": 2.56,
+          "probability": 0.6112403869628906
+        },
+        {
+          "word": " selan",
+          "start": 2.56,
+          "end": 2.96,
+          "probability": 0.5242035984992981
+        }
+      ]
+    },
+    {
+      "start": 2.96,
+      "end": 5.42,
+      "speaker": "CUSTOMER",
+      "text": " Silakan diunggup e-mails di sini",
+      "words": [
+        {
+          "word": " Silakan",
+          "start": 2.96,
+          "end": 3.58,
+          "probability": 0.2683442391571589
+        },
+        {
+          "word": " diunggup",
+          "start": 3.58,
+          "end": 4.1,
+          "probability": 0.19461173051968217
+        },
+        {
+          "word": " e",
+          "start": 4.1,
+          "end": 4.44,
+          "probability": 0.11796654015779495
+        },
+        {
+          "word": "-mails",
+          "start": 4.44,
+          "end": 4.6,
+          "probability": 0.6875650435686111
+        },
+        {
+          "word": " di",
+          "start": 4.6,
+          "end": 4.86,
+          "probability": 0.08906666189432144
+        },
+        {
+          "word": " sini",
+          "start": 4.86,
+          "end": 5.42,
+          "probability": 0.04176579415798187
+        }
+      ]
+    },
+    {
+      "start": 5.42,
+      "end": 6.98,
+      "speaker": "AGENT",
+      "text": " Silakan berkat pesan selan",
+      "words": [
+        {
+          "word": " Silakan",
+          "start": 5.42,
+          "end": 5.84,
+          "probability": 0.8791767060756683
+        },
+        {
+          "word": " berkat",
+          "start": 5.84,
+          "end": 6.2,
+          "probability": 0.4483766295015812
+        },
+        {
+          "word": " pesan",
+          "start": 6.2,
+          "end": 6.58,
+          "probability": 0.7917490005493164
+        },
+        {
+          "word": " selan",
+          "start": 6.58,
+          "end": 6.98,
+          "probability": 0.7231669127941132
+        }
+      ]
+    },
+    {
+      "start": 6.98,
+      "end": 8.66,
+      "speaker": "CUSTOMER",
+      "text": " Setelah mendengar nada beri",
+      "words": [
+        {
+          "word": " Setelah",
+          "start": 6.98,
+          "end": 7.62,
+          "probability": 0.6403484772890806
+        },
+        {
+          "word": " mendengar",
+          "start": 7.62,
+          "end": 8.02,
+          "probability": 0.3482988079388936
+        },
+        {
+          "word": " nada",
+          "start": 8.02,
+          "end": 8.34,
+          "probability": 0.31148561835289
+        },
+        {
+          "word": " beri",
+          "start": 8.34,
+          "end": 8.66,
+          "probability": 0.5474230349063873
+        }
+      ]
+    },
+    {
+      "start": 8.66,
+      "end": 10.24,
+      "speaker": "AGENT",
+      "text": " Ketekan tombol apapun",
+      "words": [
+        {
+          "word": " Ketekan",
+          "start": 8.66,
+          "end": 9.4,
+          "probability": 0.4541583014652133
+        },
+        {
+          "word": " tombol",
+          "start": 9.4,
+          "end": 9.72,
+          "probability": 0.9025592505931854
+        },
+        {
+          "word": " apapun",
+          "start": 9.72,
+          "end": 10.24,
+          "probability": 0.8468822439511617
+        }
+      ]
+    },
+    {
+      "start": 10.24,
+      "end": 12.28,
+      "speaker": "CUSTOMER",
+      "text": " Untuk menyelesaikan rekaman",
+      "words": [
+        {
+          "word": " Untuk",
+          "start": 10.24,
+          "end": 10.8,
+          "probability": 0.5438327416777611
+        },
+        {
+          "word": " menyelesaikan",
+          "start": 10.8,
+          "end": 11.52,
+          "probability": 0.9157798439264297
+        },
+        {
+          "word": " rekaman",
+          "start": 11.52,
+          "end": 12.28,
+          "probability": 0.8154447972774506
+        }
+      ]
+    },
+    {
+      "start": 13.82,
+      "end": 16.58,
+      "speaker": "AGENT",
+      "text": " Tapi kalau sebuah muka, harus ada penyelesaikan",
+      "words": [
+        {
+          "word": " Tapi",
+          "start": 13.82,
+          "end": 14.64,
+          "probability": 0.04280320554971695
+        },
+        {
+          "word": " kalau",
+          "start": 14.64,
+          "end": 14.9,
+          "probability": 0.4280780553817749
+        },
+        {
+          "word": " sebuah",
+          "start": 14.9,
+          "end": 15.16,
+          "probability": 0.4336254745721817
+        },
+        {
+          "word": " muka,",
+          "start": 15.16,
+          "end": 15.5,
+          "probability": 0.5577385127544403
+        },
+        {
+          "word": " harus",
+          "start": 15.68,
+          "end": 15.86,
+          "probability": 0.5327757000923157
+        },
+        {
+          "word": " ada",
+          "start": 15.86,
+          "end": 16.1,
+          "probability": 0.33521026372909546
+        },
+        {
+          "word": " penyelesaikan",
+          "start": 16.1,
+          "end": 16.58,
+          "probability": 0.5161044746637344
+        }
+      ]
+    },
+    {
+      "start": 20.259999999999998,
+      "end": 21.08,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 20.259999999999998,
+          "end": 21.08,
+          "probability": 0.25759051300701685
+        },
+        {
+          "word": " kasih.",
+          "start": 21.08,
+          "end": 21.08,
+          "probability": 0.9670475721359253
+        }
+      ]
+    },
+    {
+      "start": 21.08,
+      "end": 21.64,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 21.08,
+          "end": 21.08,
+          "probability": 0.5708168894052505
+        },
+        {
+          "word": " kasih.",
+          "start": 21.08,
+          "end": 21.64,
+          "probability": 0.9962983727455139
+        }
+      ]
+    },
+    {
+      "start": 21.64,
+      "end": 22.2,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 21.64,
+          "end": 21.9,
+          "probability": 0.6058722138404846
+        },
+        {
+          "word": " kasih.",
+          "start": 21.9,
+          "end": 22.2,
+          "probability": 0.9983376264572144
+        }
+      ]
+    },
+    {
+      "start": 22.2,
+      "end": 22.94,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 22.2,
+          "end": 22.68,
+          "probability": 0.7147360146045685
+        },
+        {
+          "word": " kasih.",
+          "start": 22.68,
+          "end": 22.94,
+          "probability": 0.9984689354896545
+        }
+      ]
+    },
+    {
+      "start": 22.94,
+      "end": 23.78,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 22.94,
+          "end": 22.94,
+          "probability": 0.7697736322879791
+        },
+        {
+          "word": " kasih.",
+          "start": 22.94,
+          "end": 23.78,
+          "probability": 0.9980535507202148
+        }
+      ]
+    },
+    {
+      "start": 23.78,
+      "end": 24.66,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 23.78,
+          "end": 24.54,
+          "probability": 0.8308659195899963
+        },
+        {
+          "word": " kasih.",
+          "start": 24.54,
+          "end": 24.66,
+          "probability": 0.9974488615989685
+        }
+      ]
+    },
+    {
+      "start": 25.5,
+      "end": 27.02,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 25.5,
+          "end": 26.12,
+          "probability": 0.8785219192504883
+        },
+        {
+          "word": " kasih.",
+          "start": 26.12,
+          "end": 27.02,
+          "probability": 0.9965963959693909
+        }
+      ]
+    },
+    {
+      "start": 27.02,
+      "end": 27.6,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 27.02,
+          "end": 27.6,
+          "probability": 0.8755203187465668
+        },
+        {
+          "word": " kasih.",
+          "start": 27.6,
+          "end": 27.6,
+          "probability": 0.9957019686698914
+        }
+      ]
+    },
+    {
+      "start": 27.6,
+      "end": 27.66,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 27.6,
+          "end": 27.66,
+          "probability": 0.9082210958003998
+        },
+        {
+          "word": " kasih.",
+          "start": 27.66,
+          "end": 27.66,
+          "probability": 0.9964609742164612
+        }
+      ]
+    },
+    {
+      "start": 27.66,
+      "end": 27.74,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 27.66,
+          "end": 27.74,
+          "probability": 0.46340205147862434
+        },
+        {
+          "word": " kasih.",
+          "start": 27.74,
+          "end": 27.74,
+          "probability": 0.8945519328117371
+        }
+      ]
+    }
+  ],
+  "full_text": " Sama datang di layanan pesan selan  Silakan diunggup e-mails di sini  Silakan berkat pesan selan  Setelah mendengar nada beri  Ketekan tombol apapun  Untuk menyelesaikan rekaman  Tapi kalau sebuah muka, harus ada penyelesaikan  Terima kasih.  Terima kasih.  Terima kasih.  Terima kasih.  Terima kasih.  Terima kasih.  Terima kasih.  Terima kasih.  Terima kasih.  Terima kasih."
+}

@@ -1,0 +1,149 @@
+{
+  "case_id": "628386678446708-20260411103110",
+  "file_name": "628386678446708-20260411103110.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 2.7,
+      "speaker": "AGENT",
+      "text": " Halo, sama siya?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 0.0,
+          "end": 1.78,
+          "probability": 0.34938082098960876
+        },
+        {
+          "word": " sama",
+          "start": 1.96,
+          "end": 2.18,
+          "probability": 0.5009525418281555
+        },
+        {
+          "word": " siya?",
+          "start": 2.18,
+          "end": 2.7,
+          "probability": 0.5067035853862762
+        }
+      ]
+    },
+    {
+      "start": 5.120000000000002,
+      "end": 8.64,
+      "speaker": "AGENT",
+      "text": " Halo, dengan bapak Panji Prihanto, no?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 5.120000000000002,
+          "end": 6.08,
+          "probability": 0.7183621525764465
+        },
+        {
+          "word": " dengan",
+          "start": 6.22,
+          "end": 6.36,
+          "probability": 0.9683129191398621
+        },
+        {
+          "word": " bapak",
+          "start": 6.36,
+          "end": 6.84,
+          "probability": 0.898140549659729
+        },
+        {
+          "word": " Panji",
+          "start": 6.84,
+          "end": 7.6,
+          "probability": 0.6206311732530594
+        },
+        {
+          "word": " Prihanto,",
+          "start": 7.6,
+          "end": 8.36,
+          "probability": 0.4121346448858579
+        },
+        {
+          "word": " no?",
+          "start": 8.54,
+          "end": 8.64,
+          "probability": 0.8308458924293518
+        }
+      ]
+    },
+    {
+      "start": 12.0,
+      "end": 12.32,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 11.840000000000002,
+          "end": 12.32,
+          "probability": 0.611584484577179
+        }
+      ]
+    },
+    {
+      "start": 13.26,
+      "end": 13.66,
+      "speaker": "CUSTOMER",
+      "text": " Aja.",
+      "words": [
+        {
+          "word": " Aja.",
+          "start": 13.26,
+          "end": 13.66,
+          "probability": 0.35440114699304104
+        }
+      ]
+    },
+    {
+      "start": 14.9,
+      "end": 17.26,
+      "speaker": "CUSTOMER",
+      "text": " Ya, saya dari aplikasi X-Trapa.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 14.9,
+          "end": 15.6,
+          "probability": 0.7811523079872131
+        },
+        {
+          "word": " saya",
+          "start": 15.72,
+          "end": 15.82,
+          "probability": 0.9806802868843079
+        },
+        {
+          "word": " dari",
+          "start": 15.82,
+          "end": 16.08,
+          "probability": 0.9849739074707031
+        },
+        {
+          "word": " aplikasi",
+          "start": 16.08,
+          "end": 16.58,
+          "probability": 0.9457514683405558
+        },
+        {
+          "word": " X",
+          "start": 16.58,
+          "end": 16.84,
+          "probability": 0.35492557287216187
+        },
+        {
+          "word": "-Trapa.",
+          "start": 16.84,
+          "end": 17.26,
+          "probability": 0.3048220556229353
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo, sama siya?  Halo, dengan bapak Panji Prihanto, no?  Halo?  Aja.  Ya, saya dari aplikasi X-Trapa."
+}

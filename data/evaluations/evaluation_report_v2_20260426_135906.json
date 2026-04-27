@@ -1,0 +1,4580 @@
+{
+  "metadata": {
+    "timestamp": "20260426_135906",
+    "total_tests": 50,
+    "version": "v2",
+    "use_tts": false
+  },
+  "summary": {
+    "total": 50,
+    "success": 45,
+    "failed": 5,
+    "true_positive": 26,
+    "true_negative": 4,
+    "false_positive": 19,
+    "false_negative": 1,
+    "by_group": {
+      "H2": {
+        "total": 14,
+        "success": 12
+      },
+      "H1": {
+        "total": 19,
+        "success": 18
+      },
+      "S0": {
+        "total": 17,
+        "success": 15
+      }
+    },
+    "by_persona": {
+      "cooperative": {
+        "total": 11,
+        "success": 11
+      },
+      "busy": {
+        "total": 7,
+        "success": 7
+      },
+      "negotiating": {
+        "total": 10,
+        "success": 10
+      },
+      "silent": {
+        "total": 4,
+        "success": 0
+      },
+      "forgetful": {
+        "total": 5,
+        "success": 5
+      },
+      "resistant": {
+        "total": 10,
+        "success": 10
+      },
+      "excuse_master": {
+        "total": 3,
+        "success": 2
+      }
+    },
+    "by_resistance_level": {
+      "very_low": {
+        "total": 12,
+        "success": 11
+      },
+      "low": {
+        "total": 10,
+        "success": 10
+      },
+      "medium": {
+        "total": 9,
+        "success": 9
+      },
+      "high": {
+        "total": 12,
+        "success": 9
+      },
+      "very_high": {
+        "total": 7,
+        "success": 6
+      }
+    }
+  },
+  "results": [
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "cooperative",
+      "description": "H2早期-合作客户-直接给时间",
+      "success": true,
+      "commit_time": "jam 2",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Iya?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Ya saya tahu",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Siang ini jam 2",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Oke, jam 2 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu jam 2. Terima kasih. Selamat pagi.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "very_low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.848579"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "busy",
+      "description": "H2早期-忙碌客户-先推脱后给时间",
+      "success": true,
+      "commit_time": "lusa",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Sibuk",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti dulu ya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Saya lagi sibuk",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa bayar Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Lusa",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Oke, lusa ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Iya.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.848579"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "negotiating",
+      "description": "H2早期-协商客户-问选项后确定",
+      "success": true,
+      "commit_time": "jam 5",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Halo",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Oh ya, bisa nggak diperpanjang?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa bayar Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Jam 5 bisa atau jam 3?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Oke, jam 5 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.848579"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "silent",
+      "description": "H2早期-沉默客户-偶尔说话",
+      "success": false,
+      "commit_time": null,
+      "conversation_length": 14,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa bayar Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Hari ini jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "high",
+      "push_count": 4,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.848579"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "forgetful",
+      "description": "H2早期-健忘客户-先忘后想起来",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 15,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Hello?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Oh ya, saya lupa",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Sebentar lagi",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Besok jam 3",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Oke, jam 3 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat pagi.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "low",
+      "push_count": 2,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.848579"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "resistant",
+      "description": "H2早期-抗拒客户-推托",
+      "success": true,
+      "commit_time": "besok",
+      "conversation_length": 17,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Pagi",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "customer",
+          "text": "Ya betul",
+          "timestamp": "2026-04-26T13:59:06.848579"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Aduh, saya lagi susah",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya sedang susah",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Hari ini jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya tidak mau bayar",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Oke deh, saya usahakan besok",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. besok ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Iya.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu besok. Terima kasih. Selamat pagi.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "medium",
+      "push_count": 3,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "excuse_master",
+      "description": "H2早期-借口大师-多变借口",
+      "success": false,
+      "commit_time": null,
+      "conversation_length": 14,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya, dengan saya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti saya hubungi balik",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya perlu cek dulu",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Hari ini jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Tidak bisa",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Hari ini jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya akan laporan ke polisi",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya tutup telepon ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "high",
+      "push_count": 4,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "cooperative",
+      "description": "H1中期-合作客户",
+      "success": true,
+      "commit_time": "jam 2",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Sore",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya betul",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya saya tahu",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Siang ini jam 2",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya. Oke, jam 2 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya komitmen",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat siang.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "very_low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "busy",
+      "description": "H1中期-忙碌客户",
+      "success": true,
+      "commit_time": "jam 5",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ada apa?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya lagi di luar",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti saya hubungi balik",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Besok jam 5",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu jam 5.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Iya.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "negotiating",
+      "description": "H1中期-协商客户",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Halo",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya, tapi saya sedang kesulitan",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Jam 2 atau jam 3?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu jam 3.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Iya.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat siang.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "medium",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "resistant",
+      "description": "H1中期-抗拒客户-中等抗拒",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 15,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Pagi",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya, saya ingat",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya sedang susah",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Besok jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Besok jam 3",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya. Oke, jam 3 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat siang.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "medium",
+      "push_count": 2,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "excuse_master",
+      "description": "H1中期-借口大师-高度抗拒",
+      "success": true,
+      "commit_time": "hari ini",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ada apa?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti saya konfirmasi lagi",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya tidak bisa bicara sekarang",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu hari ini.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Iya.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat siang.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "high",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "cooperative",
+      "description": "S0晚期-合作客户",
+      "success": true,
+      "commit_time": "jam 2",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Sore",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya saya tahu",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Bagaimana rencana pembayaran Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Jam 2",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, jam 2 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya komitmen",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "very_low",
+      "push_count": 0,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "negotiating",
+      "description": "S0晚期-协商客户",
+      "success": true,
+      "commit_time": "besok",
+      "conversation_length": 15,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Halo",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Bisa diundur nggak?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Bagaimana rencana pembayaran Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya tunggu dana dulu",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Hari apa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Besok ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, besok ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "medium",
+      "push_count": 0,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "resistant",
+      "description": "S0晚期-抗拒客户-高抗拒",
+      "success": true,
+      "commit_time": "besok",
+      "conversation_length": 17,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Apaan sih?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya, apa?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya sedang kesulitan",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Bagaimana rencana pembayaran Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Gak bisa",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Hari apa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya tunggu dulu",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Hari apa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Besok ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, besok ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "high",
+      "push_count": 0,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "excuse_master",
+      "description": "S0晚期-借口大师-极高抗拒",
+      "success": true,
+      "commit_time": "nanti",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ada apa?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya, dengan saya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Gaji belum keluar",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Bagaimana rencana pembayaran Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, nanti ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat sore.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "very_high",
+      "push_count": 0,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "silent",
+      "description": "S0晚期-沉默客户",
+      "success": false,
+      "commit_time": null,
+      "conversation_length": 14,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Bagaimana rencana pembayaran Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "very_high",
+      "push_count": 3,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "resistant",
+      "description": "H2早期-抗拒客户-低抗拒",
+      "success": true,
+      "commit_time": "minggu ini",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Sore",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya sedang kesulitan",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa bayar Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Minggu ini",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Oke, minggu ini ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu minggu ini. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "resistant",
+      "description": "H1中期-抗拒客户-高抗拒",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 17,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Apaan sih?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya sedang kesulitan",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Saya belum punya duit",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Besok jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Tidak bisa",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Besok jam 3",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya. Oke, jam 3 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat siang.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "high",
+      "push_count": 3,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "resistant",
+      "description": "S0晚期-抗拒客户-极高抗拒",
+      "success": true,
+      "commit_time": "nanti",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti dulu ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa bayar ya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti dulu",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, nanti ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat sore.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "very_high",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "negotiating",
+      "description": "随机测试-1",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 15,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ada apa?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Bisa diundur nggak?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Siang atau sore?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Oke, besok jam 3",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya. Oke, jam 3 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Iya.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat siang.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "very_low",
+      "push_count": 2,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.850588"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "negotiating",
+      "description": "随机测试-2",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Halo",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "customer",
+          "text": "Ya, tapi saya sedang kesulitan",
+          "timestamp": "2026-04-26T13:59:06.850588"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Jam 2 atau jam 3?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya. Oke, jam 3 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "very_low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.852594"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "resistant",
+      "description": "随机测试-3",
+      "success": true,
+      "commit_time": "jam 5",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Pagi",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Aduh, saya lagi susah",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Bagaimana rencana pembayaran Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Jam 5",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, jam 5 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat sore.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "very_low",
+      "push_count": 0,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.852594"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "busy",
+      "description": "随机测试-4",
+      "success": true,
+      "commit_time": "jam 5",
+      "conversation_length": 15,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Ada apa?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Saya lagi di luar",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Saya lagi sibuk",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa bayar ya?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Saya lagi sibuk",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Oke, jam 5 deh",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, jam 5 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat sore.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "high",
+      "push_count": 2,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.852594"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "cooperative",
+      "description": "随机测试-5",
+      "success": true,
+      "commit_time": "jam 5",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Pagi",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Ya saya tahu",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Bagaimana rencana pembayaran Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Besok jam 5",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, jam 5 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Terima kasih",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "low",
+      "push_count": 0,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.852594"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "resistant",
+      "description": "随机测试-6",
+      "success": true,
+      "commit_time": "jam 8",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Sore",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Ya betul",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Ya, saya ingat",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa bayar Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Malam ini jam 8",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. jam 8 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu jam 8. Terima kasih. Selamat pagi.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "very_low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.852594"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "negotiating",
+      "description": "随机测试-7",
+      "success": true,
+      "commit_time": "jam 5",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Ada apa?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Oh ya, bisa nggak diperpanjang?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Jam 4 atau jam 5?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Oke, jam 5 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Iya.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.852594"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "cooperative",
+      "description": "随机测试-8",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Halo",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Oh ingatnya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Bagaimana rencana pembayaran Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Jam 3",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, jam 3 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Terima kasih",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat sore.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "very_high",
+      "push_count": 0,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.852594"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "forgetful",
+      "description": "随机测试-9",
+      "success": true,
+      "commit_time": "nanti",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Oh, baru ingat",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa bayar ya?",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Saya lupa, nanti saya ingat dulu",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, nanti ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat sore.",
+          "timestamp": "2026-04-26T13:59:06.852594"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "high",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.852594"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "negotiating",
+      "description": "随机测试-10",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 15,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ada apa?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Bisa diundur nggak?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Siang atau sore?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Besok jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Oke, besok jam 3",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya. Oke, jam 3 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat siang.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "very_low",
+      "push_count": 2,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "cooperative",
+      "description": "随机测试-11",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Sore",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya betul",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya, saya ingat",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Besok jam 3",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu jam 3.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Oke",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat siang.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "medium",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "silent",
+      "description": "随机测试-12",
+      "success": false,
+      "commit_time": null,
+      "conversation_length": 14,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Besok jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "high",
+      "push_count": 4,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "cooperative",
+      "description": "随机测试-13",
+      "success": true,
+      "commit_time": "lusa",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya betul",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya saya tahu",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Lusa",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. lusa ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Terima kasih",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat pagi.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "medium",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "busy",
+      "description": "随机测试-14",
+      "success": true,
+      "commit_time": "hari ini",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Maaf",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Sebentar",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Saya lagi sibuk",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa bayar ya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Hari ini",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, hari ini ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat sore.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "high",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "silent",
+      "description": "随机测试-15",
+      "success": false,
+      "commit_time": null,
+      "conversation_length": 14,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Bagaimana rencana pembayaran Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Hari apa ya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Hari apa ya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "very_low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "resistant",
+      "description": "随机测试-16",
+      "success": true,
+      "commit_time": "besok",
+      "conversation_length": 17,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Apaan sih?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ada apa sih?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Saya sedang kesulitan",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Gak bisa",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Besok jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Saya tidak mau bayar",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Oke deh, saya usahakan besok",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu besok.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "high",
+      "push_count": 3,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "negotiating",
+      "description": "随机测试-17",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ada apa?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Oh ya, bisa nggak diperpanjang?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Jam 2 atau jam 3?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. jam 3 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu jam 3. Terima kasih. Selamat pagi.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "resistant",
+      "description": "随机测试-18",
+      "success": true,
+      "commit_time": "jam 8",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ada apa?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Oh ingatnya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Bagaimana rencana pembayaran Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Malam ini jam 8",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, jam 8 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "...",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat sore.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "high",
+      "push_count": 0,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "forgetful",
+      "description": "随机测试-19",
+      "success": true,
+      "commit_time": "nanti",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Oh iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Oh, baru ingat",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa bayar ya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, nanti ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "cooperative",
+      "description": "随机测试-20",
+      "success": true,
+      "commit_time": "jam 5",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Benar",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Oh ingatnya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Besok jam 5",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya. Oke, jam 5 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Iya.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Saya komitmen",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat siang.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "very_low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "negotiating",
+      "description": "随机测试-21",
+      "success": true,
+      "commit_time": "besok",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ada apa?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Oh ya, bisa nggak diperpanjang?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Besok bisa?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. besok ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Iya.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat pagi.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "very_high",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "busy",
+      "description": "随机测试-22",
+      "success": true,
+      "commit_time": "hari ini",
+      "conversation_length": 15,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Sibuk",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Saya lagi di luar",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti saya hubungi balik",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Saya lagi luar",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Hari ini nanti",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya. Oke, hari ini ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat siang.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "medium",
+      "push_count": 2,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "forgetful",
+      "description": "随机测试-23",
+      "success": true,
+      "commit_time": "nanti",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ah, iya ya, pinjaman",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu nanti.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "very_high",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "cooperative",
+      "description": "随机测试-24",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Halo",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Benar",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya saya tahu",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Besok jam 3",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu jam 3.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Terima kasih",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat siang.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "very_low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "cooperative",
+      "description": "随机测试-25",
+      "success": true,
+      "commit_time": "jam 2",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Sore",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Oh ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Bagaimana rencana pembayaran Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Jam 2",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, jam 2 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Siap",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat sore.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "very_high",
+      "push_count": 0,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.853600"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H2",
+      "persona": "forgetful",
+      "description": "随机测试-26",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 15,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Oh, baru ingat",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa bayar Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Sebentar lagi",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Besok jam 3",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. jam 3 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.853600"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat pagi.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "medium",
+      "push_count": 2,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.855605"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "busy",
+      "description": "随机测试-27",
+      "success": true,
+      "commit_time": "nanti",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Sebentar ya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Sebentar",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Oh ya, tapi saya sedang keluar",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti ya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya. Oke, nanti ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Iya.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "high",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.855605"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "S0",
+      "persona": "negotiating",
+      "description": "随机测试-28",
+      "success": true,
+      "commit_time": "jam 3",
+      "conversation_length": 15,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo?",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Halo",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Ya, tapi saya sedang kesulitan",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Bagaimana rencana pembayaran Pak/Bu?",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Saya tunggu dana dulu",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa tepatnya?",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Oke, besok jam 3",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya, ya. Oke, jam 3 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih. Selamat sore.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        }
+      ],
+      "expected_success": false,
+      "resistance_level": "medium",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.855605"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "busy",
+      "description": "随机测试-29",
+      "success": true,
+      "commit_time": "besok",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Maaf",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti dulu ya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Nanti saya hubungi balik",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Jam berapa ya?",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Besok",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu besok.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Iya.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "very_low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.855605"
+    },
+    {
+      "session_id": "20260426_135906",
+      "chat_group": "H1",
+      "persona": "cooperative",
+      "description": "随机测试-30",
+      "success": true,
+      "commit_time": "jam 8",
+      "conversation_length": 13,
+      "conversation_log": [
+        {
+          "role": "agent",
+          "text": "Halo.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Ya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Untuk pinjaman yang sudah jatuh tempo.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Oh ingatnya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Kapan bisa melakukan pembayaran?",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Jam 8",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Ya, ya. Oke, jam 8 ya Pak/Bu.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Iya",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Baik.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "customer",
+          "text": "Oke",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        },
+        {
+          "role": "agent",
+          "text": "Saya tunggu ya. Terima kasih.",
+          "timestamp": "2026-04-26T13:59:06.855605"
+        }
+      ],
+      "expected_success": true,
+      "resistance_level": "low",
+      "push_count": 1,
+      "stage_completion": {
+        "greeting": true,
+        "identity": true,
+        "purpose": true,
+        "ask_time": true
+      },
+      "timestamp": "2026-04-26T13:59:06.855605"
+    }
+  ]
+}

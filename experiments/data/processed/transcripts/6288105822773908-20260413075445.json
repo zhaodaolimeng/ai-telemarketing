@@ -1,0 +1,683 @@
+{
+  "case_id": "6288105822773908-20260413075445",
+  "file_name": "6288105822773908-20260413075445.mp3",
+  "transcript": [
+    {
+      "start": 1.4599999999999955,
+      "end": 2.88,
+      "speaker": "AGENT",
+      "text": " Hello Semeku",
+      "words": [
+        {
+          "word": " Hello",
+          "start": 1.4599999999999955,
+          "end": 2.26,
+          "probability": 0.11326109617948532
+        },
+        {
+          "word": " Semeku",
+          "start": 2.26,
+          "end": 2.88,
+          "probability": 0.5863820711771647
+        }
+      ]
+    },
+    {
+      "start": 2.88,
+      "end": 4.46,
+      "speaker": "CUSTOMER",
+      "text": " Helo",
+      "words": [
+        {
+          "word": " Helo",
+          "start": 2.88,
+          "end": 4.46,
+          "probability": 0.4558535758405924
+        }
+      ]
+    },
+    {
+      "start": 4.46,
+      "end": 6.54,
+      "speaker": "AGENT",
+      "text": " Iya Ibu Bina",
+      "words": [
+        {
+          "word": " Iya",
+          "start": 4.46,
+          "end": 5.88,
+          "probability": 0.2059493213891983
+        },
+        {
+          "word": " Ibu",
+          "start": 5.88,
+          "end": 6.14,
+          "probability": 0.5035734921693802
+        },
+        {
+          "word": " Bina",
+          "start": 6.14,
+          "end": 6.54,
+          "probability": 0.7332188487052917
+        }
+      ]
+    },
+    {
+      "start": 6.54,
+      "end": 9.64,
+      "speaker": "CUSTOMER",
+      "text": " Ini di extra bitpass",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 6.54,
+          "end": 6.84,
+          "probability": 0.21794472634792328
+        },
+        {
+          "word": " di",
+          "start": 6.84,
+          "end": 8.54,
+          "probability": 0.0278585534542799
+        },
+        {
+          "word": " extra",
+          "start": 8.54,
+          "end": 9.12,
+          "probability": 0.5322275161743164
+        },
+        {
+          "word": " bitpass",
+          "start": 9.12,
+          "end": 9.64,
+          "probability": 0.27107924222946167
+        }
+      ]
+    },
+    {
+      "start": 9.64,
+      "end": 10.82,
+      "speaker": "AGENT",
+      "text": " Bisa jam berapa dibayarkan?",
+      "words": [
+        {
+          "word": " Bisa",
+          "start": 9.64,
+          "end": 9.92,
+          "probability": 0.7106679826974869
+        },
+        {
+          "word": " jam",
+          "start": 9.92,
+          "end": 10.1,
+          "probability": 0.2546796202659607
+        },
+        {
+          "word": " berapa",
+          "start": 10.1,
+          "end": 10.38,
+          "probability": 0.9653421640396118
+        },
+        {
+          "word": " dibayarkan?",
+          "start": 10.38,
+          "end": 10.82,
+          "probability": 0.6151000609000524
+        }
+      ]
+    },
+    {
+      "start": 12.76,
+      "end": 13.56,
+      "speaker": "CUSTOMER",
+      "text": " Paham",
+      "words": [
+        {
+          "word": " Paham",
+          "start": 12.76,
+          "end": 13.56,
+          "probability": 0.5264437894026438
+        }
+      ]
+    },
+    {
+      "start": 14.639999999999995,
+      "end": 15.76,
+      "speaker": "AGENT",
+      "text": " Gimana Buk?",
+      "words": [
+        {
+          "word": " Gimana",
+          "start": 14.639999999999995,
+          "end": 15.44,
+          "probability": 0.5773179903626442
+        },
+        {
+          "word": " Buk?",
+          "start": 15.44,
+          "end": 15.76,
+          "probability": 0.5421973019838333
+        }
+      ]
+    },
+    {
+      "start": 16.72,
+      "end": 17.64,
+      "speaker": "CUSTOMER",
+      "text": " Iya, senang",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 16.72,
+          "end": 17.1,
+          "probability": 0.9236474633216858
+        },
+        {
+          "word": " senang",
+          "start": 17.38,
+          "end": 17.64,
+          "probability": 0.32701870799064636
+        }
+      ]
+    },
+    {
+      "start": 17.64,
+      "end": 20.9,
+      "speaker": "CUSTOMER",
+      "text": " Iya ini extra bitpass",
+      "words": [
+        {
+          "word": " Iya",
+          "start": 17.64,
+          "end": 19.04,
+          "probability": 0.0003255532938055694
+        },
+        {
+          "word": " ini",
+          "start": 19.04,
+          "end": 19.84,
+          "probability": 0.42815840244293213
+        },
+        {
+          "word": " extra",
+          "start": 19.84,
+          "end": 20.26,
+          "probability": 0.9763342142105103
+        },
+        {
+          "word": " bitpass",
+          "start": 20.26,
+          "end": 20.9,
+          "probability": 0.9865949749946594
+        }
+      ]
+    },
+    {
+      "start": 20.9,
+      "end": 22.46,
+      "speaker": "CUSTOMER",
+      "text": " Bisa dibayarkan jam berapa?",
+      "words": [
+        {
+          "word": " Bisa",
+          "start": 20.9,
+          "end": 21.2,
+          "probability": 0.9448549151420593
+        },
+        {
+          "word": " dibayarkan",
+          "start": 21.2,
+          "end": 21.6,
+          "probability": 0.91207488377889
+        },
+        {
+          "word": " jam",
+          "start": 21.6,
+          "end": 21.92,
+          "probability": 0.9840743541717529
+        },
+        {
+          "word": " berapa?",
+          "start": 21.92,
+          "end": 22.46,
+          "probability": 0.997175008058548
+        }
+      ]
+    },
+    {
+      "start": 24.0,
+      "end": 24.86,
+      "speaker": "AGENT",
+      "text": " Oh, paling sore",
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 23.86,
+          "end": 24.26,
+          "probability": 0.1786094754934311
+        },
+        {
+          "word": " paling",
+          "start": 24.36,
+          "end": 24.6,
+          "probability": 0.7550008893013
+        },
+        {
+          "word": " sore",
+          "start": 24.6,
+          "end": 24.86,
+          "probability": 0.6141312122344971
+        }
+      ]
+    },
+    {
+      "start": 26.0,
+      "end": 27.8,
+      "speaker": "CUSTOMER",
+      "text": " Oke, satu oma tujuhnya Buk",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 25.959999999999997,
+          "end": 26.36,
+          "probability": 0.697640061378479
+        },
+        {
+          "word": " satu",
+          "start": 26.62,
+          "end": 26.92,
+          "probability": 0.4288891553878784
+        },
+        {
+          "word": " oma",
+          "start": 26.92,
+          "end": 27.16,
+          "probability": 0.6233363896608353
+        },
+        {
+          "word": " tujuhnya",
+          "start": 27.16,
+          "end": 27.56,
+          "probability": 0.6678028702735901
+        },
+        {
+          "word": " Buk",
+          "start": 27.56,
+          "end": 27.8,
+          "probability": 0.8408948481082916
+        }
+      ]
+    },
+    {
+      "start": 30.32,
+      "end": 31.06,
+      "speaker": "AGENT",
+      "text": " Apaan tadi?",
+      "words": [
+        {
+          "word": " Apaan",
+          "start": 30.32,
+          "end": 30.88,
+          "probability": 0.3976878896355629
+        },
+        {
+          "word": " tadi?",
+          "start": 30.88,
+          "end": 31.06,
+          "probability": 0.8999941349029541
+        }
+      ]
+    },
+    {
+      "start": 31.52,
+      "end": 32.84,
+      "speaker": "CUSTOMER",
+      "text": " Ini selalu perisiat semua",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 31.52,
+          "end": 31.7,
+          "probability": 0.7355892658233643
+        },
+        {
+          "word": " selalu",
+          "start": 31.7,
+          "end": 31.98,
+          "probability": 0.6467001140117645
+        },
+        {
+          "word": " perisiat",
+          "start": 31.98,
+          "end": 32.46,
+          "probability": 0.40051348010698956
+        },
+        {
+          "word": " semua",
+          "start": 32.46,
+          "end": 32.84,
+          "probability": 0.9928193688392639
+        }
+      ]
+    },
+    {
+      "start": 32.84,
+      "end": 34.42,
+      "speaker": "CUSTOMER",
+      "text": " Nanti saya itin dulu",
+      "words": [
+        {
+          "word": " Nanti",
+          "start": 32.84,
+          "end": 33.68,
+          "probability": 0.5705028846859932
+        },
+        {
+          "word": " saya",
+          "start": 33.68,
+          "end": 33.9,
+          "probability": 0.9601809978485107
+        },
+        {
+          "word": " itin",
+          "start": 33.9,
+          "end": 34.2,
+          "probability": 0.4004833698272705
+        },
+        {
+          "word": " dulu",
+          "start": 34.2,
+          "end": 34.42,
+          "probability": 0.9894247055053711
+        }
+      ]
+    },
+    {
+      "start": 35.599999999999994,
+      "end": 36.48,
+      "speaker": "AGENT",
+      "text": " Gimana Buk?",
+      "words": [
+        {
+          "word": " Gimana",
+          "start": 35.599999999999994,
+          "end": 36.16,
+          "probability": 0.8221289217472076
+        },
+        {
+          "word": " Buk?",
+          "start": 36.16,
+          "end": 36.48,
+          "probability": 0.4698350727558136
+        }
+      ]
+    },
+    {
+      "start": 37.52,
+      "end": 39.94,
+      "speaker": "CUSTOMER",
+      "text": " Ini soalnya hati saya ini lagi perisiat semua",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 37.52,
+          "end": 37.84,
+          "probability": 0.300849974155426
+        },
+        {
+          "word": " soalnya",
+          "start": 37.84,
+          "end": 38.3,
+          "probability": 0.7941915690898895
+        },
+        {
+          "word": " hati",
+          "start": 38.3,
+          "end": 38.58,
+          "probability": 0.5973914116621017
+        },
+        {
+          "word": " saya",
+          "start": 38.58,
+          "end": 38.72,
+          "probability": 0.9502022862434387
+        },
+        {
+          "word": " ini",
+          "start": 38.72,
+          "end": 38.8,
+          "probability": 0.49072176218032837
+        },
+        {
+          "word": " lagi",
+          "start": 38.8,
+          "end": 39.0,
+          "probability": 0.9087180495262146
+        },
+        {
+          "word": " perisiat",
+          "start": 39.0,
+          "end": 39.5,
+          "probability": 0.910280724366506
+        },
+        {
+          "word": " semua",
+          "start": 39.5,
+          "end": 39.94,
+          "probability": 0.9973433613777161
+        }
+      ]
+    },
+    {
+      "start": 39.94,
+      "end": 41.06,
+      "speaker": "CUSTOMER",
+      "text": " Jadi saya lagi",
+      "words": [
+        {
+          "word": " Jadi",
+          "start": 39.94,
+          "end": 40.62,
+          "probability": 0.5693160891532898
+        },
+        {
+          "word": " saya",
+          "start": 40.62,
+          "end": 40.86,
+          "probability": 0.9828884601593018
+        },
+        {
+          "word": " lagi",
+          "start": 40.86,
+          "end": 41.06,
+          "probability": 0.21938611567020416
+        }
+      ]
+    },
+    {
+      "start": 41.92,
+      "end": 44.02,
+      "speaker": "CUSTOMER",
+      "text": " Nanti saya kirifkan Buk",
+      "words": [
+        {
+          "word": " Nanti",
+          "start": 41.92,
+          "end": 42.48,
+          "probability": 0.515618946403265
+        },
+        {
+          "word": " saya",
+          "start": 42.48,
+          "end": 42.62,
+          "probability": 0.8598098158836365
+        },
+        {
+          "word": " kirifkan",
+          "start": 42.62,
+          "end": 43.04,
+          "probability": 0.4441535174846649
+        },
+        {
+          "word": " Buk",
+          "start": 43.04,
+          "end": 44.02,
+          "probability": 0.841276079416275
+        }
+      ]
+    },
+    {
+      "start": 44.02,
+      "end": 45.4,
+      "speaker": "CUSTOMER",
+      "text": " Oh iya iya",
+      "words": [
+        {
+          "word": " Oh",
+          "start": 44.02,
+          "end": 44.24,
+          "probability": 0.29295262694358826
+        },
+        {
+          "word": " iya",
+          "start": 44.24,
+          "end": 44.48,
+          "probability": 0.8739647567272186
+        },
+        {
+          "word": " iya",
+          "start": 44.48,
+          "end": 45.4,
+          "probability": 0.8490315973758698
+        }
+      ]
+    },
+    {
+      "start": 45.4,
+      "end": 47.46,
+      "speaker": "CUSTOMER",
+      "text": " Ya aman Buk, saya akan di lanjut ya Buk",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 45.4,
+          "end": 45.58,
+          "probability": 0.43654343485832214
+        },
+        {
+          "word": " aman",
+          "start": 45.58,
+          "end": 45.86,
+          "probability": 0.946325957775116
+        },
+        {
+          "word": " Buk,",
+          "start": 45.86,
+          "end": 46.36,
+          "probability": 0.8770437240600586
+        },
+        {
+          "word": " saya",
+          "start": 46.48,
+          "end": 46.66,
+          "probability": 0.7503086924552917
+        },
+        {
+          "word": " akan",
+          "start": 46.66,
+          "end": 46.82,
+          "probability": 0.9892465472221375
+        },
+        {
+          "word": " di",
+          "start": 46.82,
+          "end": 46.96,
+          "probability": 0.3613590598106384
+        },
+        {
+          "word": " lanjut",
+          "start": 46.96,
+          "end": 47.18,
+          "probability": 0.9545742869377136
+        },
+        {
+          "word": " ya",
+          "start": 47.18,
+          "end": 47.3,
+          "probability": 0.9239563345909119
+        },
+        {
+          "word": " Buk",
+          "start": 47.3,
+          "end": 47.46,
+          "probability": 0.8067450225353241
+        }
+      ]
+    },
+    {
+      "start": 47.46,
+      "end": 48.26,
+      "speaker": "CUSTOMER",
+      "text": " Nanti saya hubungi",
+      "words": [
+        {
+          "word": " Nanti",
+          "start": 47.46,
+          "end": 47.64,
+          "probability": 0.6100112795829773
+        },
+        {
+          "word": " saya",
+          "start": 47.64,
+          "end": 47.82,
+          "probability": 0.9685170650482178
+        },
+        {
+          "word": " hubungi",
+          "start": 47.82,
+          "end": 48.26,
+          "probability": 0.9313928882280985
+        }
+      ]
+    },
+    {
+      "start": 48.26,
+      "end": 51.9,
+      "speaker": "AGENT",
+      "text": " Oke terima kasih, selamat pagi",
+      "words": [
+        {
+          "word": " Oke",
+          "start": 48.26,
+          "end": 49.3,
+          "probability": 0.02873358316719532
+        },
+        {
+          "word": " terima",
+          "start": 49.3,
+          "end": 50.86,
+          "probability": 0.8943271636962891
+        },
+        {
+          "word": " kasih,",
+          "start": 50.86,
+          "end": 51.14,
+          "probability": 0.9988136291503906
+        },
+        {
+          "word": " selamat",
+          "start": 51.36,
+          "end": 51.56,
+          "probability": 0.673683226108551
+        },
+        {
+          "word": " pagi",
+          "start": 51.56,
+          "end": 51.9,
+          "probability": 0.9957318007946014
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello Semeku  Helo  Iya Ibu Bina  Ini di extra bitpass  Bisa jam berapa dibayarkan?  Paham  Gimana Buk?  Iya, senang  Iya ini extra bitpass  Bisa dibayarkan jam berapa?  Oh, paling sore  Oke, satu oma tujuhnya Buk  Apaan tadi?  Ini selalu perisiat semua  Nanti saya itin dulu  Gimana Buk?  Ini soalnya hati saya ini lagi perisiat semua  Jadi saya lagi  Nanti saya kirifkan Buk  Oh iya iya  Ya aman Buk, saya akan di lanjut ya Buk  Nanti saya hubungi  Oke terima kasih, selamat pagi"
+}

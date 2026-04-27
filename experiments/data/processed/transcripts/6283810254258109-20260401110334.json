@@ -1,0 +1,701 @@
+{
+  "case_id": "6283810254258109-20260401110334",
+  "file_name": "6283810254258109-20260401110334.mp3",
+  "transcript": [
+    {
+      "start": 1.939999999999999,
+      "end": 3.42,
+      "speaker": "AGENT",
+      "text": " Kalau sama siapa?",
+      "words": [
+        {
+          "word": " Kalau",
+          "start": 1.939999999999999,
+          "end": 2.56,
+          "probability": 0.04528476297855377
+        },
+        {
+          "word": " sama",
+          "start": 2.56,
+          "end": 2.94,
+          "probability": 0.7807368040084839
+        },
+        {
+          "word": " siapa?",
+          "start": 2.94,
+          "end": 3.42,
+          "probability": 0.3857726529240608
+        }
+      ]
+    },
+    {
+      "start": 4.48,
+      "end": 5.06,
+      "speaker": "CUSTOMER",
+      "text": " Iya.",
+      "words": [
+        {
+          "word": " Iya.",
+          "start": 4.48,
+          "end": 5.06,
+          "probability": 0.1935819387435913
+        }
+      ]
+    },
+    {
+      "start": 5.56,
+      "end": 7.06,
+      "speaker": "AGENT",
+      "text": " Dilembap Ahmad Yusuf.",
+      "words": [
+        {
+          "word": " Dilembap",
+          "start": 5.56,
+          "end": 6.12,
+          "probability": 0.4893908528611064
+        },
+        {
+          "word": " Ahmad",
+          "start": 6.12,
+          "end": 6.46,
+          "probability": 0.4218638241291046
+        },
+        {
+          "word": " Yusuf.",
+          "start": 6.46,
+          "end": 7.06,
+          "probability": 0.6412423352400461
+        }
+      ]
+    },
+    {
+      "start": 7.98,
+      "end": 8.6,
+      "speaker": "CUSTOMER",
+      "text": " Betul.",
+      "words": [
+        {
+          "word": " Betul.",
+          "start": 7.98,
+          "end": 8.6,
+          "probability": 0.6948200017213821
+        }
+      ]
+    },
+    {
+      "start": 9.18,
+      "end": 10.78,
+      "speaker": "AGENT",
+      "text": " Iya, saya dari aplikasi ekstra.",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 9.18,
+          "end": 9.44,
+          "probability": 0.8552116751670837
+        },
+        {
+          "word": " saya",
+          "start": 9.7,
+          "end": 9.9,
+          "probability": 0.8256328701972961
+        },
+        {
+          "word": " dari",
+          "start": 9.9,
+          "end": 10.06,
+          "probability": 0.9774714112281799
+        },
+        {
+          "word": " aplikasi",
+          "start": 10.06,
+          "end": 10.48,
+          "probability": 0.9419723947842916
+        },
+        {
+          "word": " ekstra.",
+          "start": 10.48,
+          "end": 10.78,
+          "probability": 0.6808519214391708
+        }
+      ]
+    },
+    {
+      "start": 10.92,
+      "end": 12.78,
+      "speaker": "AGENT",
+      "text": " Apa ini jam berapa lagi Pak, dibayar tagginnya?",
+      "words": [
+        {
+          "word": " Apa",
+          "start": 10.92,
+          "end": 11.02,
+          "probability": 0.23386451601982117
+        },
+        {
+          "word": " ini",
+          "start": 11.02,
+          "end": 11.12,
+          "probability": 0.846326470375061
+        },
+        {
+          "word": " jam",
+          "start": 11.12,
+          "end": 11.32,
+          "probability": 0.3786185681819916
+        },
+        {
+          "word": " berapa",
+          "start": 11.32,
+          "end": 11.56,
+          "probability": 0.8692715764045715
+        },
+        {
+          "word": " lagi",
+          "start": 11.56,
+          "end": 11.8,
+          "probability": 0.9927638173103333
+        },
+        {
+          "word": " Pak,",
+          "start": 11.8,
+          "end": 11.96,
+          "probability": 0.32336586713790894
+        },
+        {
+          "word": " dibayar",
+          "start": 12.02,
+          "end": 12.32,
+          "probability": 0.9162769913673401
+        },
+        {
+          "word": " tagginnya?",
+          "start": 12.32,
+          "end": 12.78,
+          "probability": 0.4308567891518275
+        }
+      ]
+    },
+    {
+      "start": 14.24,
+      "end": 15.78,
+      "speaker": "AGENT",
+      "text": " Ini lagi nunggu.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 14.24,
+          "end": 14.86,
+          "probability": 0.6382586359977722
+        },
+        {
+          "word": " lagi",
+          "start": 14.86,
+          "end": 15.1,
+          "probability": 0.9170997738838196
+        },
+        {
+          "word": " nunggu.",
+          "start": 15.1,
+          "end": 15.78,
+          "probability": 0.7359642585118612
+        }
+      ]
+    },
+    {
+      "start": 16.24,
+      "end": 17.22,
+      "speaker": "CUSTOMER",
+      "text": " Langsung masuk dulu.",
+      "words": [
+        {
+          "word": " Langsung",
+          "start": 16.24,
+          "end": 16.86,
+          "probability": 0.5212404578924179
+        },
+        {
+          "word": " masuk",
+          "start": 16.86,
+          "end": 16.86,
+          "probability": 0.9379327893257141
+        },
+        {
+          "word": " dulu.",
+          "start": 16.86,
+          "end": 17.22,
+          "probability": 0.9646996855735779
+        }
+      ]
+    },
+    {
+      "start": 17.64,
+      "end": 19.78,
+      "speaker": "CUSTOMER",
+      "text": " Kalau udah masuk, saya langsung ditransferin ya.",
+      "words": [
+        {
+          "word": " Kalau",
+          "start": 17.64,
+          "end": 17.8,
+          "probability": 0.9586045145988464
+        },
+        {
+          "word": " udah",
+          "start": 17.8,
+          "end": 17.96,
+          "probability": 0.3319157063961029
+        },
+        {
+          "word": " masuk,",
+          "start": 17.96,
+          "end": 18.28,
+          "probability": 0.9430864453315735
+        },
+        {
+          "word": " saya",
+          "start": 18.52,
+          "end": 18.62,
+          "probability": 0.8799563646316528
+        },
+        {
+          "word": " langsung",
+          "start": 18.62,
+          "end": 18.9,
+          "probability": 0.9966624677181244
+        },
+        {
+          "word": " ditransferin",
+          "start": 18.9,
+          "end": 19.58,
+          "probability": 0.7158191353082657
+        },
+        {
+          "word": " ya.",
+          "start": 19.58,
+          "end": 19.78,
+          "probability": 0.7626307606697083
+        }
+      ]
+    },
+    {
+      "start": 20.5,
+      "end": 21.7,
+      "speaker": "CUSTOMER",
+      "text": " Tapi Pak si hari ini payah?",
+      "words": [
+        {
+          "word": " Tapi",
+          "start": 20.5,
+          "end": 20.82,
+          "probability": 0.9759893417358398
+        },
+        {
+          "word": " Pak",
+          "start": 20.82,
+          "end": 20.94,
+          "probability": 0.4815383553504944
+        },
+        {
+          "word": " si",
+          "start": 20.94,
+          "end": 21.12,
+          "probability": 0.6766224503517151
+        },
+        {
+          "word": " hari",
+          "start": 21.12,
+          "end": 21.28,
+          "probability": 0.7138099074363708
+        },
+        {
+          "word": " ini",
+          "start": 21.28,
+          "end": 21.48,
+          "probability": 0.9960134029388428
+        },
+        {
+          "word": " payah?",
+          "start": 21.48,
+          "end": 21.7,
+          "probability": 0.6753940135240555
+        }
+      ]
+    },
+    {
+      "start": 22.78,
+      "end": 24.0,
+      "speaker": "AGENT",
+      "text": " Ini hari ini dibayar diselesaikan.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 22.78,
+          "end": 23.14,
+          "probability": 0.18630175292491913
+        },
+        {
+          "word": " hari",
+          "start": 23.14,
+          "end": 23.32,
+          "probability": 0.9708350300788879
+        },
+        {
+          "word": " ini",
+          "start": 23.32,
+          "end": 23.54,
+          "probability": 0.9619537591934204
+        },
+        {
+          "word": " dibayar",
+          "start": 23.54,
+          "end": 23.92,
+          "probability": 0.7995336254437765
+        },
+        {
+          "word": " diselesaikan.",
+          "start": 23.92,
+          "end": 24.230000000000004,
+          "probability": 0.5457890592515469
+        }
+      ]
+    },
+    {
+      "start": 25.58,
+      "end": 27.04,
+      "speaker": "AGENT",
+      "text": " Jam berapa gira-gira Pak?",
+      "words": [
+        {
+          "word": " Jam",
+          "start": 25.58,
+          "end": 26.2,
+          "probability": 0.9033277034759521
+        },
+        {
+          "word": " berapa",
+          "start": 26.2,
+          "end": 26.44,
+          "probability": 0.9986408948898315
+        },
+        {
+          "word": " gira",
+          "start": 26.44,
+          "end": 26.7,
+          "probability": 0.6414044797420502
+        },
+        {
+          "word": "-gira",
+          "start": 26.7,
+          "end": 26.86,
+          "probability": 0.9820576111475626
+        },
+        {
+          "word": " Pak?",
+          "start": 26.86,
+          "end": 27.04,
+          "probability": 0.8427097201347351
+        }
+      ]
+    },
+    {
+      "start": 28.58,
+      "end": 30.32,
+      "speaker": "CUSTOMER",
+      "text": " Ya, mudah-mudahan.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 28.58,
+          "end": 29.32,
+          "probability": 0.1792859435081482
+        },
+        {
+          "word": " mudah",
+          "start": 29.6,
+          "end": 29.9,
+          "probability": 0.6524022817611694
+        },
+        {
+          "word": "-mudahan.",
+          "start": 29.9,
+          "end": 30.32,
+          "probability": 0.9622052510579427
+        }
+      ]
+    },
+    {
+      "start": 30.98,
+      "end": 31.04,
+      "speaker": "CUSTOMER",
+      "text": " Secepatnya.",
+      "words": [
+        {
+          "word": " Secepatnya.",
+          "start": 30.98,
+          "end": 31.35,
+          "probability": 0.9510334432125092
+        }
+      ]
+    },
+    {
+      "start": 31.94,
+      "end": 33.44,
+      "speaker": "AGENT",
+      "text": " Setelah diselesaikan lagi nunggu.",
+      "words": [
+        {
+          "word": " Setelah",
+          "start": 31.94,
+          "end": 32.44,
+          "probability": 0.6770994861920675
+        },
+        {
+          "word": " diselesaikan",
+          "start": 32.44,
+          "end": 33.0,
+          "probability": 0.30546892853453755
+        },
+        {
+          "word": " lagi",
+          "start": 33.0,
+          "end": 33.0,
+          "probability": 0.5356837511062622
+        },
+        {
+          "word": " nunggu.",
+          "start": 33.0,
+          "end": 33.44,
+          "probability": 0.7662189900875092
+        }
+      ]
+    },
+    {
+      "start": 33.74,
+      "end": 34.3,
+      "speaker": "CUSTOMER",
+      "text": " Langsung masuk dulu.",
+      "words": [
+        {
+          "word": " Langsung",
+          "start": 33.74,
+          "end": 34.0,
+          "probability": 0.4307154337875545
+        },
+        {
+          "word": " masuk",
+          "start": 34.0,
+          "end": 34.0,
+          "probability": 0.8913518190383911
+        },
+        {
+          "word": " dulu.",
+          "start": 34.0,
+          "end": 34.3,
+          "probability": 0.9541519284248352
+        }
+      ]
+    },
+    {
+      "start": 36.56,
+      "end": 38.62,
+      "speaker": "CUSTOMER",
+      "text": " Oke, saya tunggu di tempatnya apa ya?",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 36.56,
+          "end": 37.28,
+          "probability": 0.4872531592845917
+        },
+        {
+          "word": " saya",
+          "start": 37.4,
+          "end": 37.52,
+          "probability": 0.1749403178691864
+        },
+        {
+          "word": " tunggu",
+          "start": 37.52,
+          "end": 37.56,
+          "probability": 0.7995070219039917
+        },
+        {
+          "word": " di",
+          "start": 37.56,
+          "end": 37.56,
+          "probability": 0.06549809873104095
+        },
+        {
+          "word": " tempatnya",
+          "start": 37.56,
+          "end": 38.26,
+          "probability": 0.5815427824854851
+        },
+        {
+          "word": " apa",
+          "start": 38.26,
+          "end": 38.46,
+          "probability": 0.7660878896713257
+        },
+        {
+          "word": " ya?",
+          "start": 38.46,
+          "end": 38.62,
+          "probability": 0.7201576232910156
+        }
+      ]
+    },
+    {
+      "start": 39.3,
+      "end": 40.14,
+      "speaker": "CUSTOMER",
+      "text": " Iya, biasa.",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 39.3,
+          "end": 39.7,
+          "probability": 0.6079248189926147
+        },
+        {
+          "word": " biasa.",
+          "start": 39.88,
+          "end": 40.14,
+          "probability": 0.7967043519020081
+        }
+      ]
+    },
+    {
+      "start": 40.34,
+      "end": 42.68,
+      "speaker": "CUSTOMER",
+      "text": " Pokoknya nanti udah langsung di masukin.",
+      "words": [
+        {
+          "word": " Pokoknya",
+          "start": 40.34,
+          "end": 40.58,
+          "probability": 0.8480104804039001
+        },
+        {
+          "word": " nanti",
+          "start": 40.58,
+          "end": 40.84,
+          "probability": 0.8717310130596161
+        },
+        {
+          "word": " udah",
+          "start": 40.84,
+          "end": 41.06,
+          "probability": 0.4532584249973297
+        },
+        {
+          "word": " langsung",
+          "start": 41.06,
+          "end": 41.64,
+          "probability": 0.50246118940413
+        },
+        {
+          "word": " di",
+          "start": 41.64,
+          "end": 41.84,
+          "probability": 0.0740966722369194
+        },
+        {
+          "word": " masukin.",
+          "start": 41.84,
+          "end": 42.68,
+          "probability": 0.7731410562992096
+        }
+      ]
+    },
+    {
+      "start": 46.239999999999995,
+      "end": 47.72,
+      "speaker": "CUSTOMER",
+      "text": " Langsung ditransferin.",
+      "words": [
+        {
+          "word": " Langsung",
+          "start": 46.239999999999995,
+          "end": 46.98,
+          "probability": 0.9115836322307587
+        },
+        {
+          "word": " ditransferin.",
+          "start": 46.98,
+          "end": 47.72,
+          "probability": 0.5718487668782473
+        }
+      ]
+    },
+    {
+      "start": 49.1,
+      "end": 50.46,
+      "speaker": "AGENT",
+      "text": " Oke, terima kasih.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 49.1,
+          "end": 49.84,
+          "probability": 0.7554075121879578
+        },
+        {
+          "word": " terima",
+          "start": 50.0,
+          "end": 50.12,
+          "probability": 0.9683044254779816
+        },
+        {
+          "word": " kasih.",
+          "start": 50.12,
+          "end": 50.46,
+          "probability": 0.9948477745056152
+        }
+      ]
+    },
+    {
+      "start": 50.68,
+      "end": 51.78,
+      "speaker": "CUSTOMER",
+      "text": " Selamat tinggal.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 50.68,
+          "end": 50.98,
+          "probability": 0.9495987296104431
+        },
+        {
+          "word": " tinggal.",
+          "start": 50.98,
+          "end": 51.78,
+          "probability": 0.5463762395083904
+        }
+      ]
+    },
+    {
+      "start": 52.26,
+      "end": 52.98,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 52.26,
+          "end": 52.98,
+          "probability": 0.5569290593266487
+        },
+        {
+          "word": " kasih.",
+          "start": 52.98,
+          "end": 52.98,
+          "probability": 0.9834949374198914
+        }
+      ]
+    }
+  ],
+  "full_text": " Kalau sama siapa?  Iya.  Dilembap Ahmad Yusuf.  Betul.  Iya, saya dari aplikasi ekstra.  Apa ini jam berapa lagi Pak, dibayar tagginnya?  Ini lagi nunggu.  Langsung masuk dulu.  Kalau udah masuk, saya langsung ditransferin ya.  Tapi Pak si hari ini payah?  Ini hari ini dibayar diselesaikan.  Jam berapa gira-gira Pak?  Ya, mudah-mudahan.  Secepatnya.  Setelah diselesaikan lagi nunggu.  Langsung masuk dulu.  Oke, saya tunggu di tempatnya apa ya?  Iya, biasa.  Pokoknya nanti udah langsung di masukin.  Langsung ditransferin.  Oke, terima kasih.  Selamat tinggal.  Terima kasih."
+}

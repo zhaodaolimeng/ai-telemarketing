@@ -1,0 +1,445 @@
+{
+  "case_id": "6281311220754309-20260411071959",
+  "file_name": "6281311220754309-20260411071959.mp3",
+  "transcript": [
+    {
+      "start": 3.0600000000000014,
+      "end": 3.8,
+      "text": " Alamakalem",
+      "words": [
+        {
+          "word": " Alamakalem",
+          "start": 3.0600000000000014,
+          "end": 3.8,
+          "probability": 0.2763550080358982
+        }
+      ]
+    },
+    {
+      "start": 8.140000000000002,
+      "end": 8.88,
+      "text": " Alamakalem",
+      "words": [
+        {
+          "word": " Alamakalem",
+          "start": 8.140000000000002,
+          "end": 8.88,
+          "probability": 0.7944791972637176
+        }
+      ]
+    },
+    {
+      "start": 8.88,
+      "end": 9.7,
+      "text": " Alamakalem",
+      "words": [
+        {
+          "word": " Alamakalem",
+          "start": 8.88,
+          "end": 9.7,
+          "probability": 0.8042916163802147
+        }
+      ]
+    },
+    {
+      "start": 9.7,
+      "end": 10.26,
+      "text": " Alamakalem",
+      "words": [
+        {
+          "word": " Alamakalem",
+          "start": 9.7,
+          "end": 10.26,
+          "probability": 0.8001347035169601
+        }
+      ]
+    },
+    {
+      "start": 10.26,
+      "end": 11.14,
+      "text": " Alamakalem",
+      "words": [
+        {
+          "word": " Alamakalem",
+          "start": 10.26,
+          "end": 11.14,
+          "probability": 0.7963321104645729
+        }
+      ]
+    },
+    {
+      "start": 11.14,
+      "end": 12.26,
+      "text": " Alamakalem",
+      "words": [
+        {
+          "word": " Alamakalem",
+          "start": 11.14,
+          "end": 12.26,
+          "probability": 0.7964100886136294
+        }
+      ]
+    },
+    {
+      "start": 12.26,
+      "end": 13.42,
+      "text": " Bapak Indah, Alamakalem",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 12.26,
+          "end": 12.62,
+          "probability": 0.8641028801600138
+        },
+        {
+          "word": " Indah,",
+          "start": 12.62,
+          "end": 12.92,
+          "probability": 0.6659531593322754
+        },
+        {
+          "word": " Alamakalem",
+          "start": 12.98,
+          "end": 13.42,
+          "probability": 0.8940473020076751
+        }
+      ]
+    },
+    {
+      "start": 14.240000000000002,
+      "end": 14.98,
+      "text": " Ya",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 14.240000000000002,
+          "end": 14.98,
+          "probability": 0.594310998916626
+        }
+      ]
+    },
+    {
+      "start": 16.020000000000003,
+      "end": 16.76,
+      "text": " Ya",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 16.020000000000003,
+          "end": 16.76,
+          "probability": 0.14851197600364685
+        }
+      ]
+    },
+    {
+      "start": 17.64,
+      "end": 19.66,
+      "text": " Saya dari aplikasi ekstra pak",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 17.64,
+          "end": 18.38,
+          "probability": 0.3055689036846161
+        },
+        {
+          "word": " dari",
+          "start": 18.38,
+          "end": 18.56,
+          "probability": 0.3233286440372467
+        },
+        {
+          "word": " aplikasi",
+          "start": 18.56,
+          "end": 19.0,
+          "probability": 0.8011219700177511
+        },
+        {
+          "word": " ekstra",
+          "start": 19.0,
+          "end": 19.4,
+          "probability": 0.3336822837591171
+        },
+        {
+          "word": " pak",
+          "start": 19.4,
+          "end": 19.66,
+          "probability": 0.12357024848461151
+        }
+      ]
+    },
+    {
+      "start": 19.66,
+      "end": 22.08,
+      "text": " Pinjamannya di bayar ke hari ini ya",
+      "words": [
+        {
+          "word": " Pinjamannya",
+          "start": 19.66,
+          "end": 20.74,
+          "probability": 0.38641735663016635
+        },
+        {
+          "word": " di",
+          "start": 20.74,
+          "end": 20.88,
+          "probability": 0.26308247447013855
+        },
+        {
+          "word": " bayar",
+          "start": 20.88,
+          "end": 21.08,
+          "probability": 0.5788626372814178
+        },
+        {
+          "word": " ke",
+          "start": 21.08,
+          "end": 21.18,
+          "probability": 0.18824927508831024
+        },
+        {
+          "word": " hari",
+          "start": 21.18,
+          "end": 21.36,
+          "probability": 0.6782742738723755
+        },
+        {
+          "word": " ini",
+          "start": 21.36,
+          "end": 21.54,
+          "probability": 0.9818467497825623
+        },
+        {
+          "word": " ya",
+          "start": 21.54,
+          "end": 22.08,
+          "probability": 0.9155799746513367
+        }
+      ]
+    },
+    {
+      "start": 22.08,
+      "end": 24.42,
+      "text": " Ya, masih pagi bang",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 22.08,
+          "end": 23.18,
+          "probability": 0.8329029679298401
+        },
+        {
+          "word": " masih",
+          "start": 23.56,
+          "end": 23.74,
+          "probability": 0.6774450540542603
+        },
+        {
+          "word": " pagi",
+          "start": 23.74,
+          "end": 24.2,
+          "probability": 0.9919131994247437
+        },
+        {
+          "word": " bang",
+          "start": 24.2,
+          "end": 24.42,
+          "probability": 0.2884083688259125
+        }
+      ]
+    },
+    {
+      "start": 25.26,
+      "end": 26.92,
+      "text": " Ya, gimana pak?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 25.26,
+          "end": 26.0,
+          "probability": 0.8662097454071045
+        },
+        {
+          "word": " gimana",
+          "start": 26.2,
+          "end": 26.52,
+          "probability": 0.9802249073982239
+        },
+        {
+          "word": " pak?",
+          "start": 26.52,
+          "end": 26.92,
+          "probability": 0.985015869140625
+        }
+      ]
+    },
+    {
+      "start": 28.16,
+      "end": 29.64,
+      "text": " Ya masih pagi ya, masih ada waktu",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 28.16,
+          "end": 28.32,
+          "probability": 0.8165247440338135
+        },
+        {
+          "word": " masih",
+          "start": 28.32,
+          "end": 28.46,
+          "probability": 0.8565464019775391
+        },
+        {
+          "word": " pagi",
+          "start": 28.46,
+          "end": 28.86,
+          "probability": 0.9921325743198395
+        },
+        {
+          "word": " ya,",
+          "start": 28.86,
+          "end": 28.98,
+          "probability": 0.34946903586387634
+        },
+        {
+          "word": " masih",
+          "start": 29.0,
+          "end": 29.16,
+          "probability": 0.19476363062858582
+        },
+        {
+          "word": " ada",
+          "start": 29.16,
+          "end": 29.32,
+          "probability": 0.3987201452255249
+        },
+        {
+          "word": " waktu",
+          "start": 29.32,
+          "end": 29.64,
+          "probability": 0.9424595236778259
+        }
+      ]
+    },
+    {
+      "start": 30.32,
+      "end": 31.32,
+      "text": " Ya, aman",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 30.32,
+          "end": 30.82,
+          "probability": 0.018380410969257355
+        },
+        {
+          "word": " aman",
+          "start": 31.06,
+          "end": 31.32,
+          "probability": 0.7285106778144836
+        }
+      ]
+    },
+    {
+      "start": 31.32,
+      "end": 33.08,
+      "text": " Saya langsung taruh aja, takutnya kan",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 31.32,
+          "end": 31.6,
+          "probability": 0.0017606376204639673
+        },
+        {
+          "word": " langsung",
+          "start": 31.6,
+          "end": 31.8,
+          "probability": 0.5368539243936539
+        },
+        {
+          "word": " taruh",
+          "start": 31.8,
+          "end": 32.08,
+          "probability": 0.44448067247867584
+        },
+        {
+          "word": " aja,",
+          "start": 32.08,
+          "end": 32.32,
+          "probability": 0.8467509746551514
+        },
+        {
+          "word": " takutnya",
+          "start": 32.56,
+          "end": 32.92,
+          "probability": 0.9291215737660726
+        },
+        {
+          "word": " kan",
+          "start": 32.92,
+          "end": 33.08,
+          "probability": 0.9691625833511353
+        }
+      ]
+    },
+    {
+      "start": 33.64,
+      "end": 35.08,
+      "text": " Kalau dihubungi siang, nanti",
+      "words": [
+        {
+          "word": " Kalau",
+          "start": 33.64,
+          "end": 33.9,
+          "probability": 0.17198407649993896
+        },
+        {
+          "word": " dihubungi",
+          "start": 33.9,
+          "end": 34.44,
+          "probability": 0.8857628345489502
+        },
+        {
+          "word": " siang,",
+          "start": 34.44,
+          "end": 34.68,
+          "probability": 0.9476744830608368
+        },
+        {
+          "word": " nanti",
+          "start": 34.78,
+          "end": 35.08,
+          "probability": 0.9415488839149475
+        }
+      ]
+    },
+    {
+      "start": 35.72,
+      "end": 36.56,
+      "text": " Kalau gak ada",
+      "words": [
+        {
+          "word": " Kalau",
+          "start": 35.72,
+          "end": 36.22,
+          "probability": 0.021374478936195374
+        },
+        {
+          "word": " gak",
+          "start": 36.22,
+          "end": 36.4,
+          "probability": 0.33201590180397034
+        },
+        {
+          "word": " ada",
+          "start": 36.4,
+          "end": 36.56,
+          "probability": 0.957449197769165
+        }
+      ]
+    }
+  ],
+  "full_text": " Alamakalem  Alamakalem  Alamakalem  Alamakalem  Alamakalem  Alamakalem  Bapak Indah, Alamakalem  Ya  Ya  Saya dari aplikasi ekstra pak  Pinjamannya di bayar ke hari ini ya  Ya, masih pagi bang  Ya, gimana pak?  Ya masih pagi ya, masih ada waktu  Ya, aman  Saya langsung taruh aja, takutnya kan  Kalau dihubungi siang, nanti  Kalau gak ada"
+}

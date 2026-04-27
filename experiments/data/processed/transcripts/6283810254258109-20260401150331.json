@@ -1,0 +1,407 @@
+{
+  "case_id": "6283810254258109-20260401150331",
+  "file_name": "6283810254258109-20260401150331.mp3",
+  "transcript": [
+    {
+      "start": 4.079999999999998,
+      "end": 5.54,
+      "speaker": "AGENT",
+      "text": " Halo, Selamat Sore.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 4.079999999999998,
+          "end": 4.58,
+          "probability": 0.18547731637954712
+        },
+        {
+          "word": " Selamat",
+          "start": 4.88,
+          "end": 5.14,
+          "probability": 0.5551186203956604
+        },
+        {
+          "word": " Sore.",
+          "start": 5.14,
+          "end": 5.54,
+          "probability": 0.6373513489961624
+        }
+      ]
+    },
+    {
+      "start": 6.12,
+      "end": 7.1,
+      "speaker": "CUSTOMER",
+      "text": " Sore ini?",
+      "words": [
+        {
+          "word": " Sore",
+          "start": 6.12,
+          "end": 6.62,
+          "probability": 0.6896864622831345
+        },
+        {
+          "word": " ini?",
+          "start": 6.62,
+          "end": 7.1,
+          "probability": 0.7550650835037231
+        }
+      ]
+    },
+    {
+      "start": 8.34,
+      "end": 9.84,
+      "speaker": "AGENT",
+      "text": " Dengan Bapak Ahmad Yusuf.",
+      "words": [
+        {
+          "word": " Dengan",
+          "start": 8.34,
+          "end": 8.84,
+          "probability": 0.8166708648204803
+        },
+        {
+          "word": " Bapak",
+          "start": 8.84,
+          "end": 9.06,
+          "probability": 0.8814884622891744
+        },
+        {
+          "word": " Ahmad",
+          "start": 9.06,
+          "end": 9.3,
+          "probability": 0.7317832112312317
+        },
+        {
+          "word": " Yusuf.",
+          "start": 9.3,
+          "end": 9.84,
+          "probability": 0.7975204388300577
+        }
+      ]
+    },
+    {
+      "start": 10.48,
+      "end": 10.98,
+      "speaker": "CUSTOMER",
+      "text": " Betul.",
+      "words": [
+        {
+          "word": " Betul.",
+          "start": 10.48,
+          "end": 10.98,
+          "probability": 0.9642207026481628
+        }
+      ]
+    },
+    {
+      "start": 12.12,
+      "end": 14.3,
+      "speaker": "AGENT",
+      "text": " Ya, gimana Bapak pembayaran ini jam berapa, Pak?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 12.12,
+          "end": 12.4,
+          "probability": 0.8082481026649475
+        },
+        {
+          "word": " gimana",
+          "start": 12.64,
+          "end": 12.94,
+          "probability": 0.9792049825191498
+        },
+        {
+          "word": " Bapak",
+          "start": 12.94,
+          "end": 13.16,
+          "probability": 0.7596610486507416
+        },
+        {
+          "word": " pembayaran",
+          "start": 13.16,
+          "end": 13.52,
+          "probability": 0.6068232506513596
+        },
+        {
+          "word": " ini",
+          "start": 13.52,
+          "end": 13.72,
+          "probability": 0.3956901431083679
+        },
+        {
+          "word": " jam",
+          "start": 13.72,
+          "end": 13.88,
+          "probability": 0.8271366953849792
+        },
+        {
+          "word": " berapa,",
+          "start": 13.88,
+          "end": 14.08,
+          "probability": 0.700064405798912
+        },
+        {
+          "word": " Pak?",
+          "start": 14.24,
+          "end": 14.3,
+          "probability": 0.8026537895202637
+        }
+      ]
+    },
+    {
+      "start": 15.06,
+      "end": 17.84,
+      "speaker": "CUSTOMER",
+      "text": " Iya, ini nunggu yang ngambil barang lo, gimana ya?",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 15.06,
+          "end": 15.36,
+          "probability": 0.5370185971260071
+        },
+        {
+          "word": " ini",
+          "start": 15.56,
+          "end": 15.7,
+          "probability": 0.9657694697380066
+        },
+        {
+          "word": " nunggu",
+          "start": 15.7,
+          "end": 16.1,
+          "probability": 0.7888262768586477
+        },
+        {
+          "word": " yang",
+          "start": 16.1,
+          "end": 16.28,
+          "probability": 0.9528247117996216
+        },
+        {
+          "word": " ngambil",
+          "start": 16.28,
+          "end": 16.52,
+          "probability": 0.8384919961293539
+        },
+        {
+          "word": " barang",
+          "start": 16.52,
+          "end": 16.9,
+          "probability": 0.9798296391963959
+        },
+        {
+          "word": " lo,",
+          "start": 16.9,
+          "end": 17.08,
+          "probability": 0.19674116373062134
+        },
+        {
+          "word": " gimana",
+          "start": 17.4,
+          "end": 17.66,
+          "probability": 0.9945469200611115
+        },
+        {
+          "word": " ya?",
+          "start": 17.66,
+          "end": 17.84,
+          "probability": 0.9637985825538635
+        }
+      ]
+    },
+    {
+      "start": 19.22,
+      "end": 20.56,
+      "speaker": "AGENT",
+      "text": " Tapi udah otelnya bayar, Pak?",
+      "words": [
+        {
+          "word": " Tapi",
+          "start": 19.22,
+          "end": 19.54,
+          "probability": 0.6238909363746643
+        },
+        {
+          "word": " udah",
+          "start": 19.54,
+          "end": 19.74,
+          "probability": 0.8193394541740417
+        },
+        {
+          "word": " otelnya",
+          "start": 19.74,
+          "end": 20.0,
+          "probability": 0.4020715256532033
+        },
+        {
+          "word": " bayar,",
+          "start": 20.0,
+          "end": 20.42,
+          "probability": 0.9131844937801361
+        },
+        {
+          "word": " Pak?",
+          "start": 20.54,
+          "end": 20.56,
+          "probability": 0.8778676390647888
+        }
+      ]
+    },
+    {
+      "start": 20.74,
+      "end": 22.58,
+      "speaker": "AGENT",
+      "text": " Udah otel ke rumah Bapak sekarang?",
+      "words": [
+        {
+          "word": " Udah",
+          "start": 20.74,
+          "end": 20.84,
+          "probability": 0.8178828954696655
+        },
+        {
+          "word": " otel",
+          "start": 20.84,
+          "end": 21.4,
+          "probability": 0.9363589882850647
+        },
+        {
+          "word": " ke",
+          "start": 21.4,
+          "end": 21.66,
+          "probability": 0.5809047222137451
+        },
+        {
+          "word": " rumah",
+          "start": 21.66,
+          "end": 22.0,
+          "probability": 0.9831972122192383
+        },
+        {
+          "word": " Bapak",
+          "start": 22.0,
+          "end": 22.3,
+          "probability": 0.9588688413302103
+        },
+        {
+          "word": " sekarang?",
+          "start": 22.3,
+          "end": 22.58,
+          "probability": 0.9220168590545654
+        }
+      ]
+    },
+    {
+      "start": 22.98,
+      "end": 24.86,
+      "speaker": "CUSTOMER",
+      "text": " Udah, sudah, sudah di jalan nih ya.",
+      "words": [
+        {
+          "word": " Udah,",
+          "start": 22.98,
+          "end": 23.38,
+          "probability": 0.9424729645252228
+        },
+        {
+          "word": " sudah,",
+          "start": 23.54,
+          "end": 23.68,
+          "probability": 0.7009039521217346
+        },
+        {
+          "word": " sudah",
+          "start": 23.9,
+          "end": 24.14,
+          "probability": 0.9186239838600159
+        },
+        {
+          "word": " di",
+          "start": 24.14,
+          "end": 24.32,
+          "probability": 0.5977211594581604
+        },
+        {
+          "word": " jalan",
+          "start": 24.32,
+          "end": 24.52,
+          "probability": 0.8232732713222504
+        },
+        {
+          "word": " nih",
+          "start": 24.52,
+          "end": 24.74,
+          "probability": 0.4881584048271179
+        },
+        {
+          "word": " ya.",
+          "start": 24.74,
+          "end": 24.86,
+          "probability": 0.341564804315567
+        }
+      ]
+    },
+    {
+      "start": 24.96,
+      "end": 25.94,
+      "speaker": "CUSTOMER",
+      "text": " Simang-simang kan apa ya?",
+      "words": [
+        {
+          "word": " Simang",
+          "start": 24.96,
+          "end": 25.2,
+          "probability": 0.48452453315258026
+        },
+        {
+          "word": "-simang",
+          "start": 25.2,
+          "end": 25.44,
+          "probability": 0.6573273738225301
+        },
+        {
+          "word": " kan",
+          "start": 25.44,
+          "end": 25.62,
+          "probability": 0.4448153078556061
+        },
+        {
+          "word": " apa",
+          "start": 25.62,
+          "end": 25.78,
+          "probability": 0.596143901348114
+        },
+        {
+          "word": " ya?",
+          "start": 25.78,
+          "end": 25.94,
+          "probability": 0.8412875533103943
+        }
+      ]
+    },
+    {
+      "start": 26.4,
+      "end": 27.22,
+      "speaker": "CUSTOMER",
+      "text": " Ya, siap.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 26.4,
+          "end": 26.6,
+          "probability": 0.5093787312507629
+        },
+        {
+          "word": " siap.",
+          "start": 26.82,
+          "end": 27.22,
+          "probability": 0.5932128056883812
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo, Selamat Sore.  Sore ini?  Dengan Bapak Ahmad Yusuf.  Betul.  Ya, gimana Bapak pembayaran ini jam berapa, Pak?  Iya, ini nunggu yang ngambil barang lo, gimana ya?  Tapi udah otelnya bayar, Pak?  Udah otel ke rumah Bapak sekarang?  Udah, sudah, sudah di jalan nih ya.  Simang-simang kan apa ya?  Ya, siap."
+}

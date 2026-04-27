@@ -1,0 +1,687 @@
+{
+  "case_id": "62812246358407-20260424141317",
+  "file_name": "62812246358407-20260424141317.mp3",
+  "transcript": [
+    {
+      "start": 1.260000000000003,
+      "end": 29.46,
+      "text": " Hello Mama Sarek. Ya Sarek. Tidak ada di budak-budak Sita Admir ya bu. Ya Sarek. Ya sudah kata bayar nambu. Ya. Ini masih sementara Antrika. Gimana bu? Surahnya kurang plus. Ini masih sementara Antrik di ATM. Oke. Oke saya tunggu ya bu pembayaran dia secepatnya. Ya. Oke terima kasih sama Sian.",
+      "words": [
+        {
+          "word": " Hello",
+          "start": 1.260000000000003,
+          "end": 2.06,
+          "probability": 0.05951102450489998
+        },
+        {
+          "word": " Mama",
+          "start": 2.06,
+          "end": 2.36,
+          "probability": 0.44650521874427795
+        },
+        {
+          "word": " Sarek.",
+          "start": 2.36,
+          "end": 3.72,
+          "probability": 0.4948800603548686
+        },
+        {
+          "word": " Ya",
+          "start": 3.72,
+          "end": 4.26,
+          "probability": 0.5644699931144714
+        },
+        {
+          "word": " Sarek.",
+          "start": 4.26,
+          "end": 5.32,
+          "probability": 0.7938163081804911
+        },
+        {
+          "word": " Tidak",
+          "start": 5.32,
+          "end": 5.68,
+          "probability": 0.5158338410158952
+        },
+        {
+          "word": " ada",
+          "start": 5.68,
+          "end": 5.84,
+          "probability": 0.4188111126422882
+        },
+        {
+          "word": " di",
+          "start": 5.84,
+          "end": 5.9,
+          "probability": 0.35414502024650574
+        },
+        {
+          "word": " budak",
+          "start": 5.9,
+          "end": 6.08,
+          "probability": 0.3957183212041855
+        },
+        {
+          "word": "-budak",
+          "start": 6.08,
+          "end": 6.22,
+          "probability": 0.660849558810393
+        },
+        {
+          "word": " Sita",
+          "start": 6.22,
+          "end": 6.62,
+          "probability": 0.2664503827691078
+        },
+        {
+          "word": " Admir",
+          "start": 6.62,
+          "end": 7.34,
+          "probability": 0.4964761361479759
+        },
+        {
+          "word": " ya",
+          "start": 7.34,
+          "end": 7.5,
+          "probability": 0.8405880331993103
+        },
+        {
+          "word": " bu.",
+          "start": 7.5,
+          "end": 7.6,
+          "probability": 0.33532965183258057
+        },
+        {
+          "word": " Ya",
+          "start": 8.58,
+          "end": 9.16,
+          "probability": 0.7895764112472534
+        },
+        {
+          "word": " Sarek.",
+          "start": 9.16,
+          "end": 10.0,
+          "probability": 0.5122538457314173
+        },
+        {
+          "word": " Ya",
+          "start": 10.08,
+          "end": 10.42,
+          "probability": 0.8076425790786743
+        },
+        {
+          "word": " sudah",
+          "start": 10.42,
+          "end": 10.76,
+          "probability": 0.6952998042106628
+        },
+        {
+          "word": " kata",
+          "start": 10.76,
+          "end": 11.2,
+          "probability": 0.1853751204907894
+        },
+        {
+          "word": " bayar",
+          "start": 11.2,
+          "end": 11.46,
+          "probability": 0.5679844319820404
+        },
+        {
+          "word": " nambu.",
+          "start": 11.46,
+          "end": 11.78,
+          "probability": 0.4500912552078565
+        },
+        {
+          "word": " Ya.",
+          "start": 13.54,
+          "end": 14.0,
+          "probability": 0.7572639584541321
+        },
+        {
+          "word": " Ini",
+          "start": 14.26,
+          "end": 14.7,
+          "probability": 0.9733479022979736
+        },
+        {
+          "word": " masih",
+          "start": 14.7,
+          "end": 14.88,
+          "probability": 0.7176332473754883
+        },
+        {
+          "word": " sementara",
+          "start": 14.88,
+          "end": 15.4,
+          "probability": 0.7333184878031412
+        },
+        {
+          "word": " Antrika.",
+          "start": 15.4,
+          "end": 16.0,
+          "probability": 0.4047931879758835
+        },
+        {
+          "word": " Gimana",
+          "start": 16.64,
+          "end": 17.44,
+          "probability": 0.9614390432834625
+        },
+        {
+          "word": " bu?",
+          "start": 17.44,
+          "end": 17.6,
+          "probability": 0.7454339861869812
+        },
+        {
+          "word": " Surahnya",
+          "start": 17.72,
+          "end": 17.92,
+          "probability": 0.499724621574084
+        },
+        {
+          "word": " kurang",
+          "start": 17.92,
+          "end": 18.14,
+          "probability": 0.970765084028244
+        },
+        {
+          "word": " plus.",
+          "start": 18.14,
+          "end": 18.36,
+          "probability": 0.2030256688594818
+        },
+        {
+          "word": " Ini",
+          "start": 19.44,
+          "end": 19.94,
+          "probability": 0.9671406149864197
+        },
+        {
+          "word": " masih",
+          "start": 19.94,
+          "end": 20.16,
+          "probability": 0.9961001873016357
+        },
+        {
+          "word": " sementara",
+          "start": 20.16,
+          "end": 20.66,
+          "probability": 0.9833537141482035
+        },
+        {
+          "word": " Antrik",
+          "start": 20.66,
+          "end": 21.26,
+          "probability": 0.6339929103851318
+        },
+        {
+          "word": " di",
+          "start": 21.26,
+          "end": 21.34,
+          "probability": 0.878318190574646
+        },
+        {
+          "word": " ATM.",
+          "start": 21.34,
+          "end": 21.76,
+          "probability": 0.7898310422897339
+        },
+        {
+          "word": " Oke.",
+          "start": 22.5,
+          "end": 23.04,
+          "probability": 0.82437664270401
+        },
+        {
+          "word": " Oke",
+          "start": 23.32,
+          "end": 23.5,
+          "probability": 0.7409834861755371
+        },
+        {
+          "word": " saya",
+          "start": 23.5,
+          "end": 23.72,
+          "probability": 0.5673836469650269
+        },
+        {
+          "word": " tunggu",
+          "start": 23.72,
+          "end": 23.96,
+          "probability": 0.7592577934265137
+        },
+        {
+          "word": " ya",
+          "start": 23.96,
+          "end": 24.36,
+          "probability": 0.6356056332588196
+        },
+        {
+          "word": " bu",
+          "start": 24.36,
+          "end": 24.52,
+          "probability": 0.8223139643669128
+        },
+        {
+          "word": " pembayaran",
+          "start": 24.52,
+          "end": 24.92,
+          "probability": 0.6383688971400261
+        },
+        {
+          "word": " dia",
+          "start": 24.92,
+          "end": 25.08,
+          "probability": 0.06998688727617264
+        },
+        {
+          "word": " secepatnya.",
+          "start": 25.08,
+          "end": 25.6,
+          "probability": 0.7242845073342323
+        },
+        {
+          "word": " Ya.",
+          "start": 26.16,
+          "end": 26.96,
+          "probability": 0.8007456064224243
+        },
+        {
+          "word": " Oke",
+          "start": 27.56,
+          "end": 28.06,
+          "probability": 0.944782555103302
+        },
+        {
+          "word": " terima",
+          "start": 28.06,
+          "end": 28.28,
+          "probability": 0.835832267999649
+        },
+        {
+          "word": " kasih",
+          "start": 28.28,
+          "end": 28.6,
+          "probability": 0.9973689317703247
+        },
+        {
+          "word": " sama",
+          "start": 28.6,
+          "end": 28.92,
+          "probability": 0.2903245985507965
+        },
+        {
+          "word": " Sian.",
+          "start": 28.92,
+          "end": 29.46,
+          "probability": 0.4974559545516968
+        }
+      ]
+    },
+    {
+      "start": 30.0,
+      "end": 31.02,
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 30.0,
+          "end": 31.02,
+          "probability": 0.5298743322491646
+        },
+        {
+          "word": " kasih.",
+          "start": 31.02,
+          "end": 31.02,
+          "probability": 0.9511328935623169
+        }
+      ]
+    }
+  ],
+  "transcript_with_speakers": [
+    {
+      "start": 1.260000000000003,
+      "end": 29.46,
+      "speaker": "CUSTOMER",
+      "text": " Hello Mama Sarek. Ya Sarek. Tidak ada di budak-budak Sita Admir ya bu. Ya Sarek. Ya sudah kata bayar nambu. Ya. Ini masih sementara Antrika. Gimana bu? Surahnya kurang plus. Ini masih sementara Antrik di ATM. Oke. Oke saya tunggu ya bu pembayaran dia secepatnya. Ya. Oke terima kasih sama Sian.",
+      "words": [
+        {
+          "word": " Hello",
+          "start": 1.260000000000003,
+          "end": 2.06,
+          "probability": 0.05951102450489998
+        },
+        {
+          "word": " Mama",
+          "start": 2.06,
+          "end": 2.36,
+          "probability": 0.44650521874427795
+        },
+        {
+          "word": " Sarek.",
+          "start": 2.36,
+          "end": 3.72,
+          "probability": 0.4948800603548686
+        },
+        {
+          "word": " Ya",
+          "start": 3.72,
+          "end": 4.26,
+          "probability": 0.5644699931144714
+        },
+        {
+          "word": " Sarek.",
+          "start": 4.26,
+          "end": 5.32,
+          "probability": 0.7938163081804911
+        },
+        {
+          "word": " Tidak",
+          "start": 5.32,
+          "end": 5.68,
+          "probability": 0.5158338410158952
+        },
+        {
+          "word": " ada",
+          "start": 5.68,
+          "end": 5.84,
+          "probability": 0.4188111126422882
+        },
+        {
+          "word": " di",
+          "start": 5.84,
+          "end": 5.9,
+          "probability": 0.35414502024650574
+        },
+        {
+          "word": " budak",
+          "start": 5.9,
+          "end": 6.08,
+          "probability": 0.3957183212041855
+        },
+        {
+          "word": "-budak",
+          "start": 6.08,
+          "end": 6.22,
+          "probability": 0.660849558810393
+        },
+        {
+          "word": " Sita",
+          "start": 6.22,
+          "end": 6.62,
+          "probability": 0.2664503827691078
+        },
+        {
+          "word": " Admir",
+          "start": 6.62,
+          "end": 7.34,
+          "probability": 0.4964761361479759
+        },
+        {
+          "word": " ya",
+          "start": 7.34,
+          "end": 7.5,
+          "probability": 0.8405880331993103
+        },
+        {
+          "word": " bu.",
+          "start": 7.5,
+          "end": 7.6,
+          "probability": 0.33532965183258057
+        },
+        {
+          "word": " Ya",
+          "start": 8.58,
+          "end": 9.16,
+          "probability": 0.7895764112472534
+        },
+        {
+          "word": " Sarek.",
+          "start": 9.16,
+          "end": 10.0,
+          "probability": 0.5122538457314173
+        },
+        {
+          "word": " Ya",
+          "start": 10.08,
+          "end": 10.42,
+          "probability": 0.8076425790786743
+        },
+        {
+          "word": " sudah",
+          "start": 10.42,
+          "end": 10.76,
+          "probability": 0.6952998042106628
+        },
+        {
+          "word": " kata",
+          "start": 10.76,
+          "end": 11.2,
+          "probability": 0.1853751204907894
+        },
+        {
+          "word": " bayar",
+          "start": 11.2,
+          "end": 11.46,
+          "probability": 0.5679844319820404
+        },
+        {
+          "word": " nambu.",
+          "start": 11.46,
+          "end": 11.78,
+          "probability": 0.4500912552078565
+        },
+        {
+          "word": " Ya.",
+          "start": 13.54,
+          "end": 14.0,
+          "probability": 0.7572639584541321
+        },
+        {
+          "word": " Ini",
+          "start": 14.26,
+          "end": 14.7,
+          "probability": 0.9733479022979736
+        },
+        {
+          "word": " masih",
+          "start": 14.7,
+          "end": 14.88,
+          "probability": 0.7176332473754883
+        },
+        {
+          "word": " sementara",
+          "start": 14.88,
+          "end": 15.4,
+          "probability": 0.7333184878031412
+        },
+        {
+          "word": " Antrika.",
+          "start": 15.4,
+          "end": 16.0,
+          "probability": 0.4047931879758835
+        },
+        {
+          "word": " Gimana",
+          "start": 16.64,
+          "end": 17.44,
+          "probability": 0.9614390432834625
+        },
+        {
+          "word": " bu?",
+          "start": 17.44,
+          "end": 17.6,
+          "probability": 0.7454339861869812
+        },
+        {
+          "word": " Surahnya",
+          "start": 17.72,
+          "end": 17.92,
+          "probability": 0.499724621574084
+        },
+        {
+          "word": " kurang",
+          "start": 17.92,
+          "end": 18.14,
+          "probability": 0.970765084028244
+        },
+        {
+          "word": " plus.",
+          "start": 18.14,
+          "end": 18.36,
+          "probability": 0.2030256688594818
+        },
+        {
+          "word": " Ini",
+          "start": 19.44,
+          "end": 19.94,
+          "probability": 0.9671406149864197
+        },
+        {
+          "word": " masih",
+          "start": 19.94,
+          "end": 20.16,
+          "probability": 0.9961001873016357
+        },
+        {
+          "word": " sementara",
+          "start": 20.16,
+          "end": 20.66,
+          "probability": 0.9833537141482035
+        },
+        {
+          "word": " Antrik",
+          "start": 20.66,
+          "end": 21.26,
+          "probability": 0.6339929103851318
+        },
+        {
+          "word": " di",
+          "start": 21.26,
+          "end": 21.34,
+          "probability": 0.878318190574646
+        },
+        {
+          "word": " ATM.",
+          "start": 21.34,
+          "end": 21.76,
+          "probability": 0.7898310422897339
+        },
+        {
+          "word": " Oke.",
+          "start": 22.5,
+          "end": 23.04,
+          "probability": 0.82437664270401
+        },
+        {
+          "word": " Oke",
+          "start": 23.32,
+          "end": 23.5,
+          "probability": 0.7409834861755371
+        },
+        {
+          "word": " saya",
+          "start": 23.5,
+          "end": 23.72,
+          "probability": 0.5673836469650269
+        },
+        {
+          "word": " tunggu",
+          "start": 23.72,
+          "end": 23.96,
+          "probability": 0.7592577934265137
+        },
+        {
+          "word": " ya",
+          "start": 23.96,
+          "end": 24.36,
+          "probability": 0.6356056332588196
+        },
+        {
+          "word": " bu",
+          "start": 24.36,
+          "end": 24.52,
+          "probability": 0.8223139643669128
+        },
+        {
+          "word": " pembayaran",
+          "start": 24.52,
+          "end": 24.92,
+          "probability": 0.6383688971400261
+        },
+        {
+          "word": " dia",
+          "start": 24.92,
+          "end": 25.08,
+          "probability": 0.06998688727617264
+        },
+        {
+          "word": " secepatnya.",
+          "start": 25.08,
+          "end": 25.6,
+          "probability": 0.7242845073342323
+        },
+        {
+          "word": " Ya.",
+          "start": 26.16,
+          "end": 26.96,
+          "probability": 0.8007456064224243
+        },
+        {
+          "word": " Oke",
+          "start": 27.56,
+          "end": 28.06,
+          "probability": 0.944782555103302
+        },
+        {
+          "word": " terima",
+          "start": 28.06,
+          "end": 28.28,
+          "probability": 0.835832267999649
+        },
+        {
+          "word": " kasih",
+          "start": 28.28,
+          "end": 28.6,
+          "probability": 0.9973689317703247
+        },
+        {
+          "word": " sama",
+          "start": 28.6,
+          "end": 28.92,
+          "probability": 0.2903245985507965
+        },
+        {
+          "word": " Sian.",
+          "start": 28.92,
+          "end": 29.46,
+          "probability": 0.4974559545516968
+        }
+      ]
+    },
+    {
+      "start": 30.0,
+      "end": 31.02,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 30.0,
+          "end": 31.02,
+          "probability": 0.5298743322491646
+        },
+        {
+          "word": " kasih.",
+          "start": 31.02,
+          "end": 31.02,
+          "probability": 0.9511328935623169
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello Mama Sarek. Ya Sarek. Tidak ada di budak-budak Sita Admir ya bu. Ya Sarek. Ya sudah kata bayar nambu. Ya. Ini masih sementara Antrika. Gimana bu? Surahnya kurang plus. Ini masih sementara Antrik di ATM. Oke. Oke saya tunggu ya bu pembayaran dia secepatnya. Ya. Oke terima kasih sama Sian.  Terima kasih."
+}

@@ -1,0 +1,685 @@
+{
+  "case_id": "628214900660508-20260410085903",
+  "file_name": "628214900660508-20260410085903.mp3",
+  "transcript": [
+    {
+      "start": 2.4799999999999978,
+      "end": 3.78,
+      "speaker": "AGENT",
+      "text": " ala selamat pagi",
+      "words": [
+        {
+          "word": " ala",
+          "start": 2.4799999999999978,
+          "end": 3.04,
+          "probability": 0.1052037924528122
+        },
+        {
+          "word": " selamat",
+          "start": 3.04,
+          "end": 3.38,
+          "probability": 0.6975693106651306
+        },
+        {
+          "word": " pagi",
+          "start": 3.38,
+          "end": 3.78,
+          "probability": 0.9764740169048309
+        }
+      ]
+    },
+    {
+      "start": 4.759999999999998,
+      "end": 5.32,
+      "speaker": "CUSTOMER",
+      "text": " pagi",
+      "words": [
+        {
+          "word": " pagi",
+          "start": 4.759999999999998,
+          "end": 5.32,
+          "probability": 0.5905323326587677
+        }
+      ]
+    },
+    {
+      "start": 6.0,
+      "end": 9.66,
+      "speaker": "AGENT",
+      "text": " iya bapak ini tajian excel ping jam pro nya dibayarkan karm nya",
+      "words": [
+        {
+          "word": " iya",
+          "start": 6.0,
+          "end": 6.3,
+          "probability": 0.6141715049743652
+        },
+        {
+          "word": " bapak",
+          "start": 6.3,
+          "end": 6.5,
+          "probability": 0.7267946501572927
+        },
+        {
+          "word": " ini",
+          "start": 6.5,
+          "end": 6.7,
+          "probability": 0.9237634539604187
+        },
+        {
+          "word": " tajian",
+          "start": 6.7,
+          "end": 7.0,
+          "probability": 0.6125513513882955
+        },
+        {
+          "word": " excel",
+          "start": 7.0,
+          "end": 7.42,
+          "probability": 0.1741243451833725
+        },
+        {
+          "word": " ping",
+          "start": 7.42,
+          "end": 7.88,
+          "probability": 0.9556139707565308
+        },
+        {
+          "word": " jam",
+          "start": 7.88,
+          "end": 8.08,
+          "probability": 0.38537731766700745
+        },
+        {
+          "word": " pro",
+          "start": 8.08,
+          "end": 8.26,
+          "probability": 0.9196022152900696
+        },
+        {
+          "word": " nya",
+          "start": 8.26,
+          "end": 8.44,
+          "probability": 0.5843002200126648
+        },
+        {
+          "word": " dibayarkan",
+          "start": 8.44,
+          "end": 8.9,
+          "probability": 0.8054051995277405
+        },
+        {
+          "word": " karm",
+          "start": 8.9,
+          "end": 9.4,
+          "probability": 0.6450900584459305
+        },
+        {
+          "word": " nya",
+          "start": 9.4,
+          "end": 9.66,
+          "probability": 0.6670299768447876
+        }
+      ]
+    },
+    {
+      "start": 11.759999999999998,
+      "end": 12.32,
+      "speaker": "CUSTOMER",
+      "text": " iya",
+      "words": [
+        {
+          "word": " iya",
+          "start": 11.759999999999998,
+          "end": 12.32,
+          "probability": 0.7351529449224472
+        }
+      ]
+    },
+    {
+      "start": 13.199999999999998,
+      "end": 15.52,
+      "speaker": "AGENT",
+      "text": " um bayar runas tetep tajangan nih pak",
+      "words": [
+        {
+          "word": " um",
+          "start": 13.199999999999998,
+          "end": 13.76,
+          "probability": 0.29799872636795044
+        },
+        {
+          "word": " bayar",
+          "start": 13.76,
+          "end": 14.32,
+          "probability": 0.7449935078620911
+        },
+        {
+          "word": " runas",
+          "start": 14.32,
+          "end": 14.56,
+          "probability": 0.27418894600123167
+        },
+        {
+          "word": " tetep",
+          "start": 14.56,
+          "end": 14.74,
+          "probability": 0.5841663181781769
+        },
+        {
+          "word": " tajangan",
+          "start": 14.74,
+          "end": 15.14,
+          "probability": 0.6396994441747665
+        },
+        {
+          "word": " nih",
+          "start": 15.14,
+          "end": 15.34,
+          "probability": 0.49463966488838196
+        },
+        {
+          "word": " pak",
+          "start": 15.34,
+          "end": 15.52,
+          "probability": 0.9105775952339172
+        }
+      ]
+    },
+    {
+      "start": 17.2,
+      "end": 19.76,
+      "speaker": "CUSTOMER",
+      "text": " kita liat nanti deh jam 2 ya jam 2 ya",
+      "words": [
+        {
+          "word": " kita",
+          "start": 17.2,
+          "end": 17.76,
+          "probability": 0.914097011089325
+        },
+        {
+          "word": " liat",
+          "start": 17.76,
+          "end": 18.0,
+          "probability": 0.6651173979043961
+        },
+        {
+          "word": " nanti",
+          "start": 18.0,
+          "end": 18.18,
+          "probability": 0.9313380420207977
+        },
+        {
+          "word": " deh",
+          "start": 18.18,
+          "end": 18.32,
+          "probability": 0.11204302310943604
+        },
+        {
+          "word": " jam",
+          "start": 18.32,
+          "end": 18.52,
+          "probability": 0.9922813773155212
+        },
+        {
+          "word": " 2",
+          "start": 18.52,
+          "end": 18.74,
+          "probability": 0.6651036143302917
+        },
+        {
+          "word": " ya",
+          "start": 18.74,
+          "end": 18.96,
+          "probability": 0.8036102056503296
+        },
+        {
+          "word": " jam",
+          "start": 18.96,
+          "end": 19.36,
+          "probability": 0.940345287322998
+        },
+        {
+          "word": " 2",
+          "start": 19.36,
+          "end": 19.56,
+          "probability": 0.9562264084815979
+        },
+        {
+          "word": " ya",
+          "start": 19.56,
+          "end": 19.76,
+          "probability": 0.8602259755134583
+        }
+      ]
+    },
+    {
+      "start": 19.76,
+      "end": 23.44,
+      "speaker": "CUSTOMER",
+      "text": " jam 2 oke yang saya tagi extra ping jam pro ya apa ya",
+      "words": [
+        {
+          "word": " jam",
+          "start": 19.76,
+          "end": 20.5,
+          "probability": 0.890392541885376
+        },
+        {
+          "word": " 2",
+          "start": 20.5,
+          "end": 20.74,
+          "probability": 0.9666790962219238
+        },
+        {
+          "word": " oke",
+          "start": 20.74,
+          "end": 21.08,
+          "probability": 0.5870763063430786
+        },
+        {
+          "word": " yang",
+          "start": 21.08,
+          "end": 21.28,
+          "probability": 0.8988662362098694
+        },
+        {
+          "word": " saya",
+          "start": 21.28,
+          "end": 21.44,
+          "probability": 0.9504687190055847
+        },
+        {
+          "word": " tagi",
+          "start": 21.44,
+          "end": 21.7,
+          "probability": 0.5522970631718636
+        },
+        {
+          "word": " extra",
+          "start": 21.7,
+          "end": 22.06,
+          "probability": 0.6648027300834656
+        },
+        {
+          "word": " ping",
+          "start": 22.06,
+          "end": 22.36,
+          "probability": 0.984662652015686
+        },
+        {
+          "word": " jam",
+          "start": 22.36,
+          "end": 22.64,
+          "probability": 0.9695846438407898
+        },
+        {
+          "word": " pro",
+          "start": 22.64,
+          "end": 22.88,
+          "probability": 0.9859265089035034
+        },
+        {
+          "word": " ya",
+          "start": 22.88,
+          "end": 23.08,
+          "probability": 0.204116553068161
+        },
+        {
+          "word": " apa",
+          "start": 23.08,
+          "end": 23.24,
+          "probability": 0.5765219330787659
+        },
+        {
+          "word": " ya",
+          "start": 23.24,
+          "end": 23.44,
+          "probability": 0.6749799847602844
+        }
+      ]
+    },
+    {
+      "start": 24.36,
+      "end": 27.68,
+      "speaker": "CUSTOMER",
+      "text": " extra ping jam pro pelunasan 3 juta oke",
+      "words": [
+        {
+          "word": " extra",
+          "start": 24.36,
+          "end": 24.92,
+          "probability": 0.9358298778533936
+        },
+        {
+          "word": " ping",
+          "start": 24.92,
+          "end": 25.26,
+          "probability": 0.9834054708480835
+        },
+        {
+          "word": " jam",
+          "start": 25.26,
+          "end": 25.52,
+          "probability": 0.9861968159675598
+        },
+        {
+          "word": " pro",
+          "start": 25.52,
+          "end": 25.84,
+          "probability": 0.9893293976783752
+        },
+        {
+          "word": " pelunasan",
+          "start": 25.84,
+          "end": 26.44,
+          "probability": 0.7037854890028635
+        },
+        {
+          "word": " 3",
+          "start": 26.44,
+          "end": 26.8,
+          "probability": 0.9187805652618408
+        },
+        {
+          "word": " juta",
+          "start": 26.8,
+          "end": 27.26,
+          "probability": 0.9080673158168793
+        },
+        {
+          "word": " oke",
+          "start": 27.26,
+          "end": 27.68,
+          "probability": 0.9556449055671692
+        }
+      ]
+    },
+    {
+      "start": 30.0,
+      "end": 32.26,
+      "speaker": "CUSTOMER",
+      "text": " nanti kita liat deh selit saya buka aplikasi",
+      "words": [
+        {
+          "word": " nanti",
+          "start": 30.0,
+          "end": 30.48,
+          "probability": 0.3349987145047635
+        },
+        {
+          "word": " kita",
+          "start": 30.48,
+          "end": 30.64,
+          "probability": 0.917874276638031
+        },
+        {
+          "word": " liat",
+          "start": 30.64,
+          "end": 30.9,
+          "probability": 0.6563825309276581
+        },
+        {
+          "word": " deh",
+          "start": 30.9,
+          "end": 31.04,
+          "probability": 0.6948834657669067
+        },
+        {
+          "word": " selit",
+          "start": 31.04,
+          "end": 31.46,
+          "probability": 0.31371384859085083
+        },
+        {
+          "word": " saya",
+          "start": 31.46,
+          "end": 31.62,
+          "probability": 0.10527767986059189
+        },
+        {
+          "word": " buka",
+          "start": 31.62,
+          "end": 31.82,
+          "probability": 0.9771904945373535
+        },
+        {
+          "word": " aplikasi",
+          "start": 31.82,
+          "end": 32.26,
+          "probability": 0.9693041642506918
+        }
+      ]
+    },
+    {
+      "start": 33.040000000000006,
+      "end": 36.48,
+      "speaker": "CUSTOMER",
+      "text": " iya maksimal bayarkan sebelum jam 12 yang ini apa",
+      "words": [
+        {
+          "word": " iya",
+          "start": 33.040000000000006,
+          "end": 33.52,
+          "probability": 0.5577303469181061
+        },
+        {
+          "word": " maksimal",
+          "start": 33.52,
+          "end": 33.9,
+          "probability": 0.8214655518531799
+        },
+        {
+          "word": " bayarkan",
+          "start": 33.9,
+          "end": 34.76,
+          "probability": 0.8945434391498566
+        },
+        {
+          "word": " sebelum",
+          "start": 34.76,
+          "end": 35.38,
+          "probability": 0.9762800931930542
+        },
+        {
+          "word": " jam",
+          "start": 35.38,
+          "end": 35.52,
+          "probability": 0.9304925203323364
+        },
+        {
+          "word": " 12",
+          "start": 35.52,
+          "end": 35.84,
+          "probability": 0.9373576641082764
+        },
+        {
+          "word": " yang",
+          "start": 35.84,
+          "end": 36.08,
+          "probability": 0.7128784656524658
+        },
+        {
+          "word": " ini",
+          "start": 36.08,
+          "end": 36.28,
+          "probability": 0.984703779220581
+        },
+        {
+          "word": " apa",
+          "start": 36.28,
+          "end": 36.48,
+          "probability": 0.9293040037155151
+        }
+      ]
+    },
+    {
+      "start": 37.16,
+      "end": 40.16,
+      "speaker": "AGENT",
+      "text": " jam 2 di atas jam 2 sih udah bilang di atas jam 2",
+      "words": [
+        {
+          "word": " jam",
+          "start": 37.16,
+          "end": 37.64,
+          "probability": 0.7942183613777161
+        },
+        {
+          "word": " 2",
+          "start": 37.64,
+          "end": 37.98,
+          "probability": 0.8257747292518616
+        },
+        {
+          "word": " di",
+          "start": 37.98,
+          "end": 38.26,
+          "probability": 0.5018302202224731
+        },
+        {
+          "word": " atas",
+          "start": 38.26,
+          "end": 38.44,
+          "probability": 0.9526930153369904
+        },
+        {
+          "word": " jam",
+          "start": 38.44,
+          "end": 38.64,
+          "probability": 0.9867515563964844
+        },
+        {
+          "word": " 2",
+          "start": 38.64,
+          "end": 38.9,
+          "probability": 0.9325599670410156
+        },
+        {
+          "word": " sih",
+          "start": 38.9,
+          "end": 39.06,
+          "probability": 0.5920517444610596
+        },
+        {
+          "word": " udah",
+          "start": 39.06,
+          "end": 39.18,
+          "probability": 0.648115873336792
+        },
+        {
+          "word": " bilang",
+          "start": 39.18,
+          "end": 39.42,
+          "probability": 0.8457326292991638
+        },
+        {
+          "word": " di",
+          "start": 39.42,
+          "end": 39.56,
+          "probability": 0.3914027214050293
+        },
+        {
+          "word": " atas",
+          "start": 39.56,
+          "end": 39.68,
+          "probability": 0.9960092306137085
+        },
+        {
+          "word": " jam",
+          "start": 39.68,
+          "end": 39.86,
+          "probability": 0.9772710204124451
+        },
+        {
+          "word": " 2",
+          "start": 39.86,
+          "end": 40.16,
+          "probability": 0.7648921608924866
+        }
+      ]
+    },
+    {
+      "start": 40.7,
+      "end": 44.92,
+      "speaker": "CUSTOMER",
+      "text": " maksimal jam 12 maksimal kan ya bayarkan sebelum jam 12 yang ini",
+      "words": [
+        {
+          "word": " maksimal",
+          "start": 40.7,
+          "end": 41.18,
+          "probability": 0.9736140370368958
+        },
+        {
+          "word": " jam",
+          "start": 41.18,
+          "end": 41.38,
+          "probability": 0.9860495924949646
+        },
+        {
+          "word": " 12",
+          "start": 41.38,
+          "end": 41.72,
+          "probability": 0.9926031231880188
+        },
+        {
+          "word": " maksimal",
+          "start": 41.72,
+          "end": 42.48,
+          "probability": 0.9533329804738363
+        },
+        {
+          "word": " kan",
+          "start": 42.48,
+          "end": 42.7,
+          "probability": 0.7024450898170471
+        },
+        {
+          "word": " ya",
+          "start": 42.7,
+          "end": 42.86,
+          "probability": 0.7561509609222412
+        },
+        {
+          "word": " bayarkan",
+          "start": 42.86,
+          "end": 43.6,
+          "probability": 0.9683264791965485
+        },
+        {
+          "word": " sebelum",
+          "start": 43.6,
+          "end": 44.08,
+          "probability": 0.9983034729957581
+        },
+        {
+          "word": " jam",
+          "start": 44.08,
+          "end": 44.22,
+          "probability": 0.9050947427749634
+        },
+        {
+          "word": " 12",
+          "start": 44.22,
+          "end": 44.5,
+          "probability": 0.9832203388214111
+        },
+        {
+          "word": " yang",
+          "start": 44.5,
+          "end": 44.72,
+          "probability": 0.9691596627235413
+        },
+        {
+          "word": " ini",
+          "start": 44.72,
+          "end": 44.92,
+          "probability": 0.9907641410827637
+        }
+      ]
+    }
+  ],
+  "full_text": " ala selamat pagi  pagi  iya bapak ini tajian excel ping jam pro nya dibayarkan karm nya  iya  um bayar runas tetep tajangan nih pak  kita liat nanti deh jam 2 ya jam 2 ya  jam 2 oke yang saya tagi extra ping jam pro ya apa ya  extra ping jam pro pelunasan 3 juta oke  nanti kita liat deh selit saya buka aplikasi  iya maksimal bayarkan sebelum jam 12 yang ini apa  jam 2 di atas jam 2 sih udah bilang di atas jam 2  maksimal jam 12 maksimal kan ya bayarkan sebelum jam 12 yang ini"
+}

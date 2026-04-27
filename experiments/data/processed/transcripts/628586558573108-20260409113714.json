@@ -1,0 +1,27 @@
+{
+  "case_id": "628586558573108-20260409113714",
+  "file_name": "628586558573108-20260409113714.mp3",
+  "transcript": [
+    {
+      "start": 30.86,
+      "end": 32.26,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 30.86,
+          "end": 32.26,
+          "probability": 0.48492470756173134
+        },
+        {
+          "word": " kasih.",
+          "start": 32.26,
+          "end": 32.26,
+          "probability": 0.8808436393737793
+        }
+      ]
+    }
+  ],
+  "full_text": " Terima kasih."
+}

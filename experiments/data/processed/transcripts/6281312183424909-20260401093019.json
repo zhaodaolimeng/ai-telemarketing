@@ -1,0 +1,26 @@
+{
+  "case_id": "6281312183424909-20260401093019",
+  "file_name": "6281312183424909-20260401093019.mp3",
+  "transcript": [
+    {
+      "start": 30.980000000000004,
+      "end": 32.38,
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 30.980000000000004,
+          "end": 32.38,
+          "probability": 0.4755018763244152
+        },
+        {
+          "word": " kasih.",
+          "start": 32.38,
+          "end": 32.38,
+          "probability": 0.8968241810798645
+        }
+      ]
+    }
+  ],
+  "full_text": " Terima kasih."
+}

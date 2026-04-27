@@ -1,0 +1,281 @@
+{
+  "case_id": "6285211699694209-20260405074937",
+  "file_name": "6285211699694209-20260405074937.mp3",
+  "transcript": [
+    {
+      "start": 2.2999999999999985,
+      "end": 3.84,
+      "speaker": "AGENT",
+      "text": " Halo, selamat pagi.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 2.2999999999999985,
+          "end": 2.9,
+          "probability": 0.3307797312736511
+        },
+        {
+          "word": " selamat",
+          "start": 3.14,
+          "end": 3.32,
+          "probability": 0.5973409786820412
+        },
+        {
+          "word": " pagi.",
+          "start": 3.32,
+          "end": 3.84,
+          "probability": 0.9447478652000427
+        }
+      ]
+    },
+    {
+      "start": 7.0,
+      "end": 10.14,
+      "speaker": "AGENT",
+      "text": " Halo kak, saya dari aplikasi ekstra Uang Ngol, kak.",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 7.0,
+          "end": 7.6,
+          "probability": 0.05949698016047478
+        },
+        {
+          "word": " kak,",
+          "start": 7.6,
+          "end": 7.8,
+          "probability": 0.7734221518039703
+        },
+        {
+          "word": " saya",
+          "start": 8.0,
+          "end": 8.12,
+          "probability": 0.36204811930656433
+        },
+        {
+          "word": " dari",
+          "start": 8.12,
+          "end": 8.48,
+          "probability": 0.9848003387451172
+        },
+        {
+          "word": " aplikasi",
+          "start": 8.48,
+          "end": 9.04,
+          "probability": 0.9826621015866598
+        },
+        {
+          "word": " ekstra",
+          "start": 9.04,
+          "end": 9.4,
+          "probability": 0.6139834821224213
+        },
+        {
+          "word": " Uang",
+          "start": 9.4,
+          "end": 9.7,
+          "probability": 0.5864782482385635
+        },
+        {
+          "word": " Ngol,",
+          "start": 9.7,
+          "end": 9.88,
+          "probability": 0.3214157819747925
+        },
+        {
+          "word": " kak.",
+          "start": 10.02,
+          "end": 10.14,
+          "probability": 0.9407050311565399
+        }
+      ]
+    },
+    {
+      "start": 11.44,
+      "end": 11.8,
+      "speaker": "CUSTOMER",
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 11.44,
+          "end": 11.8,
+          "probability": 0.6847962141036987
+        }
+      ]
+    },
+    {
+      "start": 12.42,
+      "end": 13.72,
+      "speaker": "CUSTOMER",
+      "text": " Kemberemu di jamban apa kak?",
+      "words": [
+        {
+          "word": " Kemberemu",
+          "start": 12.42,
+          "end": 13.02,
+          "probability": 0.34844029136002064
+        },
+        {
+          "word": " di",
+          "start": 13.02,
+          "end": 13.14,
+          "probability": 0.5646770596504211
+        },
+        {
+          "word": " jamban",
+          "start": 13.14,
+          "end": 13.28,
+          "probability": 0.4020221879084905
+        },
+        {
+          "word": " apa",
+          "start": 13.28,
+          "end": 13.42,
+          "probability": 0.904224693775177
+        },
+        {
+          "word": " kak?",
+          "start": 13.42,
+          "end": 13.72,
+          "probability": 0.8106259405612946
+        }
+      ]
+    },
+    {
+      "start": 17.04,
+      "end": 17.64,
+      "speaker": "CUSTOMER",
+      "text": " Sorenya.",
+      "words": [
+        {
+          "word": " Sorenya.",
+          "start": 17.04,
+          "end": 17.64,
+          "probability": 0.5240838602185249
+        }
+      ]
+    },
+    {
+      "start": 18.32,
+      "end": 19.26,
+      "speaker": "CUSTOMER",
+      "text": " Sorenya di jam?",
+      "words": [
+        {
+          "word": " Sorenya",
+          "start": 18.32,
+          "end": 18.92,
+          "probability": 0.9559891621271769
+        },
+        {
+          "word": " di",
+          "start": 18.92,
+          "end": 19.04,
+          "probability": 0.8106212615966797
+        },
+        {
+          "word": " jam?",
+          "start": 19.04,
+          "end": 19.26,
+          "probability": 0.9409847259521484
+        }
+      ]
+    },
+    {
+      "start": 22.2,
+      "end": 22.8,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 22.2,
+          "end": 22.8,
+          "probability": 0.6308399438858032
+        }
+      ]
+    },
+    {
+      "start": 23.02,
+      "end": 24.72,
+      "speaker": "CUSTOMER",
+      "text": " Jam 6.",
+      "words": [
+        {
+          "word": " Jam",
+          "start": 23.02,
+          "end": 23.24,
+          "probability": 0.19266271591186523
+        },
+        {
+          "word": " 6.",
+          "start": 23.24,
+          "end": 24.72,
+          "probability": 0.14424648880958557
+        }
+      ]
+    },
+    {
+      "start": 26.34,
+      "end": 27.32,
+      "speaker": "AGENT",
+      "text": " Nunggu apa kak, 6.",
+      "words": [
+        {
+          "word": " Nunggu",
+          "start": 26.34,
+          "end": 26.72,
+          "probability": 0.9467639525731405
+        },
+        {
+          "word": " apa",
+          "start": 26.72,
+          "end": 26.9,
+          "probability": 0.9345886707305908
+        },
+        {
+          "word": " kak,",
+          "start": 26.9,
+          "end": 27.1,
+          "probability": 0.96579909324646
+        },
+        {
+          "word": " 6.",
+          "start": 27.22,
+          "end": 27.32,
+          "probability": 0.2365320771932602
+        }
+      ]
+    },
+    {
+      "start": 32.0,
+      "end": 33.4,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 32.0,
+          "end": 33.4,
+          "probability": 0.3734496235847473
+        }
+      ]
+    },
+    {
+      "start": 34.38,
+      "end": 34.9,
+      "speaker": "CUSTOMER",
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 34.38,
+          "end": 34.9,
+          "probability": 0.5368894338607788
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo, selamat pagi.  Halo kak, saya dari aplikasi ekstra Uang Ngol, kak.  Ya.  Kemberemu di jamban apa kak?  Sorenya.  Sorenya di jam?  Halo?  Jam 6.  Nunggu apa kak, 6.  Halo?  Ya."
+}

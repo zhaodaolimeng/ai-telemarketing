@@ -1,0 +1,585 @@
+{
+  "case_id": "6281211344008309-20260408104420",
+  "file_name": "6281211344008309-20260408104420.mp3",
+  "transcript": [
+    {
+      "start": 1.1800000000000002,
+      "end": 2.86,
+      "text": " Hello sama Sia?",
+      "words": [
+        {
+          "word": " Hello",
+          "start": 1.1800000000000002,
+          "end": 1.9,
+          "probability": 0.10084009915590286
+        },
+        {
+          "word": " sama",
+          "start": 1.9,
+          "end": 2.26,
+          "probability": 0.811846911907196
+        },
+        {
+          "word": " Sia?",
+          "start": 2.26,
+          "end": 2.86,
+          "probability": 0.4234062135219574
+        }
+      ]
+    },
+    {
+      "start": 5.32,
+      "end": 8.98,
+      "text": " Ya dengan Bapak Will Petri Dawus.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 5.32,
+          "end": 6.04,
+          "probability": 0.4088246822357178
+        },
+        {
+          "word": " dengan",
+          "start": 6.04,
+          "end": 6.76,
+          "probability": 0.6834968328475952
+        },
+        {
+          "word": " Bapak",
+          "start": 6.76,
+          "end": 7.46,
+          "probability": 0.595187783241272
+        },
+        {
+          "word": " Will",
+          "start": 7.46,
+          "end": 7.66,
+          "probability": 0.5047343969345093
+        },
+        {
+          "word": " Petri",
+          "start": 7.66,
+          "end": 8.34,
+          "probability": 0.3707590699195862
+        },
+        {
+          "word": " Dawus.",
+          "start": 8.34,
+          "end": 8.98,
+          "probability": 0.48955537378787994
+        }
+      ]
+    },
+    {
+      "start": 9.84,
+      "end": 11.78,
+      "text": " Ya benar-benar ini, kenapa?",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 9.84,
+          "end": 10.56,
+          "probability": 0.6774131059646606
+        },
+        {
+          "word": " benar",
+          "start": 10.56,
+          "end": 10.98,
+          "probability": 0.5649561509490013
+        },
+        {
+          "word": "-benar",
+          "start": 10.98,
+          "end": 11.18,
+          "probability": 0.7991492251555125
+        },
+        {
+          "word": " ini,",
+          "start": 11.18,
+          "end": 11.42,
+          "probability": 0.11472292244434357
+        },
+        {
+          "word": " kenapa?",
+          "start": 11.5,
+          "end": 11.78,
+          "probability": 0.7837568819522858
+        }
+      ]
+    },
+    {
+      "start": 12.7,
+      "end": 15.06,
+      "text": " Ya, saya dari api-festi ekstra, pinjam, ropa.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 12.7,
+          "end": 13.0,
+          "probability": 0.7584621906280518
+        },
+        {
+          "word": " saya",
+          "start": 13.1,
+          "end": 13.24,
+          "probability": 0.9455066919326782
+        },
+        {
+          "word": " dari",
+          "start": 13.24,
+          "end": 13.44,
+          "probability": 0.9905293583869934
+        },
+        {
+          "word": " api",
+          "start": 13.44,
+          "end": 13.66,
+          "probability": 0.37718941271305084
+        },
+        {
+          "word": "-festi",
+          "start": 13.66,
+          "end": 13.84,
+          "probability": 0.3183801819880803
+        },
+        {
+          "word": " ekstra,",
+          "start": 13.84,
+          "end": 14.14,
+          "probability": 0.8249436616897583
+        },
+        {
+          "word": " pinjam,",
+          "start": 14.24,
+          "end": 14.62,
+          "probability": 0.48694516718387604
+        },
+        {
+          "word": " ropa.",
+          "start": 14.76,
+          "end": 15.06,
+          "probability": 0.5777742862701416
+        }
+      ]
+    },
+    {
+      "start": 16.88,
+      "end": 17.3,
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 16.88,
+          "end": 17.3,
+          "probability": 0.8656453490257263
+        }
+      ]
+    },
+    {
+      "start": 18.3,
+      "end": 20.44,
+      "text": " Di jam 8 malam yang apa, saya tukung bayarannya.",
+      "words": [
+        {
+          "word": " Di",
+          "start": 18.3,
+          "end": 18.66,
+          "probability": 0.6865379214286804
+        },
+        {
+          "word": " jam",
+          "start": 18.66,
+          "end": 18.76,
+          "probability": 0.05009489133954048
+        },
+        {
+          "word": " 8",
+          "start": 18.76,
+          "end": 18.96,
+          "probability": 0.6194683909416199
+        },
+        {
+          "word": " malam",
+          "start": 18.96,
+          "end": 19.28,
+          "probability": 0.8665149807929993
+        },
+        {
+          "word": " yang",
+          "start": 19.28,
+          "end": 19.36,
+          "probability": 0.17843903601169586
+        },
+        {
+          "word": " apa,",
+          "start": 19.36,
+          "end": 19.52,
+          "probability": 0.8148823380470276
+        },
+        {
+          "word": " saya",
+          "start": 19.6,
+          "end": 19.68,
+          "probability": 0.863260805606842
+        },
+        {
+          "word": " tukung",
+          "start": 19.68,
+          "end": 19.92,
+          "probability": 0.40631066883603734
+        },
+        {
+          "word": " bayarannya.",
+          "start": 19.92,
+          "end": 20.44,
+          "probability": 0.7715258598327637
+        }
+      ]
+    },
+    {
+      "start": 21.64,
+      "end": 22.38,
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 21.64,
+          "end": 22.36,
+          "probability": 0.4869486428797245
+        },
+        {
+          "word": " kasih.",
+          "start": 22.36,
+          "end": 22.38,
+          "probability": 0.9919415712356567
+        }
+      ]
+    },
+    {
+      "start": 23.08,
+      "end": 24.88,
+      "text": " Terima kasih sama Sia.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 23.08,
+          "end": 23.62,
+          "probability": 0.6276374906301498
+        },
+        {
+          "word": " kasih",
+          "start": 23.62,
+          "end": 24.02,
+          "probability": 0.9926300048828125
+        },
+        {
+          "word": " sama",
+          "start": 24.02,
+          "end": 24.42,
+          "probability": 0.45768874883651733
+        },
+        {
+          "word": " Sia.",
+          "start": 24.42,
+          "end": 24.88,
+          "probability": 0.9953033924102783
+        }
+      ]
+    }
+  ],
+  "transcript_with_speakers": [
+    {
+      "start": 1.1800000000000002,
+      "end": 2.86,
+      "speaker": "AGENT",
+      "text": " Hello sama Sia?",
+      "words": [
+        {
+          "word": " Hello",
+          "start": 1.1800000000000002,
+          "end": 1.9,
+          "probability": 0.10084009915590286
+        },
+        {
+          "word": " sama",
+          "start": 1.9,
+          "end": 2.26,
+          "probability": 0.811846911907196
+        },
+        {
+          "word": " Sia?",
+          "start": 2.26,
+          "end": 2.86,
+          "probability": 0.4234062135219574
+        }
+      ]
+    },
+    {
+      "start": 5.32,
+      "end": 8.98,
+      "speaker": "CUSTOMER",
+      "text": " Ya dengan Bapak Will Petri Dawus.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 5.32,
+          "end": 6.04,
+          "probability": 0.4088246822357178
+        },
+        {
+          "word": " dengan",
+          "start": 6.04,
+          "end": 6.76,
+          "probability": 0.6834968328475952
+        },
+        {
+          "word": " Bapak",
+          "start": 6.76,
+          "end": 7.46,
+          "probability": 0.595187783241272
+        },
+        {
+          "word": " Will",
+          "start": 7.46,
+          "end": 7.66,
+          "probability": 0.5047343969345093
+        },
+        {
+          "word": " Petri",
+          "start": 7.66,
+          "end": 8.34,
+          "probability": 0.3707590699195862
+        },
+        {
+          "word": " Dawus.",
+          "start": 8.34,
+          "end": 8.98,
+          "probability": 0.48955537378787994
+        }
+      ]
+    },
+    {
+      "start": 9.84,
+      "end": 11.78,
+      "speaker": "CUSTOMER",
+      "text": " Ya benar-benar ini, kenapa?",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 9.84,
+          "end": 10.56,
+          "probability": 0.6774131059646606
+        },
+        {
+          "word": " benar",
+          "start": 10.56,
+          "end": 10.98,
+          "probability": 0.5649561509490013
+        },
+        {
+          "word": "-benar",
+          "start": 10.98,
+          "end": 11.18,
+          "probability": 0.7991492251555125
+        },
+        {
+          "word": " ini,",
+          "start": 11.18,
+          "end": 11.42,
+          "probability": 0.11472292244434357
+        },
+        {
+          "word": " kenapa?",
+          "start": 11.5,
+          "end": 11.78,
+          "probability": 0.7837568819522858
+        }
+      ]
+    },
+    {
+      "start": 12.7,
+      "end": 15.06,
+      "speaker": "CUSTOMER",
+      "text": " Ya, saya dari api-festi ekstra, pinjam, ropa.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 12.7,
+          "end": 13.0,
+          "probability": 0.7584621906280518
+        },
+        {
+          "word": " saya",
+          "start": 13.1,
+          "end": 13.24,
+          "probability": 0.9455066919326782
+        },
+        {
+          "word": " dari",
+          "start": 13.24,
+          "end": 13.44,
+          "probability": 0.9905293583869934
+        },
+        {
+          "word": " api",
+          "start": 13.44,
+          "end": 13.66,
+          "probability": 0.37718941271305084
+        },
+        {
+          "word": "-festi",
+          "start": 13.66,
+          "end": 13.84,
+          "probability": 0.3183801819880803
+        },
+        {
+          "word": " ekstra,",
+          "start": 13.84,
+          "end": 14.14,
+          "probability": 0.8249436616897583
+        },
+        {
+          "word": " pinjam,",
+          "start": 14.24,
+          "end": 14.62,
+          "probability": 0.48694516718387604
+        },
+        {
+          "word": " ropa.",
+          "start": 14.76,
+          "end": 15.06,
+          "probability": 0.5777742862701416
+        }
+      ]
+    },
+    {
+      "start": 16.88,
+      "end": 17.3,
+      "speaker": "CUSTOMER",
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 16.88,
+          "end": 17.3,
+          "probability": 0.8656453490257263
+        }
+      ]
+    },
+    {
+      "start": 18.3,
+      "end": 20.44,
+      "speaker": "CUSTOMER",
+      "text": " Di jam 8 malam yang apa, saya tukung bayarannya.",
+      "words": [
+        {
+          "word": " Di",
+          "start": 18.3,
+          "end": 18.66,
+          "probability": 0.6865379214286804
+        },
+        {
+          "word": " jam",
+          "start": 18.66,
+          "end": 18.76,
+          "probability": 0.05009489133954048
+        },
+        {
+          "word": " 8",
+          "start": 18.76,
+          "end": 18.96,
+          "probability": 0.6194683909416199
+        },
+        {
+          "word": " malam",
+          "start": 18.96,
+          "end": 19.28,
+          "probability": 0.8665149807929993
+        },
+        {
+          "word": " yang",
+          "start": 19.28,
+          "end": 19.36,
+          "probability": 0.17843903601169586
+        },
+        {
+          "word": " apa,",
+          "start": 19.36,
+          "end": 19.52,
+          "probability": 0.8148823380470276
+        },
+        {
+          "word": " saya",
+          "start": 19.6,
+          "end": 19.68,
+          "probability": 0.863260805606842
+        },
+        {
+          "word": " tukung",
+          "start": 19.68,
+          "end": 19.92,
+          "probability": 0.40631066883603734
+        },
+        {
+          "word": " bayarannya.",
+          "start": 19.92,
+          "end": 20.44,
+          "probability": 0.7715258598327637
+        }
+      ]
+    },
+    {
+      "start": 21.64,
+      "end": 22.38,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 21.64,
+          "end": 22.36,
+          "probability": 0.4869486428797245
+        },
+        {
+          "word": " kasih.",
+          "start": 22.36,
+          "end": 22.38,
+          "probability": 0.9919415712356567
+        }
+      ]
+    },
+    {
+      "start": 23.08,
+      "end": 24.88,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih sama Sia.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 23.08,
+          "end": 23.62,
+          "probability": 0.6276374906301498
+        },
+        {
+          "word": " kasih",
+          "start": 23.62,
+          "end": 24.02,
+          "probability": 0.9926300048828125
+        },
+        {
+          "word": " sama",
+          "start": 24.02,
+          "end": 24.42,
+          "probability": 0.45768874883651733
+        },
+        {
+          "word": " Sia.",
+          "start": 24.42,
+          "end": 24.88,
+          "probability": 0.9953033924102783
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello sama Sia?  Ya dengan Bapak Will Petri Dawus.  Ya benar-benar ini, kenapa?  Ya, saya dari api-festi ekstra, pinjam, ropa.  Ya.  Di jam 8 malam yang apa, saya tukung bayarannya.  Terima kasih.  Terima kasih sama Sia."
+}

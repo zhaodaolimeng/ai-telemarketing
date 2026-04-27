@@ -1,0 +1,35 @@
+{
+  "stage_distribution": {
+    "H2": {
+      "total": 0,
+      "success": 0,
+      "failed": 0
+    },
+    "H1": {
+      "total": 0,
+      "success": 0,
+      "failed": 0
+    },
+    "S0": {
+      "total": 0,
+      "success": 0,
+      "failed": 0
+    },
+    "other": {
+      "total": 71,
+      "success": 48,
+      "failed": 23
+    },
+    "unknown": {
+      "total": 0,
+      "success": 0,
+      "failed": 0
+    }
+  },
+  "filtered_voicemail": 2,
+  "samples_by_stage": {
+    "H2": [],
+    "H1": [],
+    "S0": []
+  }
+}

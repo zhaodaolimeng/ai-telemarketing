@@ -1,0 +1,77 @@
+{
+  "case_id": "628524716334108-20260409105239",
+  "file_name": "628524716334108-20260409105239.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 1.44,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 0.0,
+          "end": 1.44,
+          "probability": 0.2667093276977539
+        }
+      ]
+    },
+    {
+      "start": 4.0,
+      "end": 4.42,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 3.7199999999999998,
+          "end": 4.42,
+          "probability": 0.86057448387146
+        }
+      ]
+    },
+    {
+      "start": 7.0,
+      "end": 7.8,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 7.0,
+          "end": 7.8,
+          "probability": 0.914969801902771
+        }
+      ]
+    },
+    {
+      "start": 11.0,
+      "end": 11.44,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 10.74,
+          "end": 11.44,
+          "probability": 0.949167013168335
+        }
+      ]
+    },
+    {
+      "start": 20.0,
+      "end": 20.32,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 19.62,
+          "end": 20.32,
+          "probability": 0.9356012344360352
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo?  Halo?  Halo?  Halo?  Halo?"
+}

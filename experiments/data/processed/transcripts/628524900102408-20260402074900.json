@@ -1,0 +1,89 @@
+{
+  "case_id": "628524900102408-20260402074900",
+  "file_name": "628524900102408-20260402074900.mp3",
+  "transcript": [
+    {
+      "start": 4.640000000000001,
+      "end": 6.28,
+      "speaker": "AGENT",
+      "text": " Makan saja.",
+      "words": [
+        {
+          "word": " Makan",
+          "start": 4.640000000000001,
+          "end": 6.04,
+          "probability": 0.012402182212099433
+        },
+        {
+          "word": " saja.",
+          "start": 6.04,
+          "end": 6.28,
+          "probability": 0.010211854241788387
+        }
+      ]
+    },
+    {
+      "start": 7.18,
+      "end": 7.86,
+      "speaker": "CUSTOMER",
+      "text": " Siapa?",
+      "words": [
+        {
+          "word": " Siapa?",
+          "start": 7.18,
+          "end": 7.86,
+          "probability": 0.2707796865142882
+        }
+      ]
+    },
+    {
+      "start": 9.88,
+      "end": 11.28,
+      "speaker": "UNKNOWN",
+      "text": " Mam!",
+      "words": [
+        {
+          "word": " Mam!",
+          "start": 9.88,
+          "end": 11.28,
+          "probability": 0.00020207012130413204
+        }
+      ]
+    },
+    {
+      "start": 18.18,
+      "end": 19.58,
+      "speaker": "AGENT",
+      "text": " Siapa?",
+      "words": [
+        {
+          "word": " Siapa?",
+          "start": 18.18,
+          "end": 19.58,
+          "probability": 0.5164760462939739
+        }
+      ]
+    },
+    {
+      "start": 19.58,
+      "end": 21.12,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 19.58,
+          "end": 21.12,
+          "probability": 0.5024226792156696
+        },
+        {
+          "word": " kasih.",
+          "start": 21.12,
+          "end": 21.12,
+          "probability": 0.9571014046669006
+        }
+      ]
+    }
+  ],
+  "full_text": " Makan saja.  Siapa?  Mam!  Siapa?  Terima kasih."
+}

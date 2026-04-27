@@ -1,0 +1,664 @@
+{
+  "case_id": "628133091466308-20260421085123",
+  "file_name": "628133091466308-20260421085123.mp3",
+  "transcript": [
+    {
+      "start": 2.0799999999999996,
+      "end": 4.38,
+      "text": " Hello, Selamat pagi, Bapak Samsul.",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 2.0799999999999996,
+          "end": 2.72,
+          "probability": 0.023513102903962135
+        },
+        {
+          "word": " Selamat",
+          "start": 2.92,
+          "end": 3.18,
+          "probability": 0.7605080604553223
+        },
+        {
+          "word": " pagi,",
+          "start": 3.18,
+          "end": 3.56,
+          "probability": 0.9417979419231415
+        },
+        {
+          "word": " Bapak",
+          "start": 3.76,
+          "end": 3.88,
+          "probability": 0.8923807144165039
+        },
+        {
+          "word": " Samsul.",
+          "start": 3.88,
+          "end": 4.38,
+          "probability": 0.602734386920929
+        }
+      ]
+    },
+    {
+      "start": 5.1,
+      "end": 6.1,
+      "text": " Pagi, ya?",
+      "words": [
+        {
+          "word": " Pagi,",
+          "start": 5.1,
+          "end": 5.74,
+          "probability": 0.8153044283390045
+        },
+        {
+          "word": " ya?",
+          "start": 5.92,
+          "end": 6.1,
+          "probability": 0.9082128405570984
+        }
+      ]
+    },
+    {
+      "start": 6.52,
+      "end": 10.12,
+      "text": " Ya, Pak. Saya dengan tiara dari aplikasi ekstra.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 6.52,
+          "end": 6.86,
+          "probability": 0.7749133110046387
+        },
+        {
+          "word": " Pak.",
+          "start": 6.96,
+          "end": 7.08,
+          "probability": 0.7260610461235046
+        },
+        {
+          "word": " Saya",
+          "start": 7.36,
+          "end": 7.52,
+          "probability": 0.9775654077529907
+        },
+        {
+          "word": " dengan",
+          "start": 7.52,
+          "end": 7.8,
+          "probability": 0.9229901432991028
+        },
+        {
+          "word": " tiara",
+          "start": 7.8,
+          "end": 8.3,
+          "probability": 0.5627522021532059
+        },
+        {
+          "word": " dari",
+          "start": 8.3,
+          "end": 8.9,
+          "probability": 0.7054268717765808
+        },
+        {
+          "word": " aplikasi",
+          "start": 8.9,
+          "end": 9.48,
+          "probability": 0.7913035949071249
+        },
+        {
+          "word": " ekstra.",
+          "start": 9.48,
+          "end": 10.12,
+          "probability": 0.956049382686615
+        }
+      ]
+    },
+    {
+      "start": 10.66,
+      "end": 11.26,
+      "text": " Pagiannya ini...",
+      "words": [
+        {
+          "word": " Pagiannya",
+          "start": 10.66,
+          "end": 11.2,
+          "probability": 0.8164777755737305
+        },
+        {
+          "word": " ini...",
+          "start": 11.2,
+          "end": 11.26,
+          "probability": 0.27210039645433426
+        }
+      ]
+    },
+    {
+      "start": 11.26,
+      "end": 11.88,
+      "text": " Oh, iya, betul.",
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 11.26,
+          "end": 11.42,
+          "probability": 0.6036706566810608
+        },
+        {
+          "word": " iya,",
+          "start": 11.58,
+          "end": 11.66,
+          "probability": 0.7157411277294159
+        },
+        {
+          "word": " betul.",
+          "start": 11.74,
+          "end": 11.88,
+          "probability": 0.5307985544204712
+        }
+      ]
+    },
+    {
+      "start": 12.38,
+      "end": 15.38,
+      "text": " Yang 1,700 yang di pinjam pro.",
+      "words": [
+        {
+          "word": " Yang",
+          "start": 12.38,
+          "end": 12.64,
+          "probability": 0.24096184968948364
+        },
+        {
+          "word": " 1",
+          "start": 12.64,
+          "end": 13.12,
+          "probability": 0.6960934400558472
+        },
+        {
+          "word": ",700",
+          "start": 13.12,
+          "end": 13.72,
+          "probability": 0.5967645943164825
+        },
+        {
+          "word": " yang",
+          "start": 13.72,
+          "end": 14.44,
+          "probability": 0.9393971562385559
+        },
+        {
+          "word": " di",
+          "start": 14.44,
+          "end": 14.68,
+          "probability": 0.3617934584617615
+        },
+        {
+          "word": " pinjam",
+          "start": 14.68,
+          "end": 15.1,
+          "probability": 0.5981062650680542
+        },
+        {
+          "word": " pro.",
+          "start": 15.1,
+          "end": 15.38,
+          "probability": 0.33311253786087036
+        }
+      ]
+    },
+    {
+      "start": 16.22,
+      "end": 16.84,
+      "text": " Bisa ya, Pak?",
+      "words": [
+        {
+          "word": " Bisa",
+          "start": 16.22,
+          "end": 16.52,
+          "probability": 0.9208956360816956
+        },
+        {
+          "word": " ya,",
+          "start": 16.52,
+          "end": 16.7,
+          "probability": 0.8029806613922119
+        },
+        {
+          "word": " Pak?",
+          "start": 16.76,
+          "end": 16.84,
+          "probability": 0.97335284948349
+        }
+      ]
+    },
+    {
+      "start": 18.06,
+      "end": 18.8,
+      "text": " Bukannya besok?",
+      "words": [
+        {
+          "word": " Bukannya",
+          "start": 18.06,
+          "end": 18.48,
+          "probability": 0.8221599459648132
+        },
+        {
+          "word": " besok?",
+          "start": 18.48,
+          "end": 18.8,
+          "probability": 0.7294149398803711
+        }
+      ]
+    },
+    {
+      "start": 19.58,
+      "end": 20.34,
+      "text": " Hari ini, Pak.",
+      "words": [
+        {
+          "word": " Hari",
+          "start": 19.58,
+          "end": 19.86,
+          "probability": 0.9415143132209778
+        },
+        {
+          "word": " ini,",
+          "start": 19.86,
+          "end": 20.08,
+          "probability": 0.9990598559379578
+        },
+        {
+          "word": " Pak.",
+          "start": 20.24,
+          "end": 20.34,
+          "probability": 0.8666408658027649
+        }
+      ]
+    },
+    {
+      "start": 21.5,
+      "end": 25.48,
+      "text": " Batas tambah ini sampai jam 2 atau 3 sore.",
+      "words": [
+        {
+          "word": " Batas",
+          "start": 21.5,
+          "end": 21.84,
+          "probability": 0.6790704876184464
+        },
+        {
+          "word": " tambah",
+          "start": 21.84,
+          "end": 22.16,
+          "probability": 0.5707700550556183
+        },
+        {
+          "word": " ini",
+          "start": 22.16,
+          "end": 22.4,
+          "probability": 0.6800211668014526
+        },
+        {
+          "word": " sampai",
+          "start": 22.4,
+          "end": 22.72,
+          "probability": 0.8760889768600464
+        },
+        {
+          "word": " jam",
+          "start": 22.72,
+          "end": 23.08,
+          "probability": 0.9683688879013062
+        },
+        {
+          "word": " 2",
+          "start": 23.08,
+          "end": 24.22,
+          "probability": 0.49901506304740906
+        },
+        {
+          "word": " atau",
+          "start": 24.22,
+          "end": 24.56,
+          "probability": 0.7866777777671814
+        },
+        {
+          "word": " 3",
+          "start": 24.56,
+          "end": 25.24,
+          "probability": 0.2404036968946457
+        },
+        {
+          "word": " sore.",
+          "start": 25.24,
+          "end": 25.48,
+          "probability": 0.29968172311782837
+        }
+      ]
+    },
+    {
+      "start": 25.9,
+      "end": 27.38,
+      "text": " Jam 4, bisa.",
+      "words": [
+        {
+          "word": " Jam",
+          "start": 25.9,
+          "end": 26.28,
+          "probability": 0.6146016120910645
+        },
+        {
+          "word": " 4,",
+          "start": 26.28,
+          "end": 27.2,
+          "probability": 0.48965734243392944
+        },
+        {
+          "word": " bisa.",
+          "start": 27.34,
+          "end": 27.38,
+          "probability": 0.6799983382225037
+        }
+      ]
+    },
+    {
+      "start": 27.38,
+      "end": 31.24,
+      "text": " Bapak ada kepualakan Bapak wajib ambil dari aplikasi.",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 27.38,
+          "end": 27.88,
+          "probability": 0.42849334081013996
+        },
+        {
+          "word": " ada",
+          "start": 27.88,
+          "end": 28.06,
+          "probability": 0.49305465817451477
+        },
+        {
+          "word": " kepualakan",
+          "start": 28.06,
+          "end": 29.08,
+          "probability": 0.389100082218647
+        },
+        {
+          "word": " Bapak",
+          "start": 29.08,
+          "end": 29.52,
+          "probability": 0.7196092108885447
+        },
+        {
+          "word": " wajib",
+          "start": 29.52,
+          "end": 29.9,
+          "probability": 0.8046697874863943
+        },
+        {
+          "word": " ambil",
+          "start": 29.9,
+          "end": 30.3,
+          "probability": 0.8944668471813202
+        },
+        {
+          "word": " dari",
+          "start": 30.3,
+          "end": 30.6,
+          "probability": 0.9709829092025757
+        },
+        {
+          "word": " aplikasi.",
+          "start": 30.6,
+          "end": 31.24,
+          "probability": 0.6350942750771841
+        }
+      ]
+    },
+    {
+      "start": 32.2,
+      "end": 33.06,
+      "text": " Jam 4, bisa.",
+      "words": [
+        {
+          "word": " Jam",
+          "start": 32.2,
+          "end": 32.74,
+          "probability": 0.06664390861988068
+        },
+        {
+          "word": " 4,",
+          "start": 32.74,
+          "end": 32.86,
+          "probability": 0.6894412040710449
+        },
+        {
+          "word": " bisa.",
+          "start": 33.04,
+          "end": 33.06,
+          "probability": 0.0008769803098402917
+        }
+      ]
+    },
+    {
+      "start": 34.12,
+      "end": 34.92,
+      "text": " Jam 4.",
+      "words": [
+        {
+          "word": " Jam",
+          "start": 34.12,
+          "end": 34.62,
+          "probability": 0.794189989566803
+        },
+        {
+          "word": " 4.",
+          "start": 34.62,
+          "end": 34.92,
+          "probability": 0.9876663684844971
+        }
+      ]
+    },
+    {
+      "start": 35.06,
+      "end": 35.44,
+      "text": " Jam 4.",
+      "words": [
+        {
+          "word": " Jam",
+          "start": 35.06,
+          "end": 35.16,
+          "probability": 0.4338982105255127
+        },
+        {
+          "word": " 4.",
+          "start": 35.16,
+          "end": 35.44,
+          "probability": 0.9459388852119446
+        }
+      ]
+    },
+    {
+      "start": 35.44,
+      "end": 36.16,
+      "text": " Tapi udah pasti, ya, Pak?",
+      "words": [
+        {
+          "word": " Tapi",
+          "start": 35.44,
+          "end": 35.44,
+          "probability": 0.17463819682598114
+        },
+        {
+          "word": " udah",
+          "start": 35.44,
+          "end": 35.56,
+          "probability": 0.7178236842155457
+        },
+        {
+          "word": " pasti,",
+          "start": 35.56,
+          "end": 35.86,
+          "probability": 0.8659331798553467
+        },
+        {
+          "word": " ya,",
+          "start": 35.96,
+          "end": 36.04,
+          "probability": 0.6082252264022827
+        },
+        {
+          "word": " Pak?",
+          "start": 36.1,
+          "end": 36.16,
+          "probability": 0.7031998634338379
+        }
+      ]
+    },
+    {
+      "start": 37.46,
+      "end": 38.84,
+      "text": " Itulah ya, jam 4.",
+      "words": [
+        {
+          "word": " Itulah",
+          "start": 37.46,
+          "end": 38.0,
+          "probability": 0.8110392093658447
+        },
+        {
+          "word": " ya,",
+          "start": 38.0,
+          "end": 38.2,
+          "probability": 0.27246955037117004
+        },
+        {
+          "word": " jam",
+          "start": 38.44,
+          "end": 38.58,
+          "probability": 0.9571052193641663
+        },
+        {
+          "word": " 4.",
+          "start": 38.58,
+          "end": 38.84,
+          "probability": 0.9933493733406067
+        }
+      ]
+    },
+    {
+      "start": 39.46,
+      "end": 40.38,
+      "text": " Ya, udah saya tunggu.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 39.46,
+          "end": 39.62,
+          "probability": 0.9273993372917175
+        },
+        {
+          "word": " udah",
+          "start": 39.72,
+          "end": 39.82,
+          "probability": 0.9000562429428101
+        },
+        {
+          "word": " saya",
+          "start": 39.82,
+          "end": 40.0,
+          "probability": 0.8825815916061401
+        },
+        {
+          "word": " tunggu.",
+          "start": 40.0,
+          "end": 40.38,
+          "probability": 0.9893060326576233
+        }
+      ]
+    },
+    {
+      "start": 40.52,
+      "end": 40.6,
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 40.52,
+          "end": 40.6,
+          "probability": 0.7801077365875244
+        }
+      ]
+    },
+    {
+      "start": 40.8,
+      "end": 44.04,
+      "text": " Ya, Pak. Kita aja, Pak. Selamat pagi.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 40.8,
+          "end": 41.14,
+          "probability": 0.32795608043670654
+        },
+        {
+          "word": " Pak.",
+          "start": 41.66,
+          "end": 41.7,
+          "probability": 0.0936688631772995
+        },
+        {
+          "word": " Kita",
+          "start": 41.94,
+          "end": 42.08,
+          "probability": 0.07722260802984238
+        },
+        {
+          "word": " aja,",
+          "start": 42.08,
+          "end": 42.28,
+          "probability": 0.835935115814209
+        },
+        {
+          "word": " Pak.",
+          "start": 42.4,
+          "end": 42.5,
+          "probability": 0.9932903051376343
+        },
+        {
+          "word": " Selamat",
+          "start": 43.0,
+          "end": 43.54,
+          "probability": 0.98016756772995
+        },
+        {
+          "word": " pagi.",
+          "start": 43.54,
+          "end": 44.04,
+          "probability": 0.9955809414386749
+        }
+      ]
+    },
+    {
+      "start": 44.7,
+      "end": 45.52,
+      "text": " Selamat pagi.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 44.7,
+          "end": 45.24,
+          "probability": 0.7372706383466721
+        },
+        {
+          "word": " pagi.",
+          "start": 45.24,
+          "end": 45.52,
+          "probability": 0.9951418042182922
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello, Selamat pagi, Bapak Samsul.  Pagi, ya?  Ya, Pak. Saya dengan tiara dari aplikasi ekstra.  Pagiannya ini...  Oh, iya, betul.  Yang 1,700 yang di pinjam pro.  Bisa ya, Pak?  Bukannya besok?  Hari ini, Pak.  Batas tambah ini sampai jam 2 atau 3 sore.  Jam 4, bisa.  Bapak ada kepualakan Bapak wajib ambil dari aplikasi.  Jam 4, bisa.  Jam 4.  Jam 4.  Tapi udah pasti, ya, Pak?  Itulah ya, jam 4.  Ya, udah saya tunggu.  Ya.  Ya, Pak. Kita aja, Pak. Selamat pagi.  Selamat pagi."
+}

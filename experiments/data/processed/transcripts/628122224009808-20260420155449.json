@@ -1,0 +1,582 @@
+{
+  "case_id": "628122224009808-20260420155449",
+  "file_name": "628122224009808-20260420155449.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 0.58,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 0.0,
+          "end": 0.58,
+          "probability": 0.4841984212398529
+        }
+      ]
+    },
+    {
+      "start": 6.88,
+      "end": 7.64,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 6.88,
+          "end": 7.64,
+          "probability": 0.7976807951927185
+        }
+      ]
+    },
+    {
+      "start": 10.24,
+      "end": 12.86,
+      "text": " Halo, Bu Motiara, Motiara?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 10.24,
+          "end": 11.0,
+          "probability": 0.8832011222839355
+        },
+        {
+          "word": " Bu",
+          "start": 11.4,
+          "end": 11.54,
+          "probability": 0.14142660796642303
+        },
+        {
+          "word": " Motiara,",
+          "start": 11.54,
+          "end": 12.12,
+          "probability": 0.41451765100161236
+        },
+        {
+          "word": " Motiara?",
+          "start": 12.32,
+          "end": 12.86,
+          "probability": 0.9072074294090271
+        }
+      ]
+    },
+    {
+      "start": 13.66,
+      "end": 14.84,
+      "text": " Ya, Bu?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 13.66,
+          "end": 14.42,
+          "probability": 0.8364295363426208
+        },
+        {
+          "word": " Bu?",
+          "start": 14.72,
+          "end": 14.84,
+          "probability": 0.9687990546226501
+        }
+      ]
+    },
+    {
+      "start": 16.66,
+      "end": 17.42,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 16.66,
+          "end": 17.42,
+          "probability": 0.8038144111633301
+        }
+      ]
+    },
+    {
+      "start": 18.38,
+      "end": 18.76,
+      "text": " Ya?",
+      "words": [
+        {
+          "word": " Ya?",
+          "start": 18.38,
+          "end": 18.76,
+          "probability": 0.9152353405952454
+        }
+      ]
+    },
+    {
+      "start": 19.62,
+      "end": 22.04,
+      "text": " Bu, utangnya udah jatuh tempoh, Bu, dibayar Bu.",
+      "words": [
+        {
+          "word": " Bu,",
+          "start": 19.62,
+          "end": 19.98,
+          "probability": 0.9912248253822327
+        },
+        {
+          "word": " utangnya",
+          "start": 20.14,
+          "end": 20.52,
+          "probability": 0.92198512951533
+        },
+        {
+          "word": " udah",
+          "start": 20.52,
+          "end": 20.62,
+          "probability": 0.5602231025695801
+        },
+        {
+          "word": " jatuh",
+          "start": 20.62,
+          "end": 20.84,
+          "probability": 0.7767312924067179
+        },
+        {
+          "word": " tempoh,",
+          "start": 20.84,
+          "end": 21.2,
+          "probability": 0.6563071608543396
+        },
+        {
+          "word": " Bu,",
+          "start": 21.3,
+          "end": 21.38,
+          "probability": 0.919582188129425
+        },
+        {
+          "word": " dibayar",
+          "start": 21.46,
+          "end": 21.82,
+          "probability": 0.891464630762736
+        },
+        {
+          "word": " Bu.",
+          "start": 21.82,
+          "end": 22.04,
+          "probability": 0.6592143177986145
+        }
+      ]
+    },
+    {
+      "start": 22.6,
+      "end": 23.5,
+      "text": " Di pingjam Pro.",
+      "words": [
+        {
+          "word": " Di",
+          "start": 22.6,
+          "end": 22.84,
+          "probability": 0.6356212496757507
+        },
+        {
+          "word": " pingjam",
+          "start": 22.84,
+          "end": 23.22,
+          "probability": 0.6229219138622284
+        },
+        {
+          "word": " Pro.",
+          "start": 23.22,
+          "end": 23.5,
+          "probability": 0.8118058443069458
+        }
+      ]
+    },
+    {
+      "start": 24.28,
+      "end": 25.04,
+      "text": " Ya?",
+      "words": [
+        {
+          "word": " Ya?",
+          "start": 24.28,
+          "end": 25.04,
+          "probability": 0.9295748472213745
+        }
+      ]
+    },
+    {
+      "start": 25.8,
+      "end": 28.52,
+      "text": " Bu, utangnya udah jatuh tempoh, di pingjam Pro, bayar sekarang.",
+      "words": [
+        {
+          "word": " Bu,",
+          "start": 25.8,
+          "end": 26.26,
+          "probability": 0.009400937706232071
+        },
+        {
+          "word": " utangnya",
+          "start": 26.36,
+          "end": 26.58,
+          "probability": 0.5437514702789485
+        },
+        {
+          "word": " udah",
+          "start": 26.58,
+          "end": 26.68,
+          "probability": 0.6059443354606628
+        },
+        {
+          "word": " jatuh",
+          "start": 26.68,
+          "end": 26.96,
+          "probability": 0.6628882090250651
+        },
+        {
+          "word": " tempoh,",
+          "start": 26.96,
+          "end": 27.32,
+          "probability": 0.5335328355431557
+        },
+        {
+          "word": " di",
+          "start": 27.38,
+          "end": 27.48,
+          "probability": 0.21903221309185028
+        },
+        {
+          "word": " pingjam",
+          "start": 27.48,
+          "end": 27.74,
+          "probability": 0.4096153974533081
+        },
+        {
+          "word": " Pro,",
+          "start": 27.74,
+          "end": 27.98,
+          "probability": 0.25354865193367004
+        },
+        {
+          "word": " bayar",
+          "start": 28.1,
+          "end": 28.28,
+          "probability": 0.6463401764631271
+        },
+        {
+          "word": " sekarang.",
+          "start": 28.28,
+          "end": 28.52,
+          "probability": 0.8560936450958252
+        }
+      ]
+    },
+    {
+      "start": 31.02,
+      "end": 31.74,
+      "text": " Ya, ya.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 31.02,
+          "end": 31.48,
+          "probability": 0.4179411232471466
+        },
+        {
+          "word": " ya.",
+          "start": 31.58,
+          "end": 31.74,
+          "probability": 0.8415255546569824
+        }
+      ]
+    }
+  ],
+  "transcript_with_speakers": [
+    {
+      "start": 0.0,
+      "end": 0.58,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 0.0,
+          "end": 0.58,
+          "probability": 0.4841984212398529
+        }
+      ]
+    },
+    {
+      "start": 6.88,
+      "end": 7.64,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 6.88,
+          "end": 7.64,
+          "probability": 0.7976807951927185
+        }
+      ]
+    },
+    {
+      "start": 10.24,
+      "end": 12.86,
+      "speaker": "AGENT",
+      "text": " Halo, Bu Motiara, Motiara?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 10.24,
+          "end": 11.0,
+          "probability": 0.8832011222839355
+        },
+        {
+          "word": " Bu",
+          "start": 11.4,
+          "end": 11.54,
+          "probability": 0.14142660796642303
+        },
+        {
+          "word": " Motiara,",
+          "start": 11.54,
+          "end": 12.12,
+          "probability": 0.41451765100161236
+        },
+        {
+          "word": " Motiara?",
+          "start": 12.32,
+          "end": 12.86,
+          "probability": 0.9072074294090271
+        }
+      ]
+    },
+    {
+      "start": 13.66,
+      "end": 14.84,
+      "speaker": "CUSTOMER",
+      "text": " Ya, Bu?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 13.66,
+          "end": 14.42,
+          "probability": 0.8364295363426208
+        },
+        {
+          "word": " Bu?",
+          "start": 14.72,
+          "end": 14.84,
+          "probability": 0.9687990546226501
+        }
+      ]
+    },
+    {
+      "start": 16.66,
+      "end": 17.42,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 16.66,
+          "end": 17.42,
+          "probability": 0.8038144111633301
+        }
+      ]
+    },
+    {
+      "start": 18.38,
+      "end": 18.76,
+      "speaker": "CUSTOMER",
+      "text": " Ya?",
+      "words": [
+        {
+          "word": " Ya?",
+          "start": 18.38,
+          "end": 18.76,
+          "probability": 0.9152353405952454
+        }
+      ]
+    },
+    {
+      "start": 19.62,
+      "end": 22.04,
+      "speaker": "AGENT",
+      "text": " Bu, utangnya udah jatuh tempoh, Bu, dibayar Bu.",
+      "words": [
+        {
+          "word": " Bu,",
+          "start": 19.62,
+          "end": 19.98,
+          "probability": 0.9912248253822327
+        },
+        {
+          "word": " utangnya",
+          "start": 20.14,
+          "end": 20.52,
+          "probability": 0.92198512951533
+        },
+        {
+          "word": " udah",
+          "start": 20.52,
+          "end": 20.62,
+          "probability": 0.5602231025695801
+        },
+        {
+          "word": " jatuh",
+          "start": 20.62,
+          "end": 20.84,
+          "probability": 0.7767312924067179
+        },
+        {
+          "word": " tempoh,",
+          "start": 20.84,
+          "end": 21.2,
+          "probability": 0.6563071608543396
+        },
+        {
+          "word": " Bu,",
+          "start": 21.3,
+          "end": 21.38,
+          "probability": 0.919582188129425
+        },
+        {
+          "word": " dibayar",
+          "start": 21.46,
+          "end": 21.82,
+          "probability": 0.891464630762736
+        },
+        {
+          "word": " Bu.",
+          "start": 21.82,
+          "end": 22.04,
+          "probability": 0.6592143177986145
+        }
+      ]
+    },
+    {
+      "start": 22.6,
+      "end": 23.5,
+      "speaker": "CUSTOMER",
+      "text": " Di pingjam Pro.",
+      "words": [
+        {
+          "word": " Di",
+          "start": 22.6,
+          "end": 22.84,
+          "probability": 0.6356212496757507
+        },
+        {
+          "word": " pingjam",
+          "start": 22.84,
+          "end": 23.22,
+          "probability": 0.6229219138622284
+        },
+        {
+          "word": " Pro.",
+          "start": 23.22,
+          "end": 23.5,
+          "probability": 0.8118058443069458
+        }
+      ]
+    },
+    {
+      "start": 24.28,
+      "end": 25.04,
+      "speaker": "CUSTOMER",
+      "text": " Ya?",
+      "words": [
+        {
+          "word": " Ya?",
+          "start": 24.28,
+          "end": 25.04,
+          "probability": 0.9295748472213745
+        }
+      ]
+    },
+    {
+      "start": 25.8,
+      "end": 28.52,
+      "speaker": "AGENT",
+      "text": " Bu, utangnya udah jatuh tempoh, di pingjam Pro, bayar sekarang.",
+      "words": [
+        {
+          "word": " Bu,",
+          "start": 25.8,
+          "end": 26.26,
+          "probability": 0.009400937706232071
+        },
+        {
+          "word": " utangnya",
+          "start": 26.36,
+          "end": 26.58,
+          "probability": 0.5437514702789485
+        },
+        {
+          "word": " udah",
+          "start": 26.58,
+          "end": 26.68,
+          "probability": 0.6059443354606628
+        },
+        {
+          "word": " jatuh",
+          "start": 26.68,
+          "end": 26.96,
+          "probability": 0.6628882090250651
+        },
+        {
+          "word": " tempoh,",
+          "start": 26.96,
+          "end": 27.32,
+          "probability": 0.5335328355431557
+        },
+        {
+          "word": " di",
+          "start": 27.38,
+          "end": 27.48,
+          "probability": 0.21903221309185028
+        },
+        {
+          "word": " pingjam",
+          "start": 27.48,
+          "end": 27.74,
+          "probability": 0.4096153974533081
+        },
+        {
+          "word": " Pro,",
+          "start": 27.74,
+          "end": 27.98,
+          "probability": 0.25354865193367004
+        },
+        {
+          "word": " bayar",
+          "start": 28.1,
+          "end": 28.28,
+          "probability": 0.6463401764631271
+        },
+        {
+          "word": " sekarang.",
+          "start": 28.28,
+          "end": 28.52,
+          "probability": 0.8560936450958252
+        }
+      ]
+    },
+    {
+      "start": 31.02,
+      "end": 31.74,
+      "speaker": "CUSTOMER",
+      "text": " Ya, ya.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 31.02,
+          "end": 31.48,
+          "probability": 0.4179411232471466
+        },
+        {
+          "word": " ya.",
+          "start": 31.58,
+          "end": 31.74,
+          "probability": 0.8415255546569824
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo?  Halo?  Halo, Bu Motiara, Motiara?  Ya, Bu?  Halo?  Ya?  Bu, utangnya udah jatuh tempoh, Bu, dibayar Bu.  Di pingjam Pro.  Ya?  Bu, utangnya udah jatuh tempoh, di pingjam Pro, bayar sekarang.  Ya, ya."
+}

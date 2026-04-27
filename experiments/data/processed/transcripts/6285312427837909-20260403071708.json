@@ -1,0 +1,459 @@
+{
+  "case_id": "6285312427837909-20260403071708",
+  "file_name": "6285312427837909-20260403071708.mp3",
+  "transcript": [
+    {
+      "start": 0.9800000000000002,
+      "end": 3.6,
+      "speaker": "AGENT",
+      "text": " Halo Selamat pagi",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 0.9800000000000002,
+          "end": 1.82,
+          "probability": 0.5786389112472534
+        },
+        {
+          "word": " Selamat",
+          "start": 1.82,
+          "end": 2.54,
+          "probability": 0.8335457742214203
+        },
+        {
+          "word": " pagi",
+          "start": 2.54,
+          "end": 3.6,
+          "probability": 0.985742598772049
+        }
+      ]
+    },
+    {
+      "start": 6.5,
+      "end": 9.52,
+      "speaker": "AGENT",
+      "text": " Bapak Hirodin Juni di Jawa Pak",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 6.5,
+          "end": 7.34,
+          "probability": 0.9188352624575297
+        },
+        {
+          "word": " Hirodin",
+          "start": 7.34,
+          "end": 7.96,
+          "probability": 0.5636238108078638
+        },
+        {
+          "word": " Juni",
+          "start": 7.96,
+          "end": 8.38,
+          "probability": 0.47956962138414383
+        },
+        {
+          "word": " di",
+          "start": 8.38,
+          "end": 8.66,
+          "probability": 0.8400360345840454
+        },
+        {
+          "word": " Jawa",
+          "start": 8.66,
+          "end": 9.1,
+          "probability": 0.5832850262522697
+        },
+        {
+          "word": " Pak",
+          "start": 9.1,
+          "end": 9.52,
+          "probability": 0.7236818075180054
+        }
+      ]
+    },
+    {
+      "start": 9.52,
+      "end": 14.38,
+      "speaker": "AGENT",
+      "text": " Ini Bapak Pegawai Pabringtah ya di Kalimantan Tengah",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 9.52,
+          "end": 10.38,
+          "probability": 0.7715587615966797
+        },
+        {
+          "word": " Bapak",
+          "start": 10.38,
+          "end": 10.7,
+          "probability": 0.9091899991035461
+        },
+        {
+          "word": " Pegawai",
+          "start": 10.7,
+          "end": 11.12,
+          "probability": 0.7011125882466634
+        },
+        {
+          "word": " Pabringtah",
+          "start": 11.12,
+          "end": 11.76,
+          "probability": 0.44786049872636796
+        },
+        {
+          "word": " ya",
+          "start": 11.76,
+          "end": 12.0,
+          "probability": 0.59872967004776
+        },
+        {
+          "word": " di",
+          "start": 12.0,
+          "end": 12.36,
+          "probability": 0.4427594840526581
+        },
+        {
+          "word": " Kalimantan",
+          "start": 12.36,
+          "end": 13.78,
+          "probability": 0.8121195062994957
+        },
+        {
+          "word": " Tengah",
+          "start": 13.78,
+          "end": 14.38,
+          "probability": 0.8153329392274221
+        }
+      ]
+    },
+    {
+      "start": 14.38,
+      "end": 17.42,
+      "speaker": "CUSTOMER",
+      "text": " Anda tidak bisa bicara atau bagaimana ini tidak dijawab kalau",
+      "words": [
+        {
+          "word": " Anda",
+          "start": 14.38,
+          "end": 14.62,
+          "probability": 0.9293124675750732
+        },
+        {
+          "word": " tidak",
+          "start": 14.62,
+          "end": 14.84,
+          "probability": 0.9449579119682312
+        },
+        {
+          "word": " bisa",
+          "start": 14.84,
+          "end": 15.16,
+          "probability": 0.9983372688293457
+        },
+        {
+          "word": " bicara",
+          "start": 15.16,
+          "end": 15.52,
+          "probability": 0.7192393392324448
+        },
+        {
+          "word": " atau",
+          "start": 15.52,
+          "end": 15.76,
+          "probability": 0.931617259979248
+        },
+        {
+          "word": " bagaimana",
+          "start": 15.76,
+          "end": 16.18,
+          "probability": 0.9846962690353394
+        },
+        {
+          "word": " ini",
+          "start": 16.18,
+          "end": 16.44,
+          "probability": 0.8493285179138184
+        },
+        {
+          "word": " tidak",
+          "start": 16.44,
+          "end": 16.74,
+          "probability": 0.9904700517654419
+        },
+        {
+          "word": " dijawab",
+          "start": 16.74,
+          "end": 17.16,
+          "probability": 0.8443149328231812
+        },
+        {
+          "word": " kalau",
+          "start": 17.16,
+          "end": 17.42,
+          "probability": 0.2901475429534912
+        }
+      ]
+    },
+    {
+      "start": 21.16,
+      "end": 22.0,
+      "speaker": "AGENT",
+      "text": " Halo",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 21.16,
+          "end": 22.0,
+          "probability": 0.4256346523761749
+        }
+      ]
+    },
+    {
+      "start": 25.080000000000002,
+      "end": 25.92,
+      "speaker": "CUSTOMER",
+      "text": " Bajingan",
+      "words": [
+        {
+          "word": " Bajingan",
+          "start": 25.080000000000002,
+          "end": 25.92,
+          "probability": 0.4645982712972909
+        }
+      ]
+    },
+    {
+      "start": 27.279999999999998,
+      "end": 28.86,
+      "speaker": "AGENT",
+      "text": " Halo Bapak Hirodin",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 27.279999999999998,
+          "end": 27.88,
+          "probability": 0.3034195601940155
+        },
+        {
+          "word": " Bapak",
+          "start": 27.88,
+          "end": 28.32,
+          "probability": 0.8173561890920004
+        },
+        {
+          "word": " Hirodin",
+          "start": 28.32,
+          "end": 28.86,
+          "probability": 0.5138727923234304
+        }
+      ]
+    },
+    {
+      "start": 31.64,
+      "end": 36.36,
+      "speaker": "CUSTOMER",
+      "text": " Oke, bayar kan ya, bagian eksa wangnonya hanya 1 juta kok mudah bagi Anda ya",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 31.64,
+          "end": 32.24,
+          "probability": 0.3956495523452759
+        },
+        {
+          "word": " bayar",
+          "start": 32.38,
+          "end": 32.56,
+          "probability": 0.6286728233098984
+        },
+        {
+          "word": " kan",
+          "start": 32.56,
+          "end": 32.74,
+          "probability": 0.1653003841638565
+        },
+        {
+          "word": " ya,",
+          "start": 32.74,
+          "end": 32.86,
+          "probability": 0.8418494462966919
+        },
+        {
+          "word": " bagian",
+          "start": 32.94,
+          "end": 33.18,
+          "probability": 0.5404095835983753
+        },
+        {
+          "word": " eksa",
+          "start": 33.18,
+          "end": 33.5,
+          "probability": 0.35951054841279984
+        },
+        {
+          "word": " wangnonya",
+          "start": 33.5,
+          "end": 33.92,
+          "probability": 0.3590961620211601
+        },
+        {
+          "word": " hanya",
+          "start": 33.92,
+          "end": 34.28,
+          "probability": 0.8923050761222839
+        },
+        {
+          "word": " 1",
+          "start": 34.28,
+          "end": 34.58,
+          "probability": 0.833087146282196
+        },
+        {
+          "word": " juta",
+          "start": 34.58,
+          "end": 34.84,
+          "probability": 0.7757323384284973
+        },
+        {
+          "word": " kok",
+          "start": 34.84,
+          "end": 35.02,
+          "probability": 0.77553790807724
+        },
+        {
+          "word": " mudah",
+          "start": 35.02,
+          "end": 35.64,
+          "probability": 0.9193638563156128
+        },
+        {
+          "word": " bagi",
+          "start": 35.64,
+          "end": 35.94,
+          "probability": 0.750487893819809
+        },
+        {
+          "word": " Anda",
+          "start": 35.94,
+          "end": 36.1,
+          "probability": 0.24033546447753906
+        },
+        {
+          "word": " ya",
+          "start": 36.1,
+          "end": 36.36,
+          "probability": 0.9339613318443298
+        }
+      ]
+    },
+    {
+      "start": 36.36,
+      "end": 41.38,
+      "speaker": "AGENT",
+      "text": " daripada data Anda disebar di Kalangan Pegawai Pemerintahan Anda dan",
+      "words": [
+        {
+          "word": " daripada",
+          "start": 36.36,
+          "end": 37.3,
+          "probability": 0.6922426968812943
+        },
+        {
+          "word": " data",
+          "start": 37.3,
+          "end": 37.58,
+          "probability": 0.9595389366149902
+        },
+        {
+          "word": " Anda",
+          "start": 37.58,
+          "end": 37.8,
+          "probability": 0.632325291633606
+        },
+        {
+          "word": " disebar",
+          "start": 37.8,
+          "end": 38.34,
+          "probability": 0.8292249441146851
+        },
+        {
+          "word": " di",
+          "start": 38.34,
+          "end": 38.66,
+          "probability": 0.986068606376648
+        },
+        {
+          "word": " Kalangan",
+          "start": 38.66,
+          "end": 39.26,
+          "probability": 0.5069140931591392
+        },
+        {
+          "word": " Pegawai",
+          "start": 39.26,
+          "end": 39.96,
+          "probability": 0.8986523747444153
+        },
+        {
+          "word": " Pemerintahan",
+          "start": 39.96,
+          "end": 40.66,
+          "probability": 0.927165076136589
+        },
+        {
+          "word": " Anda",
+          "start": 40.66,
+          "end": 41.12,
+          "probability": 0.9915307760238647
+        },
+        {
+          "word": " dan",
+          "start": 41.12,
+          "end": 41.38,
+          "probability": 0.9227171540260315
+        }
+      ]
+    },
+    {
+      "start": 41.38,
+      "end": 42.94,
+      "speaker": "CUSTOMER",
+      "text": " Guarga Anda. Saya Tunggu Sekarang",
+      "words": [
+        {
+          "word": " Guarga",
+          "start": 41.38,
+          "end": 41.78,
+          "probability": 0.79766446352005
+        },
+        {
+          "word": " Anda.",
+          "start": 41.78,
+          "end": 42.04,
+          "probability": 0.9908440709114075
+        },
+        {
+          "word": " Saya",
+          "start": 42.16,
+          "end": 42.26,
+          "probability": 0.9775344133377075
+        },
+        {
+          "word": " Tunggu",
+          "start": 42.26,
+          "end": 42.56,
+          "probability": 0.7945935527483622
+        },
+        {
+          "word": " Sekarang",
+          "start": 42.56,
+          "end": 42.94,
+          "probability": 0.9452001253763834
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo Selamat pagi  Bapak Hirodin Juni di Jawa Pak  Ini Bapak Pegawai Pabringtah ya di Kalimantan Tengah  Anda tidak bisa bicara atau bagaimana ini tidak dijawab kalau  Halo  Bajingan  Halo Bapak Hirodin  Oke, bayar kan ya, bagian eksa wangnonya hanya 1 juta kok mudah bagi Anda ya  daripada data Anda disebar di Kalangan Pegawai Pemerintahan Anda dan  Guarga Anda. Saya Tunggu Sekarang"
+}

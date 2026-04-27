@@ -1,0 +1,229 @@
+{
+  "case_id": "6285710455905309-20260416080227",
+  "file_name": "6285710455905309-20260416080227.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 2.86,
+      "speaker": "CUSTOMER",
+      "text": " Selamat datang di layanan pesan suara.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 0.0,
+          "end": 0.72,
+          "probability": 0.5928592830896378
+        },
+        {
+          "word": " datang",
+          "start": 0.72,
+          "end": 1.18,
+          "probability": 0.9896428287029266
+        },
+        {
+          "word": " di",
+          "start": 1.18,
+          "end": 1.38,
+          "probability": 0.9626501798629761
+        },
+        {
+          "word": " layanan",
+          "start": 1.38,
+          "end": 1.74,
+          "probability": 0.9486070871353149
+        },
+        {
+          "word": " pesan",
+          "start": 1.74,
+          "end": 2.38,
+          "probability": 0.9355000257492065
+        },
+        {
+          "word": " suara.",
+          "start": 2.38,
+          "end": 2.86,
+          "probability": 0.980761855840683
+        }
+      ]
+    },
+    {
+      "start": 3.02,
+      "end": 4.62,
+      "speaker": "CUSTOMER",
+      "text": " Welcome to Poysmail Service.",
+      "words": [
+        {
+          "word": " Welcome",
+          "start": 3.02,
+          "end": 3.42,
+          "probability": 0.18815714120864868
+        },
+        {
+          "word": " to",
+          "start": 3.42,
+          "end": 3.76,
+          "probability": 0.9554178714752197
+        },
+        {
+          "word": " Poysmail",
+          "start": 3.76,
+          "end": 4.42,
+          "probability": 0.4817722924053669
+        },
+        {
+          "word": " Service.",
+          "start": 4.42,
+          "end": 4.62,
+          "probability": 0.1535489410161972
+        }
+      ]
+    },
+    {
+      "start": 5.26,
+      "end": 8.6,
+      "speaker": "AGENT",
+      "text": " Silahkan rekam pesan suara setelah mendengar nada berikut.",
+      "words": [
+        {
+          "word": " Silahkan",
+          "start": 5.26,
+          "end": 5.74,
+          "probability": 0.9097506801287333
+        },
+        {
+          "word": " rekam",
+          "start": 5.74,
+          "end": 6.04,
+          "probability": 0.9128969609737396
+        },
+        {
+          "word": " pesan",
+          "start": 6.04,
+          "end": 6.36,
+          "probability": 0.9928515553474426
+        },
+        {
+          "word": " suara",
+          "start": 6.36,
+          "end": 6.76,
+          "probability": 0.9917369186878204
+        },
+        {
+          "word": " setelah",
+          "start": 6.76,
+          "end": 7.4,
+          "probability": 0.9505806962649027
+        },
+        {
+          "word": " mendengar",
+          "start": 7.4,
+          "end": 7.84,
+          "probability": 0.9859417875607809
+        },
+        {
+          "word": " nada",
+          "start": 7.84,
+          "end": 8.14,
+          "probability": 0.5335910320281982
+        },
+        {
+          "word": " berikut.",
+          "start": 8.14,
+          "end": 8.6,
+          "probability": 0.9958471953868866
+        }
+      ]
+    },
+    {
+      "start": 8.8,
+      "end": 11.92,
+      "speaker": "CUSTOMER",
+      "text": " Setekan tombol apapun untuk menyelesaikan rekaman.",
+      "words": [
+        {
+          "word": " Setekan",
+          "start": 8.8,
+          "end": 9.18,
+          "probability": 0.6702271327376366
+        },
+        {
+          "word": " tombol",
+          "start": 9.18,
+          "end": 9.48,
+          "probability": 0.9294897019863129
+        },
+        {
+          "word": " apapun",
+          "start": 9.48,
+          "end": 10.12,
+          "probability": 0.8700721263885498
+        },
+        {
+          "word": " untuk",
+          "start": 10.12,
+          "end": 10.58,
+          "probability": 0.9337228536605835
+        },
+        {
+          "word": " menyelesaikan",
+          "start": 10.58,
+          "end": 11.34,
+          "probability": 0.9801540076732635
+        },
+        {
+          "word": " rekaman.",
+          "start": 11.34,
+          "end": 11.92,
+          "probability": 0.8854251205921173
+        }
+      ]
+    },
+    {
+      "start": 12.920000000000002,
+      "end": 14.68,
+      "speaker": "AGENT",
+      "text": " Terus nyelangap gitu.",
+      "words": [
+        {
+          "word": " Terus",
+          "start": 12.920000000000002,
+          "end": 13.84,
+          "probability": 0.48536698520183563
+        },
+        {
+          "word": " nyelangap",
+          "start": 13.84,
+          "end": 14.36,
+          "probability": 0.523553591221571
+        },
+        {
+          "word": " gitu.",
+          "start": 14.36,
+          "end": 14.68,
+          "probability": 0.7624199390411377
+        }
+      ]
+    },
+    {
+      "start": 30.840000000000003,
+      "end": 32.24,
+      "speaker": "CUSTOMER",
+      "text": " Selamat datang.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 30.840000000000003,
+          "end": 32.24,
+          "probability": 0.48349046474322677
+        },
+        {
+          "word": " datang.",
+          "start": 32.24,
+          "end": 32.24,
+          "probability": 0.5304421782493591
+        }
+      ]
+    }
+  ],
+  "full_text": " Selamat datang di layanan pesan suara.  Welcome to Poysmail Service.  Silahkan rekam pesan suara setelah mendengar nada berikut.  Setekan tombol apapun untuk menyelesaikan rekaman.  Terus nyelangap gitu.  Selamat datang."
+}

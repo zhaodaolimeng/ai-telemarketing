@@ -1,0 +1,704 @@
+[
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "H2",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "jam 2",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo?",
+        "customer": "Siang.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Ya, betul.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Untuk pinjaman ya Pak/Bu.",
+        "customer": "Oh ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Jam berapa ya?",
+        "customer": "Besok jam 2.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya, ya. jam 2 ya Pak/Bu.",
+        "customer": "Oke.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Baik.",
+        "customer": "Iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu jam 2. Terima kasih. Selamat pagi.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "H2",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "nanti",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo?",
+        "customer": "Sebentar ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Nanti ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Untuk pinjaman ya Pak/Bu.",
+        "customer": "Nanti saya hubungi balik.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Jam berapa ya?",
+        "customer": "Nanti ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya, ya. nanti ya Pak/Bu.",
+        "customer": "Oke.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya, ya.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu nanti. Terima kasih. Selamat pagi.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "H2",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "minggu ini",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo.",
+        "customer": "Ada apa?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Untuk pinjaman ya Pak/Bu.",
+        "customer": "Oh, bisa nggak diperpanjang?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Jam berapa ya?",
+        "customer": "Minggu ini bisa?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya, ya. minggu ini ya Pak/Bu.",
+        "customer": "Oke, besok jam 3.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Iya.",
+        "customer": "Iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu minggu ini. Terima kasih. Selamat pagi.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "H2",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "jam 5",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo?",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Untuk pinjaman ya Pak/Bu.",
+        "customer": "Oh.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Jam berapa ya?",
+        "customer": "...",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Jam berapa tepatnya?",
+        "customer": "Jam 5.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya, ya. jam 5 ya Pak/Bu.",
+        "customer": "Iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya, ya.",
+        "customer": "Iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu ya. Terima kasih.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "H2",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "jam 4",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo?",
+        "customer": "Halo?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Untuk pinjaman ya Pak/Bu.",
+        "customer": "Oh ya, saya lupa.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Kapan bisa bayar Pak/Bu?",
+        "customer": "Sebentar lagi.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Hari ini jam berapa ya?",
+        "customer": "Jam 4 deh.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya, ya. jam 4 ya Pak/Bu.",
+        "customer": "Oke.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya, ya.",
+        "customer": "Iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu ya. Terima kasih.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "H1",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "jam 2",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo, selamat pagi.",
+        "customer": "Sore.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Untuk pinjaman yang sudah jatuh tempo.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Kapan bisa melakukan pembayaran?",
+        "customer": "Besok jam 2.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya. Oke, jam 2 ya Pak/Bu.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya.",
+        "customer": "Oke.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu ya. Terima kasih.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "H1",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "besok",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo.",
+        "customer": "Halo.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Untuk pinjaman yang sudah jatuh tempo.",
+        "customer": "Oh, bisa nggak diperpanjang?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Kapan bisa melakukan pembayaran?",
+        "customer": "Besok bisa?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu besok.",
+        "customer": "Oke, besok jam 3.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Iya.",
+        "customer": "Iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu ya. Terima kasih. Selamat siang.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "H1",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "jam 5",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo.",
+        "customer": "Ada apa?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Sibuk nih.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Untuk pinjaman yang sudah jatuh tempo.",
+        "customer": "Nanti saya hubungi balik.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Kapan bisa melakukan pembayaran?",
+        "customer": "Saya lagi luar.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Jam berapa tepatnya?",
+        "customer": "Jam 5 deh.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu jam 5.",
+        "customer": "Oke.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Iya.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu ya. Terima kasih. Selamat siang.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "H1",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "jam 4",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo, selamat pagi.",
+        "customer": "Halo?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Untuk pinjaman yang sudah jatuh tempo.",
+        "customer": "Oh ya, saya lupa.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Jam berapa ya?",
+        "customer": "Sebentar lagi.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Besok jam berapa ya?",
+        "customer": "Jam 4 deh.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya. Oke, jam 4 ya Pak/Bu.",
+        "customer": "Oke.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Baik.",
+        "customer": "Iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu ya. Terima kasih. Selamat siang.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "S0",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "jam 2",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo?",
+        "customer": "Iya?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Bagaimana rencana pembayaran Pak/Bu?",
+        "customer": "Besok jam 2.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya, ya. Oke, jam 2 ya Pak/Bu.",
+        "customer": "Oke.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Baik.",
+        "customer": "Oke.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu ya. Terima kasih.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "S0",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "besok",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo.",
+        "customer": "Ada apa?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+        "customer": "Oh, bisa nggak diperpanjang?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Kapan bisa bayar ya?",
+        "customer": "Besok bisa?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya, ya. Oke, besok ya Pak/Bu.",
+        "customer": "Oke, besok jam 3.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Baik.",
+        "customer": "Iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu ya. Terima kasih. Selamat sore.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "S0",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": false,
+    "commit_time": null,
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo.",
+        "customer": "Halo?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Ya, apa?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+        "customer": "Nanti dulu ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Bagaimana rencana pembayaran Pak/Bu?",
+        "customer": "Saya belum punya duit.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Hari apa ya?",
+        "customer": "Saya benar-benar belum bisa.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Hari apa ya?",
+        "customer": "Saya benar-benar belum bisa.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Jam berapa ya?",
+        "customer": "Saya benar-benar belum bisa.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "S0",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "jam 5",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo?",
+        "customer": "Iya?",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "...",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+        "customer": "...",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Kapan bisa bayar ya?",
+        "customer": "...",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Hari apa ya?",
+        "customer": "Jam 5.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya, ya. Oke, jam 5 ya Pak/Bu.",
+        "customer": "Iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Baik.",
+        "customer": "Iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu ya. Terima kasih. Selamat sore.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  },
+  {
+    "session_id": "20260426_093334",
+    "chat_group": "S0",
+    "customer_info": {
+      "name": "Pak/Bu"
+    },
+    "success": true,
+    "commit_time": "jam 4",
+    "start_time": "2026-04-26T09:33:34.849654",
+    "end_time": "2026-04-26T09:33:34.849654",
+    "turns": [
+      {
+        "agent": "Halo?",
+        "customer": "Oh iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra.",
+        "customer": "Ya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu.",
+        "customer": "Oh ya, saya lupa.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Bagaimana rencana pembayaran Pak/Bu?",
+        "customer": "Sebentar lagi.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Jam berapa tepatnya?",
+        "customer": "Jam 4 deh.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Ya, ya, ya. Oke, jam 4 ya Pak/Bu.",
+        "customer": "Oke.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Baik.",
+        "customer": "Iya.",
+        "timestamp": "2026-04-26T09:33:34.849654"
+      },
+      {
+        "agent": "Saya tunggu ya. Terima kasih. Selamat sore.",
+        "customer": null,
+        "timestamp": "2026-04-26T09:33:34.849654"
+      }
+    ]
+  }
+]

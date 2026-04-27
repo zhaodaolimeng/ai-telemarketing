@@ -1,0 +1,612 @@
+{
+  "case_id": "628121294415808-20260408071931",
+  "file_name": "628121294415808-20260408071931.mp3",
+  "transcript": [
+    {
+      "start": 0.9599999999999993,
+      "end": 2.56,
+      "text": " Halo, selamat pagi.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 0.9599999999999993,
+          "end": 1.76,
+          "probability": 0.19649626314640045
+        },
+        {
+          "word": " selamat",
+          "start": 1.92,
+          "end": 2.14,
+          "probability": 0.6208967417478561
+        },
+        {
+          "word": " pagi.",
+          "start": 2.14,
+          "end": 2.56,
+          "probability": 0.9919272363185883
+        }
+      ]
+    },
+    {
+      "start": 3.5,
+      "end": 4.18,
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 3.5,
+          "end": 4.18,
+          "probability": 0.47897225618362427
+        }
+      ]
+    },
+    {
+      "start": 4.68,
+      "end": 6.12,
+      "text": " Bapak Maruzuki.",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 4.68,
+          "end": 5.46,
+          "probability": 0.5590089497466882
+        },
+        {
+          "word": " Maruzuki.",
+          "start": 5.46,
+          "end": 6.12,
+          "probability": 0.5363885958989462
+        }
+      ]
+    },
+    {
+      "start": 7.48,
+      "end": 8.28,
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 7.48,
+          "end": 8.28,
+          "probability": 0.7595807909965515
+        }
+      ]
+    },
+    {
+      "start": 8.68,
+      "end": 13.56,
+      "text": " Saya dari aplikasi ekstra, Pak. Ini tagian yang bisa dibayar jemput apa di aplikasi ekstra.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 8.68,
+          "end": 9.14,
+          "probability": 0.435050368309021
+        },
+        {
+          "word": " dari",
+          "start": 9.14,
+          "end": 9.3,
+          "probability": 0.9472141265869141
+        },
+        {
+          "word": " aplikasi",
+          "start": 9.3,
+          "end": 9.82,
+          "probability": 0.9717198212941488
+        },
+        {
+          "word": " ekstra,",
+          "start": 9.82,
+          "end": 10.22,
+          "probability": 0.8199513852596283
+        },
+        {
+          "word": " Pak.",
+          "start": 10.44,
+          "end": 10.5,
+          "probability": 0.48415523767471313
+        },
+        {
+          "word": " Ini",
+          "start": 10.82,
+          "end": 10.96,
+          "probability": 0.8981414437294006
+        },
+        {
+          "word": " tagian",
+          "start": 10.96,
+          "end": 11.38,
+          "probability": 0.585070937871933
+        },
+        {
+          "word": " yang",
+          "start": 11.38,
+          "end": 11.5,
+          "probability": 0.6547670364379883
+        },
+        {
+          "word": " bisa",
+          "start": 11.5,
+          "end": 11.72,
+          "probability": 0.9865891933441162
+        },
+        {
+          "word": " dibayar",
+          "start": 11.72,
+          "end": 12.08,
+          "probability": 0.8056886990865072
+        },
+        {
+          "word": " jemput",
+          "start": 12.08,
+          "end": 12.32,
+          "probability": 0.4062930742899577
+        },
+        {
+          "word": " apa",
+          "start": 12.32,
+          "end": 12.5,
+          "probability": 0.7320343255996704
+        },
+        {
+          "word": " di",
+          "start": 12.5,
+          "end": 12.68,
+          "probability": 0.9550527930259705
+        },
+        {
+          "word": " aplikasi",
+          "start": 12.68,
+          "end": 13.12,
+          "probability": 0.997065802415212
+        },
+        {
+          "word": " ekstra.",
+          "start": 13.12,
+          "end": 13.56,
+          "probability": 0.9909619092941284
+        }
+      ]
+    },
+    {
+      "start": 18.68,
+      "end": 19.74,
+      "text": " Tagian apa?",
+      "words": [
+        {
+          "word": " Tagian",
+          "start": 18.68,
+          "end": 19.48,
+          "probability": 0.5318451374769211
+        },
+        {
+          "word": " apa?",
+          "start": 19.48,
+          "end": 19.74,
+          "probability": 0.9866744875907898
+        }
+      ]
+    },
+    {
+      "start": 20.88,
+      "end": 23.7,
+      "text": " Di sini adalah tagian atas nama Bapak Maruzuki.",
+      "words": [
+        {
+          "word": " Di",
+          "start": 20.88,
+          "end": 21.14,
+          "probability": 0.6927251219749451
+        },
+        {
+          "word": " sini",
+          "start": 21.14,
+          "end": 21.36,
+          "probability": 0.9978883862495422
+        },
+        {
+          "word": " adalah",
+          "start": 21.36,
+          "end": 21.56,
+          "probability": 0.21891042590141296
+        },
+        {
+          "word": " tagian",
+          "start": 21.56,
+          "end": 21.98,
+          "probability": 0.7732471823692322
+        },
+        {
+          "word": " atas",
+          "start": 21.98,
+          "end": 22.42,
+          "probability": 0.9018707573413849
+        },
+        {
+          "word": " nama",
+          "start": 22.42,
+          "end": 22.62,
+          "probability": 0.7841629385948181
+        },
+        {
+          "word": " Bapak",
+          "start": 22.62,
+          "end": 23.0,
+          "probability": 0.9031254251797994
+        },
+        {
+          "word": " Maruzuki.",
+          "start": 23.0,
+          "end": 23.7,
+          "probability": 0.9969172875086466
+        }
+      ]
+    },
+    {
+      "start": 25.38,
+      "end": 27.26,
+      "text": " Aplikasi ekstra uang no, Pak.",
+      "words": [
+        {
+          "word": " Aplikasi",
+          "start": 25.38,
+          "end": 26.18,
+          "probability": 0.8638074994087219
+        },
+        {
+          "word": " ekstra",
+          "start": 26.18,
+          "end": 26.6,
+          "probability": 0.9859643578529358
+        },
+        {
+          "word": " uang",
+          "start": 26.6,
+          "end": 26.92,
+          "probability": 0.7009512037038803
+        },
+        {
+          "word": " no,",
+          "start": 26.92,
+          "end": 27.1,
+          "probability": 0.09849043935537338
+        },
+        {
+          "word": " Pak.",
+          "start": 27.18,
+          "end": 27.26,
+          "probability": 0.9598478078842163
+        }
+      ]
+    },
+    {
+      "start": 30.0,
+      "end": 31.24,
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 30.0,
+          "end": 31.2,
+          "probability": 0.5099452510476112
+        },
+        {
+          "word": " kasih.",
+          "start": 31.2,
+          "end": 31.24,
+          "probability": 0.9308451414108276
+        }
+      ]
+    }
+  ],
+  "transcript_with_speakers": [
+    {
+      "start": 0.9599999999999993,
+      "end": 2.56,
+      "speaker": "AGENT",
+      "text": " Halo, selamat pagi.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 0.9599999999999993,
+          "end": 1.76,
+          "probability": 0.19649626314640045
+        },
+        {
+          "word": " selamat",
+          "start": 1.92,
+          "end": 2.14,
+          "probability": 0.6208967417478561
+        },
+        {
+          "word": " pagi.",
+          "start": 2.14,
+          "end": 2.56,
+          "probability": 0.9919272363185883
+        }
+      ]
+    },
+    {
+      "start": 3.5,
+      "end": 4.18,
+      "speaker": "CUSTOMER",
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 3.5,
+          "end": 4.18,
+          "probability": 0.47897225618362427
+        }
+      ]
+    },
+    {
+      "start": 4.68,
+      "end": 6.12,
+      "speaker": "AGENT",
+      "text": " Bapak Maruzuki.",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 4.68,
+          "end": 5.46,
+          "probability": 0.5590089497466882
+        },
+        {
+          "word": " Maruzuki.",
+          "start": 5.46,
+          "end": 6.12,
+          "probability": 0.5363885958989462
+        }
+      ]
+    },
+    {
+      "start": 7.48,
+      "end": 8.28,
+      "speaker": "CUSTOMER",
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 7.48,
+          "end": 8.28,
+          "probability": 0.7595807909965515
+        }
+      ]
+    },
+    {
+      "start": 8.68,
+      "end": 13.56,
+      "speaker": "AGENT",
+      "text": " Saya dari aplikasi ekstra, Pak. Ini tagian yang bisa dibayar jemput apa di aplikasi ekstra.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 8.68,
+          "end": 9.14,
+          "probability": 0.435050368309021
+        },
+        {
+          "word": " dari",
+          "start": 9.14,
+          "end": 9.3,
+          "probability": 0.9472141265869141
+        },
+        {
+          "word": " aplikasi",
+          "start": 9.3,
+          "end": 9.82,
+          "probability": 0.9717198212941488
+        },
+        {
+          "word": " ekstra,",
+          "start": 9.82,
+          "end": 10.22,
+          "probability": 0.8199513852596283
+        },
+        {
+          "word": " Pak.",
+          "start": 10.44,
+          "end": 10.5,
+          "probability": 0.48415523767471313
+        },
+        {
+          "word": " Ini",
+          "start": 10.82,
+          "end": 10.96,
+          "probability": 0.8981414437294006
+        },
+        {
+          "word": " tagian",
+          "start": 10.96,
+          "end": 11.38,
+          "probability": 0.585070937871933
+        },
+        {
+          "word": " yang",
+          "start": 11.38,
+          "end": 11.5,
+          "probability": 0.6547670364379883
+        },
+        {
+          "word": " bisa",
+          "start": 11.5,
+          "end": 11.72,
+          "probability": 0.9865891933441162
+        },
+        {
+          "word": " dibayar",
+          "start": 11.72,
+          "end": 12.08,
+          "probability": 0.8056886990865072
+        },
+        {
+          "word": " jemput",
+          "start": 12.08,
+          "end": 12.32,
+          "probability": 0.4062930742899577
+        },
+        {
+          "word": " apa",
+          "start": 12.32,
+          "end": 12.5,
+          "probability": 0.7320343255996704
+        },
+        {
+          "word": " di",
+          "start": 12.5,
+          "end": 12.68,
+          "probability": 0.9550527930259705
+        },
+        {
+          "word": " aplikasi",
+          "start": 12.68,
+          "end": 13.12,
+          "probability": 0.997065802415212
+        },
+        {
+          "word": " ekstra.",
+          "start": 13.12,
+          "end": 13.56,
+          "probability": 0.9909619092941284
+        }
+      ]
+    },
+    {
+      "start": 18.68,
+      "end": 19.74,
+      "speaker": "CUSTOMER",
+      "text": " Tagian apa?",
+      "words": [
+        {
+          "word": " Tagian",
+          "start": 18.68,
+          "end": 19.48,
+          "probability": 0.5318451374769211
+        },
+        {
+          "word": " apa?",
+          "start": 19.48,
+          "end": 19.74,
+          "probability": 0.9866744875907898
+        }
+      ]
+    },
+    {
+      "start": 20.88,
+      "end": 23.7,
+      "speaker": "AGENT",
+      "text": " Di sini adalah tagian atas nama Bapak Maruzuki.",
+      "words": [
+        {
+          "word": " Di",
+          "start": 20.88,
+          "end": 21.14,
+          "probability": 0.6927251219749451
+        },
+        {
+          "word": " sini",
+          "start": 21.14,
+          "end": 21.36,
+          "probability": 0.9978883862495422
+        },
+        {
+          "word": " adalah",
+          "start": 21.36,
+          "end": 21.56,
+          "probability": 0.21891042590141296
+        },
+        {
+          "word": " tagian",
+          "start": 21.56,
+          "end": 21.98,
+          "probability": 0.7732471823692322
+        },
+        {
+          "word": " atas",
+          "start": 21.98,
+          "end": 22.42,
+          "probability": 0.9018707573413849
+        },
+        {
+          "word": " nama",
+          "start": 22.42,
+          "end": 22.62,
+          "probability": 0.7841629385948181
+        },
+        {
+          "word": " Bapak",
+          "start": 22.62,
+          "end": 23.0,
+          "probability": 0.9031254251797994
+        },
+        {
+          "word": " Maruzuki.",
+          "start": 23.0,
+          "end": 23.7,
+          "probability": 0.9969172875086466
+        }
+      ]
+    },
+    {
+      "start": 25.38,
+      "end": 27.26,
+      "speaker": "AGENT",
+      "text": " Aplikasi ekstra uang no, Pak.",
+      "words": [
+        {
+          "word": " Aplikasi",
+          "start": 25.38,
+          "end": 26.18,
+          "probability": 0.8638074994087219
+        },
+        {
+          "word": " ekstra",
+          "start": 26.18,
+          "end": 26.6,
+          "probability": 0.9859643578529358
+        },
+        {
+          "word": " uang",
+          "start": 26.6,
+          "end": 26.92,
+          "probability": 0.7009512037038803
+        },
+        {
+          "word": " no,",
+          "start": 26.92,
+          "end": 27.1,
+          "probability": 0.09849043935537338
+        },
+        {
+          "word": " Pak.",
+          "start": 27.18,
+          "end": 27.26,
+          "probability": 0.9598478078842163
+        }
+      ]
+    },
+    {
+      "start": 30.0,
+      "end": 31.24,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 30.0,
+          "end": 31.2,
+          "probability": 0.5099452510476112
+        },
+        {
+          "word": " kasih.",
+          "start": 31.2,
+          "end": 31.24,
+          "probability": 0.9308451414108276
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo, selamat pagi.  Ya.  Bapak Maruzuki.  Ya.  Saya dari aplikasi ekstra, Pak. Ini tagian yang bisa dibayar jemput apa di aplikasi ekstra.  Tagian apa?  Di sini adalah tagian atas nama Bapak Maruzuki.  Aplikasi ekstra uang no, Pak.  Terima kasih."
+}

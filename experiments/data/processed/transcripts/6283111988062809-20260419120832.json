@@ -1,0 +1,98 @@
+{
+  "case_id": "6283111988062809-20260419120832",
+  "file_name": "6283111988062809-20260419120832.mp3",
+  "transcript": [
+    {
+      "start": 3.8400000000000003,
+      "end": 5.24,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 3.8400000000000003,
+          "end": 5.24,
+          "probability": 0.23359477519989014
+        }
+      ]
+    },
+    {
+      "start": 5.24,
+      "end": 5.46,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 5.24,
+          "end": 5.46,
+          "probability": 0.6945978999137878
+        }
+      ]
+    },
+    {
+      "start": 9.76,
+      "end": 11.16,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 9.76,
+          "end": 11.16,
+          "probability": 0.7963634133338928
+        }
+      ]
+    },
+    {
+      "start": 19.82,
+      "end": 21.22,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 19.82,
+          "end": 21.22,
+          "probability": 0.8445344567298889
+        }
+      ]
+    },
+    {
+      "start": 24.0,
+      "end": 24.1,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 23.400000000000002,
+          "end": 24.1,
+          "probability": 0.8811334371566772
+        }
+      ]
+    },
+    {
+      "start": 28.220000000000002,
+      "end": 29.42,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 28.220000000000002,
+          "end": 29.42,
+          "probability": 0.03973754495382309
+        }
+      ]
+    },
+    {
+      "start": 30.2,
+      "end": 30.28,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 30.2,
+          "end": 30.799999999999997,
+          "probability": 0.5994495153427124
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo?  Halo?  Halo?  Halo?  Halo?  Halo?  Halo?"
+}

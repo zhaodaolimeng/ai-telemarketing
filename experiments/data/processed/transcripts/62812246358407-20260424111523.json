@@ -1,0 +1,624 @@
+{
+  "case_id": "62812246358407-20260424111523",
+  "file_name": "62812246358407-20260424111523.mp3",
+  "transcript": [
+    {
+      "start": 2.34,
+      "end": 2.7,
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 2.34,
+          "end": 2.7,
+          "probability": 0.15897460281848907
+        }
+      ]
+    },
+    {
+      "start": 3.02,
+      "end": 3.8,
+      "text": " Halo, halo, halo, Siwa?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 3.02,
+          "end": 3.3,
+          "probability": 0.34370213747024536
+        },
+        {
+          "word": " halo,",
+          "start": 3.3,
+          "end": 3.54,
+          "probability": 0.11985784769058228
+        },
+        {
+          "word": " halo,",
+          "start": 3.56,
+          "end": 3.62,
+          "probability": 0.0044686924666166306
+        },
+        {
+          "word": " Siwa?",
+          "start": 3.62,
+          "end": 3.8,
+          "probability": 0.1223638728260994
+        }
+      ]
+    },
+    {
+      "start": 5.22,
+      "end": 6.18,
+      "text": " Siwa, siwa, siwa, siwa?",
+      "words": [
+        {
+          "word": " Siwa,",
+          "start": 5.22,
+          "end": 5.58,
+          "probability": 0.9208108186721802
+        },
+        {
+          "word": " siwa,",
+          "start": 5.74,
+          "end": 5.9,
+          "probability": 0.6527689397335052
+        },
+        {
+          "word": " siwa,",
+          "start": 6.16,
+          "end": 6.16,
+          "probability": 0.9008954763412476
+        },
+        {
+          "word": " siwa?",
+          "start": 6.18,
+          "end": 6.18,
+          "probability": 0.9290463924407959
+        }
+      ]
+    },
+    {
+      "start": 6.18,
+      "end": 8.02,
+      "text": " Halo, ya ada penggunaan di budans kita ya, Bu?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 6.18,
+          "end": 6.48,
+          "probability": 0.2811218798160553
+        },
+        {
+          "word": " ya",
+          "start": 6.7,
+          "end": 6.8,
+          "probability": 0.28033214807510376
+        },
+        {
+          "word": " ada",
+          "start": 6.8,
+          "end": 6.98,
+          "probability": 0.47877389192581177
+        },
+        {
+          "word": " penggunaan",
+          "start": 6.98,
+          "end": 7.36,
+          "probability": 0.5733602494001389
+        },
+        {
+          "word": " di",
+          "start": 7.36,
+          "end": 7.36,
+          "probability": 0.1444813311100006
+        },
+        {
+          "word": " budans",
+          "start": 7.36,
+          "end": 7.58,
+          "probability": 0.12160003185272217
+        },
+        {
+          "word": " kita",
+          "start": 7.58,
+          "end": 7.76,
+          "probability": 0.20766179263591766
+        },
+        {
+          "word": " ya,",
+          "start": 7.76,
+          "end": 7.9,
+          "probability": 0.8002538084983826
+        },
+        {
+          "word": " Bu?",
+          "start": 7.92,
+          "end": 8.02,
+          "probability": 0.3095655143260956
+        }
+      ]
+    },
+    {
+      "start": 9.18,
+      "end": 9.74,
+      "text": " Ya, siwa.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 9.18,
+          "end": 9.5,
+          "probability": 0.49108317494392395
+        },
+        {
+          "word": " siwa.",
+          "start": 9.64,
+          "end": 9.74,
+          "probability": 0.5195183344185352
+        }
+      ]
+    },
+    {
+      "start": 10.66,
+      "end": 12.68,
+      "text": " Ya, saya tunggu dulu di jalan 3 pemberian ini ya Bu, ya?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 10.66,
+          "end": 11.02,
+          "probability": 0.8749030232429504
+        },
+        {
+          "word": " saya",
+          "start": 11.12,
+          "end": 11.24,
+          "probability": 0.9610536694526672
+        },
+        {
+          "word": " tunggu",
+          "start": 11.24,
+          "end": 11.38,
+          "probability": 0.7790453732013702
+        },
+        {
+          "word": " dulu",
+          "start": 11.38,
+          "end": 11.48,
+          "probability": 0.07877163589000702
+        },
+        {
+          "word": " di",
+          "start": 11.48,
+          "end": 11.52,
+          "probability": 0.16125041246414185
+        },
+        {
+          "word": " jalan",
+          "start": 11.52,
+          "end": 11.74,
+          "probability": 0.48946763575077057
+        },
+        {
+          "word": " 3",
+          "start": 11.74,
+          "end": 11.92,
+          "probability": 0.1616867184638977
+        },
+        {
+          "word": " pemberian",
+          "start": 11.92,
+          "end": 12.26,
+          "probability": 0.3519080380598704
+        },
+        {
+          "word": " ini",
+          "start": 12.26,
+          "end": 12.42,
+          "probability": 0.49184083938598633
+        },
+        {
+          "word": " ya",
+          "start": 12.42,
+          "end": 12.44,
+          "probability": 0.7569383382797241
+        },
+        {
+          "word": " Bu,",
+          "start": 12.44,
+          "end": 12.56,
+          "probability": 0.42477986216545105
+        },
+        {
+          "word": " ya?",
+          "start": 12.6,
+          "end": 12.68,
+          "probability": 0.9818291664123535
+        }
+      ]
+    },
+    {
+      "start": 13.8,
+      "end": 14.48,
+      "text": " Ya, siwa.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 13.8,
+          "end": 14.16,
+          "probability": 0.7599924802780151
+        },
+        {
+          "word": " siwa.",
+          "start": 14.32,
+          "end": 14.48,
+          "probability": 0.9869962632656097
+        }
+      ]
+    },
+    {
+      "start": 15.76,
+      "end": 17.64,
+      "text": " Oke, terima kasih sama Siwa.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 15.76,
+          "end": 16.1,
+          "probability": 0.6014249324798584
+        },
+        {
+          "word": " terima",
+          "start": 16.22,
+          "end": 16.34,
+          "probability": 0.8369333148002625
+        },
+        {
+          "word": " kasih",
+          "start": 16.34,
+          "end": 16.54,
+          "probability": 0.995936393737793
+        },
+        {
+          "word": " sama",
+          "start": 16.54,
+          "end": 17.08,
+          "probability": 0.202134370803833
+        },
+        {
+          "word": " Siwa.",
+          "start": 17.08,
+          "end": 17.64,
+          "probability": 0.8975148797035217
+        }
+      ]
+    },
+    {
+      "start": 19.16,
+      "end": 19.52,
+      "text": " Siwa.",
+      "words": [
+        {
+          "word": " Siwa.",
+          "start": 19.16,
+          "end": 19.52,
+          "probability": 0.8698974549770355
+        }
+      ]
+    }
+  ],
+  "transcript_with_speakers": [
+    {
+      "start": 2.34,
+      "end": 2.7,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 2.34,
+          "end": 2.7,
+          "probability": 0.15897460281848907
+        }
+      ]
+    },
+    {
+      "start": 3.02,
+      "end": 3.8,
+      "speaker": "AGENT",
+      "text": " Halo, halo, halo, Siwa?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 3.02,
+          "end": 3.3,
+          "probability": 0.34370213747024536
+        },
+        {
+          "word": " halo,",
+          "start": 3.3,
+          "end": 3.54,
+          "probability": 0.11985784769058228
+        },
+        {
+          "word": " halo,",
+          "start": 3.56,
+          "end": 3.62,
+          "probability": 0.0044686924666166306
+        },
+        {
+          "word": " Siwa?",
+          "start": 3.62,
+          "end": 3.8,
+          "probability": 0.1223638728260994
+        }
+      ]
+    },
+    {
+      "start": 5.22,
+      "end": 6.18,
+      "speaker": "AGENT",
+      "text": " Siwa, siwa, siwa, siwa?",
+      "words": [
+        {
+          "word": " Siwa,",
+          "start": 5.22,
+          "end": 5.58,
+          "probability": 0.9208108186721802
+        },
+        {
+          "word": " siwa,",
+          "start": 5.74,
+          "end": 5.9,
+          "probability": 0.6527689397335052
+        },
+        {
+          "word": " siwa,",
+          "start": 6.16,
+          "end": 6.16,
+          "probability": 0.9008954763412476
+        },
+        {
+          "word": " siwa?",
+          "start": 6.18,
+          "end": 6.18,
+          "probability": 0.9290463924407959
+        }
+      ]
+    },
+    {
+      "start": 6.18,
+      "end": 8.02,
+      "speaker": "AGENT",
+      "text": " Halo, ya ada penggunaan di budans kita ya, Bu?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 6.18,
+          "end": 6.48,
+          "probability": 0.2811218798160553
+        },
+        {
+          "word": " ya",
+          "start": 6.7,
+          "end": 6.8,
+          "probability": 0.28033214807510376
+        },
+        {
+          "word": " ada",
+          "start": 6.8,
+          "end": 6.98,
+          "probability": 0.47877389192581177
+        },
+        {
+          "word": " penggunaan",
+          "start": 6.98,
+          "end": 7.36,
+          "probability": 0.5733602494001389
+        },
+        {
+          "word": " di",
+          "start": 7.36,
+          "end": 7.36,
+          "probability": 0.1444813311100006
+        },
+        {
+          "word": " budans",
+          "start": 7.36,
+          "end": 7.58,
+          "probability": 0.12160003185272217
+        },
+        {
+          "word": " kita",
+          "start": 7.58,
+          "end": 7.76,
+          "probability": 0.20766179263591766
+        },
+        {
+          "word": " ya,",
+          "start": 7.76,
+          "end": 7.9,
+          "probability": 0.8002538084983826
+        },
+        {
+          "word": " Bu?",
+          "start": 7.92,
+          "end": 8.02,
+          "probability": 0.3095655143260956
+        }
+      ]
+    },
+    {
+      "start": 9.18,
+      "end": 9.74,
+      "speaker": "CUSTOMER",
+      "text": " Ya, siwa.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 9.18,
+          "end": 9.5,
+          "probability": 0.49108317494392395
+        },
+        {
+          "word": " siwa.",
+          "start": 9.64,
+          "end": 9.74,
+          "probability": 0.5195183344185352
+        }
+      ]
+    },
+    {
+      "start": 10.66,
+      "end": 12.68,
+      "speaker": "CUSTOMER",
+      "text": " Ya, saya tunggu dulu di jalan 3 pemberian ini ya Bu, ya?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 10.66,
+          "end": 11.02,
+          "probability": 0.8749030232429504
+        },
+        {
+          "word": " saya",
+          "start": 11.12,
+          "end": 11.24,
+          "probability": 0.9610536694526672
+        },
+        {
+          "word": " tunggu",
+          "start": 11.24,
+          "end": 11.38,
+          "probability": 0.7790453732013702
+        },
+        {
+          "word": " dulu",
+          "start": 11.38,
+          "end": 11.48,
+          "probability": 0.07877163589000702
+        },
+        {
+          "word": " di",
+          "start": 11.48,
+          "end": 11.52,
+          "probability": 0.16125041246414185
+        },
+        {
+          "word": " jalan",
+          "start": 11.52,
+          "end": 11.74,
+          "probability": 0.48946763575077057
+        },
+        {
+          "word": " 3",
+          "start": 11.74,
+          "end": 11.92,
+          "probability": 0.1616867184638977
+        },
+        {
+          "word": " pemberian",
+          "start": 11.92,
+          "end": 12.26,
+          "probability": 0.3519080380598704
+        },
+        {
+          "word": " ini",
+          "start": 12.26,
+          "end": 12.42,
+          "probability": 0.49184083938598633
+        },
+        {
+          "word": " ya",
+          "start": 12.42,
+          "end": 12.44,
+          "probability": 0.7569383382797241
+        },
+        {
+          "word": " Bu,",
+          "start": 12.44,
+          "end": 12.56,
+          "probability": 0.42477986216545105
+        },
+        {
+          "word": " ya?",
+          "start": 12.6,
+          "end": 12.68,
+          "probability": 0.9818291664123535
+        }
+      ]
+    },
+    {
+      "start": 13.8,
+      "end": 14.48,
+      "speaker": "CUSTOMER",
+      "text": " Ya, siwa.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 13.8,
+          "end": 14.16,
+          "probability": 0.7599924802780151
+        },
+        {
+          "word": " siwa.",
+          "start": 14.32,
+          "end": 14.48,
+          "probability": 0.9869962632656097
+        }
+      ]
+    },
+    {
+      "start": 15.76,
+      "end": 17.64,
+      "speaker": "CUSTOMER",
+      "text": " Oke, terima kasih sama Siwa.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 15.76,
+          "end": 16.1,
+          "probability": 0.6014249324798584
+        },
+        {
+          "word": " terima",
+          "start": 16.22,
+          "end": 16.34,
+          "probability": 0.8369333148002625
+        },
+        {
+          "word": " kasih",
+          "start": 16.34,
+          "end": 16.54,
+          "probability": 0.995936393737793
+        },
+        {
+          "word": " sama",
+          "start": 16.54,
+          "end": 17.08,
+          "probability": 0.202134370803833
+        },
+        {
+          "word": " Siwa.",
+          "start": 17.08,
+          "end": 17.64,
+          "probability": 0.8975148797035217
+        }
+      ]
+    },
+    {
+      "start": 19.16,
+      "end": 19.52,
+      "speaker": "CUSTOMER",
+      "text": " Siwa.",
+      "words": [
+        {
+          "word": " Siwa.",
+          "start": 19.16,
+          "end": 19.52,
+          "probability": 0.8698974549770355
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo?  Halo, halo, halo, Siwa?  Siwa, siwa, siwa, siwa?  Halo, ya ada penggunaan di budans kita ya, Bu?  Ya, siwa.  Ya, saya tunggu dulu di jalan 3 pemberian ini ya Bu, ya?  Ya, siwa.  Oke, terima kasih sama Siwa.  Siwa."
+}

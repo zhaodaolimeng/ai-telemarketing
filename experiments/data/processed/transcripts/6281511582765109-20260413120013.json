@@ -1,0 +1,755 @@
+{
+  "case_id": "6281511582765109-20260413120013",
+  "file_name": "6281511582765109-20260413120013.mp3",
+  "transcript": [
+    {
+      "start": 1.2199999999999993,
+      "end": 4.08,
+      "text": " Halo, ya gimana?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 1.2199999999999993,
+          "end": 1.98,
+          "probability": 0.043768931180238724
+        },
+        {
+          "word": " ya",
+          "start": 2.92,
+          "end": 3.5,
+          "probability": 0.0484054833650589
+        },
+        {
+          "word": " gimana?",
+          "start": 3.5,
+          "end": 4.08,
+          "probability": 0.7088399827480316
+        }
+      ]
+    },
+    {
+      "start": 5.76,
+      "end": 8.72,
+      "text": " Ini tadi harusnya bayarkan siang ini apa ya?",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 5.76,
+          "end": 6.52,
+          "probability": 0.376896470785141
+        },
+        {
+          "word": " tadi",
+          "start": 6.52,
+          "end": 6.72,
+          "probability": 0.2696528136730194
+        },
+        {
+          "word": " harusnya",
+          "start": 6.72,
+          "end": 7.1,
+          "probability": 0.8363847136497498
+        },
+        {
+          "word": " bayarkan",
+          "start": 7.1,
+          "end": 7.48,
+          "probability": 0.8843991160392761
+        },
+        {
+          "word": " siang",
+          "start": 7.48,
+          "end": 7.94,
+          "probability": 0.6041209250688553
+        },
+        {
+          "word": " ini",
+          "start": 7.94,
+          "end": 8.16,
+          "probability": 0.8041388392448425
+        },
+        {
+          "word": " apa",
+          "start": 8.16,
+          "end": 8.42,
+          "probability": 0.7838311791419983
+        },
+        {
+          "word": " ya?",
+          "start": 8.42,
+          "end": 8.72,
+          "probability": 0.8638465404510498
+        }
+      ]
+    },
+    {
+      "start": 9.26,
+      "end": 14.88,
+      "text": " Iya, saya tes. Tapi ininya apa reksi-nya saya minta nggak dikasih kasi,",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 9.26,
+          "end": 9.52,
+          "probability": 0.44440534710884094
+        },
+        {
+          "word": " saya",
+          "start": 9.68,
+          "end": 9.84,
+          "probability": 0.45566412806510925
+        },
+        {
+          "word": " tes.",
+          "start": 9.84,
+          "end": 10.1,
+          "probability": 0.34670713543891907
+        },
+        {
+          "word": " Tapi",
+          "start": 10.56,
+          "end": 10.88,
+          "probability": 0.9672592282295227
+        },
+        {
+          "word": " ininya",
+          "start": 10.88,
+          "end": 11.3,
+          "probability": 0.8649701476097107
+        },
+        {
+          "word": " apa",
+          "start": 11.3,
+          "end": 11.58,
+          "probability": 0.971282422542572
+        },
+        {
+          "word": " reksi",
+          "start": 11.58,
+          "end": 12.96,
+          "probability": 0.3081023842096329
+        },
+        {
+          "word": "-nya",
+          "start": 12.96,
+          "end": 13.12,
+          "probability": 0.745861679315567
+        },
+        {
+          "word": " saya",
+          "start": 13.12,
+          "end": 13.32,
+          "probability": 0.8408711552619934
+        },
+        {
+          "word": " minta",
+          "start": 13.32,
+          "end": 13.6,
+          "probability": 0.9805895984172821
+        },
+        {
+          "word": " nggak",
+          "start": 13.6,
+          "end": 13.9,
+          "probability": 0.4659346342086792
+        },
+        {
+          "word": " dikasih",
+          "start": 13.9,
+          "end": 14.46,
+          "probability": 0.9100726246833801
+        },
+        {
+          "word": " kasi,",
+          "start": 14.46,
+          "end": 14.88,
+          "probability": 0.593857116997242
+        }
+      ]
+    },
+    {
+      "start": 15.5,
+      "end": 19.58,
+      "text": " tahunnya saya kan udah keluar dari aplikasinya mau bayar,",
+      "words": [
+        {
+          "word": " tahunnya",
+          "start": 15.5,
+          "end": 15.9,
+          "probability": 0.5835447311401367
+        },
+        {
+          "word": " saya",
+          "start": 15.9,
+          "end": 16.06,
+          "probability": 0.9891934990882874
+        },
+        {
+          "word": " kan",
+          "start": 16.06,
+          "end": 16.18,
+          "probability": 0.9063330292701721
+        },
+        {
+          "word": " udah",
+          "start": 16.18,
+          "end": 16.36,
+          "probability": 0.7825671434402466
+        },
+        {
+          "word": " keluar",
+          "start": 16.36,
+          "end": 16.88,
+          "probability": 0.9728571772575378
+        },
+        {
+          "word": " dari",
+          "start": 16.88,
+          "end": 17.18,
+          "probability": 0.9736043214797974
+        },
+        {
+          "word": " aplikasinya",
+          "start": 17.18,
+          "end": 18.12,
+          "probability": 0.978519082069397
+        },
+        {
+          "word": " mau",
+          "start": 18.12,
+          "end": 18.76,
+          "probability": 0.4951343536376953
+        },
+        {
+          "word": " bayar,",
+          "start": 18.76,
+          "end": 19.58,
+          "probability": 0.9832809865474701
+        }
+      ]
+    },
+    {
+      "start": 19.74,
+      "end": 23.44,
+      "text": " tapi minta reksi buat pembayarannya gitu maksud saya.",
+      "words": [
+        {
+          "word": " tapi",
+          "start": 19.74,
+          "end": 19.88,
+          "probability": 0.9890941977500916
+        },
+        {
+          "word": " minta",
+          "start": 19.88,
+          "end": 20.6,
+          "probability": 0.9297883808612823
+        },
+        {
+          "word": " reksi",
+          "start": 20.6,
+          "end": 20.98,
+          "probability": 0.9660689234733582
+        },
+        {
+          "word": " buat",
+          "start": 20.98,
+          "end": 21.26,
+          "probability": 0.9769508242607117
+        },
+        {
+          "word": " pembayarannya",
+          "start": 21.26,
+          "end": 22.14,
+          "probability": 0.8488814890384674
+        },
+        {
+          "word": " gitu",
+          "start": 22.14,
+          "end": 22.8,
+          "probability": 0.29911383986473083
+        },
+        {
+          "word": " maksud",
+          "start": 22.8,
+          "end": 23.14,
+          "probability": 0.9468578100204468
+        },
+        {
+          "word": " saya.",
+          "start": 23.14,
+          "end": 23.44,
+          "probability": 0.9957631826400757
+        }
+      ]
+    },
+    {
+      "start": 23.92,
+      "end": 25.84,
+      "text": " Oh, kok ada siirtual kan?",
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 23.92,
+          "end": 24.38,
+          "probability": 0.6593272686004639
+        },
+        {
+          "word": " kok",
+          "start": 24.48,
+          "end": 24.58,
+          "probability": 0.5381791591644287
+        },
+        {
+          "word": " ada",
+          "start": 24.58,
+          "end": 24.74,
+          "probability": 0.787604570388794
+        },
+        {
+          "word": " siirtual",
+          "start": 24.74,
+          "end": 25.38,
+          "probability": 0.6599370837211609
+        },
+        {
+          "word": " kan?",
+          "start": 25.38,
+          "end": 25.84,
+          "probability": 0.4099963307380676
+        }
+      ]
+    },
+    {
+      "start": 26.88,
+      "end": 30.3,
+      "text": " Saya mau bayar tapi nggak ada, sebabnya saya kan udah keluar dulu.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 26.88,
+          "end": 27.48,
+          "probability": 0.018703101202845573
+        },
+        {
+          "word": " mau",
+          "start": 27.48,
+          "end": 27.72,
+          "probability": 0.7613371014595032
+        },
+        {
+          "word": " bayar",
+          "start": 27.72,
+          "end": 28.02,
+          "probability": 0.9788319766521454
+        },
+        {
+          "word": " tapi",
+          "start": 28.02,
+          "end": 28.22,
+          "probability": 0.6991227269172668
+        },
+        {
+          "word": " nggak",
+          "start": 28.22,
+          "end": 28.42,
+          "probability": 0.1292439103126526
+        },
+        {
+          "word": " ada,",
+          "start": 28.42,
+          "end": 28.68,
+          "probability": 0.9259011745452881
+        },
+        {
+          "word": " sebabnya",
+          "start": 28.8,
+          "end": 29.08,
+          "probability": 0.5816871126492819
+        },
+        {
+          "word": " saya",
+          "start": 29.08,
+          "end": 29.26,
+          "probability": 0.9348349571228027
+        },
+        {
+          "word": " kan",
+          "start": 29.26,
+          "end": 29.4,
+          "probability": 0.6586190462112427
+        },
+        {
+          "word": " udah",
+          "start": 29.4,
+          "end": 29.56,
+          "probability": 0.7487328052520752
+        },
+        {
+          "word": " keluar",
+          "start": 29.56,
+          "end": 30.0,
+          "probability": 0.9918654561042786
+        },
+        {
+          "word": " dulu.",
+          "start": 30.0,
+          "end": 30.3,
+          "probability": 0.938186526298523
+        }
+      ]
+    },
+    {
+      "start": 30.68,
+      "end": 35.34,
+      "text": " Karena pinjamannya cuma seminggu, aduh kata saya tuh terlalu pain night ya,",
+      "words": [
+        {
+          "word": " Karena",
+          "start": 30.68,
+          "end": 31.28,
+          "probability": 0.9224159121513367
+        },
+        {
+          "word": " pinjamannya",
+          "start": 31.28,
+          "end": 32.14,
+          "probability": 0.8980797131856283
+        },
+        {
+          "word": " cuma",
+          "start": 32.14,
+          "end": 32.4,
+          "probability": 0.8619734048843384
+        },
+        {
+          "word": " seminggu,",
+          "start": 32.4,
+          "end": 33.2,
+          "probability": 0.9527527093887329
+        },
+        {
+          "word": " aduh",
+          "start": 33.24,
+          "end": 33.38,
+          "probability": 0.7665291130542755
+        },
+        {
+          "word": " kata",
+          "start": 33.38,
+          "end": 33.6,
+          "probability": 0.7313025295734406
+        },
+        {
+          "word": " saya",
+          "start": 33.6,
+          "end": 33.84,
+          "probability": 0.9570837020874023
+        },
+        {
+          "word": " tuh",
+          "start": 33.84,
+          "end": 33.98,
+          "probability": 0.18979977071285248
+        },
+        {
+          "word": " terlalu",
+          "start": 33.98,
+          "end": 34.58,
+          "probability": 0.7778117557366689
+        },
+        {
+          "word": " pain",
+          "start": 34.58,
+          "end": 34.92,
+          "probability": 0.0432761088013649
+        },
+        {
+          "word": " night",
+          "start": 34.92,
+          "end": 35.18,
+          "probability": 0.6126808524131775
+        },
+        {
+          "word": " ya,",
+          "start": 35.18,
+          "end": 35.34,
+          "probability": 0.6142473220825195
+        }
+      ]
+    },
+    {
+      "start": 35.7,
+      "end": 37.98,
+      "text": " nggak jadi tahun-tahunnya uang udah masuk.",
+      "words": [
+        {
+          "word": " nggak",
+          "start": 35.7,
+          "end": 35.9,
+          "probability": 0.8820104002952576
+        },
+        {
+          "word": " jadi",
+          "start": 35.9,
+          "end": 36.16,
+          "probability": 0.995786726474762
+        },
+        {
+          "word": " tahun",
+          "start": 36.16,
+          "end": 36.42,
+          "probability": 0.03561752662062645
+        },
+        {
+          "word": "-tahunnya",
+          "start": 36.42,
+          "end": 36.86,
+          "probability": 0.7782739639282227
+        },
+        {
+          "word": " uang",
+          "start": 36.86,
+          "end": 37.22,
+          "probability": 0.9038141369819641
+        },
+        {
+          "word": " udah",
+          "start": 37.22,
+          "end": 37.52,
+          "probability": 0.8356319069862366
+        },
+        {
+          "word": " masuk.",
+          "start": 37.52,
+          "end": 37.98,
+          "probability": 0.9955333471298218
+        }
+      ]
+    },
+    {
+      "start": 38.76,
+      "end": 41.4,
+      "text": " Bapak mau bayar lewat apa BRI, BNI?",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 38.76,
+          "end": 39.2,
+          "probability": 0.8993682861328125
+        },
+        {
+          "word": " mau",
+          "start": 39.2,
+          "end": 39.36,
+          "probability": 0.9930357336997986
+        },
+        {
+          "word": " bayar",
+          "start": 39.36,
+          "end": 39.66,
+          "probability": 0.9862776398658752
+        },
+        {
+          "word": " lewat",
+          "start": 39.66,
+          "end": 39.94,
+          "probability": 0.9766199588775635
+        },
+        {
+          "word": " apa",
+          "start": 39.94,
+          "end": 40.12,
+          "probability": 0.624832808971405
+        },
+        {
+          "word": " BRI,",
+          "start": 40.12,
+          "end": 40.58,
+          "probability": 0.4536154866218567
+        },
+        {
+          "word": " BNI?",
+          "start": 40.96,
+          "end": 41.4,
+          "probability": 0.7607342004776001
+        }
+      ]
+    },
+    {
+      "start": 41.96,
+      "end": 42.94,
+      "text": " BRI aja.",
+      "words": [
+        {
+          "word": " BRI",
+          "start": 41.96,
+          "end": 42.56,
+          "probability": 0.9476363658905029
+        },
+        {
+          "word": " aja.",
+          "start": 42.56,
+          "end": 42.94,
+          "probability": 0.9630980491638184
+        }
+      ]
+    },
+    {
+      "start": 43.46,
+      "end": 46.06,
+      "text": " BRI ya udah minta saya kiringin apa ya?",
+      "words": [
+        {
+          "word": " BRI",
+          "start": 43.46,
+          "end": 44.04,
+          "probability": 0.9076122045516968
+        },
+        {
+          "word": " ya",
+          "start": 44.04,
+          "end": 44.44,
+          "probability": 0.5349425673484802
+        },
+        {
+          "word": " udah",
+          "start": 44.44,
+          "end": 44.64,
+          "probability": 0.6584487557411194
+        },
+        {
+          "word": " minta",
+          "start": 44.64,
+          "end": 44.88,
+          "probability": 0.4488617889583111
+        },
+        {
+          "word": " saya",
+          "start": 44.88,
+          "end": 45.12,
+          "probability": 0.9715486168861389
+        },
+        {
+          "word": " kiringin",
+          "start": 45.12,
+          "end": 45.58,
+          "probability": 0.6034508496522903
+        },
+        {
+          "word": " apa",
+          "start": 45.58,
+          "end": 45.8,
+          "probability": 0.30227482318878174
+        },
+        {
+          "word": " ya?",
+          "start": 45.8,
+          "end": 46.06,
+          "probability": 0.9645069241523743
+        }
+      ]
+    },
+    {
+      "start": 46.62,
+      "end": 47.06,
+      "text": " Oke.",
+      "words": [
+        {
+          "word": " Oke.",
+          "start": 46.62,
+          "end": 47.06,
+          "probability": 0.5071244835853577
+        }
+      ]
+    },
+    {
+      "start": 48.419999999999995,
+      "end": 51.04,
+      "text": " Apa reksi penagihannya aja ya?",
+      "words": [
+        {
+          "word": " Apa",
+          "start": 48.419999999999995,
+          "end": 49.019999999999996,
+          "probability": 0.6721168160438538
+        },
+        {
+          "word": " reksi",
+          "start": 49.019999999999996,
+          "end": 49.62,
+          "probability": 0.300825834274292
+        },
+        {
+          "word": " penagihannya",
+          "start": 49.62,
+          "end": 50.7,
+          "probability": 0.7070854753255844
+        },
+        {
+          "word": " aja",
+          "start": 50.7,
+          "end": 50.86,
+          "probability": 0.9700057506561279
+        },
+        {
+          "word": " ya?",
+          "start": 50.86,
+          "end": 51.04,
+          "probability": 0.8874998688697815
+        }
+      ]
+    },
+    {
+      "start": 51.58,
+      "end": 52.28,
+      "text": " Oke, oke.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 51.58,
+          "end": 52.0,
+          "probability": 0.9571611285209656
+        },
+        {
+          "word": " oke.",
+          "start": 52.14,
+          "end": 52.28,
+          "probability": 0.7808176279067993
+        }
+      ]
+    },
+    {
+      "start": 52.66,
+      "end": 54.32,
+      "text": " Oke ya, makasih, makasih.",
+      "words": [
+        {
+          "word": " Oke",
+          "start": 52.66,
+          "end": 52.9,
+          "probability": 0.8225293755531311
+        },
+        {
+          "word": " ya,",
+          "start": 52.9,
+          "end": 53.14,
+          "probability": 0.5727239847183228
+        },
+        {
+          "word": " makasih,",
+          "start": 53.38,
+          "end": 53.9,
+          "probability": 0.9314951101938883
+        },
+        {
+          "word": " makasih.",
+          "start": 53.96,
+          "end": 54.32,
+          "probability": 0.9972316225369772
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo, ya gimana?  Ini tadi harusnya bayarkan siang ini apa ya?  Iya, saya tes. Tapi ininya apa reksi-nya saya minta nggak dikasih kasi,  tahunnya saya kan udah keluar dari aplikasinya mau bayar,  tapi minta reksi buat pembayarannya gitu maksud saya.  Oh, kok ada siirtual kan?  Saya mau bayar tapi nggak ada, sebabnya saya kan udah keluar dulu.  Karena pinjamannya cuma seminggu, aduh kata saya tuh terlalu pain night ya,  nggak jadi tahun-tahunnya uang udah masuk.  Bapak mau bayar lewat apa BRI, BNI?  BRI aja.  BRI ya udah minta saya kiringin apa ya?  Oke.  Apa reksi penagihannya aja ya?  Oke, oke.  Oke ya, makasih, makasih."
+}

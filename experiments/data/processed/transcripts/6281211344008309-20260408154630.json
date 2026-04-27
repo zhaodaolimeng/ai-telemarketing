@@ -1,0 +1,783 @@
+{
+  "case_id": "6281211344008309-20260408154630",
+  "file_name": "6281211344008309-20260408154630.mp3",
+  "transcript": [
+    {
+      "start": 2.0599999999999903,
+      "end": 2.94,
+      "text": " Hello, sorry.",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 2.0599999999999903,
+          "end": 2.499999999999995,
+          "probability": 0.11645583063364029
+        },
+        {
+          "word": " sorry.",
+          "start": 2.499999999999995,
+          "end": 2.94,
+          "probability": 0.19229832291603088
+        }
+      ]
+    },
+    {
+      "start": 6.46,
+      "end": 6.9,
+      "text": " Hello?",
+      "words": [
+        {
+          "word": " Hello?",
+          "start": 6.46,
+          "end": 6.9,
+          "probability": 0.4283849596977234
+        }
+      ]
+    },
+    {
+      "start": 8.42,
+      "end": 10.12,
+      "text": " Ya, dengan Papa will produce.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 8.42,
+          "end": 8.72,
+          "probability": 0.12619079649448395
+        },
+        {
+          "word": " dengan",
+          "start": 8.84,
+          "end": 8.98,
+          "probability": 0.4805006980895996
+        },
+        {
+          "word": " Papa",
+          "start": 8.98,
+          "end": 9.38,
+          "probability": 0.27432531118392944
+        },
+        {
+          "word": " will",
+          "start": 9.38,
+          "end": 9.66,
+          "probability": 0.17955680191516876
+        },
+        {
+          "word": " produce.",
+          "start": 9.66,
+          "end": 10.12,
+          "probability": 0.37354668974876404
+        }
+      ]
+    },
+    {
+      "start": 10.24,
+      "end": 10.68,
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 10.24,
+          "end": 10.68,
+          "probability": 0.7138878703117371
+        }
+      ]
+    },
+    {
+      "start": 11.02,
+      "end": 12.32,
+      "text": " Ya, digamawan malam, ya kan?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 11.02,
+          "end": 11.34,
+          "probability": 0.5525285005569458
+        },
+        {
+          "word": " digamawan",
+          "start": 11.44,
+          "end": 11.88,
+          "probability": 0.35869720081488293
+        },
+        {
+          "word": " malam,",
+          "start": 11.88,
+          "end": 12.2,
+          "probability": 0.8963409662246704
+        },
+        {
+          "word": " ya",
+          "start": 12.28,
+          "end": 12.32,
+          "probability": 0.32143086194992065
+        },
+        {
+          "word": " kan?",
+          "start": 12.32,
+          "end": 12.32,
+          "probability": 0.1255646049976349
+        }
+      ]
+    },
+    {
+      "start": 12.32,
+      "end": 12.56,
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 12.32,
+          "end": 12.56,
+          "probability": 0.6749165654182434
+        }
+      ]
+    },
+    {
+      "start": 13.0,
+      "end": 15.42,
+      "text": " Karena ini dia pake stack trapping jam pro.",
+      "words": [
+        {
+          "word": " Karena",
+          "start": 13.0,
+          "end": 13.42,
+          "probability": 0.36668485403060913
+        },
+        {
+          "word": " ini",
+          "start": 13.42,
+          "end": 13.64,
+          "probability": 0.8254485726356506
+        },
+        {
+          "word": " dia",
+          "start": 13.64,
+          "end": 13.8,
+          "probability": 0.7380194664001465
+        },
+        {
+          "word": " pake",
+          "start": 13.8,
+          "end": 13.98,
+          "probability": 0.27511898428201675
+        },
+        {
+          "word": " stack",
+          "start": 13.98,
+          "end": 14.42,
+          "probability": 0.04213602468371391
+        },
+        {
+          "word": " trapping",
+          "start": 14.42,
+          "end": 14.9,
+          "probability": 0.7119920551776886
+        },
+        {
+          "word": " jam",
+          "start": 14.9,
+          "end": 15.2,
+          "probability": 0.4280788004398346
+        },
+        {
+          "word": " pro.",
+          "start": 15.2,
+          "end": 15.42,
+          "probability": 0.5082055926322937
+        }
+      ]
+    },
+    {
+      "start": 17.72,
+      "end": 18.16,
+      "text": " Oke.",
+      "words": [
+        {
+          "word": " Oke.",
+          "start": 17.72,
+          "end": 18.16,
+          "probability": 0.6872937679290771
+        }
+      ]
+    },
+    {
+      "start": 18.84,
+      "end": 19.42,
+      "text": " Ya ini bakal.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 18.84,
+          "end": 19.08,
+          "probability": 0.8306607007980347
+        },
+        {
+          "word": " ini",
+          "start": 19.08,
+          "end": 19.24,
+          "probability": 0.6143901348114014
+        },
+        {
+          "word": " bakal.",
+          "start": 19.24,
+          "end": 19.42,
+          "probability": 0.42550333589315414
+        }
+      ]
+    },
+    {
+      "start": 19.46,
+      "end": 20.02,
+      "text": " Ya, ya, ya.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 19.46,
+          "end": 19.6,
+          "probability": 0.5218619108200073
+        },
+        {
+          "word": " ya,",
+          "start": 19.84,
+          "end": 19.84,
+          "probability": 0.546538770198822
+        },
+        {
+          "word": " ya.",
+          "start": 19.84,
+          "end": 20.02,
+          "probability": 0.9738768339157104
+        }
+      ]
+    },
+    {
+      "start": 20.24,
+      "end": 21.44,
+      "text": " Ini pake stack trapping siapa ya?",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 20.24,
+          "end": 20.52,
+          "probability": 0.05364583432674408
+        },
+        {
+          "word": " pake",
+          "start": 20.52,
+          "end": 20.68,
+          "probability": 0.4943413846194744
+        },
+        {
+          "word": " stack",
+          "start": 20.68,
+          "end": 20.82,
+          "probability": 0.2311413288116455
+        },
+        {
+          "word": " trapping",
+          "start": 20.82,
+          "end": 20.98,
+          "probability": 0.8323682844638824
+        },
+        {
+          "word": " siapa",
+          "start": 20.98,
+          "end": 21.22,
+          "probability": 0.5918286144733429
+        },
+        {
+          "word": " ya?",
+          "start": 21.22,
+          "end": 21.44,
+          "probability": 0.8497444987297058
+        }
+      ]
+    },
+    {
+      "start": 22.46,
+      "end": 23.74,
+      "text": " Ya, ya, ya, ya.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 22.46,
+          "end": 22.9,
+          "probability": 0.9686933159828186
+        },
+        {
+          "word": " ya,",
+          "start": 23.12,
+          "end": 23.14,
+          "probability": 0.9608993530273438
+        },
+        {
+          "word": " ya,",
+          "start": 23.14,
+          "end": 23.44,
+          "probability": 0.9856482744216919
+        },
+        {
+          "word": " ya.",
+          "start": 23.44,
+          "end": 23.74,
+          "probability": 0.9846619367599487
+        }
+      ]
+    },
+    {
+      "start": 24.56,
+      "end": 25.58,
+      "text": " Ya, ya, ya.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 24.56,
+          "end": 25.0,
+          "probability": 0.930800199508667
+        },
+        {
+          "word": " ya,",
+          "start": 25.14,
+          "end": 25.3,
+          "probability": 0.3403826653957367
+        },
+        {
+          "word": " ya.",
+          "start": 25.4,
+          "end": 25.58,
+          "probability": 0.34406548738479614
+        }
+      ]
+    },
+    {
+      "start": 25.58,
+      "end": 26.52,
+      "text": " Oke, entar, entar, entar.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 25.58,
+          "end": 25.64,
+          "probability": 0.303970068693161
+        },
+        {
+          "word": " entar,",
+          "start": 25.8,
+          "end": 25.98,
+          "probability": 0.8781515061855316
+        },
+        {
+          "word": " entar,",
+          "start": 26.06,
+          "end": 26.26,
+          "probability": 0.986859917640686
+        },
+        {
+          "word": " entar.",
+          "start": 26.4,
+          "end": 26.52,
+          "probability": 0.993212103843689
+        }
+      ]
+    }
+  ],
+  "transcript_with_speakers": [
+    {
+      "start": 2.0599999999999903,
+      "end": 2.94,
+      "speaker": "UNKNOWN",
+      "text": " Hello, sorry.",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 2.0599999999999903,
+          "end": 2.499999999999995,
+          "probability": 0.11645583063364029
+        },
+        {
+          "word": " sorry.",
+          "start": 2.499999999999995,
+          "end": 2.94,
+          "probability": 0.19229832291603088
+        }
+      ]
+    },
+    {
+      "start": 6.46,
+      "end": 6.9,
+      "speaker": "AGENT",
+      "text": " Hello?",
+      "words": [
+        {
+          "word": " Hello?",
+          "start": 6.46,
+          "end": 6.9,
+          "probability": 0.4283849596977234
+        }
+      ]
+    },
+    {
+      "start": 8.42,
+      "end": 10.12,
+      "speaker": "CUSTOMER",
+      "text": " Ya, dengan Papa will produce.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 8.42,
+          "end": 8.72,
+          "probability": 0.12619079649448395
+        },
+        {
+          "word": " dengan",
+          "start": 8.84,
+          "end": 8.98,
+          "probability": 0.4805006980895996
+        },
+        {
+          "word": " Papa",
+          "start": 8.98,
+          "end": 9.38,
+          "probability": 0.27432531118392944
+        },
+        {
+          "word": " will",
+          "start": 9.38,
+          "end": 9.66,
+          "probability": 0.17955680191516876
+        },
+        {
+          "word": " produce.",
+          "start": 9.66,
+          "end": 10.12,
+          "probability": 0.37354668974876404
+        }
+      ]
+    },
+    {
+      "start": 10.24,
+      "end": 10.68,
+      "speaker": "CUSTOMER",
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 10.24,
+          "end": 10.68,
+          "probability": 0.7138878703117371
+        }
+      ]
+    },
+    {
+      "start": 11.02,
+      "end": 12.32,
+      "speaker": "CUSTOMER",
+      "text": " Ya, digamawan malam, ya kan?",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 11.02,
+          "end": 11.34,
+          "probability": 0.5525285005569458
+        },
+        {
+          "word": " digamawan",
+          "start": 11.44,
+          "end": 11.88,
+          "probability": 0.35869720081488293
+        },
+        {
+          "word": " malam,",
+          "start": 11.88,
+          "end": 12.2,
+          "probability": 0.8963409662246704
+        },
+        {
+          "word": " ya",
+          "start": 12.28,
+          "end": 12.32,
+          "probability": 0.32143086194992065
+        },
+        {
+          "word": " kan?",
+          "start": 12.32,
+          "end": 12.32,
+          "probability": 0.1255646049976349
+        }
+      ]
+    },
+    {
+      "start": 12.32,
+      "end": 12.56,
+      "speaker": "CUSTOMER",
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 12.32,
+          "end": 12.56,
+          "probability": 0.6749165654182434
+        }
+      ]
+    },
+    {
+      "start": 13.0,
+      "end": 15.42,
+      "speaker": "CUSTOMER",
+      "text": " Karena ini dia pake stack trapping jam pro.",
+      "words": [
+        {
+          "word": " Karena",
+          "start": 13.0,
+          "end": 13.42,
+          "probability": 0.36668485403060913
+        },
+        {
+          "word": " ini",
+          "start": 13.42,
+          "end": 13.64,
+          "probability": 0.8254485726356506
+        },
+        {
+          "word": " dia",
+          "start": 13.64,
+          "end": 13.8,
+          "probability": 0.7380194664001465
+        },
+        {
+          "word": " pake",
+          "start": 13.8,
+          "end": 13.98,
+          "probability": 0.27511898428201675
+        },
+        {
+          "word": " stack",
+          "start": 13.98,
+          "end": 14.42,
+          "probability": 0.04213602468371391
+        },
+        {
+          "word": " trapping",
+          "start": 14.42,
+          "end": 14.9,
+          "probability": 0.7119920551776886
+        },
+        {
+          "word": " jam",
+          "start": 14.9,
+          "end": 15.2,
+          "probability": 0.4280788004398346
+        },
+        {
+          "word": " pro.",
+          "start": 15.2,
+          "end": 15.42,
+          "probability": 0.5082055926322937
+        }
+      ]
+    },
+    {
+      "start": 17.72,
+      "end": 18.16,
+      "speaker": "AGENT",
+      "text": " Oke.",
+      "words": [
+        {
+          "word": " Oke.",
+          "start": 17.72,
+          "end": 18.16,
+          "probability": 0.6872937679290771
+        }
+      ]
+    },
+    {
+      "start": 18.84,
+      "end": 19.42,
+      "speaker": "CUSTOMER",
+      "text": " Ya ini bakal.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 18.84,
+          "end": 19.08,
+          "probability": 0.8306607007980347
+        },
+        {
+          "word": " ini",
+          "start": 19.08,
+          "end": 19.24,
+          "probability": 0.6143901348114014
+        },
+        {
+          "word": " bakal.",
+          "start": 19.24,
+          "end": 19.42,
+          "probability": 0.42550333589315414
+        }
+      ]
+    },
+    {
+      "start": 19.46,
+      "end": 20.02,
+      "speaker": "CUSTOMER",
+      "text": " Ya, ya, ya.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 19.46,
+          "end": 19.6,
+          "probability": 0.5218619108200073
+        },
+        {
+          "word": " ya,",
+          "start": 19.84,
+          "end": 19.84,
+          "probability": 0.546538770198822
+        },
+        {
+          "word": " ya.",
+          "start": 19.84,
+          "end": 20.02,
+          "probability": 0.9738768339157104
+        }
+      ]
+    },
+    {
+      "start": 20.24,
+      "end": 21.44,
+      "speaker": "UNKNOWN",
+      "text": " Ini pake stack trapping siapa ya?",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 20.24,
+          "end": 20.52,
+          "probability": 0.05364583432674408
+        },
+        {
+          "word": " pake",
+          "start": 20.52,
+          "end": 20.68,
+          "probability": 0.4943413846194744
+        },
+        {
+          "word": " stack",
+          "start": 20.68,
+          "end": 20.82,
+          "probability": 0.2311413288116455
+        },
+        {
+          "word": " trapping",
+          "start": 20.82,
+          "end": 20.98,
+          "probability": 0.8323682844638824
+        },
+        {
+          "word": " siapa",
+          "start": 20.98,
+          "end": 21.22,
+          "probability": 0.5918286144733429
+        },
+        {
+          "word": " ya?",
+          "start": 21.22,
+          "end": 21.44,
+          "probability": 0.8497444987297058
+        }
+      ]
+    },
+    {
+      "start": 22.46,
+      "end": 23.74,
+      "speaker": "CUSTOMER",
+      "text": " Ya, ya, ya, ya.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 22.46,
+          "end": 22.9,
+          "probability": 0.9686933159828186
+        },
+        {
+          "word": " ya,",
+          "start": 23.12,
+          "end": 23.14,
+          "probability": 0.9608993530273438
+        },
+        {
+          "word": " ya,",
+          "start": 23.14,
+          "end": 23.44,
+          "probability": 0.9856482744216919
+        },
+        {
+          "word": " ya.",
+          "start": 23.44,
+          "end": 23.74,
+          "probability": 0.9846619367599487
+        }
+      ]
+    },
+    {
+      "start": 24.56,
+      "end": 25.58,
+      "speaker": "CUSTOMER",
+      "text": " Ya, ya, ya.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 24.56,
+          "end": 25.0,
+          "probability": 0.930800199508667
+        },
+        {
+          "word": " ya,",
+          "start": 25.14,
+          "end": 25.3,
+          "probability": 0.3403826653957367
+        },
+        {
+          "word": " ya.",
+          "start": 25.4,
+          "end": 25.58,
+          "probability": 0.34406548738479614
+        }
+      ]
+    },
+    {
+      "start": 25.58,
+      "end": 26.52,
+      "speaker": "CUSTOMER",
+      "text": " Oke, entar, entar, entar.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 25.58,
+          "end": 25.64,
+          "probability": 0.303970068693161
+        },
+        {
+          "word": " entar,",
+          "start": 25.8,
+          "end": 25.98,
+          "probability": 0.8781515061855316
+        },
+        {
+          "word": " entar,",
+          "start": 26.06,
+          "end": 26.26,
+          "probability": 0.986859917640686
+        },
+        {
+          "word": " entar.",
+          "start": 26.4,
+          "end": 26.52,
+          "probability": 0.993212103843689
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello, sorry.  Hello?  Ya, dengan Papa will produce.  Ya.  Ya, digamawan malam, ya kan?  Ya.  Karena ini dia pake stack trapping jam pro.  Oke.  Ya ini bakal.  Ya, ya, ya.  Ini pake stack trapping siapa ya?  Ya, ya, ya, ya.  Ya, ya, ya.  Oke, entar, entar, entar."
+}

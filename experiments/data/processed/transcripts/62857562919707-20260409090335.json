@@ -1,0 +1,863 @@
+{
+  "case_id": "62857562919707-20260409090335",
+  "file_name": "62857562919707-20260409090335.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 8.1,
+      "speaker": "CUSTOMER",
+      "text": " Sama datang di layanan pesan suara, welkan voicemail service. Silahkan rekam pesan suara setelah mendengar...",
+      "words": [
+        {
+          "word": " Sama",
+          "start": 0.0,
+          "end": 0.14,
+          "probability": 0.02954801730811596
+        },
+        {
+          "word": " datang",
+          "start": 0.14,
+          "end": 1.44,
+          "probability": 0.8521477580070496
+        },
+        {
+          "word": " di",
+          "start": 1.44,
+          "end": 1.68,
+          "probability": 0.8104091882705688
+        },
+        {
+          "word": " layanan",
+          "start": 1.68,
+          "end": 2.04,
+          "probability": 0.9671498835086823
+        },
+        {
+          "word": " pesan",
+          "start": 2.04,
+          "end": 2.68,
+          "probability": 0.9594845771789551
+        },
+        {
+          "word": " suara,",
+          "start": 2.68,
+          "end": 3.02,
+          "probability": 0.972279280424118
+        },
+        {
+          "word": " welkan",
+          "start": 3.38,
+          "end": 4.22,
+          "probability": 0.319039523601532
+        },
+        {
+          "word": " voicemail",
+          "start": 4.22,
+          "end": 4.74,
+          "probability": 0.6449288154641787
+        },
+        {
+          "word": " service.",
+          "start": 4.74,
+          "end": 5.22,
+          "probability": 0.8847687244415283
+        },
+        {
+          "word": " Silahkan",
+          "start": 5.58,
+          "end": 6.06,
+          "probability": 0.7409512599309286
+        },
+        {
+          "word": " rekam",
+          "start": 6.06,
+          "end": 6.38,
+          "probability": 0.6933822482824326
+        },
+        {
+          "word": " pesan",
+          "start": 6.38,
+          "end": 6.68,
+          "probability": 0.9825548529624939
+        },
+        {
+          "word": " suara",
+          "start": 6.68,
+          "end": 7.06,
+          "probability": 0.9903093576431274
+        },
+        {
+          "word": " setelah",
+          "start": 7.06,
+          "end": 7.72,
+          "probability": 0.8093364834785461
+        },
+        {
+          "word": " mendengar...",
+          "start": 7.72,
+          "end": 8.1,
+          "probability": 0.7087030783295631
+        }
+      ]
+    },
+    {
+      "start": 8.1,
+      "end": 9.02,
+      "speaker": "CUSTOMER",
+      "text": " Disuka nun, lari nun.",
+      "words": [
+        {
+          "word": " Disuka",
+          "start": 8.1,
+          "end": 8.34,
+          "probability": 0.27333541959524155
+        },
+        {
+          "word": " nun,",
+          "start": 8.34,
+          "end": 8.56,
+          "probability": 0.6173400282859802
+        },
+        {
+          "word": " lari",
+          "start": 8.7,
+          "end": 8.88,
+          "probability": 0.9849631190299988
+        },
+        {
+          "word": " nun.",
+          "start": 8.88,
+          "end": 9.02,
+          "probability": 0.9935553669929504
+        }
+      ]
+    },
+    {
+      "start": 9.2,
+      "end": 11.0,
+      "speaker": "AGENT",
+      "text": " Sekan, tombol apapun untuk menyelesaikan...",
+      "words": [
+        {
+          "word": " Sekan,",
+          "start": 9.2,
+          "end": 9.5,
+          "probability": 0.41768161952495575
+        },
+        {
+          "word": " tombol",
+          "start": 9.6,
+          "end": 9.76,
+          "probability": 0.8593692779541016
+        },
+        {
+          "word": " apapun",
+          "start": 9.76,
+          "end": 10.46,
+          "probability": 0.8351871371269226
+        },
+        {
+          "word": " untuk",
+          "start": 10.46,
+          "end": 10.9,
+          "probability": 0.3297004997730255
+        },
+        {
+          "word": " menyelesaikan...",
+          "start": 10.9,
+          "end": 11.26,
+          "probability": 0.8356808066368103
+        }
+      ]
+    },
+    {
+      "start": 11.58,
+      "end": 15.24,
+      "speaker": "CUSTOMER",
+      "text": " Kan ulang sepikan itu, sepikan dinawain, sepikan nonton HD nih kan?",
+      "words": [
+        {
+          "word": " Kan",
+          "start": 11.58,
+          "end": 11.78,
+          "probability": 0.262839674949646
+        },
+        {
+          "word": " ulang",
+          "start": 11.78,
+          "end": 12.06,
+          "probability": 0.6649373769760132
+        },
+        {
+          "word": " sepikan",
+          "start": 12.06,
+          "end": 12.34,
+          "probability": 0.3527357478936513
+        },
+        {
+          "word": " itu,",
+          "start": 12.34,
+          "end": 12.56,
+          "probability": 0.7167618870735168
+        },
+        {
+          "word": " sepikan",
+          "start": 12.7,
+          "end": 12.88,
+          "probability": 0.8484309116999308
+        },
+        {
+          "word": " dinawain,",
+          "start": 12.88,
+          "end": 13.28,
+          "probability": 0.3221348449587822
+        },
+        {
+          "word": " sepikan",
+          "start": 13.34,
+          "end": 13.88,
+          "probability": 0.9167805512746176
+        },
+        {
+          "word": " nonton",
+          "start": 13.88,
+          "end": 14.58,
+          "probability": 0.3306334614753723
+        },
+        {
+          "word": " HD",
+          "start": 14.58,
+          "end": 14.92,
+          "probability": 0.4085535407066345
+        },
+        {
+          "word": " nih",
+          "start": 14.92,
+          "end": 15.1,
+          "probability": 0.33745431900024414
+        },
+        {
+          "word": " kan?",
+          "start": 15.1,
+          "end": 15.24,
+          "probability": 0.8566009402275085
+        }
+      ]
+    },
+    {
+      "start": 16.540000000000003,
+      "end": 17.26,
+      "speaker": "CUSTOMER",
+      "text": " Tidak.",
+      "words": [
+        {
+          "word": " Tidak.",
+          "start": 16.540000000000003,
+          "end": 17.26,
+          "probability": 0.40742815596361953
+        }
+      ]
+    },
+    {
+      "start": 19.220000000000002,
+      "end": 20.46,
+      "speaker": "CUSTOMER",
+      "text": " Balik jayi.",
+      "words": [
+        {
+          "word": " Balik",
+          "start": 19.220000000000002,
+          "end": 19.94,
+          "probability": 0.705878272652626
+        },
+        {
+          "word": " jayi.",
+          "start": 19.94,
+          "end": 20.46,
+          "probability": 0.6888923943042755
+        }
+      ]
+    },
+    {
+      "start": 21.02,
+      "end": 22.4,
+      "speaker": "AGENT",
+      "text": " Atau sehari sini lain.",
+      "words": [
+        {
+          "word": " Atau",
+          "start": 21.02,
+          "end": 21.4,
+          "probability": 0.6416831463575363
+        },
+        {
+          "word": " sehari",
+          "start": 21.4,
+          "end": 21.62,
+          "probability": 0.17587806036074957
+        },
+        {
+          "word": " sini",
+          "start": 21.62,
+          "end": 21.9,
+          "probability": 0.9133998155593872
+        },
+        {
+          "word": " lain.",
+          "start": 21.9,
+          "end": 22.4,
+          "probability": 0.41519835591316223
+        }
+      ]
+    },
+    {
+      "start": 23.28,
+      "end": 24.26,
+      "speaker": "CUSTOMER",
+      "text": " Atau sehati.",
+      "words": [
+        {
+          "word": " Atau",
+          "start": 23.28,
+          "end": 23.8,
+          "probability": 0.7889540294806162
+        },
+        {
+          "word": " sehati.",
+          "start": 23.8,
+          "end": 24.26,
+          "probability": 0.40098009010155994
+        }
+      ]
+    },
+    {
+      "start": 31.12,
+      "end": 31.78,
+      "speaker": "CUSTOMER",
+      "text": " Saya tahu.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 31.12,
+          "end": 31.56,
+          "probability": 0.007640743162482977
+        },
+        {
+          "word": " tahu.",
+          "start": 31.56,
+          "end": 31.78,
+          "probability": 0.04058815911412239
+        }
+      ]
+    },
+    {
+      "start": 32.54,
+      "end": 37.38,
+      "speaker": "CUSTOMER",
+      "text": " Satu itu emang ada daerah aparan urangnya di jalan di lakanya, noon.",
+      "words": [
+        {
+          "word": " Satu",
+          "start": 32.54,
+          "end": 32.98,
+          "probability": 0.02079008473083377
+        },
+        {
+          "word": " itu",
+          "start": 32.98,
+          "end": 33.24,
+          "probability": 0.5584222674369812
+        },
+        {
+          "word": " emang",
+          "start": 33.24,
+          "end": 35.22,
+          "probability": 0.4935879800468683
+        },
+        {
+          "word": " ada",
+          "start": 35.22,
+          "end": 35.4,
+          "probability": 0.2940787672996521
+        },
+        {
+          "word": " daerah",
+          "start": 35.4,
+          "end": 35.66,
+          "probability": 0.6424070298671722
+        },
+        {
+          "word": " aparan",
+          "start": 35.66,
+          "end": 35.82,
+          "probability": 0.20627817884087563
+        },
+        {
+          "word": " urangnya",
+          "start": 35.82,
+          "end": 36.16,
+          "probability": 0.2914428437749545
+        },
+        {
+          "word": " di",
+          "start": 36.16,
+          "end": 36.26,
+          "probability": 0.9664903879165649
+        },
+        {
+          "word": " jalan",
+          "start": 36.26,
+          "end": 36.48,
+          "probability": 0.8242969512939453
+        },
+        {
+          "word": " di",
+          "start": 36.48,
+          "end": 36.66,
+          "probability": 0.46425649523735046
+        },
+        {
+          "word": " lakanya,",
+          "start": 36.66,
+          "end": 36.98,
+          "probability": 0.5949221054712931
+        },
+        {
+          "word": " noon.",
+          "start": 37.06,
+          "end": 37.38,
+          "probability": 0.3017181381583214
+        }
+      ]
+    },
+    {
+      "start": 38.06,
+      "end": 42.2,
+      "speaker": "CUSTOMER",
+      "text": " Atau jadi jayi, jadi itu pedala di kat, enak ya lobanya pesan itu, noong.",
+      "words": [
+        {
+          "word": " Atau",
+          "start": 38.06,
+          "end": 38.34,
+          "probability": 0.6524705241123835
+        },
+        {
+          "word": " jadi",
+          "start": 38.34,
+          "end": 38.54,
+          "probability": 0.8823496699333191
+        },
+        {
+          "word": " jayi,",
+          "start": 38.54,
+          "end": 39.4,
+          "probability": 0.38612357154488564
+        },
+        {
+          "word": " jadi",
+          "start": 39.4,
+          "end": 39.54,
+          "probability": 0.9778900742530823
+        },
+        {
+          "word": " itu",
+          "start": 39.54,
+          "end": 39.78,
+          "probability": 0.28286153078079224
+        },
+        {
+          "word": " pedala",
+          "start": 39.78,
+          "end": 40.06,
+          "probability": 0.34609974920749664
+        },
+        {
+          "word": " di",
+          "start": 40.06,
+          "end": 40.18,
+          "probability": 0.0666845291852951
+        },
+        {
+          "word": " kat,",
+          "start": 40.18,
+          "end": 40.32,
+          "probability": 0.3450913429260254
+        },
+        {
+          "word": " enak",
+          "start": 40.38,
+          "end": 40.92,
+          "probability": 0.8356479108333588
+        },
+        {
+          "word": " ya",
+          "start": 40.92,
+          "end": 41.04,
+          "probability": 0.29312431812286377
+        },
+        {
+          "word": " lobanya",
+          "start": 41.04,
+          "end": 41.4,
+          "probability": 0.6781260520219803
+        },
+        {
+          "word": " pesan",
+          "start": 41.4,
+          "end": 41.7,
+          "probability": 0.02363354153931141
+        },
+        {
+          "word": " itu,",
+          "start": 41.7,
+          "end": 41.86,
+          "probability": 0.3422887623310089
+        },
+        {
+          "word": " noong.",
+          "start": 42.02,
+          "end": 42.2,
+          "probability": 0.23762617260217667
+        }
+      ]
+    },
+    {
+      "start": 43.0,
+      "end": 44.88,
+      "speaker": "CUSTOMER",
+      "text": " So, ya jangan kertas nasi, gitu ya.",
+      "words": [
+        {
+          "word": " So,",
+          "start": 43.0,
+          "end": 43.44,
+          "probability": 0.12864747643470764
+        },
+        {
+          "word": " ya",
+          "start": 43.54,
+          "end": 43.64,
+          "probability": 0.3231906592845917
+        },
+        {
+          "word": " jangan",
+          "start": 43.64,
+          "end": 43.84,
+          "probability": 0.2405240684747696
+        },
+        {
+          "word": " kertas",
+          "start": 43.84,
+          "end": 44.1,
+          "probability": 0.6374731957912445
+        },
+        {
+          "word": " nasi,",
+          "start": 44.1,
+          "end": 44.56,
+          "probability": 0.9272609353065491
+        },
+        {
+          "word": " gitu",
+          "start": 44.58,
+          "end": 44.72,
+          "probability": 0.3752889931201935
+        },
+        {
+          "word": " ya.",
+          "start": 44.72,
+          "end": 44.88,
+          "probability": 0.1802564263343811
+        }
+      ]
+    },
+    {
+      "start": 45.480000000000004,
+      "end": 47.82,
+      "speaker": "CUSTOMER",
+      "text": " Engggg, jauh tinggap, tepe-peguh rasa, kak Jaden nanti.",
+      "words": [
+        {
+          "word": " Engggg,",
+          "start": 45.480000000000004,
+          "end": 45.92,
+          "probability": 0.3944805860519409
+        },
+        {
+          "word": " jauh",
+          "start": 45.94,
+          "end": 46.16,
+          "probability": 0.4064207722743352
+        },
+        {
+          "word": " tinggap,",
+          "start": 46.16,
+          "end": 46.44,
+          "probability": 0.3964192420244217
+        },
+        {
+          "word": " tepe",
+          "start": 46.52,
+          "end": 46.68,
+          "probability": 0.36779704689979553
+        },
+        {
+          "word": "-peguh",
+          "start": 46.68,
+          "end": 46.94,
+          "probability": 0.3783760629594326
+        },
+        {
+          "word": " rasa,",
+          "start": 46.94,
+          "end": 47.14,
+          "probability": 0.7074874043464661
+        },
+        {
+          "word": " kak",
+          "start": 47.3,
+          "end": 47.4,
+          "probability": 0.1948515772819519
+        },
+        {
+          "word": " Jaden",
+          "start": 47.4,
+          "end": 47.52,
+          "probability": 0.1556340754032135
+        },
+        {
+          "word": " nanti.",
+          "start": 47.52,
+          "end": 47.82,
+          "probability": 0.42606983333826065
+        }
+      ]
+    },
+    {
+      "start": 48.50000000000001,
+      "end": 49.64,
+      "speaker": "CUSTOMER",
+      "text": " Terus, keberapaan pesan.",
+      "words": [
+        {
+          "word": " Terus,",
+          "start": 48.50000000000001,
+          "end": 48.940000000000005,
+          "probability": 0.36638347106054425
+        },
+        {
+          "word": " keberapaan",
+          "start": 48.940000000000005,
+          "end": 49.38,
+          "probability": 0.2900695218704641
+        },
+        {
+          "word": " pesan.",
+          "start": 49.38,
+          "end": 49.64,
+          "probability": 0.47307901829481125
+        }
+      ]
+    },
+    {
+      "start": 50.46,
+      "end": 54.2,
+      "speaker": "CUSTOMER",
+      "text": " Eh, urangnya poh, orang temu, orang temu, orang temu, orang temu ngomong dipisah, gitu ya.",
+      "words": [
+        {
+          "word": " Eh,",
+          "start": 50.46,
+          "end": 50.9,
+          "probability": 0.7481645941734314
+        },
+        {
+          "word": " urangnya",
+          "start": 51.12,
+          "end": 51.48,
+          "probability": 0.6629190047581991
+        },
+        {
+          "word": " poh,",
+          "start": 51.48,
+          "end": 51.68,
+          "probability": 0.2099873274564743
+        },
+        {
+          "word": " orang",
+          "start": 51.8,
+          "end": 51.98,
+          "probability": 0.2953718602657318
+        },
+        {
+          "word": " temu,",
+          "start": 51.98,
+          "end": 52.28,
+          "probability": 0.3130728751420975
+        },
+        {
+          "word": " orang",
+          "start": 52.42,
+          "end": 52.58,
+          "probability": 0.8172340989112854
+        },
+        {
+          "word": " temu,",
+          "start": 52.58,
+          "end": 52.72,
+          "probability": 0.6992637068033218
+        },
+        {
+          "word": " orang",
+          "start": 52.84,
+          "end": 53.06,
+          "probability": 0.9381119012832642
+        },
+        {
+          "word": " temu,",
+          "start": 53.06,
+          "end": 53.06,
+          "probability": 0.8552732169628143
+        },
+        {
+          "word": " orang",
+          "start": 53.18,
+          "end": 53.18,
+          "probability": 0.8536200523376465
+        },
+        {
+          "word": " temu",
+          "start": 53.18,
+          "end": 53.18,
+          "probability": 0.8558048605918884
+        },
+        {
+          "word": " ngomong",
+          "start": 53.18,
+          "end": 53.32,
+          "probability": 0.8119247953097025
+        },
+        {
+          "word": " dipisah,",
+          "start": 53.32,
+          "end": 53.82,
+          "probability": 0.6964277029037476
+        },
+        {
+          "word": " gitu",
+          "start": 53.9,
+          "end": 54.02,
+          "probability": 0.7579015493392944
+        },
+        {
+          "word": " ya.",
+          "start": 54.02,
+          "end": 54.2,
+          "probability": 0.6181039810180664
+        }
+      ]
+    },
+    {
+      "start": 55.1,
+      "end": 59.36,
+      "speaker": "CUSTOMER",
+      "text": " Pas ingatnya pesus, diadukan mah, biar aku terjadi urang, betul-geri, itu.",
+      "words": [
+        {
+          "word": " Pas",
+          "start": 55.1,
+          "end": 55.54,
+          "probability": 0.9077569246292114
+        },
+        {
+          "word": " ingatnya",
+          "start": 55.54,
+          "end": 55.98,
+          "probability": 0.4331414004166921
+        },
+        {
+          "word": " pesus,",
+          "start": 55.98,
+          "end": 56.32,
+          "probability": 0.4864337742328644
+        },
+        {
+          "word": " diadukan",
+          "start": 56.46,
+          "end": 56.84,
+          "probability": 0.604068805774053
+        },
+        {
+          "word": " mah,",
+          "start": 56.84,
+          "end": 57.28,
+          "probability": 0.30417051911354065
+        },
+        {
+          "word": " biar",
+          "start": 57.44,
+          "end": 57.56,
+          "probability": 0.6081080883741379
+        },
+        {
+          "word": " aku",
+          "start": 57.56,
+          "end": 57.72,
+          "probability": 0.9821736812591553
+        },
+        {
+          "word": " terjadi",
+          "start": 57.72,
+          "end": 58.08,
+          "probability": 0.8635812699794769
+        },
+        {
+          "word": " urang,",
+          "start": 58.08,
+          "end": 58.36,
+          "probability": 0.283414363861084
+        },
+        {
+          "word": " betul",
+          "start": 58.44,
+          "end": 58.68,
+          "probability": 0.4046247825026512
+        },
+        {
+          "word": "-geri,",
+          "start": 58.68,
+          "end": 59.1,
+          "probability": 0.34102538228034973
+        },
+        {
+          "word": " itu.",
+          "start": 59.2,
+          "end": 59.36,
+          "probability": 0.5931423306465149
+        }
+      ]
+    },
+    {
+      "start": 60.0,
+      "end": 60.28,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 60.0,
+          "end": 60.1,
+          "probability": 0.512361440807581
+        },
+        {
+          "word": " kasih.",
+          "start": 60.1,
+          "end": 60.28,
+          "probability": 0.9134601950645447
+        }
+      ]
+    }
+  ],
+  "full_text": " Sama datang di layanan pesan suara, welkan voicemail service. Silahkan rekam pesan suara setelah mendengar...  Disuka nun, lari nun.  Sekan, tombol apapun untuk menyelesaikan...  Kan ulang sepikan itu, sepikan dinawain, sepikan nonton HD nih kan?  Tidak.  Balik jayi.  Atau sehari sini lain.  Atau sehati.  Saya tahu.  Satu itu emang ada daerah aparan urangnya di jalan di lakanya, noon.  Atau jadi jayi, jadi itu pedala di kat, enak ya lobanya pesan itu, noong.  So, ya jangan kertas nasi, gitu ya.  Engggg, jauh tinggap, tepe-peguh rasa, kak Jaden nanti.  Terus, keberapaan pesan.  Eh, urangnya poh, orang temu, orang temu, orang temu, orang temu ngomong dipisah, gitu ya.  Pas ingatnya pesus, diadukan mah, biar aku terjadi urang, betul-geri, itu.  Terima kasih."
+}

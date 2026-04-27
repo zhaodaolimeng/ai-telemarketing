@@ -1,0 +1,501 @@
+{
+  "case_id": "628223714511908-20260414064030",
+  "file_name": "628223714511908-20260414064030.mp3",
+  "transcript": [
+    {
+      "start": 3.1600000000000072,
+      "end": 5.16,
+      "speaker": "AGENT",
+      "text": " Halo Assalamualaikum",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 3.1600000000000072,
+          "end": 4.160000000000004,
+          "probability": 0.04555875435471535
+        },
+        {
+          "word": " Assalamualaikum",
+          "start": 4.160000000000004,
+          "end": 5.16,
+          "probability": 0.7838207602500915
+        }
+      ]
+    },
+    {
+      "start": 7.660000000000004,
+      "end": 8.0,
+      "speaker": "CUSTOMER",
+      "text": " Assalamualaikum",
+      "words": [
+        {
+          "word": " Assalamualaikum",
+          "start": 7.660000000000004,
+          "end": 8.160000000000002,
+          "probability": 0.7875859379768372
+        }
+      ]
+    },
+    {
+      "start": 8.66,
+      "end": 9.76,
+      "speaker": "AGENT",
+      "text": " Assalamualaikum",
+      "words": [
+        {
+          "word": " Assalamualaikum",
+          "start": 8.66,
+          "end": 9.76,
+          "probability": 0.7948003321886062
+        }
+      ]
+    },
+    {
+      "start": 9.76,
+      "end": 10.08,
+      "speaker": "AGENT",
+      "text": " Halo",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 9.76,
+          "end": 10.08,
+          "probability": 0.1465514749288559
+        }
+      ]
+    },
+    {
+      "start": 10.08,
+      "end": 13.06,
+      "speaker": "AGENT",
+      "text": " Halo Assalamualaikum",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 10.08,
+          "end": 11.08,
+          "probability": 0.010545502416789532
+        },
+        {
+          "word": " Assalamualaikum",
+          "start": 11.08,
+          "end": 13.06,
+          "probability": 0.949091124534607
+        }
+      ]
+    },
+    {
+      "start": 15.980000000000004,
+      "end": 16.98,
+      "speaker": "CUSTOMER",
+      "text": " Assalamualaikum",
+      "words": [
+        {
+          "word": " Assalamualaikum",
+          "start": 15.980000000000004,
+          "end": 16.98,
+          "probability": 0.7634135097265243
+        }
+      ]
+    },
+    {
+      "start": 16.98,
+      "end": 21.88,
+      "speaker": "AGENT",
+      "text": " Kita ketemu lagi Pak, ini bisa diberesan jembar apa Pak?",
+      "words": [
+        {
+          "word": " Kita",
+          "start": 16.98,
+          "end": 17.38,
+          "probability": 0.020313810557127
+        },
+        {
+          "word": " ketemu",
+          "start": 17.38,
+          "end": 18.38,
+          "probability": 0.9252667725086212
+        },
+        {
+          "word": " lagi",
+          "start": 18.38,
+          "end": 18.7,
+          "probability": 0.9966456294059753
+        },
+        {
+          "word": " Pak,",
+          "start": 18.7,
+          "end": 18.94,
+          "probability": 0.06402473896741867
+        },
+        {
+          "word": " ini",
+          "start": 19.3,
+          "end": 19.46,
+          "probability": 0.8627901077270508
+        },
+        {
+          "word": " bisa",
+          "start": 19.46,
+          "end": 20.46,
+          "probability": 0.953004777431488
+        },
+        {
+          "word": " diberesan",
+          "start": 20.46,
+          "end": 20.88,
+          "probability": 0.399266105145216
+        },
+        {
+          "word": " jembar",
+          "start": 20.88,
+          "end": 21.16,
+          "probability": 0.41860760748386383
+        },
+        {
+          "word": " apa",
+          "start": 21.16,
+          "end": 21.3,
+          "probability": 0.9438796043395996
+        },
+        {
+          "word": " Pak?",
+          "start": 21.3,
+          "end": 21.88,
+          "probability": 0.8278418183326721
+        }
+      ]
+    },
+    {
+      "start": 21.88,
+      "end": 22.78,
+      "speaker": "CUSTOMER",
+      "text": " Ini mana?",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 21.88,
+          "end": 22.56,
+          "probability": 0.017453037202358246
+        },
+        {
+          "word": " mana?",
+          "start": 22.56,
+          "end": 22.78,
+          "probability": 0.7066120505332947
+        }
+      ]
+    },
+    {
+      "start": 24.1,
+      "end": 24.6,
+      "speaker": "AGENT",
+      "text": " Masuklah.",
+      "words": [
+        {
+          "word": " Masuklah.",
+          "start": 24.1,
+          "end": 24.6,
+          "probability": 0.485705037911733
+        }
+      ]
+    },
+    {
+      "start": 27.42,
+      "end": 28.8,
+      "speaker": "CUSTOMER",
+      "text": " Oke, jam 2.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 27.42,
+          "end": 27.92,
+          "probability": 0.0003754219214897603
+        },
+        {
+          "word": " jam",
+          "start": 28.46,
+          "end": 28.54,
+          "probability": 0.8269098997116089
+        },
+        {
+          "word": " 2.",
+          "start": 28.54,
+          "end": 28.8,
+          "probability": 0.6095274686813354
+        }
+      ]
+    },
+    {
+      "start": 29.28,
+      "end": 30.96,
+      "speaker": "AGENT",
+      "text": " Pinjam Pro ya Pak? 1.7?",
+      "words": [
+        {
+          "word": " Pinjam",
+          "start": 29.28,
+          "end": 29.68,
+          "probability": 0.7767308354377747
+        },
+        {
+          "word": " Pro",
+          "start": 29.68,
+          "end": 29.88,
+          "probability": 0.6973214149475098
+        },
+        {
+          "word": " ya",
+          "start": 29.88,
+          "end": 30.04,
+          "probability": 0.7327864170074463
+        },
+        {
+          "word": " Pak?",
+          "start": 30.04,
+          "end": 30.14,
+          "probability": 0.3368851840496063
+        },
+        {
+          "word": " 1",
+          "start": 30.34,
+          "end": 30.52,
+          "probability": 0.772699773311615
+        },
+        {
+          "word": ".7?",
+          "start": 30.52,
+          "end": 30.96,
+          "probability": 0.811339795589447
+        }
+      ]
+    },
+    {
+      "start": 32.16,
+      "end": 32.72,
+      "speaker": "CUSTOMER",
+      "text": " Iya, iya.",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 32.16,
+          "end": 32.46,
+          "probability": 0.7835768461227417
+        },
+        {
+          "word": " iya.",
+          "start": 32.54,
+          "end": 32.72,
+          "probability": 0.761772096157074
+        }
+      ]
+    },
+    {
+      "start": 33.86,
+      "end": 37.88,
+      "speaker": "CUSTOMER",
+      "text": " Iya, saya tidak akan ganggu, tidak akan kasar, tidak akan sebar data.",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 33.86,
+          "end": 34.36,
+          "probability": 0.5062059760093689
+        },
+        {
+          "word": " saya",
+          "start": 34.5,
+          "end": 34.62,
+          "probability": 0.698722243309021
+        },
+        {
+          "word": " tidak",
+          "start": 34.62,
+          "end": 35.04,
+          "probability": 0.48748400807380676
+        },
+        {
+          "word": " akan",
+          "start": 35.04,
+          "end": 35.32,
+          "probability": 0.9931408762931824
+        },
+        {
+          "word": " ganggu,",
+          "start": 35.32,
+          "end": 35.88,
+          "probability": 0.8770894110202789
+        },
+        {
+          "word": " tidak",
+          "start": 36.02,
+          "end": 36.26,
+          "probability": 0.9857665300369263
+        },
+        {
+          "word": " akan",
+          "start": 36.26,
+          "end": 36.56,
+          "probability": 0.9949807524681091
+        },
+        {
+          "word": " kasar,",
+          "start": 36.56,
+          "end": 36.98,
+          "probability": 0.8713981211185455
+        },
+        {
+          "word": " tidak",
+          "start": 37.08,
+          "end": 37.18,
+          "probability": 0.983806848526001
+        },
+        {
+          "word": " akan",
+          "start": 37.18,
+          "end": 37.36,
+          "probability": 0.9981153011322021
+        },
+        {
+          "word": " sebar",
+          "start": 37.36,
+          "end": 37.58,
+          "probability": 0.5374486669898033
+        },
+        {
+          "word": " data.",
+          "start": 37.58,
+          "end": 37.88,
+          "probability": 0.9782485961914062
+        }
+      ]
+    },
+    {
+      "start": 38.32,
+      "end": 40.28,
+      "speaker": "CUSTOMER",
+      "text": " Hanya kita sering ketemu Pak, kemana aja?",
+      "words": [
+        {
+          "word": " Hanya",
+          "start": 38.32,
+          "end": 38.56,
+          "probability": 0.6192931905388832
+        },
+        {
+          "word": " kita",
+          "start": 38.56,
+          "end": 38.78,
+          "probability": 0.9748138785362244
+        },
+        {
+          "word": " sering",
+          "start": 38.78,
+          "end": 39.1,
+          "probability": 0.9801788032054901
+        },
+        {
+          "word": " ketemu",
+          "start": 39.1,
+          "end": 39.36,
+          "probability": 0.5850131437182426
+        },
+        {
+          "word": " Pak,",
+          "start": 39.36,
+          "end": 39.62,
+          "probability": 0.6997120380401611
+        },
+        {
+          "word": " kemana",
+          "start": 39.84,
+          "end": 40.02,
+          "probability": 0.5310361161828041
+        },
+        {
+          "word": " aja?",
+          "start": 40.02,
+          "end": 40.28,
+          "probability": 0.36334162950515747
+        }
+      ]
+    },
+    {
+      "start": 41.94,
+      "end": 44.1,
+      "speaker": "CUSTOMER",
+      "text": " Ya, oke oke oke.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 41.94,
+          "end": 42.3,
+          "probability": 0.25647780299186707
+        },
+        {
+          "word": " oke",
+          "start": 42.38,
+          "end": 42.6,
+          "probability": 0.12810038030147552
+        },
+        {
+          "word": " oke",
+          "start": 42.6,
+          "end": 42.94,
+          "probability": 0.58883136510849
+        },
+        {
+          "word": " oke.",
+          "start": 42.94,
+          "end": 44.1,
+          "probability": 0.7286799550056458
+        }
+      ]
+    },
+    {
+      "start": 44.18,
+      "end": 46.1,
+      "speaker": "AGENT",
+      "text": " Oke, silahkan lanjut Pak, terima kasih.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 44.18,
+          "end": 44.6,
+          "probability": 0.9507827758789062
+        },
+        {
+          "word": " silahkan",
+          "start": 44.8,
+          "end": 45.1,
+          "probability": 0.9651169776916504
+        },
+        {
+          "word": " lanjut",
+          "start": 45.1,
+          "end": 45.34,
+          "probability": 0.9573206901550293
+        },
+        {
+          "word": " Pak,",
+          "start": 45.34,
+          "end": 45.58,
+          "probability": 0.7548034191131592
+        },
+        {
+          "word": " terima",
+          "start": 45.78,
+          "end": 45.86,
+          "probability": 0.9619103074073792
+        },
+        {
+          "word": " kasih.",
+          "start": 45.86,
+          "end": 46.1,
+          "probability": 0.998727023601532
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo Assalamualaikum  Assalamualaikum  Assalamualaikum  Halo  Halo Assalamualaikum  Assalamualaikum  Kita ketemu lagi Pak, ini bisa diberesan jembar apa Pak?  Ini mana?  Masuklah.  Oke, jam 2.  Pinjam Pro ya Pak? 1.7?  Iya, iya.  Iya, saya tidak akan ganggu, tidak akan kasar, tidak akan sebar data.  Hanya kita sering ketemu Pak, kemana aja?  Ya, oke oke oke.  Oke, silahkan lanjut Pak, terima kasih."
+}

@@ -1,0 +1,576 @@
+{
+  "case_id": "6282110155054109-20260407102826",
+  "file_name": "6282110155054109-20260407102826.mp3",
+  "transcript": [
+    {
+      "start": 0.8600000000000003,
+      "end": 3.92,
+      "text": " iya halo dengan main efrat sinaga ya",
+      "words": [
+        {
+          "word": " iya",
+          "start": 0.8600000000000003,
+          "end": 1.54,
+          "probability": 0.5368163771927357
+        },
+        {
+          "word": " halo",
+          "start": 1.54,
+          "end": 1.76,
+          "probability": 0.06634436547756195
+        },
+        {
+          "word": " dengan",
+          "start": 1.76,
+          "end": 2.12,
+          "probability": 0.6394634246826172
+        },
+        {
+          "word": " main",
+          "start": 2.12,
+          "end": 2.56,
+          "probability": 0.24127811193466187
+        },
+        {
+          "word": " efrat",
+          "start": 2.56,
+          "end": 3.08,
+          "probability": 0.569073274731636
+        },
+        {
+          "word": " sinaga",
+          "start": 3.08,
+          "end": 3.58,
+          "probability": 0.6459434926509857
+        },
+        {
+          "word": " ya",
+          "start": 3.58,
+          "end": 3.92,
+          "probability": 0.7770525813102722
+        }
+      ]
+    },
+    {
+      "start": 3.92,
+      "end": 5.3,
+      "text": " iya bu",
+      "words": [
+        {
+          "word": " iya",
+          "start": 3.92,
+          "end": 5.02,
+          "probability": 0.7293025404214859
+        },
+        {
+          "word": " bu",
+          "start": 5.02,
+          "end": 5.3,
+          "probability": 0.473674476146698
+        }
+      ]
+    },
+    {
+      "start": 6.0600000000000005,
+      "end": 12.0,
+      "text": " ini saya ya bu dari extra aplikasi ruang naung untuk tajian anda bisa langsung dibayar kan sekarang hari ini ya bu",
+      "words": [
+        {
+          "word": " ini",
+          "start": 6.0600000000000005,
+          "end": 6.74,
+          "probability": 0.6828320026397705
+        },
+        {
+          "word": " saya",
+          "start": 6.74,
+          "end": 7.04,
+          "probability": 0.7567498087882996
+        },
+        {
+          "word": " ya",
+          "start": 7.04,
+          "end": 7.22,
+          "probability": 0.42608872056007385
+        },
+        {
+          "word": " bu",
+          "start": 7.22,
+          "end": 7.3,
+          "probability": 0.7779064178466797
+        },
+        {
+          "word": " dari",
+          "start": 7.3,
+          "end": 7.52,
+          "probability": 0.9121253490447998
+        },
+        {
+          "word": " extra",
+          "start": 7.52,
+          "end": 7.88,
+          "probability": 0.08529122173786163
+        },
+        {
+          "word": " aplikasi",
+          "start": 7.88,
+          "end": 8.4,
+          "probability": 0.8655231992403666
+        },
+        {
+          "word": " ruang",
+          "start": 8.4,
+          "end": 8.72,
+          "probability": 0.7141119539737701
+        },
+        {
+          "word": " naung",
+          "start": 8.72,
+          "end": 9.0,
+          "probability": 0.42869459092617035
+        },
+        {
+          "word": " untuk",
+          "start": 9.0,
+          "end": 9.14,
+          "probability": 0.3354169726371765
+        },
+        {
+          "word": " tajian",
+          "start": 9.14,
+          "end": 9.48,
+          "probability": 0.549053966999054
+        },
+        {
+          "word": " anda",
+          "start": 9.48,
+          "end": 9.72,
+          "probability": 0.904137909412384
+        },
+        {
+          "word": " bisa",
+          "start": 9.72,
+          "end": 9.94,
+          "probability": 0.9662766456604004
+        },
+        {
+          "word": " langsung",
+          "start": 9.94,
+          "end": 10.26,
+          "probability": 0.9816440641880035
+        },
+        {
+          "word": " dibayar",
+          "start": 10.26,
+          "end": 10.66,
+          "probability": 0.4805554946263631
+        },
+        {
+          "word": " kan",
+          "start": 10.66,
+          "end": 10.78,
+          "probability": 0.4612693786621094
+        },
+        {
+          "word": " sekarang",
+          "start": 10.78,
+          "end": 11.1,
+          "probability": 0.5200914740562439
+        },
+        {
+          "word": " hari",
+          "start": 11.1,
+          "end": 11.38,
+          "probability": 0.942859411239624
+        },
+        {
+          "word": " ini",
+          "start": 11.38,
+          "end": 11.56,
+          "probability": 0.9465782046318054
+        },
+        {
+          "word": " ya",
+          "start": 11.56,
+          "end": 11.72,
+          "probability": 0.9306929111480713
+        },
+        {
+          "word": " bu",
+          "start": 11.72,
+          "end": 12.06,
+          "probability": 0.9579403400421143
+        }
+      ]
+    },
+    {
+      "start": 12.82,
+      "end": 15.5,
+      "text": " aduh saya sebuah ngobisa bu",
+      "words": [
+        {
+          "word": " aduh",
+          "start": 12.82,
+          "end": 13.5,
+          "probability": 0.4418784976005554
+        },
+        {
+          "word": " saya",
+          "start": 13.5,
+          "end": 14.18,
+          "probability": 0.1847020536661148
+        },
+        {
+          "word": " sebuah",
+          "start": 14.18,
+          "end": 14.52,
+          "probability": 0.4192053625981013
+        },
+        {
+          "word": " ngobisa",
+          "start": 14.52,
+          "end": 15.02,
+          "probability": 0.4507319927215576
+        },
+        {
+          "word": " bu",
+          "start": 15.02,
+          "end": 15.5,
+          "probability": 0.7261691093444824
+        }
+      ]
+    },
+    {
+      "start": 15.5,
+      "end": 21.6,
+      "text": " kok dia meja bu saya ngomong gak bu",
+      "words": [
+        {
+          "word": " kok",
+          "start": 15.5,
+          "end": 15.86,
+          "probability": 0.0049497028812766075
+        },
+        {
+          "word": " dia",
+          "start": 15.86,
+          "end": 19.4,
+          "probability": 0.8544719219207764
+        },
+        {
+          "word": " meja",
+          "start": 19.4,
+          "end": 19.66,
+          "probability": 0.3823428489267826
+        },
+        {
+          "word": " bu",
+          "start": 19.66,
+          "end": 19.9,
+          "probability": 0.9627474546432495
+        },
+        {
+          "word": " saya",
+          "start": 19.9,
+          "end": 20.38,
+          "probability": 0.7026945352554321
+        },
+        {
+          "word": " ngomong",
+          "start": 20.38,
+          "end": 20.7,
+          "probability": 0.8423794507980347
+        },
+        {
+          "word": " gak",
+          "start": 20.7,
+          "end": 20.84,
+          "probability": 0.12981683015823364
+        },
+        {
+          "word": " bu",
+          "start": 20.84,
+          "end": 21.6,
+          "probability": 0.9804099202156067
+        }
+      ]
+    },
+    {
+      "start": 21.6,
+      "end": 23.34,
+      "text": " iya saya lagi sakit bu",
+      "words": [
+        {
+          "word": " iya",
+          "start": 21.6,
+          "end": 22.26,
+          "probability": 0.9316620230674744
+        },
+        {
+          "word": " saya",
+          "start": 22.26,
+          "end": 22.42,
+          "probability": 0.9638948440551758
+        },
+        {
+          "word": " lagi",
+          "start": 22.42,
+          "end": 22.62,
+          "probability": 0.8016760349273682
+        },
+        {
+          "word": " sakit",
+          "start": 22.62,
+          "end": 23.02,
+          "probability": 0.9946456849575043
+        },
+        {
+          "word": " bu",
+          "start": 23.02,
+          "end": 23.34,
+          "probability": 0.8843315243721008
+        }
+      ]
+    },
+    {
+      "start": 24.9,
+      "end": 25.58,
+      "text": " kenapa?",
+      "words": [
+        {
+          "word": " kenapa?",
+          "start": 24.9,
+          "end": 25.58,
+          "probability": 0.8529155850410461
+        }
+      ]
+    },
+    {
+      "start": 26.5,
+      "end": 27.88,
+      "text": " lagi sakit saya",
+      "words": [
+        {
+          "word": " lagi",
+          "start": 26.5,
+          "end": 27.18,
+          "probability": 0.9603001475334167
+        },
+        {
+          "word": " sakit",
+          "start": 27.18,
+          "end": 27.64,
+          "probability": 0.9977226257324219
+        },
+        {
+          "word": " saya",
+          "start": 27.64,
+          "end": 27.88,
+          "probability": 0.4667009115219116
+        }
+      ]
+    },
+    {
+      "start": 29.8,
+      "end": 33.48,
+      "text": " pak suaranya gak jelas saya wai langsung diresten aja ya wai saya ya pak",
+      "words": [
+        {
+          "word": " pak",
+          "start": 29.8,
+          "end": 30.28,
+          "probability": 0.0037588481791317463
+        },
+        {
+          "word": " suaranya",
+          "start": 30.28,
+          "end": 30.68,
+          "probability": 0.8250375191370646
+        },
+        {
+          "word": " gak",
+          "start": 30.68,
+          "end": 30.9,
+          "probability": 0.2894382178783417
+        },
+        {
+          "word": " jelas",
+          "start": 30.9,
+          "end": 31.14,
+          "probability": 0.9283237159252167
+        },
+        {
+          "word": " saya",
+          "start": 31.14,
+          "end": 31.44,
+          "probability": 0.3372337520122528
+        },
+        {
+          "word": " wai",
+          "start": 31.44,
+          "end": 31.68,
+          "probability": 0.09804031252861023
+        },
+        {
+          "word": " langsung",
+          "start": 31.68,
+          "end": 32.0,
+          "probability": 0.842596709728241
+        },
+        {
+          "word": " diresten",
+          "start": 32.0,
+          "end": 32.34,
+          "probability": 0.4452422112226486
+        },
+        {
+          "word": " aja",
+          "start": 32.34,
+          "end": 32.58,
+          "probability": 0.9750024676322937
+        },
+        {
+          "word": " ya",
+          "start": 32.58,
+          "end": 32.76,
+          "probability": 0.4573524296283722
+        },
+        {
+          "word": " wai",
+          "start": 32.76,
+          "end": 32.98,
+          "probability": 0.8379192650318146
+        },
+        {
+          "word": " saya",
+          "start": 32.98,
+          "end": 33.16,
+          "probability": 0.5652432441711426
+        },
+        {
+          "word": " ya",
+          "start": 33.16,
+          "end": 33.4,
+          "probability": 0.2424556463956833
+        },
+        {
+          "word": " pak",
+          "start": 33.4,
+          "end": 33.48,
+          "probability": 0.9294610619544983
+        }
+      ]
+    },
+    {
+      "start": 33.48,
+      "end": 35.879999999999995,
+      "text": " ini saya langsung wai bapak",
+      "words": [
+        {
+          "word": " ini",
+          "start": 33.48,
+          "end": 33.76,
+          "probability": 0.7904605269432068
+        },
+        {
+          "word": " saya",
+          "start": 33.76,
+          "end": 33.9,
+          "probability": 0.954345166683197
+        },
+        {
+          "word": " langsung",
+          "start": 33.9,
+          "end": 34.12,
+          "probability": 0.9717965126037598
+        },
+        {
+          "word": " wai",
+          "start": 34.12,
+          "end": 34.28,
+          "probability": 0.7904351949691772
+        },
+        {
+          "word": " bapak",
+          "start": 34.28,
+          "end": 35.879999999999995,
+          "probability": 0.9034385482470194
+        }
+      ]
+    },
+    {
+      "start": 39.540000000000006,
+      "end": 42.4,
+      "text": " kaya wai langsung diresten aja wai saya terima kasih sama tadi",
+      "words": [
+        {
+          "word": " kaya",
+          "start": 39.540000000000006,
+          "end": 40.02,
+          "probability": 0.4432225227355957
+        },
+        {
+          "word": " wai",
+          "start": 40.02,
+          "end": 40.1,
+          "probability": 0.6780212074518204
+        },
+        {
+          "word": " langsung",
+          "start": 40.1,
+          "end": 40.44,
+          "probability": 0.9505260288715363
+        },
+        {
+          "word": " diresten",
+          "start": 40.44,
+          "end": 40.8,
+          "probability": 0.9880162477493286
+        },
+        {
+          "word": " aja",
+          "start": 40.8,
+          "end": 40.96,
+          "probability": 0.977273166179657
+        },
+        {
+          "word": " wai",
+          "start": 40.96,
+          "end": 41.24,
+          "probability": 0.9073421359062195
+        },
+        {
+          "word": " saya",
+          "start": 41.24,
+          "end": 41.32,
+          "probability": 0.9382467269897461
+        },
+        {
+          "word": " terima",
+          "start": 41.32,
+          "end": 41.56,
+          "probability": 0.6546023041009903
+        },
+        {
+          "word": " kasih",
+          "start": 41.56,
+          "end": 41.84,
+          "probability": 0.9949122667312622
+        },
+        {
+          "word": " sama",
+          "start": 41.84,
+          "end": 42.12,
+          "probability": 0.8543863892555237
+        },
+        {
+          "word": " tadi",
+          "start": 42.12,
+          "end": 42.4,
+          "probability": 0.2487058937549591
+        }
+      ]
+    }
+  ],
+  "full_text": " iya halo dengan main efrat sinaga ya  iya bu  ini saya ya bu dari extra aplikasi ruang naung untuk tajian anda bisa langsung dibayar kan sekarang hari ini ya bu  aduh saya sebuah ngobisa bu  kok dia meja bu saya ngomong gak bu  iya saya lagi sakit bu  kenapa?  lagi sakit saya  pak suaranya gak jelas saya wai langsung diresten aja ya wai saya ya pak  ini saya langsung wai bapak  kaya wai langsung diresten aja wai saya terima kasih sama tadi"
+}

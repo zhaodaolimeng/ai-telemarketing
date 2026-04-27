@@ -1,0 +1,319 @@
+{
+  "case_id": "628785292941208-20260412063427",
+  "file_name": "628785292941208-20260412063427.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 6.92,
+      "speaker": "CUSTOMER",
+      "text": " Ini adalah layanan antispalm XL SMART 8, pekan 7 untuk meneruskan tanggilan Anda ke nomor 7an.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 0.0,
+          "end": 0.08,
+          "probability": 0.4907623529434204
+        },
+        {
+          "word": " adalah",
+          "start": 0.08,
+          "end": 0.5,
+          "probability": 0.993919849395752
+        },
+        {
+          "word": " layanan",
+          "start": 0.5,
+          "end": 0.96,
+          "probability": 0.8773466646671295
+        },
+        {
+          "word": " antispalm",
+          "start": 0.96,
+          "end": 1.62,
+          "probability": 0.7168922275304794
+        },
+        {
+          "word": " XL",
+          "start": 1.62,
+          "end": 1.9,
+          "probability": 0.2647293508052826
+        },
+        {
+          "word": " SMART",
+          "start": 1.9,
+          "end": 2.38,
+          "probability": 0.7057464569807053
+        },
+        {
+          "word": " 8,",
+          "start": 2.38,
+          "end": 2.76,
+          "probability": 0.5920729041099548
+        },
+        {
+          "word": " pekan",
+          "start": 2.98,
+          "end": 3.32,
+          "probability": 0.6073582470417023
+        },
+        {
+          "word": " 7",
+          "start": 3.32,
+          "end": 3.86,
+          "probability": 0.745674729347229
+        },
+        {
+          "word": " untuk",
+          "start": 3.86,
+          "end": 4.58,
+          "probability": 0.6055184602737427
+        },
+        {
+          "word": " meneruskan",
+          "start": 4.58,
+          "end": 5.1,
+          "probability": 0.9468986590703329
+        },
+        {
+          "word": " tanggilan",
+          "start": 5.1,
+          "end": 5.48,
+          "probability": 0.8560770153999329
+        },
+        {
+          "word": " Anda",
+          "start": 5.48,
+          "end": 5.88,
+          "probability": 0.5550340414047241
+        },
+        {
+          "word": " ke",
+          "start": 5.88,
+          "end": 6.12,
+          "probability": 0.9830825328826904
+        },
+        {
+          "word": " nomor",
+          "start": 6.12,
+          "end": 6.38,
+          "probability": 0.663841038942337
+        },
+        {
+          "word": " 7an.",
+          "start": 6.38,
+          "end": 6.92,
+          "probability": 0.7288313210010529
+        }
+      ]
+    },
+    {
+      "start": 14.100000000000001,
+      "end": 22.18,
+      "speaker": "CUSTOMER",
+      "text": " Ini adalah layanan antispalm XL SMART 8, pekan 9 untuk meneruskan tanggilan Anda ke nomor 7an.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 14.100000000000001,
+          "end": 14.98,
+          "probability": 0.9491577744483948
+        },
+        {
+          "word": " adalah",
+          "start": 14.98,
+          "end": 15.36,
+          "probability": 0.9985743761062622
+        },
+        {
+          "word": " layanan",
+          "start": 15.36,
+          "end": 15.9,
+          "probability": 0.9966864883899689
+        },
+        {
+          "word": " antispalm",
+          "start": 15.9,
+          "end": 16.56,
+          "probability": 0.9969996511936188
+        },
+        {
+          "word": " XL",
+          "start": 16.56,
+          "end": 16.86,
+          "probability": 0.9893763065338135
+        },
+        {
+          "word": " SMART",
+          "start": 16.86,
+          "end": 17.34,
+          "probability": 0.998419314622879
+        },
+        {
+          "word": " 8,",
+          "start": 17.34,
+          "end": 18.1,
+          "probability": 0.4541952311992645
+        },
+        {
+          "word": " pekan",
+          "start": 18.22,
+          "end": 18.26,
+          "probability": 0.8666940331459045
+        },
+        {
+          "word": " 9",
+          "start": 18.26,
+          "end": 18.96,
+          "probability": 0.9733231663703918
+        },
+        {
+          "word": " untuk",
+          "start": 18.96,
+          "end": 19.8,
+          "probability": 0.9214123487472534
+        },
+        {
+          "word": " meneruskan",
+          "start": 19.8,
+          "end": 20.34,
+          "probability": 0.995885173479716
+        },
+        {
+          "word": " tanggilan",
+          "start": 20.34,
+          "end": 20.72,
+          "probability": 0.9899135629336039
+        },
+        {
+          "word": " Anda",
+          "start": 20.72,
+          "end": 21.1,
+          "probability": 0.9336104989051819
+        },
+        {
+          "word": " ke",
+          "start": 21.1,
+          "end": 21.36,
+          "probability": 0.9975314140319824
+        },
+        {
+          "word": " nomor",
+          "start": 21.36,
+          "end": 21.62,
+          "probability": 0.9972570538520813
+        },
+        {
+          "word": " 7an.",
+          "start": 21.62,
+          "end": 22.18,
+          "probability": 0.9948102235794067
+        }
+      ]
+    },
+    {
+      "start": 30.0,
+      "end": 37.1,
+      "speaker": "CUSTOMER",
+      "text": " Ini adalah layanan antispalm XL SMART 8, pekan 0 untuk meneruskan tanggilan Anda ke nomor 7an.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 30.0,
+          "end": 30.08,
+          "probability": 0.07159189879894257
+        },
+        {
+          "word": " adalah",
+          "start": 30.08,
+          "end": 30.48,
+          "probability": 0.9817298650741577
+        },
+        {
+          "word": " layanan",
+          "start": 30.48,
+          "end": 30.96,
+          "probability": 0.952944278717041
+        },
+        {
+          "word": " antispalm",
+          "start": 30.96,
+          "end": 31.6,
+          "probability": 0.6239244341850281
+        },
+        {
+          "word": " XL",
+          "start": 31.6,
+          "end": 31.88,
+          "probability": 0.19702643156051636
+        },
+        {
+          "word": " SMART",
+          "start": 31.88,
+          "end": 32.4,
+          "probability": 0.4765438484027982
+        },
+        {
+          "word": " 8,",
+          "start": 32.4,
+          "end": 32.72,
+          "probability": 0.00016352567763533443
+        },
+        {
+          "word": " pekan",
+          "start": 32.98,
+          "end": 33.3,
+          "probability": 0.46267069317400455
+        },
+        {
+          "word": " 0",
+          "start": 33.3,
+          "end": 33.96,
+          "probability": 0.509323000907898
+        },
+        {
+          "word": " untuk",
+          "start": 33.96,
+          "end": 34.72,
+          "probability": 0.488991379737854
+        },
+        {
+          "word": " meneruskan",
+          "start": 34.72,
+          "end": 35.24,
+          "probability": 0.7922756572564443
+        },
+        {
+          "word": " tanggilan",
+          "start": 35.24,
+          "end": 35.62,
+          "probability": 0.6341084142525991
+        },
+        {
+          "word": " Anda",
+          "start": 35.62,
+          "end": 36.0,
+          "probability": 0.6921272873878479
+        },
+        {
+          "word": " ke",
+          "start": 36.0,
+          "end": 36.24,
+          "probability": 0.9809219241142273
+        },
+        {
+          "word": " nomor",
+          "start": 36.24,
+          "end": 36.54,
+          "probability": 0.6678590476512909
+        },
+        {
+          "word": " 7an.",
+          "start": 36.54,
+          "end": 37.1,
+          "probability": 0.41279104351997375
+        }
+      ]
+    }
+  ],
+  "full_text": " Ini adalah layanan antispalm XL SMART 8, pekan 7 untuk meneruskan tanggilan Anda ke nomor 7an.  Ini adalah layanan antispalm XL SMART 8, pekan 9 untuk meneruskan tanggilan Anda ke nomor 7an.  Ini adalah layanan antispalm XL SMART 8, pekan 0 untuk meneruskan tanggilan Anda ke nomor 7an."
+}

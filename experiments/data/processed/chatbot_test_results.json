@@ -1,0 +1,790 @@
+[
+  {
+    "chat_group": "H2",
+    "customer_persona": "cooperative",
+    "success": true,
+    "commit_time": "jam 5",
+    "conversation": [
+      {
+        "role": "AGENT",
+        "text": "Halo."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Iya?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Iya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Untuk pinjaman ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oh, ingatnya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Jam 5 ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Baik, saya tunggu jam 5."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oke."
+      },
+      {
+        "role": "AGENT",
+        "text": "Iya."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oke."
+      },
+      {
+        "role": "AGENT",
+        "text": "Saya tunggu jam 5. Terima kasih. Selamat pagi."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Terima kasih."
+      }
+    ]
+  },
+  {
+    "chat_group": "H2",
+    "customer_persona": "busy",
+    "success": false,
+    "commit_time": null,
+    "conversation": [
+      {
+        "role": "AGENT",
+        "text": "Halo?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Ada apa?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Untuk pinjaman ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya lagi sibuk."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Hari ini jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya lagi luar."
+      },
+      {
+        "role": "AGENT",
+        "text": "Hari ini jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya lagi luar."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya lagi luar."
+      },
+      {
+        "role": "AGENT",
+        "text": "Hari ini jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya lagi luar."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      }
+    ]
+  },
+  {
+    "chat_group": "H2",
+    "customer_persona": "negotiating",
+    "success": true,
+    "commit_time": "besok",
+    "conversation": [
+      {
+        "role": "AGENT",
+        "text": "Hello?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Ada apa?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Untuk pinjaman ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oh, bisa nggak diperpanjang?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Kapan bisa bayar Pak/Bu?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Minggu ini bisa?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Minggu ini bisa?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Hari ini jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Besok bisa?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Oke, besok ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oke, besok jam 3."
+      },
+      {
+        "role": "AGENT",
+        "text": "Baik."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Iya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Saya tunggu besok. Terima kasih. Selamat pagi."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Terima kasih."
+      }
+    ]
+  },
+  {
+    "chat_group": "H2",
+    "customer_persona": "silent",
+    "success": true,
+    "commit_time": "jam 5",
+    "conversation": [
+      {
+        "role": "AGENT",
+        "text": "Halo?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": ""
+      },
+      {
+        "role": "AGENT",
+        "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "..."
+      },
+      {
+        "role": "AGENT",
+        "text": "Untuk pinjaman ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oh."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Jam 5."
+      },
+      {
+        "role": "AGENT",
+        "text": "Oke, jam 5 ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Iya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Ya, ya."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Iya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Saya tunggu ya. Terima kasih. Selamat sore."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "..."
+      }
+    ]
+  },
+  {
+    "chat_group": "H1",
+    "customer_persona": "cooperative",
+    "success": true,
+    "commit_time": "jam 2",
+    "conversation": [
+      {
+        "role": "AGENT",
+        "text": "Halo, selamat pagi."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Siang."
+      },
+      {
+        "role": "AGENT",
+        "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Untuk pinjaman yang sudah jatuh tempo."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oh ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Besok jam 2."
+      },
+      {
+        "role": "AGENT",
+        "text": "Ya, ya. Oke, jam 2 ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Iya."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oke."
+      },
+      {
+        "role": "AGENT",
+        "text": "Saya tunggu ya. Terima kasih. Selamat siang."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Terima kasih."
+      }
+    ]
+  },
+  {
+    "chat_group": "H1",
+    "customer_persona": "negotiating",
+    "success": true,
+    "commit_time": "besok",
+    "conversation": [
+      {
+        "role": "AGENT",
+        "text": "Halo?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Halo."
+      },
+      {
+        "role": "AGENT",
+        "text": "Halo, selamat pagi Pak/Bu. Saya dari aplikasi Extra."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Untuk pinjaman yang sudah jatuh tempo."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oh, bisa nggak diperpanjang?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Kapan bisa melakukan pembayaran?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Besok bisa?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Ya, ya. Oke, besok ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oke, besok jam 3."
+      },
+      {
+        "role": "AGENT",
+        "text": "Iya."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Iya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Saya tunggu ya. Terima kasih. Selamat siang."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Terima kasih."
+      }
+    ]
+  },
+  {
+    "chat_group": "H1",
+    "customer_persona": "busy",
+    "success": false,
+    "commit_time": null,
+    "conversation": [
+      {
+        "role": "AGENT",
+        "text": "Halo."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Sebentar ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Halo, selamat siang Pak/Bu. Saya dari aplikasi Extra."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Untuk pinjaman yang sudah jatuh tempo."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti saya hubungi balik."
+      },
+      {
+        "role": "AGENT",
+        "text": "Kapan bisa melakukan pembayaran?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya lagi luar."
+      },
+      {
+        "role": "AGENT",
+        "text": "Besok jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya lagi luar."
+      },
+      {
+        "role": "AGENT",
+        "text": "Besok jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya lagi luar."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Besok jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Besok jam berapa ya?"
+      }
+    ]
+  },
+  {
+    "chat_group": "S0",
+    "customer_persona": "cooperative",
+    "success": true,
+    "commit_time": "jam 2",
+    "conversation": [
+      {
+        "role": "AGENT",
+        "text": "Halo?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Sore."
+      },
+      {
+        "role": "AGENT",
+        "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Ya, betul."
+      },
+      {
+        "role": "AGENT",
+        "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oh, ingatnya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Kapan bisa bayar ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Besok jam 2."
+      },
+      {
+        "role": "AGENT",
+        "text": "Ya, ya, ya. Oke, jam 2 ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Baik."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Iya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Saya tunggu ya. Terima kasih. Selamat sore."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Terima kasih."
+      }
+    ]
+  },
+  {
+    "chat_group": "S0",
+    "customer_persona": "negotiating",
+    "success": true,
+    "commit_time": "besok",
+    "conversation": [
+      {
+        "role": "AGENT",
+        "text": "Halo."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Ada apa?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oh, bisa nggak diperpanjang?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Kapan bisa bayar ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Besok bisa?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Ya, ya, ya. Oke, besok ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Oke, besok jam 3."
+      },
+      {
+        "role": "AGENT",
+        "text": "Baik."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Iya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Saya tunggu ya. Terima kasih."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Terima kasih."
+      }
+    ]
+  },
+  {
+    "chat_group": "S0",
+    "customer_persona": "resistant",
+    "success": false,
+    "commit_time": null,
+    "conversation": [
+      {
+        "role": "AGENT",
+        "text": "Halo?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Halo?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Halo, selamat sore Pak/Bu. Saya dari aplikasi Extra."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Ya, apa?"
+      },
+      {
+        "role": "AGENT",
+        "text": "Kita bicara tentang pinjaman yang sudah agak lama ya Pak/Bu."
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Nanti dulu ya."
+      },
+      {
+        "role": "AGENT",
+        "text": "Bagaimana rencana pembayaran Pak/Bu?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Gak bisa."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya belum punya duit."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya belum punya duit."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya belum punya duit."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa ya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya belum punya duit."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya belum punya duit."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Saya belum punya duit."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Gak bisa."
+      },
+      {
+        "role": "AGENT",
+        "text": "Jam berapa tepatnya?"
+      },
+      {
+        "role": "CUSTOMER",
+        "text": "Gak bisa."
+      },
+      {
+        "role": "AGENT",
+        "text": "Hari apa ya?"
+      }
+    ]
+  }
+]

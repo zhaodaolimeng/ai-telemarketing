@@ -1,0 +1,327 @@
+{
+  "case_id": "62822814775307-20260401083303",
+  "file_name": "62822814775307-20260401083303.mp3",
+  "transcript": [
+    {
+      "start": 2.9000000000000044,
+      "end": 3.78,
+      "speaker": "AGENT",
+      "text": " Hello, Parijak.",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 2.9000000000000044,
+          "end": 3.340000000000002,
+          "probability": 0.027576526626944542
+        },
+        {
+          "word": " Parijak.",
+          "start": 3.340000000000002,
+          "end": 3.78,
+          "probability": 0.4009913702805837
+        }
+      ]
+    },
+    {
+      "start": 4.7600000000000025,
+      "end": 5.66,
+      "speaker": "CUSTOMER",
+      "text": " Iya, alam.",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 4.7600000000000025,
+          "end": 5.2,
+          "probability": 0.4016810953617096
+        },
+        {
+          "word": " alam.",
+          "start": 5.4,
+          "end": 5.66,
+          "probability": 0.6799421310424805
+        }
+      ]
+    },
+    {
+      "start": 6.5,
+      "end": 8.78,
+      "speaker": "AGENT",
+      "text": " Iya, Parijak bisa dibayar jam berapa, Pak?",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 6.5,
+          "end": 6.92,
+          "probability": 0.7166666388511658
+        },
+        {
+          "word": " Parijak",
+          "start": 7.08,
+          "end": 7.32,
+          "probability": 0.738962729771932
+        },
+        {
+          "word": " bisa",
+          "start": 7.32,
+          "end": 7.56,
+          "probability": 0.9331400394439697
+        },
+        {
+          "word": " dibayar",
+          "start": 7.56,
+          "end": 8.12,
+          "probability": 0.764994889497757
+        },
+        {
+          "word": " jam",
+          "start": 8.12,
+          "end": 8.32,
+          "probability": 0.3005203902721405
+        },
+        {
+          "word": " berapa,",
+          "start": 8.32,
+          "end": 8.62,
+          "probability": 0.9832031726837158
+        },
+        {
+          "word": " Pak?",
+          "start": 8.68,
+          "end": 8.78,
+          "probability": 0.5573892593383789
+        }
+      ]
+    },
+    {
+      "start": 10.640000000000002,
+      "end": 11.9,
+      "speaker": "CUSTOMER",
+      "text": " Jam dua nanti, Pak.",
+      "words": [
+        {
+          "word": " Jam",
+          "start": 10.640000000000002,
+          "end": 11.08,
+          "probability": 0.07117167860269547
+        },
+        {
+          "word": " dua",
+          "start": 11.08,
+          "end": 11.4,
+          "probability": 0.4135676324367523
+        },
+        {
+          "word": " nanti,",
+          "start": 11.4,
+          "end": 11.7,
+          "probability": 0.8901521861553192
+        },
+        {
+          "word": " Pak.",
+          "start": 11.84,
+          "end": 11.9,
+          "probability": 0.8544518947601318
+        }
+      ]
+    },
+    {
+      "start": 12.740000000000002,
+      "end": 13.92,
+      "speaker": "AGENT",
+      "text": " Oke, baik Parijak.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 12.740000000000002,
+          "end": 13.18,
+          "probability": 0.8272840976715088
+        },
+        {
+          "word": " baik",
+          "start": 13.3,
+          "end": 13.4,
+          "probability": 0.974471926689148
+        },
+        {
+          "word": " Parijak.",
+          "start": 13.4,
+          "end": 13.92,
+          "probability": 0.8759298125902811
+        }
+      ]
+    },
+    {
+      "start": 14.82,
+      "end": 15.22,
+      "speaker": "CUSTOMER",
+      "text": " Oke.",
+      "words": [
+        {
+          "word": " Oke.",
+          "start": 14.82,
+          "end": 15.22,
+          "probability": 0.9085621237754822
+        }
+      ]
+    },
+    {
+      "start": 15.76,
+      "end": 17.68,
+      "speaker": "CUSTOMER",
+      "text": " Silahkan di lanjut, Pak. Saya tidak akan mengganggu.",
+      "words": [
+        {
+          "word": " Silahkan",
+          "start": 15.76,
+          "end": 16.12,
+          "probability": 0.8929319779078165
+        },
+        {
+          "word": " di",
+          "start": 16.12,
+          "end": 16.2,
+          "probability": 0.44492897391319275
+        },
+        {
+          "word": " lanjut,",
+          "start": 16.2,
+          "end": 16.42,
+          "probability": 0.9739089012145996
+        },
+        {
+          "word": " Pak.",
+          "start": 16.52,
+          "end": 16.62,
+          "probability": 0.9072669148445129
+        },
+        {
+          "word": " Saya",
+          "start": 16.78,
+          "end": 16.88,
+          "probability": 0.635028064250946
+        },
+        {
+          "word": " tidak",
+          "start": 16.88,
+          "end": 17.0,
+          "probability": 0.0903579369187355
+        },
+        {
+          "word": " akan",
+          "start": 17.0,
+          "end": 17.18,
+          "probability": 0.949052631855011
+        },
+        {
+          "word": " mengganggu.",
+          "start": 17.18,
+          "end": 17.68,
+          "probability": 0.7610447506109873
+        }
+      ]
+    },
+    {
+      "start": 17.96,
+      "end": 19.2,
+      "speaker": "CUSTOMER",
+      "text": " Nanti saya hubung lagi di jam belak.",
+      "words": [
+        {
+          "word": " Nanti",
+          "start": 17.96,
+          "end": 18.16,
+          "probability": 0.9363199174404144
+        },
+        {
+          "word": " saya",
+          "start": 18.16,
+          "end": 18.28,
+          "probability": 0.7952254414558411
+        },
+        {
+          "word": " hubung",
+          "start": 18.28,
+          "end": 18.44,
+          "probability": 0.9234617054462433
+        },
+        {
+          "word": " lagi",
+          "start": 18.44,
+          "end": 18.7,
+          "probability": 0.7442429661750793
+        },
+        {
+          "word": " di",
+          "start": 18.7,
+          "end": 18.84,
+          "probability": 0.7753745317459106
+        },
+        {
+          "word": " jam",
+          "start": 18.84,
+          "end": 19.02,
+          "probability": 0.9180836081504822
+        },
+        {
+          "word": " belak.",
+          "start": 19.02,
+          "end": 19.2,
+          "probability": 0.7084858864545822
+        }
+      ]
+    },
+    {
+      "start": 20.38,
+      "end": 20.88,
+      "speaker": "AGENT",
+      "text": " Iya, Pak.",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 20.38,
+          "end": 20.72,
+          "probability": 0.3854147493839264
+        },
+        {
+          "word": " Pak.",
+          "start": 20.82,
+          "end": 20.88,
+          "probability": 0.8942893743515015
+        }
+      ]
+    },
+    {
+      "start": 21.64,
+      "end": 22.6,
+      "speaker": "AGENT",
+      "text": " Oke, terima kasih, Pak.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 21.64,
+          "end": 21.88,
+          "probability": 0.040713731199502945
+        },
+        {
+          "word": " terima",
+          "start": 22.08,
+          "end": 22.24,
+          "probability": 0.9671275913715363
+        },
+        {
+          "word": " kasih,",
+          "start": 22.24,
+          "end": 22.44,
+          "probability": 0.9976885318756104
+        },
+        {
+          "word": " Pak.",
+          "start": 22.56,
+          "end": 22.6,
+          "probability": 0.9858627915382385
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello, Parijak.  Iya, alam.  Iya, Parijak bisa dibayar jam berapa, Pak?  Jam dua nanti, Pak.  Oke, baik Parijak.  Oke.  Silahkan di lanjut, Pak. Saya tidak akan mengganggu.  Nanti saya hubung lagi di jam belak.  Iya, Pak.  Oke, terima kasih, Pak."
+}

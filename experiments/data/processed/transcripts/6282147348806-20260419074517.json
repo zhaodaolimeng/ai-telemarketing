@@ -1,0 +1,415 @@
+{
+  "case_id": "6282147348806-20260419074517",
+  "file_name": "6282147348806-20260419074517.mp3",
+  "transcript": [
+    {
+      "start": 2.4200000000000004,
+      "end": 3.68,
+      "speaker": "AGENT",
+      "text": " Selamat pagi, Ibu.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 2.4200000000000004,
+          "end": 3.1,
+          "probability": 0.5151518564671278
+        },
+        {
+          "word": " pagi,",
+          "start": 3.1,
+          "end": 3.5,
+          "probability": 0.9942962527275085
+        },
+        {
+          "word": " Ibu.",
+          "start": 3.68,
+          "end": 3.68,
+          "probability": 0.5147569328546524
+        }
+      ]
+    },
+    {
+      "start": 9.700000000000001,
+      "end": 14.0,
+      "speaker": "CUSTOMER",
+      "text": " Halo, ini saya dari Excauangrobo.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 9.700000000000001,
+          "end": 10.38,
+          "probability": 0.5128170251846313
+        },
+        {
+          "word": " ini",
+          "start": 11.82,
+          "end": 12.08,
+          "probability": 0.9236047863960266
+        },
+        {
+          "word": " saya",
+          "start": 12.08,
+          "end": 12.28,
+          "probability": 0.9318169951438904
+        },
+        {
+          "word": " dari",
+          "start": 12.28,
+          "end": 12.56,
+          "probability": 0.977848470211029
+        },
+        {
+          "word": " Excauangrobo.",
+          "start": 12.56,
+          "end": 14.0,
+          "probability": 0.45223427191376686
+        }
+      ]
+    },
+    {
+      "start": 15.42,
+      "end": 15.7,
+      "speaker": "AGENT",
+      "text": " Halo.",
+      "words": [
+        {
+          "word": " Halo.",
+          "start": 15.42,
+          "end": 15.7,
+          "probability": 0.05510491505265236
+        }
+      ]
+    },
+    {
+      "start": 15.7,
+      "end": 16.36,
+      "speaker": "CUSTOMER",
+      "text": " Di Jawa Bo.",
+      "words": [
+        {
+          "word": " Di",
+          "start": 15.7,
+          "end": 15.8,
+          "probability": 0.3150549829006195
+        },
+        {
+          "word": " Jawa",
+          "start": 15.8,
+          "end": 16.02,
+          "probability": 0.8330424726009369
+        },
+        {
+          "word": " Bo.",
+          "start": 16.02,
+          "end": 16.36,
+          "probability": 0.25090789794921875
+        }
+      ]
+    },
+    {
+      "start": 17.32,
+      "end": 17.7,
+      "speaker": "AGENT",
+      "text": " Halo.",
+      "words": [
+        {
+          "word": " Halo.",
+          "start": 17.32,
+          "end": 17.7,
+          "probability": 0.6733744144439697
+        }
+      ]
+    },
+    {
+      "start": 19.5,
+      "end": 23.02,
+      "speaker": "CUSTOMER",
+      "text": " Iya, ini pagi Han Ibu 2,200 bisa didaerkan.",
+      "words": [
+        {
+          "word": " Iya,",
+          "start": 19.5,
+          "end": 20.18,
+          "probability": 0.0890430212020874
+        },
+        {
+          "word": " ini",
+          "start": 20.44,
+          "end": 20.56,
+          "probability": 0.9772881865501404
+        },
+        {
+          "word": " pagi",
+          "start": 20.56,
+          "end": 20.88,
+          "probability": 0.8924645185470581
+        },
+        {
+          "word": " Han",
+          "start": 20.88,
+          "end": 21.04,
+          "probability": 0.47692251205444336
+        },
+        {
+          "word": " Ibu",
+          "start": 21.04,
+          "end": 21.26,
+          "probability": 0.6689838916063309
+        },
+        {
+          "word": " 2",
+          "start": 21.26,
+          "end": 21.48,
+          "probability": 0.7758369445800781
+        },
+        {
+          "word": ",200",
+          "start": 21.48,
+          "end": 22.1,
+          "probability": 0.5975380688905716
+        },
+        {
+          "word": " bisa",
+          "start": 22.1,
+          "end": 22.46,
+          "probability": 0.27103284001350403
+        },
+        {
+          "word": " didaerkan.",
+          "start": 22.46,
+          "end": 23.02,
+          "probability": 0.503706019371748
+        }
+      ]
+    },
+    {
+      "start": 23.14,
+      "end": 23.6,
+      "speaker": "AGENT",
+      "text": " Gap berapa?",
+      "words": [
+        {
+          "word": " Gap",
+          "start": 23.14,
+          "end": 23.26,
+          "probability": 0.47793763875961304
+        },
+        {
+          "word": " berapa?",
+          "start": 23.26,
+          "end": 23.6,
+          "probability": 0.9930915236473083
+        }
+      ]
+    },
+    {
+      "start": 25.119999999999997,
+      "end": 26.2,
+      "speaker": "CUSTOMER",
+      "text": " Apa?",
+      "words": [
+        {
+          "word": " Apa?",
+          "start": 25.119999999999997,
+          "end": 26.2,
+          "probability": 0.008321664296090603
+        }
+      ]
+    },
+    {
+      "start": 28.46,
+      "end": 29.3,
+      "speaker": "AGENT",
+      "text": " Gap berapa?",
+      "words": [
+        {
+          "word": " Gap",
+          "start": 28.46,
+          "end": 29.0,
+          "probability": 0.3472444675862789
+        },
+        {
+          "word": " berapa?",
+          "start": 29.0,
+          "end": 29.3,
+          "probability": 0.7296896278858185
+        }
+      ]
+    },
+    {
+      "start": 29.36,
+      "end": 36.24,
+      "speaker": "CUSTOMER",
+      "text": " Ini bagian berapa?",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 29.36,
+          "end": 30.44,
+          "probability": 0.0294791292399168
+        },
+        {
+          "word": " bagian",
+          "start": 30.44,
+          "end": 36.24,
+          "probability": 0.32865814439719543
+        },
+        {
+          "word": " berapa?",
+          "start": 36.24,
+          "end": 36.24,
+          "probability": 0.5073214881122112
+        }
+      ]
+    },
+    {
+      "start": 36.24,
+      "end": 37.88,
+      "speaker": "CUSTOMER",
+      "text": " Gap berapa dibayarkannya?",
+      "words": [
+        {
+          "word": " Gap",
+          "start": 36.24,
+          "end": 36.82,
+          "probability": 0.6664699167013168
+        },
+        {
+          "word": " berapa",
+          "start": 36.82,
+          "end": 37.12,
+          "probability": 0.955769419670105
+        },
+        {
+          "word": " dibayarkannya?",
+          "start": 37.12,
+          "end": 37.88,
+          "probability": 0.6537258997559547
+        }
+      ]
+    },
+    {
+      "start": 41.6,
+      "end": 42.22,
+      "speaker": "CUSTOMER",
+      "text": " Gap 3?",
+      "words": [
+        {
+          "word": " Gap",
+          "start": 41.480000000000004,
+          "end": 42.02,
+          "probability": 0.7344338446855545
+        },
+        {
+          "word": " 3?",
+          "start": 42.02,
+          "end": 42.22,
+          "probability": 0.04440539330244064
+        }
+      ]
+    },
+    {
+      "start": 42.46,
+      "end": 44.62,
+      "speaker": "CUSTOMER",
+      "text": " Gap 3?",
+      "words": [
+        {
+          "word": " Gap",
+          "start": 42.46,
+          "end": 43.54,
+          "probability": 0.6409828066825867
+        },
+        {
+          "word": " 3?",
+          "start": 43.54,
+          "end": 44.62,
+          "probability": 0.7784788608551025
+        }
+      ]
+    },
+    {
+      "start": 44.62,
+      "end": 45.22,
+      "speaker": "CUSTOMER",
+      "text": " Oke, nggak tau berapa.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 44.62,
+          "end": 44.62,
+          "probability": 0.0390949510037899
+        },
+        {
+          "word": " nggak",
+          "start": 44.62,
+          "end": 44.62,
+          "probability": 0.0031159815844148397
+        },
+        {
+          "word": " tau",
+          "start": 44.62,
+          "end": 44.9,
+          "probability": 0.006896105129271746
+        },
+        {
+          "word": " berapa.",
+          "start": 44.9,
+          "end": 45.22,
+          "probability": 0.3388753393664956
+        }
+      ]
+    },
+    {
+      "start": 49.6,
+      "end": 51.96,
+      "speaker": "AGENT",
+      "text": " Gap 3 soalnya harus dibayarkannya saya tukung.",
+      "words": [
+        {
+          "word": " Gap",
+          "start": 49.2,
+          "end": 49.74,
+          "probability": 0.7406467199325562
+        },
+        {
+          "word": " 3",
+          "start": 49.74,
+          "end": 49.96,
+          "probability": 0.9164518117904663
+        },
+        {
+          "word": " soalnya",
+          "start": 49.96,
+          "end": 50.28,
+          "probability": 0.21107252314686775
+        },
+        {
+          "word": " harus",
+          "start": 50.28,
+          "end": 50.46,
+          "probability": 0.6965706944465637
+        },
+        {
+          "word": " dibayarkannya",
+          "start": 50.46,
+          "end": 51.22,
+          "probability": 0.7008716091513634
+        },
+        {
+          "word": " saya",
+          "start": 51.22,
+          "end": 51.68,
+          "probability": 0.17240029573440552
+        },
+        {
+          "word": " tukung.",
+          "start": 51.68,
+          "end": 51.96,
+          "probability": 0.6995768348375956
+        }
+      ]
+    }
+  ],
+  "full_text": " Selamat pagi, Ibu.  Halo, ini saya dari Excauangrobo.  Halo.  Di Jawa Bo.  Halo.  Iya, ini pagi Han Ibu 2,200 bisa didaerkan.  Gap berapa?  Apa?  Gap berapa?  Ini bagian berapa?  Gap berapa dibayarkannya?  Gap 3?  Gap 3?  Oke, nggak tau berapa.  Gap 3 soalnya harus dibayarkannya saya tukung."
+}

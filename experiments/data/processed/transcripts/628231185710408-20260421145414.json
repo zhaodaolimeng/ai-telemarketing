@@ -1,0 +1,451 @@
+{
+  "case_id": "628231185710408-20260421145414",
+  "file_name": "628231185710408-20260421145414.mp3",
+  "transcript": [
+    {
+      "start": 2.4999999999999956,
+      "end": 4.66,
+      "speaker": "AGENT",
+      "text": " Halo Selamat Sore",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 2.4999999999999956,
+          "end": 3.3,
+          "probability": 0.0970495417714119
+        },
+        {
+          "word": " Selamat",
+          "start": 3.3,
+          "end": 3.8,
+          "probability": 0.6335258781909943
+        },
+        {
+          "word": " Sore",
+          "start": 3.8,
+          "end": 4.66,
+          "probability": 0.5446508377790451
+        }
+      ]
+    },
+    {
+      "start": 7.039999999999996,
+      "end": 9.74,
+      "speaker": "CUSTOMER",
+      "text": " Selamat Sore kuncoboha hono",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 7.039999999999996,
+          "end": 7.84,
+          "probability": 0.820609986782074
+        },
+        {
+          "word": " Sore",
+          "start": 7.84,
+          "end": 8.22,
+          "probability": 0.8108191788196564
+        },
+        {
+          "word": " kuncoboha",
+          "start": 8.22,
+          "end": 9.08,
+          "probability": 0.3643206238746643
+        },
+        {
+          "word": " hono",
+          "start": 9.08,
+          "end": 9.74,
+          "probability": 0.7454723417758942
+        }
+      ]
+    },
+    {
+      "start": 11.119999999999996,
+      "end": 14.12,
+      "speaker": "AGENT",
+      "text": " Ya halo pak saya dari aplikasi Estra Uang Nau",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 11.119999999999996,
+          "end": 11.92,
+          "probability": 0.14195504784584045
+        },
+        {
+          "word": " halo",
+          "start": 11.92,
+          "end": 12.18,
+          "probability": 0.4233783483505249
+        },
+        {
+          "word": " pak",
+          "start": 12.18,
+          "end": 12.38,
+          "probability": 0.2573196291923523
+        },
+        {
+          "word": " saya",
+          "start": 12.38,
+          "end": 12.56,
+          "probability": 0.3849409520626068
+        },
+        {
+          "word": " dari",
+          "start": 12.56,
+          "end": 12.74,
+          "probability": 0.859313428401947
+        },
+        {
+          "word": " aplikasi",
+          "start": 12.74,
+          "end": 13.28,
+          "probability": 0.9770821928977966
+        },
+        {
+          "word": " Estra",
+          "start": 13.28,
+          "end": 13.68,
+          "probability": 0.2247416339814663
+        },
+        {
+          "word": " Uang",
+          "start": 13.68,
+          "end": 13.98,
+          "probability": 0.42731037735939026
+        },
+        {
+          "word": " Nau",
+          "start": 13.98,
+          "end": 14.12,
+          "probability": 0.41509465873241425
+        }
+      ]
+    },
+    {
+      "start": 14.12,
+      "end": 15.44,
+      "speaker": "CUSTOMER",
+      "text": " Tagi ini jam berapa dibayarkan?",
+      "words": [
+        {
+          "word": " Tagi",
+          "start": 14.12,
+          "end": 14.36,
+          "probability": 0.3486669361591339
+        },
+        {
+          "word": " ini",
+          "start": 14.36,
+          "end": 14.6,
+          "probability": 0.43550077080726624
+        },
+        {
+          "word": " jam",
+          "start": 14.6,
+          "end": 14.76,
+          "probability": 0.9017932415008545
+        },
+        {
+          "word": " berapa",
+          "start": 14.76,
+          "end": 14.98,
+          "probability": 0.6061871722340584
+        },
+        {
+          "word": " dibayarkan?",
+          "start": 14.98,
+          "end": 15.44,
+          "probability": 0.8254244724909464
+        }
+      ]
+    },
+    {
+      "start": 17.44,
+      "end": 20.88,
+      "speaker": "CUSTOMER",
+      "text": " Belum tau, belum pulang papanya",
+      "words": [
+        {
+          "word": " Belum",
+          "start": 17.44,
+          "end": 18.24,
+          "probability": 0.9084480404853821
+        },
+        {
+          "word": " tau,",
+          "start": 18.24,
+          "end": 18.54,
+          "probability": 0.7609147429466248
+        },
+        {
+          "word": " belum",
+          "start": 19.08,
+          "end": 19.44,
+          "probability": 0.07832591980695724
+        },
+        {
+          "word": " pulang",
+          "start": 19.44,
+          "end": 20.36,
+          "probability": 0.8499574661254883
+        },
+        {
+          "word": " papanya",
+          "start": 20.36,
+          "end": 20.88,
+          "probability": 0.709525465965271
+        }
+      ]
+    },
+    {
+      "start": 22.879999999999995,
+      "end": 24.42,
+      "speaker": "AGENT",
+      "text": " Pulang jam berapa ibu?",
+      "words": [
+        {
+          "word": " Pulang",
+          "start": 22.879999999999995,
+          "end": 23.68,
+          "probability": 0.6375755667686462
+        },
+        {
+          "word": " jam",
+          "start": 23.68,
+          "end": 23.82,
+          "probability": 0.9575024247169495
+        },
+        {
+          "word": " berapa",
+          "start": 23.82,
+          "end": 24.1,
+          "probability": 0.9978870451450348
+        },
+        {
+          "word": " ibu?",
+          "start": 24.1,
+          "end": 24.42,
+          "probability": 0.777985543012619
+        }
+      ]
+    },
+    {
+      "start": 26.86,
+      "end": 28.28,
+      "speaker": "AGENT",
+      "text": " Pulang jam berapa?",
+      "words": [
+        {
+          "word": " Pulang",
+          "start": 26.86,
+          "end": 27.66,
+          "probability": 0.7924055457115173
+        },
+        {
+          "word": " jam",
+          "start": 27.66,
+          "end": 27.88,
+          "probability": 0.9573081731796265
+        },
+        {
+          "word": " berapa?",
+          "start": 27.88,
+          "end": 28.28,
+          "probability": 0.7861385643482208
+        }
+      ]
+    },
+    {
+      "start": 28.28,
+      "end": 28.8,
+      "speaker": "CUSTOMER",
+      "text": " Di malam",
+      "words": [
+        {
+          "word": " Di",
+          "start": 28.28,
+          "end": 28.4,
+          "probability": 0.03419991582632065
+        },
+        {
+          "word": " malam",
+          "start": 28.4,
+          "end": 28.8,
+          "probability": 0.9188432097434998
+        }
+      ]
+    },
+    {
+      "start": 31.660000000000004,
+      "end": 34.46,
+      "speaker": "AGENT",
+      "text": " Tolong sampekan ibu, Tagi hanya dibayarkan sekarang",
+      "words": [
+        {
+          "word": " Tolong",
+          "start": 31.660000000000004,
+          "end": 32.34,
+          "probability": 0.5428297817707062
+        },
+        {
+          "word": " sampekan",
+          "start": 32.34,
+          "end": 32.86,
+          "probability": 0.6944057643413544
+        },
+        {
+          "word": " ibu,",
+          "start": 32.86,
+          "end": 33.02,
+          "probability": 0.4853555797599256
+        },
+        {
+          "word": " Tagi",
+          "start": 33.12,
+          "end": 33.26,
+          "probability": 0.12888561561703682
+        },
+        {
+          "word": " hanya",
+          "start": 33.26,
+          "end": 33.44,
+          "probability": 0.2463894635438919
+        },
+        {
+          "word": " dibayarkan",
+          "start": 33.44,
+          "end": 33.88,
+          "probability": 0.6931315660476685
+        },
+        {
+          "word": " sekarang",
+          "start": 33.88,
+          "end": 34.46,
+          "probability": 0.8020130395889282
+        }
+      ]
+    },
+    {
+      "start": 34.46,
+      "end": 37.28,
+      "speaker": "CUSTOMER",
+      "text": " Maksimal malam saya tunggu ya ibu ya jam 7",
+      "words": [
+        {
+          "word": " Maksimal",
+          "start": 34.46,
+          "end": 35.64,
+          "probability": 0.419159522280097
+        },
+        {
+          "word": " malam",
+          "start": 35.64,
+          "end": 35.98,
+          "probability": 0.9642055034637451
+        },
+        {
+          "word": " saya",
+          "start": 35.98,
+          "end": 36.12,
+          "probability": 0.5344005823135376
+        },
+        {
+          "word": " tunggu",
+          "start": 36.12,
+          "end": 36.46,
+          "probability": 0.9176462292671204
+        },
+        {
+          "word": " ya",
+          "start": 36.46,
+          "end": 36.58,
+          "probability": 0.883115828037262
+        },
+        {
+          "word": " ibu",
+          "start": 36.58,
+          "end": 36.7,
+          "probability": 0.639027938246727
+        },
+        {
+          "word": " ya",
+          "start": 36.7,
+          "end": 36.86,
+          "probability": 0.2823275625705719
+        },
+        {
+          "word": " jam",
+          "start": 36.86,
+          "end": 37.04,
+          "probability": 0.5527664422988892
+        },
+        {
+          "word": " 7",
+          "start": 37.04,
+          "end": 37.28,
+          "probability": 0.8057608604431152
+        }
+      ]
+    },
+    {
+      "start": 39.32,
+      "end": 40.0,
+      "speaker": "CUSTOMER",
+      "text": " Iya",
+      "words": [
+        {
+          "word": " Iya",
+          "start": 39.32,
+          "end": 40.0,
+          "probability": 0.12118131667375565
+        }
+      ]
+    },
+    {
+      "start": 41.88,
+      "end": 44.8,
+      "speaker": "CUSTOMER",
+      "text": " Tolong disampaikan terima kasih Selamat Sore",
+      "words": [
+        {
+          "word": " Tolong",
+          "start": 41.88,
+          "end": 42.56,
+          "probability": 0.5142699293792248
+        },
+        {
+          "word": " disampaikan",
+          "start": 42.56,
+          "end": 43.04,
+          "probability": 0.6000343859195709
+        },
+        {
+          "word": " terima",
+          "start": 43.04,
+          "end": 43.3,
+          "probability": 0.8929067552089691
+        },
+        {
+          "word": " kasih",
+          "start": 43.3,
+          "end": 43.74,
+          "probability": 0.9963983297348022
+        },
+        {
+          "word": " Selamat",
+          "start": 43.74,
+          "end": 44.3,
+          "probability": 0.7554329931735992
+        },
+        {
+          "word": " Sore",
+          "start": 44.3,
+          "end": 44.8,
+          "probability": 0.4156797182513401
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo Selamat Sore  Selamat Sore kuncoboha hono  Ya halo pak saya dari aplikasi Estra Uang Nau  Tagi ini jam berapa dibayarkan?  Belum tau, belum pulang papanya  Pulang jam berapa ibu?  Pulang jam berapa?  Di malam  Tolong sampekan ibu, Tagi hanya dibayarkan sekarang  Maksimal malam saya tunggu ya ibu ya jam 7  Iya  Tolong disampaikan terima kasih Selamat Sore"
+}

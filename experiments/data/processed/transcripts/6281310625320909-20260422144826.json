@@ -1,0 +1,477 @@
+{
+  "case_id": "6281310625320909-20260422144826",
+  "file_name": "6281310625320909-20260422144826.mp3",
+  "transcript": [
+    {
+      "start": 1.4200000000000013,
+      "end": 2.3,
+      "text": " halo pak",
+      "words": [
+        {
+          "word": " halo",
+          "start": 1.4200000000000013,
+          "end": 1.98,
+          "probability": 0.205425426363945
+        },
+        {
+          "word": " pak",
+          "start": 1.98,
+          "end": 2.3,
+          "probability": 0.8325071334838867
+        }
+      ]
+    },
+    {
+      "start": 3.500000000000001,
+      "end": 4.44,
+      "text": " ya alo ya",
+      "words": [
+        {
+          "word": " ya",
+          "start": 3.500000000000001,
+          "end": 4.06,
+          "probability": 0.35182100534439087
+        },
+        {
+          "word": " alo",
+          "start": 4.06,
+          "end": 4.24,
+          "probability": 0.12992308661341667
+        },
+        {
+          "word": " ya",
+          "start": 4.24,
+          "end": 4.44,
+          "probability": 0.35674458742141724
+        }
+      ]
+    },
+    {
+      "start": 4.44,
+      "end": 6.36,
+      "text": " ya ini ekstra uang dulunya",
+      "words": [
+        {
+          "word": " ya",
+          "start": 4.44,
+          "end": 5.28,
+          "probability": 0.18202315270900726
+        },
+        {
+          "word": " ini",
+          "start": 5.28,
+          "end": 5.54,
+          "probability": 0.7294253706932068
+        },
+        {
+          "word": " ekstra",
+          "start": 5.54,
+          "end": 5.84,
+          "probability": 0.9548617005348206
+        },
+        {
+          "word": " uang",
+          "start": 5.84,
+          "end": 6.1,
+          "probability": 0.9568685591220856
+        },
+        {
+          "word": " dulunya",
+          "start": 6.1,
+          "end": 6.36,
+          "probability": 0.5260475128889084
+        }
+      ]
+    },
+    {
+      "start": 6.36,
+      "end": 7.8,
+      "text": " kenapa belum dibayarkan juga",
+      "words": [
+        {
+          "word": " kenapa",
+          "start": 6.36,
+          "end": 6.66,
+          "probability": 0.9474560618400574
+        },
+        {
+          "word": " belum",
+          "start": 6.66,
+          "end": 6.92,
+          "probability": 0.8927352428436279
+        },
+        {
+          "word": " dibayarkan",
+          "start": 6.92,
+          "end": 7.38,
+          "probability": 0.8361927469571432
+        },
+        {
+          "word": " juga",
+          "start": 7.38,
+          "end": 7.8,
+          "probability": 0.9620134234428406
+        }
+      ]
+    },
+    {
+      "start": 7.8,
+      "end": 9.64,
+      "text": " itu bantuan bantuan bantuan",
+      "words": [
+        {
+          "word": " itu",
+          "start": 7.8,
+          "end": 8.78,
+          "probability": 0.5261611938476562
+        },
+        {
+          "word": " bantuan",
+          "start": 8.78,
+          "end": 9.04,
+          "probability": 0.283191646138827
+        },
+        {
+          "word": " bantuan",
+          "start": 9.04,
+          "end": 9.34,
+          "probability": 0.8252753714720408
+        },
+        {
+          "word": " bantuan",
+          "start": 9.34,
+          "end": 9.64,
+          "probability": 0.8672087987263998
+        }
+      ]
+    },
+    {
+      "start": 9.64,
+      "end": 10.74,
+      "text": " bantuan ini lagi kerja mah ya",
+      "words": [
+        {
+          "word": " bantuan",
+          "start": 9.64,
+          "end": 9.78,
+          "probability": 0.7391501665115356
+        },
+        {
+          "word": " ini",
+          "start": 9.78,
+          "end": 9.96,
+          "probability": 0.04497893527150154
+        },
+        {
+          "word": " lagi",
+          "start": 9.96,
+          "end": 10.08,
+          "probability": 0.30130869150161743
+        },
+        {
+          "word": " kerja",
+          "start": 10.08,
+          "end": 10.36,
+          "probability": 0.8781494200229645
+        },
+        {
+          "word": " mah",
+          "start": 10.36,
+          "end": 10.54,
+          "probability": 0.17153091728687286
+        },
+        {
+          "word": " ya",
+          "start": 10.54,
+          "end": 10.74,
+          "probability": 0.887671947479248
+        }
+      ]
+    },
+    {
+      "start": 10.74,
+      "end": 12.0,
+      "text": " aku bayar lah",
+      "words": [
+        {
+          "word": " aku",
+          "start": 10.74,
+          "end": 11.16,
+          "probability": 0.04441392421722412
+        },
+        {
+          "word": " bayar",
+          "start": 11.16,
+          "end": 11.72,
+          "probability": 0.6558697819709778
+        },
+        {
+          "word": " lah",
+          "start": 11.72,
+          "end": 12.0,
+          "probability": 0.6226553916931152
+        }
+      ]
+    },
+    {
+      "start": 12.940000000000003,
+      "end": 14.88,
+      "text": " bapak bantuan jangan dimatiin",
+      "words": [
+        {
+          "word": " bapak",
+          "start": 12.940000000000003,
+          "end": 13.500000000000002,
+          "probability": 0.6172734450859328
+        },
+        {
+          "word": " bantuan",
+          "start": 13.500000000000002,
+          "end": 14.06,
+          "probability": 0.768587072690328
+        },
+        {
+          "word": " jangan",
+          "start": 14.06,
+          "end": 14.32,
+          "probability": 0.8202608823776245
+        },
+        {
+          "word": " dimatiin",
+          "start": 14.32,
+          "end": 14.88,
+          "probability": 0.8193169832229614
+        }
+      ]
+    },
+    {
+      "start": 14.88,
+      "end": 16.48,
+      "text": " bapak janjinya jam 12 loh",
+      "words": [
+        {
+          "word": " bapak",
+          "start": 14.88,
+          "end": 15.16,
+          "probability": 0.9728343288103739
+        },
+        {
+          "word": " janjinya",
+          "start": 15.16,
+          "end": 15.52,
+          "probability": 0.8026437958081564
+        },
+        {
+          "word": " jam",
+          "start": 15.52,
+          "end": 15.72,
+          "probability": 0.9404051899909973
+        },
+        {
+          "word": " 12",
+          "start": 15.72,
+          "end": 16.06,
+          "probability": 0.9285988211631775
+        },
+        {
+          "word": " loh",
+          "start": 16.06,
+          "end": 16.48,
+          "probability": 0.6879266500473022
+        }
+      ]
+    },
+    {
+      "start": 16.48,
+      "end": 18.82,
+      "text": " iya ini ini saya lagi kerja",
+      "words": [
+        {
+          "word": " iya",
+          "start": 16.48,
+          "end": 17.4,
+          "probability": 0.866699606180191
+        },
+        {
+          "word": " ini",
+          "start": 17.4,
+          "end": 17.82,
+          "probability": 0.4977605938911438
+        },
+        {
+          "word": " ini",
+          "start": 17.82,
+          "end": 18.16,
+          "probability": 0.13109266757965088
+        },
+        {
+          "word": " saya",
+          "start": 18.16,
+          "end": 18.26,
+          "probability": 0.3075428903102875
+        },
+        {
+          "word": " lagi",
+          "start": 18.26,
+          "end": 18.38,
+          "probability": 0.9496855139732361
+        },
+        {
+          "word": " kerja",
+          "start": 18.38,
+          "end": 18.82,
+          "probability": 0.9846459329128265
+        }
+      ]
+    },
+    {
+      "start": 18.82,
+      "end": 20.74,
+      "text": " tadi kan janjinya obang kalo udah selesai kerja",
+      "words": [
+        {
+          "word": " tadi",
+          "start": 18.82,
+          "end": 19.08,
+          "probability": 0.47670096158981323
+        },
+        {
+          "word": " kan",
+          "start": 19.08,
+          "end": 19.18,
+          "probability": 0.772797703742981
+        },
+        {
+          "word": " janjinya",
+          "start": 19.18,
+          "end": 19.46,
+          "probability": 0.669313391049703
+        },
+        {
+          "word": " obang",
+          "start": 19.46,
+          "end": 19.68,
+          "probability": 0.35318367183208466
+        },
+        {
+          "word": " kalo",
+          "start": 19.68,
+          "end": 19.88,
+          "probability": 0.26783156394958496
+        },
+        {
+          "word": " udah",
+          "start": 19.88,
+          "end": 20.02,
+          "probability": 0.12388806790113449
+        },
+        {
+          "word": " selesai",
+          "start": 20.02,
+          "end": 20.24,
+          "probability": 0.6901190280914307
+        },
+        {
+          "word": " kerja",
+          "start": 20.24,
+          "end": 20.74,
+          "probability": 0.995524138212204
+        }
+      ]
+    },
+    {
+      "start": 20.74,
+      "end": 21.82,
+      "text": " ah sayang",
+      "words": [
+        {
+          "word": " ah",
+          "start": 20.74,
+          "end": 21.42,
+          "probability": 0.16784408688545227
+        },
+        {
+          "word": " sayang",
+          "start": 21.42,
+          "end": 21.82,
+          "probability": 0.7136765122413635
+        }
+      ]
+    },
+    {
+      "start": 21.82,
+      "end": 23.1,
+      "text": " kamu kena mau tidur hari lo",
+      "words": [
+        {
+          "word": " kamu",
+          "start": 21.82,
+          "end": 22.04,
+          "probability": 0.10939308255910873
+        },
+        {
+          "word": " kena",
+          "start": 22.04,
+          "end": 22.18,
+          "probability": 0.20853132009506226
+        },
+        {
+          "word": " mau",
+          "start": 22.18,
+          "end": 22.34,
+          "probability": 0.620829164981842
+        },
+        {
+          "word": " tidur",
+          "start": 22.34,
+          "end": 22.52,
+          "probability": 0.5503541827201843
+        },
+        {
+          "word": " hari",
+          "start": 22.52,
+          "end": 22.84,
+          "probability": 0.34730973839759827
+        },
+        {
+          "word": " lo",
+          "start": 22.84,
+          "end": 23.1,
+          "probability": 0.17933118343353271
+        }
+      ]
+    },
+    {
+      "start": 25.34,
+      "end": 26.72,
+      "text": " sayang gak mau tau",
+      "words": [
+        {
+          "word": " sayang",
+          "start": 25.34,
+          "end": 25.9,
+          "probability": 0.599358320236206
+        },
+        {
+          "word": " gak",
+          "start": 25.9,
+          "end": 26.08,
+          "probability": 0.35112470388412476
+        },
+        {
+          "word": " mau",
+          "start": 26.08,
+          "end": 26.28,
+          "probability": 0.996380627155304
+        },
+        {
+          "word": " tau",
+          "start": 26.28,
+          "end": 26.72,
+          "probability": 0.7892149686813354
+        }
+      ]
+    }
+  ],
+  "full_text": " halo pak  ya alo ya  ya ini ekstra uang dulunya  kenapa belum dibayarkan juga  itu bantuan bantuan bantuan  bantuan ini lagi kerja mah ya  aku bayar lah  bapak bantuan jangan dimatiin  bapak janjinya jam 12 loh  iya ini ini saya lagi kerja  tadi kan janjinya obang kalo udah selesai kerja  ah sayang  kamu kena mau tidur hari lo  sayang gak mau tau"
+}

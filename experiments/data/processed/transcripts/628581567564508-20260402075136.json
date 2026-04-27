@@ -1,0 +1,195 @@
+{
+  "case_id": "628581567564508-20260402075136",
+  "file_name": "628581567564508-20260402075136.mp3",
+  "transcript": [
+    {
+      "start": 4.419999999999998,
+      "end": 5.0,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 4.419999999999998,
+          "end": 5.009999999999999,
+          "probability": 0.3532833456993103
+        }
+      ]
+    },
+    {
+      "start": 8.92,
+      "end": 10.1,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 8.92,
+          "end": 10.1,
+          "probability": 0.7704961895942688
+        }
+      ]
+    },
+    {
+      "start": 10.28,
+      "end": 13.46,
+      "speaker": "AGENT",
+      "text": " Halo sop, pagi dengan Ibu Intan Rahm Rahimahawar.",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 10.28,
+          "end": 10.28,
+          "probability": 0.6464684009552002
+        },
+        {
+          "word": " sop,",
+          "start": 10.28,
+          "end": 10.46,
+          "probability": 0.2252641787235916
+        },
+        {
+          "word": " pagi",
+          "start": 10.56,
+          "end": 10.64,
+          "probability": 0.9894727468490601
+        },
+        {
+          "word": " dengan",
+          "start": 10.64,
+          "end": 10.8,
+          "probability": 0.9798679947853088
+        },
+        {
+          "word": " Ibu",
+          "start": 10.8,
+          "end": 11.3,
+          "probability": 0.674463078379631
+        },
+        {
+          "word": " Intan",
+          "start": 11.3,
+          "end": 11.84,
+          "probability": 0.8713943064212799
+        },
+        {
+          "word": " Rahm",
+          "start": 11.84,
+          "end": 12.8,
+          "probability": 0.510720431804657
+        },
+        {
+          "word": " Rahimahawar.",
+          "start": 12.8,
+          "end": 13.46,
+          "probability": 0.48766554445028304
+        }
+      ]
+    },
+    {
+      "start": 17.0,
+      "end": 17.5,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 16.91,
+          "end": 17.5,
+          "probability": 0.5484209060668945
+        }
+      ]
+    },
+    {
+      "start": 21.0,
+      "end": 21.06,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 20.47,
+          "end": 21.06,
+          "probability": 0.7895464301109314
+        }
+      ]
+    },
+    {
+      "start": 21.86,
+      "end": 22.22,
+      "speaker": "CUSTOMER",
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 21.86,
+          "end": 22.22,
+          "probability": 0.07661182433366776
+        }
+      ]
+    },
+    {
+      "start": 22.82,
+      "end": 23.26,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 22.82,
+          "end": 23.26,
+          "probability": 0.8557950854301453
+        }
+      ]
+    },
+    {
+      "start": 24.12,
+      "end": 24.62,
+      "speaker": "CUSTOMER",
+      "text": " Ya, halo.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 24.12,
+          "end": 24.36,
+          "probability": 0.8085513114929199
+        },
+        {
+          "word": " halo.",
+          "start": 24.46,
+          "end": 24.62,
+          "probability": 0.661730945110321
+        }
+      ]
+    },
+    {
+      "start": 25.6,
+      "end": 26.32,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 25.6,
+          "end": 26.32,
+          "probability": 0.9267667531967163
+        }
+      ]
+    },
+    {
+      "start": 26.32,
+      "end": 26.42,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 26.32,
+          "end": 26.42,
+          "probability": 6.014781320118345e-05
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo?  Halo?  Halo sop, pagi dengan Ibu Intan Rahm Rahimahawar.  Halo?  Halo?  Ya.  Halo?  Ya, halo.  Halo?  Halo?"
+}

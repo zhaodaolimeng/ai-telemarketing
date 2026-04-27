@@ -1,0 +1,713 @@
+{
+  "case_id": "6282111497456709-20260424081923",
+  "file_name": "6282111497456709-20260424081923.mp3",
+  "transcript": [
+    {
+      "start": 2.000000000000001,
+      "end": 6.42,
+      "speaker": "AGENT",
+      "text": " Halo, Ibu Sifi. Ya, halo.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 2.000000000000001,
+          "end": 2.62,
+          "probability": 0.11545247584581375
+        },
+        {
+          "word": " Ibu",
+          "start": 3.28,
+          "end": 3.66,
+          "probability": 0.7256486415863037
+        },
+        {
+          "word": " Sifi.",
+          "start": 3.66,
+          "end": 4.16,
+          "probability": 0.32482416927814484
+        },
+        {
+          "word": " Ya,",
+          "start": 5.82,
+          "end": 6.14,
+          "probability": 0.650003969669342
+        },
+        {
+          "word": " halo.",
+          "start": 6.3,
+          "end": 6.42,
+          "probability": 0.5270797610282898
+        }
+      ]
+    },
+    {
+      "start": 7.300000000000001,
+      "end": 11.94,
+      "speaker": "AGENT",
+      "text": " Ya, Ibu, saya dengan negik dari aplikasi ekstra.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 7.300000000000001,
+          "end": 7.92,
+          "probability": 0.2597503960132599
+        },
+        {
+          "word": " Ibu,",
+          "start": 8.56,
+          "end": 8.74,
+          "probability": 0.6931417435407639
+        },
+        {
+          "word": " saya",
+          "start": 8.86,
+          "end": 9.06,
+          "probability": 0.8919121026992798
+        },
+        {
+          "word": " dengan",
+          "start": 9.06,
+          "end": 9.84,
+          "probability": 0.8878135085105896
+        },
+        {
+          "word": " negik",
+          "start": 9.84,
+          "end": 10.34,
+          "probability": 0.19697333499789238
+        },
+        {
+          "word": " dari",
+          "start": 10.34,
+          "end": 10.66,
+          "probability": 0.9225025177001953
+        },
+        {
+          "word": " aplikasi",
+          "start": 10.66,
+          "end": 11.32,
+          "probability": 0.9766025940577189
+        },
+        {
+          "word": " ekstra.",
+          "start": 11.32,
+          "end": 11.94,
+          "probability": 0.91522616147995
+        }
+      ]
+    },
+    {
+      "start": 12.44,
+      "end": 17.24,
+      "speaker": "AGENT",
+      "text": " Tagihannya hari ini dibayarkan ya buya di jam 10 atau hari jam 11 siang.",
+      "words": [
+        {
+          "word": " Tagihannya",
+          "start": 12.44,
+          "end": 13.06,
+          "probability": 0.7498250504334768
+        },
+        {
+          "word": " hari",
+          "start": 13.06,
+          "end": 13.32,
+          "probability": 0.9263809323310852
+        },
+        {
+          "word": " ini",
+          "start": 13.32,
+          "end": 13.54,
+          "probability": 0.9954261183738708
+        },
+        {
+          "word": " dibayarkan",
+          "start": 13.54,
+          "end": 14.18,
+          "probability": 0.7902218699455261
+        },
+        {
+          "word": " ya",
+          "start": 14.18,
+          "end": 14.4,
+          "probability": 0.9018757343292236
+        },
+        {
+          "word": " buya",
+          "start": 14.4,
+          "end": 14.68,
+          "probability": 0.23508775979280472
+        },
+        {
+          "word": " di",
+          "start": 14.68,
+          "end": 14.88,
+          "probability": 0.8320634961128235
+        },
+        {
+          "word": " jam",
+          "start": 14.88,
+          "end": 15.06,
+          "probability": 0.917742908000946
+        },
+        {
+          "word": " 10",
+          "start": 15.06,
+          "end": 15.38,
+          "probability": 0.9373357892036438
+        },
+        {
+          "word": " atau",
+          "start": 15.38,
+          "end": 15.7,
+          "probability": 0.819341242313385
+        },
+        {
+          "word": " hari",
+          "start": 15.7,
+          "end": 15.98,
+          "probability": 0.1053936555981636
+        },
+        {
+          "word": " jam",
+          "start": 15.98,
+          "end": 16.18,
+          "probability": 0.9581258893013
+        },
+        {
+          "word": " 11",
+          "start": 16.18,
+          "end": 16.52,
+          "probability": 0.9896432161331177
+        },
+        {
+          "word": " siang.",
+          "start": 16.52,
+          "end": 17.24,
+          "probability": 0.6181375533342361
+        }
+      ]
+    },
+    {
+      "start": 17.82,
+      "end": 18.86,
+      "speaker": "CUSTOMER",
+      "text": " Bisa ya buya?",
+      "words": [
+        {
+          "word": " Bisa",
+          "start": 17.82,
+          "end": 18.44,
+          "probability": 0.920261561870575
+        },
+        {
+          "word": " ya",
+          "start": 18.44,
+          "end": 18.58,
+          "probability": 0.9498634338378906
+        },
+        {
+          "word": " buya?",
+          "start": 18.58,
+          "end": 18.86,
+          "probability": 0.8666996359825134
+        }
+      ]
+    },
+    {
+      "start": 18.88,
+      "end": 22.1,
+      "speaker": "CUSTOMER",
+      "text": " Itu si jaman mana? Itu desain nggak ada menjambis di situ?",
+      "words": [
+        {
+          "word": " Itu",
+          "start": 18.88,
+          "end": 18.88,
+          "probability": 0.14550898969173431
+        },
+        {
+          "word": " si",
+          "start": 18.88,
+          "end": 18.9,
+          "probability": 0.0902014896273613
+        },
+        {
+          "word": " jaman",
+          "start": 18.9,
+          "end": 19.18,
+          "probability": 0.6324397176504135
+        },
+        {
+          "word": " mana?",
+          "start": 19.18,
+          "end": 20.56,
+          "probability": 0.5888100862503052
+        },
+        {
+          "word": " Itu",
+          "start": 20.82,
+          "end": 20.82,
+          "probability": 0.4840249717235565
+        },
+        {
+          "word": " desain",
+          "start": 20.82,
+          "end": 21.16,
+          "probability": 0.5709111839532852
+        },
+        {
+          "word": " nggak",
+          "start": 21.16,
+          "end": 21.32,
+          "probability": 0.2336178869009018
+        },
+        {
+          "word": " ada",
+          "start": 21.32,
+          "end": 21.46,
+          "probability": 0.9916532635688782
+        },
+        {
+          "word": " menjambis",
+          "start": 21.46,
+          "end": 21.76,
+          "probability": 0.7089356109499931
+        },
+        {
+          "word": " di",
+          "start": 21.76,
+          "end": 21.9,
+          "probability": 0.4398522675037384
+        },
+        {
+          "word": " situ?",
+          "start": 21.9,
+          "end": 22.1,
+          "probability": 0.3912934958934784
+        }
+      ]
+    },
+    {
+      "start": 22.54,
+      "end": 25.64,
+      "speaker": "CUSTOMER",
+      "text": " Ya orang ada foto Ibu, isinya foto Ibu.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 22.54,
+          "end": 23.16,
+          "probability": 0.555491030216217
+        },
+        {
+          "word": " orang",
+          "start": 23.16,
+          "end": 23.62,
+          "probability": 0.6981539726257324
+        },
+        {
+          "word": " ada",
+          "start": 23.62,
+          "end": 23.9,
+          "probability": 0.9910199046134949
+        },
+        {
+          "word": " foto",
+          "start": 23.9,
+          "end": 24.14,
+          "probability": 0.8680527210235596
+        },
+        {
+          "word": " Ibu,",
+          "start": 24.14,
+          "end": 24.6,
+          "probability": 0.8451692461967468
+        },
+        {
+          "word": " isinya",
+          "start": 24.72,
+          "end": 24.92,
+          "probability": 0.7950312197208405
+        },
+        {
+          "word": " foto",
+          "start": 24.92,
+          "end": 25.2,
+          "probability": 0.990420401096344
+        },
+        {
+          "word": " Ibu.",
+          "start": 25.2,
+          "end": 25.64,
+          "probability": 0.969603419303894
+        }
+      ]
+    },
+    {
+      "start": 25.64,
+      "end": 29.52,
+      "speaker": "CUSTOMER",
+      "text": " Foto Sifi sambil peyang KTP, ada foto kantor keluarga juga.",
+      "words": [
+        {
+          "word": " Foto",
+          "start": 25.64,
+          "end": 25.98,
+          "probability": 0.4908820213750005
+        },
+        {
+          "word": " Sifi",
+          "start": 25.98,
+          "end": 26.38,
+          "probability": 0.0034376925614196807
+        },
+        {
+          "word": " sambil",
+          "start": 26.38,
+          "end": 26.72,
+          "probability": 0.6961725056171417
+        },
+        {
+          "word": " peyang",
+          "start": 26.72,
+          "end": 27.04,
+          "probability": 0.3645675927400589
+        },
+        {
+          "word": " KTP,",
+          "start": 27.04,
+          "end": 27.58,
+          "probability": 0.7129016369581223
+        },
+        {
+          "word": " ada",
+          "start": 27.9,
+          "end": 28.06,
+          "probability": 0.9510006308555603
+        },
+        {
+          "word": " foto",
+          "start": 28.06,
+          "end": 28.28,
+          "probability": 0.7352219820022583
+        },
+        {
+          "word": " kantor",
+          "start": 28.28,
+          "end": 28.66,
+          "probability": 0.4386640042066574
+        },
+        {
+          "word": " keluarga",
+          "start": 28.66,
+          "end": 29.22,
+          "probability": 0.9968617260456085
+        },
+        {
+          "word": " juga.",
+          "start": 29.22,
+          "end": 29.52,
+          "probability": 0.9841411113739014
+        }
+      ]
+    },
+    {
+      "start": 31.18,
+      "end": 33.4,
+      "speaker": "CUSTOMER",
+      "text": " Ya jangan menghantai ya bu.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 31.18,
+          "end": 31.5,
+          "probability": 0.5525515079498291
+        },
+        {
+          "word": " jangan",
+          "start": 31.5,
+          "end": 31.82,
+          "probability": 0.8789831399917603
+        },
+        {
+          "word": " menghantai",
+          "start": 31.82,
+          "end": 33.04,
+          "probability": 0.5209863670170307
+        },
+        {
+          "word": " ya",
+          "start": 33.04,
+          "end": 33.24,
+          "probability": 0.34755516052246094
+        },
+        {
+          "word": " bu.",
+          "start": 33.24,
+          "end": 33.4,
+          "probability": 0.5826223492622375
+        }
+      ]
+    },
+    {
+      "start": 34.74,
+      "end": 35.7,
+      "speaker": "AGENT",
+      "text": " Buk aja bu.",
+      "words": [
+        {
+          "word": " Buk",
+          "start": 34.74,
+          "end": 35.1,
+          "probability": 0.3536781817674637
+        },
+        {
+          "word": " aja",
+          "start": 35.1,
+          "end": 35.44,
+          "probability": 0.36194175481796265
+        },
+        {
+          "word": " bu.",
+          "start": 35.44,
+          "end": 35.7,
+          "probability": 0.20122456550598145
+        }
+      ]
+    },
+    {
+      "start": 37.38,
+      "end": 40.38,
+      "speaker": "CUSTOMER",
+      "text": " Ya itu ditolak kepinannya, sudah masuk bu.",
+      "words": [
+        {
+          "word": " Ya",
+          "start": 37.38,
+          "end": 38.06,
+          "probability": 0.18531616032123566
+        },
+        {
+          "word": " itu",
+          "start": 38.06,
+          "end": 38.4,
+          "probability": 0.7842248678207397
+        },
+        {
+          "word": " ditolak",
+          "start": 38.4,
+          "end": 38.94,
+          "probability": 0.837925136089325
+        },
+        {
+          "word": " kepinannya,",
+          "start": 38.94,
+          "end": 39.5,
+          "probability": 0.5992133170366287
+        },
+        {
+          "word": " sudah",
+          "start": 39.68,
+          "end": 39.76,
+          "probability": 0.3258378803730011
+        },
+        {
+          "word": " masuk",
+          "start": 39.76,
+          "end": 40.06,
+          "probability": 0.98697829246521
+        },
+        {
+          "word": " bu.",
+          "start": 40.06,
+          "end": 40.38,
+          "probability": 0.9562274813652039
+        }
+      ]
+    },
+    {
+      "start": 40.6,
+      "end": 42.14,
+      "speaker": "CUSTOMER",
+      "text": " Ditolak tapi dananya sudah masuk.",
+      "words": [
+        {
+          "word": " Ditolak",
+          "start": 40.6,
+          "end": 41.04,
+          "probability": 0.9408645431200663
+        },
+        {
+          "word": " tapi",
+          "start": 41.04,
+          "end": 41.3,
+          "probability": 0.909389317035675
+        },
+        {
+          "word": " dananya",
+          "start": 41.3,
+          "end": 41.64,
+          "probability": 0.6216554343700409
+        },
+        {
+          "word": " sudah",
+          "start": 41.64,
+          "end": 41.8,
+          "probability": 0.9384995102882385
+        },
+        {
+          "word": " masuk.",
+          "start": 41.8,
+          "end": 42.14,
+          "probability": 0.9972645044326782
+        }
+      ]
+    },
+    {
+      "start": 42.44,
+      "end": 46.64,
+      "speaker": "CUSTOMER",
+      "text": " Ini sudah masuk ke penadilan jadi harus tetap dibayarkan lewat jam 2.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 42.44,
+          "end": 42.52,
+          "probability": 0.49149149656295776
+        },
+        {
+          "word": " sudah",
+          "start": 42.52,
+          "end": 42.7,
+          "probability": 0.30626848340034485
+        },
+        {
+          "word": " masuk",
+          "start": 42.7,
+          "end": 42.9,
+          "probability": 0.9970417618751526
+        },
+        {
+          "word": " ke",
+          "start": 42.9,
+          "end": 43.08,
+          "probability": 0.9714241623878479
+        },
+        {
+          "word": " penadilan",
+          "start": 43.08,
+          "end": 43.58,
+          "probability": 0.5293663938840231
+        },
+        {
+          "word": " jadi",
+          "start": 43.58,
+          "end": 43.98,
+          "probability": 0.6050636768341064
+        },
+        {
+          "word": " harus",
+          "start": 43.98,
+          "end": 44.24,
+          "probability": 0.9658723473548889
+        },
+        {
+          "word": " tetap",
+          "start": 44.24,
+          "end": 44.6,
+          "probability": 0.8792621195316315
+        },
+        {
+          "word": " dibayarkan",
+          "start": 44.6,
+          "end": 45.14,
+          "probability": 0.9364449580510458
+        },
+        {
+          "word": " lewat",
+          "start": 45.14,
+          "end": 46.24,
+          "probability": 0.589374840259552
+        },
+        {
+          "word": " jam",
+          "start": 46.24,
+          "end": 46.42,
+          "probability": 0.9848299026489258
+        },
+        {
+          "word": " 2.",
+          "start": 46.42,
+          "end": 46.64,
+          "probability": 0.7248162627220154
+        }
+      ]
+    },
+    {
+      "start": 46.72,
+      "end": 48.8,
+      "speaker": "CUSTOMER",
+      "text": " Masalahnya saya tidak menerima dana lebih.",
+      "words": [
+        {
+          "word": " Masalahnya",
+          "start": 46.72,
+          "end": 47.2,
+          "probability": 0.8483076294263204
+        },
+        {
+          "word": " saya",
+          "start": 47.2,
+          "end": 47.34,
+          "probability": 0.7846821546554565
+        },
+        {
+          "word": " tidak",
+          "start": 47.34,
+          "end": 47.58,
+          "probability": 0.9463822245597839
+        },
+        {
+          "word": " menerima",
+          "start": 47.58,
+          "end": 48.04,
+          "probability": 0.2965645541747411
+        },
+        {
+          "word": " dana",
+          "start": 48.04,
+          "end": 48.4,
+          "probability": 0.6348307877779007
+        },
+        {
+          "word": " lebih.",
+          "start": 48.4,
+          "end": 48.8,
+          "probability": 0.5397229194641113
+        }
+      ]
+    },
+    {
+      "start": 50.1,
+      "end": 50.96,
+      "speaker": "CUSTOMER",
+      "text": " Setunggu ya.",
+      "words": [
+        {
+          "word": " Setunggu",
+          "start": 50.1,
+          "end": 50.78,
+          "probability": 0.8516652385393778
+        },
+        {
+          "word": " ya.",
+          "start": 50.78,
+          "end": 50.96,
+          "probability": 0.9464900493621826
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo, Ibu Sifi. Ya, halo.  Ya, Ibu, saya dengan negik dari aplikasi ekstra.  Tagihannya hari ini dibayarkan ya buya di jam 10 atau hari jam 11 siang.  Bisa ya buya?  Itu si jaman mana? Itu desain nggak ada menjambis di situ?  Ya orang ada foto Ibu, isinya foto Ibu.  Foto Sifi sambil peyang KTP, ada foto kantor keluarga juga.  Ya jangan menghantai ya bu.  Buk aja bu.  Ya itu ditolak kepinannya, sudah masuk bu.  Ditolak tapi dananya sudah masuk.  Ini sudah masuk ke penadilan jadi harus tetap dibayarkan lewat jam 2.  Masalahnya saya tidak menerima dana lebih.  Setunggu ya."
+}

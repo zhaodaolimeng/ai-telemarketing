@@ -1,0 +1,228 @@
+{
+  "case_id": "628153151087308-20260402162604",
+  "file_name": "628153151087308-20260402162604.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 3.16,
+      "text": " Thomas Malt, selamat datang di layanan pesan suara.",
+      "words": [
+        {
+          "word": " Thomas",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.5505962371826172
+        },
+        {
+          "word": " Malt,",
+          "start": 0.3,
+          "end": 0.66,
+          "probability": 0.35538792610168457
+        },
+        {
+          "word": " selamat",
+          "start": 0.84,
+          "end": 1.04,
+          "probability": 0.8551422953605652
+        },
+        {
+          "word": " datang",
+          "start": 1.04,
+          "end": 1.5,
+          "probability": 0.9970423579216003
+        },
+        {
+          "word": " di",
+          "start": 1.5,
+          "end": 1.72,
+          "probability": 0.98175448179245
+        },
+        {
+          "word": " layanan",
+          "start": 1.72,
+          "end": 2.08,
+          "probability": 0.947128415107727
+        },
+        {
+          "word": " pesan",
+          "start": 2.08,
+          "end": 2.68,
+          "probability": 0.7707058489322662
+        },
+        {
+          "word": " suara.",
+          "start": 2.68,
+          "end": 3.16,
+          "probability": 0.983282595872879
+        }
+      ]
+    },
+    {
+      "start": 3.32,
+      "end": 5.16,
+      "text": " Welcome to Poy Smell Service.",
+      "words": [
+        {
+          "word": " Welcome",
+          "start": 3.32,
+          "end": 3.72,
+          "probability": 0.7557520866394043
+        },
+        {
+          "word": " to",
+          "start": 3.72,
+          "end": 4.08,
+          "probability": 0.9794278144836426
+        },
+        {
+          "word": " Poy",
+          "start": 4.08,
+          "end": 4.36,
+          "probability": 0.38649262487888336
+        },
+        {
+          "word": " Smell",
+          "start": 4.36,
+          "end": 4.76,
+          "probability": 0.6057488471269608
+        },
+        {
+          "word": " Service.",
+          "start": 4.76,
+          "end": 5.16,
+          "probability": 0.8913707137107849
+        }
+      ]
+    },
+    {
+      "start": 5.5,
+      "end": 8.94,
+      "text": " Silahkan berikan pesan suara setelah mendengar nada berikut.",
+      "words": [
+        {
+          "word": " Silahkan",
+          "start": 5.5,
+          "end": 6.06,
+          "probability": 0.8435402512550354
+        },
+        {
+          "word": " berikan",
+          "start": 6.06,
+          "end": 6.34,
+          "probability": 0.7274538278579712
+        },
+        {
+          "word": " pesan",
+          "start": 6.34,
+          "end": 6.7,
+          "probability": 0.9976268708705902
+        },
+        {
+          "word": " suara",
+          "start": 6.7,
+          "end": 7.1,
+          "probability": 0.9949941039085388
+        },
+        {
+          "word": " setelah",
+          "start": 7.1,
+          "end": 7.74,
+          "probability": 0.9537510275840759
+        },
+        {
+          "word": " mendengar",
+          "start": 7.74,
+          "end": 8.16,
+          "probability": 0.987891415754954
+        },
+        {
+          "word": " nada",
+          "start": 8.16,
+          "end": 8.46,
+          "probability": 0.28841695189476013
+        },
+        {
+          "word": " berikut.",
+          "start": 8.46,
+          "end": 8.94,
+          "probability": 0.9949211180210114
+        }
+      ]
+    },
+    {
+      "start": 9.18,
+      "end": 12.28,
+      "text": " Seterkan tombol apapun untuk menyelesaikan rekaman.",
+      "words": [
+        {
+          "word": " Seterkan",
+          "start": 9.18,
+          "end": 9.5,
+          "probability": 0.44616080572207767
+        },
+        {
+          "word": " tombol",
+          "start": 9.5,
+          "end": 9.8,
+          "probability": 0.7820816934108734
+        },
+        {
+          "word": " apapun",
+          "start": 9.8,
+          "end": 10.46,
+          "probability": 0.8969438076019287
+        },
+        {
+          "word": " untuk",
+          "start": 10.46,
+          "end": 10.9,
+          "probability": 0.911169171333313
+        },
+        {
+          "word": " menyelesaikan",
+          "start": 10.9,
+          "end": 11.66,
+          "probability": 0.9811298698186874
+        },
+        {
+          "word": " rekaman.",
+          "start": 11.66,
+          "end": 12.28,
+          "probability": 0.9320130944252014
+        }
+      ]
+    },
+    {
+      "start": 30.580000000000002,
+      "end": 31.98,
+      "text": " Terima kasih kerana menonton.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 30.580000000000002,
+          "end": 31.98,
+          "probability": 0.4835844188928604
+        },
+        {
+          "word": " kasih",
+          "start": 31.98,
+          "end": 31.98,
+          "probability": 0.8833969235420227
+        },
+        {
+          "word": " kerana",
+          "start": 31.98,
+          "end": 31.98,
+          "probability": 0.5326763242483139
+        },
+        {
+          "word": " menonton.",
+          "start": 31.98,
+          "end": 31.98,
+          "probability": 0.8906720876693726
+        }
+      ]
+    }
+  ],
+  "full_text": " Thomas Malt, selamat datang di layanan pesan suara.  Welcome to Poy Smell Service.  Silahkan berikan pesan suara setelah mendengar nada berikut.  Seterkan tombol apapun untuk menyelesaikan rekaman.  Terima kasih kerana menonton."
+}

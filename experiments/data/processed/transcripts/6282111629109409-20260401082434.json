@@ -1,0 +1,285 @@
+{
+  "case_id": "6282111629109409-20260401082434",
+  "file_name": "6282111629109409-20260401082434.mp3",
+  "transcript": [
+    {
+      "start": 2.8200000000000003,
+      "end": 14.02,
+      "speaker": "CUSTOMER",
+      "text": " Hello. Hello, Selamat pagi. Ya, ini saya dari tempen lagi pinggaman online ekstra",
+      "words": [
+        {
+          "word": " Hello.",
+          "start": 2.8200000000000003,
+          "end": 3.62,
+          "probability": 0.11690522730350494
+        },
+        {
+          "word": " Hello,",
+          "start": 4.32,
+          "end": 4.72,
+          "probability": 0.27177828550338745
+        },
+        {
+          "word": " Selamat",
+          "start": 5.12,
+          "end": 5.42,
+          "probability": 0.8618918061256409
+        },
+        {
+          "word": " pagi.",
+          "start": 5.42,
+          "end": 5.8,
+          "probability": 0.9918713569641113
+        },
+        {
+          "word": " Ya,",
+          "start": 7.1,
+          "end": 7.48,
+          "probability": 0.5233559012413025
+        },
+        {
+          "word": " ini",
+          "start": 8.94,
+          "end": 11.74,
+          "probability": 0.26018673181533813
+        },
+        {
+          "word": " saya",
+          "start": 11.74,
+          "end": 11.98,
+          "probability": 0.9224295020103455
+        },
+        {
+          "word": " dari",
+          "start": 11.98,
+          "end": 12.16,
+          "probability": 0.9789173603057861
+        },
+        {
+          "word": " tempen",
+          "start": 12.16,
+          "end": 12.5,
+          "probability": 0.5808357298374176
+        },
+        {
+          "word": " lagi",
+          "start": 12.5,
+          "end": 12.72,
+          "probability": 0.7253935933113098
+        },
+        {
+          "word": " pinggaman",
+          "start": 12.72,
+          "end": 13.16,
+          "probability": 0.7124685843785604
+        },
+        {
+          "word": " online",
+          "start": 13.16,
+          "end": 13.48,
+          "probability": 0.7669277787208557
+        },
+        {
+          "word": " ekstra",
+          "start": 13.48,
+          "end": 14.02,
+          "probability": 0.5817986354231834
+        }
+      ]
+    },
+    {
+      "start": 14.02,
+      "end": 22.88,
+      "speaker": "CUSTOMER",
+      "text": " Wangnau. Ini tagiannya tolong diberikan sekarang ya. Hello, tagian apa ini?",
+      "words": [
+        {
+          "word": " Wangnau.",
+          "start": 14.02,
+          "end": 14.74,
+          "probability": 0.47889816264311474
+        },
+        {
+          "word": " Ini",
+          "start": 14.8,
+          "end": 14.92,
+          "probability": 0.9476632475852966
+        },
+        {
+          "word": " tagiannya",
+          "start": 14.92,
+          "end": 15.36,
+          "probability": 0.5822064280509949
+        },
+        {
+          "word": " tolong",
+          "start": 15.36,
+          "end": 15.56,
+          "probability": 0.8326027691364288
+        },
+        {
+          "word": " diberikan",
+          "start": 15.56,
+          "end": 16.02,
+          "probability": 0.6529405812422434
+        },
+        {
+          "word": " sekarang",
+          "start": 16.02,
+          "end": 16.36,
+          "probability": 0.08598456531763077
+        },
+        {
+          "word": " ya.",
+          "start": 16.36,
+          "end": 16.58,
+          "probability": 0.8366368412971497
+        },
+        {
+          "word": " Hello,",
+          "start": 20.08,
+          "end": 20.88,
+          "probability": 0.5862075090408325
+        },
+        {
+          "word": " tagian",
+          "start": 21.9,
+          "end": 22.34,
+          "probability": 0.6579271703958511
+        },
+        {
+          "word": " apa",
+          "start": 22.34,
+          "end": 22.58,
+          "probability": 0.9414243698120117
+        },
+        {
+          "word": " ini?",
+          "start": 22.58,
+          "end": 22.88,
+          "probability": 0.9944280385971069
+        }
+      ]
+    },
+    {
+      "start": 23.88,
+      "end": 31.2,
+      "speaker": "AGENT",
+      "text": " Ekstra Wangnau. Berapa itu? Tagiannya 100 juta.",
+      "words": [
+        {
+          "word": " Ekstra",
+          "start": 23.88,
+          "end": 24.82,
+          "probability": 0.4950323407538235
+        },
+        {
+          "word": " Wangnau.",
+          "start": 24.82,
+          "end": 26.76,
+          "probability": 0.23885048925876617
+        },
+        {
+          "word": " Berapa",
+          "start": 27.22,
+          "end": 28.26,
+          "probability": 0.8144619464874268
+        },
+        {
+          "word": " itu?",
+          "start": 28.26,
+          "end": 28.52,
+          "probability": 0.9494655728340149
+        },
+        {
+          "word": " Tagiannya",
+          "start": 29.74,
+          "end": 30.44,
+          "probability": 0.6827300588289896
+        },
+        {
+          "word": " 100",
+          "start": 30.44,
+          "end": 30.74,
+          "probability": 0.31112030148506165
+        },
+        {
+          "word": " juta.",
+          "start": 30.74,
+          "end": 31.2,
+          "probability": 0.9072115123271942
+        }
+      ]
+    },
+    {
+      "start": 34.16,
+      "end": 40.76,
+      "speaker": "CUSTOMER",
+      "text": " Emang siapa yang pinjam? Ini tersnama Charles Mirai yang pinjamnya.",
+      "words": [
+        {
+          "word": " Emang",
+          "start": 34.16,
+          "end": 34.68,
+          "probability": 0.8287696540355682
+        },
+        {
+          "word": " siapa",
+          "start": 34.68,
+          "end": 34.96,
+          "probability": 0.985593318939209
+        },
+        {
+          "word": " yang",
+          "start": 34.96,
+          "end": 35.12,
+          "probability": 0.9797817468643188
+        },
+        {
+          "word": " pinjam?",
+          "start": 35.12,
+          "end": 35.52,
+          "probability": 0.8543016612529755
+        },
+        {
+          "word": " Ini",
+          "start": 37.24,
+          "end": 37.76,
+          "probability": 0.9548944234848022
+        },
+        {
+          "word": " tersnama",
+          "start": 37.76,
+          "end": 38.26,
+          "probability": 0.48967084661126137
+        },
+        {
+          "word": " Charles",
+          "start": 38.26,
+          "end": 38.84,
+          "probability": 0.4253631569445133
+        },
+        {
+          "word": " Mirai",
+          "start": 38.84,
+          "end": 39.52,
+          "probability": 0.5586289688944817
+        },
+        {
+          "word": " yang",
+          "start": 39.52,
+          "end": 40.04,
+          "probability": 0.42776453495025635
+        },
+        {
+          "word": " pinjamnya.",
+          "start": 40.04,
+          "end": 40.76,
+          "probability": 0.986244281133016
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello. Hello, Selamat pagi. Ya, ini saya dari tempen lagi pinggaman online ekstra  Wangnau. Ini tagiannya tolong diberikan sekarang ya. Hello, tagian apa ini?  Ekstra Wangnau. Berapa itu? Tagiannya 100 juta.  Emang siapa yang pinjam? Ini tersnama Charles Mirai yang pinjamnya."
+}

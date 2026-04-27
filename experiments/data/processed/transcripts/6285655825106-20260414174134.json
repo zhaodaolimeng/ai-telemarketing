@@ -1,0 +1,239 @@
+{
+  "case_id": "6285655825106-20260414174134",
+  "file_name": "6285655825106-20260414174134.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 3.16,
+      "speaker": "CUSTOMER",
+      "text": " Selamat datang, selamat datang di belayanan pesan suara.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 0.0,
+          "end": 0.22,
+          "probability": 0.5278899222612381
+        },
+        {
+          "word": " datang,",
+          "start": 0.22,
+          "end": 0.66,
+          "probability": 0.8391947746276855
+        },
+        {
+          "word": " selamat",
+          "start": 0.66,
+          "end": 1.0,
+          "probability": 0.7429699301719666
+        },
+        {
+          "word": " datang",
+          "start": 1.0,
+          "end": 1.38,
+          "probability": 0.9963298439979553
+        },
+        {
+          "word": " di",
+          "start": 1.38,
+          "end": 1.58,
+          "probability": 0.09439733624458313
+        },
+        {
+          "word": " belayanan",
+          "start": 1.58,
+          "end": 2.12,
+          "probability": 0.484473779797554
+        },
+        {
+          "word": " pesan",
+          "start": 2.12,
+          "end": 2.66,
+          "probability": 0.8567474484443665
+        },
+        {
+          "word": " suara.",
+          "start": 2.66,
+          "end": 3.16,
+          "probability": 0.9788567423820496
+        }
+      ]
+    },
+    {
+      "start": 3.4,
+      "end": 5.02,
+      "speaker": "CUSTOMER",
+      "text": " Welcome to Voice Nail Chef.",
+      "words": [
+        {
+          "word": " Welcome",
+          "start": 3.4,
+          "end": 3.72,
+          "probability": 0.45590221881866455
+        },
+        {
+          "word": " to",
+          "start": 3.72,
+          "end": 4.06,
+          "probability": 0.904815137386322
+        },
+        {
+          "word": " Voice",
+          "start": 4.06,
+          "end": 4.42,
+          "probability": 0.1838771402835846
+        },
+        {
+          "word": " Nail",
+          "start": 4.42,
+          "end": 4.76,
+          "probability": 0.09913170337677002
+        },
+        {
+          "word": " Chef.",
+          "start": 4.76,
+          "end": 5.02,
+          "probability": 0.5998492240905762
+        }
+      ]
+    },
+    {
+      "start": 5.48,
+      "end": 8.92,
+      "speaker": "AGENT",
+      "text": " Silahkan rekam pesan suara setelah mengawak nada berikut.",
+      "words": [
+        {
+          "word": " Silahkan",
+          "start": 5.48,
+          "end": 6.04,
+          "probability": 0.8766051332155863
+        },
+        {
+          "word": " rekam",
+          "start": 6.04,
+          "end": 6.34,
+          "probability": 0.7295128405094147
+        },
+        {
+          "word": " pesan",
+          "start": 6.34,
+          "end": 6.66,
+          "probability": 0.9903785586357117
+        },
+        {
+          "word": " suara",
+          "start": 6.66,
+          "end": 7.06,
+          "probability": 0.9913679957389832
+        },
+        {
+          "word": " setelah",
+          "start": 7.06,
+          "end": 7.72,
+          "probability": 0.8131757378578186
+        },
+        {
+          "word": " mengawak",
+          "start": 7.72,
+          "end": 8.04,
+          "probability": 0.2657758370041847
+        },
+        {
+          "word": " nada",
+          "start": 8.04,
+          "end": 8.44,
+          "probability": 0.33730610832571983
+        },
+        {
+          "word": " berikut.",
+          "start": 8.44,
+          "end": 8.92,
+          "probability": 0.9941449761390686
+        }
+      ]
+    },
+    {
+      "start": 9.12,
+      "end": 11.96,
+      "speaker": "CUSTOMER",
+      "text": " Tekan tombol apapun untuk menilai pesan suara.",
+      "words": [
+        {
+          "word": " Tekan",
+          "start": 9.12,
+          "end": 9.48,
+          "probability": 0.6464795023202896
+        },
+        {
+          "word": " tombol",
+          "start": 9.48,
+          "end": 9.78,
+          "probability": 0.7907829880714417
+        },
+        {
+          "word": " apapun",
+          "start": 9.78,
+          "end": 10.44,
+          "probability": 0.870540718237559
+        },
+        {
+          "word": " untuk",
+          "start": 10.44,
+          "end": 10.88,
+          "probability": 0.8751776218414307
+        },
+        {
+          "word": " menilai",
+          "start": 10.88,
+          "end": 11.4,
+          "probability": 0.6317719320456187
+        },
+        {
+          "word": " pesan",
+          "start": 11.4,
+          "end": 11.78,
+          "probability": 0.7838669121265411
+        },
+        {
+          "word": " suara.",
+          "start": 11.78,
+          "end": 11.96,
+          "probability": 0.5634691417217255
+        }
+      ]
+    },
+    {
+      "start": 40.6,
+      "end": 42.0,
+      "speaker": "AGENT",
+      "text": " Selamat datang, selamat datang.",
+      "words": [
+        {
+          "word": " Selamat",
+          "start": 40.6,
+          "end": 42.0,
+          "probability": 0.4447122544515878
+        },
+        {
+          "word": " datang,",
+          "start": 42.0,
+          "end": 42.0,
+          "probability": 0.5286225527524948
+        },
+        {
+          "word": " selamat",
+          "start": 42.0,
+          "end": 42.0,
+          "probability": 0.5113986916840076
+        },
+        {
+          "word": " datang.",
+          "start": 42.0,
+          "end": 42.0,
+          "probability": 0.7184837311506271
+        }
+      ]
+    }
+  ],
+  "full_text": " Selamat datang, selamat datang di belayanan pesan suara.  Welcome to Voice Nail Chef.  Silahkan rekam pesan suara setelah mengawak nada berikut.  Tekan tombol apapun untuk menilai pesan suara.  Selamat datang, selamat datang."
+}

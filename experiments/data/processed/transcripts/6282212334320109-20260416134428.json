@@ -1,0 +1,291 @@
+{
+  "case_id": "6282212334320109-20260416134428",
+  "file_name": "6282212334320109-20260416134428.mp3",
+  "transcript": [
+    {
+      "start": 1.5000000000000013,
+      "end": 5.48,
+      "speaker": "AGENT",
+      "text": " Halo, selamat siang dengan Bepa Samuidi Uban Gawel.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 1.5000000000000013,
+          "end": 2.06,
+          "probability": 0.22253480553627014
+        },
+        {
+          "word": " selamat",
+          "start": 2.24,
+          "end": 2.58,
+          "probability": 0.6689799576997757
+        },
+        {
+          "word": " siang",
+          "start": 2.58,
+          "end": 3.1,
+          "probability": 0.62033511698246
+        },
+        {
+          "word": " dengan",
+          "start": 3.1,
+          "end": 3.36,
+          "probability": 0.7715877890586853
+        },
+        {
+          "word": " Bepa",
+          "start": 3.36,
+          "end": 3.7,
+          "probability": 0.6893700559933981
+        },
+        {
+          "word": " Samuidi",
+          "start": 3.7,
+          "end": 4.3,
+          "probability": 0.3644203195969264
+        },
+        {
+          "word": " Uban",
+          "start": 4.3,
+          "end": 4.86,
+          "probability": 0.38858289271593094
+        },
+        {
+          "word": " Gawel.",
+          "start": 4.86,
+          "end": 5.48,
+          "probability": 0.5773512919743856
+        }
+      ]
+    },
+    {
+      "start": 7.520000000000001,
+      "end": 10.4,
+      "speaker": "CUSTOMER",
+      "text": " Halo Bepa, saya dari aplikasi extra-wonow.",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 7.520000000000001,
+          "end": 8.08,
+          "probability": 0.4230627715587616
+        },
+        {
+          "word": " Bepa,",
+          "start": 8.08,
+          "end": 8.62,
+          "probability": 0.7269818186759949
+        },
+        {
+          "word": " saya",
+          "start": 8.68,
+          "end": 8.84,
+          "probability": 0.9751450419425964
+        },
+        {
+          "word": " dari",
+          "start": 8.84,
+          "end": 9.06,
+          "probability": 0.9926879405975342
+        },
+        {
+          "word": " aplikasi",
+          "start": 9.06,
+          "end": 9.58,
+          "probability": 0.9805730779965719
+        },
+        {
+          "word": " extra",
+          "start": 9.58,
+          "end": 9.92,
+          "probability": 0.6627564430236816
+        },
+        {
+          "word": "-wonow.",
+          "start": 9.92,
+          "end": 10.4,
+          "probability": 0.427484855055809
+        }
+      ]
+    },
+    {
+      "start": 10.46,
+      "end": 11.86,
+      "speaker": "AGENT",
+      "text": " Tagilannya di jam berapa dibayarkan?",
+      "words": [
+        {
+          "word": " Tagilannya",
+          "start": 10.46,
+          "end": 10.88,
+          "probability": 0.7971241076787313
+        },
+        {
+          "word": " di",
+          "start": 10.88,
+          "end": 11.04,
+          "probability": 0.7995462417602539
+        },
+        {
+          "word": " jam",
+          "start": 11.04,
+          "end": 11.16,
+          "probability": 0.8896215558052063
+        },
+        {
+          "word": " berapa",
+          "start": 11.16,
+          "end": 11.44,
+          "probability": 0.9834834635257721
+        },
+        {
+          "word": " dibayarkan?",
+          "start": 11.44,
+          "end": 11.86,
+          "probability": 0.8897381027539571
+        }
+      ]
+    },
+    {
+      "start": 14.860000000000001,
+      "end": 15.64,
+      "speaker": "AGENT",
+      "text": " Halo, Bepa.",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 14.860000000000001,
+          "end": 15.42,
+          "probability": 0.7674195170402527
+        },
+        {
+          "word": " Bepa.",
+          "start": 15.56,
+          "end": 15.64,
+          "probability": 0.8339818716049194
+        }
+      ]
+    },
+    {
+      "start": 16.46,
+      "end": 17.02,
+      "speaker": "AGENT",
+      "text": " Halo.",
+      "words": [
+        {
+          "word": " Halo.",
+          "start": 16.46,
+          "end": 17.02,
+          "probability": 0.9479695558547974
+        }
+      ]
+    },
+    {
+      "start": 18.46,
+      "end": 20.64,
+      "speaker": "CUSTOMER",
+      "text": " Halo, Bepa. Bisa dengar suara sayang gak, Pak?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 18.46,
+          "end": 19.02,
+          "probability": 0.9448320269584656
+        },
+        {
+          "word": " Bepa.",
+          "start": 19.08,
+          "end": 19.2,
+          "probability": 0.9286731481552124
+        },
+        {
+          "word": " Bisa",
+          "start": 19.34,
+          "end": 19.54,
+          "probability": 0.9383381903171539
+        },
+        {
+          "word": " dengar",
+          "start": 19.54,
+          "end": 19.82,
+          "probability": 0.5735841393470764
+        },
+        {
+          "word": " suara",
+          "start": 19.82,
+          "end": 20.02,
+          "probability": 0.698541671037674
+        },
+        {
+          "word": " sayang",
+          "start": 20.02,
+          "end": 20.32,
+          "probability": 0.7660036087036133
+        },
+        {
+          "word": " gak,",
+          "start": 20.32,
+          "end": 20.48,
+          "probability": 0.37382861971855164
+        },
+        {
+          "word": " Pak?",
+          "start": 20.58,
+          "end": 20.64,
+          "probability": 0.6778566837310791
+        }
+      ]
+    },
+    {
+      "start": 23.700000000000003,
+      "end": 25.96,
+      "speaker": "AGENT",
+      "text": " Halo, tagilannya di jam berapa, Pak? Dibayarkan?",
+      "words": [
+        {
+          "word": " Halo,",
+          "start": 23.700000000000003,
+          "end": 24.26,
+          "probability": 0.9520142674446106
+        },
+        {
+          "word": " tagilannya",
+          "start": 24.44,
+          "end": 24.8,
+          "probability": 0.9450032114982605
+        },
+        {
+          "word": " di",
+          "start": 24.8,
+          "end": 25.0,
+          "probability": 0.9949764013290405
+        },
+        {
+          "word": " jam",
+          "start": 25.0,
+          "end": 25.14,
+          "probability": 0.9983333945274353
+        },
+        {
+          "word": " berapa,",
+          "start": 25.14,
+          "end": 25.34,
+          "probability": 0.997503936290741
+        },
+        {
+          "word": " Pak?",
+          "start": 25.52,
+          "end": 25.52,
+          "probability": 0.7008571624755859
+        },
+        {
+          "word": " Dibayarkan?",
+          "start": 25.58,
+          "end": 25.96,
+          "probability": 0.9465470910072327
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo, selamat siang dengan Bepa Samuidi Uban Gawel.  Halo Bepa, saya dari aplikasi extra-wonow.  Tagilannya di jam berapa dibayarkan?  Halo, Bepa.  Halo.  Halo, Bepa. Bisa dengar suara sayang gak, Pak?  Halo, tagilannya di jam berapa, Pak? Dibayarkan?"
+}

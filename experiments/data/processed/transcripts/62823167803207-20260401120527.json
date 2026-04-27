@@ -1,0 +1,235 @@
+{
+  "case_id": "62823167803207-20260401120527",
+  "file_name": "62823167803207-20260401120527.mp3",
+  "transcript": [
+    {
+      "start": 1.5200000000000005,
+      "end": 12.6,
+      "speaker": "CUSTOMER",
+      "text": " Hey, Abiyah Kago, kenapa diri-cek? Saya telfon diri-cek. Ini takjiannya dibayar ya.",
+      "words": [
+        {
+          "word": " Hey,",
+          "start": 1.5200000000000005,
+          "end": 2.2,
+          "probability": 0.16177338361740112
+        },
+        {
+          "word": " Abiyah",
+          "start": 3.18,
+          "end": 3.86,
+          "probability": 0.5006960233052572
+        },
+        {
+          "word": " Kago,",
+          "start": 3.86,
+          "end": 4.38,
+          "probability": 0.8701556324958801
+        },
+        {
+          "word": " kenapa",
+          "start": 5.38,
+          "end": 6.16,
+          "probability": 0.9292393624782562
+        },
+        {
+          "word": " diri",
+          "start": 6.16,
+          "end": 6.5,
+          "probability": 0.8513103127479553
+        },
+        {
+          "word": "-cek?",
+          "start": 6.5,
+          "end": 6.72,
+          "probability": 0.33514536917209625
+        },
+        {
+          "word": " Saya",
+          "start": 7.14,
+          "end": 7.36,
+          "probability": 0.5529473423957825
+        },
+        {
+          "word": " telfon",
+          "start": 7.36,
+          "end": 7.68,
+          "probability": 0.5864323079586029
+        },
+        {
+          "word": " diri",
+          "start": 7.68,
+          "end": 8.02,
+          "probability": 0.9897735416889191
+        },
+        {
+          "word": "-cek.",
+          "start": 8.02,
+          "end": 8.18,
+          "probability": 0.9498604834079742
+        },
+        {
+          "word": " Ini",
+          "start": 10.7,
+          "end": 11.38,
+          "probability": 0.38550105690956116
+        },
+        {
+          "word": " takjiannya",
+          "start": 11.38,
+          "end": 11.92,
+          "probability": 0.6630542688071728
+        },
+        {
+          "word": " dibayar",
+          "start": 11.92,
+          "end": 12.42,
+          "probability": 0.9545782407124838
+        },
+        {
+          "word": " ya.",
+          "start": 12.42,
+          "end": 12.6,
+          "probability": 0.8562926054000854
+        }
+      ]
+    },
+    {
+      "start": 13.04,
+      "end": 16.92,
+      "speaker": "CUSTOMER",
+      "text": " Extra, jangan diam-diam aja, udah disebabkan 110 nomer.",
+      "words": [
+        {
+          "word": " Extra,",
+          "start": 13.04,
+          "end": 13.52,
+          "probability": 0.029858514666557312
+        },
+        {
+          "word": " jangan",
+          "start": 13.8,
+          "end": 14.02,
+          "probability": 0.987368643283844
+        },
+        {
+          "word": " diam",
+          "start": 14.02,
+          "end": 14.3,
+          "probability": 0.40210583806037903
+        },
+        {
+          "word": "-diam",
+          "start": 14.3,
+          "end": 14.46,
+          "probability": 0.9480612476666769
+        },
+        {
+          "word": " aja,",
+          "start": 14.46,
+          "end": 14.8,
+          "probability": 0.9053853750228882
+        },
+        {
+          "word": " udah",
+          "start": 14.9,
+          "end": 15.08,
+          "probability": 0.7514891028404236
+        },
+        {
+          "word": " disebabkan",
+          "start": 15.08,
+          "end": 16.04,
+          "probability": 0.7025818228721619
+        },
+        {
+          "word": " 110",
+          "start": 16.04,
+          "end": 16.4,
+          "probability": 0.669121265411377
+        },
+        {
+          "word": " nomer.",
+          "start": 16.4,
+          "end": 16.92,
+          "probability": 0.7870374917984009
+        }
+      ]
+    },
+    {
+      "start": 17.94,
+      "end": 22.14,
+      "speaker": "AGENT",
+      "text": " Kalau sampai jam 1, siang masih belum bayar juga, dikembarkan semua.",
+      "words": [
+        {
+          "word": " Kalau",
+          "start": 17.94,
+          "end": 18.62,
+          "probability": 0.8118992447853088
+        },
+        {
+          "word": " sampai",
+          "start": 18.62,
+          "end": 18.92,
+          "probability": 0.878315269947052
+        },
+        {
+          "word": " jam",
+          "start": 18.92,
+          "end": 19.16,
+          "probability": 0.871997058391571
+        },
+        {
+          "word": " 1,",
+          "start": 19.16,
+          "end": 19.46,
+          "probability": 0.5916030406951904
+        },
+        {
+          "word": " siang",
+          "start": 19.58,
+          "end": 19.84,
+          "probability": 0.4892648756504059
+        },
+        {
+          "word": " masih",
+          "start": 19.84,
+          "end": 20.12,
+          "probability": 0.8566726446151733
+        },
+        {
+          "word": " belum",
+          "start": 20.12,
+          "end": 20.3,
+          "probability": 0.9937208890914917
+        },
+        {
+          "word": " bayar",
+          "start": 20.3,
+          "end": 20.64,
+          "probability": 0.9848788380622864
+        },
+        {
+          "word": " juga,",
+          "start": 20.64,
+          "end": 20.96,
+          "probability": 0.9734389185905457
+        },
+        {
+          "word": " dikembarkan",
+          "start": 21.18,
+          "end": 21.8,
+          "probability": 0.48610076680779457
+        },
+        {
+          "word": " semua.",
+          "start": 21.8,
+          "end": 22.14,
+          "probability": 0.7759628295898438
+        }
+      ]
+    }
+  ],
+  "full_text": " Hey, Abiyah Kago, kenapa diri-cek? Saya telfon diri-cek. Ini takjiannya dibayar ya.  Extra, jangan diam-diam aja, udah disebabkan 110 nomer.  Kalau sampai jam 1, siang masih belum bayar juga, dikembarkan semua."
+}

@@ -1,0 +1,421 @@
+{
+  "case_id": "628525931291908-20260421070242",
+  "file_name": "628525931291908-20260421070242.mp3",
+  "transcript": [
+    {
+      "start": 7.060000000000001,
+      "end": 11.1,
+      "speaker": "AGENT",
+      "text": " Bapak Randy ini pinjemannya bisa dibayarkan jam berapa Mas?",
+      "words": [
+        {
+          "word": " Bapak",
+          "start": 7.060000000000001,
+          "end": 7.8,
+          "probability": 0.6347268571456274
+        },
+        {
+          "word": " Randy",
+          "start": 7.8,
+          "end": 8.3,
+          "probability": 0.08393032848834991
+        },
+        {
+          "word": " ini",
+          "start": 8.3,
+          "end": 8.62,
+          "probability": 0.41822999715805054
+        },
+        {
+          "word": " pinjemannya",
+          "start": 8.62,
+          "end": 9.26,
+          "probability": 0.42597196499506634
+        },
+        {
+          "word": " bisa",
+          "start": 9.26,
+          "end": 9.54,
+          "probability": 0.9666740298271179
+        },
+        {
+          "word": " dibayarkan",
+          "start": 9.54,
+          "end": 10.26,
+          "probability": 0.6090099774301052
+        },
+        {
+          "word": " jam",
+          "start": 10.26,
+          "end": 10.44,
+          "probability": 0.8989095687866211
+        },
+        {
+          "word": " berapa",
+          "start": 10.44,
+          "end": 10.88,
+          "probability": 0.97490593791008
+        },
+        {
+          "word": " Mas?",
+          "start": 10.88,
+          "end": 11.1,
+          "probability": 0.3865988552570343
+        }
+      ]
+    },
+    {
+      "start": 11.5,
+      "end": 12.16,
+      "speaker": "CUSTOMER",
+      "text": " Dapet ratus.",
+      "words": [
+        {
+          "word": " Dapet",
+          "start": 11.5,
+          "end": 11.74,
+          "probability": 0.4986633062362671
+        },
+        {
+          "word": " ratus.",
+          "start": 11.74,
+          "end": 12.16,
+          "probability": 0.9681417346000671
+        }
+      ]
+    },
+    {
+      "start": 15.120000000000001,
+      "end": 16.3,
+      "speaker": "AGENT",
+      "text": " Dapet ratus.",
+      "words": [
+        {
+          "word": " Dapet",
+          "start": 15.120000000000001,
+          "end": 15.86,
+          "probability": 0.7490914762020111
+        },
+        {
+          "word": " ratus.",
+          "start": 15.86,
+          "end": 16.3,
+          "probability": 0.8585928678512573
+        }
+      ]
+    },
+    {
+      "start": 16.98,
+      "end": 17.68,
+      "speaker": "CUSTOMER",
+      "text": " Usahakan dulu.",
+      "words": [
+        {
+          "word": " Usahakan",
+          "start": 16.98,
+          "end": 17.48,
+          "probability": 0.5985952937432254
+        },
+        {
+          "word": " dulu.",
+          "start": 17.48,
+          "end": 17.68,
+          "probability": 0.9893474578857422
+        }
+      ]
+    },
+    {
+      "start": 18.66,
+      "end": 19.4,
+      "speaker": "AGENT",
+      "text": " Bagaimana?",
+      "words": [
+        {
+          "word": " Bagaimana?",
+          "start": 18.66,
+          "end": 19.4,
+          "probability": 0.40351449822386104
+        }
+      ]
+    },
+    {
+      "start": 20.380000000000003,
+      "end": 22.02,
+      "speaker": "CUSTOMER",
+      "text": " Usahakan dulu, masih kurang.",
+      "words": [
+        {
+          "word": " Usahakan",
+          "start": 20.380000000000003,
+          "end": 21.12,
+          "probability": 0.8828258315722147
+        },
+        {
+          "word": " dulu,",
+          "start": 21.12,
+          "end": 21.34,
+          "probability": 0.9864782094955444
+        },
+        {
+          "word": " masih",
+          "start": 21.52,
+          "end": 21.64,
+          "probability": 0.9746108055114746
+        },
+        {
+          "word": " kurang.",
+          "start": 21.64,
+          "end": 22.02,
+          "probability": 0.9985311627388
+        }
+      ]
+    },
+    {
+      "start": 22.78,
+      "end": 23.8,
+      "speaker": "AGENT",
+      "text": " Oke, siap Mas.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 22.78,
+          "end": 23.2,
+          "probability": 0.704995334148407
+        },
+        {
+          "word": " siap",
+          "start": 23.36,
+          "end": 23.54,
+          "probability": 0.7542575895786285
+        },
+        {
+          "word": " Mas.",
+          "start": 23.54,
+          "end": 23.8,
+          "probability": 0.8145490288734436
+        }
+      ]
+    },
+    {
+      "start": 24.38,
+      "end": 28.14,
+      "speaker": "CUSTOMER",
+      "text": " Amat Mas, nanti saya WhatsApp tolong di respon ya.",
+      "words": [
+        {
+          "word": " Amat",
+          "start": 24.38,
+          "end": 24.7,
+          "probability": 0.5326893776655197
+        },
+        {
+          "word": " Mas,",
+          "start": 24.7,
+          "end": 24.94,
+          "probability": 0.6867081522941589
+        },
+        {
+          "word": " nanti",
+          "start": 25.06,
+          "end": 25.4,
+          "probability": 0.9840210676193237
+        },
+        {
+          "word": " saya",
+          "start": 25.4,
+          "end": 26.68,
+          "probability": 0.6078989505767822
+        },
+        {
+          "word": " WhatsApp",
+          "start": 26.68,
+          "end": 27.04,
+          "probability": 0.1857907474040985
+        },
+        {
+          "word": " tolong",
+          "start": 27.04,
+          "end": 27.5,
+          "probability": 0.4022742062807083
+        },
+        {
+          "word": " di",
+          "start": 27.5,
+          "end": 27.68,
+          "probability": 0.839783787727356
+        },
+        {
+          "word": " respon",
+          "start": 27.68,
+          "end": 28.0,
+          "probability": 0.6617999374866486
+        },
+        {
+          "word": " ya.",
+          "start": 28.0,
+          "end": 28.14,
+          "probability": 0.670735776424408
+        }
+      ]
+    },
+    {
+      "start": 28.14,
+      "end": 31.12,
+      "speaker": "CUSTOMER",
+      "text": " Biar enak ngobrolnya, biar nggak kasar.",
+      "words": [
+        {
+          "word": " Biar",
+          "start": 28.14,
+          "end": 28.48,
+          "probability": 0.5302657671272755
+        },
+        {
+          "word": " enak",
+          "start": 28.48,
+          "end": 28.88,
+          "probability": 0.7639636993408203
+        },
+        {
+          "word": " ngobrolnya,",
+          "start": 28.88,
+          "end": 29.54,
+          "probability": 0.8033776134252548
+        },
+        {
+          "word": " biar",
+          "start": 29.62,
+          "end": 29.82,
+          "probability": 0.8924976885318756
+        },
+        {
+          "word": " nggak",
+          "start": 29.82,
+          "end": 30.4,
+          "probability": 0.37812116742134094
+        },
+        {
+          "word": " kasar.",
+          "start": 30.4,
+          "end": 31.12,
+          "probability": 0.8379083573818207
+        }
+      ]
+    },
+    {
+      "start": 31.36,
+      "end": 31.82,
+      "speaker": "CUSTOMER",
+      "text": " Kita nyanyi, Mas.",
+      "words": [
+        {
+          "word": " Kita",
+          "start": 31.36,
+          "end": 31.4,
+          "probability": 0.2854839861392975
+        },
+        {
+          "word": " nyanyi,",
+          "start": 31.4,
+          "end": 31.66,
+          "probability": 0.5221946636835734
+        },
+        {
+          "word": " Mas.",
+          "start": 31.72,
+          "end": 31.82,
+          "probability": 0.012741032056510448
+        }
+      ]
+    },
+    {
+      "start": 32.58,
+      "end": 33.48,
+      "speaker": "AGENT",
+      "text": " Oke, oke.",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 32.58,
+          "end": 32.92,
+          "probability": 0.8798707723617554
+        },
+        {
+          "word": " oke.",
+          "start": 33.48,
+          "end": 33.48,
+          "probability": 0.8785274624824524
+        }
+      ]
+    },
+    {
+      "start": 33.7,
+      "end": 34.42,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 33.7,
+          "end": 34.42,
+          "probability": 0.39093381352722645
+        },
+        {
+          "word": " kasih.",
+          "start": 34.42,
+          "end": 34.42,
+          "probability": 0.9953752160072327
+        }
+      ]
+    },
+    {
+      "start": 34.42,
+      "end": 35.2,
+      "speaker": "AGENT",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 34.42,
+          "end": 34.96,
+          "probability": 0.5240233987569809
+        },
+        {
+          "word": " kasih.",
+          "start": 34.96,
+          "end": 35.2,
+          "probability": 0.993392288684845
+        }
+      ]
+    },
+    {
+      "start": 36.72,
+      "end": 37.48,
+      "speaker": "CUSTOMER",
+      "text": " Pagi.",
+      "words": [
+        {
+          "word": " Pagi.",
+          "start": 36.72,
+          "end": 37.48,
+          "probability": 0.4830645229667425
+        }
+      ]
+    },
+    {
+      "start": 38.18,
+      "end": 38.64,
+      "speaker": "AGENT",
+      "text": " Pagi.",
+      "words": [
+        {
+          "word": " Pagi.",
+          "start": 38.18,
+          "end": 38.64,
+          "probability": 0.9696683585643768
+        }
+      ]
+    }
+  ],
+  "full_text": " Bapak Randy ini pinjemannya bisa dibayarkan jam berapa Mas?  Dapet ratus.  Dapet ratus.  Usahakan dulu.  Bagaimana?  Usahakan dulu, masih kurang.  Oke, siap Mas.  Amat Mas, nanti saya WhatsApp tolong di respon ya.  Biar enak ngobrolnya, biar nggak kasar.  Kita nyanyi, Mas.  Oke, oke.  Terima kasih.  Terima kasih.  Pagi.  Pagi."
+}

@@ -1,0 +1,395 @@
+{
+  "case_id": "6282111476527809-20260411150710",
+  "file_name": "6282111476527809-20260411150710.mp3",
+  "transcript": [
+    {
+      "start": 0.8599999999999985,
+      "end": 3.08,
+      "text": " halo sedikit lagi masih kotor, sedikit lagi",
+      "words": [
+        {
+          "word": " halo",
+          "start": 0.8599999999999985,
+          "end": 1.46,
+          "probability": 0.03163084760308266
+        },
+        {
+          "word": " sedikit",
+          "start": 1.46,
+          "end": 1.82,
+          "probability": 0.6167591363191605
+        },
+        {
+          "word": " lagi",
+          "start": 1.82,
+          "end": 1.96,
+          "probability": 0.8446273803710938
+        },
+        {
+          "word": " masih",
+          "start": 1.96,
+          "end": 2.14,
+          "probability": 0.43985557556152344
+        },
+        {
+          "word": " kotor,",
+          "start": 2.14,
+          "end": 2.46,
+          "probability": 0.4709794968366623
+        },
+        {
+          "word": " sedikit",
+          "start": 2.52,
+          "end": 2.8,
+          "probability": 0.9663707315921783
+        },
+        {
+          "word": " lagi",
+          "start": 2.8,
+          "end": 3.08,
+          "probability": 0.9933211207389832
+        }
+      ]
+    },
+    {
+      "start": 3.959999999999998,
+      "end": 7.44,
+      "text": " halo ini sudah jantiga, jantinya jantiga kak?",
+      "words": [
+        {
+          "word": " halo",
+          "start": 3.959999999999998,
+          "end": 4.56,
+          "probability": 0.12655584514141083
+        },
+        {
+          "word": " ini",
+          "start": 4.56,
+          "end": 5.06,
+          "probability": 0.6681644320487976
+        },
+        {
+          "word": " sudah",
+          "start": 5.06,
+          "end": 5.3,
+          "probability": 0.4341135621070862
+        },
+        {
+          "word": " jantiga,",
+          "start": 5.3,
+          "end": 5.6,
+          "probability": 0.3882572849591573
+        },
+        {
+          "word": " jantinya",
+          "start": 5.88,
+          "end": 6.64,
+          "probability": 0.5907296538352966
+        },
+        {
+          "word": " jantiga",
+          "start": 6.64,
+          "end": 7.04,
+          "probability": 0.9081766208012899
+        },
+        {
+          "word": " kak?",
+          "start": 7.04,
+          "end": 7.44,
+          "probability": 0.5864210948348045
+        }
+      ]
+    },
+    {
+      "start": 7.84,
+      "end": 11.0,
+      "text": " ya kami baru mati di kotor ini, sedikit lagi",
+      "words": [
+        {
+          "word": " ya",
+          "start": 7.84,
+          "end": 8.24,
+          "probability": 0.5932943820953369
+        },
+        {
+          "word": " kami",
+          "start": 8.24,
+          "end": 8.44,
+          "probability": 0.5035336017608643
+        },
+        {
+          "word": " baru",
+          "start": 8.44,
+          "end": 9.02,
+          "probability": 0.8992810845375061
+        },
+        {
+          "word": " mati",
+          "start": 9.02,
+          "end": 9.3,
+          "probability": 0.5355074256658554
+        },
+        {
+          "word": " di",
+          "start": 9.3,
+          "end": 9.48,
+          "probability": 0.23342759907245636
+        },
+        {
+          "word": " kotor",
+          "start": 9.48,
+          "end": 9.84,
+          "probability": 0.7018962204456329
+        },
+        {
+          "word": " ini,",
+          "start": 9.84,
+          "end": 9.98,
+          "probability": 0.5924369692802429
+        },
+        {
+          "word": " sedikit",
+          "start": 10.04,
+          "end": 10.78,
+          "probability": 0.9607378244400024
+        },
+        {
+          "word": " lagi",
+          "start": 10.78,
+          "end": 11.0,
+          "probability": 0.993949294090271
+        }
+      ]
+    },
+    {
+      "start": 12.099999999999998,
+      "end": 14.36,
+      "text": " 15 menit cukup",
+      "words": [
+        {
+          "word": " 15",
+          "start": 12.099999999999998,
+          "end": 12.7,
+          "probability": 0.7908909916877747
+        },
+        {
+          "word": " menit",
+          "start": 12.7,
+          "end": 13.18,
+          "probability": 0.864991158246994
+        },
+        {
+          "word": " cukup",
+          "start": 13.18,
+          "end": 14.36,
+          "probability": 0.9737635552883148
+        }
+      ]
+    },
+    {
+      "start": 15.379999999999999,
+      "end": 19.72,
+      "text": " sedikit lagi masuk di perbatas dan mau ke kotor sudah",
+      "words": [
+        {
+          "word": " sedikit",
+          "start": 15.379999999999999,
+          "end": 15.98,
+          "probability": 0.7244420945644379
+        },
+        {
+          "word": " lagi",
+          "start": 15.98,
+          "end": 16.12,
+          "probability": 0.5486941337585449
+        },
+        {
+          "word": " masuk",
+          "start": 16.12,
+          "end": 16.5,
+          "probability": 0.8347829580307007
+        },
+        {
+          "word": " di",
+          "start": 16.5,
+          "end": 17.06,
+          "probability": 0.5192934274673462
+        },
+        {
+          "word": " perbatas",
+          "start": 17.06,
+          "end": 17.56,
+          "probability": 0.7642670174439748
+        },
+        {
+          "word": " dan",
+          "start": 17.56,
+          "end": 17.72,
+          "probability": 0.6657006144523621
+        },
+        {
+          "word": " mau",
+          "start": 17.72,
+          "end": 17.84,
+          "probability": 0.9340255856513977
+        },
+        {
+          "word": " ke",
+          "start": 17.84,
+          "end": 18.06,
+          "probability": 0.9756662845611572
+        },
+        {
+          "word": " kotor",
+          "start": 18.06,
+          "end": 18.48,
+          "probability": 0.9849155843257904
+        },
+        {
+          "word": " sudah",
+          "start": 18.48,
+          "end": 19.72,
+          "probability": 0.7651108503341675
+        }
+      ]
+    },
+    {
+      "start": 19.72,
+      "end": 20.76,
+      "text": " cepat ya pak?",
+      "words": [
+        {
+          "word": " cepat",
+          "start": 19.72,
+          "end": 20.44,
+          "probability": 0.5341370664536953
+        },
+        {
+          "word": " ya",
+          "start": 20.44,
+          "end": 20.6,
+          "probability": 0.39918583631515503
+        },
+        {
+          "word": " pak?",
+          "start": 20.6,
+          "end": 20.76,
+          "probability": 0.47663190960884094
+        }
+      ]
+    },
+    {
+      "start": 22.06,
+      "end": 24.46,
+      "text": " ya, sehingga bahwa hari ini saya tetap bayar",
+      "words": [
+        {
+          "word": " ya,",
+          "start": 22.06,
+          "end": 22.66,
+          "probability": 0.22514168918132782
+        },
+        {
+          "word": " sehingga",
+          "start": 22.96,
+          "end": 23.2,
+          "probability": 0.4843623638153076
+        },
+        {
+          "word": " bahwa",
+          "start": 23.2,
+          "end": 23.4,
+          "probability": 0.7286663949489594
+        },
+        {
+          "word": " hari",
+          "start": 23.4,
+          "end": 23.6,
+          "probability": 0.9684043526649475
+        },
+        {
+          "word": " ini",
+          "start": 23.6,
+          "end": 23.76,
+          "probability": 0.9929002523422241
+        },
+        {
+          "word": " saya",
+          "start": 23.76,
+          "end": 23.94,
+          "probability": 0.9682950377464294
+        },
+        {
+          "word": " tetap",
+          "start": 23.94,
+          "end": 24.16,
+          "probability": 0.9367389678955078
+        },
+        {
+          "word": " bayar",
+          "start": 24.16,
+          "end": 24.46,
+          "probability": 0.8767058551311493
+        }
+      ]
+    },
+    {
+      "start": 25.86,
+      "end": 27.42,
+      "text": " berapa harga?",
+      "words": [
+        {
+          "word": " berapa",
+          "start": 25.86,
+          "end": 27.14,
+          "probability": 0.4654194728937
+        },
+        {
+          "word": " harga?",
+          "start": 27.14,
+          "end": 27.42,
+          "probability": 0.5105653442442417
+        }
+      ]
+    },
+    {
+      "start": 27.92,
+      "end": 28.46,
+      "text": " 300 dolar",
+      "words": [
+        {
+          "word": " 300",
+          "start": 27.92,
+          "end": 28.36,
+          "probability": 0.1977841854095459
+        },
+        {
+          "word": " dolar",
+          "start": 28.36,
+          "end": 29.0,
+          "probability": 0.7331234663724899
+        }
+      ]
+    },
+    {
+      "start": 29.62,
+      "end": 31.9,
+      "text": " 300 dolar",
+      "words": [
+        {
+          "word": " 300",
+          "start": 29.62,
+          "end": 30.26,
+          "probability": 0.004110866226255894
+        },
+        {
+          "word": " dolar",
+          "start": 30.26,
+          "end": 31.9,
+          "probability": 0.9172458350658417
+        }
+      ]
+    }
+  ],
+  "full_text": " halo sedikit lagi masih kotor, sedikit lagi  halo ini sudah jantiga, jantinya jantiga kak?  ya kami baru mati di kotor ini, sedikit lagi  15 menit cukup  sedikit lagi masuk di perbatas dan mau ke kotor sudah  cepat ya pak?  ya, sehingga bahwa hari ini saya tetap bayar  berapa harga?  300 dolar  300 dolar"
+}

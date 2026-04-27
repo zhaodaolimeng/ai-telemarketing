@@ -1,0 +1,341 @@
+{
+  "case_id": "6283111300231809-20260410064525",
+  "file_name": "6283111300231809-20260410064525.mp3",
+  "transcript": [
+    {
+      "start": 2.1000000000000005,
+      "end": 3.12,
+      "speaker": "AGENT",
+      "text": " Hello, Assalamualaikum.",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 2.1000000000000005,
+          "end": 2.62,
+          "probability": 0.047429006546735764
+        },
+        {
+          "word": " Assalamualaikum.",
+          "start": 2.76,
+          "end": 3.12,
+          "probability": 0.7499727934598923
+        }
+      ]
+    },
+    {
+      "start": 7.960000000000001,
+      "end": 9.48,
+      "speaker": "AGENT",
+      "text": " Hello, Assalamualaikum, Ibu Nuni.",
+      "words": [
+        {
+          "word": " Hello,",
+          "start": 7.960000000000001,
+          "end": 8.48,
+          "probability": 0.4165608882904053
+        },
+        {
+          "word": " Assalamualaikum,",
+          "start": 8.58,
+          "end": 8.92,
+          "probability": 0.9807210803031922
+        },
+        {
+          "word": " Ibu",
+          "start": 9.04,
+          "end": 9.16,
+          "probability": 0.662032812833786
+        },
+        {
+          "word": " Nuni.",
+          "start": 9.16,
+          "end": 9.48,
+          "probability": 0.6110493689775467
+        }
+      ]
+    },
+    {
+      "start": 12.0,
+      "end": 13.98,
+      "speaker": "AGENT",
+      "text": " Ini jawab, Ibu, yang kayak gitu, Ibu.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 12.0,
+          "end": 12.52,
+          "probability": 0.7576414346694946
+        },
+        {
+          "word": " jawab,",
+          "start": 12.52,
+          "end": 12.78,
+          "probability": 0.972847580909729
+        },
+        {
+          "word": " Ibu,",
+          "start": 13.04,
+          "end": 13.04,
+          "probability": 0.6457423716783524
+        },
+        {
+          "word": " yang",
+          "start": 13.22,
+          "end": 13.34,
+          "probability": 0.9290778040885925
+        },
+        {
+          "word": " kayak",
+          "start": 13.34,
+          "end": 13.54,
+          "probability": 0.5704672336578369
+        },
+        {
+          "word": " gitu,",
+          "start": 13.54,
+          "end": 13.74,
+          "probability": 0.8867592811584473
+        },
+        {
+          "word": " Ibu.",
+          "start": 13.86,
+          "end": 13.98,
+          "probability": 0.9211996495723724
+        }
+      ]
+    },
+    {
+      "start": 17.14,
+      "end": 17.66,
+      "speaker": "CUSTOMER",
+      "text": " Assalamualaikum.",
+      "words": [
+        {
+          "word": " Assalamualaikum.",
+          "start": 17.14,
+          "end": 17.66,
+          "probability": 0.9882476806640625
+        }
+      ]
+    },
+    {
+      "start": 20.740000000000002,
+      "end": 22.16,
+      "speaker": "CUSTOMER",
+      "text": " Saya sudah sopan ya, Ibu.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 20.740000000000002,
+          "end": 21.26,
+          "probability": 0.5935184955596924
+        },
+        {
+          "word": " sudah",
+          "start": 21.26,
+          "end": 21.48,
+          "probability": 0.9769592881202698
+        },
+        {
+          "word": " sopan",
+          "start": 21.48,
+          "end": 21.8,
+          "probability": 0.49754437804222107
+        },
+        {
+          "word": " ya,",
+          "start": 21.8,
+          "end": 22.02,
+          "probability": 0.3839944005012512
+        },
+        {
+          "word": " Ibu.",
+          "start": 22.02,
+          "end": 22.16,
+          "probability": 0.9479447603225708
+        }
+      ]
+    },
+    {
+      "start": 22.68,
+      "end": 25.48,
+      "speaker": "CUSTOMER",
+      "text": " Magi Anda, jelahkan saya kalau saya khasar.",
+      "words": [
+        {
+          "word": " Magi",
+          "start": 22.68,
+          "end": 23.18,
+          "probability": 0.24161173263564706
+        },
+        {
+          "word": " Anda,",
+          "start": 23.18,
+          "end": 23.4,
+          "probability": 0.6552451848983765
+        },
+        {
+          "word": " jelahkan",
+          "start": 23.94,
+          "end": 24.38,
+          "probability": 0.4327110331505537
+        },
+        {
+          "word": " saya",
+          "start": 24.38,
+          "end": 24.54,
+          "probability": 0.878669261932373
+        },
+        {
+          "word": " kalau",
+          "start": 24.54,
+          "end": 24.76,
+          "probability": 0.7836906909942627
+        },
+        {
+          "word": " saya",
+          "start": 24.76,
+          "end": 24.96,
+          "probability": 0.9748621582984924
+        },
+        {
+          "word": " khasar.",
+          "start": 24.96,
+          "end": 25.48,
+          "probability": 0.925890584786733
+        }
+      ]
+    },
+    {
+      "start": 25.84,
+      "end": 29.36,
+      "speaker": "CUSTOMER",
+      "text": " Kalau saya sebar-sebar data, foto-foto Anda, jelahkan saya.",
+      "words": [
+        {
+          "word": " Kalau",
+          "start": 25.84,
+          "end": 26.34,
+          "probability": 0.6328993439674377
+        },
+        {
+          "word": " saya",
+          "start": 26.34,
+          "end": 26.48,
+          "probability": 0.9891889095306396
+        },
+        {
+          "word": " sebar",
+          "start": 26.48,
+          "end": 26.78,
+          "probability": 0.6128693222999573
+        },
+        {
+          "word": "-sebar",
+          "start": 26.78,
+          "end": 27.02,
+          "probability": 0.9064459403355917
+        },
+        {
+          "word": " data,",
+          "start": 27.02,
+          "end": 27.32,
+          "probability": 0.7705546021461487
+        },
+        {
+          "word": " foto",
+          "start": 27.54,
+          "end": 27.64,
+          "probability": 0.8246510624885559
+        },
+        {
+          "word": "-foto",
+          "start": 27.64,
+          "end": 27.88,
+          "probability": 0.8243387738863627
+        },
+        {
+          "word": " Anda,",
+          "start": 27.88,
+          "end": 28.18,
+          "probability": 0.6959181427955627
+        },
+        {
+          "word": " jelahkan",
+          "start": 28.76,
+          "end": 29.16,
+          "probability": 0.9302508980035782
+        },
+        {
+          "word": " saya.",
+          "start": 29.16,
+          "end": 29.36,
+          "probability": 0.9912307262420654
+        }
+      ]
+    },
+    {
+      "start": 30.24,
+      "end": 32.58,
+      "speaker": "CUSTOMER",
+      "text": " Saya ditunggu jam 8, belum ada pemainan, saya sebar.",
+      "words": [
+        {
+          "word": " Saya",
+          "start": 30.24,
+          "end": 30.52,
+          "probability": 0.9728288650512695
+        },
+        {
+          "word": " ditunggu",
+          "start": 30.52,
+          "end": 30.84,
+          "probability": 0.7697225908438364
+        },
+        {
+          "word": " jam",
+          "start": 30.84,
+          "end": 30.98,
+          "probability": 0.9797570109367371
+        },
+        {
+          "word": " 8,",
+          "start": 30.98,
+          "end": 31.26,
+          "probability": 0.7799167037010193
+        },
+        {
+          "word": " belum",
+          "start": 31.4,
+          "end": 31.46,
+          "probability": 0.3744211494922638
+        },
+        {
+          "word": " ada",
+          "start": 31.46,
+          "end": 31.64,
+          "probability": 0.8353941440582275
+        },
+        {
+          "word": " pemainan,",
+          "start": 31.64,
+          "end": 32.14,
+          "probability": 0.531818225979805
+        },
+        {
+          "word": " saya",
+          "start": 32.24,
+          "end": 32.32,
+          "probability": 0.9284000396728516
+        },
+        {
+          "word": " sebar.",
+          "start": 32.32,
+          "end": 32.58,
+          "probability": 0.9639960825443268
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello, Assalamualaikum.  Hello, Assalamualaikum, Ibu Nuni.  Ini jawab, Ibu, yang kayak gitu, Ibu.  Assalamualaikum.  Saya sudah sopan ya, Ibu.  Magi Anda, jelahkan saya kalau saya khasar.  Kalau saya sebar-sebar data, foto-foto Anda, jelahkan saya.  Saya ditunggu jam 8, belum ada pemainan, saya sebar."
+}

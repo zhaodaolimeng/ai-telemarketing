@@ -1,0 +1,313 @@
+{
+  "case_id": "6283111300231809-20260410170158",
+  "file_name": "6283111300231809-20260410170158.mp3",
+  "transcript": [
+    {
+      "start": 4.180000000000001,
+      "end": 7.1,
+      "speaker": "AGENT",
+      "text": " BAYAR HUTANG RUBLOK NUNING ANJING",
+      "words": [
+        {
+          "word": " BAYAR",
+          "start": 4.180000000000001,
+          "end": 5.22,
+          "probability": 0.20848220214247704
+        },
+        {
+          "word": " HUTANG",
+          "start": 5.22,
+          "end": 5.52,
+          "probability": 0.68049289782842
+        },
+        {
+          "word": " RUBLOK",
+          "start": 5.52,
+          "end": 6.0,
+          "probability": 0.5491236373782158
+        },
+        {
+          "word": " NUNING",
+          "start": 6.0,
+          "end": 6.6,
+          "probability": 0.5418042441209158
+        },
+        {
+          "word": " ANJING",
+          "start": 6.6,
+          "end": 7.1,
+          "probability": 0.9311808149019877
+        }
+      ]
+    },
+    {
+      "start": 7.1,
+      "end": 10.12,
+      "speaker": "CUSTOMER",
+      "text": " JUANG MEMEKLO SETAN",
+      "words": [
+        {
+          "word": " JUANG",
+          "start": 7.1,
+          "end": 8.88,
+          "probability": 0.581729531288147
+        },
+        {
+          "word": " MEMEKLO",
+          "start": 8.88,
+          "end": 9.42,
+          "probability": 0.5679476819932461
+        },
+        {
+          "word": " SETAN",
+          "start": 9.42,
+          "end": 10.12,
+          "probability": 0.8048863808314005
+        }
+      ]
+    },
+    {
+      "start": 10.12,
+      "end": 13.0,
+      "speaker": "AGENT",
+      "text": " PLONTE AJA LU KELUARGA LU ANJING",
+      "words": [
+        {
+          "word": " PLONTE",
+          "start": 10.12,
+          "end": 11.64,
+          "probability": 0.34020378316442174
+        },
+        {
+          "word": " AJA",
+          "start": 11.64,
+          "end": 11.86,
+          "probability": 0.5796746537089348
+        },
+        {
+          "word": " LU",
+          "start": 11.86,
+          "end": 12.04,
+          "probability": 0.3807893395423889
+        },
+        {
+          "word": " KELUARGA",
+          "start": 12.04,
+          "end": 12.44,
+          "probability": 0.6307123720645904
+        },
+        {
+          "word": " LU",
+          "start": 12.44,
+          "end": 12.56,
+          "probability": 0.8074926733970642
+        },
+        {
+          "word": " ANJING",
+          "start": 12.56,
+          "end": 13.08,
+          "probability": 0.9879232048988342
+        }
+      ]
+    },
+    {
+      "start": 14.040000000000001,
+      "end": 15.84,
+      "speaker": "CUSTOMER",
+      "text": " NUNING NUNING",
+      "words": [
+        {
+          "word": " NUNING",
+          "start": 14.040000000000001,
+          "end": 15.08,
+          "probability": 0.9144695003827413
+        },
+        {
+          "word": " NUNING",
+          "start": 15.08,
+          "end": 15.84,
+          "probability": 0.7765149076779684
+        }
+      ]
+    },
+    {
+      "start": 15.84,
+      "end": 19.0,
+      "speaker": "AGENT",
+      "text": " KASIAN ANAK LU GASI MAKAN NUIT PINGJOL",
+      "words": [
+        {
+          "word": " KASIAN",
+          "start": 15.84,
+          "end": 16.4,
+          "probability": 0.6645584776997566
+        },
+        {
+          "word": " ANAK",
+          "start": 16.4,
+          "end": 16.64,
+          "probability": 0.8376177847385406
+        },
+        {
+          "word": " LU",
+          "start": 16.64,
+          "end": 16.78,
+          "probability": 0.40292292833328247
+        },
+        {
+          "word": " GASI",
+          "start": 16.78,
+          "end": 16.98,
+          "probability": 0.6105867524941763
+        },
+        {
+          "word": " MAKAN",
+          "start": 16.98,
+          "end": 18.12,
+          "probability": 0.8944922288258871
+        },
+        {
+          "word": " NUIT",
+          "start": 18.12,
+          "end": 18.26,
+          "probability": 0.6277693460385004
+        },
+        {
+          "word": " PINGJOL",
+          "start": 18.26,
+          "end": 19.0,
+          "probability": 0.6195943579077721
+        }
+      ]
+    },
+    {
+      "start": 21.34,
+      "end": 24.78,
+      "speaker": "CUSTOMER",
+      "text": " NGAK MAMPU LO NGASI MAKAN NUIT ANAK",
+      "words": [
+        {
+          "word": " NGAK",
+          "start": 21.34,
+          "end": 22.38,
+          "probability": 0.44610575834910077
+        },
+        {
+          "word": " MAMPU",
+          "start": 22.38,
+          "end": 22.76,
+          "probability": 0.8005689779917399
+        },
+        {
+          "word": " LO",
+          "start": 22.76,
+          "end": 23.06,
+          "probability": 0.5123015642166138
+        },
+        {
+          "word": " NGASI",
+          "start": 23.06,
+          "end": 23.8,
+          "probability": 0.7788698449730873
+        },
+        {
+          "word": " MAKAN",
+          "start": 23.8,
+          "end": 24.02,
+          "probability": 0.9810735185941061
+        },
+        {
+          "word": " NUIT",
+          "start": 24.02,
+          "end": 24.22,
+          "probability": 0.971034566561381
+        },
+        {
+          "word": " ANAK",
+          "start": 24.22,
+          "end": 24.78,
+          "probability": 0.9720262587070465
+        }
+      ]
+    },
+    {
+      "start": 25.900000000000002,
+      "end": 27.18,
+      "speaker": "AGENT",
+      "text": " BAJINGAN LU",
+      "words": [
+        {
+          "word": " BAJINGAN",
+          "start": 25.900000000000002,
+          "end": 26.94,
+          "probability": 0.8856430500745773
+        },
+        {
+          "word": " LU",
+          "start": 26.94,
+          "end": 27.18,
+          "probability": 0.8148534893989563
+        }
+      ]
+    },
+    {
+      "start": 28.18,
+      "end": 31.18,
+      "speaker": "CUSTOMER",
+      "text": " Gawab belom rupanya mulut lho SETAN",
+      "words": [
+        {
+          "word": " Gawab",
+          "start": 28.18,
+          "end": 29.44,
+          "probability": 0.30540214230616886
+        },
+        {
+          "word": " belom",
+          "start": 29.44,
+          "end": 30.06,
+          "probability": 0.0777181307785213
+        },
+        {
+          "word": " rupanya",
+          "start": 30.06,
+          "end": 30.36,
+          "probability": 0.5210470780730247
+        },
+        {
+          "word": " mulut",
+          "start": 30.36,
+          "end": 30.64,
+          "probability": 0.957849770784378
+        },
+        {
+          "word": " lho",
+          "start": 30.64,
+          "end": 30.8,
+          "probability": 0.4685725271701813
+        },
+        {
+          "word": " SETAN",
+          "start": 30.8,
+          "end": 31.42,
+          "probability": 0.31762893268993747
+        }
+      ]
+    },
+    {
+      "start": 34.059999999999995,
+      "end": 35.3,
+      "speaker": "AGENT",
+      "text": " MISIKIN",
+      "words": [
+        {
+          "word": " MISIKIN",
+          "start": 34.059999999999995,
+          "end": 35.3,
+          "probability": 0.30068076960742474
+        }
+      ]
+    }
+  ],
+  "full_text": " BAYAR HUTANG RUBLOK NUNING ANJING  JUANG MEMEKLO SETAN  PLONTE AJA LU KELUARGA LU ANJING  NUNING NUNING  KASIAN ANAK LU GASI MAKAN NUIT PINGJOL  NGAK MAMPU LO NGASI MAKAN NUIT ANAK  BAJINGAN LU  Gawab belom rupanya mulut lho SETAN  MISIKIN"
+}

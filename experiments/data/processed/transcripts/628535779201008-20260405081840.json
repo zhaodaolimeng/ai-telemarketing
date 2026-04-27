@@ -1,0 +1,125 @@
+{
+  "case_id": "628535779201008-20260405081840",
+  "file_name": "628535779201008-20260405081840.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 2.8,
+      "speaker": "AGENT",
+      "text": " Halo sama Tagi?",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 0.0,
+          "end": 1.96,
+          "probability": 0.4831027090549469
+        },
+        {
+          "word": " sama",
+          "start": 1.96,
+          "end": 2.28,
+          "probability": 0.46939754486083984
+        },
+        {
+          "word": " Tagi?",
+          "start": 2.28,
+          "end": 2.8,
+          "probability": 0.5169054865837097
+        }
+      ]
+    },
+    {
+      "start": 4.84,
+      "end": 8.72,
+      "speaker": "AGENT",
+      "text": " Halo dengan Bapak Idus Mara?",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 4.84,
+          "end": 6.24,
+          "probability": 0.8566383719444275
+        },
+        {
+          "word": " dengan",
+          "start": 6.24,
+          "end": 6.48,
+          "probability": 0.8089385628700256
+        },
+        {
+          "word": " Bapak",
+          "start": 6.48,
+          "end": 7.6,
+          "probability": 0.8770534793535868
+        },
+        {
+          "word": " Idus",
+          "start": 7.6,
+          "end": 8.22,
+          "probability": 0.574602410197258
+        },
+        {
+          "word": " Mara?",
+          "start": 8.22,
+          "end": 8.72,
+          "probability": 0.630662590265274
+        }
+      ]
+    },
+    {
+      "start": 10.62,
+      "end": 12.02,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 10.62,
+          "end": 12.02,
+          "probability": 0.9335994720458984
+        }
+      ]
+    },
+    {
+      "start": 13.88,
+      "end": 15.98,
+      "speaker": "AGENT",
+      "text": " Halo sama Tagi?",
+      "words": [
+        {
+          "word": " Halo",
+          "start": 13.88,
+          "end": 15.28,
+          "probability": 0.9673150181770325
+        },
+        {
+          "word": " sama",
+          "start": 15.28,
+          "end": 15.56,
+          "probability": 0.9977903366088867
+        },
+        {
+          "word": " Tagi?",
+          "start": 15.56,
+          "end": 15.98,
+          "probability": 0.9676463901996613
+        }
+      ]
+    },
+    {
+      "start": 19.380000000000003,
+      "end": 20.78,
+      "speaker": "AGENT",
+      "text": " Halo?",
+      "words": [
+        {
+          "word": " Halo?",
+          "start": 19.380000000000003,
+          "end": 20.78,
+          "probability": 0.5312521457672119
+        }
+      ]
+    }
+  ],
+  "full_text": " Halo sama Tagi?  Halo dengan Bapak Idus Mara?  Halo?  Halo sama Tagi?  Halo?"
+}

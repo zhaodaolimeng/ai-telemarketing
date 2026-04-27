@@ -1,0 +1,377 @@
+{
+  "case_id": "6285612626984009-20260418131108",
+  "file_name": "6285612626984009-20260418131108.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 1.18,
+      "speaker": "CUSTOMER",
+      "text": " iya",
+      "words": [
+        {
+          "word": " iya",
+          "start": 0.0,
+          "end": 1.18,
+          "probability": 0.5653960853815079
+        }
+      ]
+    },
+    {
+      "start": 4.0,
+      "end": 4.2,
+      "speaker": "AGENT",
+      "text": " halo",
+      "words": [
+        {
+          "word": " halo",
+          "start": 3.5,
+          "end": 4.2,
+          "probability": 0.0009893382666632533
+        }
+      ]
+    },
+    {
+      "start": 5.0,
+      "end": 5.32,
+      "speaker": "AGENT",
+      "text": " apa?",
+      "words": [
+        {
+          "word": " apa?",
+          "start": 4.62,
+          "end": 5.32,
+          "probability": 0.007538221776485443
+        }
+      ]
+    },
+    {
+      "start": 6.7,
+      "end": 7.14,
+      "speaker": "CUSTOMER",
+      "text": " iya",
+      "words": [
+        {
+          "word": " iya",
+          "start": 6.7,
+          "end": 7.14,
+          "probability": 0.6836355477571487
+        }
+      ]
+    },
+    {
+      "start": 8.0,
+      "end": 9.72,
+      "speaker": "CUSTOMER",
+      "text": " iya ada mamahnya ada",
+      "words": [
+        {
+          "word": " iya",
+          "start": 7.6000000000000005,
+          "end": 8.3,
+          "probability": 0.505014137364924
+        },
+        {
+          "word": " ada",
+          "start": 8.3,
+          "end": 8.88,
+          "probability": 0.7580124735832214
+        },
+        {
+          "word": " mamahnya",
+          "start": 8.88,
+          "end": 9.38,
+          "probability": 0.598023809492588
+        },
+        {
+          "word": " ada",
+          "start": 9.38,
+          "end": 9.72,
+          "probability": 0.785533607006073
+        }
+      ]
+    },
+    {
+      "start": 11.0,
+      "end": 11.1,
+      "speaker": "CUSTOMER",
+      "text": " apa?",
+      "words": [
+        {
+          "word": " apa?",
+          "start": 10.4,
+          "end": 11.1,
+          "probability": 0.057288236916065216
+        }
+      ]
+    },
+    {
+      "start": 12.24,
+      "end": 13.4,
+      "speaker": "CUSTOMER",
+      "text": " mamahnya mama",
+      "words": [
+        {
+          "word": " mamahnya",
+          "start": 12.24,
+          "end": 13.0,
+          "probability": 0.9396329522132874
+        },
+        {
+          "word": " mama",
+          "start": 13.0,
+          "end": 13.4,
+          "probability": 0.19589951634407043
+        }
+      ]
+    },
+    {
+      "start": 15.0,
+      "end": 15.64,
+      "speaker": "CUSTOMER",
+      "text": " iya",
+      "words": [
+        {
+          "word": " iya",
+          "start": 14.940000000000001,
+          "end": 15.64,
+          "probability": 0.7129165977239609
+        }
+      ]
+    },
+    {
+      "start": 15.64,
+      "end": 17.9,
+      "speaker": "CUSTOMER",
+      "text": " iya sama mamahnya deh",
+      "words": [
+        {
+          "word": " iya",
+          "start": 15.64,
+          "end": 16.98,
+          "probability": 0.8599758148193359
+        },
+        {
+          "word": " sama",
+          "start": 16.98,
+          "end": 17.16,
+          "probability": 0.8080981373786926
+        },
+        {
+          "word": " mamahnya",
+          "start": 17.16,
+          "end": 17.64,
+          "probability": 0.8133344153563181
+        },
+        {
+          "word": " deh",
+          "start": 17.64,
+          "end": 17.9,
+          "probability": 0.4753482937812805
+        }
+      ]
+    },
+    {
+      "start": 19.0,
+      "end": 19.6,
+      "speaker": "CUSTOMER",
+      "text": " siapa?",
+      "words": [
+        {
+          "word": " siapa?",
+          "start": 18.900000000000002,
+          "end": 19.6,
+          "probability": 0.5875732153654099
+        }
+      ]
+    },
+    {
+      "start": 21.7,
+      "end": 23.04,
+      "speaker": "AGENT",
+      "text": " mama",
+      "words": [
+        {
+          "word": " mama",
+          "start": 21.7,
+          "end": 23.04,
+          "probability": 0.13407552242279053
+        }
+      ]
+    },
+    {
+      "start": 25.0,
+      "end": 25.66,
+      "speaker": "CUSTOMER",
+      "text": " apa?",
+      "words": [
+        {
+          "word": " apa?",
+          "start": 24.96,
+          "end": 25.66,
+          "probability": 0.9646986126899719
+        }
+      ]
+    },
+    {
+      "start": 26.8,
+      "end": 27.26,
+      "speaker": "AGENT",
+      "text": " mama",
+      "words": [
+        {
+          "word": " mama",
+          "start": 26.8,
+          "end": 27.26,
+          "probability": 0.8437790274620056
+        }
+      ]
+    },
+    {
+      "start": 28.0,
+      "end": 28.18,
+      "speaker": "AGENT",
+      "text": " ibu",
+      "words": [
+        {
+          "word": " ibu",
+          "start": 27.48,
+          "end": 28.18,
+          "probability": 0.48144862707704306
+        }
+      ]
+    },
+    {
+      "start": 30.0,
+      "end": 31.2,
+      "speaker": "AGENT",
+      "text": " siapa?",
+      "words": [
+        {
+          "word": " siapa?",
+          "start": 30.0,
+          "end": 31.2,
+          "probability": 0.01817300566472113
+        }
+      ]
+    },
+    {
+      "start": 31.86,
+      "end": 33.66,
+      "speaker": "CUSTOMER",
+      "text": " siapa, siapa?",
+      "words": [
+        {
+          "word": " siapa,",
+          "start": 31.86,
+          "end": 32.98,
+          "probability": 0.4246165379881859
+        },
+        {
+          "word": " siapa?",
+          "start": 33.1,
+          "end": 33.66,
+          "probability": 0.8014064431190491
+        }
+      ]
+    },
+    {
+      "start": 34.26,
+      "end": 35.22,
+      "speaker": "AGENT",
+      "text": " mama",
+      "words": [
+        {
+          "word": " mama",
+          "start": 34.26,
+          "end": 35.22,
+          "probability": 0.006295832339674234
+        }
+      ]
+    },
+    {
+      "start": 35.22,
+      "end": 35.46,
+      "speaker": "CUSTOMER",
+      "text": " mama",
+      "words": [
+        {
+          "word": " mama",
+          "start": 35.22,
+          "end": 35.46,
+          "probability": 0.0037101823836565018
+        }
+      ]
+    },
+    {
+      "start": 35.46,
+      "end": 35.88,
+      "speaker": "CUSTOMER",
+      "text": " kita",
+      "words": [
+        {
+          "word": " kita",
+          "start": 35.46,
+          "end": 35.88,
+          "probability": 0.026634586974978447
+        }
+      ]
+    },
+    {
+      "start": 35.88,
+      "end": 37.04,
+      "speaker": "CUSTOMER",
+      "text": " siapa?",
+      "words": [
+        {
+          "word": " siapa?",
+          "start": 35.88,
+          "end": 37.04,
+          "probability": 0.21183139222557656
+        }
+      ]
+    },
+    {
+      "start": 37.28,
+      "end": 38.6,
+      "speaker": "UNKNOWN",
+      "text": " siapa?",
+      "words": [
+        {
+          "word": " siapa?",
+          "start": 37.28,
+          "end": 38.6,
+          "probability": 0.6188130378723145
+        }
+      ]
+    },
+    {
+      "start": 39.88,
+      "end": 41.2,
+      "speaker": "AGENT",
+      "text": " siapa",
+      "words": [
+        {
+          "word": " siapa",
+          "start": 39.88,
+          "end": 41.2,
+          "probability": 0.8986521363258362
+        }
+      ]
+    },
+    {
+      "start": 41.2,
+      "end": 42.9,
+      "speaker": "CUSTOMER",
+      "text": " siapa?",
+      "words": [
+        {
+          "word": " siapa?",
+          "start": 41.2,
+          "end": 42.9,
+          "probability": 0.508958101272583
+        }
+      ]
+    }
+  ],
+  "full_text": " iya  halo  apa?  iya  iya ada mamahnya ada  apa?  mamahnya mama  iya  iya sama mamahnya deh  siapa?  mama  apa?  mama  ibu  siapa?  siapa, siapa?  mama  mama  kita  siapa?  siapa?  siapa  siapa?"
+}

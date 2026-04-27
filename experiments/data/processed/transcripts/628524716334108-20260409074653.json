@@ -1,0 +1,417 @@
+{
+  "case_id": "628524716334108-20260409074653",
+  "file_name": "628524716334108-20260409074653.mp3",
+  "transcript": [
+    {
+      "start": 1.4799999999999995,
+      "end": 1.96,
+      "speaker": "AGENT",
+      "text": " Hello?",
+      "words": [
+        {
+          "word": " Hello?",
+          "start": 1.4799999999999995,
+          "end": 1.96,
+          "probability": 0.08003946393728256
+        }
+      ]
+    },
+    {
+      "start": 4.52,
+      "end": 5.0,
+      "speaker": "CUSTOMER",
+      "text": " Hello?",
+      "words": [
+        {
+          "word": " Hello?",
+          "start": 4.52,
+          "end": 5.0,
+          "probability": 0.37689098715782166
+        }
+      ]
+    },
+    {
+      "start": 6.6,
+      "end": 7.08,
+      "speaker": "CUSTOMER",
+      "text": " Ya?",
+      "words": [
+        {
+          "word": " Ya?",
+          "start": 6.6,
+          "end": 7.08,
+          "probability": 0.3424287736415863
+        }
+      ]
+    },
+    {
+      "start": 8.24,
+      "end": 8.72,
+      "speaker": "CUSTOMER",
+      "text": " Ya?",
+      "words": [
+        {
+          "word": " Ya?",
+          "start": 8.24,
+          "end": 8.72,
+          "probability": 0.07994304597377777
+        }
+      ]
+    },
+    {
+      "start": 8.96,
+      "end": 10.2,
+      "speaker": "AGENT",
+      "text": " Ya, ini",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 8.96,
+          "end": 9.44,
+          "probability": 0.365691602230072
+        },
+        {
+          "word": " ini",
+          "start": 9.7,
+          "end": 10.2,
+          "probability": 0.6081386208534241
+        }
+      ]
+    },
+    {
+      "start": 11.68,
+      "end": 14.44,
+      "speaker": "AGENT",
+      "text": " ada aplikasi skala ini, ini namanya bisa dibayarkan yang berapa?",
+      "words": [
+        {
+          "word": " ada",
+          "start": 11.68,
+          "end": 12.16,
+          "probability": 0.014834699220955372
+        },
+        {
+          "word": " aplikasi",
+          "start": 12.16,
+          "end": 12.64,
+          "probability": 0.86687038342158
+        },
+        {
+          "word": " skala",
+          "start": 12.64,
+          "end": 13.18,
+          "probability": 0.41208693385124207
+        },
+        {
+          "word": " ini,",
+          "start": 13.18,
+          "end": 13.38,
+          "probability": 0.23621030151844025
+        },
+        {
+          "word": " ini",
+          "start": 13.4,
+          "end": 13.54,
+          "probability": 0.15895718336105347
+        },
+        {
+          "word": " namanya",
+          "start": 13.54,
+          "end": 13.68,
+          "probability": 0.5112028121948242
+        },
+        {
+          "word": " bisa",
+          "start": 13.68,
+          "end": 13.9,
+          "probability": 0.09305472671985626
+        },
+        {
+          "word": " dibayarkan",
+          "start": 13.9,
+          "end": 14.14,
+          "probability": 0.7017198801040649
+        },
+        {
+          "word": " yang",
+          "start": 14.14,
+          "end": 14.28,
+          "probability": 0.2180720865726471
+        },
+        {
+          "word": " berapa?",
+          "start": 14.28,
+          "end": 14.44,
+          "probability": 0.3962637037038803
+        }
+      ]
+    },
+    {
+      "start": 14.46,
+      "end": 15.08,
+      "speaker": "AGENT",
+      "text": " Ya, ya.",
+      "words": [
+        {
+          "word": " Ya,",
+          "start": 14.46,
+          "end": 14.58,
+          "probability": 0.7397505044937134
+        },
+        {
+          "word": " ya.",
+          "start": 15.08,
+          "end": 15.08,
+          "probability": 0.7921576499938965
+        }
+      ]
+    },
+    {
+      "start": 16.26,
+      "end": 17.4,
+      "speaker": "CUSTOMER",
+      "text": " Oh, visa tau kan?",
+      "words": [
+        {
+          "word": " Oh,",
+          "start": 16.26,
+          "end": 16.74,
+          "probability": 0.19960293173789978
+        },
+        {
+          "word": " visa",
+          "start": 16.88,
+          "end": 17.12,
+          "probability": 0.10165400803089142
+        },
+        {
+          "word": " tau",
+          "start": 17.12,
+          "end": 17.32,
+          "probability": 0.612201452255249
+        },
+        {
+          "word": " kan?",
+          "start": 17.32,
+          "end": 17.4,
+          "probability": 0.6491192579269409
+        }
+      ]
+    },
+    {
+      "start": 17.46,
+      "end": 17.74,
+      "speaker": "AGENT",
+      "text": " Yang berapa?",
+      "words": [
+        {
+          "word": " Yang",
+          "start": 17.46,
+          "end": 17.5,
+          "probability": 0.15763704478740692
+        },
+        {
+          "word": " berapa?",
+          "start": 17.5,
+          "end": 17.74,
+          "probability": 0.9458554685115814
+        }
+      ]
+    },
+    {
+      "start": 19.38,
+      "end": 21.54,
+      "speaker": "CUSTOMER",
+      "text": " Ini pa, saya lagi yang juga.",
+      "words": [
+        {
+          "word": " Ini",
+          "start": 19.38,
+          "end": 19.86,
+          "probability": 0.20666378736495972
+        },
+        {
+          "word": " pa,",
+          "start": 19.86,
+          "end": 20.14,
+          "probability": 0.20925776660442352
+        },
+        {
+          "word": " saya",
+          "start": 20.36,
+          "end": 20.5,
+          "probability": 0.9289522767066956
+        },
+        {
+          "word": " lagi",
+          "start": 20.5,
+          "end": 21.3,
+          "probability": 0.9063263535499573
+        },
+        {
+          "word": " yang",
+          "start": 21.3,
+          "end": 21.42,
+          "probability": 0.7653258442878723
+        },
+        {
+          "word": " juga.",
+          "start": 21.42,
+          "end": 21.54,
+          "probability": 0.18927215039730072
+        }
+      ]
+    },
+    {
+      "start": 21.82,
+      "end": 23.12,
+      "speaker": "CUSTOMER",
+      "text": " Oke, saya...",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 21.82,
+          "end": 22.3,
+          "probability": 0.6232876777648926
+        },
+        {
+          "word": " saya...",
+          "start": 22.44,
+          "end": 23.12,
+          "probability": 0.33495190739631653
+        }
+      ]
+    },
+    {
+      "start": 23.12,
+      "end": 25.14,
+      "speaker": "CUSTOMER",
+      "text": " Yang tiga ya, pak?",
+      "words": [
+        {
+          "word": " Yang",
+          "start": 23.12,
+          "end": 23.48,
+          "probability": 0.004262356087565422
+        },
+        {
+          "word": " tiga",
+          "start": 23.48,
+          "end": 24.92,
+          "probability": 0.6296229660511017
+        },
+        {
+          "word": " ya,",
+          "start": 24.92,
+          "end": 25.02,
+          "probability": 0.8528611063957214
+        },
+        {
+          "word": " pak?",
+          "start": 25.08,
+          "end": 25.14,
+          "probability": 0.4208788573741913
+        }
+      ]
+    },
+    {
+      "start": 25.24,
+      "end": 26.44,
+      "speaker": "CUSTOMER",
+      "text": " Yang tiga, ya.",
+      "words": [
+        {
+          "word": " Yang",
+          "start": 25.24,
+          "end": 25.42,
+          "probability": 0.815701425075531
+        },
+        {
+          "word": " tiga,",
+          "start": 25.42,
+          "end": 25.98,
+          "probability": 0.7877704203128815
+        },
+        {
+          "word": " ya.",
+          "start": 26.34,
+          "end": 26.44,
+          "probability": 0.8251488208770752
+        }
+      ]
+    },
+    {
+      "start": 26.44,
+      "end": 26.52,
+      "speaker": "CUSTOMER",
+      "text": " Ya.",
+      "words": [
+        {
+          "word": " Ya.",
+          "start": 26.44,
+          "end": 26.52,
+          "probability": 0.029532143846154213
+        }
+      ]
+    },
+    {
+      "start": 27.74,
+      "end": 29.06,
+      "speaker": "AGENT",
+      "text": " Oke, yang tiga ya, pak?",
+      "words": [
+        {
+          "word": " Oke,",
+          "start": 27.74,
+          "end": 28.22,
+          "probability": 0.22628042101860046
+        },
+        {
+          "word": " yang",
+          "start": 28.46,
+          "end": 28.62,
+          "probability": 0.011166583746671677
+        },
+        {
+          "word": " tiga",
+          "start": 28.62,
+          "end": 28.86,
+          "probability": 0.5123598352074623
+        },
+        {
+          "word": " ya,",
+          "start": 28.86,
+          "end": 28.96,
+          "probability": 0.42876920104026794
+        },
+        {
+          "word": " pak?",
+          "start": 28.98,
+          "end": 29.06,
+          "probability": 0.1522526890039444
+        }
+      ]
+    },
+    {
+      "start": 29.26,
+      "end": 30.56,
+      "speaker": "CUSTOMER",
+      "text": " Terima kasih.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 29.26,
+          "end": 29.56,
+          "probability": 0.15584172157105058
+        },
+        {
+          "word": " kasih.",
+          "start": 29.56,
+          "end": 30.56,
+          "probability": 0.9977036118507385
+        }
+      ]
+    }
+  ],
+  "full_text": " Hello?  Hello?  Ya?  Ya?  Ya, ini  ada aplikasi skala ini, ini namanya bisa dibayarkan yang berapa?  Ya, ya.  Oh, visa tau kan?  Yang berapa?  Ini pa, saya lagi yang juga.  Oke, saya...  Yang tiga ya, pak?  Yang tiga, ya.  Ya.  Oke, yang tiga ya, pak?  Terima kasih."
+}

@@ -1,0 +1,233 @@
+{
+  "case_id": "6285713278574809-20260411080129",
+  "file_name": "6285713278574809-20260411080129.mp3",
+  "transcript": [
+    {
+      "start": 0.0,
+      "end": 3.14,
+      "speaker": "CUSTOMER",
+      "text": " Semuat baik, selamat datang di layangan pesan suara.",
+      "words": [
+        {
+          "word": " Semuat",
+          "start": 0.0,
+          "end": 0.32,
+          "probability": 0.4409169778227806
+        },
+        {
+          "word": " baik,",
+          "start": 0.32,
+          "end": 0.54,
+          "probability": 0.1753559410572052
+        },
+        {
+          "word": " selamat",
+          "start": 0.76,
+          "end": 1.04,
+          "probability": 0.8369466662406921
+        },
+        {
+          "word": " datang",
+          "start": 1.04,
+          "end": 1.48,
+          "probability": 0.9964902400970459
+        },
+        {
+          "word": " di",
+          "start": 1.48,
+          "end": 1.7,
+          "probability": 0.9762364029884338
+        },
+        {
+          "word": " layangan",
+          "start": 1.7,
+          "end": 2.08,
+          "probability": 0.7962129712104797
+        },
+        {
+          "word": " pesan",
+          "start": 2.08,
+          "end": 2.7,
+          "probability": 0.6228271126747131
+        },
+        {
+          "word": " suara.",
+          "start": 2.7,
+          "end": 3.14,
+          "probability": 0.9839445650577545
+        }
+      ]
+    },
+    {
+      "start": 3.36,
+      "end": 5.16,
+      "speaker": "CUSTOMER",
+      "text": " Welcome to Poy Smell Service.",
+      "words": [
+        {
+          "word": " Welcome",
+          "start": 3.36,
+          "end": 3.72,
+          "probability": 0.6590607166290283
+        },
+        {
+          "word": " to",
+          "start": 3.72,
+          "end": 4.08,
+          "probability": 0.9826334118843079
+        },
+        {
+          "word": " Poy",
+          "start": 4.08,
+          "end": 4.36,
+          "probability": 0.39515283703804016
+        },
+        {
+          "word": " Smell",
+          "start": 4.36,
+          "end": 4.72,
+          "probability": 0.5557390004396439
+        },
+        {
+          "word": " Service.",
+          "start": 4.72,
+          "end": 5.16,
+          "probability": 0.780951738357544
+        }
+      ]
+    },
+    {
+      "start": 5.56,
+      "end": 8.9,
+      "speaker": "AGENT",
+      "text": " Silahkan rekam pesan suara setelah mendengar nada berikut.",
+      "words": [
+        {
+          "word": " Silahkan",
+          "start": 5.56,
+          "end": 6.02,
+          "probability": 0.9536149303118387
+        },
+        {
+          "word": " rekam",
+          "start": 6.02,
+          "end": 6.34,
+          "probability": 0.7308456003665924
+        },
+        {
+          "word": " pesan",
+          "start": 6.34,
+          "end": 6.66,
+          "probability": 0.9326785206794739
+        },
+        {
+          "word": " suara",
+          "start": 6.66,
+          "end": 7.04,
+          "probability": 0.9953229129314423
+        },
+        {
+          "word": " setelah",
+          "start": 7.04,
+          "end": 7.68,
+          "probability": 0.7923480371634165
+        },
+        {
+          "word": " mendengar",
+          "start": 7.68,
+          "end": 8.12,
+          "probability": 0.9867431322733561
+        },
+        {
+          "word": " nada",
+          "start": 8.12,
+          "end": 8.46,
+          "probability": 0.4559081494808197
+        },
+        {
+          "word": " berikut.",
+          "start": 8.46,
+          "end": 8.9,
+          "probability": 0.9885737895965576
+        }
+      ]
+    },
+    {
+      "start": 9.16,
+      "end": 12.26,
+      "speaker": "CUSTOMER",
+      "text": " Pekan tombol apapun untuk menyelesaikan rekaman.",
+      "words": [
+        {
+          "word": " Pekan",
+          "start": 9.16,
+          "end": 9.46,
+          "probability": 0.6847375382979711
+        },
+        {
+          "word": " tombol",
+          "start": 9.46,
+          "end": 9.78,
+          "probability": 0.7535587847232819
+        },
+        {
+          "word": " apapun",
+          "start": 9.78,
+          "end": 10.42,
+          "probability": 0.8672687808672587
+        },
+        {
+          "word": " untuk",
+          "start": 10.42,
+          "end": 10.86,
+          "probability": 0.875171422958374
+        },
+        {
+          "word": " menyelesaikan",
+          "start": 10.86,
+          "end": 11.66,
+          "probability": 0.9795141667127609
+        },
+        {
+          "word": " rekaman.",
+          "start": 11.66,
+          "end": 12.26,
+          "probability": 0.9701353013515472
+        }
+      ]
+    },
+    {
+      "start": 49.800000000000004,
+      "end": 51.2,
+      "speaker": "AGENT",
+      "text": " Terima kasih kerana menonton.",
+      "words": [
+        {
+          "word": " Terima",
+          "start": 49.800000000000004,
+          "end": 51.2,
+          "probability": 0.3455357067286968
+        },
+        {
+          "word": " kasih",
+          "start": 51.2,
+          "end": 51.2,
+          "probability": 0.9214761257171631
+        },
+        {
+          "word": " kerana",
+          "start": 51.2,
+          "end": 51.2,
+          "probability": 0.5464334040880203
+        },
+        {
+          "word": " menonton.",
+          "start": 51.2,
+          "end": 51.2,
+          "probability": 0.9045857191085815
+        }
+      ]
+    }
+  ],
+  "full_text": " Semuat baik, selamat datang di layangan pesan suara.  Welcome to Poy Smell Service.  Silahkan rekam pesan suara setelah mendengar nada berikut.  Pekan tombol apapun untuk menyelesaikan rekaman.  Terima kasih kerana menonton."
+}
