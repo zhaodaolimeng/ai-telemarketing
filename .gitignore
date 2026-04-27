@@ -72,7 +72,22 @@ data/
 experiments/data/
 experiments/audio/
 experiments/docs/
-docs/
+
+# Docs containing sensitive customer/dialogue data
+docs/all_246_dialogues.md
+docs/所有对话完整记录.md
+docs/complete_phrase_library.md
+docs/完整话术库与对话模板.md
+docs/final_effective_talk_script.md
+docs/chatbot_test_report.md
+docs/ctm_analysis.md
+docs/evaluation_benchmark.md
+docs/evaluation_summary_final.md
+docs/evaluation_framework_final_summary.md
+docs/技术方案评估报告.md
+docs/项目实施规划与评估.md
+docs/h2_h1_s0_analysis.md
+docs/TODO.md
 
 # Customer-specific data
 *customer*
