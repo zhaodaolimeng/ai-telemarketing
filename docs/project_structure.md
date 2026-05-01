@@ -1,183 +1,208 @@
-# AI智能催收项目 - 完整结构
+# 智能催收对话系统 - 项目结构
+
+## 项目概述
+智能语音催收系统 - 基于AI的自动化债务提醒与协商对话平台
+
+---
+
+## 目录结构
 
 ```
 ai-telemarketing/
-├── .git/                                      # Git版本控制
-├── README.md                                  # 项目说明
-│
-├── docs/                                      # 文档目录
-│   ├── TODO.md                                # 项目任务清单
-│   ├── 业务背景.md                            # 业务背景说明
-│   ├── 分析总结.md                            # 初步分析总结
-│   ├── 智能语音话术开发指南.md               # 智能语音指南
-│   ├── 完整话术库与对话模板.md                # 话术库与模板
-│   ├── 所有对话完整记录.md                    # 246个对话记录
-│   ├── h2_h1_s0_analysis.md                   # 环节分析
-│   ├── ctm_analysis.md                        # CTM分析
-│   ├── chatbot_test_report.md                 # 机器人测试报告
-│   ├── final_effective_talk_script.md         # 最终有效话术
-│   ├── project_structure.md                   # 本文档 - 项目结构
-│   │
-│   ├── requirements/                          # 需求文档
+├── src/                           # 源代码
+│   ├── api/                       # FastAPI后端服务
+│   │   ├── __init__.py
+│   │   ├── main.py               # API主入口 + 端点定义
+│   │   ├── database.py           # SQLAlchemy模型和数据库连接
+│   │   ├── schemas.py            # Pydantic请求/响应模型
+│   │   └── README.md
+│   ├── core/                      # 生产引擎（核心算法）
+│   │   ├── __init__.py
+│   │   ├── chatbot.py            # 11状态对话机器人（TTS集成）
+│   │   ├── simulator.py           # 7种客户类型模拟器（5级抗拒）
+│   │   ├── evaluation.py          # 增强版评测框架
+│   │   ├── translator.py          # 翻译引擎
+│   │   ├── metrics.py             # 指标收集系统
+│   │   ├── llm_fallback.py        # LLM Fallback架构
+│   │   └── voice/                 # 语音处理子包
+│   │       ├── __init__.py
+│   │       ├── vad.py             # 语音活动检测（VAD）
+│   │       ├── interruption.py    # 智能打断处理
+│   │       └── tts.py             # TTS引擎抽象
+│   ├── experiments/               # 实验和分析
+│   │   ├── __init__.py            # 向后兼容 re-export core 模块
 │   │   ├── README.md
-│   │   ├── 00-项目概述.md
-│   │   ├── 01-业务流程.md
-│   │   ├── 02-功能需求.md
-│   │   ├── 03-核心能力需求.md
-│   │   ├── 04-场景特定需求.md
-│   │   ├── 05-性能指标要求.md
-│   │   ├── 06-催收策略需求.md
-│   │   ├── 07-用户画像与标签体系.md
-│   │   ├── 08-话术选择与动态调整需求.md
-│   │   └── 09-催收效果评估与分析需求.md
-│   │
-│   └── design/                                # 设计文档
-│       ├── README.md
-│       └── 01-技术选型.md
-│
-└── experiments/                               # 实验目录
-    ├── README.md
-    ├── requirements.txt                       # Python依赖
-    │
-    ├── data/                                 # 数据目录
-    │   ├── chat-sample/                       # 音频样本
-    │   │   └── *.mp3 (287个音频文件)
-    │   │
-    │   ├── label-chat-sample.xlsx             # 标签文件（包含H2/H1/S0）
-    │   ├── cases.csv                          # 案例数据
-    │   │
-    │   └── processed/                         # 处理后的数据
-    │       ├── transcripts/                   # 转写结果
-    │       │   └── *.json (287个转写文件)
-    │       │
-    │       ├── final_analysis.json            # 初步分析结果
-    │       ├── all_287_analysis.json          # 完整分析结果
-    │       ├── chat_group_analysis.json       # 环节分析结果
-    │       ├── chatbot_test_results.json      # 机器人测试结果
-    │       ├── comprehensive_analysis.json    # 综合分析
-    │       ├── ctm_analysis.json              # CTM分析
-    │       ├── test_diarization_result.json   # 测试结果
-    │       └── all_dialogues_output.txt      # 对话输出
-    │
-    ├── scripts/                               # 核心脚本
-    │   ├── transcribe.py                      # 语音转写
-    │   └── analyze.py                         # 话术分析
-    │
-    ├── notebooks/                             # Jupyter笔记本
-    │   └── 00-语音转写测试.ipynb
-    │
-    ├── docs/                                  # 实验文档
-    │   ├── 01-数据说明.md
-    │   ├── 02-分析方法.md
-    │   ├── 03-状态发现.md
-    │   ├── 04-话术分析.md
-    │   ├── 05-实验总结.md
-    │   ├── 实验结果总结.md
-    │   └── 调研-本地语音转写方案.md
-    │
-    ├── collection_chatbot_v2.py              # 对话机器人（最新版）
-    ├── collection_chatbot.py                # 对话机器人（旧版）
-    ├── analyze_all_287.py                  # 287个音频分析
-    ├── analyze_by_ctm.py                   # 按CTM分析
-    ├── analyze_by_chat_group.py            # 按环节分析
-    ├── check_new_labels.py                # 检查新标签
-    ├── export_all_246.py                 # 导出246个对话
-    ├── comprehensive_dialogue_analysis.py # 综合分析
-    ├── check_full_labels.py              # 检查标签
-    ├── check_labels.py                    # 检查标签
-    ├── transcribe_all_remaining.py         # 批量转写
-    ├── transcribe_more.py                # 批量转写（旧版）
-    ├── final_analysis.py                  # 最终分析
-    ├── test_transcribe.py                # 转写测试
-    ├── simple_transcribe.py              # 简单转写
-    ├── tiny_transcribe.py               # 轻量转写
-    ├── test_diarization.py               # 说话人分离测试
-    └── test_analyze.py                   # 分析测试
+│   │   ├── scripts/               # 数据处理脚本
+│   │   │   ├── __init__.py
+│   │   │   ├── transcribe.py      # 语音转写
+│   │   │   ├── diarize.py         # 说话人分离
+│   │   │   ├── analyze.py         # 分析脚本
+│   │   │   └── extract_features.py # 特征提取
+│   │   ├── analysis/              # 分析脚本归档
+│   │   │   ├── analyze_all.py
+│   │   │   ├── analyze_all_287.py
+│   │   │   ├── analyze_by_chat_group.py
+│   │   │   ├── analyze_by_ctm.py
+│   │   │   └── ...
+│   │   ├── training/              # 对抗训练脚本
+│   │   │   ├── baseline_test.py
+│   │   │   ├── enhanced_test.py
+│   │   │   └── training_loop.py
+│   │   ├── archive/               # 历史版本归档
+│   │   │   ├── collection_chatbot.py        # v1
+│   │   │   ├── collection_chatbot_v2.py     # v2
+│   │   │   ├── real_customer_simulator.py   # v1
+│   │   │   └── evaluation_framework.py      # v1
+│   │   ├── notebooks/             # Jupyter Notebooks
+│   │   ├── docs/                  # 实验文档
+│   │   ├── check_labels.py        # 标签检查
+│   │   ├── enhanced_customer_simulator.py
+│   │   ├── user_profile.py
+│   │   └── verify_short_term.py
+│   ├── tests/                     # 测试文件
+│   │   ├── __init__.py
+│   │   ├── test_api.py
+│   │   └── run_small_scale_test.py # 批量生产测试
+│   └── static/                    # 前端静态文件
+│       ├── index.html            # 对话Demo网页
+│       └── app.js                # 前端交互逻辑
+├── data/                          # 所有数据（Git忽略）
+├── docs/                          # 项目文档
+│   ├── requirements/             # 需求文档
+│   ├── design/                   # 设计文档
+│   ├── 业务背景.md
+│   ├── 分析总结.md
+│   └── ...
+├── init_db.py                     # 数据库初始化
+├── start_demo.py                  # Demo启动脚本
+├── requirements.txt               # 依赖列表
+└── README.md                      # 项目说明
 ```
 
 ---
 
-## 核心数据统计
+## 核心模块说明
 
-### 音频数据
-- **总音频数**: 287个
-- **音频格式**: .mp3
-- **语言**: 印尼语
-- **时长**: 10-60秒
+### 1. API层 (src/api/)
+**职责**: 提供REST接口，服务化对话功能
 
-### 标签数据
-- **标签文件**: `label-chat-sample.xlsx`
-- **chat_group**: H2/H1/S0 (三个催收环节)
-- **repay_type**: repay/extend/NaN (还款/延期/未还款)
-- **reloan_flag**: 0 (复借标记)
-- **seats_name**: CTM-040/CTM-077/CTM-039/CTM-014/CTM-070等
+| 文件 | 说明 |
+|------|------|
+| main.py | API端点 + 应用初始化 |
+| database.py | 数据库模型 (ChatSession, ChatTurn, ScriptLibrary 等) |
+| schemas.py | 请求/响应数据结构 |
 
-### 转写数据
-- **转写文件**: 287个JSON
-- **有效对话**: 246个（排除语音信箱）
-- **成功对话**: 144个
-- **失败对话**: 102个
+### 2. 核心引擎层 (src/core/)
+**职责**: 对话机器人、客户模拟、语音处理、评测框架
 
----
+| 文件 | 说明 |
+|------|------|
+| chatbot.py | 11状态对话状态机，TTS集成，变量替换 |
+| simulator.py | 7种客户类型，5级抗拒程度，40+拒绝借口 |
+| evaluation.py | 多维度评测框架，成功率统计 |
+| translator.py | 翻译引擎（MarianMT 本地模型） |
+| metrics.py | 监控指标收集系统 |
+| llm_fallback.py | LLM Fallback 架构（v4） |
+| voice/vad.py | 能量基础VAD，语音检测 |
+| voice/interruption.py | 智能打断处理，播放控制 |
+| voice/tts.py | TTS引擎抽象（Edge-TTS / Coqui-TTS） |
 
-## 项目成果
-
-### 1. 数据处理阶段
-- ✅ 287个音频全部转写完成
-- ✅ 语音信箱自动检测过滤
-- ✅ 说话人分离（Agent/Customer）
-
-### 2. 分析阶段
-- ✅ 按环节（H2/H1/S0）分析
-- ✅ 按CTM坐席分析
-- ✅ 成功/失败对话对比
-- ✅ 高频话术提取
-- ✅ 话术差异分析
-
-### 3. 话术库阶段
-- ✅ 建立按环节分类的话术库
-- ✅ 整理对话模板
-- ✅ 提取关键成功要素
-
-### 4. 机器人阶段
-- ✅ 实现状态对话机器人
-- ✅ 7个状态完整流程
-- ✅ 测试10个场景
-- ✅ 70%成功率
+### 3. 实验层 (src/experiments/)
+**职责**: 数据分析、对抗训练、历史版本归档
 
 ---
 
-## 核心发现
+## 数据库设计
 
-### 关键成功要素
-1. **适当停顿** (...) - 最重要！
-2. **多次确认** (Ya, ya, ya.)
-3. **简洁开场** (Halo?)
-4. **主动等待** (Saya tunggu ya.)
-5. **礼貌结束** (Terima kasih.)
-
-### 环节成功率
-- **H2**: 73.0% (早期催收，成功率最高)
-- **H1**: 38.9% (中期催收)
-- **S0**: 37.9% (晚期催收，成功率最低)
+```
+表结构:
+1. ChatSession         # 会话记录
+2. ChatTurn            # 对话回合
+3. ScriptLibrary       # 话术库
+4. TestScenario        # 测试场景
+5. TestResult          # 测试结果
+6. MetricLog           # 指标日志
+```
 
 ---
 
-## 文件快速索引
+## 已完成的里程碑
 
-### 查找话术
-- `docs/final_effective_talk_script.md` - 最终有效话术
-- `docs/完整话术库与对话模板.md` - 话术库
-- `docs/h2_h1_s0_analysis.md` - 环节话术分析
+### 短期 (1-2个月) - ✅ 完成
+1. 完整对话状态机 (11状态)
+2. Edge-TTS语音合成
+3. 14个测试场景，85.7%成功率（增强版评测框架 v2: 83.3%）
+4. 对话日志记录
 
-### 查找对话数据
-- `experiments/data/processed/transcripts/` - 287个转写
-- `docs/all_246_dialogues.md` - 246个有效对话
+### 中期 (2-4个月) - 基本完成
+1. FastAPI服务封装 ✅
+2. 数据库设计 ✅
+3. VAD语音活动检测 ✅
+4. 智能打断处理 ✅
+5. 翻译引擎抽象 ✅
+6. 管理后台API ✅
+7. 监控指标 ✅
+8. 小范围生产测试框架 ✅
 
-### 查看机器人测试
-- `docs/chatbot_test_report.md` - 测试报告
-- `experiments/collection_chatbot_v2.py` - 机器人代码
+### 待完成 (按优先级)
+| P0 | 优化ASR延迟（流式） |
+|----|---------------------|
+| P0 | 小范围生产测试执行 |
+| P1 | 接入真实ASR服务 |
+| P1 | 完善打断策略 |
+| P2 | 对话流程可视化编排 |
+| P2 | 数据分析仪表板 |
+| P3 | 大规模生产测试（10000通） |
 
-### 查看业务背景
-- `docs/业务背景.md` - 业务背景
-- `docs/requirements/` - 完整需求文档
+---
+
+## 快速开始
+
+### 1. 安装依赖
+```bash
+pip install -r requirements.txt
+```
+
+### 2. 初始化数据库
+```bash
+python init_db.py
+```
+
+### 3. 启动服务
+```bash
+python start_demo.py
+```
+
+### 4. 访问Demo
+- 网页: http://localhost:8000/
+- API文档: http://localhost:8000/docs
+
+### 5. 运行评测
+```bash
+# 基础评测（14个 golden case）
+python src/core/evaluation.py --num-tests 0
+
+# 批量测试
+python src/tests/run_small_scale_test.py 50
+```
+
+---
+
+## 技术栈
+
+| 层级 | 技术 |
+|------|------|
+| 后端框架 | FastAPI + Pydantic |
+| 数据库 | SQLite + SQLAlchemy |
+| 语音合成 | Edge-TTS (优先) / Coqui-TTS (自建) |
+| 语音活动检测 | 能量基础VAD |
+| 翻译 | MarianMT (本地) |
+| 前端 | 原生HTML/JS |
+
+---
+
+## 安全说明
+
+- 所有敏感文档（对话记录、客户数据）已排除在Git之外
+- .gitignore包含完整的安全规则
+- 仅技术文档提交到仓库

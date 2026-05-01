@@ -3,6 +3,10 @@
 """
 初始化数据库
 """
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent / "src"))
+
 from api.database import init_db, init_script_library, get_db
 
 print("正在初始化数据库...")

@@ -3,19 +3,23 @@
 ## 目录
 
 - [技术选型](01-技术选型.md) - 技术方案调研与选择
-- [系统架构](02-系统架构.md) - 系统总体架构设计
-- [API设计](03-API设计.md) - API接口设计
+
+> 注: 系统架构、API设计等文档尚未编写（规划中）。当前系统设计参见:
+> - `docs/PROJECT_STRUCTURE.md` - 项目结构与模块说明
+> - `docs/LLM_FALLBACK_DESIGN.md` - LLM Fallback 架构设计
+> - `docs/ROBUST_TRAINING.md` - 红黑对抗训练框架设计
 
 ## 快速查看
 
 ### 核心技术选型
-- **TTS**：Coqui TTS (VITS) - 高质量语音合成
-- **ASR**：Faster-Whisper - 快速准确的语音识别
-- **NLU**：分阶段 - 规则→轻量LLM
+- **TTS**：Edge-TTS (优先) / Coqui TTS (自建备用)
+- **ASR**：Faster-Whisper (规划中)
+- **NLU**：规则引擎 + LLM Fallback
 - **后端**：Python + FastAPI
-- **语言**：印尼文、英文
+- **数据库**：SQLite + SQLAlchemy
+- **语言**：印尼文
 
 ### 架构路线
-- **阶段1**：MVP，验证核心语音能力
-- **阶段2**：优化，提升音质和准确率
-- **阶段3**：扩展，多语种和能力增强
+- **阶段1**：MVP，验证核心语音能力 (已完成)
+- **阶段2**：优化，提升音质和准确率 (进行中)
+- **阶段3**：扩展，多语种和能力增强 (规划中)

@@ -28,6 +28,9 @@ env/
 # IDE
 .vscode/
 .idea/
+
+# Claude Code
+.claude/
 *.swp
 *.swo
 *~
@@ -69,9 +72,7 @@ data/chatbot_tests/
 data/evaluations/
 data/audio/
 data/
-experiments/data/
-experiments/audio/
-experiments/docs/
+src/experiments/docs/
 
 # Docs containing sensitive customer/dialogue data
 docs/all_246_dialogues.md

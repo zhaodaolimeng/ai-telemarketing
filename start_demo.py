@@ -7,6 +7,8 @@ import uvicorn
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent / "src"))
+
 print("=" * 70)
 print("🤖 智能催收对话系统 - Demo")
 print("=" * 70)
