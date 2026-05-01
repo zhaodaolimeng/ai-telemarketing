@@ -7,15 +7,74 @@
 import sys
 import json
 import random
+from abc import ABC, abstractmethod
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional, Any
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass, asdict, field
 
 sys.path.append(str(Path(__file__).parent.parent))
 
 from core.simulator import RealCustomerSimulatorV2, GOLDEN_TEST_CASES_V2
 from core.chatbot import CollectionChatBot, ChatState
+
+# ==================== 可插拔抽象接口 ====================
+class SimulatorInterface(ABC):
+    """模拟器通用接口，所有类型的模拟器都必须实现此接口"""
+    @abstractmethod
+    def generate_response(
+        self,
+        stage: str,
+        chat_group: str,
+        persona: str,
+        resistance_level: str,
+        last_agent_text: str,
+        push_count: int,
+        **kwargs
+    ) -> str:
+        """
+        生成用户回复
+        :param stage: 当前对话阶段
+        :param chat_group: 催收阶段（H2/H1/S0）
+        :param persona: 用户类型
+        :param resistance_level: 抗拒程度
+        :param last_agent_text: 上一轮机器人回复
+        :param push_count: 追问次数
+        :param kwargs: 扩展参数
+        :return: 用户回复文本
+        """
+        pass
+
+@dataclass
+class TestCase:
+    """通用测试用例结构"""
+    chat_group: str
+    persona: str
+    description: str
+    expected_success: bool
+    resistance_level: str = "medium"
+    metadata: Dict[str, Any] = field(default_factory=dict)
+
+class TestCaseProviderInterface(ABC):
+    """测试用例提供接口，支持从不同来源获取测试用例"""
+    @abstractmethod
+    def get_test_cases(self) -> List[TestCase]:
+        """获取所有测试用例"""
+        pass
+
+# ==================== 默认实现（保持向后兼容）====================
+class DefaultRuleSimulator(SimulatorInterface):
+    """默认规则模拟器适配器，兼容原有RealCustomerSimulatorV2"""
+    def __init__(self):
+        self._impl = RealCustomerSimulatorV2()
+
+    def generate_response(self, **kwargs) -> str:
+        return self._impl.generate_response(**kwargs)
+
+class DefaultGoldenTestCaseProvider(TestCaseProviderInterface):
+    """默认Golden测试用例提供器，兼容原有GOLDEN_TEST_CASES_V2"""
+    def get_test_cases(self) -> List[TestCase]:
+        return [TestCase(*case) for case in GOLDEN_TEST_CASES_V2]
 
 
 @dataclass
@@ -37,10 +96,25 @@ class EvaluationResult:
 
 
 class EvaluationFrameworkV2:
-    """增强版智能催收对话系统测评框架"""
+    """增强版智能催收对话系统测评框架
+    支持可插拔的模拟器和测试用例提供器
+    """
 
-    def __init__(self, use_tts: bool = False):
-        self.simulator = RealCustomerSimulatorV2()
+    def __init__(
+        self,
+        simulator: Optional[SimulatorInterface] = None,
+        test_case_provider: Optional[TestCaseProviderInterface] = None,
+        use_tts: bool = False
+    ):
+        """
+        构造函数
+        :param simulator: 模拟器实例，不传则使用默认规则模拟器
+        :param test_case_provider: 测试用例提供器，不传则使用默认Golden用例
+        :param use_tts: 是否启用TTS
+        """
+        # 依赖注入，默认使用原有实现，保持向后兼容
+        self.simulator = simulator or DefaultRuleSimulator()
+        self.test_case_provider = test_case_provider or DefaultGoldenTestCaseProvider()
         self.use_tts = use_tts
         self.results: List[EvaluationResult] = []
 
@@ -228,20 +302,28 @@ class EvaluationFrameworkV2:
             if result.success:
                 self.stats["by_resistance_level"][result.resistance_level]["success"] += 1
 
-    async def run_full_evaluation(self, num_additional_tests: int = 20):
-        """运行完整测评"""
+    async def run_full_evaluation(self, num_additional_tests: int = 20, run_golden_cases: bool = True):
+        """
+        运行完整测评
+        :param num_additional_tests: 额外随机测试数量
+        :param run_golden_cases: 是否运行Golden测试用例
+        """
         print("=" * 70)
         print("增强版智能催收对话系统测评")
         print("=" * 70)
 
-        print("\n【阶段1】Golden测试用例")
-        print("-" * 70)
+        if run_golden_cases:
+            print("\n【阶段1】Golden测试用例")
+            print("-" * 70)
 
-        for test_case in GOLDEN_TEST_CASES_V2:
-            chat_group, persona, description, expected_success, resistance_level = test_case
-            await self.run_single_test(
-                chat_group, persona, description, expected_success, resistance_level
-            )
+            for test_case in self.test_case_provider.get_test_cases():
+                await self.run_single_test(
+                    test_case.chat_group,
+                    test_case.persona,
+                    test_case.description,
+                    test_case.expected_success,
+                    test_case.resistance_level
+                )
 
         if num_additional_tests > 0:
             print(f"\n【阶段2】额外随机测试 ({num_additional_tests}个)")
