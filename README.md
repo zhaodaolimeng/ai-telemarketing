@@ -42,7 +42,8 @@ ai-telemarketing/
 │   │   ├── schemas.py            # Pydantic请求/响应模型
 │   │   └── README.md
 │   ├── core/                      # 核心生产引擎
-│   │   ├── chatbot.py            # 12状态对话机器人（含LLM Fallback）
+│   │   ├── chatbot.py            # 12状态对话机器人（含规则+ML混合意图识别、LLM Fallback）
+│   │   ├── simple_classifier.py   # 轻量级朴素贝叶斯意图分类器（规则系统补充）
 │   │   ├── simulator.py           # 7种客户类型模拟器（5级抗拒）
 │   │   ├── evaluation.py          # 多维度评测框架
 │   │   ├── translator.py          # 印尼文-中文翻译引擎
@@ -53,6 +54,8 @@ ai-telemarketing/
 │   │       ├── interruption.py    # 智能打断处理
 │   │       └── tts.py             # TTS引擎抽象（Edge-TTS/Coqui-TTS）
 │   ├── experiments/               # 数据分析与实验
+│   │   ├── train_classifier.py   # ML分类器训练脚本
+│   │   ├── example_ml_usage.py   # ML功能使用示例
 │   │   ├── scripts/               # 数据处理脚本
 │   │   ├── analysis/              # 分析脚本归档
 │   │   ├── training/               # 红黑对抗训练脚本
@@ -61,19 +64,33 @@ ai-telemarketing/
 │   │   └── README.md
 │   ├── tests/                     # 自动化测试
 │   │   ├── test_api.py
-│   │   └── run_small_scale_test.py
+│   │   ├── test_intent_accuracy.py # 意图识别准确率测试
+│   │   ├── test_full_demo.py      # 完整对话流程Demo测试
+│   │   ├── test_demo_functionality.py # Demo功能测试
+│   │   └── run_small_scale_test.py # 批量生产测试
 │   └── static/                    # 前端Demo页面
+├── scripts/                       # 工具脚本（标注、数据处理）
+│   ├── annotation_tool.py         # 标注工具
+│   ├── batch_annotate.py          # 批量标注脚本
+│   ├── quick_annotate.py          # 快速标注脚本
+│   ├── annotation_helper.py       # 标注辅助工具
+│   ├── extract_unknown_for_annotation.py # 提取unknown意图用于标注
+│   ├── fix_annotation_issues.py   # 修复标注问题
+│   ├── prepare_gold_dataset.py    # 准备黄金数据集
+│   └── ci_playback_test.py        # CI回放测试
 ├── data/                          # 数据文件（Git忽略，包含录音、转写等）
 ├── docs/                          # 项目文档
 │   ├── requirements/              # 需求文档
 │   ├── design/                     # 设计文档
+│   ├── evaluation/                 # 评估体系与测试报告
 │   ├── PROJECT_STRUCTURE.md       # 项目结构详细说明
 │   ├── LLM_FALLBACK_DESIGN.md     # LLM兜底架构设计
 │   ├── ROBUST_TRAINING.md         # 红黑对抗训练框架
 │   └── 业务背景.md                 # 业务背景资料
 ├── start_demo.py                  # Demo启动脚本
 ├── init_db.py                     # 数据库初始化脚本
-└── requirements.txt               # Python依赖列表
+├── requirements.txt               # Python基础依赖列表
+└── requirements_ml.txt            # ML扩展依赖列表
 ```
 
 ## 技术栈
@@ -83,7 +100,8 @@ ai-telemarketing/
 | 数据库 | SQLite + SQLAlchemy |
 | 语音合成 | Edge-TTS（优先）/ Coqui-TTS（自建备用） |
 | 语音识别 | Faster-Whisper（规划中） |
-| 自然语言理解 | 规则引擎 + LLM Fallback混合架构 |
+| 自然语言理解 | 规则引擎 + 朴素贝叶斯ML分类器 + LLM Fallback三级混合架构 |
+| 机器学习 | scikit-learn（轻量级意图分类） |
 | 语音活动检测 | 能量基础VAD |
 | 翻译引擎 | MarianMT（本地模型） |
 | 前端 | 原生HTML/JavaScript |
@@ -95,11 +113,17 @@ ai-telemarketing/
 
 ### 本地开发启动
 ```bash
-# 安装依赖
+# 安装基础依赖
 pip install -r requirements.txt
+
+# 安装ML分类器可选依赖（启用意图分类增强）
+pip install -r requirements_ml.txt
 
 # 初始化数据库
 python init_db.py
+
+# 训练ML意图分类器（可选，需要黄金数据集已包含预训练模型）
+python src/experiments/train_classifier.py
 
 # 启动Demo服务
 python start_demo.py
@@ -120,6 +144,10 @@ docker run -d -p 8000:8000 ai-telemarketing-api
 
 ### 运行评测
 ```bash
+# 意图识别准确率测试
+python src/tests/test_intent_accuracy.py          # 纯规则系统测试
+python src/tests/test_intent_accuracy.py --use-ml  # 规则+ML混合系统测试
+
 # 14个基础场景评测（golden case）- 使用默认规则模拟器
 python src/core/evaluation.py --num-tests 0
 
@@ -134,6 +162,9 @@ python src/core/evaluation.py --case-id <case_id>
 
 # 批量生产测试（50次随机场景）
 python src/tests/run_small_scale_test.py 50
+
+# 完整对话流程Demo测试
+python src/tests/test_full_demo.py
 
 # 运行单元测试
 python src/tests/test_simulator.py
@@ -154,6 +185,10 @@ python src/tests/test_simulator.py
 - ✅ 翻译引擎抽象
 - ✅ LLM Fallback混合架构
 - ✅ 红黑对抗训练框架
+- ✅ 规则+ML混合意图识别架构（准确率提升~25%）
+- ✅ 意图识别准确率优化（纯规则50.8% → 混合系统~77%）
+- ✅ 机器人重复回复问题修复（多版本话术+去重逻辑）
+- ✅ 印尼语ASR错误纠正优化（全字匹配替换，避免误改业务词汇）
 - 🔄 真实ASR服务接入
 - 🔄 小范围生产测试
 - 🔄 打断策略优化

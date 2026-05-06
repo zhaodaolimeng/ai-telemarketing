@@ -18,7 +18,8 @@ ai-telemarketing/
 │   │   └── README.md
 │   ├── core/                      # 生产引擎（核心算法）
 │   │   ├── __init__.py
-│   │   ├── chatbot.py            # 11状态对话机器人（TTS集成）
+│   │   ├── chatbot.py            # 12状态对话机器人（规则+ML混合意图识别+LLM Fallback）
+│   │   ├── simple_classifier.py   # 轻量级朴素贝叶斯意图分类器
 │   │   ├── simulator.py           # 7种客户类型模拟器（5级抗拒）
 │   │   ├── evaluation.py          # 增强版评测框架
 │   │   ├── translator.py          # 翻译引擎
@@ -62,10 +63,22 @@ ai-telemarketing/
 │   ├── tests/                     # 测试文件
 │   │   ├── __init__.py
 │   │   ├── test_api.py
+│   │   ├── test_intent_accuracy.py # 意图识别准确率测试
+│   │   ├── test_full_demo.py      # 完整对话流程Demo测试
+│   │   ├── test_demo_functionality.py # Demo功能测试
 │   │   └── run_small_scale_test.py # 批量生产测试
 │   └── static/                    # 前端静态文件
 │       ├── index.html            # 对话Demo网页
 │       └── app.js                # 前端交互逻辑
+├── scripts/                       # 工具脚本
+│   ├── annotation_tool.py         # 标注工具
+│   ├── batch_annotate.py          # 批量标注脚本
+│   ├── quick_annotate.py          # 快速标注脚本
+│   ├── annotation_helper.py       # 标注辅助工具
+│   ├── extract_unknown_for_annotation.py # 提取unknown意图用于标注
+│   ├── fix_annotation_issues.py   # 修复标注问题
+│   ├── prepare_gold_dataset.py    # 准备黄金数据集
+│   └── ci_playback_test.py        # CI回放测试
 ├── data/                          # 所有数据（Git忽略）
 ├── docs/                          # 项目文档
 │   ├── requirements/             # 需求文档

@@ -16,6 +16,13 @@ from datetime import datetime
 import sys
 import io
 
+# 可选：导入简易ML分类器
+try:
+    from core.simple_classifier import SimpleIntentClassifier
+    ML_CLASSIFIER_AVAILABLE = True
+except ImportError:
+    ML_CLASSIFIER_AVAILABLE = False
+
 # 确保输出编码正确
 if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -240,7 +247,6 @@ class ASRCorrector:
         "Ufah Nau": "Uang",
         "Kuala": "Nanti lah",
         "kemaren": "hari ini",
-        "tunggu": "bayar",
         "Jalan waktu itu": "Baik, jam 10 ya",
         "Extra Uang": "Uang Extra",
         "Uang extra": "Uang Extra",
@@ -281,11 +287,15 @@ class ASRCorrector:
         "rb": "ribu",
         "juta": "juta",
         "jt": "juta",
+        "wang": "uang",
+        "wangnya": "uangnya",
+        "buktifnya": "buktinya",
     }
 
     @classmethod
     def correct(cls, text: str) -> str:
         """纠正ASR识别错误"""
+        import re
         if not text:
             return text
 
@@ -293,52 +303,228 @@ class ASRCorrector:
         # 按错误字符串长度从长到短排序，避免短的错误先被替换掉
         sorted_corrections = sorted(cls.ASR_CORRECTIONS.items(), key=lambda x: len(x[0]), reverse=True)
         for error, correct in sorted_corrections:
-            # 全字匹配替换
-            corrected_text = corrected_text.replace(error, correct)
+            # 全字匹配替换，使用单词边界符，避免替换单词内部的子字符串
+            # 对包含特殊正则字符的错误字符串进行转义
+            error_escaped = re.escape(error)
+            corrected_text = re.sub(rf'\b{error_escaped}\b', correct, corrected_text, flags=re.IGNORECASE)
 
         return corrected_text
 
 
 class IntentDetector:
-    """用户意图识别器 - 规则式，按照优先级顺序匹配，越靠前优先级越高"""
+    """用户意图识别器 - 混合规则式+轻量级ML分类器
+    优先使用规则系统匹配，未匹配到则使用ML分类器作为fallback
+    """
+
+    # ML分类器缓存（类变量，全局共享）
+    _ml_classifier = None
+    _ml_threshold = 0.6  # ML分类结果置信度阈值，低于这个值还是返回unknown
+    _use_ml_fallback = True  # 是否启用ML fallback
 
     # 注意顺序：越具体的意图越靠前，避免被更通用的意图匹配覆盖
     INTENT_PATTERNS = [
         ("deny_identity", [r"\bbukan\b", r"\bsalah nomor\b", r"\banda salah orang\b", r"\bsaya tidak kenal\b", r"\bini bukan nomornya\b", r"\bsalah orang\b", r"\bbukan orang yang anda cari\b"]),
-        ("busy_later", [r"\bsibuk\b", r"\bnanti ya\b", r"\bsaya lagi diluar\b", r"\bnanti saya hubungi balik\b", r"\bsebentar lagi\b", r"\bsaya lagi mengemudi\b", r"\bsaya sedang rapat\b", r"\bnanti saya telepon kembali\b", r"\bsaya tidak bisa bicara sekarang\b"]),
+        ("busy_later", [r"\bsibuk\b", r"\bnanti ya\b(?!.*bayar|.*transfer)", r"\bnanti dulu ya\b", r"\bnanti.*ya\b(?!.*bayar|.*transfer)", r"\bsaya lagi diluar\b", r"\bnanti saya hubungi balik\b", r"\bsebentar lagi\b", r"\bsaya lagi mengemudi\b", r"\bsaya sedang rapat\b", r"\bnanti saya telepon kembali\b", r"\bsaya tidak bisa bicara sekarang\b"]),
         ("threaten", [r"\bsaya akan laporkan ke ojk\b", r"\bsaya akan lapor polisi\b", r"\banda ancam saya\b", r"\bsaya akan lapor ke pihak berwenang\b", r"\bsaya akan komplain\b", r"\bancam\b", r"\blapor\b"]),
-        ("ask_extension", [r"\bperpanjang\b", r"\bperpanjangan\b", r"\bbisa nggak diperpanjang\b", r"\bextension\b", r"\btunda bayar\b", r"\bbisa ditunda ya\b", r"\bsaya mau perpanjang\b", r"\bberapa hari bisa ditunda\b", r"\bnanti minggu depan baru bisa bayar\b"]),
-        ("ask_amount", [r"\bberapa\b", r"\bjumlahnya berapa\b", r"\btagihan berapa\b", r"\bbesarnya berapa\b", r"\bberapa nominalnya\b", r"\bbesar tagihan\b", r"\bberapa bayarnya\b"]),
+        ("ask_extension", [r"\bperpanjang\b", r"\bdiperpanjang\b", r"\bperpanjangan\b", r"\bbisa tidak diperpanjang\b", r"\bbisa nggak diperpanjang\b", r"\bbisa gak diperpanjang\b", r"\bextension\b", r"\btunda bayar\b", r"\bditunda\b", r"\bbisa ditunda ya\b", r"\bsaya mau perpanjang\b", r"\bberapa hari bisa ditunda\b", r"\bnanti minggu depan baru bisa bayar\b", r"\bkasih waktu\b", r"\bbisa kasih waktu\b", r"\btunda dulu\b", r"\bperpanjang waktu\b", r"\bbutuh waktu lagi\b", r"\bbisa tunggu sampai\b", r"\bmau tunda bayar\b"]),
+        ("ask_amount", [r"\bjumlahnya berapa\b", r"\btagihan berapa\b", r"\bbesarnya berapa\b", r"\bberapa nominalnya\b", r"\bbesar tagihan\b", r"\bberapa bayarnya\b"]),
         ("question_identity", [r"\bsiapa kamu\b", r"\banda dari mana\b", r"\bmana buktinya\b", r"\bsaya tidak percaya\b", r"\bpenipuan\b", r"\bapakah ini penipuan\b", r"\banda siapa\b", r"\bsaya tidak pinjam\b", r"\btidak pernah pinjam\b"]),
-        ("no_money", [r"\btidak ada duit\b", r"\bsaya tidak punya uang\b", r"\blagi susah\b", r"\belum ada uang\b", r"\bsaya sedang kesulitan keuangan\b", r"\buang saya belum masuk\b", r"\bgaji belum cair\b", r"\bsulit\b", r"\bkesulitan\b", r"\bkeberatan\b", r"\btidak mampu\b", r"\belum mampu\b"]),
-        ("confirm_time", [r"\bjam [0-9]+", r"\bjp [0-9]+", r"\bhari ini\b", r"\bbesok\b", r"\blinggu ini\b", r"\bsaya bayar jam [0-9]+", r"\bnanti jam [0-9]+", r"\bjam [0-9]+ ya\b", r"\bsore hari\b", r"\bpagi hari\b", r"\bsiang hari\b", r"\bnanti sore\b", r"\bnanti pagi\b", r"\bjam berapa\b", r"\btanggal berapa\b", r"\bhari apa\b", r"\bnanti sore\b"]),
-        ("agree_to_pay", [r"\bsiap bayar\b", r"\bolehan\b", r"\bbisa\b", r"\bok\b", r"\bsetuju\b", r"\bsaya akan bayar\b", r"\bsaya bayar nanti\b", r"\bnanti saya transfer\b", r"\bsaya bayar besok\b", r"\bsaya proses sekarang\b", r"\bsaya bayar hari ini\b", r"\baiya, saya bayar\b", r"\bbaik, saya bayar\b", r"\bsaya bayar\b", r"\btransfer segera\b"]),
-        ("refuse_to_pay", [r"\btidak mau bayar\b", r"\bgak bayar\b", r"\bsaya tidak akan bayar\b", r"\bsaya tidak mau membayar\b", r"\btidak usah ditagih\b", r"\bsaya tidak bayar\b", r"\btidak bayar\b"]),
-        ("greeting", [r"\bhalo\b", r"\bhai\b", r"\bpagi\b", r"\bsiang\b", r"\bsore\b", r"\bselamat pagi\b", r"\bselamat siang\b", r"\bselamat sore\b", r"\bselamat malam\b", r"\bapa kabar\b", r"\bhi\b", r"\bhello\b"]),
-        ("confirm_identity", [r"\biya\b", r"\betul\b", r"\bya\b", r"\baiya benar\b", r"\bsaya adalah\b", r"\baiya ini\b", r"\bbetul saya\b", r"\bbaik\b", r"\biya, ini saya\b", r"\benar, saya yang\b", r"\benar\b", r"\biya betul\b"]),
+        ("request_identity_verification", [r"\bbuktikan kamu dari extra uang\b", r"\bmana kartu identitas kamu\b", r"\bsaya mau lihat surat kuasa\b", r"\bapakah kamu benar dari extra uang\b", r"\bbuktikan kamu petugas resmi\b"]),
+        ("request_interest_reduction", [r"\bbisa kurangi bunga\b", r"\bbisa kurangin bunga", r"\bbisa hapus denda\b", r"\bpotongan biaya\b", r"\bkurangi denda keterlambatan\b", r"\bkurangin denda keterlambatan\b", r"\bbisa tidak denda dihilangkan\b", r"\bturunin bunga\b", r"\bbisa turunin bunga\b", r"\bkurangin dong bunganya\b", r"\bbunganya terlalu tinggi\b", r"\bbunga terlalu tinggi\b", r"\bbiaya terlalu mahal\b"]),
+        ("request_short_extension", [r"\bbisa tunggu 3 hari lagi\b", r"\bberi waktu 2 hari ya\b", r"\btunda dulu 5 hari\b", r"\bsaya bayar minggu depan ya\b", r"\bbisa kasih waktu beberapa hari\b", r"\bkasih 2 hari\b", r"\bkasih 3 hari ya\b", r"\btunda 3 hari\b"]),
+        ("complain_high_interest", [r"\bbunganya terlalu tinggi\b", r"\bbiaya terlalu mahal\b", r"\bkenapa bunga begitu besar\b", r"\bwaktu pinjam tidak dijelaskan biaya tinggi\b", r"\bbunganya selangit\b"]),
+        ("app_uninstalled", [r"\bsaya sudah hapus aplikasinya\b", r"\bapk sudah dihapus\b", r"\btidak ada aplikasi nya\b", r"\bsaya tidak instal aplikasinya\b", r"\blupa password aplikasi\b"]),
+        ("request_payment_reminder", [r"\bkirim pengingat ke whatsapp saya\b", r"\bsms kan detail tagihan\b", r"\bkirim pesan tagihan ya\b", r"\bingetin saya nanti ya\b", r"\bkirim bukti tagihan ke hp saya\b"]),
+        ("request_settlement_proof", [r"\bsaya mau surat keterangan lunas\b", r"\bberikan bukti sudah lunas\b", r"\bbagaimana cara dapat surat lunas\b", r"\bsaya perlu bukti pembayaran\b"]),
+        ("inquire_consequences", [r"\bjika tidak bayar bagaimana\b", r"\bakibatnya apa kalau tidak bayar\b", r"\bapa yang terjadi jika saya tidak bayar\b", r"\bkalau tidak bayar ada apa ya\b"]),
+        ("borrowing_money", [r"\bsaya sedang pinjam uang dulu\b", r"\bsaya sedang kumpulkan uang\b", r"\bsedang cari uang untuk bayar\b", r"\bsaya sedang minta tolong temen\b", r"\bsedang pinjam ke saudara\b"]),
+        ("transfer_in_process", [r"\bsaya sedang transfer sekarang\b", r"\bsedang proses transfer\b", r"\bsudah mau transfer\b", r"\bsedang isi rekening dulu\b", r"\bsedang bayar sekarang\b"]),
+        ("no_money", [r"\btidak ada duit\b", r"\bbelum ada duit\b", r"\bsaya tidak punya uang\b", r"\bsaya belum punya uang\b", r"\bsaya tidak punya duit\b", r"\bsaya belum punya duit\b", r"\blagi susah\b", r"\belum ada uang\b", r"\bsaya sedang kesulitan keuangan\b", r"\buang saya belum masuk\b", r"\bgaji belum cair\b", r"\bsulit\b", r"\bkesulitan\b", r"\bkeberatan\b", r"\btidak mampu\b", r"\belum mampu\b"]),
+        ("agree_to_pay", [r"\bsiap bayar\b", r"\bolehan\b", r"\bsetuju\b", r"\bsaya akan bayar\b", r"\bsaya bayar nanti\b", r"\bnanti saya transfer\b", r"\bsaya bayar besok\b", r"\bsaya proses sekarang\b", r"\bsaya bayar hari ini\b", r"\baiya, saya bayar\b", r"\bbaik, saya bayar\b", r"\bsaya bayar\b", r"\btransfer segera\b", r"\bsaya akan transfer\b", r"\bnanti saya bayar\b", r"\bsaya akan bayar segera\b", r"\bsaya akan proses pembayaran\b", r"\bsaya bayar nanti ya\b", r"\bya saya bayar\b", r"\biya saya bayar\b", r"\bobayarnya saya transfer nanti\b", r"\bayar nanti ya\b", r"\bsaya akan bayar ya\b", r"\bok saya bayar\b", r"\boke saya bayar\b", r"\bok\b.*\bbayar", r"\bok\b.*\btransfer", r"\bok\b.*\buang", r"\bok\b.*\btagihan", r"\bok\b.*\bpembayaran", r"\boke\b.*\bbayar", r"\boke\b.*\btransfer", r"\boke\b.*\buang", r"\boke\b.*\btagihan", r"\boke\b.*\bpembayaran", r"\bya\b.*\bbayar", r"\bya\b.*\btransfer", r"\bya\b.*\buang", r"\bya\b.*\btagihan", r"\bya\b.*\bpembayaran", r"\biya\b.*\bbayar", r"\biya\b.*\btransfer", r"\biya\b.*\buang", r"\biya\b.*\btagihan", r"\biya\b.*\bpembayaran", r"\bbetul\b.*\bbayar", r"\bbetul\b.*\btransfer", r"\bbetul\b.*\buang", r"\bbetul\b.*\btagihan", r"\bbetul\b.*\bpembayaran", r"\bbaik\b.*\bbayar", r"\bbaik\b.*\btransfer", r"\bbaik\b.*\buang", r"\bbaik\b.*\btagihan", r"\bbaik\b.*\bpembayaran", r"\bsaya tunggu ya\b", r"\btunggu.*bayar", r"\btunggu.*pembayaran", r"\bnanti saya bayar ya\b", r"\bada pembayaran masuk\b", r"\bakan dibayarkan\b", r"\bsudah dibayarkan\b", r"\bsaya sudah transfer\b", r"\bsaya kirim nanti\b", r"\bnanti saya kirim\b", r"\bsaya proses dulu\b", r"\bproses pembayaran\b", r"\bsaya akan bayarnya nanti\b", r"\bobayarnya nanti ya\b", r"\bbayarnya nanti saja\b", r"\bsaya transfer nanti\b", r"\bbukti transfer\b", r"\bbukti pembayaran\b", r"\bkirim.*bukti\b", r"\bkirim.*buktinya\b", r"\bterima kasih saya bayar\b", r"\bok saya transfer\b", r"\boke saya transfer\b", r"\biya saya transfer\b", r"\bya saya transfer\b", r"\bsaya akan kirim\b", r"\bsaya bayar jam [0-9]+", r"\bsaya transfer jam [0-9]+", r"\bnanti jam [0-9]+ saya bayar\b", r"\bjam [0-9]+ saya bayar\b", r"\bjam [0-9]+ ya saya bayar\b", r"\bsaya bayar besok\b", r"\bsaya bayar hari ini\b", r"\bsaya bayar nanti sore\b", r"\bsaya bayar nanti pagi\b", r"\bsaya bayar siang ini\b", r"\bpukul [0-9]+ saya bayar\b", r"\bjam [0-9]+ saya transfer\b", r"\bbesok saya bayar\b", r"\bhari ini saya bayar\b", r"\bnanti sore saya bayar\b", r"\bpasti di jam [0-9]+ sudah dibayarkan\b", r"\bsudah dibayarkan jam [0-9]+\b", r"\bakan dibayarkan jam [0-9]+\b", r"\bsaya bayar tanggal [0-9]+\b", r"\bsaya bayar minggu depan\b", r"\bsaya bayar lusa\b", r"\bbayar\b", r"\bdibayar\b", r"\btransfer\b", r"\bproses\b", r"\bpembayaran\b"]),
+        ("confirm_time", [r"\bjam [0-9]+ ya\s*$", r"\bbesok jam [0-9]+\b", r"\bhari ini jam [0-9]+\b", r"\bnanti sore jam [0-9]+\b", r"\bjuga jam [0-9]+\b", r"\bjam [0-9]+\b", r"\bpukul [0-9]+\b", r"\btanggal [0-9]+\b", r"\bbesok\b", r"\bhari ini\b", r"\bnanti sore\b", r"\bnanti pagi\b", r"\bsiang ini\b", r"\bminggu depan\b", r"\blusa\b"]),
+        ("greeting", [r"^\s*halo\b", r"^\s*hai\b", r"^\s*pagi\b", r"^\s*siang\b", r"^\s*sore\b", r"^\s*selamat pagi\b", r"^\s*selamat siang\b", r"^\s*selamat sore\b", r"^\s*selamat malam\b", r"^\s*apa kabar\b", r"^\s*hi\b", r"^\s*hello\b", r"^\s*maaf\b", r"^\s*terima kasih\b", r"^\s*selamat datang\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*selamat\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*pagi\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*siang\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*sore\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*malam\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*halo\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*hai\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*apa kabar\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*terima kasih\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*maaf\b", r".*\bselamat pagi\b", r".*\bselamat siang\b", r".*\bselamat sore\b", r".*\bselamat malam\b", r".*\bapa kabar\b", r".*\bmaaf\b", r".*\bterima kasih\b", r".*\bhalo\b", r".*\bhai\b"]),
+        ("confirm_identity", [
+            # 明确的身份确认表达，去掉纯确认词的规则，交给上下文逻辑和ML处理
+            r"\bsaya adalah\b",
+            r"\baiya ini\b",
+            r"\bbetul saya\b",
+            r"\biya, ini saya\b",
+            r"\benar, saya yang\b",
+            r"\biya betul\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\bada apa\b",
+            r"\bya ada apa\b",
+            r"\biya ada apa\b",
+            r"\bsaya iya\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\bya saya\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\biya saya\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\bbetul ini\b",
+            r"\biya betul ini\b",
+            r"\bini saya\b",
+            r"\bsaya yang\b",
+            r"\bbiarkan saya\b",
+            r"\bmau, saya\b",
+            r"\bsaya mau\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\bya betul\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\biya bener\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\bya bener\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\benar saya\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\biya benar saya\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\bya saya itu\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\biya saya itu\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\betul saya itu\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\benar saya itu\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\saya sendiri\b",
+            r"\biya saya sendiri\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\bya saya sendiri\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            r"\betul saya sendiri\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)"
+        ]),
+        ("refuse_to_pay", [r"\btidak mau bayar\b", r"\bgak bayar\b", r"\btak bayar\b", r"\bsaya tidak akan bayar\b", r"\bsaya tidak mau membayar\b", r"\btidak usah ditagih\b", r"\bsaya tidak bayar\b", r"\btidak bayar\b", r"\bgak bisa bayar\b", r"\btidak bisa bayar\b", r"\bbelum bisa bayar\b", r"\bsaya belum bisa bayar\b", r"\bsaya gak bisa bayar\b", r"\bsaya tidak bisa bayar\b"]),
         ("ask_fee", [r"\bbunga berapa\b", r"\bdenda berapa\b", r"\bbiaya admin berapa\b", r"\bkenapa begitu besar\b", r"\bbiaya berapa\b"]),
         ("ask_payment_method", [r"\btransfer kemana\b", r"\brekening mana\b", r"\bnomor rekening\b", r"\bbayar kemana\b", r"\bagaimana cara bayar\b"]),
         ("already_paid", [r"\bsudah bayar\b", r"\bsudah transfer\b", r"\bsaya sudah bayar\b", r"\btadi sudah bayar\b", r"\bsudah dibayar\b"]),
         ("partial_payment", [r"\bmau bayar berapa\b", r"\bbisa bayar setengah dulu\b", r"\bbayar sebagian\b", r"\bcicil\b", r"\bayar sedikit dulu\b"]),
-        ("third_party", [r"\bkeluarga dia\b", r"\borang tua dia\b", r"\banak dia\b", r"\bsaudara dia\b", r"\bdia tidak ada\b", r"\bsaya bukan orang yang anda cari\b", r"\bdia sedang keluar\b"]),
+        ("third_party", [r"\bkeluarga dia\b", r"\borang tua dia\b", r"\banak dia\b", r"\bsaudara dia\b", r"\bdia tidak ada\b", r"\bsaya bukan orang yang anda cari\b", r"\bdia sedang keluar\b", r"\borangnya ga ada\b", r"\borangnya tidak ada\b"]),
         ("dont_know", [r"\btidak tahu\b", r"\bsaya tidak tahu\b", r"\btidak mengerti\b", r"\btidak paham\b", r"\bsaya tidak paham\b"]),
     ]
 
+    # 付款请求相关的关键词，用于上下文判断
+    PAYMENT_REQUEST_KEYWORDS = [
+        r"\bbayar\b", r"\btagihan\b", r"\btransfer\b", r"\bpembayaran\b", r"\blunas\b",
+        r"\bjam berapa\b", r"\bkapan\b", r"\bwaktu\b", r"\btanggal\b",
+        r"\bbisa bayar\b", r"\bmau bayar\b", r"\bakan bayar\b",
+    ]
+
+    # 身份验证相关的关键词，用于上下文判断
+    IDENTITY_REQUEST_KEYWORDS = [
+        r"\bbisa bicara\b", r"\bapakah benar\b", r"\bini bapak\b", r"\bini ibu\b",
+        r"\bsaya dari extra uang\b", r"\bpetugas extra uang\b",
+        r"\bverifikasi identitas\b", r"\bkonfirmasi identitas\b",
+    ]
+
+    # 独立的确认词
+    STANDALONE_CONFIRMATION_PATTERNS = [
+        r"^\s*ya\s*[.,!?]?\s*$",
+        r"^\s*iya\s*[.,!?]?\s*$",
+        r"^\s*oke\s*[.,!?]?\s*$",
+        r"^\s*ok\s*[.,!?]?\s*$",
+        r"^\s*baik\s*[.,!?]?\s*$",
+        r"^\s*betul\s*[.,!?]?\s*$",
+    ]
+
     @classmethod
-    def detect(cls, text: str) -> str:
-        """识别用户意图，按照优先级顺序匹配"""
+    def detect(cls, text: str, context: str = None) -> str:
+        """识别用户意图，按照优先级顺序匹配
+        :param context: 上下文，即上一条机器人的消息，用于歧义判断
+        """
         if not text:
             return "unknown"
 
         text_lower = text.lower()
 
+        # 首先检查是否是独立的确认词，如果是，用上下文判断
+        if context is not None:
+            is_standalone_confirmation = False
+            for pattern in cls.STANDALONE_CONFIRMATION_PATTERNS:
+                import re
+                if re.search(pattern, text_lower, re.IGNORECASE):
+                    is_standalone_confirmation = True
+                    break
+
+            if is_standalone_confirmation:
+                context_lower = context.lower()
+                # 检查上下文是否是付款请求
+                for pattern in cls.PAYMENT_REQUEST_KEYWORDS:
+                    import re
+                    if re.search(pattern, context_lower, re.IGNORECASE):
+                        return "agree_to_pay"
+                # 检查上下文是否是身份验证请求
+                for pattern in cls.IDENTITY_REQUEST_KEYWORDS:
+                    import re
+                    if re.search(pattern, context_lower, re.IGNORECASE):
+                        return "confirm_identity"
+
+        # ========== 新增：纯确认词特殊处理逻辑 ==========
+        # 前置检查：如果文本包含支付相关关键词，跳过纯确认逻辑，避免误判
+        payment_words = {"bayar", "transfer", "tagihan", "lunas", "waktu", "jam", "tanggal", "rekening", "bukti"}
+        has_payment_word = any(word in text_lower for word in payment_words)
+
+        # 先判断是否是纯确认词（只有ya/oke/baik/betul等，没有其他内容，支持重复如"oke oke"、"ya ya"）
+        import re
+        pure_confirmation_pattern = r"^\s*(ya|iya|oke|ok|baik|betul|benar)(\s*[,]?\s*(ya|iya|oke|ok|baik|betul|benar|pak|bu|tunggu))*\s*[.,!?]?\s*$"
+        is_pure_confirmation = bool(re.search(pure_confirmation_pattern, text_lower, re.IGNORECASE)) and not has_payment_word
+
+        if is_pure_confirmation and context is not None:
+            context_lower = context.lower()
+            # 上下文是身份验证相关 → 优先判定为confirm_identity (避免身份问题带支付关键词时误判)
+            identity_keywords = [
+                r"\bbapak\b", r"\bpak\b", r"\bibu\b", r"\bbu\b", r"\bsiapa\b", r"\bapakah\b",
+                r"\bbenar\b", r"\bini anda\b", r"\bini dengan\b", r"\bverifikasi\b",
+                r"\bkenalan\b", r"\bnama\b", r"\bbisa bicara\b", r"\byang punya pinjaman\b"
+            ]
+            for pattern in identity_keywords:
+                if re.search(pattern, context_lower, re.IGNORECASE):
+                    return "confirm_identity"
+
+            # 上下文是支付/还款相关请求 → 判定为agree_to_pay
+            payment_keywords = [
+                r"\bbayar\b", r"\btagihan\b", r"\btransfer\b", r"\bpembayaran\b", r"\blunas\b",
+                r"\brekening\b", r"\bbukti transfer\b", r"\bbayar kapan\b", r"\bbisa bayar\b",
+                r"\bmau bayar\b", r"\bjumlah tagihan\b"
+            ]
+            for pattern in payment_keywords:
+                if re.search(pattern, context_lower, re.IGNORECASE):
+                    return "agree_to_pay"
+
+            # 没有匹配到任何上下文关键词时，默认短确认是身份确认（大部分场景下是对身份问题的回答）
+            # 注：短确认回复问候时通常也是身份确认，如"Halo Pak" → "Ya?"，所以不需要单独处理问候场景
+            return "confirm_identity"
+
+        # ========== 正常的模式匹配 ==========
         for intent, patterns in cls.INTENT_PATTERNS:
             for pattern in patterns:
-                import re
                 if re.search(pattern, text_lower, re.IGNORECASE):
                     return intent
 
+        # ========== ML fallback：规则未匹配到时，尝试用ML分类器预测 ==========
+        if cls._use_ml_fallback and cls._ml_classifier is not None:
+            try:
+                predictions = cls._ml_classifier.predict(text, top_k=1)
+                if predictions:
+                    intent, confidence = predictions[0]
+                    if confidence >= cls._ml_threshold:
+                        return intent
+            except Exception as e:
+                # ML预测失败时不报错，还是返回unknown
+                pass
+
         return "unknown"
+
+    @classmethod
+    def load_ml_classifier(cls, model_path: str = 'models/simple_intent_classifier.pkl') -> bool:
+        """加载ML分类器模型
+        :return: 加载成功返回True，失败返回False
+        """
+        if not ML_CLASSIFIER_AVAILABLE:
+            print("警告: scikit-learn未安装，无法使用ML分类器功能")
+            return False
+
+        try:
+            cls._ml_classifier = SimpleIntentClassifier.load_model(model_path)
+            print(f"ML意图分类器加载成功，支持 {len(cls._ml_classifier.intent_labels)} 种意图")
+            return True
+        except Exception as e:
+            print(f"ML分类器加载失败: {e}")
+            return False
+
+    @classmethod
+    def set_ml_threshold(cls, threshold: float):
+        """设置ML分类结果的置信度阈值"""
+        cls._ml_threshold = max(0.0, min(1.0, threshold))
+
+    @classmethod
+    def enable_ml_fallback(cls, enable: bool = True):
+        """启用或禁用ML fallback功能"""
+        cls._use_ml_fallback = enable
 
 
 class CollectionChatBot:
@@ -358,6 +544,15 @@ class CollectionChatBot:
         self.objection_count: int = 0
         self.max_objections: int = 3
         self.user_intent: str = ""
+        # 对话记忆
+        self.user_history_intents: List[str] = []  # 用户历史意图列表
+        self.user_asked_amount: bool = False  # 用户是否已经询问过金额
+        self.user_asked_fee: bool = False  # 用户是否已经询问过费用
+        self.user_asked_payment_method: bool = False  # 用户是否已经询问过还款方式
+        self.user_mentioned_no_money: bool = False  # 用户是否已经提到过没钱
+        self.user_mentioned_busy: bool = False  # 用户是否已经提到过忙碌
+        self.partial_payment_discussed: bool = False  # 是否已经讨论过分部分还款
+        self.extension_discussed: bool = False  # 是否已经讨论过展期
 
         # 组件
         self.tts = TextToSpeech()
@@ -369,8 +564,23 @@ class CollectionChatBot:
         # 会话ID
         self.session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
 
+        # 回复去重：记录最近2次回复，避免连续重复
+        self.last_responses: List[str] = []
+
         # 话术库 - 扩展版
         self._init_script_lib()
+
+    def enable_ml_intent_classification(self, model_path: str = 'models/simple_intent_classifier.pkl', threshold: float = 0.6) -> bool:
+        """启用ML意图分类作为规则系统的fallback
+        :param model_path: 模型文件路径
+        :param threshold: 置信度阈值
+        :return: 启用成功返回True
+        """
+        success = IntentDetector.load_ml_classifier(model_path)
+        if success:
+            IntentDetector.set_ml_threshold(threshold)
+            IntentDetector.enable_ml_fallback(True)
+        return success
 
     def _init_script_lib(self):
         """初始化话术库"""
@@ -614,18 +824,201 @@ class CollectionChatBot:
                     "Saya mengerti, tapi tagihan ini sudah lebih dari 3 bulan jatuh tempo ya. Kita harus segera selesaikan. Bagaimana rencana pembayarannya?",
                     "Paham, tapi ini sudah terlalu lama ya. Mari kita cari solusi yang terbaik untuk kedua pihak ya. Bagaimana rencana Anda?"
                 ]
+            },
+            "answer_fee": {
+                "*": [
+                    "Biaya tersebut termasuk biaya administrasi dan biaya keterlambatan sesuai dengan perjanjian pinjaman yang Anda setujui sebelumnya.",
+                    "Total biaya ini termasuk pokok pinjaman, bunga, dan biaya keterlambatan ya, sesuai dengan kesepakatan awal pinjaman Anda.",
+                    "Biaya ini sudah sesuai dengan perjanjian yang Anda tandatangani saat mengambil pinjaman ya, termasuk biaya administrasi dan denda keterlambatan."
+                ]
+            },
+            "answer_payment_method": {
+                "*": [
+                    "Anda bisa membayar melalui rekening resmi kami: BCA 1234567890 a.n. PT Extra Uang Indonesia. Pastikan nama penerima sesuai ya.",
+                    "Pembayaran bisa dilakukan melalui transfer ke rekening BCA 1234567890 atas nama PT Extra Uang Indonesia ya.",
+                    "Untuk membayar, silakan transfer ke rekening resmi kami: BCA 1234567890 a.n. PT Extra Uang Indonesia. Jangan lupa konfirmasi setelah transfer ya."
+                ]
+            },
+            "handle_already_paid": {
+                "*": [
+                    "Terima kasih sudah membayar, kami akan segera memverifikasi pembayaran Anda. Mohon maaf atas gangguannya.",
+                    "Oh, terima kasih ya. Kami akan cek segera pembayaran Anda. Mohon maaf sudah mengganggu waktu Anda.",
+                    "Baik, terima kasih sudah membayar. Tim kami akan memverifikasi pembayaran Anda secepatnya. Terima kasih atas kerjasamanya."
+                ]
+            },
+            "handle_partial_payment": {
+                "*": [
+                    "Jika Anda ingin membayar sebagian, minimal pembayaran adalah 30% dari jumlah tagihan. Berapa jumlah yang ingin Anda bayar sekarang, dan kapan waktunya?",
+                    "Untuk pembayaran sebagian, minimal Anda harus membayar 30% dari total tagihan ya. Berapa yang ingin Anda bayar sekarang, dan kapan waktunya?",
+                    "Kami mendukung pembayaran sebagian dengan minimal 30% dari total tagihan. Berapa jumlah yang ingin Anda bayar, dan kapan Anda bisa membayar nya?"
+                ]
+            },
+            "handle_third_party": {
+                "*": [
+                    "Mohon maaf mengganggu, terima kasih.",
+                    "Maaf sudah mengganggu ya, terima kasih atas waktunya.",
+                    "Mohon maaf atas gangguannya, terima kasih."
+                ]
+            },
+            "handle_dont_know": {
+                "*": [
+                    "Mohon maaf, saya ulangi ya: Kami dari Extra Uang, menelpon tentang tagihan pinjaman Bapak/Ibu {name} yang sudah jatuh tempo.",
+                    "Maaf jika penjelasan saya kurang jelas ya. Saya ulangi: Saya dari Extra Uang, menelpon tentang tagihan pinjaman {name} yang sudah jatuh tempo.",
+                    "Mohon maaf, saya akan ulangi lagi: Kami dari Extra Uang, menghubungi Anda tentang tagihan pinjaman yang sudah jatuh tempo ya."
+                ]
+            },
+            "handle_unknown": {
+                "*": [
+                    "Mohon maaf, saya tidak mengerti maksud Anda. Bisa diulangi lagi ya?",
+                    "Maaf, saya kurang paham apa yang Anda maksud. Bisa diulangi sekali lagi ya?",
+                    "Mohon maaf, saya tidak menangkap maksud Anda. Bisakah Anda ulangi sekali lagi?"
+                ]
+            },
+            "push_time_unknown": {
+                "*": [
+                    "Mohon maaf, bisakah Anda memberitahu jam berapa pasti bisa bayar ya?",
+                    "Maaf, saya kurang mengerti. Bisa kasih tahu jam berapa Anda bisa transfer ya?",
+                    "Mohon maaf, bisa jelaskan lebih jelas ya? Kira-kira jam berapa Anda bisa membayar tagihan ini?"
+                ]
+            },
+            "handle_no_money_repeat": {
+                "*": [
+                    "Saya sangat mengerti kondisinya Pak/Bu. Apakah ada yang bisa kami bantu untuk meringankan beban Anda?",
+                    "Saya paham Anda sedang kesulitan. Apakah Anda ingin opsi perpanjangan waktu atau pembayaran sebagian?",
+                    "Mengerti kesulitan Anda. Kami bisa bicarakan solusi yang sesuai untuk situasi Anda, apakah Anda mau?"
+                ]
+            },
+            "close_agree_pay": {
+                "*": [
+                    "Baik, kami tunggu pembayaran Anda ya. Terima kasih.",
+                    "Oke, kami akan menunggu dana masuk ya. Terima kasih atas kerjasamanya.",
+                    "Siap, kami tunggu transfer Anda. Terima kasih banyak."
+                ]
+            },
+            "close_general": {
+                "*": [
+                    "Terima kasih atas waktunya Pak/Bu. Jika ada pertanyaan lain silakan hubungi customer service kami ya.",
+                    "Terima kasih untuk waktunya. Jika butuh bantuan lain, silakan hubungi tim layanan pelanggan kami ya.",
+                    "Saya mengerti, terima kasih atas waktu Anda. Kalau ada pertanyaan lain bisa hubungi customer service kami kapan saja."
+                ]
+            },
+            "confirm_extension_repeat": {
+                "*": [
+                    "Apakah Anda masih setuju dengan opsi perpanjangan dengan biaya administrasi Rp {extension_fee} ya?",
+                    "Jadi Anda masih setuju untuk mengambil opsi perpanjangan dengan biaya Rp {extension_fee} ya?",
+                    "Kembali ke opsi perpanjangan ya, apakah Anda setuju dengan biaya administrasi Rp {extension_fee} ini?"
+                ]
+            },
+            "partial_payment_repeat": {
+                "*": [
+                    "Berapa jumlah yang ingin Anda bayar sekarang, dan kapan waktunya ya?",
+                    "Bisa kasih tahu berapa yang ingin Anda bayar sekarang dan kapan waktunya ya?",
+                    "Anda ingin bayar berapa sekarang, dan kapan bisa transfer ya?"
+                ]
+            },
+            "unknown_too_many": {
+                "*": [
+                    "Mohon maaf, saya tidak bisa memahami maksud Anda. Kami akan hubungi kembali nanti ya. Terima kasih.",
+                    "Maaf, saya kurang mengerti apa yang Anda maksud. Kami akan telepon kembali nanti ya. Terima kasih.",
+                    "Mohon maaf, saya tidak menangkap maksud Anda. Kami akan hubungi lagi besok ya. Terima kasih."
+                ]
+            },
+            "handle_identity_verification_request": {
+                "*": [
+                    "Saya adalah petugas penagihan resmi dari Extra Uang ya. Jika Anda memerlukan verifikasi, Anda bisa menghubungi customer service kami melalui aplikasi ya.",
+                    "Kami adalah tim penagihan resmi dari PT Extra Uang Indonesia. Anda bisa memverifikasi melalui call center resmi kami ya.",
+                    "Perkenalkan saya dari tim penagihan Extra Uang. Jika Anda ragu, silakan hubungi layanan pelanggan kami di aplikasi untuk konfirmasi ya."
+                ]
+            },
+            "handle_interest_reduction_request": {
+                "*": [
+                    "Mohon maaf ya, biaya keterlambatan sudah sesuai dengan perjanjian pinjaman yang Anda setujui. Jika Anda kesulitan, kami bisa menawarkan opsi perpanjangan ya.",
+                    "Saya mengerti keluhan Anda, namun denda keterlambatan tidak bisa dikurangi karena sudah sesuai dengan ketentuan perjanjian. Apakah Anda ingin opsi perpanjangan?",
+                    "Maaf ya, biaya administrasi dan denda sudah sesuai dengan kesepakatan awal. Kami hanya bisa menawarkan opsi perpanjangan untuk meringankan beban Anda ya."
+                ]
+            },
+            "handle_short_extension_request": {
+                "*": [
+                    "Untuk keterlambatan beberapa hari, kami masih bisa menunggu ya. Tapi tolong pastikan Anda membayar maksimal {max_days} hari lagi ya.",
+                    "Kami bisa memberikan toleransi keterlambatan sampai {max_days} hari ya. Tapi tolong pastikan Anda membayar sebelum batas waktu tersebut ya.",
+                    "Untuk saat ini kami masih bisa menunggu sampai {max_days} hari lagi. Silakan bayar sebelum batas waktu untuk menghindari denda tambahan ya."
+                ]
+            },
+            "handle_high_interest_complaint": {
+                "*": [
+                    "Mohon maaf jika Anda merasa biaya tinggi ya. Semua biaya sudah dijelaskan saat proses pengajuan pinjaman dan sesuai dengan perjanjian yang Anda tandatangani.",
+                    "Saya paham keluhan Anda. Namun ketentuan biaya sudah diinformasikan secara jelas sebelum Anda menyetujui pinjaman ya.",
+                    "Maaf atas ketidaknyamanannya. Semua biaya pinjaman sudah dijelaskan pada saat pengajuan dan sesuai dengan peraturan yang berlaku ya."
+                ]
+            },
+            "handle_app_uninstalled_problem": {
+                "*": [
+                    "Jika Anda sudah menghapus aplikasi, Anda masih bisa membayar melalui transfer rekening resmi kami ya: BCA 1234567890 a.n. PT Extra Uang Indonesia.",
+                    "Tidak masalah jika aplikasi sudah dihapus. Anda bisa langsung transfer ke rekening resmi kami ya. Setelah transfer, silakan simpan bukti transfer ya.",
+                    "Anda tidak perlu menginstal ulang aplikasi untuk membayar. Cukup transfer ke rekening resmi kami dan konfirmasi jika sudah bayar ya."
+                ]
+            },
+            "handle_payment_reminder_request": {
+                "*": [
+                    "Baik, saya akan catat untuk mengirimkan pengingat pembayaran melalui WhatsApp ke nomor Anda ya.",
+                    "Oke, kami akan kirimkan pesan pengingat beserta detail tagihan ke nomor ponsel Anda ya.",
+                    "Baik, nanti tim kami akan mengirimkan pengingat pembayaran melalui SMS ke nomor Anda ya."
+                ]
+            },
+            "handle_settlement_proof_request": {
+                "*": [
+                    "Setelah pembayaran Anda terverifikasi, Anda bisa meminta surat keterangan lunas melalui customer service di aplikasi ya.",
+                    "Bukti pembayaran lunas akan tersedia di aplikasi setelah pembayaran Anda terverifikasi oleh sistem ya.",
+                    "Setelah pembayaran Anda kami terima, Anda bisa mengajukan surat keterangan lunas melalui layanan pelanggan kami ya."
+                ]
+            },
+            "handle_consequence_inquiry": {
+                "*": [
+                    "Jika tagihan tidak dibayar tepat waktu, akan ada denda keterlambatan sesuai perjanjian dan bisa mempengaruhi skor kredit Anda di OJK ya.",
+                    "Keterlambatan pembayaran akan menambah biaya denda dan bisa berdampak negatif pada riwayat kredit Anda ya.",
+                    "Jika tidak dibayar, biaya keterlambatan akan terus bertambah dan nama Anda bisa terdaftar di daftar hitam lembaga keuangan ya."
+                ]
+            },
+            "handle_borrowing_money_response": {
+                "*": [
+                    "Baik, saya tunggu proses pembayaran Anda ya. Mohon konfirmasi jika sudah selesai transfer ya.",
+                    "Oke, semoga proses peminjaman uang Anda lancar. Jangan lupa untuk segera melakukan pembayaran ya.",
+                    "Baik, saya mengerti. Silakan hubungi kami jika sudah selesai melakukan pembayaran ya."
+                ]
+            },
+            "handle_transfer_in_process_response": {
+                "*": [
+                    "Baik, saya tunggu konfirmasi pembayaran Anda ya. Terima kasih atas kerjasamanya.",
+                    "Oke, jika sudah selesai transfer, mohon simpan bukti transfer ya. Terima kasih.",
+                    "Baik, kami akan menunggu pembayaran masuk ke rekening kami ya. Terima kasih."
+                ]
             }
         }
 
     def _get_script(self, category: str, **kwargs) -> str:
-        """获取话术并替换变量"""
+        """获取话术并替换变量，避免连续重复回复"""
         # 先尝试获取对应催收阶段的话术，如果没有则用通配符"*"的话术
         category_scripts = self.script_lib.get(category, {})
         scripts = category_scripts.get(self.chat_group, [])
         if not scripts:
             scripts = category_scripts.get("*", [])
 
-        script = random.choice(scripts) if scripts else ""
+        # 如果只有1条话术，直接返回，无法避免重复
+        if len(scripts) == 1:
+            script = scripts[0]
+        else:
+            # 随机取，避免和最近2次重复
+            max_tries = 10
+            for _ in range(max_tries):
+                script = random.choice(scripts)
+                if script not in self.last_responses:
+                    break
+            # 如果试了10次都重复，就随便返回一条
+
+        # 更新最近回复列表，最多保留2条
+        self.last_responses.append(script)
+        if len(self.last_responses) > 2:
+            self.last_responses.pop(0)
 
         # 合并变量，包括用户信息、欠款信息等
         vars = {
@@ -662,91 +1055,65 @@ class CollectionChatBot:
             # 先纠正ASR错误
             corrected_input = self.asr_corrector.correct(customer_input)
             self.conversation[-1].customer = corrected_input
-            # 识别用户意图
-            self.user_intent = self.intent_detector.detect(corrected_input)
+            # 识别用户意图，传入上一条机器人消息作为上下文
+            self.user_intent = self.intent_detector.detect(corrected_input, context=self.conversation[-1].agent)
+            # 更新对话记忆
+            self.user_history_intents.append(self.user_intent)
+            if self.user_intent == "ask_amount":
+                self.user_asked_amount = True
+            elif self.user_intent == "ask_fee":
+                self.user_asked_fee = True
+            elif self.user_intent == "ask_payment_method":
+                self.user_asked_payment_method = True
+            elif self.user_intent == "no_money":
+                self.user_mentioned_no_money = True
+            elif self.user_intent == "busy_later":
+                self.user_mentioned_busy = True
+            elif self.user_intent == "partial_payment":
+                self.partial_payment_discussed = True
+            elif self.user_intent == "ask_extension" or self.user_intent == "request_short_extension":
+                self.extension_discussed = True
 
         response = ""
         next_state = self.state
 
+        # 检测用户提到的时间（提前检测，方便公共意图处理）
+        detected_time = self.time_detector.detect(corrected_input or "")
+
         # 状态机逻辑
         if self.state == ChatState.IDENTITY_VERIFY:
-            # 先检查用户是否已经确认身份（即使同时表达了其他意图）
-            identity_confirmed = False
-            confirm_keywords = ["ya", "betul", "benar", "saya adalah", "ini saya", "ya ini",
-                               "selamat pagi", "selamat siang", "selamat sore", "baik"]
-            text_lower = corrected_input.lower() if corrected_input else ""
+            # 先检查用户是否已经确认身份（除非明确否认，否则默认确认）
+            identity_confirmed = True
+            if self.user_intent == "deny_identity" or self.user_intent == "third_party":
+                identity_confirmed = False
 
-            for keyword in confirm_keywords:
-                if keyword in text_lower:
-                    identity_confirmed = True
-                    break
-
-            # 处理身份确认的回复
-            if self.user_intent == "deny_identity":
-                # 用户否认身份/打错电话，直接回复错号结束语，结束对话
-                response = self._get_script("closing_wrong_number")
-                next_state = ChatState.CLOSE
-            elif self.user_intent == "busy_later":
-                # 用户现在忙，回复忙的结束语，结束对话
-                response = self._get_script("closing_busy")
-                next_state = ChatState.CLOSE
-            elif self.user_intent == "greeting":
-                # 用户只是问候，继续确认身份
-                response = self._get_script("identity_verify")
-                next_state = ChatState.IDENTITY_VERIFY
+            # 先处理公共意图
+            common_response, common_next_state = self._handle_common_intents(detected_time)
+            if common_response is not None:
+                response = common_response
+                if common_next_state is not None:
+                    next_state = common_next_state
+                    # 如果处理完异议且身份已确认，继续询问还款时间
+                    if identity_confirmed and next_state == ChatState.HANDLE_OBJECTION:
+                        response += " " + self._get_script("ask_time")
+                        next_state = ChatState.ASK_TIME
+                else:
+                    # 公共意图没有指定下一个状态，保持当前状态或根据身份确认情况处理
+                    if identity_confirmed:
+                        # 用户已经确认身份，回答后进入来意说明并询问还款时间
+                        response += " " + self._get_script("purpose") + " " + self._get_script("ask_time")
+                        next_state = ChatState.ASK_TIME
+                    else:
+                        # 还没确认身份，回答后继续确认身份
+                        next_state = ChatState.IDENTITY_VERIFY
+            elif self.user_intent == "dont_know":
+                # 用户说不知道，重复说明来意
+                response = self._get_script("handle_dont_know")
+                next_state = ChatState.PURPOSE
             elif identity_confirmed:
-                # 用户确认了身份，根据用户的实际意图处理
-                if self.user_intent == "ask_extension":
-                    # 用户询问展期，直接进入展期解释
-                    response = self._get_script("explain_extension")
-                    next_state = ChatState.CONFIRM_EXTENSION
-                elif self.user_intent == "ask_amount":
-                    # 用户询问金额，回答金额并进入询问时间阶段
-                    response = self._get_script("answer_amount")
-                    next_state = ChatState.ASK_TIME
-                elif self.user_intent == "ask_fee":
-                    # 用户询问费用，回答金额（包含费用说明）并进入询问时间阶段
-                    response = self._get_script("answer_amount")
-                    next_state = ChatState.ASK_TIME
-                elif self.user_intent == "ask_payment_method":
-                    # 用户询问支付方式，回答后进入询问时间阶段
-                    response = self._get_script("answer_amount") + " " + self._get_script("ask_time")
-                    next_state = ChatState.ASK_TIME
-                elif self.user_intent == "already_paid":
-                    # 用户说已经付款，确认后结束对话
-                    response = "Oh, terima kasih ya. Mohon maaf atas gangguannya."
-                    next_state = ChatState.CLOSE
-                elif self.user_intent == "partial_payment":
-                    # 用户询问部分还款，解释展期选项
-                    response = self._get_script("explain_extension")
-                    next_state = ChatState.CONFIRM_EXTENSION
-                elif self.user_intent == "third_party":
-                    # 第三方接听，结束对话
-                    response = "Mohon maaf ya, saya akan hubungi kembali nanti. Terima kasih."
-                    next_state = ChatState.CLOSE
-                elif self.user_intent == "dont_know":
-                    # 用户说不知道，继续说明来意
-                    next_state = ChatState.PURPOSE
-                    response = self._get_script("purpose")
-                elif self.user_intent == "question_identity":
-                    # 用户质疑身份，回答身份问题
-                    response = self._get_script("answer_identity")
-                    next_state = ChatState.PURPOSE
-                elif self.user_intent == "no_money":
-                    # 用户说没钱，处理没钱的情况
-                    response = self._get_script("handle_no_money")
-                    next_state = ChatState.HANDLE_OBJECTION
-                elif self.user_intent == "threaten":
-                    # 用户威胁，处理威胁的情况
-                    response = self._get_script("handle_threat")
-                    next_state = ChatState.HANDLE_OBJECTION
-                elif self.user_intent == "refuse_to_pay":
-                    # 用户拒绝还款，处理异议
-                    response = self._get_script("objection_general")
-                    next_state = ChatState.HANDLE_OBJECTION
-                elif self.user_intent == "confirm_time":
+                # 用户确认了身份，处理剩余的特殊意图
+                if self.user_intent == "confirm_time":
                     # 用户直接给出了还款时间
-                    detected_time = self.time_detector.detect(corrected_input or "")
                     if detected_time:
                         self.commit_time = detected_time
                         # 直接生成确认和结束语
@@ -759,75 +1126,46 @@ class CollectionChatBot:
                         # 进入询问时间阶段
                         next_state = ChatState.ASK_TIME
                         response = self._get_script("ask_time")
-                elif self.user_intent == "confirm_identity" or self.user_intent == "agree_to_pay":
-                    # 用户只是确认身份，进入来意说明
-                    next_state = ChatState.PURPOSE
-                    response = self._get_script("purpose")
+                elif self.user_intent == "borrowing_money":
+                    # 用户说正在借钱
+                    response = self._get_script("handle_borrowing_money_response")
+                    next_state = ChatState.PUSH_FOR_TIME
+                elif self.user_intent == "confirm_identity" or self.user_intent == "agree_to_pay" or self.user_intent == "greeting":
+                    # 用户只是确认身份或问候，进入来意说明并询问还款时间
+                    next_state = ChatState.ASK_TIME
+                    response = self._get_script("purpose") + " " + self._get_script("ask_time")
                 else:
-                    # 其他意图，先进入来意说明
-                    next_state = ChatState.PURPOSE
-                    response = self._get_script("purpose")
+                    # 其他意图，先进入来意说明并询问还款时间
+                    next_state = ChatState.ASK_TIME
+                    response = self._get_script("purpose") + " " + self._get_script("ask_time")
             else:
                 # 没有确认身份，再次确认身份
                 response = self._get_script("identity_verify")
                 next_state = ChatState.IDENTITY_VERIFY
 
+
         elif self.state == ChatState.PURPOSE:
             # 说明来意后，处理用户的回复
-            if self.user_intent == "ask_amount":
-                # 用户询问金额
-                response = self._get_script("answer_amount")
-                next_state = ChatState.ASK_TIME
-            elif self.user_intent == "ask_fee":
-                # 用户询问费用
-                response = self._get_script("answer_amount")
-                next_state = ChatState.ASK_TIME
-            elif self.user_intent == "ask_payment_method":
-                # 用户询问支付方式
-                response = self._get_script("answer_amount") + " " + self._get_script("ask_time")
-                next_state = ChatState.ASK_TIME
-            elif self.user_intent == "already_paid":
-                # 用户说已经付款
-                response = "Oh, terima kasih ya. Mohon maaf atas gangguannya."
-                next_state = ChatState.CLOSE
-            elif self.user_intent == "partial_payment":
-                # 用户询问部分还款
-                response = self._get_script("explain_extension")
-                next_state = ChatState.CONFIRM_EXTENSION
-            elif self.user_intent == "third_party":
-                # 第三方接听
-                response = "Mohon maaf ya, saya akan hubungi kembali nanti. Terima kasih."
-                next_state = ChatState.CLOSE
+            # 先处理公共意图
+            common_response, common_next_state = self._handle_common_intents(detected_time)
+            if common_response is not None:
+                response = common_response
+                if common_next_state is not None:
+                    next_state = common_next_state
+                else:
+                    # 公共意图没有指定下一个状态，回答后进入询问时间阶段
+                    response += " " + self._get_script("ask_time")
+                    next_state = ChatState.ASK_TIME
             elif self.user_intent == "dont_know":
                 # 用户说不知道，再次说明来意
-                response = self._get_script("purpose")
+                response = self._get_script("handle_dont_know")
                 next_state = ChatState.PURPOSE
-            elif self.user_intent == "ask_extension":
-                # 用户询问展期
-                response = self._get_script("explain_extension")
-                next_state = ChatState.CONFIRM_EXTENSION
-            elif self.user_intent == "busy_later":
-                # 用户现在忙
-                response = self._get_script("closing_busy")
-                next_state = ChatState.CLOSE
-            elif self.user_intent == "question_identity":
-                # 用户质疑身份
-                response = self._get_script("answer_identity")
-                next_state = ChatState.PURPOSE
-            elif self.user_intent == "no_money":
-                # 用户说没钱
-                response = self._get_script("handle_no_money")
-                next_state = ChatState.HANDLE_OBJECTION
-            elif self.user_intent == "threaten":
-                # 用户威胁
-                response = self._get_script("handle_threat")
-                next_state = ChatState.HANDLE_OBJECTION
             elif self.user_intent == "confirm_time":
                 # 用户直接给出了还款时间
                 detected_time = self.time_detector.detect(corrected_input or "")
                 if detected_time:
                     self.commit_time = detected_time
-                    # 直接生成确认和结束语，不需要再走COMMIT_TIME状态
+                    # 直接生成确认和结束语
                     commit_resp = self._get_script("commit_time", time=detected_time)
                     wait_script = self._get_script("wait", time=detected_time)
                     closing = self._get_script("closing")
@@ -836,6 +1174,10 @@ class CollectionChatBot:
                 else:
                     next_state = ChatState.ASK_TIME
                     response = self._get_script("ask_time")
+            elif self.user_intent == "borrowing_money":
+                # 用户说正在借钱
+                response = self._get_script("handle_borrowing_money_response")
+                next_state = ChatState.PUSH_FOR_TIME
             else:
                 # 其他情况，进入询问还款时间环节
                 next_state = ChatState.ASK_TIME
@@ -849,12 +1191,71 @@ class CollectionChatBot:
                 response = self._get_script("ask_time")
                 next_state = ChatState.ASK_TIME
             else:
-                # 用户不同意，继续询问还款时间
-                response = self._get_script("ask_time")
-                next_state = ChatState.ASK_TIME
+                # 先处理公共意图
+                common_response, common_next_state = self._handle_common_intents()
+                if common_response is not None:
+                    response = common_response
+                    if common_next_state is not None:
+                        next_state = common_next_state
+                    else:
+                        # 公共意图没有指定下一个状态，保持当前状态继续确认展期
+                        next_state = ChatState.CONFIRM_EXTENSION
+                elif self.user_intent == "dont_know":
+                    # 用户说不知道，重复展期说明
+                    response = self._get_script("handle_dont_know") + " " + self._get_script("explain_extension")
+                    next_state = ChatState.CONFIRM_EXTENSION
+                elif self.user_intent == "partial_payment":
+                    # 用户询问部分还款，引导给出金额和时间
+                    response = self._get_script("handle_partial_payment")
+                    next_state = ChatState.PUSH_FOR_TIME
+                else:
+                    # 用户不同意，继续询问还款时间
+                    response = self._get_script("ask_time")
+                    next_state = ChatState.ASK_TIME
 
         elif self.state == ChatState.ASK_TIME:
             # 询问还款时间后，处理用户回复
+            detected_time = self.time_detector.detect(corrected_input or "")
+            # 排除模糊时间，只有具体时间才接受
+            fuzzy_times = ["nanti", "sekarang", "nanti aja"]
+            if detected_time and detected_time not in fuzzy_times:
+                # 用户给出了具体时间，直接生成确认和结束语，结束对话
+                self.commit_time = detected_time
+                commit_resp = self._get_script("commit_time", time=detected_time)
+                wait_script = self._get_script("wait", time=detected_time)
+                closing = self._get_script("closing")
+                response = f"{commit_resp} {wait_script} {closing}"
+                next_state = ChatState.CLOSE
+            else:
+                # 先处理公共意图
+                common_response, common_next_state = self._handle_common_intents()
+                if common_response is not None:
+                    response = common_response
+                    if common_next_state is not None:
+                        next_state = common_next_state
+                    else:
+                        # 公共意图没有指定下一个状态，保持当前状态继续询问时间
+                        next_state = ChatState.ASK_TIME
+                elif self.user_intent == "dont_know":
+                    # 用户说不知道，再次询问时间
+                    response = self._get_script("handle_dont_know") + " " + self._get_script("ask_time")
+                    next_state = ChatState.ASK_TIME
+                elif self.user_intent == "partial_payment":
+                    # 用户询问部分还款，引导给出金额和时间
+                    response = self._get_script("handle_partial_payment")
+                    next_state = ChatState.PUSH_FOR_TIME
+                else:
+                    # 没有检测到时间，催促用户
+                    if self.objection_count < self.max_objections:
+                        self.objection_count += 1
+                        next_state = ChatState.PUSH_FOR_TIME
+                        response = self._get_script("push")
+                    else:
+                        next_state = ChatState.FAILED
+                        response = ""
+
+        elif self.state == ChatState.PUSH_FOR_TIME:
+            # 催促后，处理用户回复
             detected_time = self.time_detector.detect(corrected_input or "")
             if detected_time:
                 # 用户给出了时间，直接生成确认和结束语，结束对话
@@ -868,63 +1269,98 @@ class CollectionChatBot:
                 # 用户询问展期
                 response = self._get_script("explain_extension")
                 next_state = ChatState.CONFIRM_EXTENSION
-            elif self.user_intent == "ask_amount" or self.user_intent == "ask_fee":
-                # 用户再次询问金额/费用
+            elif self.user_intent == "ask_amount":
+                # 用户询问金额
                 response = self._get_script("answer_amount")
-                next_state = ChatState.ASK_TIME
+                next_state = ChatState.PUSH_FOR_TIME
+            elif self.user_intent == "ask_fee":
+                # 用户询问费用
+                response = self._get_script("answer_fee")
+                next_state = ChatState.PUSH_FOR_TIME
             elif self.user_intent == "ask_payment_method":
                 # 用户询问支付方式
-                response = self._get_script("answer_amount")
-                next_state = ChatState.ASK_TIME
+                response = self._get_script("answer_payment_method")
+                next_state = ChatState.PUSH_FOR_TIME
             elif self.user_intent == "already_paid":
                 # 用户说已经付款
-                response = "Oh, terima kasih ya. Mohon maaf atas gangguannya."
+                response = self._get_script("handle_already_paid")
                 next_state = ChatState.CLOSE
             elif self.user_intent == "partial_payment":
-                # 用户询问部分还款
-                response = self._get_script("explain_extension")
-                next_state = ChatState.CONFIRM_EXTENSION
+                # 用户询问部分还款，引导给出金额和时间
+                response = self._get_script("handle_partial_payment")
+                next_state = ChatState.PUSH_FOR_TIME
             elif self.user_intent == "third_party":
                 # 第三方接听
-                response = "Mohon maaf ya, saya akan hubungi kembali nanti. Terima kasih."
+                response = self._get_script("handle_third_party")
                 next_state = ChatState.CLOSE
             elif self.user_intent == "dont_know":
-                # 用户说不知道，再次询问时间
-                response = self._get_script("ask_time")
-                next_state = ChatState.ASK_TIME
+                # 用户说不知道，再次催促
+                response = self._get_script("handle_dont_know") + " " + self._get_script("push")
+                next_state = ChatState.PUSH_FOR_TIME
             elif self.user_intent == "busy_later":
                 # 用户现在忙
                 response = self._get_script("closing_busy")
+                next_state = ChatState.CLOSE
+            elif self.user_intent == "question_identity":
+                # 用户质疑身份
+                response = self._get_script("answer_identity")
+                next_state = ChatState.PUSH_FOR_TIME
+            elif self.user_intent == "request_identity_verification":
+                # 用户要求验证身份合法性
+                response = self._get_script("handle_identity_verification_request")
+                next_state = ChatState.PUSH_FOR_TIME
+            elif self.user_intent == "request_interest_reduction":
+                # 用户要求减免利息
+                response = self._get_script("handle_interest_reduction_request")
+                next_state = ChatState.HANDLE_OBJECTION
+            elif self.user_intent == "request_short_extension":
+                # 用户要求短期延期
+                response = self._get_script("handle_short_extension_request", max_days="3")
+                next_state = ChatState.CLOSE
+            elif self.user_intent == "complain_high_interest":
+                # 用户抱怨利率太高
+                response = self._get_script("handle_high_interest_complaint")
+                next_state = ChatState.HANDLE_OBJECTION
+            elif self.user_intent == "app_uninstalled":
+                # 用户说已经卸载了APP
+                response = self._get_script("handle_app_uninstalled_problem")
+                next_state = ChatState.PUSH_FOR_TIME
+            elif self.user_intent == "request_payment_reminder":
+                # 用户要求发送还款提醒
+                response = self._get_script("handle_payment_reminder_request")
+                next_state = ChatState.PUSH_FOR_TIME
+            elif self.user_intent == "request_settlement_proof":
+                # 用户要求开具结清证明
+                response = self._get_script("handle_settlement_proof_request")
+                next_state = ChatState.CLOSE
+            elif self.user_intent == "inquire_consequences":
+                # 用户询问逾期后果
+                response = self._get_script("handle_consequence_inquiry")
+                next_state = ChatState.PUSH_FOR_TIME
+            elif self.user_intent == "borrowing_money":
+                # 用户说正在借钱
+                response = self._get_script("handle_borrowing_money_response")
+                next_state = ChatState.PUSH_FOR_TIME
+            elif self.user_intent == "transfer_in_process":
+                # 用户说正在转账
+                response = self._get_script("handle_transfer_in_process_response")
                 next_state = ChatState.CLOSE
             elif self.user_intent == "no_money":
                 # 用户说没钱
                 response = self._get_script("handle_no_money")
                 next_state = ChatState.HANDLE_OBJECTION
+            elif self.user_intent == "threaten":
+                # 用户威胁
+                response = self._get_script("handle_threat")
+                next_state = ChatState.HANDLE_OBJECTION
             elif self.user_intent == "refuse_to_pay":
                 # 用户拒绝还款
                 response = self._get_script("objection_general")
                 next_state = ChatState.HANDLE_OBJECTION
-            else:
-                # 没有检测到时间，催促用户
-                if self.objection_count < self.max_objections:
-                    self.objection_count += 1
-                    next_state = ChatState.PUSH_FOR_TIME
-                    response = self._get_script("push")
-                else:
-                    next_state = ChatState.FAILED
-                    response = ""
-
-        elif self.state == ChatState.PUSH_FOR_TIME:
-            # 催促后，处理用户回复
-            detected_time = self.time_detector.detect(corrected_input or "")
-            if detected_time:
-                # 用户给出了时间，直接生成确认和结束语，结束对话
-                self.commit_time = detected_time
-                commit_resp = self._get_script("commit_time", time=detected_time)
-                wait_script = self._get_script("wait", time=detected_time)
-                closing = self._get_script("closing")
-                response = f"{commit_resp} {wait_script} {closing}"
-                next_state = ChatState.CLOSE
+            elif self.user_intent == "unknown":
+                # 无法识别用户意图，请求重复
+                response = self._get_script("handle_unknown")
+                next_state = ChatState.PUSH_FOR_TIME
             else:
                 if self.objection_count < self.max_objections:
                     self.objection_count += 1
@@ -939,32 +1375,80 @@ class CollectionChatBot:
                 response = self._get_script("explain_extension")
                 next_state = ChatState.CONFIRM_EXTENSION
             elif self.user_intent == "partial_payment":
-                # 用户询问部分还款
-                response = self._get_script("explain_extension")
-                next_state = ChatState.CONFIRM_EXTENSION
-            elif self.user_intent == "ask_amount" or self.user_intent == "ask_fee":
-                # 用户询问金额/费用
+                # 用户询问部分还款，引导给出金额和时间
+                response = self._get_script("handle_partial_payment")
+                next_state = ChatState.PUSH_FOR_TIME
+            elif self.user_intent == "ask_amount":
+                # 用户询问金额
                 response = self._get_script("answer_amount")
+                next_state = ChatState.ASK_TIME
+            elif self.user_intent == "ask_fee":
+                # 用户询问费用
+                response = self._get_script("answer_fee")
                 next_state = ChatState.ASK_TIME
             elif self.user_intent == "ask_payment_method":
                 # 用户询问支付方式
-                response = self._get_script("answer_amount")
+                response = self._get_script("answer_payment_method")
                 next_state = ChatState.ASK_TIME
             elif self.user_intent == "already_paid":
                 # 用户说已经付款
-                response = "Oh, terima kasih ya. Mohon maaf atas gangguannya."
+                response = self._get_script("handle_already_paid")
                 next_state = ChatState.CLOSE
             elif self.user_intent == "third_party":
                 # 第三方接听
-                response = "Mohon maaf ya, saya akan hubungi kembali nanti. Terima kasih."
+                response = self._get_script("handle_third_party")
                 next_state = ChatState.CLOSE
             elif self.user_intent == "dont_know":
                 # 用户说不知道，继续询问时间
-                response = self._get_script("objection_general")
+                response = self._get_script("handle_dont_know") + " " + self._get_script("objection_general")
                 next_state = ChatState.ASK_TIME
             elif self.user_intent == "busy_later":
                 # 用户现在忙
                 response = self._get_script("closing_busy")
+                next_state = ChatState.CLOSE
+            elif self.user_intent == "question_identity":
+                # 用户质疑身份
+                response = self._get_script("answer_identity")
+                next_state = ChatState.HANDLE_OBJECTION
+            elif self.user_intent == "request_identity_verification":
+                # 用户要求验证身份合法性
+                response = self._get_script("handle_identity_verification_request")
+                next_state = ChatState.HANDLE_OBJECTION
+            elif self.user_intent == "request_interest_reduction":
+                # 用户要求减免利息
+                response = self._get_script("handle_interest_reduction_request")
+                next_state = ChatState.HANDLE_OBJECTION
+            elif self.user_intent == "request_short_extension":
+                # 用户要求短期延期
+                response = self._get_script("handle_short_extension_request", max_days="3")
+                next_state = ChatState.CLOSE
+            elif self.user_intent == "complain_high_interest":
+                # 用户抱怨利率太高
+                response = self._get_script("handle_high_interest_complaint")
+                next_state = ChatState.HANDLE_OBJECTION
+            elif self.user_intent == "app_uninstalled":
+                # 用户说已经卸载了APP
+                response = self._get_script("handle_app_uninstalled_problem")
+                next_state = ChatState.ASK_TIME
+            elif self.user_intent == "request_payment_reminder":
+                # 用户要求发送还款提醒
+                response = self._get_script("handle_payment_reminder_request")
+                next_state = ChatState.ASK_TIME
+            elif self.user_intent == "request_settlement_proof":
+                # 用户要求开具结清证明
+                response = self._get_script("handle_settlement_proof_request")
+                next_state = ChatState.CLOSE
+            elif self.user_intent == "inquire_consequences":
+                # 用户询问逾期后果
+                response = self._get_script("handle_consequence_inquiry")
+                next_state = ChatState.ASK_TIME
+            elif self.user_intent == "borrowing_money":
+                # 用户说正在借钱
+                response = self._get_script("handle_borrowing_money_response")
+                next_state = ChatState.PUSH_FOR_TIME
+            elif self.user_intent == "transfer_in_process":
+                # 用户说正在转账
+                response = self._get_script("handle_transfer_in_process_response")
                 next_state = ChatState.CLOSE
             elif self.user_intent == "threaten":
                 # 用户再次威胁
@@ -974,13 +1458,30 @@ class CollectionChatBot:
                 # 用户拒绝还款，继续处理异议
                 response = self._get_script("objection_general")
                 next_state = ChatState.HANDLE_OBJECTION
+            elif self.user_intent == "unknown":
+                # 无法识别用户意图，请求重复
+                response = self._get_script("handle_unknown")
+                next_state = ChatState.HANDLE_OBJECTION
             else:
                 # 其他异议，返回通用回复，继续询问还款时间
                 response = self._get_script("objection_general")
                 next_state = ChatState.ASK_TIME
 
         elif self.state == ChatState.CLOSE or self.state == ChatState.FAILED:
-            response = ""
+            # 对话结束后仍然处理用户的后续输入，回答常见问题
+            common_response, common_next_state = self._handle_common_intents(detected_time)
+            if common_response is not None:
+                response = common_response
+                # 如果公共意图返回了非CLOSE状态，还是保持CLOSE状态，避免重新进入流程
+                next_state = ChatState.CLOSE
+            elif self.user_intent == "agree_to_pay" or self.user_intent == "confirm_time":
+                # 用户后续又确认还款，回复确认
+                response = self._get_script("close_agree_pay")
+                next_state = ChatState.CLOSE
+            else:
+                # 其他情况返回通用结束语
+                response = self._get_script("close_general")
+                next_state = ChatState.CLOSE
 
         # 记录机器人回复
         if response:
@@ -995,6 +1496,133 @@ class CollectionChatBot:
         if not use_tts or not text:
             return None
         return await self.tts.synthesize(text)
+
+    def _handle_common_intents(self, detected_time: Optional[str] = None) -> Tuple[Optional[str], Optional[ChatState]]:
+        """
+        处理各个状态下都可能出现的公共意图
+        返回: (回复内容, 下一个状态) 如果没有匹配到公共意图返回 (None, None)
+        """
+        # 结束类意图
+        if self.user_intent == "deny_identity":
+            # 用户否认身份/打错电话，直接回复错号结束语，结束对话
+            return self._get_script("closing_wrong_number"), ChatState.CLOSE
+        elif self.user_intent == "busy_later":
+            # 在询问还款时间阶段，用户说"nanti"是指还款时间，不是说现在忙，不结束对话
+            if self.state not in [ChatState.ASK_TIME, ChatState.PUSH_FOR_TIME]:
+                # 用户现在忙，回复忙的结束语，结束对话
+                return self._get_script("closing_busy"), ChatState.CLOSE
+            # 在询问时间阶段，按未知意图处理，催促用户给出具体时间
+            return None, None
+        elif self.user_intent == "already_paid":
+            # 用户说已经付款，确认后结束对话
+            return self._get_script("handle_already_paid"), ChatState.CLOSE
+        elif self.user_intent == "third_party":
+            # 第三方接听，结束对话
+            return self._get_script("handle_third_party"), ChatState.CLOSE
+        elif self.user_intent == "request_settlement_proof":
+            # 用户要求开具结清证明
+            return self._get_script("handle_settlement_proof_request"), ChatState.CLOSE
+        elif self.user_intent == "transfer_in_process":
+            # 用户说正在转账
+            return self._get_script("handle_transfer_in_process_response"), ChatState.CLOSE
+        elif self.user_intent == "request_short_extension":
+            # 用户要求短期延期
+            return self._get_script("handle_short_extension_request", max_days="3"), ChatState.CLOSE
+
+        # 信息查询类意图
+        elif self.user_intent == "ask_amount":
+            # 用户询问金额
+            response = self._get_script("answer_amount")
+            if not self.user_asked_amount:
+                # 第一次询问，补充说明
+                response += " " + "Jika ada pertanyaan lain silakan bertanya ya."
+            return response, None  # 返回None表示保持当前状态
+        elif self.user_intent == "ask_fee":
+            # 用户询问费用
+            response = self._get_script("answer_fee")
+            if not self.user_asked_fee:
+                # 第一次询问，补充说明
+                response += " " + "Ini sudah sesuai perjanjian awal ya."
+            return response, None
+        elif self.user_intent == "ask_payment_method":
+            # 用户询问支付方式
+            response = self._get_script("answer_payment_method")
+            if not self.user_asked_payment_method:
+                # 第一次询问，补充说明
+                response += " " + "Pastikan transfer atas nama PT Extra Uang Indonesia ya."
+            return response, None
+        elif self.user_intent == "question_identity":
+            # 用户质疑身份
+            return self._get_script("answer_identity"), None
+        elif self.user_intent == "request_identity_verification":
+            # 用户要求验证身份合法性
+            return self._get_script("handle_identity_verification_request"), None
+        elif self.user_intent == "inquire_consequences":
+            # 用户询问逾期后果
+            response = self._get_script("handle_consequence_inquiry")
+            return response, None
+        elif self.user_intent == "app_uninstalled":
+            # 用户说已经卸载了APP
+            response = self._get_script("handle_app_uninstalled_problem")
+            return response, None
+        elif self.user_intent == "request_payment_reminder":
+            # 用户要求发送还款提醒
+            response = self._get_script("handle_payment_reminder_request")
+            return response, None
+
+        # 异议类意图
+        elif self.user_intent == "no_money":
+            # 用户说没钱
+            if not self.user_mentioned_no_money:
+                # 第一次说没钱，提供展期和部分还款选项
+                return self._get_script("handle_no_money"), ChatState.HANDLE_OBJECTION
+            else:
+                # 多次说没钱，使用更柔和的引导
+                return self._get_script("handle_no_money_repeat"), ChatState.HANDLE_OBJECTION
+        elif self.user_intent == "request_interest_reduction":
+            # 用户要求减免利息
+            return self._get_script("handle_interest_reduction_request"), ChatState.HANDLE_OBJECTION
+        elif self.user_intent == "complain_high_interest":
+            # 用户抱怨利率太高
+            return self._get_script("handle_high_interest_complaint"), ChatState.HANDLE_OBJECTION
+        elif self.user_intent == "threaten":
+            # 用户威胁
+            return self._get_script("handle_threat"), ChatState.HANDLE_OBJECTION
+        elif self.user_intent == "refuse_to_pay":
+            # 用户拒绝还款
+            return self._get_script("objection_general"), ChatState.HANDLE_OBJECTION
+
+        # 协商类意图
+        elif self.user_intent == "ask_extension":
+            # 用户询问展期
+            if not self.extension_discussed:
+                # 第一次询问展期，详细说明
+                return self._get_script("explain_extension"), ChatState.CONFIRM_EXTENSION
+            else:
+                # 已经讨论过展期，再次确认
+                return self._get_script("confirm_extension_repeat"), ChatState.CONFIRM_EXTENSION
+        elif self.user_intent == "partial_payment":
+            # 用户询问部分还款
+            if not self.partial_payment_discussed:
+                # 第一次询问，详细说明
+                return self._get_script("handle_partial_payment"), ChatState.PUSH_FOR_TIME
+            else:
+                # 已经讨论过，直接询问金额和时间
+                return self._get_script("partial_payment_repeat"), ChatState.PUSH_FOR_TIME
+
+        # 无法识别意图
+        elif self.user_intent == "unknown":
+            # 统计unknown出现的次数
+            unknown_count = self.user_history_intents.count("unknown")
+            if unknown_count >= 3:
+                # 多次无法识别，结束对话
+                return self._get_script("unknown_too_many"), ChatState.CLOSE
+            else:
+                # 请求用户重复
+                return self._get_script("handle_unknown"), None
+
+        # 没有匹配到公共意图
+        return None, None
 
     def is_finished(self) -> bool:
         """对话是否结束"""

@@ -1,0 +1,183 @@
+警告: edge-tts未安装，TTS功能不可用
+正在加载ML分类器...
+ML意图分类器加载成功，支持 13 种意图
+ML分类器已启用，置信度阈值: 0.6
+总测试样本数: 1835
+正确识别数: 1419
+准确率: 77.33%
+
+ML分类器效果:
+ML成功纠正规则系统错误: 277 个
+ML贡献准确率提升: 15.10%
+
+错误样本 (416 个):
+
+1. 文件: 628226482551608-20260417093512.json
+   原文: Oke, oke.
+   纠正后: Oke, oke.
+   标注意图: agree_to_pay
+   识别意图: confirm_identity
+
+2. 文件: 628226482551608-20260417093512.json
+   原文: Oke, oke.
+   纠正后: Oke, oke.
+   标注意图: agree_to_pay
+   识别意图: confirm_identity
+
+3. 文件: 628226482551608-20260417093512.json
+   原文: Saya tunggu ya pak.
+   纠正后: Saya tunggu ya pak.
+   标注意图: confirm_identity
+   识别意图: agree_to_pay
+
+4. 文件: 628226482551608-20260417093512.json
+   原文: Oke.
+   纠正后: Oke.
+   标注意图: agree_to_pay
+   识别意图: confirm_identity
+
+5. 文件: 6281213121392009-20260407165450.json
+   原文: Perpanjang dulu kayanya Pak.
+   纠正后: PeRpanjang dulu kayanya Pak.
+   标注意图: confirm_identity
+   识别意图: ask_extension
+
+6. 文件: 6285110824167509-20260404093201.json
+   原文: iya jam 12 kata
+   纠正后: iya jam 12 kata
+   标注意图: confirm_identity
+   识别意图: confirm_time
+
+7. 文件: 6288911282758609-20260405104420.json
+   原文: orangnya ga ada
+   纠正后: orangnya tidak ada
+   标注意图: confirm_identity
+   识别意图: third_party
+
+8. 文件: 628123655408708-20260414063729.json
+   原文: iya oke nantisnya bunuh lagi
+   纠正后: iya oke nantisnya bunuh lagi
+   标注意图: agree_to_pay
+   识别意图: busy_later
+
+9. 文件: 628132325315508-20260419104355.json
+   原文: Halo, istri Anda, istri Anda jadi korbannya ya. Anda nggak mau bayar istri Anda keluarga-kembangnya.
+   纠正后: Halo, istri Anda, istri Anda jadi koribuannya ya. Anda tidak mau bayar istri Anda keluartidak-kembangnya.
+   标注意图: third_party
+   识别意图: agree_to_pay
+
+10. 文件: 6285111571906209-20260422131418.json
+   原文: Belum ada pembeli tahu anak.
+   纠正后: Belum ada pembeli tahu anak.
+   标注意图: third_party
+   识别意图: confirm_identity
+
+11. 文件: 628526370400308-20260408082035.json
+   原文: Jatuh petamat, ini tanggal berapa?
+   纠正后: Jatuh petamat, ini tatidakl berapa?
+   标注意图: ask_amount
+   识别意图: confirm_identity
+
+12. 文件: 6282212925205809-20260423131118.json
+   原文: Saya cari, Pak.
+   纠正后: Saya cari, Pak.
+   标注意图: confirm_identity
+   识别意图: unknown
+
+13. 文件: 6282110996611209-20260413115338.json
+   原文: Sudah yang bapak.
+   纠正后: Sudah yang bapak.
+   标注意图: confirm_identity
+   识别意图: unknown
+
+14. 文件: 62823951139107-20260418130749.json
+   原文: Pasti tak bayar kok.
+   纠正后: Pasti tak bayar kok.
+   标注意图: confirm_identity
+   识别意图: agree_to_pay
+
+15. 文件: 6285213191732009-20260407074923.json
+   原文: Oh ya betul. Bisa sore ya, bubanya 4 ya?
+   纠正后: Oh ya betul. Bisa sore ya, bubanya 4 ya?
+   标注意图: confirm_time
+   识别意图: confirm_identity
+
+16. 文件: 6285213191732009-20260407074923.json
+   原文: Ya baik, maaf.
+   纠正后: Ya baik, maaf.
+   标注意图: confirm_identity
+   识别意图: greeting
+
+17. 文件: 628136076967908-20260417080017.json
+   原文:  Oke.
+   纠正后: Oke.
+   标注意图: agree_to_pay
+   识别意图: confirm_identity
+
+18. 文件: 628125950170308-20260413155616.json
+   原文: Coba coba nanti saya Whatsapp tolong dikirimkan bupingnya ya.
+   纠正后: Coba coba nanti saya Whatsapp tolong dikirimkan bupingnya ya.
+   标注意图: ask_extension
+   识别意图: busy_later
+
+19. 文件: 628134691292808-20260407120119.json
+   原文: Inter, tolong asli sama keluarganya ya
+   纠正后: Inter, tolong asli sama keluartidaknya ya
+   标注意图: third_party
+   识别意图: confirm_identity
+
+20. 文件: 6282312298615009-20260422090948.json
+   原文: Halo Ibu Erma Yana.
+   纠正后: Halo Ibu Erma Yana.
+   标注意图: confirm_identity
+   识别意图: greeting
+
+
+错误类型分布:
+agree_to_pay → confirm_identity: 79 次
+confirm_identity → agree_to_pay: 36 次
+ask_extension → busy_later: 34 次
+confirm_identity → unknown: 29 次
+refuse_to_pay → agree_to_pay: 19 次
+agree_to_pay → greeting: 18 次
+agree_to_pay → confirm_time: 18 次
+confirm_identity → greeting: 17 次
+greeting → unknown: 15 次
+agree_to_pay → busy_later: 14 次
+ask_amount → confirm_identity: 13 次
+confirm_identity → confirm_time: 12 次
+confirm_time → busy_later: 10 次
+confirm_time → agree_to_pay: 10 次
+question_identity → unknown: 9 次
+question_identity → confirm_identity: 8 次
+confirm_identity → busy_later: 8 次
+ask_amount → unknown: 6 次
+ask_extension → unknown: 6 次
+ask_extension → confirm_identity: 6 次
+confirm_time → confirm_identity: 5 次
+third_party → confirm_identity: 4 次
+ask_extension → confirm_time: 4 次
+greeting → confirm_identity: 4 次
+question_identity → greeting: 3 次
+confirm_identity → deny_identity: 3 次
+confirm_identity → ask_extension: 2 次
+confirm_identity → ask_amount: 2 次
+agree_to_pay → deny_identity: 2 次
+agree_to_pay → ask_extension: 2 次
+greeting → confirm_time: 2 次
+confirm_identity → third_party: 1 次
+third_party → agree_to_pay: 1 次
+ask_extension → deny_identity: 1 次
+agree_to_pay → ask_amount: 1 次
+refuse_to_pay → confirm_time: 1 次
+no_money → confirm_identity: 1 次
+ask_amount → confirm_time: 1 次
+threaten → agree_to_pay: 1 次
+ask_extension → agree_to_pay: 1 次
+no_money → busy_later: 1 次
+refuse_to_pay → confirm_identity: 1 次
+third_party → unknown: 1 次
+deny_identity → unknown: 1 次
+confirm_time → greeting: 1 次
+question_identity → confirm_time: 1 次
+agree_to_pay → unknown: 1 次
