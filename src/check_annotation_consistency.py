@@ -22,7 +22,9 @@ VALID_STAGES = {
 VALID_INTENTS = {
     "deny_identity", "busy_later", "threaten", "ask_extension",
     "ask_amount", "question_identity", "no_money", "confirm_time",
-    "agree_to_pay", "refuse_to_pay", "confirm_identity", "unknown"
+    "agree_to_pay", "refuse_to_pay", "confirm_identity", "unknown",
+    "greeting", "ask_fee", "ask_payment_method", "already_paid",
+    "partial_payment", "third_party", "dont_know"
 }
 
 VALID_RESISTANCE_LEVELS = {"very_low", "low", "medium", "high", "very_high"}
