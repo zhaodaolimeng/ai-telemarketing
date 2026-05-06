@@ -62,15 +62,17 @@ def convert_bot_state_to_schema(bot_state):
     state_map = {
         'INIT': 'init',
         'GREETING': 'greeting',
-        'IDENTIFY': 'identify',
+        'IDENTITY_VERIFY': 'identify',
         'PURPOSE': 'purpose',
         'ASK_TIME': 'ask_time',
         'PUSH_FOR_TIME': 'push_for_time',
         'COMMIT_TIME': 'commit_time',
-        'CONFIRM': 'confirm',
+        'CONFIRM_EXTENSION': 'negotiate',
+        'HANDLE_OBJECTION': 'negotiate',
+        'HANDLE_BUSY': 'close',
+        'HANDLE_WRONG_NUMBER': 'close',
         'CLOSE': 'close',
-        'FAILED': 'failed',
-        'HANDLE_OBJECTION': 'purpose'  # 映射到purpose
+        'FAILED': 'failed'
     }
 
     # 获取状态名称

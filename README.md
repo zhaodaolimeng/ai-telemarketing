@@ -88,9 +88,12 @@ ai-telemarketing/
 | 翻译引擎 | MarianMT（本地模型） |
 | 前端 | 原生HTML/JavaScript |
 
-## 快速开始
+## 🚀 快速开始
 
-### 安装与启动
+### CI/CD 状态
+[![CI/CD Pipeline](https://github.com/your-username/ai-telemarketing/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/your-username/ai-telemarketing/actions/workflows/ci-cd.yml)
+
+### 本地开发启动
 ```bash
 # 安装依赖
 pip install -r requirements.txt
@@ -103,14 +106,37 @@ python start_demo.py
 ```
 - 访问Demo页面: http://localhost:8000/
 - 访问API文档: http://localhost:8000/docs
+- 健康检查: http://localhost:8000/health
+
+### Docker部署
+```bash
+# 直接启动
+docker-compose up -d
+
+# 或者手动构建
+docker build -t ai-telemarketing-api .
+docker run -d -p 8000:8000 ai-telemarketing-api
+```
 
 ### 运行评测
 ```bash
-# 14个基础场景评测（golden case）
+# 14个基础场景评测（golden case）- 使用默认规则模拟器
 python src/core/evaluation.py --num-tests 0
+
+# 使用数据驱动生成式模拟器进行评测（基于真实对话语料）
+python src/core/evaluation.py --num-tests 0 --use-generative
+
+# 真实对话回放测试 - 基于标注的真实对话数据进行多维度评估
+python src/core/evaluation.py --playback
+
+# 运行单个指定ID的回放测试用例
+python src/core/evaluation.py --case-id <case_id>
 
 # 批量生产测试（50次随机场景）
 python src/tests/run_small_scale_test.py 50
+
+# 运行单元测试
+python src/tests/test_simulator.py
 ```
 
 ## 发展路线
@@ -178,6 +204,10 @@ python src/tests/run_small_scale_test.py 50
 - 功能提交必须附带测试报告，未通过测试的代码不能合入主分支
 - 核心逻辑修改必须说明影响范围和测试覆盖情况
 - 生产环境修改必须先在测试环境验证通过，禁止直接改生产代码
+- **单元测试要求**：
+  - 小变更（bug修复、小功能优化）：必须补充对应的单元测试，确保新增/修改代码有测试覆盖
+  - 大变更（核心逻辑重构、架构调整、新增功能模块）：必须先补充完整的单元测试，再提交代码评审
+  - 新增代码测试覆盖率不低于80%，核心逻辑必须100%覆盖
 
 ### 🧪 4. 测试发布规范（上线质量保障）
 **适用场景**：所有功能上线前测试
@@ -188,6 +218,10 @@ python src/tests/run_small_scale_test.py 50
   3. 语音链路专项测试：ASR准确率≥90%，端到端延迟≤300ms
 - 重大功能上线必须做离线效果评估，预测回款率不低于人工80%才能上线
 - 上线前必须准备回滚预案，出现问题可立刻切回旧版本
+- **回归测试要求**：
+  - 大变更（核心逻辑重构、架构调整、版本发布）必须执行全量回归测试
+  - 回归测试范围包含：所有单元测试、黄金用例回放测试、鲁棒性测试、语音链路测试
+  - 回归测试不通过不得上线，必须修复所有失败用例后重新执行全量回归
 
 ### 📝 5. 文档更新规范
 > **核心规则：所有与@Meng Li讨论后明确的结论、决策、需求、方案，必须第一时间同步更新到对应的文档中。**

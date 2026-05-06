@@ -65,12 +65,15 @@ data/*.flac
 data/*.ogg
 data/*.wma
 data/*.aac
-data/*.json
 data/*.csv
 data/tts_test/
 data/chatbot_tests/
 data/evaluations/
 data/audio/
+# 允许提交语料库文件
+!data/behavior_analysis/customer_response_corpus.json
+# 其他JSON数据文件不提交
+data/*.json
 data/
 src/experiments/docs/
 

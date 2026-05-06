@@ -1,0 +1,48 @@
+# 印尼智能催收系统 Docker Compose 部署配置
+# 本地开发和服务器部署都可以使用
+version: '3.8'
+
+services:
+  api:
+    build: .
+    image: ai-telemarketing-api:latest
+    container_name: ai-telemarketing-api
+    restart: always
+    ports:
+      - "${API_PORT:-8000}:8000"
+    environment:
+      - TZ=Asia/Jakarta
+      - ENV=${ENV:-development}
+      - DB_URI=${DB_URI:-sqlite:///./data/collection.db}
+      # 其他环境变量根据需要添加
+      # - ASR_API_KEY=${ASR_API_KEY}
+      # - TTS_API_KEY=${TTS_API_KEY}
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./tmp:/app/tmp
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # 如果需要单独的数据库服务，可以添加
+  # db:
+  #   image: mysql:8.0
+  #   container_name: ai-telemarketing-db
+  #   restart: always
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+  #     - MYSQL_DATABASE=collection
+  #     - MYSQL_USER=collection
+  #     - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+  #     - TZ=Asia/Jakarta
+  #   volumes:
+  #     - mysql_data:/var/lib/mysql
+  #   ports:
+  #     - "3306:3306"
+
+# volumes:
+#   mysql_data:

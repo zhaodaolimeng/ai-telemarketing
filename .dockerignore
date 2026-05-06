@@ -1,0 +1,57 @@
+# Git相关
+.git
+.gitignore
+.github
+
+# Python缓存
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+venv
+ENV
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.hypothesis/
+.pytest_cache/
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# 敏感数据和大文件
+data/*
+!data/behavior_analysis/customer_response_corpus.json  # 只保留必要的语料库
+logs/*
+tmp/*
+*.env
+*.env.*
+secrets/
+*.db
+*.sqlite3
+*.tar.gz
+*.zip
+models/*.bin  # 大模型文件如果需要单独管理可以排除
+
+# 文档
+docs/*.md
+README.md
+TODO.md
+
+# CI/CD相关
+.github/
+.gitlab-ci.yml
+Jenkinsfile

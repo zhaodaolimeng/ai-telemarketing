@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-增强版客户模拟器 - 基于真实对话数据
-增加更多拒绝借口和抗拒程度分级
+客户模拟器模块
+包含两个版本：
+1. RealCustomerSimulatorV2 - 规则增强版，基于总结的真实对话模式
+2. GenerativeCustomerSimulator - 数据驱动生成版，基于真实对话提取的语料库
 """
 import random
-from typing import List, Dict, Optional
+import json
+from pathlib import Path
+from typing import List, Dict, Optional, Any, TYPE_CHECKING
+from abc import ABC, abstractmethod
+
+if TYPE_CHECKING:
+    from core.evaluation import SimulatorInterface
 
 
 class RealCustomerSimulatorV2:
@@ -478,52 +486,217 @@ GOLDEN_TEST_CASES_V2 = [
 ]
 
 
+class GenerativeCustomerSimulator:
+    """
+    数据驱动的生成式客户模拟器
+    基于从真实对话中提取的用户回复语料库，生成更符合真实场景的用户回复
+    实现SimulatorInterface接口，可直接插入评估框架使用
+    """
+    if TYPE_CHECKING:
+        __implements__ = ["SimulatorInterface"]
+
+    def __init__(self, corpus_path: Optional[Path] = None):
+        """
+        初始化生成式模拟器
+        :param corpus_path: 语料库路径，默认使用data/behavior_analysis/customer_response_corpus.json
+        """
+        if corpus_path is None:
+            # 从项目根目录查找语料库
+            corpus_path = Path(__file__).parent.parent.parent / "data" / "behavior_analysis" / "customer_response_corpus.json"
+
+        self.corpus = self._load_corpus(corpus_path)
+        self._init_mappings()
+
+    def _load_corpus(self, corpus_path: Path) -> Dict[str, Any]:
+        """加载语料库"""
+        try:
+            with open(corpus_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"加载语料库失败: {e}，使用空语料库")
+            return {
+                "stage_corpus": {},
+                "category_corpus": {},
+                "chat_group_corpus": {},
+                "metadata": {}
+            }
+
+    def _init_mappings(self):
+        """初始化各种映射关系"""
+        # Persona到回复类别的映射
+        self.persona_category_map = {
+            "cooperative": ["agree", "time"],
+            "busy": ["excuse", "negotiate", "time"],
+            "negotiating": ["negotiate", "question", "time"],
+            "silent": ["silent_short", "other"],
+            "forgetful": ["excuse", "negotiate", "other"],
+            "resistant": ["refuse", "excuse", "emotion_angry", "negotiate"],
+            "excuse_master": ["excuse", "refuse", "negotiate", "question", "emotion_angry"]
+        }
+
+        # 抗拒程度权重：(合作类权重, 抗拒类权重)
+        self.resistance_weights = {
+            "very_low": (0.9, 0.1),
+            "low": (0.7, 0.3),
+            "medium": (0.5, 0.5),
+            "high": (0.3, 0.7),
+            "very_high": (0.1, 0.9)
+        }
+
+        # 合作类回复类别
+        self.cooperative_categories = ["agree", "time"]
+        # 抗拒类回复类别
+        self.resistant_categories = ["refuse", "excuse", "emotion_angry", "question", "negotiate"]
+
+    def _get_candidate_responses(
+        self,
+        stage: str,
+        chat_group: str,
+        persona: str,
+        resistance_level: str,
+        push_count: int
+    ) -> List[str]:
+        """
+        根据参数获取候选回复列表
+        """
+        candidates = []
+
+        # 1. 优先获取对应阶段的回复
+        if stage in self.corpus.get("stage_corpus", {}):
+            candidates.extend(self.corpus["stage_corpus"][stage])
+
+        # 2. 其次获取对应催收阶段的回复
+        if chat_group in self.corpus.get("chat_group_corpus", {}):
+            candidates.extend(self.corpus["chat_group_corpus"][chat_group])
+
+        # 3. 根据persona和抗拒程度获取对应类别的回复
+        preferred_categories = self.persona_category_map.get(persona, ["agree", "time"])
+
+        # 根据抗拒程度调整类别权重
+        coop_weight, resist_weight = self.resistance_weights.get(resistance_level, (0.5, 0.5))
+        r = random.random()
+
+        if r < coop_weight:
+            # 选择合作类回复
+            selected_categories = [cat for cat in preferred_categories if cat in self.cooperative_categories]
+            if not selected_categories:
+                selected_categories = self.cooperative_categories
+        else:
+            # 选择抗拒类回复
+            selected_categories = [cat for cat in preferred_categories if cat in self.resistant_categories]
+            if not selected_categories:
+                selected_categories = self.resistant_categories
+
+        # 被追问次数越多，越可能出现愤怒类回复
+        if push_count >= 2 and random.random() < min(0.1 * push_count, 0.5):
+            if "emotion_angry" in self.corpus.get("category_corpus", {}):
+                candidates.extend(self.corpus["category_corpus"]["emotion_angry"])
+
+        # 被追问次数>=3时，有小概率松口
+        if push_count >= 3 and random.random() < 0.15:
+            if "agree" in self.corpus.get("category_corpus", {}):
+                candidates.extend(self.corpus["category_corpus"]["agree"])
+
+        # 添加选中类别的回复
+        for cat in selected_categories:
+            if cat in self.corpus.get("category_corpus", {}):
+                candidates.extend(self.corpus["category_corpus"][cat])
+
+        # 如果没有候选回复，使用默认回复
+        if not candidates:
+            candidates = ["Ya", "Iya", "Tidak", "Maaf", "Nanti ya"]
+
+        return candidates
+
+    def generate_response(
+        self,
+        stage: str,
+        chat_group: str = "H2",
+        persona: str = "cooperative",
+        resistance_level: str = "medium",
+        last_agent_text: str = "",
+        push_count: int = 0,
+        **kwargs
+    ) -> str:
+        """
+        生成用户回复（实现SimulatorInterface接口）
+
+        Args:
+            stage: 当前对话阶段 (greeting/identity/purpose/ask_time/push/confirm/close)
+            chat_group: 催收阶段 (H2/H1/S0)
+            persona: 客户类型 (cooperative/busy/negotiating/silent/forgetful/resistant/excuse_master)
+            resistance_level: 抗拒程度 (very_low/low/medium/high/very_high)
+            last_agent_text: 坐席最后说的话（暂未使用，后续版本可用于语义匹配）
+            push_count: 被追问次数
+            **kwargs: 扩展参数
+
+        Returns:
+            用户回复文本
+        """
+        candidates = self._get_candidate_responses(
+            stage=stage,
+            chat_group=chat_group,
+            persona=persona,
+            resistance_level=resistance_level,
+            push_count=push_count
+        )
+
+        # 随机选择一个回复
+        return random.choice(candidates)
+
+
 if __name__ == "__main__":
     print("=" * 70)
-    print("测试增强版真实客户模拟器")
+    print("测试客户模拟器")
     print("=" * 70)
 
-    simulator = RealCustomerSimulatorV2()
+    # 测试规则增强版
+    print("\n1. 测试规则增强版模拟器 (RealCustomerSimulatorV2):")
+    print("-" * 70)
 
+    rule_simulator = RealCustomerSimulatorV2()
     test_stages = ["greeting", "identity", "purpose", "ask_time", "push", "confirm", "close"]
     personas = ["cooperative", "busy", "negotiating", "resistant", "silent", "forgetful", "excuse_master"]
     resistance_levels = ["very_low", "low", "medium", "high", "very_high"]
 
-    print("\n1. 测试不同persona在各阶段的回应:")
-    print("-" * 70)
-
-    for persona in personas:
+    for persona in personas[:3]:  # 只测试前3个类型节省时间
         print(f"\nPersona: {persona}")
         for stage in test_stages[:4]:
-            resp = simulator.generate_response(stage, persona=persona)
+            resp = rule_simulator.generate_response(stage, persona=persona)
             print(f"  {stage:12} -> {resp}")
 
+    # 测试生成式模拟器
     print("\n" + "=" * 70)
-    print("\n2. 测试不同抗拒程度的抗拒型客户:")
+    print("\n2. 测试数据驱动生成式模拟器 (GenerativeCustomerSimulator):")
     print("-" * 70)
 
-    for level in resistance_levels:
-        print(f"\nResistance Level: {level}")
-        for push_count in range(3):
-            resp = simulator.generate_response(
-                "push", persona="resistant",
-                resistance_level=level, push_count=push_count
+    try:
+        gen_simulator = GenerativeCustomerSimulator()
+        print("语料库加载成功！")
+
+        for persona in personas[:3]:
+            print(f"\nPersona: {persona}")
+            for stage in test_stages[:4]:
+                resp = gen_simulator.generate_response(stage, persona=persona, chat_group="H2", resistance_level="medium")
+                print(f"  {stage:12} -> {resp}")
+
+        print("\n测试不同抗拒程度:")
+        for level in ["low", "medium", "high"]:
+            resp = gen_simulator.generate_response(
+                "ask_time", persona="resistant", chat_group="H1", resistance_level=level
             )
-            print(f"  Push {push_count}: {resp}")
+            print(f"  {level:12} -> {resp}")
+
+        print("\n测试不同追问次数:")
+        for push_count in range(4):
+            resp = gen_simulator.generate_response(
+                "push", persona="resistant", chat_group="S0", resistance_level="high", push_count=push_count
+            )
+            print(f"  Push {push_count} -> {resp}")
+
+    except Exception as e:
+        print(f"生成式模拟器加载失败: {e}")
 
     print("\n" + "=" * 70)
-    print("\n3. 测试借口大师的借口变化:")
-    print("-" * 70)
-
-    print("Excuse Master (S0晚期):")
-    for push_count in range(5):
-        resp = simulator.generate_response(
-            "push" if push_count > 0 else "ask_time",
-            chat_group="S0", persona="excuse_master",
-            push_count=push_count
-        )
-        print(f"  Push {push_count}: {resp}")
-
-    print("\n" + "=" * 70)
-    print("增强版模拟器加载完成！")
+    print("模拟器测试完成！")
     print("=" * 70)
