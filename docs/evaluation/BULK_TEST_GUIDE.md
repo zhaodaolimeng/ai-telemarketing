@@ -24,7 +24,7 @@ python src/tests/run_small_scale_test.py 2000 --use-generative
 
 ### 定向场景测试
 ```bash
-# 仅测试H1阶段（逾期30天内）的抗拒型用户
+# 仅测试H1阶段（宽限期前1天）的抗拒型用户
 python src/tests/run_small_scale_test.py 1000 --use-generative --chat-groups H1 --personas resistant
 
 # 测试高抗拒程度场景
@@ -69,7 +69,7 @@ python src/tests/run_small_scale_test.py 5000 --use-generative --concurrency 50
 | 参数 | 说明 | 默认值 |
 |------|------|--------|
 | `--use-generative` | 使用数据驱动生成式客户模拟器，不指定则使用规则模拟器 | 关闭 |
-| `--chat-groups` | 指定测试的催收阶段，可多选：`H2`(刚逾期)/`H1`(逾期30天内)/`S0`(逾期30天以上) | 全部 |
+| `--chat-groups` | 指定测试的催收阶段，可多选：`H2`(宽限期前2天)/`H1`(宽限期前1天)/`S0`(实质性逾期) | 全部 |
 | `--personas` | 指定测试的客户类型，可多选：`cooperative`(合作型)/`busy`(忙碌型)/`negotiating`(协商型)/`resistant`(抗拒型)/`silent`(沉默型)/`forgetful`(健忘型)/`excuse_master`(借口大师) | 全部 |
 | `--resistance-levels` | 指定测试的抗拒程度，可多选：`very_low`/`low`/`medium`/`high`/`very_high` | 全部 |
 | `--include-logs` | 在报告中包含失败案例的完整对话日志 | 关闭 |

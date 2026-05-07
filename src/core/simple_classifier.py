@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-简易意图分类器 - 基于朴素贝叶斯的轻量级文本分类器
+简易意图分类器 - 基于逻辑回归的优化版文本分类器
 作为规则式IntentDetector的补充，提升unknown类别的识别率
 """
 import json
@@ -12,18 +12,18 @@ from typing import List, Dict, Tuple
 
 # 可选依赖：scikit-learn
 try:
-    from sklearn.feature_extraction.text import CountVectorizer
-    from sklearn.naive_bayes import MultinomialNB
-    from sklearn.pipeline import Pipeline
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.linear_model import LogisticRegression
     from sklearn.model_selection import train_test_split
     from sklearn.metrics import classification_report
+    from sklearn.pipeline import Pipeline
     SKLEARN_AVAILABLE = True
 except ImportError:
     SKLEARN_AVAILABLE = False
 
 
 class SimpleIntentClassifier:
-    """简易意图分类器，使用词袋模型+朴素贝叶斯"""
+    """简易意图分类器，使用TF-IDF + Logistic Regression"""
 
     def __init__(self):
         if not SKLEARN_AVAILABLE:
@@ -35,25 +35,22 @@ class SimpleIntentClassifier:
 
         # 印尼语常用停用词（精简版）
         self.stop_words = [
-            'yang', 'dan', 'di', 'ke', 'dari', 'untuk', 'pada', 'dengan', 'adalah',
-            'ini', 'itu', 'saya', 'anda', 'kita', 'kami', 'mereka', 'dia', 'nya',
-            'ya', 'iya', 'tidak', 'bukan', 'sudah', 'belum', 'akan', 'bisa',
-            'pagi', 'siang', 'sore', 'malam', 'selamat', 'halo', 'hai', 'pak', 'bu'
+            "yang", "dan", "di", "ke", "dari", "untuk", "pada", "dengan", "adalah",
+            "ini", "itu", "saya", "anda", "kita", "kami", "mereka", "dia", "nya",
+            "ya", "iya", "tidak", "bukan", "sudah", "belum", "akan", "bisa",
+            "pagi", "siang", "sore", "malam", "selamat", "halo", "hai", "pak", "bu"
         ]
 
         # 预处理正则
         self.clean_pattern = re.compile(r'[^\w\s]')
 
     def _preprocess(self, text: str) -> str:
-        """文本预处理：小写化、去标点、去停用词"""
+        """文本预处理：小写化、去标点"""
         # 小写化
         text = text.lower()
         # 去标点
         text = self.clean_pattern.sub('', text)
-        # 去停用词
-        words = text.split()
-        words = [w for w in words if w not in self.stop_words]
-        return ' '.join(words)
+        return text
 
     def load_training_data(self, data_dir: str = 'data/gold_dataset') -> Tuple[List[str], List[str]]:
         """从黄金数据集加载训练数据"""
@@ -92,9 +89,12 @@ class SimpleIntentClassifier:
         # 统计每个类别的样本数
         from collections import Counter
         label_counts = Counter(labels)
-        min_count = min(label_counts.values())
+        print("各类别样本数:")
+        for label, count in label_counts.most_common():
+            print(f"  {label}: {count}")
 
         # 划分训练集测试集：最少的类别样本数>=2时才用分层抽样，否则用普通随机抽样
+        min_count = min(label_counts.values())
         if min_count >= 2:
             X_train, X_test, y_train, y_test = train_test_split(
                 texts, labels, test_size=test_size, random_state=42, stratify=labels
@@ -105,10 +105,10 @@ class SimpleIntentClassifier:
                 texts, labels, test_size=test_size, random_state=42
             )
 
-        # 创建pipeline：词袋向量化 + 多项式朴素贝叶斯
+        # 创建pipeline：TF-IDF向量化 + Logistic Regression
         self.pipeline = Pipeline([
-            ('vectorizer', CountVectorizer(ngram_range=(1, 2))),  # 1-gram和2-gram
-            ('classifier', MultinomialNB(alpha=0.1))  # 拉普拉斯平滑
+            ('tfidf', TfidfVectorizer(max_features=5000, ngram_range=(1, 2))),
+            ('clf', LogisticRegression(C=10, class_weight='balanced', random_state=42, max_iter=500)),
         ])
 
         # 训练
@@ -117,7 +117,7 @@ class SimpleIntentClassifier:
 
         # 评估
         y_pred = self.pipeline.predict(X_test)
-        report = classification_report(y_test, y_pred, output_dict=True)
+        report = classification_report(y_test, y_pred, output_dict=True, zero_division=0)
 
         print("\n训练完成！测试集评估结果：")
         print(f"整体准确率: {report['accuracy']:.4f}")
@@ -128,7 +128,7 @@ class SimpleIntentClassifier:
     def predict(self, text: str, top_k: int = 3) -> List[Tuple[str, float]]:
         """预测意图，返回top k个结果和概率"""
         if not self.is_trained:
-            raise ValueError("分类器尚未训练，请先调用train()方法")
+            raise ValueError("分类器尚未训练，请先调用 train() 方法")
 
         processed_text = self._preprocess(text)
         probabilities = self.pipeline.predict_proba([processed_text])[0]
@@ -184,7 +184,7 @@ def train_and_save_model():
         "Saya tidak punya uang sekarang",
         "Ini bukan saya yang punya pinjaman",
         "Transfer kemana ya pak?",
-        "Oke, saya transfer jam 3 nanti",
+        "Oke saya transfer jam 3 nanti",
         "Saya sedang sibuk sekarang, nanti bicara ya"
     ]
 

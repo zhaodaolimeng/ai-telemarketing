@@ -35,7 +35,7 @@ simulator = GenerativeCustomerSimulator()
 # 生成用户回复
 response = simulator.generate_response(
     stage="ask_time",               # 当前对话阶段
-    chat_group="H1",                # 催收阶段：H2(刚逾期)/H1(逾期30天内)/S0(逾期30天以上)
+    chat_group="H1",                # 催收阶段：H2(宽限期前2天)/H1(宽限期前1天)/S0(实质性逾期)
     persona="resistant",            # 用户类型：cooperative/busy/negotiating/silent/forgetful/resistant/excuse_master
     resistance_level="high",        # 抗拒程度：very_low/low/medium/high/very_high
     push_count=2,                   # 被追问次数
@@ -81,9 +81,9 @@ print(response)
 ### 催收阶段 (chat_group)
 | 阶段 | 描述 |
 |------|------|
-| H2 | 刚逾期（M0） |
-| H1 | 逾期30天内（M1） |
-| S0 | 逾期30天以上（M2+） |
+| H2 | 宽限期前2天（非实质性逾期，温和引导） |
+| H1 | 宽限期前1天（非实质性逾期，引导+暗示后果） |
+| S0 | 实质性逾期（已过宽限期，高压催收） |
 
 ## 语料库说明
 生成式模拟器使用的语料库位于`data/behavior_analysis/customer_response_corpus.json`，包含：

@@ -318,7 +318,7 @@ class IntentDetector:
 
     # ML分类器缓存（类变量，全局共享）
     _ml_classifier = None
-    _ml_threshold = 0.6  # ML分类结果置信度阈值，低于这个值还是返回unknown
+    _ml_threshold = 0.3  # ML分类结果置信度阈值，低于这个值还是返回unknown
     _use_ml_fallback = True  # 是否启用ML fallback
 
     # 注意顺序：越具体的意图越靠前，避免被更通用的意图匹配覆盖
@@ -367,6 +367,31 @@ class IntentDetector:
             r"\bya betul\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
             r"\biya bener\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
             r"\bya bener\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
+            # 扩展：印尼口语常见身份确认表达
+            r"\bya,? bisa\b",
+            r"\biya,? bisa\b",
+            r"\bini apa ya\b",
+            r"\bapa ini ya\b",
+            r"\bsaya cari,? pak\b",
+            r"\bya saya cari\b",
+            r"\biya saya cari\b",
+            r"\bada yang bisa\b",
+            r"\bya,? ada\b",
+            r"\biya,? ada\b",
+            r"\bsaya ada\b",
+            r"\bada saya\b",
+            r"\bentar ya\b(?!.*bayar|.*transfer)",
+            r"\bsebentar ya\b(?!.*bayar|.*transfer)",
+            r"\bsebentar ya\b(?!.*bayar|.*transfer)",
+            r"\btunggu ya\b(?!.*bayar|.*transfer|.*uang)",
+            r"\bsaya tunggu\b(?!.*bayar|.*uang)",
+            r"\bmenunggu ya\b",
+            r"\bok,? pak\b",
+            r"\boke,? pak\b",
+            r"\bbaik,? pak\b",
+            r"\bsiapa\b",
+            r"\bmana\b",
+            r"\bada apa,? pak\b",
             r"\benar saya\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
             r"\biya benar saya\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
             r"\bya saya itu\b(?!.*bayar|.*transfer|.*pembayaran|.*bayarnya|.*uang|.*rp|.*rupiah|.*tagihan|.*bukti|.*buktinya|.*proses|.*lunas|.*cicil|.*angsuran|.*selamat|.*pagi|.*siang|.*sore|.*malam|.*halo|.*hai|.*apa kabar|.*terima kasih|.*maaf|.*jam|.*tanggal|.*besok|.*nanti|.*rekening|.*bunga|.*denda|.*potong|.*keringanan|.*sakit|.*kehilangan|.*rumah|.*keluarga)",
@@ -416,46 +441,24 @@ class IntentDetector:
         """识别用户意图，按照优先级顺序匹配
         :param context: 上下文，即上一条机器人的消息，用于歧义判断
         """
+        import re
         if not text:
             return "unknown"
 
         text_lower = text.lower()
 
-        # 首先检查是否是独立的确认词，如果是，用上下文判断
-        if context is not None:
-            is_standalone_confirmation = False
-            for pattern in cls.STANDALONE_CONFIRMATION_PATTERNS:
-                import re
-                if re.search(pattern, text_lower, re.IGNORECASE):
-                    is_standalone_confirmation = True
-                    break
-
-            if is_standalone_confirmation:
-                context_lower = context.lower()
-                # 检查上下文是否是付款请求
-                for pattern in cls.PAYMENT_REQUEST_KEYWORDS:
-                    import re
-                    if re.search(pattern, context_lower, re.IGNORECASE):
-                        return "agree_to_pay"
-                # 检查上下文是否是身份验证请求
-                for pattern in cls.IDENTITY_REQUEST_KEYWORDS:
-                    import re
-                    if re.search(pattern, context_lower, re.IGNORECASE):
-                        return "confirm_identity"
-
-        # ========== 新增：纯确认词特殊处理逻辑 ==========
+        # ========== 纯确认词特殊处理逻辑（最优先，消除歧义） ==========
         # 前置检查：如果文本包含支付相关关键词，跳过纯确认逻辑，避免误判
         payment_words = {"bayar", "transfer", "tagihan", "lunas", "waktu", "jam", "tanggal", "rekening", "bukti"}
         has_payment_word = any(word in text_lower for word in payment_words)
 
-        # 先判断是否是纯确认词（只有ya/oke/baik/betul等，没有其他内容，支持重复如"oke oke"、"ya ya"）
-        import re
+        # 判断是否是纯确认词（只有ya/oke/baik/betul等，支持重复如"oke oke"、"ya ya"）
         pure_confirmation_pattern = r"^\s*(ya|iya|oke|ok|baik|betul|benar)(\s*[,]?\s*(ya|iya|oke|ok|baik|betul|benar|pak|bu|tunggu))*\s*[.,!?]?\s*$"
         is_pure_confirmation = bool(re.search(pure_confirmation_pattern, text_lower, re.IGNORECASE)) and not has_payment_word
 
         if is_pure_confirmation and context is not None:
             context_lower = context.lower()
-            # 上下文是身份验证相关 → 优先判定为confirm_identity (避免身份问题带支付关键词时误判)
+            # 优先判断上下文是否是身份验证相关（避免身份问题带支付关键词时误判）
             identity_keywords = [
                 r"\bbapak\b", r"\bpak\b", r"\bibu\b", r"\bbu\b", r"\bsiapa\b", r"\bapakah\b",
                 r"\bbenar\b", r"\bini anda\b", r"\bini dengan\b", r"\bverifikasi\b",
@@ -465,7 +468,7 @@ class IntentDetector:
                 if re.search(pattern, context_lower, re.IGNORECASE):
                     return "confirm_identity"
 
-            # 上下文是支付/还款相关请求 → 判定为agree_to_pay
+            # 再判断上下文是否是支付/还款相关请求
             payment_keywords = [
                 r"\bbayar\b", r"\btagihan\b", r"\btransfer\b", r"\bpembayaran\b", r"\blunas\b",
                 r"\brekening\b", r"\bbukti transfer\b", r"\bbayar kapan\b", r"\bbisa bayar\b",
@@ -532,6 +535,7 @@ class CollectionChatBot:
 
     def __init__(self, chat_group: str = "H2", customer_name: Optional[str] = None,
                  overdue_amount: int = 500000, overdue_days: int = 5):
+        # chat_group 催收阶段: H2=宽限期前2天(温和引导), H1=宽限期前1天(引导+暗示后果), S0=实质性逾期(高压催收)
         self.chat_group = chat_group
         self.customer_name = customer_name or "Pak/Bu"
         self.overdue_amount = overdue_amount  # 欠款金额，默认500k

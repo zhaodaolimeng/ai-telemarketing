@@ -42,7 +42,7 @@ python scripts/batch_annotate.py
 ### 基本信息 (basic_info)
 | 字段 | 类型 | 说明 | 可选值 |
 |------|------|------|--------|
-| collection_stage | enum | 催收阶段 | H2: 刚逾期<br>H1: 逾期30天内<br>S0: 逾期30天以上 |
+| collection_stage | enum | 催收阶段 | H2: 宽限期前2天（温和引导）<br>H1: 宽限期前1天（引导+暗示后果）<br>S0: 实质性逾期（高压催收） |
 | call_duration | number | 通话总时长，单位秒 | 自动填充，无需修改 |
 | call_result | enum | 通话结果 | success: 成功拿到还款承诺<br>failure: 催收失败<br>extension: 用户同意展期<br>partial_payment: 用户同意部分还款 |
 
