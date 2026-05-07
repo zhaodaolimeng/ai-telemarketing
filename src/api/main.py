@@ -785,7 +785,7 @@ async def list_tts_voices(locale: Optional[str] = "id"):
     tts = TTSManager()
     engine = tts.get_engine()
     if engine:
-        return {"voices": engine.list_voices(locale=locale)}
+        return {"voices": await engine.list_voices(locale=locale)}
     return {"voices": [], "error": "No TTS engine available"}
 
 
