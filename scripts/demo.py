@@ -7,7 +7,7 @@ import asyncio
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from src.core.chatbot import CollectionChatBot
+from src.core.chatbot import CollectionChatBot, ChatState
 
 async def main():
     print("=" * 60)
@@ -42,7 +42,7 @@ async def main():
         print(f"🤖 机器人: {response}")
 
         # 如果对话结束，询问是否重新开始
-        if bot.state in [bot.ChatState.CLOSE, bot.ChatState.FAILED]:
+        if bot.state in [ChatState.CLOSE, ChatState.FAILED]:
             restart = input("\n🔄 对话结束，是否重新开始？(y/n): ").strip().lower()
             if restart == "y":
                 bot = CollectionChatBot(chat_group="H2", overdue_amount=500000, overdue_days=5)
