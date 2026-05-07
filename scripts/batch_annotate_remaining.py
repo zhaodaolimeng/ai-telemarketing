@@ -11,9 +11,9 @@ from datetime import datetime
 from typing import Dict, List, Any, Optional
 
 # 加入项目路径
-sys.path.append(str(Path(__file__).parent.parent))
-from core.chatbot import ASRCorrector, IntentDetector, TimeDetector
-from core.compliance_checker import ComplianceChecker
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.core.chatbot import ASRCorrector, IntentDetector, TimeDetector
+from src.core.compliance_checker import ComplianceChecker
 
 # 初始化工具组件
 asr_corrector = ASRCorrector()

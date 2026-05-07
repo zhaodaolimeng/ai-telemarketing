@@ -4,7 +4,10 @@
 催收机器人交互Demo
 """
 import asyncio
-from core.chatbot import CollectionChatBot
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from src.core.chatbot import CollectionChatBot
 
 async def main():
     print("=" * 60)

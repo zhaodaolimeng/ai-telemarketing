@@ -5,8 +5,12 @@
 """
 import asyncio
 import uuid
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 from flask import Flask, render_template, request, jsonify, session
-from core.chatbot import CollectionChatBot
+from src.core.chatbot import CollectionChatBot
 
 app = Flask(__name__)
 app.secret_key = 'demo_secret_key_2026'
