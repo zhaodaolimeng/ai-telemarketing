@@ -6,6 +6,11 @@ class ChatDemo {
         this.isFinished = false;
         this.simulationMode = false;
         this.pendingSimulatedReply = null;
+        this.voiceMode = false;
+        this.autoSimRunning = false;
+        this.autoSimEventSource = null;
+        this.currentAudio = null;
+        this.pendingAudioUrls = [];
 
         this.initElements();
         this.bindEvents();
@@ -34,6 +39,11 @@ class ChatDemo {
         this.simulationResult = document.getElementById('simulationResult');
         this.simResultText = document.getElementById('simResultText');
         this.useSimReplyBtn = document.getElementById('useSimReply');
+
+        this.voiceToggle = document.getElementById('voiceToggle');
+        this.autoSimBtn = document.getElementById('autoSimBtn');
+        this.simStatus = document.getElementById('simStatus');
+        this.simStatusText = document.getElementById('simStatusText');
     }
 
     bindEvents() {
@@ -49,6 +59,14 @@ class ChatDemo {
         this.toggleSimulationBtn.addEventListener('click', () => this.toggleSimulation());
         this.generateReplyBtn.addEventListener('click', () => this.generateSimulatedReply());
         this.useSimReplyBtn.addEventListener('click', () => this.useSimulatedReply());
+        this.voiceToggle.addEventListener('click', () => this.toggleVoiceMode());
+        this.autoSimBtn.addEventListener('click', () => {
+            if (this.autoSimRunning) {
+                this.stopAutoSimulation();
+            } else {
+                this.startAutoSimulation();
+            }
+        });
     }
 
     async newChat() {
@@ -63,7 +81,8 @@ class ChatDemo {
         const customerName = this.customerNameInput.value || 'Pak / Bu';
 
         try {
-            const response = await fetch('/chat/start', {
+            const endpoint = this.voiceMode ? '/voice/start' : '/chat/start';
+            const response = await fetch(endpoint, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -84,8 +103,8 @@ class ChatDemo {
             // 显示会话信息
             this.sessionInfo.style.display = 'flex';
             this.sessionIdEl.textContent = this.sessionId;
-            this.chatGroupEl.textContent = data.chat_group;
-            this.currentStateEl.textContent = data.current_state;
+            this.chatGroupEl.textContent = data.chat_group || chatGroup;
+            this.currentStateEl.textContent = data.state || data.current_state;
 
             // 启用输入
             this.messageInput.disabled = false;
@@ -96,7 +115,15 @@ class ChatDemo {
             this.messageInput.placeholder = '输入客户回复...';
 
             // 添加agent消息
-            await this.addMessage('agent', data.agent_response);
+            const agentText = data.agent_text || data.agent_response;
+            const msgId = this.addMessage('agent', agentText);
+
+            // 语音模式：添加播放按钮并自动播放
+            const audioUrl = data.audio_file || data.agent_audio_url;
+            if (this.voiceMode && audioUrl) {
+                this.addPlayButton(msgId, audioUrl);
+                this.playAudio(audioUrl);
+            }
 
         } catch (error) {
             console.error('Error:', error);
@@ -123,7 +150,8 @@ class ChatDemo {
         const loadingId = this.addLoadingMessage();
 
         try {
-            const response = await fetch('/chat/turn', {
+            const endpoint = this.voiceMode ? '/voice/turn' : '/chat/turn';
+            const response = await fetch(endpoint, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -144,17 +172,28 @@ class ChatDemo {
             this.removeMessage(loadingId);
 
             // 更新状态
-            this.currentStateEl.textContent = data.current_state;
+            this.currentStateEl.textContent = data.state || data.current_state;
 
             // 添加agent回复
-            await this.addMessage('agent', data.agent_response);
+            const agentText = data.agent_text || data.agent_response;
+            const msgId = this.addMessage('agent', agentText);
+
+            // 语音模式：添加播放按钮并自动播放
+            const audioUrl = data.audio_file || data.agent_audio_url;
+            if (this.voiceMode && audioUrl) {
+                this.addPlayButton(msgId, audioUrl);
+                this.playAudio(audioUrl);
+            }
 
             // 检查是否结束
             if (data.is_finished) {
                 this.isFinished = true;
                 this.messageInput.disabled = true;
                 this.sendBtn.disabled = true;
-                this.addResultBanner(data.is_successful, data.commit_time);
+                this.addResultBanner(
+                    data.is_successful !== undefined ? data.is_successful : !this.isFinished,
+                    data.commit_time
+                );
             }
 
         } catch (error) {
@@ -412,6 +451,268 @@ class ChatDemo {
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
+    }
+
+    // ============ 语音模式 ============
+
+    toggleVoiceMode() {
+        this.voiceMode = !this.voiceMode;
+        if (this.voiceMode) {
+            this.voiceToggle.classList.add('active');
+            this.voiceToggle.textContent = '🔊 语音:开';
+            this.messageInput.placeholder = '输入客户回复（Agent将语音播报）...';
+        } else {
+            this.voiceToggle.classList.remove('active');
+            this.voiceToggle.textContent = '🔊 语音';
+            this.messageInput.placeholder = '输入客户回复...';
+            this.stopAllAudio();
+        }
+    }
+
+    addPlayButton(msgId, audioUrl) {
+        const msgEl = document.getElementById(msgId);
+        if (!msgEl) return;
+        const contentEl = msgEl.querySelector('.message-content');
+        if (!contentEl) return;
+
+        const btn = document.createElement('span');
+        btn.className = 'play-audio-btn';
+        btn.textContent = '🔊 播放';
+        btn.dataset.audioUrl = audioUrl;
+        btn.dataset.msgId = msgId;
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.playAudioFromButton(btn, audioUrl);
+        });
+        contentEl.appendChild(btn);
+    }
+
+    playAudioFromButton(btn, url) {
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+            // Reset all buttons
+            document.querySelectorAll('.play-audio-btn.playing').forEach(b => {
+                b.classList.remove('playing');
+                b.textContent = '🔊 播放';
+            });
+        }
+
+        btn.classList.add('playing');
+        btn.textContent = '⏸ 播放中...';
+
+        this.currentAudio = new Audio(url);
+        this.currentAudio.onended = () => {
+            btn.classList.remove('playing');
+            btn.textContent = '🔊 播放';
+            this.currentAudio = null;
+        };
+        this.currentAudio.onerror = () => {
+            btn.classList.remove('playing');
+            btn.textContent = '🔊 播放';
+            this.currentAudio = null;
+        };
+        this.currentAudio.play();
+    }
+
+    playAudio(url) {
+        // Stop any currently playing audio
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+        }
+
+        this.currentAudio = new Audio(url);
+        this.currentAudio.onended = () => { this.currentAudio = null; };
+        this.currentAudio.onerror = () => { this.currentAudio = null; };
+        this.currentAudio.play().catch(() => {});
+    }
+
+    async playAudioSequence(urls) {
+        for (const url of urls) {
+            if (!url || this.autoSimRunning === false) break;
+            await new Promise((resolve) => {
+                this.currentAudio = new Audio(url);
+                this.currentAudio.onended = () => {
+                    this.currentAudio = null;
+                    resolve();
+                };
+                this.currentAudio.onerror = () => {
+                    this.currentAudio = null;
+                    resolve();
+                };
+                this.currentAudio.play().catch(() => resolve());
+            });
+        }
+    }
+
+    stopAllAudio() {
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+        }
+        // Reset play buttons
+        document.querySelectorAll('.play-audio-btn.playing').forEach(b => {
+            b.classList.remove('playing');
+            b.textContent = '🔊 播放';
+        });
+    }
+
+    // ============ 自动语音仿真 ============
+
+    async startAutoSimulation() {
+        if (this.autoSimRunning) return;
+
+        // 先开始对话
+        if (!this.sessionId) {
+            await this.newChat();
+            if (!this.sessionId) return;
+        }
+
+        const persona = this.simPersonaSelect.value;
+        const resistance = this.simResistanceSelect.value;
+        const chatGroup = this.chatGroupSelect.value;
+        const customerName = this.customerNameInput.value || 'Budi';
+
+        this.autoSimRunning = true;
+        this.autoSimBtn.textContent = '⏹ 停止仿真';
+        this.autoSimBtn.classList.add('running');
+        this.generateReplyBtn.disabled = true;
+        this.messageInput.disabled = true;
+        this.sendBtn.disabled = true;
+        this.voiceToggle.disabled = true;
+        this.isLoading = true;
+
+        // 清屏
+        this.chatArea.innerHTML = '';
+        this.welcomeMessage.style.display = 'none';
+        this.simStatus.classList.add('active');
+        this.simStatusText.textContent = '⏳ 加载ASR模型...';
+
+        // 连接SSE
+        const params = new URLSearchParams({
+            persona, resistance, chat_group: chatGroup,
+            max_turns: 15, asr_model: 'tiny', customer_name: customerName,
+        });
+        const url = `/voice/simulate/stream?${params.toString()}`;
+
+        this.autoSimEventSource = new EventSource(url);
+        let turnCount = 0;
+
+        this.autoSimEventSource.onmessage = async (event) => {
+            try {
+                const data = JSON.parse(event.data);
+
+                if (data.type === 'greeting') {
+                    this.simStatusText.textContent = '🟢 对话进行中...';
+                    const agentText = data.agent_text || data.agent_response;
+                    const msgId = this.addMessage('agent', agentText);
+                    if (data.agent_audio_url) {
+                        this.addPlayButton(msgId, data.agent_audio_url);
+                        await this.playAudio(data.agent_audio_url);
+                    }
+                } else if (data.type === 'turn') {
+                    turnCount++;
+                    this.simStatusText.textContent = `🟢 第 ${turnCount} 轮...`;
+
+                    // 客户消息
+                    if (data.customer_text) {
+                        this.addMessage('customer', data.customer_text);
+                    }
+                    if (data.customer_audio_url) {
+                        await this.playAudio(data.customer_audio_url);
+                    }
+
+                    // ASR状态
+                    if (data.asr_text) {
+                        const matchIcon = data.asr_exact_match ? '✅' : '⚠️';
+                        const asrNote = document.createElement('div');
+                        asrNote.className = 'message agent';
+                        asrNote.style.opacity = '0.7';
+                        asrNote.style.fontSize = '12px';
+                        asrNote.innerHTML = `
+                            <div class="message-content" style="background:#f0fdf4; max-width:85%;">
+                                ${matchIcon} ASR: "${this.escapeHtml(data.asr_text)}"
+                                ${data.asr_exact_match ? '' : ' (原文: "' + this.escapeHtml(data.customer_text) + '")'}
+                                <span style="color:#94a3b8; margin-left:8px;">CER:${data.asr_cer.toFixed(3)}</span>
+                            </div>
+                        `;
+                        this.chatArea.appendChild(asrNote);
+                    }
+
+                    // Agent回复
+                    if (data.agent_text) {
+                        const msgId = this.addMessage('agent', data.agent_text);
+                        if (data.agent_audio_url) {
+                            this.addPlayButton(msgId, data.agent_audio_url);
+                            await this.playAudio(data.agent_audio_url);
+                        }
+                    }
+
+                    if (data.is_finished) {
+                        this.finishAutoSimulation(data);
+                    }
+                } else if (data.type === 'done') {
+                    this.simStatusText.textContent = `✅ 完成: ${data.total_turns}轮, ASR匹配率: ${(data.asr_exact_match_rate*100).toFixed(0)}%`;
+                } else if (data.type === 'error') {
+                    this.simStatusText.textContent = '❌ 错误: ' + data.message;
+                    this.autoSimRunning = false;
+                }
+            } catch (e) {
+                console.error('SSE parse error:', e);
+            }
+        };
+
+        this.autoSimEventSource.onerror = (event) => {
+            console.log('SSE connection closed');
+            this.autoSimEventSource.close();
+            this.autoSimEventSource = null;
+            this.finishAutoSimulation();
+        };
+    }
+
+    finishAutoSimulation(reportData) {
+        this.autoSimRunning = false;
+        this.isLoading = false;
+        this.autoSimBtn.textContent = '▶ 自动语音仿真';
+        this.autoSimBtn.classList.remove('running');
+        this.generateReplyBtn.disabled = false;
+        this.voiceToggle.disabled = false;
+        this.isFinished = true;
+        this.messageInput.disabled = true;
+        this.sendBtn.disabled = true;
+
+        if (this.autoSimEventSource) {
+            this.autoSimEventSource.close();
+            this.autoSimEventSource = null;
+        }
+
+        if (reportData && reportData.conversation_ended !== undefined) {
+            this.addResultBanner(
+                reportData.final_state !== 'FAILED',
+                reportData.committed_time
+            );
+        }
+
+        if (this.simStatus) {
+            setTimeout(() => {
+                this.simStatus.classList.remove('active');
+            }, 5000);
+        }
+    }
+
+    stopAutoSimulation() {
+        if (this.autoSimEventSource) {
+            this.autoSimEventSource.close();
+            this.autoSimEventSource = null;
+        }
+        this.autoSimRunning = false;
+        this.isLoading = false;
+        this.autoSimBtn.textContent = '▶ 自动语音仿真';
+        this.autoSimBtn.classList.remove('running');
+        this.generateReplyBtn.disabled = false;
+        this.voiceToggle.disabled = false;
+        this.simStatusText.textContent = '⏹ 已停止';
     }
 }
 

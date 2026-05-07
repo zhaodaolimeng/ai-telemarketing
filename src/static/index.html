@@ -322,6 +322,100 @@
             border-radius: 8px;
             border: 1px solid #e2e8f0;
         }
+
+        .voice-toggle {
+            padding: 4px 12px;
+            font-size: 12px;
+            background: #f1f5f9;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .voice-toggle.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        .auto-sim-btn {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            margin-left: 8px;
+            white-space: nowrap;
+        }
+
+        .auto-sim-btn.running {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        }
+
+        .audio-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #667eea;
+            margin-top: 4px;
+        }
+
+        .audio-indicator .wave {
+            display: flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 16px;
+        }
+
+        .audio-indicator .wave span {
+            width: 3px;
+            background: #667eea;
+            border-radius: 2px;
+            animation: wave 0.8s ease-in-out infinite;
+        }
+
+        .audio-indicator .wave span:nth-child(1) { height: 8px; animation-delay: 0.0s; }
+        .audio-indicator .wave span:nth-child(2) { height: 14px; animation-delay: 0.1s; }
+        .audio-indicator .wave span:nth-child(3) { height: 10px; animation-delay: 0.2s; }
+        .audio-indicator .wave span:nth-child(4) { height: 16px; animation-delay: 0.3s; }
+        .audio-indicator .wave span:nth-child(5) { height: 6px; animation-delay: 0.4s; }
+
+        @keyframes wave {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(0.3); }
+        }
+
+        .message .play-audio-btn {
+            display: inline-block;
+            margin-top: 6px;
+            padding: 2px 8px;
+            font-size: 11px;
+            background: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            cursor: pointer;
+            color: #475569;
+        }
+
+        .message .play-audio-btn:hover {
+            background: #e2e8f0;
+        }
+
+        .message .play-audio-btn.playing {
+            background: #667eea;
+            color: white;
+            border-color: transparent;
+        }
+
+        .sim-status {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 8px;
+            display: none;
+        }
+
+        .sim-status.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -339,6 +433,7 @@
             <div>组别: <span id="chatGroup">-</span></div>
             <div>状态: <span id="currentState">-</span></div>
             <div style="display: flex; gap: 8px;">
+                <button id="voiceToggle" class="voice-toggle">🔊 语音</button>
                 <button id="toggleSimulation" class="secondary" style="padding: 4px 12px; font-size: 12px;">仿真模式</button>
             </div>
         </div>
@@ -368,10 +463,14 @@
                     </select>
                 </div>
                 <button id="generateReply">生成客户回复</button>
+                <button id="autoSimBtn" class="auto-sim-btn">▶ 自动语音仿真</button>
             </div>
             <div class="simulation-result" id="simulationResult" style="display: none;">
                 <strong>生成的回复:</strong> <span id="simResultText"></span>
                 <button id="useSimReply" class="secondary" style="margin-left: 10px; padding: 4px 12px;">使用此回复</button>
+            </div>
+            <div class="sim-status" id="simStatus">
+                <span id="simStatusText"></span>
             </div>
         </div>
 

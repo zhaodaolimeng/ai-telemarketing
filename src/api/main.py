@@ -789,6 +789,137 @@ async def list_tts_voices(locale: Optional[str] = "id"):
     return {"voices": [], "error": "No TTS engine available"}
 
 
+# ============ 语音仿真流式 API ============
+
+@app.get("/voice/simulate/stream")
+async def voice_simulate_stream(
+    persona: str = "cooperative",
+    resistance: str = "medium",
+    chat_group: str = "H2",
+    max_turns: int = 15,
+    asr_model: str = "small",
+    customer_name: str = "Budi",
+):
+    """
+    SSE流式语音仿真。
+
+    每轮推送一个JSON事件，包含客户/Agent文本和音频URL。
+    前端可按顺序播放音频。
+
+    Query params:
+        persona: cooperative|busy|negotiating|silent|forgetful|resistant|excuse_master
+        resistance: very_low|low|medium|high|very_high
+        chat_group: H2|H1|S0
+        max_turns: 最大轮数 (default 15)
+        asr_model: tiny|small|medium (default small)
+    """
+    from core.chatbot import CollectionChatBot
+    from core.voice.customer_simulator import CustomerVoiceSimulator
+    from starlette.responses import StreamingResponse
+    import asyncio as aio
+
+    async def event_generator():
+        bot = CollectionChatBot(
+            chat_group=chat_group,
+            customer_name=customer_name,
+        )
+
+        sim = await CustomerVoiceSimulator.create(
+            chatbot=bot,
+            persona=persona,
+            resistance_level=resistance,
+            chat_group=chat_group,
+            customer_name=customer_name,
+            asr_model_size=asr_model,
+            realtime=False,
+            save_artifacts=False,
+        )
+
+        if not sim._asr.is_available:
+            yield f"data: {{\"error\": \"ASR model not loaded\"}}\n\n"
+            return
+
+        # 发送初始问候
+        first_msg, _ = await bot.process(use_tts=False)
+        init_data = {
+            "type": "greeting",
+            "agent_text": first_msg,
+            "state": sim._state_to_stage(bot.state),
+        }
+        # 合成问候音频
+        if first_msg:
+            tts_result = await sim._tts.synthesize(first_msg, voice=sim.agent_voice)
+            if tts_result.success and tts_result.audio_file:
+                init_data["agent_audio_url"] = f"/audio/{Path(tts_result.audio_file).name}"
+        yield f"data: {json.dumps(init_data, ensure_ascii=False)}\n\n"
+
+        try:
+            async for turn in sim.run_streaming(max_turns=max_turns):
+                turn_data = {
+                    "type": "turn",
+                    "turn_id": turn.turn_id,
+                    "state_before": turn.state_before,
+                    "state_after": turn.state_after,
+                    "customer_text": turn.customer_text,
+                    "customer_audio_url": (
+                        f"/audio/{Path(turn.customer_audio_file).name}"
+                        if turn.customer_audio_file else None
+                    ),
+                    "asr_text": turn.asr_text,
+                    "asr_exact_match": turn.asr_exact_match,
+                    "asr_cer": round(turn.asr_cer, 4),
+                    "agent_text": turn.agent_text,
+                    "agent_audio_url": (
+                        f"/audio/{Path(turn.agent_audio_file).name}"
+                        if turn.agent_audio_file else None
+                    ),
+                    "is_finished": bot.is_finished(),
+                }
+                import shutil
+                # 复制音频文件到 tts_output 以便 /audio/ 端点可访问
+                for key in ("customer_audio_file", "agent_audio_file"):
+                    audio_path = turn_data.get(
+                        "customer_audio_url" if key == "customer_audio_file" else "agent_audio_url"
+                    )
+                    if audio_path:
+                        src = getattr(turn, key)
+                        if src and Path(src).exists():
+                            dst = Path("data/tts_output") / Path(src).name
+                            if not dst.exists():
+                                shutil.copy2(src, dst)
+
+                yield f"data: {json.dumps(turn_data, ensure_ascii=False)}\n\n"
+
+            # 发送完成事件
+            from core.chatbot import ChatState
+            report = sim.get_report()
+            done_data = {
+                "type": "done",
+                "total_turns": report.total_turns,
+                "final_state": report.final_state,
+                "committed_time": report.committed_time,
+                "asr_exact_match_rate": round(report.asr_exact_match_rate, 4),
+                "avg_cer": round(report.avg_cer, 4),
+                "avg_tts_time": round(report.avg_tts_time, 3),
+                "avg_asr_time": round(report.avg_asr_time, 3),
+                "conversation_ended": report.conversation_ended,
+            }
+            yield f"data: {json.dumps(done_data, ensure_ascii=False)}\n\n"
+
+        except Exception as e:
+            yield f"data: {{\"type\": \"error\", \"message\": \"{str(e)}\"}}\n\n"
+
+    return StreamingResponse(
+        event_generator(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no",
+        },
+    )
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(

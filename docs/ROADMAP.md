@@ -52,6 +52,7 @@
 | | P03-05 | 语音模式接入Demo：start_demo.py增加语音模式入口 | P03-04完成 | ✅ 已完成 |
 | **语音仿真测试** | P03-06 | 新建`src/core/voice/customer_simulator.py`：客户语音模拟器，TTS(女声)合成印尼语客户语音 → VAD → ASR → Chatbot → 端到端闭环 | P03-05完成 | ✅ 已完成 |
 | | P03-07 | 新建`scripts/voice_simulate_demo.py`：CLI语音仿真Demo，支持多种客户画像/抗拒等级，自动生成评估报告 | P03-06完成 | ✅ 已完成 |
+| **语音Web Demo** | P03-08 | Web Demo增加语音模式：手动模式Agent TTS播报 + 自动SSE流式语音仿真，前端音频顺序播放 | P03-07完成 | ✅ 已完成 |
 
 ---
 

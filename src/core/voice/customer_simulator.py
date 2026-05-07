@@ -17,10 +17,10 @@ from typing import Optional, List, Union
 
 import numpy as np
 
-from src.core.voice.audio_io import RingBuffer
-from src.core.voice.vad import SimpleEnergyVAD, VADState
-from src.core.voice.asr import ASRPipeline
-from src.core.voice.tts import TTSManager
+from core.voice.audio_io import RingBuffer
+from core.voice.vad import SimpleEnergyVAD, VADState
+from core.voice.asr import ASRPipeline
+from core.voice.tts import TTSManager
 
 logger = logging.getLogger(__name__)
 
@@ -244,7 +244,7 @@ class CustomerVoiceSimulator:
         **kwargs,
     ) -> "CustomerVoiceSimulator":
         """工厂方法：自动装配所有组件"""
-        from src.core.simulator import RealCustomerSimulatorV2
+        from core.simulator import RealCustomerSimulatorV2
 
         text_sim = RealCustomerSimulatorV2()
         tts = TTSManager()
@@ -271,7 +271,7 @@ class CustomerVoiceSimulator:
 
     def _state_to_stage(self, state) -> str:
         """ChatState → simulator stage"""
-        from src.core.chatbot import ChatState
+        from core.chatbot import ChatState
 
         mapping = {
             ChatState.INIT: "greeting",
@@ -355,7 +355,7 @@ class CustomerVoiceSimulator:
 
     async def _run_single_turn(self, turn_id: int) -> Optional[SimulationTurn]:
         """执行单轮：客户语音 → ASR → Chatbot"""
-        from src.core.chatbot import ChatState
+        from core.chatbot import ChatState
 
         turn_start = time.time()
         state_before = self._chatbot.state
@@ -460,7 +460,7 @@ class CustomerVoiceSimulator:
 
     async def run(self, max_turns: int = 20) -> SimulationReport:
         """运行完整模拟对话"""
-        from src.core.chatbot import ChatState
+        from core.chatbot import ChatState
 
         self._start_time = time.time()
 
@@ -521,6 +521,66 @@ class CustomerVoiceSimulator:
 
         return report
 
+    async def run_streaming(self, max_turns: int = 20):
+        """
+        流式运行模拟，每轮 yield SimulationTurn
+
+        用于 SSE 推送给 Web 前端。与 run() 不同：
+        - 不在内部 collect turns
+        - 每轮立即合成 agent TTS 并填充 agent_audio_file
+        - 不写报告文件
+
+        Usage::
+
+            async for turn in sim.run_streaming(max_turns=10):
+                send_to_frontend(turn)
+        """
+        from core.chatbot import ChatState
+
+        self._start_time = time.time()
+
+        # 初始问候
+        first_msg, _ = await self._chatbot.process(use_tts=False)
+
+        prev_state = self._chatbot.state
+        stuck_count = 0
+        tts_fail_streak = 0
+
+        for turn_id in range(1, max_turns + 1):
+            if self._chatbot.state in (ChatState.CLOSE, ChatState.FAILED):
+                break
+
+            turn = await self._run_single_turn(turn_id)
+            if turn is None:
+                break
+
+            self._turns.append(turn)
+
+            # 合成 agent TTS（流式需要立即生成音频URL）
+            if turn.agent_text:
+                tts_result = await self._tts.synthesize(turn.agent_text, voice=self.agent_voice)
+                if tts_result.success and tts_result.audio_file:
+                    turn.agent_audio_file = str(tts_result.audio_file)
+
+            yield turn
+
+            # 检测卡状态
+            if self._chatbot.state == prev_state:
+                stuck_count += 1
+                if stuck_count >= 3:
+                    break
+            else:
+                stuck_count = 0
+            prev_state = self._chatbot.state
+
+            # 检测TTS连续失败
+            if turn.tts_failed:
+                tts_fail_streak += 1
+                if tts_fail_streak >= 3:
+                    break
+            else:
+                tts_fail_streak = 0
+
     async def _save_turn_artifacts(self, turn: SimulationTurn):
         """保存单轮音频和转录"""
         run_dir = self._run_dir
@@ -542,7 +602,7 @@ class CustomerVoiceSimulator:
         turns = self._turns
         n = len(turns) or 1
 
-        from src.core.chatbot import ChatState
+        from core.chatbot import ChatState
 
         completed = [t for t in turns if t.customer_text.strip()]
         asr_turns = [t for t in completed if t.asr_text and not t.vad_dropped]
