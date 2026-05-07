@@ -45,10 +45,10 @@
 | | P02-04 | 实现结果对比逻辑：自动对比机器人最终结果、关键节点应对是否符合标注预期 | P02-02、P02-03完成 | ✅ 已完成 |
 | | P02-05 | 实现回归测试脚本：支持批量运行所有黄金用例，自动输出失败案例报告 | P02-04完成 | 📝 待开始 |
 | | P02-06 | 集成到CI/CD流程：代码提交自动触发回放回归测试 | P02-05完成 | 📝 待开始 |
-| **语音链路打通** | P03-01 | 安装TTS/ASR依赖：edge-tts、faster-whisper、sounddevice | 基础依赖层就绪 | 🔄 进行中 |
-| | P03-02 | 新建`src/core/voice/asr.py`：封装Faster-Whisper实时识别，支持印尼语，流式识别 | P03-01完成 | 📝 待开始 |
-| | P03-03 | 新建`src/core/voice/audio_io.py`：麦克风录音+扬声器播放，与VAD联动 | P03-01完成 | 📝 待开始 |
-| | P03-04 | 新建`src/core/voice/conversation.py`：串联麦克风→VAD→ASR→纠错→Chatbot→TTS→扬声器全链路 | P03-02、P03-03完成 | 📝 待开始 |
+| **语音链路打通** | P03-01 | 安装TTS/ASR依赖：edge-tts、faster-whisper、sounddevice | 基础依赖层就绪 | ✅ 已完成 |
+| | P03-02 | 新建`src/core/voice/asr.py`：封装Faster-Whisper实时识别，支持印尼语，流式识别 | P03-01完成 | ✅ 已完成 |
+| | P03-03 | 新建`src/core/voice/audio_io.py`：麦克风录音+扬声器播放，与VAD联动 | P03-01完成 | ✅ 已完成 |
+| | P03-04 | 新建`src/core/voice/conversation.py`：串联麦克风→VAD→ASR→纠错→Chatbot→TTS→扬声器全链路 | P03-02、P03-03完成 | ✅ 已完成 |
 | | P03-05 | 语音模式接入Demo：start_demo.py增加语音模式入口 | P03-04完成 | 📝 待开始 |
 
 ---
