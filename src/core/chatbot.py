@@ -1055,6 +1055,7 @@ class CollectionChatBot:
             return identity_verify, audio_file
 
         # 记录用户输入
+        corrected_input = ""
         if customer_input:
             # 先纠正ASR错误
             corrected_input = self.asr_corrector.correct(customer_input)
