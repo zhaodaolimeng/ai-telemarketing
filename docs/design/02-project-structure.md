@@ -81,11 +81,16 @@ ai-telemarketing/
 │   └── ci_playback_test.py        # CI回放测试
 ├── data/                          # 所有数据（Git忽略）
 ├── docs/                          # 项目文档
-│   ├── requirements/             # 需求文档
-│   ├── design/                   # 设计文档
-│   ├── 业务背景.md
-│   ├── 分析总结.md
-│   └── ...
+│   ├── README.md                  # 文档总览
+│   ├── ROADMAP.md                 # 开发路线图
+│   ├── 业务背景.md                 # 业务背景
+│   ├── DEPLOYMENT_GUIDE.md        # 部署指南
+│   ├── requirements/              # 需求文档
+│   ├── design/                    # 设计文档
+│   ├── evaluation/                # 评估体系
+│   ├── experiments/               # 实验报告
+│   ├── annotation/                # 标注指南
+│   └── archive/                   # 历史归档
 ├── init_db.py                     # 数据库初始化
 ├── start_demo.py                  # Demo启动脚本
 ├── requirements.txt               # 依赖列表

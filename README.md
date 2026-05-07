@@ -83,9 +83,9 @@ ai-telemarketing/
 │   ├── requirements/              # 需求文档
 │   ├── design/                     # 设计文档
 │   ├── evaluation/                 # 评估体系与测试报告
-│   ├── PROJECT_STRUCTURE.md       # 项目结构详细说明
-│   ├── LLM_FALLBACK_DESIGN.md     # LLM兜底架构设计
-│   ├── ROBUST_TRAINING.md         # 红黑对抗训练框架
+│   ├── experiments/                # 实验分析与报告
+│   ├── annotation/                 # 标注指南
+│   ├── ROADMAP.md                  # 开发路线图
 │   └── 业务背景.md                 # 业务背景资料
 ├── start_demo.py                  # Demo启动脚本
 ├── init_db.py                     # 数据库初始化脚本
@@ -204,11 +204,11 @@ python src/tests/test_simulator.py
 ## 文档导航
 - [需求文档](docs/requirements/README.md) - 完整业务需求说明
 - [设计文档](docs/design/README.md) - 系统设计与技术选型
-- [项目结构说明](docs/project_structure.md) - 详细目录结构与模块说明
-- [LLM Fallback架构设计](docs/LLM_FALLBACK_DESIGN.md) - 混合对话架构设计
-- [红黑对抗训练框架](docs/ROBUST_TRAINING.md) - 鲁棒性训练体系
-- [用户画像与话术模板](docs/USER_PROFILE_TEMPLATING.md) - 个性化话术系统设计
-- [实验文档](docs/experiments/) - 数据分析与实验报告（7份）
+- [项目结构说明](docs/design/02-project-structure.md) - 详细目录结构与模块说明
+- [LLM Fallback架构设计](docs/design/03-llm-fallback.md) - 混合对话架构设计
+- [红黑对抗训练框架](docs/design/04-robust-training.md) - 鲁棒性训练体系
+- [用户画像与话术模板](docs/design/05-user-profile-templating.md) - 个性化话术系统设计
+- [实验文档](docs/experiments/) - 数据分析与实验报告
 - [API文档](http://localhost:8000/docs)（启动服务后访问）
 
 ---

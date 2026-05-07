@@ -131,9 +131,9 @@ graph TD
 | DOC-05 | 编写`docs/evaluation/ROBUSTNESS_TEST_GUIDE.md`：鲁棒性测试用例说明、工具使用指南 | P11-05完成 | 📝 待开始 |
 | DOC-06 | 编写`docs/evaluation/OFFLINE_EVALUATION_GUIDE.md`：离线效果评估工具使用说明 | P13-05完成 | 📝 待开始 |
 | DOC-07 | 编写`docs/design/CHATBOT_DESIGN.md`：12状态对话引擎设计、状态流转说明 | 基础依赖层就绪 | 📝 待开始 |
-| DOC-08 | 优化`docs/design/LLM_FALLBACK_DESIGN.md`：更新兜底触发规则、切换逻辑说明 | 基础依赖层就绪 | 📝 待开始 |
+| DOC-08 | 优化`docs/design/03-llm-fallback.md`：更新兜底触发规则、切换逻辑说明 | 基础依赖层就绪 | 📝 待开始 |
 | DOC-09 | 编写`docs/design/SPEECH_LINK_DESIGN.md`：TTS/VAD/ASR/打断全链路设计说明 | ASR接入完成 | 📝 待开始 |
-| DOC-10 | 优化`docs/design/USER_PROFILE_TEMPLATING.md`：用户画像、话术模板设计说明 | 基础依赖层就绪 | 📝 待开始 |
+| DOC-10 | 优化`docs/design/05-user-profile-templating.md`：用户画像、话术模板设计说明 | 基础依赖层就绪 | 📝 待开始 |
 | DOC-11 | 自动生成API接口文档，保持与代码同步更新 | 基础依赖层就绪 | 📝 待开始 |
 | DOC-12 | 编写生产环境部署文档：依赖安装、配置、高可用部署方案 | P1全量完成 | 📝 待开始 |
 | DOC-13 | 编写运营操作手册：话术配置、策略调整、报表查看说明 | P1全量完成 | 📝 待开始 |
