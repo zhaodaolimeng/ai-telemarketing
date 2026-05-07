@@ -10,7 +10,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from flask import Flask, render_template, request, jsonify, session
-from src.core.chatbot import CollectionChatBot
+from src.core.chatbot import CollectionChatBot, ChatState
 
 app = Flask(__name__)
 app.secret_key = 'demo_secret_key_2026'
@@ -64,7 +64,7 @@ def send_message():
     loop.close()
 
     # 检查对话是否结束
-    conversation_ended = bot.state in [bot.ChatState.CLOSE, bot.ChatState.FAILED]
+    conversation_ended = bot.state in [ChatState.CLOSE, ChatState.FAILED]
 
     return jsonify({
         'response': response,
