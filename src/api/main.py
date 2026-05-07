@@ -32,6 +32,9 @@ from api.schemas import (
     TranslateResponse,
     SimulateCustomerRequest,
     SimulateCustomerResponse,
+    VoiceStartRequest,
+    VoiceTurnRequest,
+    VoiceSessionResponse,
 )
 from api.database import (
     get_db,
@@ -658,6 +661,132 @@ async def simulate_customer(request: SimulateCustomerRequest, db: Session = Depe
             resistance_level=request.resistance_level,
             success=False
         )
+
+
+# ============ 语音模式 API ============
+
+@app.post("/voice/start", response_model=VoiceSessionResponse)
+async def voice_start(request: VoiceStartRequest, db: Session = Depends(get_db)):
+    """启动语音会话，返回TTS音频"""
+    from core.voice.tts import TTSManager
+    import base64
+    import io
+
+    session_id = str(uuid.uuid4())
+
+    bot = CollectionChatBot(
+        chat_group=request.chat_group.value,
+        customer_name=request.customer_name,
+    )
+    bot.session_id = session_id
+    active_sessions[session_id] = bot
+
+    agent_text, _ = await bot.process(use_tts=False)
+
+    # TTS 合成
+    tts = TTSManager()
+    tts_result = await tts.synthesize(agent_text)
+
+    audio_base64 = None
+    audio_file_url = None
+
+    if tts_result.success and tts_result.audio_file:
+        audio_file_url = f"/audio/{Path(tts_result.audio_file).name}"
+    if tts_result.success and tts_result.audio_data is not None:
+        try:
+            import soundfile as sf
+            with io.BytesIO() as buf:
+                sf.write(buf, tts_result.audio_data, tts_result.sample_rate or 16000, format="WAV")
+                buf.seek(0)
+                audio_base64 = base64.b64encode(buf.read()).decode()
+        except ImportError:
+            pass
+
+    save_session_to_db(db, bot, request.chat_group.value)
+
+    return VoiceSessionResponse(
+        session_id=session_id,
+        agent_text=agent_text,
+        audio_data_base64=audio_base64,
+        audio_file=audio_file_url,
+        state=convert_bot_state_to_schema(bot.state),
+        is_finished=bot.is_finished(),
+        is_successful=bot.is_successful(),
+    )
+
+
+@app.post("/voice/turn", response_model=VoiceSessionResponse)
+async def voice_turn(request: VoiceTurnRequest, db: Session = Depends(get_db)):
+    """语音会话轮次，返回TTS音频"""
+    import base64
+    import io
+
+    session_id = request.session_id
+    if not session_id or session_id not in active_sessions:
+        raise HTTPException(status_code=404, detail="会话不存在")
+
+    bot = active_sessions[session_id]
+    if bot.is_finished():
+        raise HTTPException(status_code=400, detail="会话已结束")
+
+    agent_text, _ = await bot.process(
+        customer_input=request.customer_input,
+        use_tts=False,
+    )
+
+    # TTS 合成
+    from core.voice.tts import TTSManager
+    tts = TTSManager()
+    tts_result = await tts.synthesize(agent_text)
+
+    audio_base64 = None
+    audio_file_url = None
+
+    if tts_result.success and tts_result.audio_file:
+        audio_file_url = f"/audio/{Path(tts_result.audio_file).name}"
+    if tts_result.success and tts_result.audio_data is not None:
+        try:
+            import soundfile as sf
+            with io.BytesIO() as buf:
+                sf.write(buf, tts_result.audio_data, tts_result.sample_rate or 16000, format="WAV")
+                buf.seek(0)
+                audio_base64 = base64.b64encode(buf.read()).decode()
+        except ImportError:
+            pass
+
+    # 更新数据库
+    db_session = db.query(DBChatSession).filter(
+        DBChatSession.session_id == session_id
+    ).first()
+    if db_session:
+        db_session.is_finished = bot.is_finished()
+        db_session.is_successful = bot.is_successful()
+        db_session.commit_time = bot.commit_time
+        db_session.conversation_length = len(bot.conversation)
+        if bot.is_finished():
+            db_session.end_time = datetime.now().isoformat()
+        db.commit()
+
+    return VoiceSessionResponse(
+        session_id=session_id,
+        agent_text=agent_text,
+        audio_data_base64=audio_base64,
+        audio_file=audio_file_url,
+        state=convert_bot_state_to_schema(bot.state),
+        is_finished=bot.is_finished(),
+        is_successful=bot.is_successful(),
+    )
+
+
+@app.get("/voice/voices")
+async def list_tts_voices(locale: Optional[str] = "id"):
+    """列出可用的TTS语音"""
+    from core.voice.tts import TTSManager
+    tts = TTSManager()
+    engine = tts.get_engine()
+    if engine:
+        return {"voices": engine.list_voices(locale=locale)}
+    return {"voices": [], "error": "No TTS engine available"}
 
 
 if __name__ == "__main__":

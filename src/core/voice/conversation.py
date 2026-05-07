@@ -194,7 +194,7 @@ class VoiceConversation:
 
         # 4. TTS 合成
         if agent_text:
-            tts_result = self._tts.synthesize(agent_text)
+            tts_result = await self._tts.synthesize(agent_text)
             if tts_result.success and tts_result.audio_data is not None:
                 turn.tts_audio = tts_result.audio_data
             elif tts_result.success and tts_result.audio_file:

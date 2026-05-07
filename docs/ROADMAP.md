@@ -49,7 +49,7 @@
 | | P03-02 | 新建`src/core/voice/asr.py`：封装Faster-Whisper实时识别，支持印尼语，流式识别 | P03-01完成 | ✅ 已完成 |
 | | P03-03 | 新建`src/core/voice/audio_io.py`：麦克风录音+扬声器播放，与VAD联动 | P03-01完成 | ✅ 已完成 |
 | | P03-04 | 新建`src/core/voice/conversation.py`：串联麦克风→VAD→ASR→纠错→Chatbot→TTS→扬声器全链路 | P03-02、P03-03完成 | ✅ 已完成 |
-| | P03-05 | 语音模式接入Demo：start_demo.py增加语音模式入口 | P03-04完成 | 📝 待开始 |
+| | P03-05 | 语音模式接入Demo：start_demo.py增加语音模式入口 | P03-04完成 | ✅ 已完成 |
 
 ---
 

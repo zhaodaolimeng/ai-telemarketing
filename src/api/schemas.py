@@ -155,3 +155,26 @@ class SimulateCustomerResponse(BaseModel):
     persona: str
     resistance_level: str
     success: bool
+
+
+class VoiceStartRequest(BaseModel):
+    """语音会话启动请求"""
+    chat_group: ChatGroup = ChatGroup.H1
+    customer_name: str = "Budi"
+
+
+class VoiceTurnRequest(BaseModel):
+    """语音会话轮次请求"""
+    session_id: str
+    customer_input: Optional[str] = None
+
+
+class VoiceSessionResponse(BaseModel):
+    """语音会话响应"""
+    session_id: str
+    agent_text: str
+    audio_data_base64: Optional[str] = None
+    audio_file: Optional[str] = None
+    state: str
+    is_finished: bool
+    is_successful: bool
