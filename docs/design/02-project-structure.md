@@ -35,31 +35,24 @@ ai-telemarketing/
 │   │       ├── interruption.py    # 智能打断处理
 │   │       ├── conversation.py    # 全链路串联：麦克风→VAD→ASR→纠错→Chatbot→TTS→扬声器
 │   │       └── customer_simulator.py  # 客户语音仿真器（TTS→VAD→ASR端到端闭环）
-│   ├── experiments/               # 实验和分析
-│   │   ├── __init__.py            # 向后兼容 re-export core 模块
+│   ├── experiments/               # 实验和Demo
+│   │   ├── __init__.py
 │   │   ├── README.md
-│   │   ├── scripts/               # 数据处理脚本
-│   │   │   ├── __init__.py
-│   │   │   ├── transcribe.py      # 语音转写
-│   │   │   ├── diarize.py         # 说话人分离
-│   │   │   ├── analyze.py         # 分析脚本
-│   │   │   └── extract_features.py # 特征提取
-│   │   ├── analysis/              # 分析脚本归档
+│   │   ├── test_llm_fallback.py         # LLM Fallback 功能测试
+│   │   ├── evaluate_llm_fallback.py     # LLM Fallback 对比评估
+│   │   ├── train_classifier.py          # ML分类器训练
+│   │   ├── demo_ml_classifier.py        # ML分类器使用示例
+│   │   ├── voice_demo.py                # 语音对话 Demo
+│   │   ├── voice_simulate_demo.py       # 语音仿真 Demo
+│   │   ├── analysis/                    # 分析脚本 (18个)
 │   │   │   ├── analyze_all.py
-│   │   │   ├── analyze_all_287.py
-│   │   │   ├── analyze_by_chat_group.py
-│   │   │   ├── analyze_by_ctm.py
+│   │   │   ├── extract_customer_behavior.py
 │   │   │   └── ...
-│   │   ├── training/              # 对抗训练脚本
+│   │   ├── archive/                     # 历史版本归档
 │   │   │   ├── baseline_test.py
 │   │   │   ├── enhanced_test.py
 │   │   │   └── training_loop.py
-│   │   ├── archive/               # 历史版本归档
-│   │   │   ├── collection_chatbot.py        # v1
-│   │   │   ├── collection_chatbot_v2.py     # v2
-│   │   │   ├── real_customer_simulator.py   # v1
-│   │   │   └── evaluation_framework.py      # v1
-│   │   ├── notebooks/             # Jupyter Notebooks
+│   │   └── notebooks/                   # Jupyter Notebooks
 │   │   ├── docs/                  # 实验文档
 │   │   ├── check_labels.py        # 标签检查
 │   │   ├── enhanced_customer_simulator.py
@@ -68,23 +61,26 @@ ai-telemarketing/
 │   ├── tests/                     # 测试文件
 │   │   ├── __init__.py
 │   │   ├── test_api.py
-│   │   ├── test_intent_accuracy.py # 意图识别准确率测试
-│   │   ├── test_full_demo.py      # 完整对话流程Demo测试
-│   │   ├── test_demo_functionality.py # Demo功能测试
-│   │   └── run_small_scale_test.py # 批量生产测试
+│   │   ├── test_voice_mode.py         # 语音模式 (21个测试)
+│   │   ├── test_regression.py         # 回归测试
+│   │   ├── playback_test.py           # 回放测试
+│   │   ├── robustness_test.py         # 鲁棒性测试 (119用例)
+│   │   ├── test_simulator.py          # 模拟器测试
+│   │   ├── test_voice_corner_cases.py # 语音边缘场景
+│   │   ├── voice_simulation_test.py   # 语音仿真测试
+│   │   ├── test_auto_mode_e2e.py      # 自动模式端到端
+│   │   ├── offline_evaluation.py      # 离线评估
+│   │   └── run_small_scale_test.py    # 批量生产测试
 │   └── static/                    # 前端Web Demo
 │       ├── index.html            # 两栏布局（左侧会话列表 + 右侧聊天面板）
 │       └── app.js                # 前端逻辑（自动/手动模式、SSE流式、语音播放、双语翻译）
 ├── scripts/                       # 工具脚本
-│   ├── annotation_tool.py         # 标注工具
-│   ├── batch_annotate.py          # 批量标注脚本
-│   ├── quick_annotate.py          # 快速标注脚本
-│   ├── annotation_helper.py       # 标注辅助工具
-│   ├── extract_unknown_for_annotation.py # 提取unknown意图用于标注
-│   ├── fix_annotation_issues.py   # 修复标注问题
-│   ├── prepare_gold_dataset.py    # 准备黄金数据集
-│   ├── ci_playback_test.py        # CI回放测试
-│   └── voice_simulate_demo.py     # CLI语音仿真Demo（多种客户画像/抗拒等级）
+│   ├── batch_asr_transcribe.py    # 批量ASR转写
+│   └── annotation/                # 标注工具（12个，已完成使命归档）
+│       ├── annotation_tool.py     # 标注工具
+│       ├── batch_annotate.py      # 批量标注
+│       ├── prepare_gold_dataset.py # 准备黄金数据集
+│       └── ...
 ├── data/                          # 所有数据（Git忽略）
 ├── docs/                          # 项目文档
 │   ├── README.md                  # 文档总览

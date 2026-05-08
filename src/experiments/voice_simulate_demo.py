@@ -5,11 +5,11 @@
 用TTS生成印尼语客户语音，注入ASR管线，端到端测试催收对话
 
 Usage:
-    python scripts/voice_simulate_demo.py                                    # 默认: cooperative, medium, H2
-    python scripts/voice_simulate_demo.py --persona resistant --resistance high
-    python scripts/voice_simulate_demo.py --chat-group S0 --max-turns 10
-    python scripts/voice_simulate_demo.py --persona excuse_master --realtime
-    python scripts/voice_simulate_demo.py --persona silent --max-turns 5 --no-save
+    python src/experiments/voice_simulate_demo.py                                    # 默认: cooperative, medium, H2
+    python src/experiments/voice_simulate_demo.py --persona resistant --resistance high
+    python src/experiments/voice_simulate_demo.py --chat-group S0 --max-turns 10
+    python src/experiments/voice_simulate_demo.py --persona excuse_master --realtime
+    python src/experiments/voice_simulate_demo.py --persona silent --max-turns 5 --no-save
 """
 import argparse
 import asyncio

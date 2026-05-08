@@ -14,32 +14,22 @@
 
 ```
 experiments/
-├── README.md                    # 本文件
-├── data/                        # 数据目录
-│   ├── raw/                     # 原始语音数据
-│   ├── processed/               # 处理后的文本、特征
-│   └── annotations/             # 人工标注
-├── docs/                        # 实验文档
-│   ├── 01-数据说明.md
-│   ├── 02-分析方法.md
-│   ├── 03-状态发现.md
-│   ├── 04-话术分析.md
-│   └── 05-实验总结.md
-├── notebooks/                   # Jupyter Notebooks
-│   ├── 01-数据预处理.ipynb
-│   ├── 02-语音转写.ipynb
-│   ├── 03-会话分析.ipynb
-│   ├── 04-状态发现.ipynb
-│   └── 05-话术分析.ipynb
-├── scripts/                     # 脚本
-│   ├── transcribe.py           # 语音转写
-│   ├── diarize.py              # 说话人分离
-│   ├── analyze.py              # 分析脚本
-│   └── extract_features.py     # 特征提取
-└── results/                     # 结果输出
-    ├── states/                 # 发现的会话状态
-    ├── utterances/             # 话术分析结果
-    └── reports/                # 分析报告
+├── README.md                        # 本文件
+├── test_llm_fallback.py             # LLM Fallback 功能测试
+├── evaluate_llm_fallback.py         # LLM Fallback 对比评估
+├── train_classifier.py              # ML分类器训练
+├── demo_ml_classifier.py            # ML分类器使用示例
+├── voice_demo.py                    # 语音对话 Demo
+├── voice_simulate_demo.py           # 语音仿真 Demo
+├── analysis/                        # 分析脚本 (18个)
+│   ├── analyze_all.py
+│   ├── extract_customer_behavior.py
+│   └── ...
+├── notebooks/                       # Jupyter Notebooks
+├── archive/                         # 历史版本归档
+│   ├── baseline_test.py
+│   ├── enhanced_test.py
+│   └── training_loop.py
 ```
 
 ---

@@ -17,7 +17,7 @@
 
 ### 2. 启动标注工具
 ```bash
-python scripts/annotation_tool.py
+python scripts/annotation/annotation_tool.py
 ```
 
 ### 3. 标注步骤

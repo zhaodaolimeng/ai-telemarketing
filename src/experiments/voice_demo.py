@@ -5,10 +5,10 @@
 使用麦克风进行实时语音对话
 
 Usage:
-    python scripts/voice_demo.py                    # 默认H1催收
-    python scripts/voice_demo.py --group H2         # H2宽限期提醒
-    python scripts/voice_demo.py --group S0         # S0逾期催收
-    python scripts/voice_demo.py --group H1 --asr-model tiny  # 使用小模型
+    python src/experiments/voice_demo.py                    # 默认H1催收
+    python src/experiments/voice_demo.py --group H2         # H2宽限期提醒
+    python src/experiments/voice_demo.py --group S0         # S0逾期催收
+    python src/experiments/voice_demo.py --group H1 --asr-model tiny  # 使用小模型
 """
 import argparse
 import asyncio
