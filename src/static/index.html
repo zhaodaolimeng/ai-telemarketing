@@ -55,42 +55,15 @@
             width: 48px;
             height: 48px;
             flex-shrink: 0;
-            border-radius: 50%;
             position: relative;
-            background:
-                radial-gradient(ellipse at 38% 32%, #FFF7B0 0%, #FFE44D 10%, #F5C842 25%, #DAA520 50%, #C28D10 75%, #A07008 100%);
-            box-shadow:
-                0 0 0 2px #7A4E0E,
-                0 0 0 3px #5C3808,
-                0 2px 6px rgba(0,0,0,0.35);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            user-select: none;
         }
 
         .coin-logo::before {
             content: '';
             position: absolute;
-            top: 4px; left: 6px;
-            width: 18px; height: 12px;
-            background: radial-gradient(ellipse, rgba(255,255,255,0.45) 0%, transparent 70%);
-            border-radius: 50%;
-            transform: rotate(-25deg);
-            pointer-events: none;
-        }
-
-        .coin-e {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            font-size: 24px;
-            font-weight: 900;
-            color: #F0D860;
-            text-shadow:
-                -1px -1px 0 #FFFFF0,
-                 1px  1px 0 #3A1A05,
-                 2px  2px 0 #3A1A05;
-            line-height: 1;
-            z-index: 1;
+            top: 0; left: 0;
+            width: 2px; height: 2px;
+            box-shadow: 30px 42px 0 #4A2C05, 32px 40px 0 #4A2C05, 42px 20px 0 #4A2C05, 42px 26px 0 #4A2C05, 14px 40px 0 #4A2C05, 6px 14px 0 #F5D040, 40px 34px 0 #4A2C05, 10px 8px 0 #F5D040, 34px 6px 0 #4A2C05, 6px 32px 0 #4A2C05, 18px 4px 0 #4A2C05, 22px 4px 0 #4A2C05, 8px 36px 0 #4A2C05, 10px 38px 0 #4A2C05, 26px 4px 0 #4A2C05, 38px 36px 0 #4A2C05, 4px 22px 0 #4A2C05, 30px 4px 0 #4A2C05, 16px 42px 0 #4A2C05, 4px 16px 0 #4A2C05, 4px 28px 0 #4A2C05, 20px 42px 0 #4A2C05, 36px 8px 0 #4A2C05, 42px 18px 0 #4A2C05, 40px 14px 0 #4A2C05, 12px 40px 0 #4A2C05, 42px 24px 0 #4A2C05, 36px 38px 0 #4A2C05, 40px 32px 0 #4A2C05, 8px 10px 0 #FFF0A8, 42px 30px 0 #4A2C05, 6px 12px 0 #F5D040, 24px 42px 0 #4A2C05, 16px 4px 0 #4A2C05, 28px 42px 0 #4A2C05, 20px 4px 0 #4A2C05, 38px 10px 0 #4A2C05, 34px 40px 0 #4A2C05, 32px 6px 0 #4A2C05, 4px 20px 0 #4A2C05, 4px 26px 0 #4A2C05, 14px 6px 0 #4A2C05, 40px 12px 0 #4A2C05, 12px 6px 0 #4A2C05, 24px 4px 0 #4A2C05, 42px 16px 0 #4A2C05, 42px 28px 0 #4A2C05, 28px 4px 0 #4A2C05, 42px 22px 0 #4A2C05, 6px 34px 0 #4A2C05, 18px 42px 0 #4A2C05, 4px 18px 0 #4A2C05, 4px 24px 0 #4A2C05, 22px 42px 0 #4A2C05, 4px 30px 0 #4A2C05, 26px 42px 0 #4A2C05, 40px 16px 0 #7A4E0E, 8px 12px 0 #FFF0A8, 38px 12px 0 #7A4E0E, 16px 6px 0 #7A4E0E, 30px 40px 0 #7A4E0E, 8px 34px 0 #7A4E0E, 6px 30px 0 #7A4E0E, 10px 36px 0 #7A4E0E, 38px 34px 0 #7A4E0E, 16px 40px 0 #7A4E0E, 12px 8px 0 #7A4E0E, 36px 36px 0 #7A4E0E, 12px 38px 0 #7A4E0E, 40px 30px 0 #7A4E0E, 34px 8px 0 #7A4E0E, 6px 16px 0 #7A4E0E, 10px 10px 0 #FFF0A8, 34px 38px 0 #7A4E0E, 30px 6px 0 #7A4E0E, 36px 10px 0 #7A4E0E, 24px 8px 0 #A87010, 12px 36px 0 #A87010, 14px 34px 0 #A87010, 36px 34px 0 #A87010, 8px 18px 0 #A87010, 6px 26px 0 #A87010, 38px 18px 0 #A87010, 16px 36px 0 #A87010, 30px 10px 0 #FFFFF0, 14px 38px 0 #A87010, 34px 10px 0 #A87010, 38px 22px 0 #A87010, 18px 38px 0 #A87010, 32px 12px 0 #3A1A05, 20px 40px 0 #A87010, 26px 38px 0 #A87010, 34px 14px 0 #A87010, 16px 8px 0 #A87010, 18px 6px 0 #A87010, 24px 40px 0 #A87010, 34px 32px 0 #A87010, 26px 6px 0 #A87010, 12px 12px 0 #F5D040, 14px 10px 0 #A87010, 30px 36px 0 #3A1A05, 32px 34px 0 #3A1A05, 6px 20px 0 #A87010, 10px 14px 0 #F5D040, 28px 38px 0 #A87010, 10px 32px 0 #A87010, 36px 14px 0 #A87010, 32px 38px 0 #A87010, 36px 32px 0 #A87010, 40px 20px 0 #A87010, 28px 6px 0 #A87010, 6px 24px 0 #A87010, 8px 22px 0 #A87010, 22px 8px 0 #A87010, 30px 8px 0 #A87010, 40px 24px 0 #A87010, 6px 28px 0 #A87010, 8px 26px 0 #A87010, 38px 26px 0 #A87010, 32px 10px 0 #A87010, 20px 38px 0 #A87010, 40px 28px 0 #A87010, 24px 38px 0 #A87010, 8px 30px 0 #A87010, 20px 6px 0 #A87010, 34px 36px 0 #A87010, 38px 30px 0 #A87010, 14px 8px 0 #A87010, 22px 40px 0 #A87010, 24px 6px 0 #A87010, 12px 34px 0 #A87010, 6px 18px 0 #A87010, 10px 12px 0 #FFF0A8, 8px 16px 0 #F5D040, 38px 16px 0 #A87010, 26px 8px 0 #A87010, 40px 18px 0 #A87010, 14px 36px 0 #A87010, 6px 22px 0 #A87010, 8px 20px 0 #A87010, 38px 20px 0 #A87010, 16px 38px 0 #A87010, 40px 22px 0 #A87010, 28px 8px 0 #A87010, 8px 24px 0 #A87010, 34px 12px 0 #A87010, 38px 24px 0 #A87010, 32px 8px 0 #A87010, 18px 40px 0 #A87010, 12px 10px 0 #F5D040, 26px 40px 0 #A87010, 40px 26px 0 #A87010, 8px 28px 0 #A87010, 16px 10px 0 #FFFFF0, 18px 8px 0 #A87010, 10px 30px 0 #A87010, 34px 34px 0 #A87010, 38px 28px 0 #A87010, 22px 38px 0 #A87010, 12px 14px 0 #F5D040, 14px 12px 0 #A87010, 36px 12px 0 #A87010, 30px 38px 0 #A87010, 12px 32px 0 #A87010, 32px 36px 0 #3A1A05, 36px 30px 0 #A87010, 8px 14px 0 #F5D040, 8px 32px 0 #A87010, 10px 16px 0 #F5D040, 38px 14px 0 #A87010, 20px 8px 0 #A87010, 22px 6px 0 #A87010, 10px 34px 0 #A87010, 28px 40px 0 #A87010, 38px 32px 0 #A87010, 36px 16px 0 #A87010, 10px 20px 0 #C89820, 16px 18px 0 #F0D860, 20px 12px 0 #F0D860, 18px 16px 0 #F0D860, 22px 10px 0 #FFFFF0, 34px 24px 0 #C89820, 18px 34px 0 #F0D860, 26px 34px 0 #F0D860, 30px 28px 0 #C89820, 12px 22px 0 #C89820, 32px 26px 0 #C89820, 14px 20px 0 #C89820, 36px 20px 0 #C89820, 24px 36px 0 #3A1A05, 28px 30px 0 #C89820, 34px 28px 0 #C89820, 10px 24px 0 #C89820, 22px 14px 0 #3A1A05, 22px 32px 0 #FFFFF0, 30px 14px 0 #3A1A05, 30px 32px 0 #FFFFF0, 12px 26px 0 #C89820, 32px 30px 0 #C89820, 14px 24px 0 #C89820, 36px 24px 0 #C89820, 28px 16px 0 #C89820, 28px 34px 0 #F0D860, 10px 28px 0 #C89820, 30px 18px 0 #C89820, 32px 16px 0 #C89820, 36px 28px 0 #C89820, 14px 28px 0 #C89820, 34px 18px 0 #C89820, 18px 10px 0 #FFFFF0, 26px 10px 0 #FFFFF0, 32px 20px 0 #C89820, 14px 14px 0 #C89820, 14px 32px 0 #C89820, 24px 12px 0 #F0D860, 10px 18px 0 #C89820, 34px 22px 0 #C89820, 18px 14px 0 #F0D860, 18px 32px 0 #F0D860, 26px 14px 0 #3A1A05, 20px 34px 0 #F0D860, 26px 32px 0 #FFFFF0, 32px 24px 0 #C89820, 14px 18px 0 #C89820, 36px 18px 0 #C89820, 28px 10px 0 #FFFFF0, 24px 34px 0 #F0D860, 10px 22px 0 #C89820, 30px 12px 0 #F0D860, 26px 36px 0 #3A1A05, 22px 36px 0 #3A1A05, 32px 28px 0 #C89820, 36px 22px 0 #C89820, 14px 22px 0 #C89820, 12px 30px 0 #C89820, 28px 14px 0 #3A1A05, 28px 32px 0 #FFFFF0, 10px 26px 0 #C89820, 16px 12px 0 #F0D860, 16px 30px 0 #F0D860, 32px 14px 0 #3A1A05, 32px 32px 0 #C89820, 12px 16px 0 #F5D040, 28px 36px 0 #3A1A05, 16px 16px 0 #F0D860, 20px 10px 0 #FFFFF0, 16px 34px 0 #F0D860, 32px 18px 0 #C89820, 12px 20px 0 #C89820, 24px 10px 0 #FFFFF0, 34px 26px 0 #C89820, 20px 14px 0 #F0D860, 22px 12px 0 #F0D860, 20px 32px 0 #F0D860, 18px 36px 0 #3A1A05, 30px 30px 0 #C89820, 12px 24px 0 #C89820, 24px 14px 0 #3A1A05, 24px 32px 0 #FFFFF0, 34px 30px 0 #C89820, 20px 36px 0 #3A1A05, 22px 34px 0 #F0D860, 30px 16px 0 #C89820, 30px 34px 0 #F0D860, 12px 28px 0 #C89820, 14px 26px 0 #C89820, 36px 26px 0 #C89820, 28px 12px 0 #F0D860, 34px 16px 0 #C89820, 16px 28px 0 #F0D860, 14px 30px 0 #C89820, 34px 20px 0 #C89820, 16px 14px 0 #F0D860, 18px 12px 0 #F0D860, 16px 32px 0 #F0D860, 18px 30px 0 #F0D860, 26px 12px 0 #F0D860, 12px 18px 0 #C89820, 32px 22px 0 #C89820, 14px 16px 0 #C89820, 24px 20px 0 #E0B028, 24px 26px 0 #3A1A05, 28px 20px 0 #E0B028, 28px 26px 0 #3A1A05, 18px 28px 0 #F0D860, 16px 24px 0 #F0D860, 20px 18px 0 #F0D860, 18px 22px 0 #F0D860, 22px 16px 0 #3A1A05, 22px 28px 0 #3A1A05, 20px 24px 0 #F0D860, 26px 22px 0 #FFFFF0, 22px 22px 0 #FFFFF0, 20px 30px 0 #F0D860, 26px 16px 0 #E0B028, 26px 28px 0 #E0B028, 30px 22px 0 #E0B028, 24px 18px 0 #E0B028, 24px 24px 0 #F0D860, 28px 18px 0 #E0B028, 24px 30px 0 #E0B028, 28px 24px 0 #F0D860, 16px 22px 0 #F0D860, 18px 20px 0 #F0D860, 20px 22px 0 #F0D860, 18px 26px 0 #F0D860, 22px 20px 0 #3A1A05, 20px 16px 0 #F0D860, 20px 28px 0 #F0D860, 22px 26px 0 #3A1A05, 26px 20px 0 #E0B028, 30px 26px 0 #3A1A05, 26px 26px 0 #3A1A05, 30px 20px 0 #E0B028, 24px 22px 0 #FFFFF0, 24px 16px 0 #E0B028, 24px 28px 0 #E0B028, 28px 22px 0 #FFFFF0, 28px 28px 0 #E0B028, 18px 18px 0 #F0D860, 18px 24px 0 #F0D860, 16px 20px 0 #F0D860, 22px 18px 0 #3A1A05, 20px 26px 0 #F0D860, 16px 26px 0 #F0D860, 20px 20px 0 #F0D860, 22px 24px 0 #F0D860, 26px 18px 0 #E0B028, 22px 30px 0 #3A1A05, 26px 24px 0 #F0D860, 26px 30px 0 #E0B028, 30px 24px 0 #3A1A05;
         }
 
         .sidebar-title {
