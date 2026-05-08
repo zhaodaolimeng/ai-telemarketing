@@ -55,7 +55,42 @@
             width: 48px;
             height: 48px;
             flex-shrink: 0;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+            border-radius: 50%;
+            position: relative;
+            background:
+                radial-gradient(ellipse at 38% 32%, #FFF7B0 0%, #FFE44D 10%, #F5C842 25%, #DAA520 50%, #C28D10 75%, #A07008 100%);
+            box-shadow:
+                0 0 0 2px #7A4E0E,
+                0 0 0 3px #5C3808,
+                0 2px 6px rgba(0,0,0,0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+        }
+
+        .coin-logo::before {
+            content: '';
+            position: absolute;
+            top: 4px; left: 6px;
+            width: 18px; height: 12px;
+            background: radial-gradient(ellipse, rgba(255,255,255,0.45) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: rotate(-25deg);
+            pointer-events: none;
+        }
+
+        .coin-e {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: #F0D860;
+            text-shadow:
+                -1px -1px 0 #FFFFF0,
+                 1px  1px 0 #3A1A05,
+                 2px  2px 0 #3A1A05;
+            line-height: 1;
+            z-index: 1;
         }
 
         .sidebar-title {
@@ -802,7 +837,7 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-title">
-                    <img class="coin-logo" src="static/coin-logo.svg" alt="Extra Uang" width="48" height="48">
+                    <div class="coin-logo"><span class="coin-e">E</span></div>
                     <h2>会话列表</h2>
                 </div>
                 <div style="display:flex; gap:6px;">
