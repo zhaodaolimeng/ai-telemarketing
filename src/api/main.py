@@ -801,7 +801,7 @@ async def voice_start(request: VoiceStartRequest, db: Session = Depends(get_db))
 
     # TTS 合成
     tts = TTSManager()
-    tts_result = await tts.synthesize(agent_text)
+    tts_result = await tts.synthesize(agent_text, voice="id-ID-ArdiNeural", engine="edge_tts")
 
     audio_base64 = None
     audio_file_url = None
@@ -854,7 +854,7 @@ async def voice_turn(request: VoiceTurnRequest, db: Session = Depends(get_db)):
     # TTS 合成
     from core.voice.tts import TTSManager
     tts = TTSManager()
-    tts_result = await tts.synthesize(agent_text)
+    tts_result = await tts.synthesize(agent_text, voice="id-ID-ArdiNeural", engine="edge_tts")
 
     audio_base64 = None
     audio_file_url = None
@@ -1035,7 +1035,7 @@ async def voice_simulate_stream(
             if first_msg:
                 try:
                     tts_task = aio.create_task(
-                        sim._tts.synthesize(first_msg, voice=sim.agent_voice)
+                        sim._tts.synthesize(first_msg, voice=sim.agent_voice, engine=sim.agent_tts_engine)
                     )
                     logger.debug(f"[SSE:{conn_id}] Greeting TTS started, waiting with heartbeat...")
                     tts_start = asyncio.get_event_loop().time()
