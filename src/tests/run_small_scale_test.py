@@ -15,6 +15,8 @@ from typing import List, Dict, Any, Optional, Union
 from dataclasses import dataclass, asdict
 from datetime import datetime
 
+_PROJECT_ROOT = Path(__file__).parent.parent.parent
+
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from core.chatbot import CollectionChatBot, get_stage_from_state
@@ -596,7 +598,7 @@ async def main():
     tester.print_report(report)
 
     # 保存JSON报告
-    output_dir = Path("data/test_reports")
+    output_dir = _PROJECT_ROOT / "data/test_reports"
     output_dir.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     json_path = output_dir / f"{args.output_prefix}_{timestamp}.json"

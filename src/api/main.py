@@ -11,6 +11,8 @@ from typing import Optional, Dict, List
 import asyncio
 import json
 
+_PROJECT_ROOT = Path(__file__).parent.parent.parent
+
 sys.path.append(str(Path(__file__).parent.parent))
 
 from core.logger import setup_logging, get_logger
@@ -540,7 +542,7 @@ async def run_test_scenario(request: TestScenarioRequest):
 
 @app.get("/audio/{filename}")
 async def get_audio(filename: str):
-    audio_path = Path("data/tts_output") / filename
+    audio_path = _PROJECT_ROOT / "data/tts_output" / filename
     if not audio_path.exists():
         raise HTTPException(status_code=404, detail="音频文件不存在")
     suffix = audio_path.suffix.lower()
@@ -1211,7 +1213,7 @@ async def voice_simulate_stream(
                         if audio_path:
                             src = getattr(turn, key)
                             if src and Path(src).exists():
-                                dst = Path("data/tts_output") / Path(src).name
+                                dst = _PROJECT_ROOT / "data/tts_output" / Path(src).name
                                 if not dst.exists():
                                     shutil.copy2(src, dst)
 

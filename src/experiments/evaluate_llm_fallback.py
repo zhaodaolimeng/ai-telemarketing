@@ -18,6 +18,8 @@ from dataclasses import dataclass, field
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+_PROJECT_ROOT = Path(__file__).parent.parent.parent
+
 from core.chatbot import CollectionChatBot, ChatState
 from core.compliance_checker import get_compliance_checker
 
@@ -379,7 +381,7 @@ class FallbackEvaluator:
     def generate_report(self, summary: Dict, output_dir: Optional[str] = None) -> str:
         """生成对比评估报告"""
         if output_dir is None:
-            output_dir = Path("data/llm_fallback_evals")
+            output_dir = _PROJECT_ROOT / "data/llm_fallback_evals"
         else:
             output_dir = Path(output_dir)
         output_dir.mkdir(parents=True, exist_ok=True)

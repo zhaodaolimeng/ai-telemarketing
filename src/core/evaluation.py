@@ -13,6 +13,8 @@ from datetime import datetime
 from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, asdict, field
 
+_PROJECT_ROOT = Path(__file__).parent.parent.parent
+
 sys.path.append(str(Path(__file__).parent.parent))
 
 from core.simulator import RealCustomerSimulatorV2, GOLDEN_TEST_CASES_V2, GenerativeCustomerSimulator
@@ -977,7 +979,7 @@ class EvaluationFrameworkV2:
 
     def _save_report(self):
         """保存报告"""
-        output_dir = Path("data/evaluations")
+        output_dir = _PROJECT_ROOT / "data/evaluations"
         output_dir.mkdir(parents=True, exist_ok=True)
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -1233,7 +1235,7 @@ class EvaluationFrameworkV2:
 
     def _save_report(self, report_prefix: str = "evaluation"):
         """保存报告，支持自定义前缀"""
-        output_dir = Path("data/evaluations")
+        output_dir = _PROJECT_ROOT / "data/evaluations"
         output_dir.mkdir(parents=True, exist_ok=True)
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

@@ -5,7 +5,7 @@ from datetime import datetime
 from pathlib import Path
 
 
-DATABASE_PATH = Path("data") / "collections.db"
+DATABASE_PATH = Path(__file__).parent.parent.parent / "data" / "collections.db"
 DATABASE_PATH.parent.mkdir(parents=True, exist_ok=True)
 DATABASE_URL = f"sqlite:///{DATABASE_PATH}"
 

@@ -42,7 +42,7 @@ def setup_logging(level: int = logging.DEBUG, log_dir: str = None):
 
     # File handler
     if log_dir is None:
-        log_dir = Path(__file__).parent.parent / "data" / "logs"
+        log_dir = Path(__file__).parent.parent.parent / "data" / "logs"
     log_dir = Path(log_dir)
     log_dir.mkdir(parents=True, exist_ok=True)
     file_handler = logging.FileHandler(

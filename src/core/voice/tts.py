@@ -12,6 +12,8 @@ from dataclasses import dataclass
 import time
 import os
 
+_PROJECT_ROOT = Path(__file__).parent.parent.parent.parent
+
 
 @dataclass
 class TTSResult:
@@ -111,7 +113,7 @@ class EdgeTTSEngine(TTSEngine):
 
         try:
             if output_file is None:
-                output_dir = Path("data/tts_output")
+                output_dir = _PROJECT_ROOT / "data/tts_output"
                 output_dir.mkdir(parents=True, exist_ok=True)
                 timestamp = time.strftime("%Y%m%d_%H%M%S_%f")
                 output_file = str(output_dir / f"tts_{timestamp}.mp3")
@@ -199,7 +201,7 @@ class CoquiTTSEngine(TTSEngine):
                 self._model = CoquiTTS(model_name=self.model_name, progress_bar=False)
 
             if output_file is None:
-                output_dir = Path("data/tts_output")
+                output_dir = _PROJECT_ROOT / "data/tts_output"
                 output_dir.mkdir(parents=True, exist_ok=True)
                 timestamp = time.strftime("%Y%m%d_%H%M%S_%f")
                 output_file = str(output_dir / f"coqui_{timestamp}.wav")
@@ -345,7 +347,7 @@ class PiperTTSEngine(TTSEngine):
             voice_obj = self._load_voice(voice_name)
 
             if output_file is None:
-                output_dir = Path("data/tts_output")
+                output_dir = _PROJECT_ROOT / "data/tts_output"
                 output_dir.mkdir(parents=True, exist_ok=True)
                 timestamp = time.strftime("%Y%m%d_%H%M%S_%f")
                 output_file = str(output_dir / f"piper_{timestamp}.wav")

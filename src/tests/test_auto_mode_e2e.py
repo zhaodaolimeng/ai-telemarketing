@@ -25,6 +25,8 @@ from typing import Optional, List, Dict, Any, Tuple
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+_PROJECT_ROOT = Path(__file__).parent.parent.parent
+
 from core.chatbot import CollectionChatBot, ChatState
 from core.voice.customer_simulator import CustomerVoiceSimulator, SimulationTurn
 from core.translator import get_translator
@@ -522,7 +524,7 @@ async def main():
           f"{'✓' if zero_turn_cases == 0 else f'✗ ({zero_turn_cases} cases with 0 turns)'}")
 
     # ---- 详细输出到 JSON ----
-    report_path = Path("data/test_reports")
+    report_path = _PROJECT_ROOT / "data/test_reports"
     report_path.mkdir(parents=True, exist_ok=True)
     timestamp = time.strftime("%Y%m%d_%H%M%S")
     json_path = report_path / f"auto_mode_e2e_{timestamp}.json"

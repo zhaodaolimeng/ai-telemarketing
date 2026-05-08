@@ -16,6 +16,8 @@ from datetime import datetime
 import sys
 import io
 
+_PROJECT_ROOT = Path(__file__).parent.parent.parent
+
 # 可选：导入简易ML分类器
 try:
     from core.simple_classifier import SimpleIntentClassifier
@@ -110,7 +112,7 @@ class TextToSpeech:
             return None
 
         if output_file is None:
-            output_dir = Path("data/tts_output")
+            output_dir = _PROJECT_ROOT / "data/tts_output"
             output_dir.mkdir(parents=True, exist_ok=True)
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
             output_file = str(output_dir / f"tts_{timestamp}.wav")
@@ -2110,7 +2112,7 @@ async def run_test_suite(use_tts: bool = False):
     print(f"\n总体成功率: {success_count}/{len(results)} ({success_count/len(results)*100:.1f}%)")
 
     # 保存结果
-    output_dir = Path("data/chatbot_tests")
+    output_dir = _PROJECT_ROOT / "data/chatbot_tests"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     results_file = output_dir / f"test_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"

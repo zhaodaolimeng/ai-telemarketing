@@ -14,6 +14,8 @@ import json
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
+_PROJECT_ROOT = Path(__file__).parent.parent.parent
+
 from core.chatbot import CollectionChatBot, ChatState
 from core.compliance_checker import get_compliance_checker
 
@@ -348,7 +350,7 @@ class RobustnessTester:
     def generate_report(self, summary: Dict, output_dir: Optional[str] = None) -> str:
         """生成增强版测试报告（含根因分析、合规聚合、改进建议）"""
         if output_dir is None:
-            output_dir = Path("data/robustness_tests")
+            output_dir = _PROJECT_ROOT / "data/robustness_tests"
         else:
             output_dir = Path(output_dir)
 
