@@ -1,0 +1,11 @@
+{
+  "host": "your-clickhouse-host",
+  "port": 8123,
+  "user": "your-username",
+  "password": "your-password",
+  "database": "credit_warehouse",
+  "secure": false,
+  "verify": false,
+  "connect_timeout": 30,
+  "send_receive_timeout": 30
+}
