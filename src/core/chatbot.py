@@ -639,6 +639,9 @@ class CollectionChatBot:
         self.llm_turn_count: int = 0
         self.llm_used_this_turn: bool = False  # 标记当前轮次是否使用了 LLM
 
+        # 沉默处理
+        self.silence_count: int = 0  # 连续沉默轮次计数
+
         # 话术库 - 扩展版
         self._init_script_lib()
 
@@ -969,6 +972,34 @@ class CollectionChatBot:
                     "Mohon maaf, saya tidak menangkap maksud Anda. Bisakah Anda ulangi sekali lagi?"
                 ]
             },
+            "silence_level_1": {
+                "*": [
+                    "Halo Bapak/Ibu {name}? Apakah Anda bisa mendengar suara saya dengan jelas?",
+                    "Halo? Apakah koneksi telepon saya kurang jelas ya? Bisa tolong konfirmasi jika Anda masih di telepon?",
+                    "Halo {name}, maaf, apakah suara saya terdengar? Tolong beri tahu jika ada masalah dengan sambungan telepon ya."
+                ]
+            },
+            "silence_level_2": {
+                "*": [
+                    "Baik, sambil Bapak/Ibu mendengarkan, izinkan saya informasikan bahwa tagihan Anda saat ini sebesar Rp {amount} dan sudah lewat jatuh tempo {days} hari ya.",
+                    "Saya informasikan dulu ya: pinjaman Bapak/Ibu {name} sebesar Rp {amount} sudah jatuh tempo sejak {days} hari yang lalu. Kami ingin membantu mencari solusi terbaik untuk Anda.",
+                    "Untuk informasi, tagihan Anda saat ini Rp {amount} dengan keterlambatan {days} hari. Kami memahami mungkin ada kendala, dan kami siap membantu."
+                ]
+            },
+            "silence_level_3": {
+                "*": [
+                    "Untuk solusinya, Bapak/Ibu bisa: (1) melakukan pembayaran penuh sebesar Rp {amount} hari ini, (2) membayar sebagian terlebih dahulu, atau (3) mengajukan perpanjangan waktu dengan biaya administrasi Rp {extension_fee}. Mana yang lebih sesuai dengan kondisi Anda?",
+                    "Kami punya beberapa opsi: bisa bayar lunas Rp {amount} sekarang, bisa bayar setengah dulu dan sisanya nanti, atau bisa ambil opsi perpanjangan dengan biaya Rp {extension_fee}. Silakan pilih yang paling sesuai ya.",
+                    "Begini ya {name}, Anda bisa: langsung melunasi, mencicil sebagian, atau memperpanjang tenor dengan biaya Rp {extension_fee}. Tidak perlu khawatir, kami akan bantu sesuai kemampuan Anda."
+                ]
+            },
+            "silence_level_4": {
+                "*": [
+                    "Karena kita belum bisa mencapai kesepakatan, kami informasikan bahwa keterlambatan ini akan tercatat dan denda akan terus bertambah ya. Jika nanti Bapak/Ibu sudah siap, silakan hubungi customer service kami di aplikasi Extra Uang. Terima kasih atas waktunya, selamat siang.",
+                    "Baik, karena belum ada konfirmasi, kami sampaikan bahwa tagihan ini akan terus berjalan dengan denda keterlambatan ya. Anda bisa menghubungi kami kembali kapan saja melalui aplikasi jika sudah siap membayar. Terima kasih, selamat sore.",
+                    "Terakhir dari saya: pembayaran yang tertunda akan menambah biaya denda dan mempengaruhi catatan kredit Anda. Jika ada pertanyaan nanti, silakan hubungi layanan pelanggan kami. Kami tunggu kabar baik dari Anda ya. Terima kasih."
+                ]
+            },
             "push_time_unknown": {
                 "*": [
                     "Mohon maaf, bisakah Anda memberitahu jam berapa pasti bisa bayar ya?",
@@ -1147,7 +1178,13 @@ class CollectionChatBot:
 
         # 记录用户输入
         corrected_input = ""
-        if customer_input:
+        # 判断是否为有效输入：排除空字符串、纯空格、省略号等纯标点输入
+        is_silent_input = (
+            not customer_input or
+            not customer_input.strip() or
+            customer_input.strip().replace(".", "").replace(",", "").replace("?", "").replace("!", "").strip() == ""
+        )
+        if not is_silent_input and customer_input.strip():
             # 先纠正ASR错误
             corrected_input = self.asr_corrector.correct(customer_input)
             self.conversation[-1].customer = corrected_input
@@ -1155,6 +1192,8 @@ class CollectionChatBot:
             self.user_intent = self.intent_detector.detect(corrected_input, context=self.conversation[-1].agent)
             # 更新对话记忆
             self.user_history_intents.append(self.user_intent)
+            # 有效的用户输入 → 重置沉默计数
+            self.silence_count = 0
             if self.user_intent == "ask_amount":
                 self.user_asked_amount = True
             elif self.user_intent == "ask_fee":
@@ -1169,6 +1208,11 @@ class CollectionChatBot:
                 self.partial_payment_discussed = True
             elif self.user_intent == "ask_extension" or self.user_intent == "request_short_extension":
                 self.extension_discussed = True
+        else:
+            # 空输入、纯空格、省略号 → 视为沉默
+            self.conversation[-1].customer = customer_input or ""
+            self.user_intent = "silence"
+            self.user_history_intents.append("silence")
 
         response = ""
         next_state = self.state
@@ -1199,6 +1243,15 @@ class CollectionChatBot:
                     self.conversation.append(ChatTurn(agent=response))
                 audio_file = await self._tts_speak(response, use_tts)
                 return response, audio_file
+
+        # ========== 沉默处理（优先于状态机） ==========
+        if self.user_intent == "silence":
+            response, silence_next_state = self._handle_silence()
+            if silence_next_state is not None:
+                self.state = silence_next_state
+            self.conversation.append(ChatTurn(agent=response))
+            audio_file = await self._tts_speak(response, use_tts)
+            return response, audio_file
 
         # 状态机逻辑
         if self.state == ChatState.IDENTITY_VERIFY:
@@ -1728,6 +1781,20 @@ class CollectionChatBot:
             pass
         return None
 
+    def _handle_silence(self) -> Tuple[str, Optional[ChatState]]:
+        """处理用户沉默：4级递进式主动话术"""
+        self.silence_count += 1
+        level = min(self.silence_count, 4)
+
+        if level == 1:
+            return self._get_script("silence_level_1"), None
+        elif level == 2:
+            return self._get_script("silence_level_2"), None
+        elif level == 3:
+            return self._get_script("silence_level_3"), ChatState.ASK_TIME
+        else:  # level >= 4
+            return self._get_script("silence_level_4"), ChatState.CLOSE
+
     async def _tts_speak(self, text: str, use_tts: bool) -> Optional[str]:
         """TTS说话"""
         if not use_tts or not text:
@@ -1892,6 +1959,7 @@ class CollectionChatBot:
         self.in_llm_fallback = False
         self.llm_turn_count = 0
         self.llm_used_this_turn = False
+        self.silence_count = 0
         self.session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
 
 

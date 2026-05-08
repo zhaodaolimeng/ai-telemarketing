@@ -214,7 +214,7 @@ class RealCustomerSimulatorV2:
         elif persona == "negotiating":
             return self._negotiating_response(stage)
         elif persona == "silent":
-            return self._silent_response(stage)
+            return self._silent_response(stage, push_count)
         elif persona == "forgetful":
             return self._forgetful_response(stage)
         elif persona == "resistant":
@@ -299,19 +299,32 @@ class RealCustomerSimulatorV2:
             ])
         return "Iya"
 
-    def _silent_response(self, stage: str) -> str:
-        """沉默型客户回应"""
-        if random.random() < 0.4:
-            return ""
-        elif random.random() < 0.7:
-            return "..."
-        else:
-            if stage == "greeting":
+    def _silent_response(self, stage: str, silence_round: int = 0) -> str:
+        """沉默型客户回应 — 渐进式：持续沉默到可能被说动"""
+        if silence_round <= 1:
+            # 第1-2轮: 大概率真沉默
+            if random.random() < 0.5:
+                return ""
+            elif random.random() < 0.75:
+                return "..."
+            else:
                 return random.choice(["Halo?", "Iya?"])
-            elif stage == "ask_time":
-                return random.choice(["...", "Jam 5"])
+        elif silence_round == 2:
+            # 第3轮: 可能有点反应
+            if random.random() < 0.4:
+                return ""
+            elif random.random() < 0.65:
+                return "..."
             else:
                 return random.choice(["Iya", "Ya", "..."])
+        else:
+            # 第4轮+: 可能被说动给出时间
+            if random.random() < 0.3:
+                return ""
+            elif random.random() < 0.5:
+                return "..."
+            else:
+                return f"Jam {random.randint(1, 7)}"
 
     def _forgetful_response(self, stage: str) -> str:
         """健忘型客户回应"""
