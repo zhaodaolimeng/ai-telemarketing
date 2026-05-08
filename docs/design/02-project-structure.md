@@ -24,12 +24,17 @@ ai-telemarketing/
 │   │   ├── evaluation.py          # 增强版评测框架
 │   │   ├── translator.py          # 翻译引擎
 │   │   ├── metrics.py             # 指标收集系统
+│   │   ├── logger.py              # 统一日志系统（毫秒精度，文件+控制台双输出）
 │   │   ├── llm_fallback.py        # LLM Fallback架构
 │   │   └── voice/                 # 语音处理子包
 │   │       ├── __init__.py
 │   │       ├── vad.py             # 语音活动检测（VAD）
+│   │       ├── asr.py             # Faster-Whisper ASR引擎（印尼语实时识别）
+│   │       ├── tts.py             # TTS引擎抽象（Edge-TTS / Piper-TTS / Coqui-TTS 三引擎）
+│   │       ├── audio_io.py        # 麦克风录音 + 扬声器播放
 │   │       ├── interruption.py    # 智能打断处理
-│   │       └── tts.py             # TTS引擎抽象
+│   │       ├── conversation.py    # 全链路串联：麦克风→VAD→ASR→纠错→Chatbot→TTS→扬声器
+│   │       └── customer_simulator.py  # 客户语音仿真器（TTS→VAD→ASR端到端闭环）
 │   ├── experiments/               # 实验和分析
 │   │   ├── __init__.py            # 向后兼容 re-export core 模块
 │   │   ├── README.md
@@ -67,9 +72,9 @@ ai-telemarketing/
 │   │   ├── test_full_demo.py      # 完整对话流程Demo测试
 │   │   ├── test_demo_functionality.py # Demo功能测试
 │   │   └── run_small_scale_test.py # 批量生产测试
-│   └── static/                    # 前端静态文件
-│       ├── index.html            # 对话Demo网页
-│       └── app.js                # 前端交互逻辑
+│   └── static/                    # 前端Web Demo
+│       ├── index.html            # 两栏布局（左侧会话列表 + 右侧聊天面板）
+│       └── app.js                # 前端逻辑（自动/手动模式、SSE流式、语音播放、双语翻译）
 ├── scripts/                       # 工具脚本
 │   ├── annotation_tool.py         # 标注工具
 │   ├── batch_annotate.py          # 批量标注脚本
@@ -78,7 +83,8 @@ ai-telemarketing/
 │   ├── extract_unknown_for_annotation.py # 提取unknown意图用于标注
 │   ├── fix_annotation_issues.py   # 修复标注问题
 │   ├── prepare_gold_dataset.py    # 准备黄金数据集
-│   └── ci_playback_test.py        # CI回放测试
+│   ├── ci_playback_test.py        # CI回放测试
+│   └── voice_simulate_demo.py     # CLI语音仿真Demo（多种客户画像/抗拒等级）
 ├── data/                          # 所有数据（Git忽略）
 ├── docs/                          # 项目文档
 │   ├── README.md                  # 文档总览
@@ -116,14 +122,20 @@ ai-telemarketing/
 | 文件 | 说明 |
 |------|------|
 | chatbot.py | 12状态对话状态机（含LLM_FALLBACK状态），TTS集成，变量替换 |
+| simple_classifier.py | 轻量级朴素贝叶斯意图分类器（规则系统补充） |
 | simulator.py | 7种客户类型，5级抗拒程度，40+拒绝借口 |
 | evaluation.py | 多维度评测框架，成功率统计 |
-| translator.py | 翻译引擎（MarianMT 本地模型，支持印尼文-中文互译） |
+| translator.py | 翻译引擎（MarianMT 本地模型，支持印尼文-英文互译） |
 | metrics.py | 监控指标收集系统 |
+| logger.py | 统一日志系统（毫秒精度，文件+控制台双输出） |
 | llm_fallback.py | LLM Fallback 混合架构（v4） |
 | voice/vad.py | 能量基础VAD，语音活动检测 |
+| voice/asr.py | Faster-Whisper ASR引擎（印尼语实时语音识别） |
+| voice/tts.py | TTS引擎抽象（Edge-TTS / Piper-TTS / Coqui-TTS 三引擎支持） |
+| voice/audio_io.py | 麦克风录音 + 扬声器播放 |
 | voice/interruption.py | 智能打断处理，播放控制 |
-| voice/tts.py | TTS引擎抽象（Edge-TTS / Coqui-TTS 双引擎支持） |
+| voice/conversation.py | 全链路串联：麦克风→VAD→ASR→纠错→Chatbot→TTS→扬声器 |
+| voice/customer_simulator.py | 客户语音仿真器（TTS→VAD→ASR端到端闭环） |
 
 ### 3. 实验层 (src/experiments/)
 **职责**: 数据分析、对抗训练、历史版本归档
@@ -153,19 +165,24 @@ ai-telemarketing/
 4. 对话日志记录与存储
 5. 7种客户类型模拟器
 
-### 阶段2: 能力增强 - 进行中
+### 阶段2: 能力增强 - ✅ 已完成
 | 任务 | 状态 |
 |------|------|
 | FastAPI服务封装 | ✅ 完成 |
 | 数据库设计与ORM实现 | ✅ 完成 |
 | VAD语音活动检测 | ✅ 完成 |
 | 智能打断处理 | ✅ 完成 |
-| 翻译引擎抽象 | ✅ 完成 |
+| 翻译引擎（MarianMT印尼文-英文互译） | ✅ 完成 |
 | 监控指标系统 | ✅ 完成 |
+| 统一日志系统（毫秒精度） | ✅ 完成 |
 | LLM Fallback混合架构 | ✅ 完成 |
 | 红黑对抗训练框架 | ✅ 完成 |
 | 小范围生产测试框架 | ✅ 完成 |
-| 接入真实ASR服务 | 🔄 进行中 |
+| Faster-Whisper ASR服务接入（本地GPU加速） | ✅ 完成 |
+| Piper-TTS本地语音合成引擎集成 | ✅ 完成 |
+| 客户语音仿真器（TTS→VAD→ASR闭环） | ✅ 完成 |
+| Web Demo UI重构（两栏布局 + 自动/手动模式） | ✅ 完成 |
+| 坐席/客户语音分离（不同引擎+不同音色） | ✅ 完成 |
 | 完善打断策略 | 🔄 进行中 |
 | 小范围生产测试执行 | ⏳ 规划中 |
 
@@ -219,12 +236,12 @@ python src/tests/run_small_scale_test.py 50
 |---------|------|------|
 | 后端框架 | FastAPI + Pydantic | REST API服务开发 |
 | 数据库 | SQLite + SQLAlchemy | 数据存储与对象关系映射 |
-| 语音合成 | Edge-TTS (优先) / Coqui-TTS (自建备用) | 印尼语语音合成 |
-| 语音识别 | Faster-Whisper（规划中） | 印尼语语音识别 |
+| 语音合成 | Edge-TTS (优先) / Piper-TTS (本地离线) / Coqui-TTS (自建备用) | 印尼语语音合成 |
+| 语音识别 | Faster-Whisper (本地GPU加速) | 印尼语实时语音识别 |
 | 语音活动检测 | 能量基础VAD | 实时语音端点检测 |
-| 翻译引擎 | MarianMT (本地模型) | 印尼文-中文互译 |
+| 翻译引擎 | MarianMT (Helsinki-NLP opus-mt-id-en 本地模型) | 印尼文-英文互译 |
 | 对话引擎 | 规则状态机 + LLM Fallback混合架构 | 对话管理与语义理解 |
-| 前端 | 原生HTML/JavaScript | Demo页面开发 |
+| 前端 | 原生HTML/JavaScript（SSE流式 + Web Audio API） | Web Demo页面开发 |
 
 ---
 

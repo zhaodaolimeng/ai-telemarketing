@@ -20,9 +20,11 @@
 | 红黑对抗训练框架 | ✅ 完成 | 100% |
 | 全链路评估体系 | ✅ 完成 | 100% |
 | FastAPI后端服务与数据库设计 | ✅ 完成 | 100% |
-| 真实ASR服务接入 | 🔄 进行中 | 70% |
+| 真实ASR服务接入（Faster-Whisper） | ✅ 完成 | 100% |
+| TTS多引擎支持（Edge-TTS / Piper / Coqui） | ✅ 完成 | 100% |
+| 客户语音仿真器（TTS→VAD→ASR闭环） | ✅ 完成 | 100% |
+| Web Demo（两栏布局 + 自动/手动模式 + 语音） | ✅ 完成 | 100% |
 | 生产电话线路对接 | ⏳ 规划中 | 0% |
-| 前端管理后台 | ⏳ 规划中 | 0% |
 
 ## 🎯 核心能力
 - **三阶段覆盖**：支持H2（宽限期前2天，温和引导）、H1（宽限期前1天，引导+暗示后果）、S0（实质性逾期，高压催收）全业务场景
@@ -46,13 +48,18 @@ ai-telemarketing/
 │   │   ├── simple_classifier.py   # 轻量级朴素贝叶斯意图分类器（规则系统补充）
 │   │   ├── simulator.py           # 7种客户类型模拟器（5级抗拒）
 │   │   ├── evaluation.py          # 多维度评测框架
-│   │   ├── translator.py          # 印尼文-中文翻译引擎
+│   │   ├── translator.py          # 印尼文-英文翻译引擎（MarianMT本地模型）
 │   │   ├── metrics.py             # 监控指标收集系统
 │   │   ├── llm_fallback.py        # LLM兜底混合架构
+│   │   ├── logger.py              # 统一日志系统（毫秒精度，文件+控制台双输出）
 │   │   └── voice/                 # 语音处理子模块
 │   │       ├── vad.py             # 语音活动检测（VAD）
+│   │       ├── asr.py             # Faster-Whisper ASR引擎（印尼语实时识别）
+│   │       ├── tts.py             # TTS引擎抽象（Edge-TTS / Piper-TTS / Coqui-TTS三引擎）
+│   │       ├── audio_io.py        # 麦克风录音 + 扬声器播放
 │   │       ├── interruption.py    # 智能打断处理
-│   │       └── tts.py             # TTS引擎抽象（Edge-TTS/Coqui-TTS）
+│   │       ├── conversation.py    # 全链路串联：麦克风→VAD→ASR→纠错→Chatbot→TTS→扬声器
+│   │       └── customer_simulator.py  # 客户语音仿真器（TTS→VAD→ASR端到端闭环）
 │   ├── experiments/               # 数据分析与实验
 │   │   ├── train_classifier.py   # ML分类器训练脚本
 │   │   ├── example_ml_usage.py   # ML功能使用示例
@@ -68,7 +75,9 @@ ai-telemarketing/
 │   │   ├── test_full_demo.py      # 完整对话流程Demo测试
 │   │   ├── test_demo_functionality.py # Demo功能测试
 │   │   └── run_small_scale_test.py # 批量生产测试
-│   └── static/                    # 前端Demo页面
+│   └── static/                    # 前端Web Demo
+│       ├── index.html            # 两栏布局（左侧会话列表 + 右侧聊天面板）
+│       └── app.js                # 前端逻辑（自动/手动模式、SSE流式、语音播放、双语翻译）
 ├── scripts/                       # 工具脚本（标注、数据处理）
 │   ├── annotation_tool.py         # 标注工具
 │   ├── batch_annotate.py          # 批量标注脚本
@@ -77,7 +86,8 @@ ai-telemarketing/
 │   ├── extract_unknown_for_annotation.py # 提取unknown意图用于标注
 │   ├── fix_annotation_issues.py   # 修复标注问题
 │   ├── prepare_gold_dataset.py    # 准备黄金数据集
-│   └── ci_playback_test.py        # CI回放测试
+│   ├── ci_playback_test.py        # CI回放测试
+│   └── voice_simulate_demo.py     # CLI语音仿真Demo（多种客户画像/抗拒等级）
 ├── data/                          # 数据文件（Git忽略，包含录音、转写等）
 ├── docs/                          # 项目文档
 │   ├── requirements/              # 需求文档
@@ -98,13 +108,13 @@ ai-telemarketing/
 |---------|------|
 | 后端框架 | FastAPI + Pydantic |
 | 数据库 | SQLite + SQLAlchemy |
-| 语音合成 | Edge-TTS（优先）/ Coqui-TTS（自建备用） |
-| 语音识别 | Faster-Whisper（规划中） |
+| 语音合成 | Edge-TTS (Azure Neural) / Piper-TTS (本地ONNX) / Coqui-TTS (自建备用) |
+| 语音识别 | Faster-Whisper (OpenAI Whisper C++ 移植，本地GPU加速) |
 | 自然语言理解 | 规则引擎 + 朴素贝叶斯ML分类器 + LLM Fallback三级混合架构 |
 | 机器学习 | scikit-learn（轻量级意图分类） |
 | 语音活动检测 | 能量基础VAD |
-| 翻译引擎 | MarianMT（本地模型） |
-| 前端 | 原生HTML/JavaScript |
+| 翻译引擎 | MarianMT（Helsinki-NLP opus-mt-id-en 本地模型） |
+| 前端 | 原生HTML/JavaScript（SSE流式 + Web Audio API） |
 
 ## 🚀 快速开始
 
@@ -177,21 +187,24 @@ python src/tests/test_simulator.py
 - ✅ 14个测试场景，85.7%成功率
 - ✅ 对话日志记录与存储
 
-### 阶段2: 能力增强（进行中）
+### 阶段2: 能力增强（已完成）
 - ✅ FastAPI服务封装
 - ✅ 数据库设计与ORM实现
 - ✅ VAD语音活动检测
 - ✅ 智能打断处理
-- ✅ 翻译引擎抽象
+- ✅ 翻译引擎（MarianMT印尼文-英文互译）
 - ✅ LLM Fallback混合架构
 - ✅ 红黑对抗训练框架
 - ✅ 规则+ML混合意图识别架构（准确率提升~25%）
 - ✅ 意图识别准确率优化（纯规则50.8% → 混合系统~77%）
 - ✅ 机器人重复回复问题修复（多版本话术+去重逻辑）
 - ✅ 印尼语ASR错误纠正优化（全字匹配替换，避免误改业务词汇）
-- 🔄 真实ASR服务接入
-- 🔄 小范围生产测试
-- 🔄 打断策略优化
+- ✅ Faster-Whisper ASR服务接入（本地GPU加速，印尼语实时识别）
+- ✅ Piper-TTS本地语音合成引擎集成（纯离线，无需网络）
+- ✅ 客户语音仿真器（TTS→VAD→ASR端到端闭环测试）
+- ✅ Web Demo UI重构（两栏布局 + 自动/手动模式 + SSE流式 + 语音播放 + 双语翻译）
+- ✅ 统一日志系统（毫秒精度，文件+控制台双输出）
+- ✅ 坐席/客户语音分离（Edge-TTS坐席 + Piper-TTS客户，不同音色）
 
 ### 阶段3: 生产落地（规划中）
 - 接入SIP电话线路

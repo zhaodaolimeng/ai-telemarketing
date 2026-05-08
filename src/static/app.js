@@ -1,65 +1,148 @@
-// 智能催收对话系统 - 前端JavaScript
-class ChatDemo {
+/**
+ * 智能催收对话系统 - Web Demo
+ * Two-column layout: session list (left) + chat panel (right)
+ * Manual mode: human types customer replies
+ * Auto mode: fully automatic simulation via SSE
+ * Bilingual display: Indonesian + English translation
+ */
+
+class TelemarketingApp {
     constructor() {
         this.sessionId = null;
-        this.isLoading = false;
+        this.mode = 'manual';
+        this.voiceEnabled = false;
         this.isFinished = false;
-        this.simulationMode = false;
-        this.pendingSimulatedReply = null;
-        this.voiceMode = false;
-        this.autoSimRunning = false;
-        this.autoSimEventSource = null;
-        this.currentAudio = null;
-        this.pendingAudioUrls = [];
+        this.isLoading = false;
 
-        this.initElements();
-        this.bindEvents();
+        this.autoSimRunning = false;
+        this.eventSource = null;
+        this.autoSimTurnCount = 0;
+
+        this.currentAudio = null;
+        this.pendingAudioQueue = [];
+        this._processingQueue = false;
+        this.turnBuffer = [];
+        this.processingBuffer = false;
+        this._pollingActive = false;
+        this._playedUrls = new Set();
+        this._greetingAudioReceived = false;
+        this.translationCache = {};
+        this.viewingSessionId = null;
+
+        this._localSessions = [];
+
+        this._names = [
+            'Pak Budi', 'Bu Siti', 'Pak Ahmad', 'Bu Dewi', 'Pak Rudi',
+            'Bu Ratna', 'Pak Hendra', 'Bu Lina', 'Pak Agus', 'Bu Yanti',
+            'Pak Dedi', 'Bu Fitri', 'Pak Andi', 'Bu Rina', 'Pak Tono',
+            'Bu Wati', 'Pak Bambang', 'Bu Indah', 'Pak Eko', 'Bu Sri',
+        ];
+
+        this.init();
     }
 
-    initElements() {
-        this.chatArea = document.getElementById('chatArea');
-        this.welcomeMessage = document.getElementById('welcomeMessage');
-        this.sessionInfo = document.getElementById('sessionInfo');
-        this.sessionIdEl = document.getElementById('sessionId');
-        this.chatGroupEl = document.getElementById('chatGroup');
-        this.currentStateEl = document.getElementById('currentState');
+    /* ========== Initialization ========== */
 
-        this.chatGroupSelect = document.getElementById('chatGroup');
-        this.customerNameInput = document.getElementById('customerName');
+    init() {
+        this.cacheElements();
+        this.bindEvents();
+        this.loadSessionList();
+    }
+
+    cacheElements() {
+        this.sessionList = document.getElementById('sessionList');
+        this.refreshSessionsBtn = document.getElementById('refreshSessionsBtn');
+        this.newSessionBtn = document.getElementById('newSessionBtn');
+        this.panelPlaceholder = document.getElementById('panelPlaceholder');
+        this.sessionPanel = document.getElementById('sessionPanel');
+        this.activeEmpty = document.getElementById('activeEmpty');
+        this.completedEmpty = document.getElementById('completedEmpty');
+
+        this.manualModeTab = document.getElementById('manualModeTab');
+        this.autoModeTab = document.getElementById('autoModeTab');
+        this.voiceToggleBtn = document.getElementById('voiceToggleBtn');
+
+        this.manualConfig = document.getElementById('manualConfig');
+        this.autoConfig = document.getElementById('autoConfig');
+
+        this.chatGroup = document.getElementById('chatGroup');
+        this.customerName = document.getElementById('customerName');
+        this.newChatBtn = document.getElementById('newChatBtn');
         this.messageInput = document.getElementById('messageInput');
         this.sendBtn = document.getElementById('sendBtn');
-        this.newChatBtn = document.getElementById('newChatBtn');
-        this.translateBtn = document.getElementById('translateBtn');
 
-        this.simulationPanel = document.getElementById('simulationPanel');
-        this.toggleSimulationBtn = document.getElementById('toggleSimulation');
-        this.simPersonaSelect = document.getElementById('simPersona');
-        this.simResistanceSelect = document.getElementById('simResistance');
-        this.generateReplyBtn = document.getElementById('generateReply');
-        this.simulationResult = document.getElementById('simulationResult');
-        this.simResultText = document.getElementById('simResultText');
-        this.useSimReplyBtn = document.getElementById('useSimReply');
-
-        this.voiceToggle = document.getElementById('voiceToggle');
+        this.simPersona = document.getElementById('simPersona');
+        this.simResistance = document.getElementById('simResistance');
+        this.autoChatGroup = document.getElementById('autoChatGroup');
+        this.autoCustomerName = document.getElementById('autoCustomerName');
         this.autoSimBtn = document.getElementById('autoSimBtn');
+
+        this.modeBar = document.getElementById('modeBar');
+        this.chatArea = document.getElementById('chatArea');
+        this.welcomeMessage = document.getElementById('welcomeMessage');
+        this.inputArea = document.getElementById('inputArea');
         this.simStatus = document.getElementById('simStatus');
         this.simStatusText = document.getElementById('simStatusText');
     }
 
+    randomName() {
+        const idx = Math.floor(Math.random() * this._names.length);
+        return this._names[idx];
+    }
+
+    openNewSession() {
+        // Reset state
+        if (this.autoSimRunning) this.stopAutoSimulation();
+        this.sessionId = null;
+        this.isFinished = false;
+        this.autoSimRunning = false;
+
+        // Set random names
+        this.customerName.value = this.randomName();
+        this.autoCustomerName.value = this.randomName();
+
+        // Show session panel, hide placeholder
+        this.panelPlaceholder.classList.add('hidden');
+        this.sessionPanel.classList.remove('hidden');
+
+        // Restore mode bar
+        this.modeBar.classList.remove('hidden');
+
+        // Reset to manual mode
+        this.switchMode('manual');
+        this.resetChat();
+
+        // Disable input until chat starts
+        this.messageInput.disabled = true;
+        this.sendBtn.disabled = true;
+        this.messageInput.placeholder = '请先点击「开始对话」...';
+
+        // Pre-warm ASR in background
+        this._warmupASR();
+    }
+
+    async _warmupASR() {
+        try {
+            await fetch('/voice/warmup', { method: 'POST' });
+        } catch (e) { /* silent */ }
+    }
+
     bindEvents() {
+        this.newSessionBtn.addEventListener('click', () => this.openNewSession());
+
+        this.manualModeTab.addEventListener('click', () => this.switchMode('manual'));
+        this.autoModeTab.addEventListener('click', () => this.switchMode('auto'));
+        this.voiceToggleBtn.addEventListener('click', () => this.toggleVoice());
+
+        this.newChatBtn.addEventListener('click', () => this.startNewChat());
         this.sendBtn.addEventListener('click', () => this.sendMessage());
-        this.newChatBtn.addEventListener('click', () => this.newChat());
         this.messageInput.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
                 this.sendMessage();
             }
         });
-        this.translateBtn.addEventListener('click', () => this.translateInput());
-        this.toggleSimulationBtn.addEventListener('click', () => this.toggleSimulation());
-        this.generateReplyBtn.addEventListener('click', () => this.generateSimulatedReply());
-        this.useSimReplyBtn.addEventListener('click', () => this.useSimulatedReply());
-        this.voiceToggle.addEventListener('click', () => this.toggleVoiceMode());
+
         this.autoSimBtn.addEventListener('click', () => {
             if (this.autoSimRunning) {
                 this.stopAutoSimulation();
@@ -67,380 +150,1057 @@ class ChatDemo {
                 this.startAutoSimulation();
             }
         });
+
+        this.refreshSessionsBtn.addEventListener('click', () => this.loadSessionList());
+        setInterval(() => this.loadSessionList(), 10000);
     }
 
-    async newChat() {
+    /* ========== Mode Switching ========== */
+
+    switchMode(mode) {
+        if (this.autoSimRunning) this.stopAutoSimulation();
+        this.stopAllAudio();
+
+        this.mode = mode;
+        this.manualModeTab.classList.toggle('active', mode === 'manual');
+        this.autoModeTab.classList.toggle('active', mode === 'auto');
+        this.manualConfig.classList.toggle('hidden', mode !== 'manual');
+        this.autoConfig.classList.toggle('hidden', mode !== 'auto');
+
+        if (mode === 'auto') {
+            this.inputArea.classList.add('hidden');
+            this.resetChat();
+            this._warmupASR();
+        } else {
+            this.inputArea.classList.remove('hidden');
+            if (!this.sessionId) {
+                this.resetChat();
+                this.messageInput.disabled = true;
+                this.sendBtn.disabled = true;
+                this.messageInput.placeholder = '请先点击「开始对话」...';
+            }
+        }
+    }
+
+    /* ========== Voice Toggle ========== */
+
+    toggleVoice() {
+        this.voiceEnabled = !this.voiceEnabled;
+        this.voiceToggleBtn.classList.toggle('active', this.voiceEnabled);
+        this.voiceToggleBtn.textContent = this.voiceEnabled ? '🔊 语音: 开' : '🔊 语音: 关';
+        if (!this.voiceEnabled) this.stopAllAudio();
+    }
+
+    /* ========== Session List ========== */
+
+    async loadSessionList() {
+        try {
+            const resp = await fetch('/chat/sessions/active');
+            if (!resp.ok) return;
+            const data = await resp.json();
+
+            // Clean up local sessions already on server
+            const serverIds = new Set([
+                ...data.active.map(s => s.session_id),
+                ...data.completed.map(s => s.session_id),
+            ]);
+            this._localSessions = this._localSessions.filter(
+                s => !serverIds.has(s.session_id)
+            );
+
+            this.renderSessionList(data);
+        } catch (err) {
+            console.error('Failed to load session list:', err);
+        }
+    }
+
+    renderSessionList(data) {
+        const { active, completed } = data;
+
+        // Split active sessions into truly active vs finished
+        const trulyActive = active.filter(s => !s.is_finished);
+        const finishedActive = active.filter(s => s.is_finished);
+
+        // Merge finished active into completed (dedup by session_id)
+        const completedIds = new Set(completed.map(s => s.session_id));
+        for (const s of finishedActive) {
+            if (!completedIds.has(s.session_id)) {
+                completed.unshift(s);
+            }
+        }
+
+        const activeIds = new Set(trulyActive.map(s => s.session_id));
+        const allCompletedIds = new Set(completed.map(s => s.session_id));
+
+        // Inject local sessions not yet on server
+        for (const local of this._localSessions) {
+            if (!activeIds.has(local.session_id) && !allCompletedIds.has(local.session_id)) {
+                if (local.is_finished) {
+                    completed.unshift(local);
+                } else {
+                    trulyActive.unshift(local);
+                }
+            }
+        }
+
+        let html = '';
+
+        // 进行中 section - always visible
+        html += '<div class="session-section-title">进行中</div>';
+        if (trulyActive.length > 0) {
+            for (const s of trulyActive) {
+                html += this.renderSessionCard(s, true);
+            }
+        } else {
+            html += '<div class="empty-state" id="activeEmpty">暂无进行中的会话</div>';
+        }
+
+        // 已完成 section - always visible
+        html += '<div class="session-section-title" style="margin-top:12px;">已完成</div>';
+        if (completed.length > 0) {
+            for (const s of completed) {
+                html += this.renderSessionCard(s, false);
+            }
+        } else {
+            html += '<div class="empty-state" id="completedEmpty">暂无已完成的会话</div>';
+        }
+
+        this.sessionList.innerHTML = html;
+
+        this.sessionList.querySelectorAll('.session-card').forEach(card => {
+            card.addEventListener('click', () => {
+                this.viewSession(card.dataset.sessionId);
+            });
+        });
+
+        this.sessionList.querySelectorAll('.card-delete-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.showDeleteConfirm(btn, btn.dataset.deleteId);
+            });
+        });
+    }
+
+    renderSessionCard(s, isActive) {
+        const shortId = s.session_id.substring(0, 8);
+        const badgeClass = `badge-${s.chat_group.toLowerCase()}`;
+        const dotClass = isActive ? 'active-dot' : (s.is_successful ? 'success-dot' : 'failed-dot');
+        const activeClass = (s.session_id === this.sessionId) ? ' active' : '';
+        const stateLabel = s.state ? this.formatState(s.state) : '';
+        const endTimeStr = s.end_time ? new Date(s.end_time).toLocaleString('zh-CN', {
+            month: '2-digit', day: '2-digit',
+            hour: '2-digit', minute: '2-digit', second: '2-digit'
+        }) : '';
+
+        return `
+            <div class="session-card${activeClass}" data-session-id="${s.session_id}">
+                <button class="card-delete-btn" data-delete-id="${s.session_id}" title="删除会话">×</button>
+                <div class="card-top">
+                    <span class="card-name">${this.escapeHtml(s.customer_name || 'Unknown')}</span>
+                    <span class="card-badge ${badgeClass}">${s.chat_group}</span>
+                </div>
+                <div class="card-meta">
+                    <span><span class="status-dot-sm ${dotClass}"></span>${shortId}</span>
+                    <span>${s.conversation_length}轮</span>
+                </div>
+                ${stateLabel ? `<div class="card-state">状态: ${stateLabel}</div>` : ''}
+                ${!isActive && endTimeStr ? `<div class="card-state">${endTimeStr}</div>` : ''}
+            </div>`;
+    }
+
+    formatState(state) {
+        const map = {
+            'INIT': '初始化', 'GREETING': '问候', 'IDENTITY_VERIFY': '身份验证',
+            'PURPOSE': '说明目的', 'ASK_TIME': '询问时间', 'PUSH_FOR_TIME': '推动承诺',
+            'COMMIT_TIME': '确认时间', 'CONFIRM_EXTENSION': '协商延期',
+            'HANDLE_OBJECTION': '处理异议', 'HANDLE_BUSY': '处理忙碌',
+            'HANDLE_WRONG_NUMBER': '号码错误', 'CLOSE': '已关闭', 'FAILED': '失败'
+        };
+        return map[state] || state;
+    }
+
+    async viewSession(sessionId) {
+        if (this.autoSimRunning) this.stopAutoSimulation();
+
+        // Ensure session panel is visible
+        this.panelPlaceholder.classList.add('hidden');
+        this.sessionPanel.classList.remove('hidden');
+
+        try {
+            const resp = await fetch(`/chat/session/${sessionId}`);
+            if (!resp.ok) {
+                const errText = resp.status === 404 ? '会话不存在或已过期' : `加载失败 (${resp.status})`;
+                this.chatArea.innerHTML = '';
+                this.welcomeMessage.style.display = '';
+                this.renderMessage('system', errText);
+                return;
+            }
+            const data = await resp.json();
+
+            this.chatArea.innerHTML = '';
+            this.welcomeMessage.style.display = 'none';
+
+            const isFinished = data.is_finished;
+
+            // Banner
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'result-banner';
+            infoDiv.style.background = isFinished ? (data.is_successful ? '#dcfce7' : '#fee2e2') : '#fef3c7';
+            infoDiv.style.color = isFinished ? (data.is_successful ? '#166534' : '#991b1b') : '#92400e';
+            infoDiv.textContent = (isFinished ? '已完成' : '进行中') +
+                ` | ${data.customer_name || 'Unknown'} | ${data.chat_group} | ${data.conversation_length}轮`;
+            this.chatArea.appendChild(infoDiv);
+
+            // Render conversation
+            for (const entry of data.conversation_log) {
+                this.renderMessage(entry.role, entry.text, null, entry.timestamp);
+            }
+
+            this.scrollToBottom();
+
+            // If session is active (not finished), reconnect for interaction
+            if (!isFinished) {
+                this.sessionId = sessionId;
+                this.isFinished = false;
+                this.viewingSessionId = null;
+                this.modeBar.classList.remove('hidden');
+                this.switchMode('manual');
+                this.messageInput.disabled = false;
+                this.sendBtn.disabled = false;
+                this.messageInput.placeholder = '输入客户回复...';
+                this.newChatBtn.textContent = '新对话';
+                this.inputArea.classList.remove('hidden');
+            } else {
+                // Viewing completed session: hide mode/config, disable input
+                this.sessionId = null;
+                this.isFinished = true;
+                this.modeBar.classList.add('hidden');
+                this.manualConfig.classList.add('hidden');
+                this.autoConfig.classList.add('hidden');
+                this.messageInput.disabled = true;
+                this.sendBtn.disabled = true;
+                this.messageInput.placeholder = '查看历史会话 (只读)';
+                this.newChatBtn.textContent = '新对话';
+                this.inputArea.classList.remove('hidden');
+            }
+            this.loadSessionList();
+        } catch (err) {
+            console.error('Failed to load session:', err);
+            this.renderMessage('system', '加载会话失败: ' + err.message);
+        }
+    }
+
+    showDeleteConfirm(btn, sessionId) {
+        // Remove any existing confirm popups
+        this.dismissDeleteConfirm();
+
+        const card = btn.closest('.session-card');
+        const popup = document.createElement('div');
+        popup.className = 'delete-confirm';
+        popup.innerHTML = `
+            <span>确认删除?</span>
+            <button class="btn-confirm-yes">删除</button>
+            <button class="btn-confirm-no">取消</button>
+        `;
+        card.appendChild(popup);
+        this._deleteConfirmPopup = popup;
+        this._deleteConfirmCard = card;
+
+        popup.querySelector('.btn-confirm-yes').addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.dismissDeleteConfirm();
+            this.executeDelete(sessionId);
+        });
+
+        popup.querySelector('.btn-confirm-no').addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.dismissDeleteConfirm();
+        });
+
+        // Dismiss on click outside
+        const outsideHandler = (e) => {
+            if (!popup.contains(e.target) && e.target !== btn) {
+                this.dismissDeleteConfirm();
+                document.removeEventListener('click', outsideHandler);
+            }
+        };
+        setTimeout(() => document.addEventListener('click', outsideHandler), 0);
+    }
+
+    dismissDeleteConfirm() {
+        if (this._deleteConfirmPopup) {
+            this._deleteConfirmPopup.remove();
+            this._deleteConfirmPopup = null;
+        }
+        if (this._deleteConfirmCard) {
+            this._deleteConfirmCard = null;
+        }
+    }
+
+    async executeDelete(sessionId) {
+        try {
+            const resp = await fetch(`/chat/session/${sessionId}`, { method: 'DELETE' });
+            if (!resp.ok) {
+                const err = await resp.json();
+                throw new Error(err.detail || '删除失败');
+            }
+
+            this._localSessions = this._localSessions.filter(s => s.session_id !== sessionId);
+
+            // If viewing this session, reset
+            if (this.sessionId === sessionId || this.viewingSessionId === sessionId) {
+                this.openNewSession();
+            }
+
+            this.loadSessionList();
+        } catch (err) {
+            alert('删除失败: ' + err.message);
+        }
+    }
+
+    renderHistorySession(data) {
+        this.chatArea.innerHTML = '';
+        this.welcomeMessage.style.display = 'none';
+
+        const infoDiv = document.createElement('div');
+        infoDiv.className = 'result-banner ' + (data.is_successful ? 'success' : 'failed');
+        const name = data.customer_name || 'Unknown';
+        infoDiv.textContent = `查看历史会话 | ${name} | ${data.chat_group} | ${data.conversation_length}轮 | ${data.is_successful ? '成功' : '未成功'}`;
+        this.chatArea.appendChild(infoDiv);
+
+        for (const entry of data.conversation_log) {
+            this.renderMessage(entry.role, entry.text, null, entry.timestamp);
+        }
+
+        this.scrollToBottom();
+    }
+
+    /* ========== Manual Mode: Chat ========== */
+
+    resetChat() {
+        this.chatArea.innerHTML = '';
+        this.welcomeMessage.style.display = '';
+        this.chatArea.appendChild(this.welcomeMessage);
+        const banners = this.chatArea.querySelectorAll('.result-banner');
+        banners.forEach(b => b.remove());
+    }
+
+    async startNewChat() {
         if (this.isLoading) return;
 
         this.isLoading = true;
-        this.chatArea.innerHTML = '';
+        this.newChatBtn.disabled = true;
+        this.resetChat();
+        this.welcomeMessage.style.display = 'none';
         this.isFinished = false;
-        this.simulationResult.style.display = 'none';
 
-        const chatGroup = this.chatGroupSelect.value;
-        const customerName = this.customerNameInput.value || 'Pak / Bu';
+        const group = this.chatGroup.value;
+        const name = this.customerName.value.trim() || this.randomName();
+        this.customerName.value = this.randomName();
+        const endpoint = this.voiceEnabled ? '/voice/start' : '/chat/start';
 
         try {
-            const endpoint = this.voiceMode ? '/voice/start' : '/chat/start';
-            const response = await fetch(endpoint, {
+            const resp = await fetch(endpoint, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    chat_group: chatGroup,
-                    customer_name: customerName
-                })
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_group: group, customer_name: name }),
             });
 
-            if (!response.ok) {
-                throw new Error('开始对话失败');
+            if (!resp.ok) {
+                const err = await resp.json();
+                throw new Error(err.detail || 'Failed to start chat');
             }
 
-            const data = await response.json();
+            const data = await resp.json();
             this.sessionId = data.session_id;
+            this.viewingSessionId = null;
 
-            // 显示会话信息
-            this.sessionInfo.style.display = 'flex';
-            this.sessionIdEl.textContent = this.sessionId;
-            this.chatGroupEl.textContent = data.chat_group || chatGroup;
-            this.currentStateEl.textContent = data.state || data.current_state;
+            // Immediately cache and show in sidebar
+            this._localSessions.unshift({
+                session_id: data.session_id,
+                chat_group: group,
+                customer_name: name,
+                is_finished: false,
+                is_successful: false,
+                state: data.current_state || null,
+                conversation_length: data.conversation_length || 1,
+                start_time: new Date().toISOString(),
+                end_time: null,
+            });
 
-            // 启用输入
             this.messageInput.disabled = false;
             this.sendBtn.disabled = false;
-            this.translateBtn.disabled = false;
-            this.newChatBtn.textContent = '新对话';
-            this.newChatBtn.classList.add('secondary');
             this.messageInput.placeholder = '输入客户回复...';
+            this.messageInput.focus();
 
-            // 添加agent消息
-            const agentText = data.agent_text || data.agent_response;
-            const msgId = this.addMessage('agent', agentText);
+            const audioUrl = data.audio_file || null;
+            this.renderMessage('agent', data.agent_response, audioUrl);
 
-            // 语音模式：添加播放按钮并自动播放
-            const audioUrl = data.audio_file || data.agent_audio_url;
-            if (this.voiceMode && audioUrl) {
-                this.addPlayButton(msgId, audioUrl);
-                this.playAudio(audioUrl);
+            if (data.is_finished) {
+                this.handleConversationEnd(data);
             }
 
-        } catch (error) {
-            console.error('Error:', error);
-            alert('开始对话失败: ' + error.message);
+            this.loadSessionList();
+        } catch (err) {
+            alert('开始对话失败: ' + err.message);
         } finally {
             this.isLoading = false;
+            this.newChatBtn.disabled = false;
         }
     }
 
     async sendMessage() {
         if (this.isLoading || !this.sessionId || this.isFinished) return;
 
-        const message = this.messageInput.value.trim();
-        if (!message) return;
-
-        this.isLoading = true;
-        this.sendBtn.disabled = true;
-
-        // 添加客户消息
-        await this.addMessage('customer', message);
-        this.messageInput.value = '';
-
-        // 添加加载状态
-        const loadingId = this.addLoadingMessage();
-
-        try {
-            const endpoint = this.voiceMode ? '/voice/turn' : '/chat/turn';
-            const response = await fetch(endpoint, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    session_id: this.sessionId,
-                    customer_input: message
-                })
-            });
-
-            if (!response.ok) {
-                throw new Error('发送消息失败');
-            }
-
-            const data = await response.json();
-
-            // 移除加载消息
-            this.removeMessage(loadingId);
-
-            // 更新状态
-            this.currentStateEl.textContent = data.state || data.current_state;
-
-            // 添加agent回复
-            const agentText = data.agent_text || data.agent_response;
-            const msgId = this.addMessage('agent', agentText);
-
-            // 语音模式：添加播放按钮并自动播放
-            const audioUrl = data.audio_file || data.agent_audio_url;
-            if (this.voiceMode && audioUrl) {
-                this.addPlayButton(msgId, audioUrl);
-                this.playAudio(audioUrl);
-            }
-
-            // 检查是否结束
-            if (data.is_finished) {
-                this.isFinished = true;
-                this.messageInput.disabled = true;
-                this.sendBtn.disabled = true;
-                this.addResultBanner(
-                    data.is_successful !== undefined ? data.is_successful : !this.isFinished,
-                    data.commit_time
-                );
-            }
-
-        } catch (error) {
-            console.error('Error:', error);
-            this.removeMessage(loadingId);
-            alert('发送消息失败: ' + error.message);
-        } finally {
-            this.isLoading = false;
-            if (!this.isFinished) {
-                this.sendBtn.disabled = false;
-            }
-        }
-    }
-
-    addMessage(role, text) {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `message ${role}`;
-        const msgId = 'msg-' + Date.now();
-        messageDiv.id = msgId;
-
-        const time = new Date().toLocaleTimeString('zh-CN', {
-            hour: '2-digit',
-            minute: '2-digit'
-        });
-
-        // 先显示消息，不等待翻译
-        messageDiv.innerHTML = `
-            <div class="message-content">
-                <div>${this.escapeHtml(text)}</div>
-                <div class="translation" id="trans-${msgId}" style="display:none"></div>
-                <div class="message-time">${time}</div>
-            </div>
-        `;
-
-        this.chatArea.appendChild(messageDiv);
-        this.scrollToBottom();
-
-        // 异步加载翻译，不阻塞
-        this.loadTranslation(msgId, text, role);
-
-        return msgId;
-    }
-
-    async loadTranslation(msgId, text, role) {
-        try {
-            const targetLang = role === 'agent' ? 'en' : 'id';
-            const sourceLang = role === 'agent' ? 'id' : 'en';
-
-            // 超时控制：3秒
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 3000);
-
-            const response = await fetch('/api/translate', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    text: text,
-                    source: sourceLang,
-                    target: targetLang
-                }),
-                signal: controller.signal
-            });
-
-            clearTimeout(timeoutId);
-
-            if (response.ok) {
-                const data = await response.json();
-                if (data.success && data.translated_text !== text) {
-                    const transDiv = document.getElementById('trans-' + msgId);
-                    if (transDiv) {
-                        transDiv.textContent = data.translated_text;
-                        transDiv.style.display = 'block';
-                    }
-                }
-            }
-        } catch (e) {
-            console.log('Translation skipped or failed:', e.message);
-        }
-    }
-
-    async translateText(text, source, target) {
-        try {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 3000);
-
-            const response = await fetch('/api/translate', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    text: text,
-                    source: source,
-                    target: target
-                }),
-                signal: controller.signal
-            });
-
-            clearTimeout(timeoutId);
-
-            if (response.ok) {
-                const data = await response.json();
-                if (data.success && data.translated_text !== text) {
-                    return data.translated_text;
-                }
-            }
-        } catch (e) {
-            console.error('Translation error:', e);
-        }
-        return '';
-    }
-
-    async translateInput() {
         const text = this.messageInput.value.trim();
         if (!text) return;
 
+        this.isLoading = true;
+        this.sendBtn.disabled = true;
+        this.messageInput.disabled = true;
+
+        this.renderMessage('customer', text);
+        this.messageInput.value = '';
+
+        const loadingMsg = this.showLoading();
+        const endpoint = this.voiceEnabled ? '/voice/turn' : '/chat/turn';
+
         try {
-            const response = await fetch('/api/translate', {
+            const resp = await fetch(endpoint, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    text: text,
-                    source: 'zh',
-                    target: 'id'
-                })
+                    session_id: this.sessionId,
+                    customer_input: text,
+                }),
             });
 
-            if (response.ok) {
-                const data = await response.json();
-                if (data.success) {
-                    this.messageInput.value = data.translated_text;
+            if (!resp.ok) {
+                const err = await resp.json();
+                throw new Error(err.detail || 'Failed to process turn');
+            }
+
+            const data = await resp.json();
+            this.removeElement(loadingMsg);
+
+            const audioUrl = data.audio_file || null;
+            this.renderMessage('agent', data.agent_response, audioUrl);
+
+            if (data.is_finished) {
+                this.handleConversationEnd(data);
+            }
+        } catch (err) {
+            this.removeElement(loadingMsg);
+            this.renderMessage('system', 'Error: ' + err.message);
+        } finally {
+            this.isLoading = false;
+            this.sendBtn.disabled = false;
+            this.messageInput.disabled = false;
+            this.messageInput.focus();
+        }
+    }
+
+    handleConversationEnd(data) {
+        this.isFinished = true;
+        this.messageInput.disabled = true;
+        this.sendBtn.disabled = true;
+        this.messageInput.placeholder = '对话已结束';
+
+        // Update local session cache
+        const local = this._localSessions.find(s => s.session_id === this.sessionId);
+        if (local) {
+            local.is_finished = true;
+            local.is_successful = data.is_successful;
+            local.end_time = new Date().toISOString();
+        }
+
+        const banner = document.createElement('div');
+        banner.className = 'result-banner ' + (data.is_successful ? 'success' : 'failed');
+        banner.textContent = data.is_successful
+            ? `对话成功 - 承诺时间: ${data.commit_time || 'N/A'}`
+            : '对话失败，未能达成还款约定';
+        this.chatArea.appendChild(banner);
+        this.scrollToBottom();
+
+        this.loadSessionList();
+    }
+
+    /* ========== Auto Mode: Simulation ========== */
+
+    async startAutoSimulation() {
+        if (this.isLoading || this.autoSimRunning) return;
+
+        this.autoSimRunning = true;
+        this.autoSimTurnCount = 0;
+        this.autoSimBtn.textContent = '⏹ 停止';
+        this.autoSimBtn.classList.add('running');
+        this.resetChat();
+        this.welcomeMessage.style.display = 'none';
+        this.isFinished = false;
+        this.sessionId = null;
+
+        const persona = this.simPersona.value;
+        const resistance = this.simResistance.value;
+        const group = this.autoChatGroup.value;
+        const customerName = this.autoCustomerName.value.trim() || this.randomName();
+
+        this.showSimStatus('正在启动自动仿真（加载ASR模型...）');
+
+        const params = new URLSearchParams({
+            persona,
+            resistance,
+            chat_group: group,
+            max_turns: '15',
+            asr_model: 'tiny',
+            customer_name: customerName,
+        });
+
+        this.eventSource = new EventSource(`/voice/simulate/stream?${params}`);
+        console.log('[SSE] Connecting to /voice/simulate/stream', { persona, resistance, group, customerName });
+
+        this.eventSource.onopen = () => {
+            console.log('[SSE] Connection opened');
+            this.autoSimBtn.disabled = false;
+            this.hideSimStatus();
+        };
+
+        this.eventSource.onmessage = (event) => {
+            try {
+                const data = JSON.parse(event.data);
+                this.handleSimEvent(data);
+            } catch (e) {
+                console.error('[SSE] Parse error:', e, event.data);
+            }
+        };
+
+        this.eventSource.onerror = () => {
+            const state = this.eventSource?.readyState;
+            console.warn('[SSE] onerror fired, readyState=', state,
+                '(0=CONNECTING, 1=OPEN, 2=CLOSED), _pendingDone=', !!this._pendingDone);
+
+            // If 'done' was already received and audio is still playing,
+            // immediately close the EventSource to cancel the browser's
+            // auto-reconnect. (Server finished cleanly → browser fires onerror
+            // with CONNECTING state → would reconnect without this.)
+            if (this._pendingDone) {
+                console.log('[SSE] Deferred done pending — closing to cancel reconnect');
+                if (this.eventSource) {
+                    this.eventSource.close();
+                    this.eventSource = null;
+                }
+                return;
+            }
+
+            if (this.eventSource && state === EventSource.CLOSED) {
+                console.warn('[SSE] Connection permanently closed');
+                if (this.autoSimRunning) {
+                    this.finishAutoSimulation(null);
                 }
             }
-        } catch (e) {
-            console.error('Translation error:', e);
+        };
+    }
+
+    handleSimEvent(data) {
+        this.hideSimStatus();
+
+        switch (data.type) {
+            case 'greeting':
+                // Guard: if auto-simulation is already running with messages rendered,
+                // this is an SSE reconnect — clear previous state to avoid duplicates
+                if (this.autoSimRunning && this.sessionId && data.session_id !== this.sessionId) {
+                    console.warn('[SSE] Duplicate greeting detected (reconnect?), old session=',
+                        this.sessionId, 'new session=', data.session_id, '- resetting chat');
+                    this.chatArea.innerHTML = '';
+                    this.welcomeMessage.style.display = 'none';
+                    this.turnBuffer = [];
+                    this.pendingAudioQueue = [];
+                    this.stopAllAudio();
+                }
+
+                this.autoSimTurnCount = 0;
+                this.sessionId = data.session_id || null;
+                this.turnBuffer = [];
+                this.processingBuffer = false;
+                this._playedUrls.clear();
+                this._greetingAudioReceived = false;
+                this._pollingActive = false;
+                this._pendingDone = null;
+
+                // Cache auto session in sidebar (dedup by session_id)
+                if (data.session_id) {
+                    this._localSessions = this._localSessions.filter(
+                        s => s.session_id !== data.session_id
+                    );
+                    this._localSessions.unshift({
+                        session_id: data.session_id,
+                        chat_group: this.autoChatGroup.value,
+                        customer_name: this.autoCustomerName.value.trim() || 'Test',
+                        is_finished: false,
+                        is_successful: false,
+                        state: data.state || null,
+                        conversation_length: 1,
+                        start_time: new Date().toISOString(),
+                        end_time: null,
+                    });
+                    this.loadSessionList();
+                }
+
+                this.renderMessage('agent', data.agent_text, null);
+                console.log('[SSE] Greeting rendered, session_id=', data.session_id);
+                break;
+
+            case 'greeting_audio':
+                if (this._greetingAudioReceived) break;
+                this._greetingAudioReceived = true;
+                if (data.agent_audio_url && this.voiceEnabled) {
+                    this.pendingAudioQueue.push(data.agent_audio_url);
+                    this.processAudioQueue();
+                }
+                // Start processing buffered turns after greeting audio
+                if (this.voiceEnabled && this.turnBuffer.length > 0 && !this.processingBuffer) {
+                    this._waitForAudioThenProcess();
+                }
+                break;
+
+            case 'turn':
+                this.autoSimTurnCount++;
+                const autoLocal = this._localSessions.find(s => s.session_id === data.session_id);
+                if (autoLocal) autoLocal.conversation_length = this.autoSimTurnCount + 1;
+
+                if (this.voiceEnabled) {
+                    // Buffer turns, display one at a time after audio playback
+                    this.turnBuffer.push(data);
+                    if (!this.processingBuffer) {
+                        // Start processing immediately if idle, otherwise wait for audio
+                        if (this.pendingAudioQueue.length === 0 && !this._processingQueue
+                            && (!this.currentAudio || this.currentAudio.paused || this.currentAudio.ended)) {
+                            this._processNextBufferedTurn();
+                        } else {
+                            this._waitForAudioThenProcess();
+                        }
+                    }
+                } else {
+                    // Without voice, render immediately
+                    this._renderTurnMessages(data);
+                }
+
+                if (data.is_finished && !this.voiceEnabled) {
+                    const finishedLocal = this._localSessions.find(s => s.session_id === data.session_id);
+                    if (finishedLocal) {
+                        finishedLocal.is_finished = true;
+                        finishedLocal.is_successful = true;
+                        finishedLocal.end_time = new Date().toISOString();
+                    }
+                    this.finishAutoSimulation(null);
+                }
+                break;
+
+            case 'done':
+                console.log('[SSE] Done event received, voiceEnabled=', this.voiceEnabled,
+                    'turnBuffer.length=', this.turnBuffer.length,
+                    'processingBuffer=', this.processingBuffer);
+                // For voice mode, finish after all buffered turns are processed
+                if (this.voiceEnabled && (this.turnBuffer.length > 0 || this.processingBuffer)) {
+                    this._pendingDone = data;
+                } else {
+                    this.finishAutoSimulation(data);
+                }
+                break;
+
+            case 'error':
+                this.renderMessage('system', 'Error: ' + data.message);
+                this.finishAutoSimulation(null);
+                break;
         }
     }
 
-    toggleSimulation() {
-        this.simulationMode = !this.simulationMode;
-        if (this.simulationMode) {
-            this.simulationPanel.classList.add('active');
-            this.toggleSimulationBtn.textContent = '关闭仿真';
-        } else {
-            this.simulationPanel.classList.remove('active');
-            this.toggleSimulationBtn.textContent = '仿真模式';
+    _renderTurnMessages(data) {
+        this.renderMessage('customer', data.customer_text,
+            this.voiceEnabled ? data.customer_audio_url : null,
+            null, `Turn ${this.autoSimTurnCount}`);
+
+        if (data.asr_text && !data.asr_exact_match) {
+            this.renderMessage('system',
+                `ASR: "${data.asr_text}" (CER: ${(data.asr_cer * 100).toFixed(1)}%)`);
+        }
+
+        this.renderMessage('agent', data.agent_text,
+            this.voiceEnabled ? data.agent_audio_url : null);
+    }
+
+    async _processNextBufferedTurn() {
+        if (this.processingBuffer) return;
+        // Wait for any in-flight processAudioQueue (greeting audio) to finish
+        if (this._processingQueue) {
+            this._waitForAudioThenProcess();
+            return;
+        }
+        this.processingBuffer = true;
+        this._processingQueue = true;
+
+        try {
+            while (this.turnBuffer.length > 0) {
+                const data = this.turnBuffer.shift();
+
+                try {
+                    // Render turn messages
+                    this._renderTurnMessages(data);
+                } catch (e) {
+                    console.error('Error rendering turn:', e);
+                }
+
+                // Queue and drain audio sequentially before next turn
+                if (data.customer_audio_url) {
+                    this.pendingAudioQueue.push(data.customer_audio_url);
+                }
+                if (data.agent_audio_url) {
+                    this.pendingAudioQueue.push(data.agent_audio_url);
+                }
+
+                while (this.pendingAudioQueue.length > 0) {
+                    const url = this.pendingAudioQueue.shift();
+                    try {
+                        await this._playOne(url);
+                    } catch (e) {
+                        console.error('Audio play error:', e);
+                    }
+                }
+
+                if (data.is_finished) {
+                    const finishedLocal = this._localSessions.find(s => s.session_id === data.session_id);
+                    if (finishedLocal) {
+                        finishedLocal.is_finished = true;
+                        finishedLocal.is_successful = true;
+                        finishedLocal.end_time = new Date().toISOString();
+                    }
+                }
+            }
+        } finally {
+            this._processingQueue = false;
+            this.processingBuffer = false;
+        }
+
+        // Handle pending done event
+        if (this._pendingDone) {
+            const doneData = this._pendingDone;
+            this._pendingDone = null;
+            this.finishAutoSimulation(doneData);
         }
     }
 
-    async generateSimulatedReply() {
-        if (!this.sessionId) {
-            alert('请先开始对话');
+    _waitForAudioThenProcess() {
+        // Prevent duplicate polling loops
+        if (this._pollingActive) return;
+        this._pollingActive = true;
+        const check = () => {
+            const audioDone = this.pendingAudioQueue.length === 0
+                && !this._processingQueue
+                && (!this.currentAudio || this.currentAudio.paused || this.currentAudio.ended);
+            if (audioDone) {
+                this._pollingActive = false;
+                this._processNextBufferedTurn();
+            } else {
+                setTimeout(check, 150);
+            }
+        };
+        setTimeout(check, 100);
+    }
+
+    finishAutoSimulation(reportData) {
+        console.log('[SSE] finishAutoSimulation called, reportData=', reportData);
+        this.autoSimRunning = false;
+        this.isFinished = true;
+
+        if (this.eventSource) {
+            this.eventSource.close();
+            this.eventSource = null;
+        }
+
+        this.autoSimBtn.textContent = '▶ 开始自动对话';
+        this.autoSimBtn.classList.remove('running');
+        this.autoSimBtn.disabled = false;
+        this.processingBuffer = false;
+        this._pollingActive = false;
+        this._greetingAudioReceived = false;
+        this.stopAllAudio();
+        this.pendingAudioQueue = [];
+        this.turnBuffer = [];
+        this._pendingDone = null;
+        this._playedUrls.clear();
+        this.hideSimStatus();
+
+        // Hide mode/config bars — completed session should be read-only
+        this.modeBar.classList.add('hidden');
+        this.manualConfig.classList.add('hidden');
+        this.autoConfig.classList.add('hidden');
+
+        if (reportData) {
+            this.showSimReport(reportData);
+        }
+
+        this.loadSessionList();
+    }
+
+    stopAutoSimulation() {
+        this.showSimStatus('正在停止...');
+        this.finishAutoSimulation(null);
+    }
+
+    showSimReport(data) {
+        const isSuccess = data.final_state !== 'FAILED';
+        const banner = document.createElement('div');
+        banner.className = 'result-banner ' + (isSuccess ? 'success' : 'failed');
+
+        let summary = `总轮数: ${data.total_turns || 'N/A'}`;
+        if (data.asr_exact_match_rate !== undefined) {
+            summary += ` | ASR匹配率: ${(data.asr_exact_match_rate * 100).toFixed(0)}%`;
+        }
+        if (data.avg_cer !== undefined) {
+            summary += ` | 平均CER: ${(data.avg_cer * 100).toFixed(1)}%`;
+        }
+        if (data.avg_tts_time !== undefined) {
+            summary += ` | TTS: ${data.avg_tts_time}s`;
+        }
+        if (data.avg_asr_time !== undefined) {
+            summary += ` | ASR: ${data.avg_asr_time}s`;
+        }
+        banner.textContent = summary;
+        this.chatArea.appendChild(banner);
+
+        if (data.committed_time) {
+            const commitDiv = document.createElement('div');
+            commitDiv.className = 'sim-report';
+            commitDiv.innerHTML = `<h3>承诺时间: ${data.committed_time}</h3>`;
+            this.chatArea.appendChild(commitDiv);
+        }
+
+        this.scrollToBottom();
+    }
+
+    showSimStatus(text) {
+        this.simStatus.classList.add('visible');
+        this.simStatusText.textContent = text;
+    }
+
+    hideSimStatus() {
+        this.simStatus.classList.remove('visible');
+    }
+
+    /* ========== Message Rendering ========== */
+
+    renderMessage(role, text, audioUrl, timestamp, label) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = `message ${role}`;
+
+        const now = timestamp ? new Date(timestamp) : new Date();
+        const timeStr = now.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'message-wrapper';
+
+        if (label) {
+            const labelDiv = document.createElement('div');
+            labelDiv.className = 'message-label';
+            labelDiv.textContent = label;
+            wrapper.appendChild(labelDiv);
+        }
+
+        const bubble = document.createElement('div');
+        bubble.className = 'message-bubble';
+
+        const originalSpan = document.createElement('span');
+        originalSpan.className = 'original-text';
+        originalSpan.textContent = text;
+        bubble.appendChild(originalSpan);
+
+        const transSpan = document.createElement('span');
+        transSpan.className = 'translation-text';
+        bubble.appendChild(transSpan);
+
+        wrapper.appendChild(bubble);
+
+        if (audioUrl && role === 'agent') {
+            const actions = document.createElement('div');
+            actions.className = 'message-actions';
+
+            const playBtn = document.createElement('button');
+            playBtn.className = 'play-btn';
+            playBtn.textContent = '🔊 播放';
+            playBtn.dataset.audioUrl = audioUrl;
+            playBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.playAudioFromButton(playBtn, audioUrl);
+            });
+            actions.appendChild(playBtn);
+            wrapper.appendChild(actions);
+        }
+
+        const timeDiv = document.createElement('div');
+        timeDiv.className = 'message-time';
+        timeDiv.textContent = timeStr;
+        wrapper.appendChild(timeDiv);
+
+        msgDiv.appendChild(wrapper);
+        this.chatArea.appendChild(msgDiv);
+        this.scrollToBottom();
+
+        this.translateMessage(transSpan, text, role);
+
+        if (this.voiceEnabled && audioUrl && role === 'agent' && this.mode === 'manual') {
+            this._playOne(audioUrl);
+        }
+
+        return msgDiv;
+    }
+
+    /* ========== Translation ========== */
+
+    async translateMessage(transSpan, text, role) {
+        // In auto mode, both agent and customer speak Indonesian → translate to English
+        // In manual mode, agent speaks Indonesian (→EN), customer types English (→ID)
+        const bothIndonesian = this.mode === 'auto';
+        const source = (role === 'agent' || bothIndonesian) ? 'id' : 'en';
+        const target = (role === 'agent' || bothIndonesian) ? 'en' : 'id';
+        const cacheKey = `${text}|${source}|${target}`;
+
+        if (this.translationCache[cacheKey]) {
+            this.applyTranslation(transSpan, this.translationCache[cacheKey]);
             return;
         }
 
-        const persona = this.simPersonaSelect.value;
-        const resistance = this.simResistanceSelect.value;
-
         try {
-            const response = await fetch('/api/simulate-customer', {
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 8000);
+
+            const resp = await fetch('/api/translate', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    session_id: this.sessionId,
-                    persona: persona,
-                    resistance_level: resistance
-                })
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ text, source, target }),
+                signal: controller.signal,
             });
+            clearTimeout(timeout);
 
-            if (!response.ok) {
-                throw new Error('生成回复失败');
+            if (!resp.ok) return;
+
+            const data = await resp.json();
+            if (data.success && data.translated_text && data.translated_text !== text) {
+                this.translationCache[cacheKey] = data.translated_text;
+                this.applyTranslation(transSpan, data.translated_text);
+            }
+        } catch (err) {
+            // Translation failed silently - non-critical
+        }
+    }
+
+    applyTranslation(transSpan, translated) {
+        transSpan.textContent = translated;
+        transSpan.classList.add('visible');
+    }
+
+    /* ========== Audio Playback ========== */
+
+    playAudioFromButton(btn, url) {
+        if (this.currentAudio && !this.currentAudio.paused) {
+            const playingUrl = this.currentAudio.src;
+            if (playingUrl && playingUrl.includes(url)) {
+                this.currentAudio.pause();
+                btn.textContent = '🔊 播放';
+                btn.classList.remove('playing');
+                this.currentAudio = null;
+                return;
+            }
+        }
+
+        this.stopAllAudio();
+        btn.textContent = '⏸ 播放中...';
+        btn.classList.add('playing');
+        this._playOne(url).then(() => {
+            btn.textContent = '🔊 播放';
+            btn.classList.remove('playing');
+        });
+    }
+
+    _playOne(url) {
+        // Skip if this URL was already played in this simulation
+        if (this._playedUrls.has(url)) return Promise.resolve();
+        this._playedUrls.add(url);
+
+        return new Promise((resolve) => {
+            if (this.currentAudio) {
+                this.currentAudio.pause();
+                this.currentAudio = null;
             }
 
-            const data = await response.json();
+            const audio = new Audio(url);
+            this.currentAudio = audio;
 
-            if (data.success) {
-                this.pendingSimulatedReply = data.customer_response;
-                this.simResultText.textContent = data.customer_response;
-                this.simulationResult.style.display = 'block';
-            } else {
-                alert('生成回复失败');
-            }
+            audio.onended = () => {
+                if (this.currentAudio === audio) this.currentAudio = null;
+                resolve();
+            };
 
-        } catch (error) {
-            console.error('Error:', error);
-            alert('生成回复失败: ' + error.message);
-        }
+            audio.onerror = () => {
+                if (this.currentAudio === audio) this.currentAudio = null;
+                resolve();
+            };
+
+            audio.play().catch(() => resolve());
+        });
     }
 
-    useSimulatedReply() {
-        if (this.pendingSimulatedReply) {
-            this.messageInput.value = this.pendingSimulatedReply;
-            this.simulationResult.style.display = 'none';
-            this.pendingSimulatedReply = null;
+    async processAudioQueue() {
+        if (this._processingQueue) return;
+        this._processingQueue = true;
+
+        while (this.pendingAudioQueue.length > 0) {
+            const url = this.pendingAudioQueue.shift();
+            await this._playOne(url);
         }
+
+        this._processingQueue = false;
     }
 
-    addLoadingMessage() {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = 'message agent';
-        messageDiv.id = 'loading-' + Date.now();
+    stopAllAudio() {
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+        }
+        this.pendingAudioQueue = [];
+        this._processingQueue = false;
 
-        messageDiv.innerHTML = `
-            <div class="message-content">
-                <div class="loading">
-                    <span class="loading-dots">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                </div>
-            </div>
-        `;
+        this.chatArea.querySelectorAll('.play-btn.playing').forEach(btn => {
+            btn.textContent = '🔊 播放';
+            btn.classList.remove('playing');
+        });
+    }
 
-        this.chatArea.appendChild(messageDiv);
+    /* ========== Utilities ========== */
+
+    showLoading() {
+        const div = document.createElement('div');
+        div.className = 'message agent';
+        div.id = 'loading-' + Date.now();
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'message-wrapper';
+
+        const bubble = document.createElement('div');
+        bubble.className = 'message-bubble';
+
+        const indicator = document.createElement('div');
+        indicator.className = 'loading-indicator';
+        indicator.innerHTML = 'Agent is thinking <div class="loading-dots"><span></span><span></span><span></span></div>';
+        bubble.appendChild(indicator);
+
+        wrapper.appendChild(bubble);
+        div.appendChild(wrapper);
+        this.chatArea.appendChild(div);
         this.scrollToBottom();
-
-        return messageDiv.id;
+        return div;
     }
 
-    removeMessage(id) {
-        const el = document.getElementById(id);
-        if (el) {
-            el.remove();
-        }
-    }
-
-    addResultBanner(success, commitTime) {
-        const banner = document.createElement('div');
-        banner.className = `result-banner ${success ? 'success' : 'failed'}`;
-
-        if (success) {
-            banner.innerHTML = `
-                ✅ 对话成功！约定还款时间: <strong>${this.escapeHtml(commitTime || '-')}</strong>
-            `;
-        } else {
-            banner.innerHTML = '❌ 对话失败，未能达成还款约定';
-        }
-
-        this.chatArea.appendChild(banner);
-        this.scrollToBottom();
+    removeElement(el) {
+        if (el && el.parentNode) el.parentNode.removeChild(el);
     }
 
     scrollToBottom() {
@@ -452,271 +1212,9 @@ class ChatDemo {
         div.textContent = text;
         return div.innerHTML;
     }
-
-    // ============ 语音模式 ============
-
-    toggleVoiceMode() {
-        this.voiceMode = !this.voiceMode;
-        if (this.voiceMode) {
-            this.voiceToggle.classList.add('active');
-            this.voiceToggle.textContent = '🔊 语音:开';
-            this.messageInput.placeholder = '输入客户回复（Agent将语音播报）...';
-        } else {
-            this.voiceToggle.classList.remove('active');
-            this.voiceToggle.textContent = '🔊 语音';
-            this.messageInput.placeholder = '输入客户回复...';
-            this.stopAllAudio();
-        }
-    }
-
-    addPlayButton(msgId, audioUrl) {
-        const msgEl = document.getElementById(msgId);
-        if (!msgEl) return;
-        const contentEl = msgEl.querySelector('.message-content');
-        if (!contentEl) return;
-
-        const btn = document.createElement('span');
-        btn.className = 'play-audio-btn';
-        btn.textContent = '🔊 播放';
-        btn.dataset.audioUrl = audioUrl;
-        btn.dataset.msgId = msgId;
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            this.playAudioFromButton(btn, audioUrl);
-        });
-        contentEl.appendChild(btn);
-    }
-
-    playAudioFromButton(btn, url) {
-        if (this.currentAudio) {
-            this.currentAudio.pause();
-            this.currentAudio = null;
-            // Reset all buttons
-            document.querySelectorAll('.play-audio-btn.playing').forEach(b => {
-                b.classList.remove('playing');
-                b.textContent = '🔊 播放';
-            });
-        }
-
-        btn.classList.add('playing');
-        btn.textContent = '⏸ 播放中...';
-
-        this.currentAudio = new Audio(url);
-        this.currentAudio.onended = () => {
-            btn.classList.remove('playing');
-            btn.textContent = '🔊 播放';
-            this.currentAudio = null;
-        };
-        this.currentAudio.onerror = () => {
-            btn.classList.remove('playing');
-            btn.textContent = '🔊 播放';
-            this.currentAudio = null;
-        };
-        this.currentAudio.play();
-    }
-
-    playAudio(url) {
-        // Stop any currently playing audio
-        if (this.currentAudio) {
-            this.currentAudio.pause();
-            this.currentAudio = null;
-        }
-
-        this.currentAudio = new Audio(url);
-        this.currentAudio.onended = () => { this.currentAudio = null; };
-        this.currentAudio.onerror = () => { this.currentAudio = null; };
-        this.currentAudio.play().catch(() => {});
-    }
-
-    async playAudioSequence(urls) {
-        for (const url of urls) {
-            if (!url || this.autoSimRunning === false) break;
-            await new Promise((resolve) => {
-                this.currentAudio = new Audio(url);
-                this.currentAudio.onended = () => {
-                    this.currentAudio = null;
-                    resolve();
-                };
-                this.currentAudio.onerror = () => {
-                    this.currentAudio = null;
-                    resolve();
-                };
-                this.currentAudio.play().catch(() => resolve());
-            });
-        }
-    }
-
-    stopAllAudio() {
-        if (this.currentAudio) {
-            this.currentAudio.pause();
-            this.currentAudio = null;
-        }
-        // Reset play buttons
-        document.querySelectorAll('.play-audio-btn.playing').forEach(b => {
-            b.classList.remove('playing');
-            b.textContent = '🔊 播放';
-        });
-    }
-
-    // ============ 自动语音仿真 ============
-
-    async startAutoSimulation() {
-        if (this.autoSimRunning) return;
-
-        // 先开始对话
-        if (!this.sessionId) {
-            await this.newChat();
-            if (!this.sessionId) return;
-        }
-
-        const persona = this.simPersonaSelect.value;
-        const resistance = this.simResistanceSelect.value;
-        const chatGroup = this.chatGroupSelect.value;
-        const customerName = this.customerNameInput.value || 'Budi';
-
-        this.autoSimRunning = true;
-        this.autoSimBtn.textContent = '⏹ 停止仿真';
-        this.autoSimBtn.classList.add('running');
-        this.generateReplyBtn.disabled = true;
-        this.messageInput.disabled = true;
-        this.sendBtn.disabled = true;
-        this.voiceToggle.disabled = true;
-        this.isLoading = true;
-
-        // 清屏
-        this.chatArea.innerHTML = '';
-        this.welcomeMessage.style.display = 'none';
-        this.simStatus.classList.add('active');
-        this.simStatusText.textContent = '⏳ 加载ASR模型...';
-
-        // 连接SSE
-        const params = new URLSearchParams({
-            persona, resistance, chat_group: chatGroup,
-            max_turns: 15, asr_model: 'tiny', customer_name: customerName,
-        });
-        const url = `/voice/simulate/stream?${params.toString()}`;
-
-        this.autoSimEventSource = new EventSource(url);
-        let turnCount = 0;
-
-        this.autoSimEventSource.onmessage = async (event) => {
-            try {
-                const data = JSON.parse(event.data);
-
-                if (data.type === 'greeting') {
-                    this.simStatusText.textContent = '🟢 对话进行中...';
-                    const agentText = data.agent_text || data.agent_response;
-                    const msgId = this.addMessage('agent', agentText);
-                    if (data.agent_audio_url) {
-                        this.addPlayButton(msgId, data.agent_audio_url);
-                        await this.playAudio(data.agent_audio_url);
-                    }
-                } else if (data.type === 'turn') {
-                    turnCount++;
-                    this.simStatusText.textContent = `🟢 第 ${turnCount} 轮...`;
-
-                    // 客户消息
-                    if (data.customer_text) {
-                        this.addMessage('customer', data.customer_text);
-                    }
-                    if (data.customer_audio_url) {
-                        await this.playAudio(data.customer_audio_url);
-                    }
-
-                    // ASR状态
-                    if (data.asr_text) {
-                        const matchIcon = data.asr_exact_match ? '✅' : '⚠️';
-                        const asrNote = document.createElement('div');
-                        asrNote.className = 'message agent';
-                        asrNote.style.opacity = '0.7';
-                        asrNote.style.fontSize = '12px';
-                        asrNote.innerHTML = `
-                            <div class="message-content" style="background:#f0fdf4; max-width:85%;">
-                                ${matchIcon} ASR: "${this.escapeHtml(data.asr_text)}"
-                                ${data.asr_exact_match ? '' : ' (原文: "' + this.escapeHtml(data.customer_text) + '")'}
-                                <span style="color:#94a3b8; margin-left:8px;">CER:${data.asr_cer.toFixed(3)}</span>
-                            </div>
-                        `;
-                        this.chatArea.appendChild(asrNote);
-                    }
-
-                    // Agent回复
-                    if (data.agent_text) {
-                        const msgId = this.addMessage('agent', data.agent_text);
-                        if (data.agent_audio_url) {
-                            this.addPlayButton(msgId, data.agent_audio_url);
-                            await this.playAudio(data.agent_audio_url);
-                        }
-                    }
-
-                    if (data.is_finished) {
-                        this.finishAutoSimulation(data);
-                    }
-                } else if (data.type === 'done') {
-                    this.simStatusText.textContent = `✅ 完成: ${data.total_turns}轮, ASR匹配率: ${(data.asr_exact_match_rate*100).toFixed(0)}%`;
-                } else if (data.type === 'error') {
-                    this.simStatusText.textContent = '❌ 错误: ' + data.message;
-                    this.autoSimRunning = false;
-                }
-            } catch (e) {
-                console.error('SSE parse error:', e);
-            }
-        };
-
-        this.autoSimEventSource.onerror = (event) => {
-            console.log('SSE connection closed');
-            this.autoSimEventSource.close();
-            this.autoSimEventSource = null;
-            this.finishAutoSimulation();
-        };
-    }
-
-    finishAutoSimulation(reportData) {
-        this.autoSimRunning = false;
-        this.isLoading = false;
-        this.autoSimBtn.textContent = '▶ 自动语音仿真';
-        this.autoSimBtn.classList.remove('running');
-        this.generateReplyBtn.disabled = false;
-        this.voiceToggle.disabled = false;
-        this.isFinished = true;
-        this.messageInput.disabled = true;
-        this.sendBtn.disabled = true;
-
-        if (this.autoSimEventSource) {
-            this.autoSimEventSource.close();
-            this.autoSimEventSource = null;
-        }
-
-        if (reportData && reportData.conversation_ended !== undefined) {
-            this.addResultBanner(
-                reportData.final_state !== 'FAILED',
-                reportData.committed_time
-            );
-        }
-
-        if (this.simStatus) {
-            setTimeout(() => {
-                this.simStatus.classList.remove('active');
-            }, 5000);
-        }
-    }
-
-    stopAutoSimulation() {
-        if (this.autoSimEventSource) {
-            this.autoSimEventSource.close();
-            this.autoSimEventSource = null;
-        }
-        this.autoSimRunning = false;
-        this.isLoading = false;
-        this.autoSimBtn.textContent = '▶ 自动语音仿真';
-        this.autoSimBtn.classList.remove('running');
-        this.generateReplyBtn.disabled = false;
-        this.voiceToggle.disabled = false;
-        this.simStatusText.textContent = '⏹ 已停止';
-    }
 }
 
-// 初始化
+/* ========== Bootstrap ========== */
 document.addEventListener('DOMContentLoaded', () => {
-    window.chatDemo = new ChatDemo();
+    window.app = new TelemarketingApp();
 });

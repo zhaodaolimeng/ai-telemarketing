@@ -189,6 +189,8 @@ class CustomerVoiceSimulator:
         *,
         customer_voice: str = "id-ID-GadisNeural",
         agent_voice: str = "id-ID-ArdiNeural",
+        customer_tts_engine: str = "piper_tts",
+        agent_tts_engine: str = "edge_tts",
         persona: str = "cooperative",
         resistance_level: str = "medium",
         chat_group: str = "H2",
@@ -206,6 +208,8 @@ class CustomerVoiceSimulator:
 
         self.customer_voice = customer_voice
         self.agent_voice = agent_voice
+        self.customer_tts_engine = customer_tts_engine
+        self.agent_tts_engine = agent_tts_engine
         self.persona = persona
         self.resistance_level = resistance_level
         self.chat_group = chat_group
@@ -238,6 +242,8 @@ class CustomerVoiceSimulator:
         asr_model_size: str = "small",
         customer_voice: str = "id-ID-GadisNeural",
         agent_voice: str = "id-ID-ArdiNeural",
+        customer_tts_engine: str = "piper_tts",
+        agent_tts_engine: str = "edge_tts",
         realtime: bool = False,
         save_artifacts: bool = True,
         output_dir: str = "data/voice_simulations",
@@ -249,7 +255,13 @@ class CustomerVoiceSimulator:
         text_sim = RealCustomerSimulatorV2()
         tts = TTSManager()
         corrector = getattr(chatbot, "asr_corrector", None)
-        asr = await ASRPipeline.create(model_size=asr_model_size, corrector=corrector)
+
+        # Use pre-warmed ASR pipeline if provided
+        pre_warmed_asr = kwargs.pop("_asr_pipeline", None)
+        if pre_warmed_asr is not None:
+            asr = pre_warmed_asr
+        else:
+            asr = await ASRPipeline.create(model_size=asr_model_size, corrector=corrector)
 
         return cls(
             chatbot=chatbot,
@@ -261,6 +273,8 @@ class CustomerVoiceSimulator:
             chat_group=chat_group,
             customer_voice=customer_voice,
             agent_voice=agent_voice,
+            customer_tts_engine=customer_tts_engine,
+            agent_tts_engine=agent_tts_engine,
             realtime=realtime,
             save_artifacts=save_artifacts,
             output_dir=output_dir,
@@ -389,6 +403,7 @@ class CustomerVoiceSimulator:
                 tts_result = await self._tts.synthesize(
                     customer_text,
                     voice=self.customer_voice,
+                    engine=self.customer_tts_engine,
                 )
                 turn.tts_time = time.time() - tts_start
 
@@ -472,7 +487,7 @@ class CustomerVoiceSimulator:
         # 初始: 让机器人先说第一句话
         first_msg, _ = await self._chatbot.process(use_tts=False)
         if first_msg and self.save_artifacts and self._run_dir:
-            tts_result = await self._tts.synthesize(first_msg, voice=self.agent_voice)
+            tts_result = await self._tts.synthesize(first_msg, voice=self.agent_voice, engine=self.agent_tts_engine)
             if tts_result.success and tts_result.audio_file:
                 _copy_artifact(tts_result.audio_file, self._run_dir / "turn_00_agent_greeting.mp3")
 
@@ -539,9 +554,6 @@ class CustomerVoiceSimulator:
 
         self._start_time = time.time()
 
-        # 初始问候
-        first_msg, _ = await self._chatbot.process(use_tts=False)
-
         prev_state = self._chatbot.state
         stuck_count = 0
         tts_fail_streak = 0
@@ -558,7 +570,7 @@ class CustomerVoiceSimulator:
 
             # 合成 agent TTS（流式需要立即生成音频URL）
             if turn.agent_text:
-                tts_result = await self._tts.synthesize(turn.agent_text, voice=self.agent_voice)
+                tts_result = await self._tts.synthesize(turn.agent_text, voice=self.agent_voice, engine=self.agent_tts_engine)
                 if tts_result.success and tts_result.audio_file:
                     turn.agent_audio_file = str(tts_result.audio_file)
 
@@ -592,7 +604,7 @@ class CustomerVoiceSimulator:
 
         # Agent TTS
         if turn.agent_text:
-            tts_result = await self._tts.synthesize(turn.agent_text, voice=self.agent_voice)
+            tts_result = await self._tts.synthesize(turn.agent_text, voice=self.agent_voice, engine=self.agent_tts_engine)
             if tts_result.success and tts_result.audio_file:
                 turn.agent_audio_file = tts_result.audio_file
                 _copy_artifact(tts_result.audio_file, run_dir / f"turn_{tid}_agent.mp3")

@@ -14,11 +14,11 @@
 ## 核心技术选型
 | 技术领域 | 选型 | 说明 |
 |---------|------|------|
-| **TTS** | Edge-TTS (优先) / Coqui TTS (自建备用) | 印尼语语音合成 |
-| **ASR** | Faster-Whisper (规划中) | 印尼语语音识别 |
+| **TTS** | Edge-TTS (优先) / Piper-TTS (本地离线) / Coqui TTS (自建备用) | 印尼语语音合成 |
+| **ASR** | Faster-Whisper (本地GPU加速) | 印尼语实时语音识别 |
 | **NLU** | 规则引擎 + 朴素贝叶斯 + LLM Fallback三级混合架构 | 自然语言理解与对话管理 |
 | **后端框架** | Python + FastAPI | REST API服务 |
 | **数据库** | SQLite + SQLAlchemy | 数据存储与ORM |
 | **语音活动检测** | 能量基础VAD | 实时语音端点检测 |
-| **翻译引擎** | MarianMT（本地模型） | 印尼文-中文互译 |
+| **翻译引擎** | MarianMT（Helsinki-NLP opus-mt-id-en 本地模型） | 印尼文-英文互译 |
 | **机器学习** | scikit-learn (LogisticRegression + TF-IDF) | 轻量级意图分类 |

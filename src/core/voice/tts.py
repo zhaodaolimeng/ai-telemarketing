@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 TTS引擎抽象层
-支持多种TTS后端：Edge-TTS、Coqui-TTS等
+支持多种TTS后端：Piper-TTS（本地）、Edge-TTS、Coqui-TTS等
 """
 import asyncio
 from abc import ABC, abstractmethod
@@ -10,6 +10,7 @@ from typing import Optional, List, Dict, Any
 from pathlib import Path
 from dataclasses import dataclass
 import time
+import os
 
 
 @dataclass
@@ -254,6 +255,174 @@ class CoquiTTSEngine(TTSEngine):
         return "coqui_tts"
 
 
+class PiperTTSEngine(TTSEngine):
+    """
+    Piper-TTS引擎实现 - 纯本地TTS，无需网络
+    支持多种语言的ONNX语音模型
+    """
+
+    def __init__(
+        self,
+        model_path: Optional[str] = None,
+        default_voice: str = "id_ID-news_tts-medium",
+    ):
+        self.default_voice = default_voice
+        self._available = False
+        self._piper = None
+        self._voice = None
+        self._voice_loaded_for = None
+
+        try:
+            import piper
+            self._piper = piper
+            self._available = True
+        except ImportError:
+            print("提示: piper-tts未安装，使用 pip install piper-tts 安装")
+
+        # 默认模型路径
+        if model_path is None:
+            self._model_base = Path.home() / ".piper-voices"
+        else:
+            self._model_base = Path(model_path)
+
+    def _find_model(self, voice_name: str) -> tuple:
+        """查找语音模型文件 (onnx_path, json_path)"""
+        # 1. 在子目录中查找: model_base/xx_XX/voice_name.onnx
+        if self._model_base.exists():
+            for onnx_file in self._model_base.rglob("*.onnx"):
+                if onnx_file.stem == voice_name or voice_name in str(onnx_file):
+                    onnx_path = str(onnx_file)
+                    json_path = onnx_path + ".json"
+                    return onnx_path, json_path
+
+        # 2. 直接路径: model_base/voice_name.onnx
+        direct_onnx = self._model_base / f"{voice_name}.onnx"
+        if direct_onnx.exists():
+            return str(direct_onnx), str(direct_onnx) + ".json"
+
+        # 3. 作为绝对路径
+        direct_path = Path(voice_name)
+        if direct_path.exists() and direct_path.suffix == ".onnx":
+            return str(direct_path), str(direct_path) + ".json"
+
+        return None, None
+
+    def _load_voice(self, voice_name: str):
+        """加载或切换语音"""
+        if self._voice is not None and self._voice_loaded_for == voice_name:
+            return self._voice
+
+        onnx_path, _ = self._find_model(voice_name)
+        if onnx_path is None:
+            raise FileNotFoundError(f"Piper voice model not found: {voice_name}")
+        self._voice = self._piper.PiperVoice.load(onnx_path)
+        self._voice_loaded_for = voice_name
+        return self._voice
+
+    async def synthesize(
+        self,
+        text: str,
+        output_file: Optional[str] = None,
+        voice: Optional[str] = None,
+        **kwargs
+    ) -> TTSResult:
+        if not self._available:
+            return TTSResult(
+                text=text,
+                success=False,
+                error_message="Piper-TTS不可用",
+                engine_name=self.get_engine_name()
+            )
+
+        start_time = time.time()
+        voice_name = voice or self.default_voice
+
+        try:
+            # 如果指定语音不存在，回退到默认语音
+            onnx_path, _ = self._find_model(voice_name)
+            if onnx_path is None:
+                voice_name = self.default_voice
+            voice_obj = self._load_voice(voice_name)
+
+            if output_file is None:
+                output_dir = Path("data/tts_output")
+                output_dir.mkdir(parents=True, exist_ok=True)
+                timestamp = time.strftime("%Y%m%d_%H%M%S_%f")
+                output_file = str(output_dir / f"piper_{timestamp}.wav")
+
+            # 在线程池中执行同步TTS合成
+            loop = asyncio.get_event_loop()
+            raw_pcm, sample_rate = await loop.run_in_executor(
+                None,
+                self._synth_sync,
+                voice_obj,
+                text,
+            )
+
+            # 写入WAV文件
+            import wave
+            with wave.open(output_file, 'w') as wf:
+                wf.setnchannels(1)
+                wf.setsampwidth(2)
+                wf.setframerate(sample_rate)
+                wf.writeframes(raw_pcm)
+
+            duration = time.time() - start_time
+
+            return TTSResult(
+                text=text,
+                audio_file=output_file,
+                duration=duration,
+                success=True,
+                engine_name=self.get_engine_name()
+            )
+
+        except Exception as e:
+            return TTSResult(
+                text=text,
+                success=False,
+                error_message=str(e),
+                engine_name=self.get_engine_name()
+            )
+
+    def _synth_sync(self, voice_obj, text: str):
+        """同步TTS合成（在线程池中运行）"""
+        raw_pcm = b""
+        sample_rate = None
+        for chunk in voice_obj.synthesize(text):
+            if sample_rate is None:
+                sample_rate = chunk.sample_rate
+            raw_pcm += chunk.audio_int16_bytes
+        return raw_pcm, sample_rate
+
+    async def list_voices(self, locale: Optional[str] = None) -> List[Dict[str, Any]]:
+        if not self._available:
+            return []
+
+        voices = []
+        if self._model_base.exists():
+            for onnx_file in self._model_base.rglob("*.onnx"):
+                name = onnx_file.stem
+                voices.append({
+                    "Name": name,
+                    "Locale": name.split("-")[0] if "-" in name else "",
+                    "Model": str(onnx_file),
+                })
+        return voices
+
+    def is_available(self) -> bool:
+        if not self._available:
+            return False
+        try:
+            onnx_path, _ = self._find_model(self.default_voice)
+            return onnx_path is not None
+        except Exception:
+            return False
+
+    def get_engine_name(self) -> str:
+        return "piper_tts"
+
+
 class TTSManager:
     """
     TTS管理器 - 支持多引擎切换
@@ -267,15 +436,22 @@ class TTSManager:
         self._register_default_engines()
 
     def _register_default_engines(self):
-        """注册默认引擎"""
-        # Edge-TTS（优先）
+        """注册默认引擎（优先本地引擎）"""
+        # Piper-TTS（优先 - 纯本地，无需网络）
+        piper_engine = PiperTTSEngine()
+        if piper_engine.is_available():
+            self.engines[piper_engine.get_engine_name()] = piper_engine
+            if self.default_engine is None:
+                self.default_engine = piper_engine.get_engine_name()
+
+        # Edge-TTS（备选 - 需要网络）
         edge_engine = EdgeTTSEngine()
         if edge_engine.is_available():
             self.engines[edge_engine.get_engine_name()] = edge_engine
             if self.default_engine is None:
                 self.default_engine = edge_engine.get_engine_name()
 
-        # Coqui-TTS
+        # Coqui-TTS（备选）
         coqui_engine = CoquiTTSEngine()
         if coqui_engine.is_available():
             self.engines[coqui_engine.get_engine_name()] = coqui_engine
