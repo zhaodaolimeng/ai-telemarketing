@@ -9,9 +9,9 @@ from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Any
 
-# 路径配置
-GOLD_DIR = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset")
-ANNOTATION_LIST_FILE = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset_annotation_list.json")
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+GOLD_DIR = _PROJECT_ROOT / "data/gold_dataset"
+ANNOTATION_LIST_FILE = _PROJECT_ROOT / "data/gold_dataset_annotation_list.json"
 
 # 合法取值集合，与标注规范完全一致
 VALID_STAGES = {

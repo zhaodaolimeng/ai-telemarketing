@@ -7,9 +7,9 @@ import json
 from pathlib import Path
 from collections import defaultdict
 
-# 路径配置
-GOLD_DIR = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset")
-ANNOTATION_LIST_FILE = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset_annotation_list.json")
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+GOLD_DIR = _PROJECT_ROOT / "data/gold_dataset"
+ANNOTATION_LIST_FILE = _PROJECT_ROOT / "data/gold_dataset_annotation_list.json"
 
 # 标准意图集合（扩展后）
 STANDARD_INTENTS = {

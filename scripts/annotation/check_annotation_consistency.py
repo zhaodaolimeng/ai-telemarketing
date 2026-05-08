@@ -8,9 +8,9 @@ import re
 from pathlib import Path
 from typing import Dict, List, Any
 
-# 路径配置
-GOLD_DIR = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset")
-ANNOTATION_LIST_FILE = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset_annotation_list.json")
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+GOLD_DIR = _PROJECT_ROOT / "data/gold_dataset"
+ANNOTATION_LIST_FILE = _PROJECT_ROOT / "data/gold_dataset_annotation_list.json"
 
 # 合法取值集合，与标注规范完全一致
 VALID_STAGES = {
@@ -437,7 +437,7 @@ def main():
         "problematic_files": problematic_files,
         "list_issues": list_issues
     }
-    report_file = "/Users/li/Workspace/ai-telemarketing/data/annotation_consistency_report.json"
+    report_file = str(_PROJECT_ROOT / "data/annotation_consistency_report.json")
     with open(report_file, 'w', encoding='utf-8') as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
     print(f"\n完整检查报告已保存到: {report_file}")

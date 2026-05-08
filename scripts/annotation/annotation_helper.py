@@ -53,8 +53,9 @@ def save_annotations(annotations: List[Dict], output_file: str):
 
 def batch_annotate_unknown(batch_size: int = 100):
     """批量标注unknown意图"""
-    input_file = Path("/Users/li/Workspace/ai-telemarketing/data/manual_annotation/unknown_intent_待标注.csv")
-    output_file = Path("/Users/li/Workspace/ai-telemarketing/data/manual_annotation/unknown_intent_已标注.csv")
+    _project_root = Path(__file__).resolve().parent.parent.parent
+    input_file = _project_root / "data/manual_annotation/unknown_intent_待标注.csv"
+    output_file = _project_root / "data/manual_annotation/unknown_intent_已标注.csv"
 
     if output_file.exists():
         data = load_csv(str(output_file))
@@ -97,8 +98,9 @@ def batch_annotate_unknown(batch_size: int = 100):
 
 def batch_check_labeled(batch_size: int = 100):
     """批量检查已标注的意图"""
-    input_file = Path("/Users/li/Workspace/ai-telemarketing/data/manual_annotation/labeled_intent_待检查.csv")
-    output_file = Path("/Users/li/Workspace/ai-telemarketing/data/manual_annotation/labeled_intent_已检查.csv")
+    _project_root = Path(__file__).resolve().parent.parent.parent
+    input_file = _project_root / "data/manual_annotation/labeled_intent_待检查.csv"
+    output_file = _project_root / "data/manual_annotation/labeled_intent_已检查.csv"
 
     if output_file.exists():
         data = load_csv(str(output_file))
@@ -251,7 +253,8 @@ def predict_intent(text: str) -> str:
 
 def apply_annotations_to_gold():
     """将标注结果应用到黄金数据集文件"""
-    annotation_dir = Path("/Users/li/Workspace/ai-telemarketing/data/manual_annotation")
+    _project_root = Path(__file__).resolve().parent.parent.parent
+    annotation_dir = _project_root / "data/manual_annotation"
     unknown_ann = load_csv(str(annotation_dir / "unknown_intent_已标注.csv"))
     labeled_ann = load_csv(str(annotation_dir / "labeled_intent_已检查.csv"))
 
@@ -263,7 +266,7 @@ def apply_annotations_to_gold():
             ann_index[key] = ann["manual_intent"]
 
     # 更新所有文件
-    GOLD_DIR = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset")
+    GOLD_DIR = _project_root / "data/gold_dataset"
     all_files = [f for f in GOLD_DIR.glob("*.json") if f.stem != "annotation_template"]
     updated_count = 0
 

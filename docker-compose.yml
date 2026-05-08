@@ -5,8 +5,8 @@ version: '3.8'
 services:
   api:
     build: .
-    image: ai-telemarketing-api:latest
-    container_name: ai-telemarketing-api
+    image: coin-collect-api:latest
+    container_name: coin-collect-api
     restart: always
     ports:
       - "${API_PORT:-8000}:8000"
@@ -31,7 +31,7 @@ services:
   # 如果需要单独的数据库服务，可以添加
   # db:
   #   image: mysql:8.0
-  #   container_name: ai-telemarketing-db
+  #   container_name: coin-collect-db
   #   restart: always
   #   environment:
   #     - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}

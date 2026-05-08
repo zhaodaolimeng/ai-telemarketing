@@ -6,7 +6,7 @@
 ```bash
 # 1. 克隆代码
 git clone <repo-url>
-cd ai-telemarketing
+cd coin-collect
 
 # 2. 配置环境变量
 cp .env.example .env
@@ -25,15 +25,15 @@ uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
 ### Docker本地部署
 ```bash
 # 1. 构建镜像
-docker build -t ai-telemarketing-api .
+docker build -t coin-collect-api .
 
 # 2. 启动容器
 docker run -d \
-  --name ai-telemarketing-api \
+  --name coin-collect-api \
   -p 8000:8000 \
   -v $(pwd)/data:/app/data \
   -v $(pwd)/logs:/app/logs \
-  ai-telemarketing-api
+  coin-collect-api
 
 # 或者使用docker-compose
 docker-compose up -d
@@ -119,21 +119,21 @@ docker-compose up -d
 如果上线后出现问题，按照以下步骤回滚：
 ```bash
 # 1. 在服务器上查看可用的镜像版本
-docker images | grep ai-telemarketing-api
+docker images | grep coin-collect-api
 
 # 2. 停止当前服务
-docker stop ai-telemarketing-api
+docker stop coin-collect-api
 
 # 3. 启动上一个稳定版本（比如backup-20240501120000）
 docker run -d \
-  --name ai-telemarketing-api \
+  --name coin-collect-api \
   --restart always \
   -p 80:8000 \
   -e DB_URI=${PROD_DB_URI} \
   -e ENV=production \
-  -v /opt/ai-telemarketing/data:/app/data \
-  -v /opt/ai-telemarketing/logs:/app/logs \
-  ai-telemarketing-api:backup-20240501120000
+  -v /opt/coin-collect/data:/app/data \
+  -v /opt/coin-collect/logs:/app/logs \
+  coin-collect-api:backup-20240501120000
 
 # 4. 验证服务是否正常
 curl -f http://localhost:80/health

@@ -10,8 +10,8 @@ from pathlib import Path
 from collections import Counter, defaultdict
 from typing import List, Dict, Any
 
-# 路径配置
-GOLD_DIR = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset")
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+GOLD_DIR = _PROJECT_ROOT / "data/gold_dataset"
 
 # 印尼语常用停用词
 STOP_WORDS = {

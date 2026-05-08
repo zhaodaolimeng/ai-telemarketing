@@ -1,4 +1,4 @@
-# 🏦 AI-Telemarketing - 印尼智能语音催收系统
+# 🪙 Coin-Collect - 印尼智能语音催收系统
 
 ## 🎯 项目定位
 面向印尼信贷市场的全阶段自动化语音催收系统，通过状态机驱动的规则引擎整合TTS/VAD/ASR等语音技术，结合规则+ML混合意图识别与LLM Fallback兜底架构，实现从宽限期提醒（H2/H1）到实质性逾期催收（S0）的全流程自动化债务提醒、还款协商与客户服务。
@@ -36,7 +36,7 @@
 
 ## 目录结构
 ```
-ai-telemarketing/
+coin-collect/
 ├── src/                           # 源代码
 │   ├── api/                       # FastAPI后端服务
 │   │   ├── main.py               # API端点定义
@@ -119,7 +119,7 @@ ai-telemarketing/
 ## 🚀 快速开始
 
 ### CI/CD 状态
-[![CI/CD Pipeline](https://github.com/your-username/ai-telemarketing/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/your-username/ai-telemarketing/actions/workflows/ci-cd.yml)
+[![CI/CD Pipeline](https://github.com/zhaodaolimeng/coin-collect/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/zhaodaolimeng/coin-collect/actions/workflows/ci-cd.yml)
 
 ### 本地开发启动
 ```bash
@@ -148,8 +148,8 @@ python start_demo.py
 docker-compose up -d
 
 # 或者手动构建
-docker build -t ai-telemarketing-api .
-docker run -d -p 8000:8000 ai-telemarketing-api
+docker build -t coin-collect-api .
+docker run -d -p 8000:8000 coin-collect-api
 ```
 
 ### 运行评测

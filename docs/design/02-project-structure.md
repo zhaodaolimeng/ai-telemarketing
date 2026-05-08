@@ -1,14 +1,14 @@
 # 项目结构说明
 
 ## 项目概述
-AI-Telemarketing - 面向印尼信贷场景的智能语音催收系统，基于AI技术实现自动化债务提醒与协商对话平台
+Coin-Collect - 面向印尼信贷场景的智能语音催收系统，基于AI技术实现自动化债务提醒与协商对话平台
 
 ---
 
 ## 目录结构
 
 ```
-ai-telemarketing/
+coin-collect/
 ├── src/                           # 源代码
 │   ├── api/                       # FastAPI后端服务
 │   │   ├── __init__.py

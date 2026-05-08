@@ -178,9 +178,10 @@ def annotate_transcript(transcript_file, output_dir):
 
 def main():
     # 路径配置
-    transcripts_dir = Path("/Users/li/Workspace/ai-telemarketing/data/processed/transcripts")
-    output_dir = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset")
-    annotation_list_file = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset_annotation_list.json")
+    _project_root = Path(__file__).resolve().parent.parent.parent
+    transcripts_dir = _project_root / "data/processed/transcripts"
+    output_dir = _project_root / "data/gold_dataset"
+    annotation_list_file = _project_root / "data/gold_dataset_annotation_list.json"
 
     # 读取现有标注列表
     with open(annotation_list_file, 'r', encoding='utf-8') as f:

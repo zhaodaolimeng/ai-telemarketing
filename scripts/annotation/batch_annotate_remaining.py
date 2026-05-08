@@ -21,10 +21,10 @@ intent_detector = IntentDetector()
 time_detector = TimeDetector()
 compliance_checker = ComplianceChecker()
 
-# 路径配置
-TRANSCRIPTS_DIR = Path("/Users/li/Workspace/ai-telemarketing/data/processed/transcripts")
-GOLD_DIR = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset")
-ANNOTATION_LIST_FILE = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset_annotation_list.json")
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+TRANSCRIPTS_DIR = _PROJECT_ROOT / "data/processed/transcripts"
+GOLD_DIR = _PROJECT_ROOT / "data/gold_dataset"
+ANNOTATION_LIST_FILE = _PROJECT_ROOT / "data/gold_dataset_annotation_list.json"
 
 # 对话阶段映射，与现有标注标准一致
 STAGE_MAPPING = {

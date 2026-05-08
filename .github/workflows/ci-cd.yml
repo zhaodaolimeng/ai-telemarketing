@@ -27,12 +27,12 @@ env:
   PYTHON_VERSION: '3.10'
   # Docker镜像配置（根据实际修改
   DOCKER_REGISTRY: 'registry.cn-hangzhou.aliyuncs.com'  # 示例：阿里云镜像服务
-  DOCKER_REPO: 'your-org/ai-telemarketing'
-  DOCKER_IMAGE_NAME: 'ai-telemarketing-api'
+  DOCKER_REPO: 'your-org/coin-collect'
+  DOCKER_IMAGE_NAME: 'coin-collect-api'
   # 部署配置
   TEST_SERVER_TEST: 'root@your-test-server-ip'
   SERVER_PROD: 'root@your-prod-server-ip'
-  APP_DIR: '/opt/ai-telemarketing'
+  APP_DIR: '/opt/coin-collect'
 
 jobs:
   ###########################################################################
@@ -226,11 +226,11 @@ jobs:
             # 拉取最新镜像
             docker pull ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_REPO }}/${{ env.DOCKER_IMAGE_NAME }}:latest
             # 停止旧容器
-            docker stop ai-telemarketing-api || true
-            docker rm ai-telemarketing-api || true
+            docker stop coin-collect-api || true
+            docker rm coin-collect-api || true
             # 启动新容器
             docker run -d \
-              --name ai-telemarketing-api \
+              --name coin-collect-api \
               --restart always \
               -p 8000:8000 \
               -e DB_URI=${{ secrets.TEST_DB_URI }} \
@@ -276,11 +276,11 @@ jobs:
             # 拉取最新镜像
             docker pull ${{ env.DOCKER_REGISTRY }}/${{ env.DOCKER_REPO }}/${{ env.DOCKER_IMAGE_NAME }}:latest
             # 优雅停止旧容器，保持服务
-            docker stop ai-telemarketing-api || true
-            docker rm ai-telemarketing-api || true
+            docker stop coin-collect-api || true
+            docker rm coin-collect-api || true
             # 启动新容器
             docker run -d \
-              --name ai-telemarketing-api \
+              --name coin-collect-api \
               --restart always \
               -p 80:8000 \
               -e DB_URI=${{ secrets.PROD_DB_URI }} \

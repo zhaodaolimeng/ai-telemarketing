@@ -8,8 +8,9 @@ import os
 from pathlib import Path
 from datetime import datetime
 
-TRANSCRIPTS_DIR = Path("/Users/li/Workspace/ai-telemarketing/data/processed/transcripts")
-GOLD_DIR = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset")
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+TRANSCRIPTS_DIR = _PROJECT_ROOT / "data/processed/transcripts"
+GOLD_DIR = _PROJECT_ROOT / "data/gold_dataset"
 
 # 获取已存在的文件
 existing = {f.stem for f in GOLD_DIR.glob("*.json")}

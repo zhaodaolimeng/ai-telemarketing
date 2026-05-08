@@ -9,9 +9,9 @@ from pathlib import Path
 import csv
 from typing import List, Dict
 
-# 路径配置
-GOLD_DIR = Path("/Users/li/Workspace/ai-telemarketing/data/gold_dataset")
-OUTPUT_DIR = Path("/Users/li/Workspace/ai-telemarketing/data/manual_annotation")
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+GOLD_DIR = _PROJECT_ROOT / "data/gold_dataset"
+OUTPUT_DIR = _PROJECT_ROOT / "data/manual_annotation"
 OUTPUT_DIR.mkdir(exist_ok=True, parents=True)
 
 def extract_all_user_utterances() -> Dict[str, List]:
