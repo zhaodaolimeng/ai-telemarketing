@@ -1,136 +1,168 @@
-<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <!-- 金币主体渐变 -->
-    <radialGradient id="coinGrad" cx="45%" cy="38%" r="52%" fx="42%" fy="35%">
-      <stop offset="0%" stop-color="#FFF7B0"/>
-      <stop offset="12%" stop-color="#FFE44D"/>
-      <stop offset="35%" stop-color="#F5C842"/>
-      <stop offset="60%" stop-color="#DAA520"/>
-      <stop offset="82%" stop-color="#C28D10"/>
-      <stop offset="100%" stop-color="#A07008"/>
-    </radialGradient>
-
-    <!-- 金币边缘渐变 -->
-    <radialGradient id="coinEdge" cx="45%" cy="38%" r="55%" fx="42%" fy="35%">
-      <stop offset="72%" stop-color="transparent"/>
-      <stop offset="88%" stop-color="#8B6914"/>
-      <stop offset="94%" stop-color="#A07818"/>
-      <stop offset="100%" stop-color="#7A5A0A"/>
-    </radialGradient>
-
-    <!-- 硬币厚度（底部弧线） -->
-    <radialGradient id="coinRim" cx="50%" cy="50%" r="50%">
-      <stop offset="85%" stop-color="transparent"/>
-      <stop offset="95%" stop-color="rgba(0,0,0,0.08)"/>
-      <stop offset="100%" stop-color="rgba(0,0,0,0.18)"/>
-    </radialGradient>
-
-    <!-- E 字母凸起高光渐变 -->
-    <linearGradient id="eHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFEEAA"/>
-      <stop offset="30%" stop-color="#F5D060"/>
-      <stop offset="55%" stop-color="#D4A820"/>
-      <stop offset="100%" stop-color="#B8900C"/>
-    </linearGradient>
-
-    <!-- 光芒滤镜 -->
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- 星星光芒滤镜 -->
-    <filter id="starGlow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="2.5" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    </defs>
-
-  <!-- 手工阴影（兼容所有渲染器） -->
-  <circle cx="60" cy="63.5" r="52" fill="#00000030"/>
-
-  <!-- 金币主体 -->
-  <circle cx="60" cy="62" r="52" fill="url(#coinGrad)"/>
-
-  <!-- 金币内圈纹理 -->
-  <circle cx="60" cy="62" r="46" fill="none" stroke="#C28D10" stroke-width="0.8" opacity="0.4"/>
-  <circle cx="60" cy="62" r="42" fill="none" stroke="#DAA520" stroke-width="0.5" opacity="0.3"/>
-
-  <!-- 金币边缘刻度装饰（简化：上下左右四点） -->
-  <circle cx="60" cy="62" r="50" fill="none" stroke="#B8860B" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.5"/>
-
-  <!-- 凸起 E 字母 (笔画用路径绘制，带立体阴影) -->
-  <g transform="translate(60,62)">
-    <!-- E 字母阴影（右下偏移，营造凸起感） -->
-    <g transform="translate(1, 1.5)" fill="#8B6914" opacity="0.5">
-      <!-- E 竖笔 -->
-      <rect x="-23" y="-24" width="7" height="48" rx="1.5"/>
-      <!-- E 上横 -->
-      <rect x="-23" y="-24" width="30" height="7" rx="1.5"/>
-      <!-- E 中横 -->
-      <rect x="-23" y="-3.5" width="24" height="7" rx="1.5"/>
-      <!-- E 下横 -->
-      <rect x="-23" y="17" width="30" height="7" rx="1.5"/>
-    </g>
-
-    <!-- E 字母主体 -->
-    <g fill="url(#eHighlight)">
-      <!-- E 竖笔 -->
-      <rect x="-24" y="-24" width="8" height="48" rx="2"/>
-      <!-- E 上横 -->
-      <rect x="-24" y="-24" width="32" height="8" rx="2"/>
-      <!-- E 中横 -->
-      <rect x="-24" y="-4" width="26" height="8" rx="2"/>
-      <!-- E 下横 -->
-      <rect x="-24" y="16" width="32" height="8" rx="2"/>
-    </g>
-
-    <!-- E 字母顶部高光线（增强凸起感） -->
-    <g fill="#FFFDE0" opacity="0.4">
-      <!-- 竖笔顶部高光 -->
-      <rect x="-24" y="-24" width="8" height="3" rx="1"/>
-      <!-- 上横顶部高光 -->
-      <rect x="-24" y="-24" width="32" height="3" rx="1"/>
-      <!-- 中横顶部高光 -->
-      <rect x="-24" y="-4" width="26" height="3" rx="1"/>
-      <!-- 下横顶部高光 -->
-      <rect x="-24" y="16" width="32" height="3" rx="1"/>
-    </g>
-  </g>
-
-  <!-- ====== 右上角闪光效果 ====== -->
-
-  <!-- 主闪光星（四角星） -->
-  <g transform="translate(82,18)" filter="url(#starGlow)">
-    <!-- 水平梭形 -->
-    <polygon points="0,-12 3,-1 12,0 3,1 0,12 -3,1 -12,0 -3,-1"
-             fill="#FFFEF0" opacity="0.95"/>
-    <!-- 小十字光 -->
-    <polygon points="0,-6 1.5,0 6,0 1.5,0 0,6 -1.5,0 -6,0 -1.5,0"
-             fill="#FFFFFF" opacity="1"/>
-  </g>
-
-  <!-- 第二颗小闪光星 -->
-  <g transform="translate(72,10)" filter="url(#starGlow)">
-    <polygon points="0,-7 2,-0.5 7,0 2,0.5 0,7 -2,0.5 -7,0 -2,-0.5"
-             fill="#FFFFF5" opacity="0.85"/>
-  </g>
-
-  <!-- 第三颗更小闪光星 -->
-  <g transform="translate(91,26)" filter="url(#starGlow)">
-    <polygon points="0,-4 1.2,-0.3 4,0 1.2,0.3 0,4 -1.2,0.3 -4,0 -1.2,-0.3"
-             fill="#FFFFF8" opacity="0.7"/>
-  </g>
-
-  <!-- 金币高光弧线（左上明亮光斑） -->
-  <ellipse cx="40" cy="32" rx="22" ry="14" fill="#FFFFFF" opacity="0.12"
-           transform="rotate(-20 40 32)"/>
+<svg viewBox="0 0 24 24" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+<rect x="14" y="-1" width="5" height="1" fill="#FFF8D0"/>
+<rect x="14" y="0" width="1" height="1" fill="#FFF8D0"/>
+<rect x="15" y="0" width="3" height="1" fill="#FFFFFF"/>
+<rect x="18" y="0" width="4" height="1" fill="#FFF8D0"/>
+<rect x="15" y="1" width="1" height="1" fill="#FFF8D0"/>
+<rect x="16" y="1" width="2" height="1" fill="#FFFFFF"/>
+<rect x="18" y="1" width="2" height="1" fill="#FFF8D0"/>
+<rect x="20" y="1" width="1" height="1" fill="#FFFFFF"/>
+<rect x="21" y="1" width="2" height="1" fill="#FFF8D0"/>
+<rect x="8" y="2" width="8" height="1" fill="#4A2C05"/>
+<rect x="16" y="2" width="3" height="1" fill="#FFF8D0"/>
+<rect x="19" y="2" width="3" height="1" fill="#FFFFFF"/>
+<rect x="22" y="2" width="2" height="1" fill="#FFF8D0"/>
+<rect x="6" y="3" width="2" height="1" fill="#4A2C05"/>
+<rect x="8" y="3" width="1" height="1" fill="#7A4E0E"/>
+<rect x="9" y="3" width="6" height="1" fill="#A87010"/>
+<rect x="15" y="3" width="1" height="1" fill="#7A4E0E"/>
+<rect x="16" y="3" width="2" height="1" fill="#4A2C05"/>
+<rect x="18" y="3" width="5" height="1" fill="#FFFFFF"/>
+<rect x="23" y="3" width="1" height="1" fill="#FFF8D0"/>
+<rect x="5" y="4" width="1" height="1" fill="#F5D040"/>
+<rect x="6" y="4" width="1" height="1" fill="#7A4E0E"/>
+<rect x="7" y="4" width="10" height="1" fill="#A87010"/>
+<rect x="17" y="4" width="1" height="1" fill="#7A4E0E"/>
+<rect x="18" y="4" width="1" height="1" fill="#4A2C05"/>
+<rect x="19" y="4" width="3" height="1" fill="#FFFFFF"/>
+<rect x="22" y="4" width="1" height="1" fill="#FFF8D0"/>
+<rect x="4" y="5" width="2" height="1" fill="#FFF0A8"/>
+<rect x="6" y="5" width="1" height="1" fill="#F5D040"/>
+<rect x="7" y="5" width="1" height="1" fill="#A87010"/>
+<rect x="8" y="5" width="8" height="1" fill="#FFFFF0"/>
+<rect x="16" y="5" width="2" height="1" fill="#A87010"/>
+<rect x="18" y="5" width="1" height="1" fill="#7A4E0E"/>
+<rect x="19" y="5" width="1" height="1" fill="#4A2C05"/>
+<rect x="20" y="5" width="1" height="1" fill="#FFFFFF"/>
+<rect x="21" y="5" width="4" height="1" fill="#FFF8D0"/>
+<rect x="3" y="6" width="1" height="1" fill="#F5D040"/>
+<rect x="4" y="6" width="2" height="1" fill="#FFF0A8"/>
+<rect x="6" y="6" width="1" height="1" fill="#F5D040"/>
+<rect x="7" y="6" width="1" height="1" fill="#A87010"/>
+<rect x="8" y="6" width="8" height="1" fill="#F0D860"/>
+<rect x="16" y="6" width="1" height="1" fill="#3A1A05"/>
+<rect x="17" y="6" width="2" height="1" fill="#A87010"/>
+<rect x="19" y="6" width="1" height="1" fill="#7A4E0E"/>
+<rect x="20" y="6" width="1" height="1" fill="#4A2C05"/>
+<rect x="21" y="6" width="1" height="1" fill="#FFF8D0"/>
+<rect x="22" y="6" width="2" height="1" fill="#FFFFFF"/>
+<rect x="24" y="6" width="1" height="1" fill="#FFF8D0"/>
+<rect x="3" y="7" width="4" height="1" fill="#F5D040"/>
+<rect x="7" y="7" width="1" height="1" fill="#C89820"/>
+<rect x="8" y="7" width="3" height="1" fill="#F0D860"/>
+<rect x="11" y="7" width="6" height="1" fill="#3A1A05"/>
+<rect x="17" y="7" width="3" height="1" fill="#A87010"/>
+<rect x="20" y="7" width="1" height="1" fill="#4A2C05"/>
+<rect x="21" y="7" width="1" height="1" fill="#FFF8D0"/>
+<rect x="22" y="7" width="1" height="1" fill="#FFFFFF"/>
+<rect x="23" y="7" width="1" height="1" fill="#FFF8D0"/>
+<rect x="2" y="8" width="1" height="1" fill="#4A2C05"/>
+<rect x="3" y="8" width="1" height="1" fill="#7A4E0E"/>
+<rect x="4" y="8" width="3" height="1" fill="#F5D040"/>
+<rect x="7" y="8" width="1" height="1" fill="#C89820"/>
+<rect x="8" y="8" width="3" height="1" fill="#F0D860"/>
+<rect x="11" y="8" width="1" height="1" fill="#3A1A05"/>
+<rect x="12" y="8" width="2" height="1" fill="#E0B028"/>
+<rect x="14" y="8" width="4" height="1" fill="#C89820"/>
+<rect x="18" y="8" width="2" height="1" fill="#A87010"/>
+<rect x="20" y="8" width="1" height="1" fill="#7A4E0E"/>
+<rect x="21" y="8" width="1" height="1" fill="#4A2C05"/>
+<rect x="22" y="8" width="1" height="1" fill="#FFF8D0"/>
+<rect x="2" y="9" width="1" height="1" fill="#4A2C05"/>
+<rect x="3" y="9" width="2" height="1" fill="#A87010"/>
+<rect x="5" y="9" width="3" height="1" fill="#C89820"/>
+<rect x="8" y="9" width="3" height="1" fill="#F0D860"/>
+<rect x="11" y="9" width="1" height="1" fill="#3A1A05"/>
+<rect x="12" y="9" width="3" height="1" fill="#E0B028"/>
+<rect x="15" y="9" width="4" height="1" fill="#C89820"/>
+<rect x="19" y="9" width="2" height="1" fill="#A87010"/>
+<rect x="21" y="9" width="1" height="1" fill="#4A2C05"/>
+<rect x="2" y="10" width="1" height="1" fill="#4A2C05"/>
+<rect x="3" y="10" width="2" height="1" fill="#A87010"/>
+<rect x="5" y="10" width="3" height="1" fill="#C89820"/>
+<rect x="8" y="10" width="3" height="1" fill="#F0D860"/>
+<rect x="11" y="10" width="1" height="1" fill="#3A1A05"/>
+<rect x="12" y="10" width="4" height="1" fill="#E0B028"/>
+<rect x="16" y="10" width="3" height="1" fill="#C89820"/>
+<rect x="19" y="10" width="2" height="1" fill="#A87010"/>
+<rect x="21" y="10" width="1" height="1" fill="#4A2C05"/>
+<rect x="2" y="11" width="1" height="1" fill="#4A2C05"/>
+<rect x="3" y="11" width="2" height="1" fill="#A87010"/>
+<rect x="5" y="11" width="3" height="1" fill="#C89820"/>
+<rect x="8" y="11" width="3" height="1" fill="#F0D860"/>
+<rect x="11" y="11" width="4" height="1" fill="#FFFFF0"/>
+<rect x="15" y="11" width="1" height="1" fill="#E0B028"/>
+<rect x="16" y="11" width="3" height="1" fill="#C89820"/>
+<rect x="19" y="11" width="2" height="1" fill="#A87010"/>
+<rect x="21" y="11" width="1" height="1" fill="#4A2C05"/>
+<rect x="2" y="12" width="1" height="1" fill="#4A2C05"/>
+<rect x="3" y="12" width="2" height="1" fill="#A87010"/>
+<rect x="5" y="12" width="3" height="1" fill="#C89820"/>
+<rect x="8" y="12" width="7" height="1" fill="#F0D860"/>
+<rect x="15" y="12" width="1" height="1" fill="#3A1A05"/>
+<rect x="16" y="12" width="3" height="1" fill="#C89820"/>
+<rect x="19" y="12" width="2" height="1" fill="#A87010"/>
+<rect x="21" y="12" width="1" height="1" fill="#4A2C05"/>
+<rect x="2" y="13" width="1" height="1" fill="#4A2C05"/>
+<rect x="3" y="13" width="2" height="1" fill="#A87010"/>
+<rect x="5" y="13" width="3" height="1" fill="#C89820"/>
+<rect x="8" y="13" width="3" height="1" fill="#F0D860"/>
+<rect x="11" y="13" width="5" height="1" fill="#3A1A05"/>
+<rect x="16" y="13" width="3" height="1" fill="#C89820"/>
+<rect x="19" y="13" width="2" height="1" fill="#A87010"/>
+<rect x="21" y="13" width="1" height="1" fill="#4A2C05"/>
+<rect x="2" y="14" width="1" height="1" fill="#4A2C05"/>
+<rect x="3" y="14" width="2" height="1" fill="#A87010"/>
+<rect x="5" y="14" width="3" height="1" fill="#C89820"/>
+<rect x="8" y="14" width="3" height="1" fill="#F0D860"/>
+<rect x="11" y="14" width="1" height="1" fill="#3A1A05"/>
+<rect x="12" y="14" width="3" height="1" fill="#E0B028"/>
+<rect x="15" y="14" width="4" height="1" fill="#C89820"/>
+<rect x="19" y="14" width="2" height="1" fill="#A87010"/>
+<rect x="21" y="14" width="1" height="1" fill="#4A2C05"/>
+<rect x="2" y="15" width="1" height="1" fill="#4A2C05"/>
+<rect x="3" y="15" width="1" height="1" fill="#7A4E0E"/>
+<rect x="4" y="15" width="2" height="1" fill="#A87010"/>
+<rect x="6" y="15" width="2" height="1" fill="#C89820"/>
+<rect x="8" y="15" width="3" height="1" fill="#F0D860"/>
+<rect x="11" y="15" width="1" height="1" fill="#3A1A05"/>
+<rect x="12" y="15" width="2" height="1" fill="#E0B028"/>
+<rect x="14" y="15" width="4" height="1" fill="#C89820"/>
+<rect x="18" y="15" width="2" height="1" fill="#A87010"/>
+<rect x="20" y="15" width="1" height="1" fill="#7A4E0E"/>
+<rect x="21" y="15" width="1" height="1" fill="#4A2C05"/>
+<rect x="3" y="16" width="1" height="1" fill="#4A2C05"/>
+<rect x="4" y="16" width="3" height="1" fill="#A87010"/>
+<rect x="7" y="16" width="1" height="1" fill="#C89820"/>
+<rect x="8" y="16" width="3" height="1" fill="#F0D860"/>
+<rect x="11" y="16" width="5" height="1" fill="#FFFFF0"/>
+<rect x="16" y="16" width="1" height="1" fill="#C89820"/>
+<rect x="17" y="16" width="3" height="1" fill="#A87010"/>
+<rect x="20" y="16" width="1" height="1" fill="#4A2C05"/>
+<rect x="3" y="17" width="1" height="1" fill="#4A2C05"/>
+<rect x="4" y="17" width="1" height="1" fill="#7A4E0E"/>
+<rect x="5" y="17" width="3" height="1" fill="#A87010"/>
+<rect x="8" y="17" width="8" height="1" fill="#F0D860"/>
+<rect x="16" y="17" width="1" height="1" fill="#3A1A05"/>
+<rect x="17" y="17" width="2" height="1" fill="#A87010"/>
+<rect x="19" y="17" width="1" height="1" fill="#7A4E0E"/>
+<rect x="20" y="17" width="1" height="1" fill="#4A2C05"/>
+<rect x="4" y="18" width="1" height="1" fill="#4A2C05"/>
+<rect x="5" y="18" width="1" height="1" fill="#7A4E0E"/>
+<rect x="6" y="18" width="3" height="1" fill="#A87010"/>
+<rect x="9" y="18" width="8" height="1" fill="#3A1A05"/>
+<rect x="17" y="18" width="1" height="1" fill="#A87010"/>
+<rect x="18" y="18" width="1" height="1" fill="#7A4E0E"/>
+<rect x="19" y="18" width="1" height="1" fill="#4A2C05"/>
+<rect x="5" y="19" width="1" height="1" fill="#4A2C05"/>
+<rect x="6" y="19" width="1" height="1" fill="#7A4E0E"/>
+<rect x="7" y="19" width="10" height="1" fill="#A87010"/>
+<rect x="17" y="19" width="1" height="1" fill="#7A4E0E"/>
+<rect x="18" y="19" width="1" height="1" fill="#4A2C05"/>
+<rect x="6" y="20" width="2" height="1" fill="#4A2C05"/>
+<rect x="8" y="20" width="1" height="1" fill="#7A4E0E"/>
+<rect x="9" y="20" width="6" height="1" fill="#A87010"/>
+<rect x="15" y="20" width="1" height="1" fill="#7A4E0E"/>
+<rect x="16" y="20" width="2" height="1" fill="#4A2C05"/>
+<rect x="8" y="21" width="8" height="1" fill="#4A2C05"/>
 </svg>
