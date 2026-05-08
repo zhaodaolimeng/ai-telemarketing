@@ -34,7 +34,7 @@ python scripts/annotation/annotation_tool.py
 ### 4. 批量自动标注
 对于新的未标注样本，可以先运行自动标注工具生成预标注结果，再人工复核：
 ```bash
-python scripts/batch_annotate.py
+python scripts/annotation/batch_annotate.py
 ```
 
 ## 字段说明

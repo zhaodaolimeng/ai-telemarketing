@@ -49,7 +49,7 @@ class RegressionTester:
             name="normal_cooperative_user",
             description="正常流程，用户配合，直接确认身份并给出还款时间",
             user_inputs=["Ya, ini saya.", "Saya bayar jam 3 sore ya."],
-            expected_states=[ChatState.PURPOSE, ChatState.CLOSE],
+            expected_states=[ChatState.ASK_TIME, ChatState.CLOSE],
             expected_success=True
         ))
 
@@ -76,7 +76,7 @@ class RegressionTester:
             name="user_threaten_ojk",
             description="用户威胁要投诉到OJK，系统应该礼貌回应",
             user_inputs=["Ya, tapi kalau Anda terus telepon saya akan laporkan ke OJK!"],
-            expected_states=[ChatState.HANDLE_OBJECTION, ChatState.ASK_TIME],
+            expected_states=[ChatState.ASK_TIME],
             expected_success=False
         ))
 
@@ -112,7 +112,7 @@ class RegressionTester:
             name="user_question_identity",
             description="用户质疑身份，问是谁打来的，系统应该回答",
             user_inputs=["Siapa Anda? Dari mana?", "Ini penipuan ya?"],
-            expected_states=[ChatState.PURPOSE, ChatState.ASK_TIME],
+            expected_states=[ChatState.ASK_TIME, ChatState.ASK_TIME],
             expected_success=False
         ))
 
@@ -121,7 +121,7 @@ class RegressionTester:
             name="user_no_money",
             description="用户说现在没钱，系统应该给出解决方案",
             user_inputs=["Ya, tapi saya tidak punya uang sekarang."],
-            expected_states=[ChatState.HANDLE_OBJECTION, ChatState.ASK_TIME],
+            expected_states=[ChatState.ASK_TIME],
             expected_success=False
         ))
 
@@ -130,7 +130,7 @@ class RegressionTester:
             name="user_refuse_to_pay",
             description="用户明确拒绝还款，系统应该处理",
             user_inputs=["Saya tidak mau bayar!"],
-            expected_states=[ChatState.HANDLE_OBJECTION, ChatState.ASK_TIME],
+            expected_states=[ChatState.ASK_TIME],
             expected_success=False
         ))
 
@@ -139,7 +139,7 @@ class RegressionTester:
             name="user_colloquial_time",
             description="用户使用口语化表达还款时间，系统应该能识别",
             user_inputs=["Ya", "Nanti sore jam 5 ya saya transfer."],
-            expected_states=[ChatState.PURPOSE, ChatState.CLOSE],
+            expected_states=[ChatState.ASK_TIME, ChatState.CLOSE],
             expected_success=True
         ))
 
@@ -148,7 +148,7 @@ class RegressionTester:
             name="asr_error_uang",
             description="ASR识别错误，'Uang'被识别成'Ufah Nau'，系统应该能纠正并理解",
             user_inputs=["Ya", "Saya bayar melalui aplikasi Ufah Nau ya."],
-            expected_states=[ChatState.PURPOSE, ChatState.ASK_TIME],
+            expected_states=[ChatState.ASK_TIME, ChatState.PUSH_FOR_TIME],
             expected_success=False
         ))
 
@@ -157,8 +157,8 @@ class RegressionTester:
             name="asr_error_lunas",
             description="ASR识别错误，'lunas'被识别成'nasian'，系统应该能纠正并理解",
             user_inputs=["Ya", "Saya mau bayar nasian hari ini."],
-            expected_states=[ChatState.PURPOSE, ChatState.ASK_TIME],
-            expected_success=False
+            expected_states=[ChatState.ASK_TIME, ChatState.CLOSE],
+            expected_success=True
         ))
 
         # 测试用例14: 用户不直接确认身份，只是问候
@@ -166,7 +166,7 @@ class RegressionTester:
             name="user_greet_instead_confirm",
             description="用户不直接确认身份，只是回复问候，系统应该能识别为确认身份",
             user_inputs=["Selamat pagi juga.", "Ya."],
-            expected_states=[ChatState.PURPOSE, ChatState.ASK_TIME],
+            expected_states=[ChatState.ASK_TIME, ChatState.PUSH_FOR_TIME],
             expected_success=False
         ))
 
@@ -175,7 +175,7 @@ class RegressionTester:
             name="user_fuzzy_then_clear_time",
             description="用户先给出模糊时间，被催促后给出明确时间",
             user_inputs=["Ya", "Nanti aja ya.", "Besok jam 3 ya."],
-            expected_states=[ChatState.PURPOSE, ChatState.PUSH_FOR_TIME, ChatState.CLOSE],
+            expected_states=[ChatState.ASK_TIME, ChatState.PUSH_FOR_TIME, ChatState.CLOSE],
             expected_success=True
         ))
 

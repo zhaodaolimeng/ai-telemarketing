@@ -144,7 +144,7 @@ print(checker.generate_report(violations))
 
 ### 使用方法
 ```bash
-python src/experiments/scripts/extract_customer_behavior.py
+python src/experiments/analysis/extract_customer_behavior.py
 ```
 
 ### 输出
@@ -161,7 +161,7 @@ python src/experiments/scripts/extract_customer_behavior.py
 
 ### 使用方法
 ```bash
-python src/experiments/scripts/batch_asr_transcribe.py
+python scripts/batch_asr_transcribe.py
 ```
 
 ### 说明
@@ -199,31 +199,24 @@ python src/tests/playback_test.py --output-dir reports/
 
 ---
 
-## 7. CI/CD集成测试脚本 (ci_playback_test.py)
-### 功能
-- 专门用于CI/CD流程的自动化测试脚本
-- 可配置通过阈值，低于阈值自动失败，阻止代码合并
-- 轻量级运行，适合在代码提交、PR合并时自动执行
+## 7. CI/CD集成测试
 
-### 使用方法
+CI/CD 已通过 GitHub Actions 配置（`.github/workflows/ci.yml`），包含以下测试阶段：
+
+1. **代码检查** — Ruff lint + format check
+2. **单元测试** — `src/tests/test_api.py`
+3. **核心测试** — 回归测试 + 对话回放测试
+
+### 本地运行 CI 测试
 ```bash
-# 在CI环境中运行
-python scripts/ci_playback_test.py
+# 对话回放测试（黄金数据集回归测试）
+python src/tests/playback_test.py
+
+# 带通过率阈值（CI 模式）
+python src/tests/playback_test.py --ci-mode --min-pass-rate 0.90
 ```
 
-### 配置说明
-可以在脚本中调整以下阈值：
-- `PASS_RATE_THRESHOLD`: 用例通过率阈值，默认90%
-- `ACCURACY_THRESHOLD`: 整体回复准确率阈值，默认85%
-- `ALLOW_HIGH_RISK_VIOLATIONS`: 是否允许高风险合规违规，默认禁止
-
-### 集成方式
-在GitHub Actions、GitLab CI等CI/CD工具中添加步骤：
-```yaml
-- name: 运行回放测试
-  run: python scripts/ci_playback_test.py
-```
-如果测试不通过，CI流程会自动失败，阻止代码合并。
+如果测试不通过，CI 流程会自动失败，阻止代码合并。
 
 ---
 
@@ -335,6 +328,5 @@ data/
 │   ├── customer_behavior_analysis.json  # 行为分析报告
 │   └── customer_response_corpus.json    # 生成式模拟器语料库
 ├── test_reports/                 # 批量测试报告
-├── robustness_tests/             # 鲁棒性测试报告
-└── chatbot_tests/                # 对话测试报告
+└── robustness_tests/             # 鲁棒性测试报告
 ```
