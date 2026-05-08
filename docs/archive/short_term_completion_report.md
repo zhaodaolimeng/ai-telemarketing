@@ -175,7 +175,7 @@
 ## 文件结构
 
 ```
-D:\Workspace\ai-telemarketing\
+D:\Workspace\coin-collect\
 ├── docs/
 │   ├── short_term_completion_report.md (本文件)
 │   ├── project_implementation_plan.md

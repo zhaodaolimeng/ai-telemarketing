@@ -1,5 +1,5 @@
 """
-Centralized logging configuration for the telemarketing system.
+Centralized logging configuration for the coin-collect system.
 
 Usage:
     from core.logger import get_logger
