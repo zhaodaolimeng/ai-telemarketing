@@ -247,6 +247,34 @@ class TestVoiceModeFlow:
             if data.get('is_finished'):
                 break
 
+    def test_customer_text_persisted_in_session(self, client):
+        """语音模式: 切出切回后客户消息不丢失"""
+        starter = client.post('/voice/start', json={
+            'chat_group': 'H2', 'customer_name': 'Pak Budi'
+        })
+        sid = starter.json()['session_id']
+
+        # Send a turn with customer input
+        client.post('/voice/turn', json={
+            'session_id': sid,
+            'customer_input': 'Ya, ini saya.'
+        })
+
+        # Fetch session and verify customer text is present
+        session_resp = client.get(f'/chat/session/{sid}')
+        assert session_resp.status_code == 200
+        data = session_resp.json()
+
+        customer_messages = [
+            entry['text'] for entry in data['conversation_log']
+            if entry['role'] == 'customer'
+        ]
+        assert len(customer_messages) > 0, \
+            f'Customer messages not persisted! Got: {customer_messages}'
+        # ASR corrector may lowercase text, check case-insensitively
+        found = any('ini saya' in msg.lower() for msg in customer_messages)
+        assert found, f'Customer message content missing! Got: {customer_messages}'
+
     def test_voice_start_different_groups(self, client):
         """语音模式: 不同催收组别正常启动"""
         for group in ['H2', 'H1', 'S0']:

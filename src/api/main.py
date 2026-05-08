@@ -238,24 +238,21 @@ async def chat_turn(request: ChatTurnRequest, db: Session = Depends(get_db)):
         if bot.is_finished():
             db_session.end_time = datetime.now().isoformat()
 
-        # 保存最新一轮对话到数据库
+        # 全量重写对话轮到数据库 (避免 customer_text 更新丢失)
         if bot.conversation:
-            last_turn = bot.conversation[-1]
-            existing_count = db.query(DBChatTurn).filter(
+            db.query(DBChatTurn).filter(
                 DBChatTurn.session_id == db_session.id
-            ).count()
-            if len(bot.conversation) > existing_count:
-                for i in range(existing_count, len(bot.conversation)):
-                    turn = bot.conversation[i]
-                    db_turn = DBChatTurn(
-                        session_id=db_session.id,
-                        turn_number=i + 1,
-                        agent_text=turn.agent,
-                        customer_text=turn.customer,
-                        state=get_stage_from_state(bot.state),
-                        timestamp=turn.timestamp,
-                    )
-                    db.add(db_turn)
+            ).delete()
+            for i, turn in enumerate(bot.conversation):
+                db_turn = DBChatTurn(
+                    session_id=db_session.id,
+                    turn_number=i + 1,
+                    agent_text=turn.agent,
+                    customer_text=turn.customer,
+                    state=get_stage_from_state(bot.state),
+                    timestamp=turn.timestamp,
+                )
+                db.add(db_turn)
 
         db.commit()
 
@@ -894,23 +891,21 @@ async def voice_turn(request: VoiceTurnRequest, db: Session = Depends(get_db)):
         if bot.is_finished():
             db_session.end_time = datetime.now().isoformat()
 
-        # 保存最新一轮对话到数据库
+        # 全量重写对话轮到数据库 (避免 customer_text 更新丢失)
         if bot.conversation:
-            existing_count = db.query(DBChatTurn).filter(
+            db.query(DBChatTurn).filter(
                 DBChatTurn.session_id == db_session.id
-            ).count()
-            if len(bot.conversation) > existing_count:
-                for i in range(existing_count, len(bot.conversation)):
-                    turn = bot.conversation[i]
-                    db_turn = DBChatTurn(
-                        session_id=db_session.id,
-                        turn_number=i + 1,
-                        agent_text=turn.agent,
-                        customer_text=turn.customer,
-                        state=get_stage_from_state(bot.state),
-                        timestamp=turn.timestamp,
-                    )
-                    db.add(db_turn)
+            ).delete()
+            for i, turn in enumerate(bot.conversation):
+                db_turn = DBChatTurn(
+                    session_id=db_session.id,
+                    turn_number=i + 1,
+                    agent_text=turn.agent,
+                    customer_text=turn.customer,
+                    state=get_stage_from_state(bot.state),
+                    timestamp=turn.timestamp,
+                )
+                db.add(db_turn)
 
         db.commit()
 
