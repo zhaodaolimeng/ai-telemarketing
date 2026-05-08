@@ -295,6 +295,23 @@ class ComplianceChecker:
 
         return is_compliant, violations
 
+    def post_filter(self, text: str) -> Tuple[Optional[str], List[Dict]]:
+        """
+        LLM 输出后置合规过滤
+        高风险违规 → 返回 (None, violations)，调用方应丢弃/重试
+        中低风险违规 → 返回 (text, violations)，记录日志但允许输出
+        """
+        if not text:
+            return text, []
+
+        is_compliant, violations = self.check(text)
+        has_high = any(v["severity"] == "high" for v in violations)
+
+        if has_high:
+            high_violations = [v for v in violations if v["severity"] == "high"]
+            return None, high_violations
+        return text, violations
+
     def check_conversation(self, conversation: List[Dict]) -> Tuple[bool, List[Dict]]:
         """
         检查整个对话的合规性

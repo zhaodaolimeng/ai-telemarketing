@@ -50,6 +50,7 @@ class ChatTurnResponse(BaseModel):
     is_successful: bool
     audio_file: Optional[str] = None
     latency_ms: Optional[float] = None
+    llm_used: bool = False
 
 
 class ChatLogEntry(BaseModel):
@@ -155,6 +156,25 @@ class SimulateCustomerResponse(BaseModel):
     persona: str
     resistance_level: str
     success: bool
+
+
+class SessionSummary(BaseModel):
+    """会话摘要（用于左侧列表）"""
+    session_id: str
+    chat_group: ChatGroup
+    customer_name: Optional[str]
+    is_finished: bool
+    is_successful: bool
+    state: Optional[str] = None
+    conversation_length: int
+    start_time: str
+    end_time: Optional[str] = None
+
+
+class SessionListResponse(BaseModel):
+    """会话列表响应"""
+    active: List[SessionSummary]
+    completed: List[SessionSummary]
 
 
 class VoiceStartRequest(BaseModel):

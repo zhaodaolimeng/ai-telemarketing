@@ -23,6 +23,15 @@ try:
 except ImportError:
     ML_CLASSIFIER_AVAILABLE = False
 
+# 可选：导入 LLM Fallback 模块
+try:
+    from core.llm_config import LLMConfig
+    from core.llm_provider import LLMProvider, LLMUnavailableError
+    from core.fallback_detector import FallbackDetector
+    LLM_FALLBACK_AVAILABLE = True
+except ImportError:
+    LLM_FALLBACK_AVAILABLE = False
+
 # 确保输出编码正确
 if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -50,6 +59,7 @@ class ChatState(Enum):
     HANDLE_WRONG_NUMBER = auto()  # 处理错号情况
     CLOSE = auto()
     FAILED = auto()
+    LLM_FALLBACK = auto()  # LLM 兜底处理
 
 
 @dataclass
@@ -75,30 +85,77 @@ class ConversationLog:
 
 
 class TextToSpeech:
-    """TTS封装类"""
+    """TTS封装类 - 优先本地Piper，备选Edge TTS"""
 
     def __init__(self, voice: str = "id-ID-ArdiNeural"):
         self.voice = voice
-        self.available = TTS_AVAILABLE
+        self._local_available = False
+        self._piper = None
+
+        # 尝试加载本地Piper引擎
+        try:
+            import piper
+            model_path = Path.home() / ".piper-voices" / "id_ID" / "id_ID-news_tts-medium.onnx"
+            if model_path.exists():
+                self._piper = piper
+                self._local_available = True
+        except Exception:
+            pass
+
+        self.available = self._local_available or TTS_AVAILABLE
 
     async def synthesize(self, text: str, output_file: Optional[str] = None) -> Optional[str]:
         """合成语音"""
-        if not self.available or not text:
+        if not text:
             return None
 
         if output_file is None:
             output_dir = Path("data/tts_output")
             output_dir.mkdir(parents=True, exist_ok=True)
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-            output_file = str(output_dir / f"tts_{timestamp}.mp3")
+            output_file = str(output_dir / f"tts_{timestamp}.wav")
 
-        try:
-            communicate = edge_tts.Communicate(text, self.voice)
-            await communicate.save(output_file)
-            return output_file
-        except Exception as e:
-            print(f"TTS错误: {e}")
-            return None
+        # 优先使用本地Piper
+        if self._local_available and self._piper:
+            try:
+                import asyncio
+                loop = asyncio.get_event_loop()
+                result = await loop.run_in_executor(
+                    None, self._piper_synth, text, str(output_file)
+                )
+                if result:
+                    return result
+            except Exception:
+                pass
+
+        # 备选Edge TTS
+        if not self._local_available and TTS_AVAILABLE:
+            try:
+                communicate = edge_tts.Communicate(text, self.voice)
+                await communicate.save(output_file)
+                return output_file
+            except Exception as e:
+                print(f"TTS错误: {e}")
+                return None
+
+        return None
+
+    def _piper_synth(self, text: str, output_file: str) -> Optional[str]:
+        """同步Piper合成"""
+        import wave
+        model_path = str(Path.home() / ".piper-voices" / "id_ID" / "id_ID-news_tts-medium.onnx")
+        voice = self._piper.PiperVoice.load(model_path)
+        raw_pcm = b""
+        sample_rate = 22050
+        for chunk in voice.synthesize(text):
+            raw_pcm += chunk.audio_int16_bytes
+            sample_rate = chunk.sample_rate
+        with wave.open(output_file, 'w') as wf:
+            wf.setnchannels(1)
+            wf.setsampwidth(2)
+            wf.setframerate(sample_rate)
+            wf.writeframes(raw_pcm)
+        return output_file
 
     async def list_voices(self, locale: str = "id-ID") -> List[Dict]:
         """列出可用语音"""
@@ -571,6 +628,15 @@ class CollectionChatBot:
         # 回复去重：记录最近2次回复，避免连续重复
         self.last_responses: List[str] = []
 
+        # LLM Fallback 相关
+        self.llm_enabled: bool = False
+        self.llm_config = None
+        self.llm_provider = None
+        self.fallback_detector = None
+        self.in_llm_fallback: bool = False
+        self.llm_turn_count: int = 0
+        self.llm_used_this_turn: bool = False  # 标记当前轮次是否使用了 LLM
+
         # 话术库 - 扩展版
         self._init_script_lib()
 
@@ -585,6 +651,29 @@ class CollectionChatBot:
             IntentDetector.set_ml_threshold(threshold)
             IntentDetector.enable_ml_fallback(True)
         return success
+
+    def enable_llm_fallback(self, config=None) -> bool:
+        """启用 LLM Fallback 功能
+        :param config: LLMConfig 实例，为 None 时从环境变量读取
+        :return: 启用成功返回 True
+        """
+        if not LLM_FALLBACK_AVAILABLE:
+            print("[LLM] LLM Fallback 模块不可用")
+            return False
+
+        if config is None:
+            config = LLMConfig.from_env()
+
+        self.llm_config = config
+        self.llm_provider = LLMProvider(config)
+        self.fallback_detector = FallbackDetector()
+        self.llm_enabled = True
+
+        if config.is_mock:
+            print(f"[LLM] LLM Fallback 已启用 (mock 模式)")
+        else:
+            print(f"[LLM] LLM Fallback 已启用 (provider={config.provider}, model={config.model})")
+        return True
 
     def _init_script_lib(self):
         """初始化话术库"""
@@ -1085,6 +1174,30 @@ class CollectionChatBot:
         # 检测用户提到的时间（提前检测，方便公共意图处理）
         detected_time = self.time_detector.detect(corrected_input or "")
 
+        # ========== LLM Fallback 检查 ==========
+        self.llm_used_this_turn = False
+
+        if self.in_llm_fallback:
+            # 已在 LLM 兜底状态，继续用 LLM 处理
+            response = await self._process_llm_fallback(corrected_input, detected_time)
+            if response:
+                self.conversation.append(ChatTurn(agent=response))
+            audio_file = await self._tts_speak(response, use_tts)
+            return response, audio_file
+
+        if self.llm_enabled and not self.in_llm_fallback:
+            triggered, trigger = self._check_llm_fallback()
+            if triggered:
+                print(f"[LLM] 触发 LLM 兜底: {trigger.description}")
+                self.in_llm_fallback = True
+                self.llm_turn_count = 0
+                self.state = ChatState.LLM_FALLBACK
+                response = await self._process_llm_fallback(corrected_input, detected_time)
+                if response:
+                    self.conversation.append(ChatTurn(agent=response))
+                audio_file = await self._tts_speak(response, use_tts)
+                return response, audio_file
+
         # 状态机逻辑
         if self.state == ChatState.IDENTITY_VERIFY:
             # 先检查用户是否已经确认身份（除非明确否认，否则默认确认）
@@ -1496,6 +1609,123 @@ class CollectionChatBot:
         audio_file = await self._tts_speak(response, use_tts)
         return response, audio_file
 
+    def _check_llm_fallback(self) -> tuple:
+        """检查是否需要触发 LLM Fallback"""
+        if not self.llm_enabled or self.fallback_detector is None:
+            return False, None
+        return self.fallback_detector.check(self)
+
+    async def _process_llm_fallback(self, customer_input: str, detected_time: Optional[str] = None) -> str:
+        """LLM 兜底处理，含四级降级链"""
+        from core.compliance_checker import get_compliance_checker
+
+        self.llm_used_this_turn = True
+
+        # 构建对话历史
+        history = []
+        for turn in self.conversation[-10:]:
+            if turn.customer:
+                history.append({"role": "user", "content": turn.customer})
+            history.append({"role": "agent", "content": turn.agent})
+        if customer_input:
+            history.append({"role": "user", "content": customer_input})
+
+        # L2: 尝试 LLM
+        llm_response = None
+        if self.llm_provider is not None:
+            try:
+                llm_response = await self.llm_provider.generate(
+                    conversation_history=history,
+                    context={
+                        "chat_group": self.chat_group,
+                        "customer_name": self.customer_name,
+                        "objection_count": self.objection_count,
+                    }
+                )
+            except LLMUnavailableError as e:
+                print(f"[LLM] LLM 不可用: {e}，降级到 ML 分类器")
+
+        # 合规后置过滤
+        if llm_response:
+            compliance_checker = get_compliance_checker()
+            filtered, violations = compliance_checker.post_filter(llm_response)
+            if filtered is None:
+                print(f"[LLM] 合规过滤拦截: {[v['rule_id'] for v in violations if v['severity'] == 'high']}")
+                # 重试一次
+                try:
+                    llm_response = await self.llm_provider.generate(
+                        conversation_history=history,
+                        context={
+                            "chat_group": self.chat_group,
+                            "customer_name": self.customer_name,
+                            "objection_count": self.objection_count,
+                        }
+                    )
+                    filtered, violations = compliance_checker.post_filter(llm_response)
+                    if filtered is None:
+                        print("[LLM] 重试后仍不合规，降级到 ML 分类器")
+                        llm_response = None
+                    else:
+                        llm_response = filtered
+                except Exception:
+                    llm_response = None
+            else:
+                llm_response = filtered
+
+        # L3: ML 分类器降级
+        if llm_response is None:
+            ml_response = self._try_ml_fallback(customer_input)
+            if ml_response:
+                return ml_response
+
+        # L4: 默认话术
+        if llm_response is None:
+            llm_response = self._get_script("handle_unknown")
+
+        # 检测 LLM 回复中的时间
+        if llm_response and not detected_time:
+            detected_time = self.time_detector.detect(llm_response)
+        if not detected_time and customer_input:
+            detected_time = self.time_detector.detect(customer_input)
+
+        if detected_time:
+            self.commit_time = detected_time
+            self.in_llm_fallback = False
+            self.state = ChatState.CLOSE
+            commit_resp = self._get_script("commit_time", time=detected_time)
+            wait_script = self._get_script("wait", time=detected_time) if self.commit_time else "Saya tunggu ya."
+            closing = self._get_script("closing")
+            return f"{commit_resp} {wait_script} {closing}"
+
+        # LLM 轮数限制
+        self.llm_turn_count += 1
+        max_turns = self.llm_config.max_llm_turns if self.llm_config else 3
+        if self.llm_turn_count >= max_turns:
+            print(f"[LLM] 达到 LLM 轮数上限 ({max_turns})，切回规则机")
+            self.in_llm_fallback = False
+            self.state = ChatState.PUSH_FOR_TIME
+            return self._get_script("push")
+
+        return llm_response or self._get_script("handle_unknown")
+
+    def _try_ml_fallback(self, customer_input: str) -> Optional[str]:
+        """尝试 ML 分类器作为降级方案"""
+        if not ML_CLASSIFIER_AVAILABLE:
+            return None
+        if IntentDetector._ml_classifier is None:
+            return None
+        try:
+            predictions = IntentDetector._ml_classifier.predict(customer_input or "", top_k=1)
+            if predictions:
+                intent, confidence = predictions[0]
+                if confidence >= IntentDetector._ml_threshold:
+                    self.user_intent = intent
+                    self.user_history_intents.append(intent)
+                    # 返回 None 让调用方继续用其他降级方案
+        except Exception:
+            pass
+        return None
+
     async def _tts_speak(self, text: str, use_tts: bool) -> Optional[str]:
         """TTS说话"""
         if not use_tts or not text:
@@ -1657,6 +1887,9 @@ class CollectionChatBot:
         self.conversation = []
         self.commit_time = None
         self.objection_count = 0
+        self.in_llm_fallback = False
+        self.llm_turn_count = 0
+        self.llm_used_this_turn = False
         self.session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
 
 
