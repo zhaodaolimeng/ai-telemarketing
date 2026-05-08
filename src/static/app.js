@@ -1380,7 +1380,7 @@ class TelemarketingApp {
 
         this.translateMessage(transSpan, text, role);
 
-        if (this.voiceEnabled && audioUrl && role === 'agent' && this.mode === 'manual') {
+        if (audioUrl && role === 'agent' && this.mode === 'voice') {
             this._playOne(audioUrl);
         }
 
