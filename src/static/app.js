@@ -14,6 +14,7 @@ class TelemarketingApp {
         this.isFinished = false;
         this.isLoading = false;
 
+        this.voiceEnabled = false;
         this.autoSimRunning = false;
         this.eventSource = null;
         this.autoSimTurnCount = 0;
@@ -95,6 +96,8 @@ class TelemarketingApp {
 
         this.simPersona = document.getElementById('simPersona');
         this.simResistance = document.getElementById('simResistance');
+        this.voiceToggleBtn = document.getElementById('voiceToggleBtn');
+
         this.autoChatGroup = document.getElementById('autoChatGroup');
         this.autoCustomerName = document.getElementById('autoCustomerName');
         this.autoSimBtn = document.getElementById('autoSimBtn');
@@ -194,6 +197,8 @@ class TelemarketingApp {
             }
         });
 
+        this.voiceToggleBtn.addEventListener('click', () => this.toggleVoiceEnabled());
+
         this.autoSimBtn.addEventListener('click', () => {
             if (this.autoSimRunning) {
                 this.stopAutoSimulation();
@@ -222,6 +227,8 @@ class TelemarketingApp {
         this.autoConfig.classList.toggle('hidden', mode !== 'auto');
         this.voiceStatus.classList.toggle('hidden', mode !== 'voice');
         this.voiceControls.classList.toggle('hidden', mode !== 'voice');
+
+        this.voiceToggleBtn.style.display = mode === 'auto' ? '' : 'none';
 
         if (mode === 'auto') {
             this.inputArea.classList.add('hidden');
@@ -1423,9 +1430,9 @@ class TelemarketingApp {
     /* ========== Translation ========== */
 
     async translateMessage(transSpan, text, role) {
-        // In auto mode, both agent and customer speak Indonesian → translate to English
-        // In manual mode, agent speaks Indonesian (→EN), customer types English (→ID)
-        const bothIndonesian = this.mode === 'auto';
+        // In auto/voice mode, both sides speak Indonesian → translate to English
+        // In text mode, agent speaks Indonesian (→EN), customer types English (→ID)
+        const bothIndonesian = this.mode === 'auto' || this.mode === 'voice';
         const source = (role === 'agent' || bothIndonesian) ? 'id' : 'en';
         const target = (role === 'agent' || bothIndonesian) ? 'en' : 'id';
         const cacheKey = `${text}|${source}|${target}`;
@@ -1547,6 +1554,12 @@ class TelemarketingApp {
             btn.textContent = '🔊 播放';
             btn.classList.remove('playing');
         });
+    }
+
+    toggleVoiceEnabled() {
+        this.voiceEnabled = !this.voiceEnabled;
+        this.voiceToggleBtn.textContent = this.voiceEnabled ? '🔊 语音播报: 开' : '🔇 语音播报: 关';
+        this.voiceToggleBtn.classList.toggle('active', this.voiceEnabled);
     }
 
     /* ========== Utilities ========== */
