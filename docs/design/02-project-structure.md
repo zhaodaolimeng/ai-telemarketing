@@ -75,7 +75,13 @@ coin-collect/
 │       ├── index.html            # 两栏布局（左侧会话列表 + 右侧聊天面板）
 │       └── app.js                # 前端逻辑（自动/手动模式、SSE流式、语音播放、双语翻译）
 ├── scripts/                       # 工具脚本
-│   ├── batch_asr_transcribe.py    # 批量ASR转写
+│   ├── fetcher/                    # 数据获取工具链
+│   │   ├── fetch_leads.py          # ClickHouse 取数
+│   │   ├── download_audio.py       # 批量下载通话录音
+│   │   ├── lib/http_client.py      # 自适应代理检测
+│   │   ├── sql/alpha_leads.sql     # 催收数据查询 SQL
+│   │   └── config.example.json     # 连接配置模板
+│   ├── batch_asr_transcribe.py    # 批量ASR转写（Faster-Whisper）
 │   └── annotation/                # 标注工具（12个，已完成使命归档）
 │       ├── annotation_tool.py     # 标注工具
 │       ├── batch_annotate.py      # 批量标注

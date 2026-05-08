@@ -8,6 +8,7 @@
 - [红黑对抗训练](04-robust-training.md) - 鲁棒性训练框架设计
 - [用户画像与话术模板](05-user-profile-templating.md) - 个性化话术系统设计
 - [意图处理矩阵](06-intent-matrix.md) - 19类意图处理规则与状态流转
+- [数据流水线](08-data-pipeline.md) - ClickHouse取数→音频下载→ASR转写→自动标注
 
 ---
 
