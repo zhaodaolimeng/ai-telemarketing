@@ -546,7 +546,16 @@ async def get_audio(filename: str):
     audio_path = Path("data/tts_output") / filename
     if not audio_path.exists():
         raise HTTPException(status_code=404, detail="音频文件不存在")
-    return FileResponse(audio_path, media_type="audio/mpeg")
+    suffix = audio_path.suffix.lower()
+    mime_map = {
+        '.mp3': 'audio/mpeg',
+        '.wav': 'audio/wav',
+        '.ogg': 'audio/ogg',
+        '.opus': 'audio/ogg',
+        '.webm': 'audio/webm',
+    }
+    media_type = mime_map.get(suffix, 'audio/mpeg')
+    return FileResponse(audio_path, media_type=media_type)
 
 
 @app.get("/")
@@ -918,6 +927,31 @@ async def voice_turn(request: VoiceTurnRequest, db: Session = Depends(get_db)):
         is_finished=bot.is_finished(),
         is_successful=bot.is_successful(),
     )
+
+
+@app.post("/voice/end")
+async def voice_end(request: VoiceTurnRequest, db: Session = Depends(get_db)):
+    """结束语音会话 — 挂断时调用，标记会话已完成"""
+    session_id = request.session_id
+    if not session_id or session_id not in active_sessions:
+        return {"status": "not_found", "message": "会话不存在或已过期"}
+
+    bot = active_sessions[session_id]
+    from core.chatbot import ChatState
+    bot.state = ChatState.CLOSE
+
+    # Update existing DB record (don't INSERT duplicate)
+    db_session = db.query(DBChatSession).filter(
+        DBChatSession.session_id == session_id
+    ).first()
+    if db_session:
+        db_session.is_finished = True
+        db_session.end_time = datetime.now().isoformat()
+        db.commit()
+
+    active_sessions.pop(session_id, None)
+
+    return {"status": "ok", "message": "会话已结束", "session_id": session_id}
 
 
 @app.get("/voice/voices")

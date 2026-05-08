@@ -478,7 +478,28 @@ class TelemarketingApp {
         }
     }
 
-    endVoiceCall() {
+    async endVoiceCall() {
+        // Mark session as finished on the server
+        if (this.sessionId && !this.isFinished) {
+            try {
+                await fetch('/voice/end', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ session_id: this.sessionId }),
+                });
+            } catch (e) {
+                console.warn('Failed to end voice session:', e);
+            }
+        }
+        this.isFinished = true;
+
+        // Update local session cache
+        const local = this._localSessions.find(s => s.session_id === this.sessionId);
+        if (local) {
+            local.is_finished = true;
+            local.end_time = new Date().toISOString();
+        }
+
         this.voiceCallActive = false;
 
         // Stop media recorder
@@ -515,6 +536,8 @@ class TelemarketingApp {
         this.messageInput.disabled = true;
         this.sendBtn.disabled = true;
         this.messageInput.placeholder = '查看历史会话 (只读)';
+
+        this.loadSessionList();
     }
 
     _updateVoiceTimer() {
@@ -1380,8 +1403,18 @@ class TelemarketingApp {
 
         this.translateMessage(transSpan, text, role);
 
+        // Voice mode: auto-play agent TTS, highlight play button if blocked
         if (audioUrl && role === 'agent' && this.mode === 'voice') {
-            this._playOne(audioUrl);
+            this._playOne(audioUrl).then((played) => {
+                if (!played) {
+                    // Autoplay blocked — pulse the play button to draw attention
+                    const btn = msgDiv.querySelector('.play-btn');
+                    if (btn) {
+                        btn.textContent = '▶ 点击播放';
+                        btn.style.animation = 'pulse-record 1.5s ease-in-out 3';
+                    }
+                }
+            });
         }
 
         return msgDiv;
@@ -1456,7 +1489,7 @@ class TelemarketingApp {
 
     _playOne(url) {
         // Skip if this URL was already played in this simulation
-        if (this._playedUrls.has(url)) return Promise.resolve();
+        if (this._playedUrls.has(url)) return Promise.resolve(false);
         this._playedUrls.add(url);
 
         return new Promise((resolve) => {
@@ -1467,18 +1500,26 @@ class TelemarketingApp {
 
             const audio = new Audio(url);
             this.currentAudio = audio;
+            let resolved = false;
 
             audio.onended = () => {
                 if (this.currentAudio === audio) this.currentAudio = null;
-                resolve();
+                if (!resolved) { resolved = true; resolve(true); }
             };
 
-            audio.onerror = () => {
+            audio.onerror = (e) => {
+                console.warn('Audio playback error:', url, audio.error?.message || e);
                 if (this.currentAudio === audio) this.currentAudio = null;
-                resolve();
+                if (!resolved) { resolved = true; resolve(false); }
             };
 
-            audio.play().catch(() => resolve());
+            audio.play().then(() => {
+                // Playback started successfully
+            }).catch((err) => {
+                console.warn('Audio autoplay blocked:', url, err.message);
+                if (this.currentAudio === audio) this.currentAudio = null;
+                if (!resolved) { resolved = true; resolve(false); }
+            });
         });
     }
 

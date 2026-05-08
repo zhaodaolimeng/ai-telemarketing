@@ -257,6 +257,32 @@ class TestVoiceModeFlow:
             assert resp.status_code == 200
             assert 'session_id' in resp.json()
 
+    def test_voice_end_marks_finished(self, client):
+        """语音模式: /voice/end 挂断后标记已完成"""
+        starter = client.post('/voice/start', json={
+            'chat_group': 'H2', 'customer_name': 'Pak Budi'
+        })
+        sid = starter.json()['session_id']
+
+        resp = client.post('/voice/end', json={'session_id': sid})
+        assert resp.status_code == 200
+        assert resp.json()['status'] == 'ok'
+
+        # Session should be removed from active sessions
+        turn_resp = client.post('/voice/turn', json={
+            'session_id': sid,
+            'customer_input': 'Halo'
+        })
+        assert turn_resp.status_code in (400, 404)
+
+    def test_voice_end_nonexistent(self, client):
+        """语音模式: /voice/end 不存在的会话"""
+        resp = client.post('/voice/end', json={
+            'session_id': 'nonexistent-id'
+        })
+        assert resp.status_code == 200
+        assert resp.json()['status'] == 'not_found'
+
 
 # ============================================================
 # Tests: WAV audio generation (for ASR testing)
