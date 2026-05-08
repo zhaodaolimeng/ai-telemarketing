@@ -13,6 +13,10 @@ import json
 
 sys.path.append(str(Path(__file__).parent.parent))
 
+from core.logger import setup_logging, get_logger
+
+logger = get_logger(__name__)
+
 from api.schemas import (
     ChatTurnRequest,
     ChatTurnResponse,
@@ -35,6 +39,8 @@ from api.schemas import (
     VoiceStartRequest,
     VoiceTurnRequest,
     VoiceSessionResponse,
+    SessionSummary,
+    SessionListResponse,
 )
 from api.database import (
     get_db,
@@ -75,7 +81,8 @@ def convert_bot_state_to_schema(bot_state):
         'HANDLE_BUSY': 'close',
         'HANDLE_WRONG_NUMBER': 'close',
         'CLOSE': 'close',
-        'FAILED': 'failed'
+        'FAILED': 'failed',
+        'LLM_FALLBACK': 'push_for_time'
     }
 
     # 获取状态名称
@@ -112,8 +119,20 @@ simulator = RealCustomerSimulatorV2()
 
 @app.on_event("startup")
 async def startup_event():
+    setup_logging()
     init_db()
-    print("Database initialized!")
+    logger.info("Database initialized!")
+
+    # 后台预加载翻译模型，避免首次翻译请求等待
+    import threading
+    def warmup_translator():
+        try:
+            from core.translator import get_translator
+            get_translator()
+            logger.info("Translation model preloaded!")
+        except Exception as e:
+            logger.warning(f"Translation preload skipped: {e}")
+    threading.Thread(target=warmup_translator, daemon=True).start()
 
 
 @app.get("/health", response_model=HealthResponse)
@@ -182,6 +201,7 @@ async def start_chat(request: ChatTurnRequest, db: Session = Depends(get_db)):
         is_successful=bot.is_successful(),
         audio_file=audio_file,
         latency_ms=round(latency_ms, 2),
+        llm_used=False,
     )
 
 
@@ -194,6 +214,7 @@ async def chat_turn(request: ChatTurnRequest, db: Session = Depends(get_db)):
     bot = active_sessions[session_id]
 
     if bot.is_finished():
+        del active_sessions[session_id]
         raise HTTPException(status_code=400, detail="会话已结束")
 
     start_time = datetime.now()
@@ -216,7 +237,30 @@ async def chat_turn(request: ChatTurnRequest, db: Session = Depends(get_db)):
         if bot.is_finished():
             db_session.end_time = datetime.now().isoformat()
 
+        # 保存最新一轮对话到数据库
+        if bot.conversation:
+            last_turn = bot.conversation[-1]
+            existing_count = db.query(DBChatTurn).filter(
+                DBChatTurn.session_id == db_session.id
+            ).count()
+            if len(bot.conversation) > existing_count:
+                for i in range(existing_count, len(bot.conversation)):
+                    turn = bot.conversation[i]
+                    db_turn = DBChatTurn(
+                        session_id=db_session.id,
+                        turn_number=i + 1,
+                        agent_text=turn.agent,
+                        customer_text=turn.customer,
+                        state=get_stage_from_state(bot.state),
+                        timestamp=turn.timestamp,
+                    )
+                    db.add(db_turn)
+
         db.commit()
+
+    # 对话结束后自动清理内存中的会话
+    if bot.is_finished():
+        active_sessions.pop(session_id, None)
 
     return ChatTurnResponse(
         session_id=session_id,
@@ -228,6 +272,7 @@ async def chat_turn(request: ChatTurnRequest, db: Session = Depends(get_db)):
         is_successful=bot.is_successful(),
         audio_file=audio_file,
         latency_ms=round(latency_ms, 2),
+        llm_used=getattr(bot, "llm_used_this_turn", False),
     )
 
 
@@ -366,6 +411,77 @@ async def list_sessions(skip: int = 0, limit: int = 100, chat_group: Optional[st
         ))
 
     return results
+
+
+@app.get("/chat/sessions/active", response_model=SessionListResponse)
+async def list_active_sessions(db: Session = Depends(get_db)):
+    """返回轻量会话列表：进行中 + 已完成"""
+    active_summaries = []
+    for sid, bot in active_sessions.items():
+        if bot.is_finished():
+            continue
+        state_name = None
+        if hasattr(bot.state, 'name'):
+            state_name = bot.state.name
+        active_summaries.append(SessionSummary(
+            session_id=sid,
+            chat_group=ChatGroup(bot.chat_group) if bot.chat_group in ["H2","H1","S0"] else ChatGroup.H2,
+            customer_name=bot.customer_name,
+            is_finished=False,
+            is_successful=False,
+            state=state_name,
+            conversation_length=len(bot.conversation),
+            start_time=datetime.now().isoformat(),
+            end_time=None,
+        ))
+
+    completed_summaries = []
+    db_sessions = db.query(DBChatSession).filter(
+        DBChatSession.is_finished == True
+    ).order_by(DBChatSession.created_at.desc()).limit(50).all()
+
+    for s in db_sessions:
+        if s.session_id in active_sessions:
+            continue
+        completed_summaries.append(SessionSummary(
+            session_id=s.session_id,
+            chat_group=ChatGroup(s.chat_group),
+            customer_name=s.customer_name,
+            is_finished=True,
+            is_successful=s.is_successful,
+            state=None,
+            conversation_length=s.conversation_length,
+            start_time=s.start_time,
+            end_time=s.end_time,
+        ))
+
+    return SessionListResponse(
+        active=active_summaries,
+        completed=completed_summaries,
+    )
+
+
+@app.delete("/chat/session/{session_id}", response_model=MessageResponse)
+async def delete_session(session_id: str, db: Session = Depends(get_db)):
+    """删除会话（内存中 + 数据库）"""
+    deleted_memory = False
+    if session_id in active_sessions:
+        del active_sessions[session_id]
+        deleted_memory = True
+
+    db_session = db.query(DBChatSession).filter(
+        DBChatSession.session_id == session_id
+    ).first()
+    if db_session:
+        db.query(DBChatTurn).filter(DBChatTurn.session_id == db_session.id).delete()
+        db.delete(db_session)
+        db.commit()
+        return MessageResponse(message=f"会话 {session_id} 已删除")
+
+    if deleted_memory:
+        return MessageResponse(message=f"会话 {session_id} (仅内存) 已删除")
+
+    raise HTTPException(status_code=404, detail="会话不存在")
 
 
 @app.post("/test/scenario", response_model=TestResultResponse)
@@ -605,7 +721,7 @@ async def translate_endpoint(request: TranslateRequest):
             success=result.success
         )
     except Exception as e:
-        print(f"Translation endpoint error: {e}")
+        logger.debug(f"Translation endpoint error: {e}")
         return TranslateResponse(
             original_text=text,
             translated_text=text,
@@ -727,6 +843,7 @@ async def voice_turn(request: VoiceTurnRequest, db: Session = Depends(get_db)):
 
     bot = active_sessions[session_id]
     if bot.is_finished():
+        del active_sessions[session_id]
         raise HTTPException(status_code=400, detail="会话已结束")
 
     agent_text, _ = await bot.process(
@@ -763,9 +880,33 @@ async def voice_turn(request: VoiceTurnRequest, db: Session = Depends(get_db)):
         db_session.is_successful = bot.is_successful()
         db_session.commit_time = bot.commit_time
         db_session.conversation_length = len(bot.conversation)
+
         if bot.is_finished():
             db_session.end_time = datetime.now().isoformat()
+
+        # 保存最新一轮对话到数据库
+        if bot.conversation:
+            existing_count = db.query(DBChatTurn).filter(
+                DBChatTurn.session_id == db_session.id
+            ).count()
+            if len(bot.conversation) > existing_count:
+                for i in range(existing_count, len(bot.conversation)):
+                    turn = bot.conversation[i]
+                    db_turn = DBChatTurn(
+                        session_id=db_session.id,
+                        turn_number=i + 1,
+                        agent_text=turn.agent,
+                        customer_text=turn.customer,
+                        state=get_stage_from_state(bot.state),
+                        timestamp=turn.timestamp,
+                    )
+                    db.add(db_turn)
+
         db.commit()
+
+    # 对话结束后自动清理内存中的会话
+    if bot.is_finished():
+        active_sessions.pop(session_id, None)
 
     return VoiceSessionResponse(
         session_id=session_id,
@@ -791,13 +932,30 @@ async def list_tts_voices(locale: Optional[str] = "id"):
 
 # ============ 语音仿真流式 API ============
 
+# Global ASR warmup cache
+_asr_pipeline_cache = None
+
+
+@app.post("/voice/warmup")
+async def voice_warmup(asr_model: str = "tiny"):
+    """预热 ASR 模型，减少首次自动仿真等待时间"""
+    global _asr_pipeline_cache
+    try:
+        from core.voice.asr import ASRPipeline
+        if _asr_pipeline_cache is None or not _asr_pipeline_cache.is_available:
+            _asr_pipeline_cache = await ASRPipeline.create(model_size=asr_model)
+        return {"status": "ok", "asr_available": _asr_pipeline_cache.is_available, "model": asr_model}
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+
+
 @app.get("/voice/simulate/stream")
 async def voice_simulate_stream(
     persona: str = "cooperative",
     resistance: str = "medium",
     chat_group: str = "H2",
-    max_turns: int = 15,
-    asr_model: str = "small",
+    max_turns: int = 20,
+    asr_model: str = "tiny",
     customer_name: str = "Budi",
 ):
     """
@@ -819,82 +977,176 @@ async def voice_simulate_stream(
     import asyncio as aio
 
     async def event_generator():
-        bot = CollectionChatBot(
-            chat_group=chat_group,
-            customer_name=customer_name,
-        )
+        global _asr_pipeline_cache
+        import uuid as _uuid
 
-        sim = await CustomerVoiceSimulator.create(
-            chatbot=bot,
-            persona=persona,
-            resistance_level=resistance,
-            chat_group=chat_group,
-            customer_name=customer_name,
-            asr_model_size=asr_model,
-            realtime=False,
-            save_artifacts=False,
-        )
+        conn_id = str(_uuid.uuid4())[:8]
+        logger.info(f"[SSE:{conn_id}] Connection opened — persona={persona} resistance={resistance} group={chat_group} customer={customer_name}")
 
-        if not sim._asr.is_available:
-            yield f"data: {{\"error\": \"ASR model not loaded\"}}\n\n"
-            return
-
-        # 发送初始问候
-        first_msg, _ = await bot.process(use_tts=False)
-        init_data = {
-            "type": "greeting",
-            "agent_text": first_msg,
-            "state": sim._state_to_stage(bot.state),
-        }
-        # 合成问候音频
-        if first_msg:
-            tts_result = await sim._tts.synthesize(first_msg, voice=sim.agent_voice)
-            if tts_result.success and tts_result.audio_file:
-                init_data["agent_audio_url"] = f"/audio/{Path(tts_result.audio_file).name}"
-        yield f"data: {json.dumps(init_data, ensure_ascii=False)}\n\n"
-
+        bot = None
         try:
-            async for turn in sim.run_streaming(max_turns=max_turns):
-                turn_data = {
-                    "type": "turn",
-                    "turn_id": turn.turn_id,
-                    "state_before": turn.state_before,
-                    "state_after": turn.state_after,
-                    "customer_text": turn.customer_text,
-                    "customer_audio_url": (
-                        f"/audio/{Path(turn.customer_audio_file).name}"
-                        if turn.customer_audio_file else None
-                    ),
-                    "asr_text": turn.asr_text,
-                    "asr_exact_match": turn.asr_exact_match,
-                    "asr_cer": round(turn.asr_cer, 4),
-                    "agent_text": turn.agent_text,
-                    "agent_audio_url": (
-                        f"/audio/{Path(turn.agent_audio_file).name}"
-                        if turn.agent_audio_file else None
-                    ),
-                    "is_finished": bot.is_finished(),
-                }
-                import shutil
-                # 复制音频文件到 tts_output 以便 /audio/ 端点可访问
-                for key in ("customer_audio_file", "agent_audio_file"):
-                    audio_path = turn_data.get(
-                        "customer_audio_url" if key == "customer_audio_file" else "agent_audio_url"
-                    )
-                    if audio_path:
-                        src = getattr(turn, key)
-                        if src and Path(src).exists():
-                            dst = Path("data/tts_output") / Path(src).name
-                            if not dst.exists():
-                                shutil.copy2(src, dst)
+            bot = CollectionChatBot(
+                chat_group=chat_group,
+                customer_name=customer_name,
+            )
+            bot.session_id = str(_uuid.uuid4())
+            active_sessions[bot.session_id] = bot
+            logger.debug(f"[SSE:{conn_id}] Bot created session_id={bot.session_id}")
 
-                yield f"data: {json.dumps(turn_data, ensure_ascii=False)}\n\n"
+            # 加载ASR模型时发送心跳
+            yield f": loading_asr\n\n"
+            logger.debug(f"[SSE:{conn_id}] Loading CustomerVoiceSimulator...")
+
+            sim_start = asyncio.get_event_loop().time()
+            sim = await CustomerVoiceSimulator.create(
+                chatbot=bot,
+                persona=persona,
+                resistance_level=resistance,
+                chat_group=chat_group,
+                customer_name=customer_name,
+                asr_model_size=asr_model,
+                realtime=False,
+                save_artifacts=False,
+                _asr_pipeline=_asr_pipeline_cache,
+            )
+            sim_elapsed = asyncio.get_event_loop().time() - sim_start
+            logger.info(f"[SSE:{conn_id}] Simulator ready in {sim_elapsed:.1f}s, ASR available={sim._asr.is_available if sim._asr else False}")
+
+            if not sim._asr.is_available:
+                yield f"data: {{\"error\": \"ASR model not loaded\"}}\n\n"
+                active_sessions.pop(bot.session_id, None)
+                logger.error(f"[SSE:{conn_id}] ASR not available, closing")
+                return
+
+            # 发送初始问候 (不等待TTS)
+            first_msg, _ = await bot.process(use_tts=False)
+            logger.debug(f"[SSE:{conn_id}] Greeting text: {first_msg[:80]}...")
+
+
+            init_data = {
+                "type": "greeting",
+                "session_id": bot.session_id,
+                "agent_text": first_msg,
+                "state": sim._state_to_stage(bot.state),
+            }
+            yield f"data: {json.dumps(init_data, ensure_ascii=False)}\n\n"
+
+            # 后台合成问候音频（心跳循环防止长时间等待时断开）
+            if first_msg:
+                try:
+                    tts_task = aio.create_task(
+                        sim._tts.synthesize(first_msg, voice=sim.agent_voice)
+                    )
+                    logger.debug(f"[SSE:{conn_id}] Greeting TTS started, waiting with heartbeat...")
+                    tts_start = asyncio.get_event_loop().time()
+                    heartbeat_count = 0
+                    while not tts_task.done():
+                        try:
+                            await aio.wait_for(aio.shield(tts_task), timeout=4.0)
+                        except aio.TimeoutError:
+                            heartbeat_count += 1
+                            logger.debug(f"[SSE:{conn_id}] Greeting TTS heartbeat #{heartbeat_count} (elapsed {asyncio.get_event_loop().time() - tts_start:.1f}s)")
+                            yield f": heartbeat\n\n"
+                    tts_elapsed = asyncio.get_event_loop().time() - tts_start
+                    tts_result = tts_task.result()
+                    if tts_result.success and tts_result.audio_file:
+                        logger.info(f"[SSE:{conn_id}] Greeting TTS done in {tts_elapsed:.1f}s audio={Path(tts_result.audio_file).name}")
+                        audio_data = {"type": "greeting_audio", "agent_audio_url": f"/audio/{Path(tts_result.audio_file).name}"}
+                        yield f"data: {json.dumps(audio_data, ensure_ascii=False)}\n\n"
+                    else:
+                        logger.warning(f"[SSE:{conn_id}] Greeting TTS failed: success={tts_result.success}")
+                except Exception as e:
+                    logger.warning(f"[SSE:{conn_id}] Greeting TTS exception: {e}")
+
+            # 流式仿真循环 — 生产者-消费者模式，在长时间等待时插入心跳注释
+            logger.info(f"[SSE:{conn_id}] Starting simulation loop, max_turns={max_turns}")
+            turn_queue: aio.Queue = aio.Queue()
+            producer_done = False
+            producer_error = None
+
+            async def produce_turns():
+                nonlocal producer_error
+                try:
+                    async for turn in sim.run_streaming(max_turns=max_turns):
+                        await turn_queue.put(('turn', turn))
+                    await turn_queue.put(('done', None))
+                except Exception as e:
+                    producer_error = str(e)
+                    await turn_queue.put(('error', e))
+
+            producer = aio.create_task(produce_turns())
+            turn_count = 0
+
+            try:
+                while True:
+                    try:
+                        msg_type, payload = await aio.wait_for(
+                            turn_queue.get(), timeout=5.0
+                        )
+                    except aio.TimeoutError:
+                        yield f": heartbeat\n\n"
+                        continue
+
+                    if msg_type == 'done':
+                        logger.info(f"[SSE:{conn_id}] Simulation loop done, {turn_count} turns")
+                        break
+                    if msg_type == 'error':
+                        logger.error(f"[SSE:{conn_id}] Producer error: {payload}")
+                        yield f"data: {{\"type\": \"error\", \"message\": \"{str(payload)}\"}}\n\n"
+                        return
+
+                    turn = payload
+                    turn_count += 1
+                    logger.debug(f"[SSE:{conn_id}] Turn {turn_count}: {turn.state_before} -> {turn.state_after} (finished={bot.is_finished()})")
+                    turn_data = {
+                        "type": "turn",
+                        "session_id": bot.session_id,
+                        "turn_id": turn.turn_id,
+                        "state_before": turn.state_before,
+                        "state_after": turn.state_after,
+                        "customer_text": turn.customer_text,
+                        "customer_audio_url": (
+                            f"/audio/{Path(turn.customer_audio_file).name}"
+                            if turn.customer_audio_file else None
+                        ),
+                        "asr_text": turn.asr_text,
+                        "asr_exact_match": turn.asr_exact_match,
+                        "asr_cer": round(turn.asr_cer, 4),
+                        "agent_text": turn.agent_text,
+                        "agent_audio_url": (
+                            f"/audio/{Path(turn.agent_audio_file).name}"
+                            if turn.agent_audio_file else None
+                        ),
+                        "is_finished": bot.is_finished(),
+                    }
+                    import shutil
+                    # 复制音频文件到 tts_output 以便 /audio/ 端点可访问
+                    for key in ("customer_audio_file", "agent_audio_file"):
+                        audio_path = turn_data.get(
+                            "customer_audio_url" if key == "customer_audio_file" else "agent_audio_url"
+                        )
+                        if audio_path:
+                            src = getattr(turn, key)
+                            if src and Path(src).exists():
+                                dst = Path("data/tts_output") / Path(src).name
+                                if not dst.exists():
+                                    shutil.copy2(src, dst)
+
+                    yield f"data: {json.dumps(turn_data, ensure_ascii=False)}\n\n"
+            finally:
+                producer.cancel()
+                try:
+                    await producer
+                except aio.CancelledError:
+                    pass
 
             # 发送完成事件
             from core.chatbot import ChatState
             report = sim.get_report()
+            logger.info(f"[SSE:{conn_id}] Simulation complete — turns={report.total_turns} state={report.final_state} committed_time={report.committed_time}")
             done_data = {
                 "type": "done",
+                "session_id": bot.session_id,
                 "total_turns": report.total_turns,
                 "final_state": report.final_state,
                 "committed_time": report.committed_time,
@@ -906,8 +1158,23 @@ async def voice_simulate_stream(
             }
             yield f"data: {json.dumps(done_data, ensure_ascii=False)}\n\n"
 
+            # 保存自动仿真会话到数据库
+            try:
+                from api.database import SessionLocal
+                db = SessionLocal()
+                save_session_to_db(db, bot, chat_group)
+                db.close()
+                logger.debug(f"[SSE:{conn_id}] Session saved to database")
+            except Exception as e:
+                logger.warning(f"[SSE:{conn_id}] DB save failed: {e}")
+
         except Exception as e:
+            logger.error(f"[SSE:{conn_id}] Fatal error: {e}", exc_info=True)
             yield f"data: {{\"type\": \"error\", \"message\": \"{str(e)}\"}}\n\n"
+        finally:
+            if bot is not None:
+                active_sessions.pop(bot.session_id, None)
+                logger.debug(f"[SSE:{conn_id}] Bot removed from active_sessions, connection closed")
 
     return StreamingResponse(
         event_generator(),

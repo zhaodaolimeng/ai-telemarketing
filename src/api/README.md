@@ -146,7 +146,90 @@ POST /chat/session/{session_id}/close
 }
 ```
 
-### 6. 运行测试场景
+### 6. 获取活跃会话列表（轻量）
+
+```http
+GET /chat/sessions/active
+```
+
+响应示例:
+```json
+{
+  "active": [
+    {
+      "session_id": "uuid-1",
+      "chat_group": "H2",
+      "customer_name": "Pak Budi",
+      "state": "ASK_TIME",
+      "conversation_length": 5,
+      "start_time": "2026-05-07T14:00:00"
+    }
+  ],
+  "completed": [
+    {
+      "session_id": "uuid-2",
+      "chat_group": "S0",
+      "customer_name": "Bu Ani",
+      "is_successful": true,
+      "conversation_length": 8,
+      "start_time": "2026-05-07T13:00:00",
+      "end_time": "2026-05-07T13:05:00"
+    }
+  ]
+}
+```
+
+### 7. 删除会话
+
+```http
+DELETE /chat/session/{session_id}
+```
+
+响应示例:
+```json
+{
+  "message": "会话已删除",
+  "success": true
+}
+```
+
+### 8. 翻译接口
+
+```http
+POST /api/translate
+Content-Type: application/json
+
+{
+  "text": "Selamat pagi, Pak",
+  "source": "id",
+  "target": "en"
+}
+```
+
+响应示例:
+```json
+{
+  "original": "Selamat pagi, Pak",
+  "translated": "Good morning, Sir",
+  "source": "id",
+  "target": "en"
+}
+```
+
+### 9. 语音仿真SSE流式端点
+
+```http
+GET /voice/simulate/stream?persona=cooperative&resistance=medium&chat_group=H2&max_turns=20&asr_model=tiny&customer_name=Budi
+```
+
+Server-Sent Events 流式响应，每轮推送JSON事件：
+```json
+{"type": "greeting", "session_id": "...", "agent_text": "Halo...", "state": "greeting"}
+{"type": "turn", "turn_id": 1, "customer_text": "...", "agent_text": "...", "audio_urls": {...}, "state": "..."}
+{"type": "done", "summary": {...}}
+```
+
+### 10. 运行测试场景
 
 ```http
 POST /test/scenario
