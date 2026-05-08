@@ -1,7 +1,8 @@
 /**
  * 智能催收对话系统 - Web Demo
  * Two-column layout: session list (left) + chat panel (right)
- * Manual mode: human types customer replies
+ * Text mode: human types customer replies
+ * Voice mode: human speaks via microphone, ASR + TTS
  * Auto mode: fully automatic simulation via SSE
  * Bilingual display: Indonesian + English translation
  */
@@ -10,7 +11,6 @@ class TelemarketingApp {
     constructor() {
         this.sessionId = null;
         this.mode = 'manual';
-        this.voiceEnabled = false;
         this.isFinished = false;
         this.isLoading = false;
 
@@ -28,6 +28,14 @@ class TelemarketingApp {
         this._greetingAudioReceived = false;
         this.translationCache = {};
         this.viewingSessionId = null;
+
+        // Voice mode state
+        this.voiceCallActive = false;
+        this.mediaRecorder = null;
+        this.audioChunks = [];
+        this.voiceTimerInterval = null;
+        this.voiceRecordingStart = null;
+        this._voiceProcessing = false;
 
         this._localSessions = [];
 
@@ -59,10 +67,11 @@ class TelemarketingApp {
         this.completedEmpty = document.getElementById('completedEmpty');
 
         this.manualModeTab = document.getElementById('manualModeTab');
+        this.voiceModeTab = document.getElementById('voiceModeTab');
         this.autoModeTab = document.getElementById('autoModeTab');
-        this.voiceToggleBtn = document.getElementById('voiceToggleBtn');
 
         this.manualConfig = document.getElementById('manualConfig');
+        this.voiceConfig = document.getElementById('voiceConfig');
         this.autoConfig = document.getElementById('autoConfig');
 
         this.chatGroup = document.getElementById('chatGroup');
@@ -70,6 +79,19 @@ class TelemarketingApp {
         this.newChatBtn = document.getElementById('newChatBtn');
         this.messageInput = document.getElementById('messageInput');
         this.sendBtn = document.getElementById('sendBtn');
+
+        // Voice mode elements
+        this.voiceChatGroup = document.getElementById('voiceChatGroup');
+        this.voiceCustomerName = document.getElementById('voiceCustomerName');
+        this.startCallBtn = document.getElementById('startCallBtn');
+        this.voiceStatus = document.getElementById('voiceStatus');
+        this.voiceStatusText = document.getElementById('voiceStatusText');
+        this.voiceRecDot = document.getElementById('voiceRecDot');
+        this.voiceTimer = document.getElementById('voiceTimer');
+        this.hangupBtn = document.getElementById('hangupBtn');
+        this.voiceControls = document.getElementById('voiceControls');
+        this.recordBtn = document.getElementById('recordBtn');
+        this.recordBtnText = document.getElementById('recordBtnText');
 
         this.simPersona = document.getElementById('simPersona');
         this.simResistance = document.getElementById('simResistance');
@@ -93,6 +115,7 @@ class TelemarketingApp {
     openNewSession() {
         // Reset state
         if (this.autoSimRunning) this.stopAutoSimulation();
+        if (this.voiceCallActive) this.endVoiceCall();
         this.sessionId = null;
         this.isFinished = false;
         this.autoSimRunning = false;
@@ -100,6 +123,7 @@ class TelemarketingApp {
         // Set random names
         this.customerName.value = this.randomName();
         this.autoCustomerName.value = this.randomName();
+        this.voiceCustomerName.value = this.randomName();
 
         // Show session panel, hide placeholder
         this.panelPlaceholder.classList.add('hidden');
@@ -131,8 +155,8 @@ class TelemarketingApp {
         this.newSessionBtn.addEventListener('click', () => this.openNewSession());
 
         this.manualModeTab.addEventListener('click', () => this.switchMode('manual'));
+        this.voiceModeTab.addEventListener('click', () => this.switchMode('voice'));
         this.autoModeTab.addEventListener('click', () => this.switchMode('auto'));
-        this.voiceToggleBtn.addEventListener('click', () => this.toggleVoice());
 
         this.newChatBtn.addEventListener('click', () => this.startNewChat());
         this.sendBtn.addEventListener('click', () => this.sendMessage());
@@ -140,6 +164,33 @@ class TelemarketingApp {
             if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
                 this.sendMessage();
+            }
+        });
+
+        // Voice mode events
+        this.startCallBtn.addEventListener('click', () => {
+            if (this.voiceCallActive) {
+                this.endVoiceCall();
+            } else {
+                this.startVoiceCall();
+            }
+        });
+        this.hangupBtn.addEventListener('click', () => this.endVoiceCall());
+
+        // Recording button: press-and-hold or toggle
+        this.recordBtn.addEventListener('pointerdown', (e) => {
+            e.preventDefault();
+            this.startRecording();
+        });
+        this.recordBtn.addEventListener('pointerup', (e) => {
+            e.preventDefault();
+            if (this.mediaRecorder && this.mediaRecorder.state === 'recording') {
+                this.stopRecording();
+            }
+        });
+        this.recordBtn.addEventListener('pointerleave', (e) => {
+            if (this.mediaRecorder && this.mediaRecorder.state === 'recording') {
+                this.stopRecording();
             }
         });
 
@@ -159,18 +210,29 @@ class TelemarketingApp {
 
     switchMode(mode) {
         if (this.autoSimRunning) this.stopAutoSimulation();
+        if (this.voiceCallActive) this.endVoiceCall();
         this.stopAllAudio();
 
         this.mode = mode;
         this.manualModeTab.classList.toggle('active', mode === 'manual');
+        this.voiceModeTab.classList.toggle('active', mode === 'voice');
         this.autoModeTab.classList.toggle('active', mode === 'auto');
         this.manualConfig.classList.toggle('hidden', mode !== 'manual');
+        this.voiceConfig.classList.toggle('hidden', mode !== 'voice');
         this.autoConfig.classList.toggle('hidden', mode !== 'auto');
+        this.voiceStatus.classList.toggle('hidden', mode !== 'voice');
+        this.voiceControls.classList.toggle('hidden', mode !== 'voice');
 
         if (mode === 'auto') {
             this.inputArea.classList.add('hidden');
             this.resetChat();
             this._warmupASR();
+        } else if (mode === 'voice') {
+            this.inputArea.classList.add('hidden');
+            this.resetChat();
+            this._warmupASR();
+            this.messageInput.disabled = true;
+            this.sendBtn.disabled = true;
         } else {
             this.inputArea.classList.remove('hidden');
             if (!this.sessionId) {
@@ -182,13 +244,285 @@ class TelemarketingApp {
         }
     }
 
-    /* ========== Voice Toggle ========== */
+    /* ========== Voice Mode ========== */
 
-    toggleVoice() {
-        this.voiceEnabled = !this.voiceEnabled;
-        this.voiceToggleBtn.classList.toggle('active', this.voiceEnabled);
-        this.voiceToggleBtn.textContent = this.voiceEnabled ? '🔊 语音: 开' : '🔊 语音: 关';
-        if (!this.voiceEnabled) this.stopAllAudio();
+    async startVoiceCall() {
+        if (this.isLoading || this.voiceCallActive) return;
+
+        this.voiceCallActive = true;
+        this.isLoading = true;
+        this.startCallBtn.textContent = '⏹ 结束通话';
+        this.startCallBtn.classList.add('running');
+        this.resetChat();
+        this.welcomeMessage.style.display = 'none';
+        this.isFinished = false;
+        this.sessionId = null;
+
+        const group = this.voiceChatGroup.value;
+        const name = this.voiceCustomerName.value.trim() || this.randomName();
+        this.voiceCustomerName.value = this.randomName();
+
+        try {
+            const resp = await fetch('/voice/start', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_group: group, customer_name: name }),
+            });
+
+            if (!resp.ok) {
+                const err = await resp.json();
+                throw new Error(err.detail || 'Failed to start voice call');
+            }
+
+            const data = await resp.json();
+            this.sessionId = data.session_id;
+
+            // Cache in sidebar
+            this._localSessions.unshift({
+                session_id: data.session_id,
+                chat_group: group,
+                customer_name: name,
+                is_finished: false,
+                is_successful: false,
+                state: data.current_state || null,
+                conversation_length: 1,
+                start_time: new Date().toISOString(),
+                end_time: null,
+            });
+
+            // Show agent greeting
+            const audioUrl = data.audio_file || null;
+            this.renderMessage('agent', data.agent_text, audioUrl);
+            this.scrollToBottom();
+
+            if (data.is_finished) {
+                this.handleConversationEnd(data);
+                this.endVoiceCall();
+                return;
+            }
+
+            // Show recording controls and status
+            this.voiceStatus.classList.remove('hidden');
+            this.voiceControls.classList.remove('hidden');
+            this.voiceStatusText.textContent = '按住按钮说话...';
+            this.voiceTimer.textContent = '00:00';
+            this.startCallBtn.classList.add('hidden');
+            this.voiceConfig.classList.add('hidden');
+
+            // Setup media recorder
+            await this._setupMediaRecorder();
+
+            this.loadSessionList();
+        } catch (err) {
+            alert('语音通话初始化失败: ' + err.message);
+            this.endVoiceCall();
+        } finally {
+            this.isLoading = false;
+        }
+    }
+
+    async _setupMediaRecorder() {
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            alert('您的浏览器不支持麦克风访问。请使用 Chrome 或 Edge。');
+            return;
+        }
+
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({
+                audio: {
+                    channelCount: 1,
+                    sampleRate: 16000,
+                    echoCancellation: true,
+                    noiseSuppression: true,
+                }
+            });
+
+            // Check supported MIME types
+            const mimeType = MediaRecorder.isTypeSupported('audio/webm;codecs=opus')
+                ? 'audio/webm;codecs=opus'
+                : 'audio/webm';
+
+            this.mediaRecorder = new MediaRecorder(stream, { mimeType });
+            this._voiceStream = stream;
+
+            this.mediaRecorder.ondataavailable = (event) => {
+                if (event.data && event.data.size > 0) {
+                    this.audioChunks.push(event.data);
+                }
+            };
+
+            this.mediaRecorder.onstop = async () => {
+                if (this.audioChunks.length > 0) {
+                    const audioBlob = new Blob(this.audioChunks, { type: mimeType });
+                    this.audioChunks = [];
+                    await this._processVoiceAudio(audioBlob);
+                }
+            };
+
+            this.mediaRecorder.onerror = (event) => {
+                console.error('MediaRecorder error:', event.error);
+                this.voiceStatusText.textContent = '录音出错，请重试';
+                this._resetRecordButton();
+            };
+        } catch (err) {
+            console.error('Microphone access denied:', err);
+            alert('无法访问麦克风: ' + err.message);
+        }
+    }
+
+    startRecording() {
+        if (!this.mediaRecorder || this.mediaRecorder.state === 'recording') return;
+        if (this._voiceProcessing) return;
+        if (!this.sessionId || this.isFinished) return;
+
+        this.audioChunks = [];
+        this.mediaRecorder.start(250); // timeslice: collect data every 250ms
+        this.voiceRecordingStart = Date.now();
+
+        this.recordBtn.classList.add('recording');
+        this.recordBtnText.textContent = '松开发送';
+        this.voiceRecDot.classList.add('recording');
+        this.voiceStatusText.textContent = '正在录音...';
+        this._updateVoiceTimer();
+        this.voiceTimerInterval = setInterval(() => this._updateVoiceTimer(), 200);
+    }
+
+    stopRecording() {
+        if (!this.mediaRecorder || this.mediaRecorder.state !== 'recording') return;
+
+        this.mediaRecorder.stop();
+        this._resetRecordButton();
+
+        if (this.voiceTimerInterval) {
+            clearInterval(this.voiceTimerInterval);
+            this.voiceTimerInterval = null;
+        }
+        this.voiceRecDot.classList.remove('recording');
+    }
+
+    _resetRecordButton() {
+        this.recordBtn.classList.remove('recording');
+        this.recordBtnText.textContent = '按住说话';
+    }
+
+    async _processVoiceAudio(audioBlob) {
+        if (!this.sessionId || this.isFinished) return;
+        if (this._voiceProcessing) return;
+
+        this._voiceProcessing = true;
+        this.voiceStatusText.textContent = '识别中...';
+
+        try {
+            // Step 1: Send audio for ASR
+            const formData = new FormData();
+            formData.append('audio', audioBlob, 'recording.webm');
+            formData.append('session_id', this.sessionId);
+
+            const asrResp = await fetch('/voice/asr', {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (!asrResp.ok) {
+                throw new Error('ASR failed: ' + asrResp.status);
+            }
+
+            const asrData = await asrResp.json();
+            const customerText = asrData.text || '';
+
+            if (!customerText || customerText.trim() === '') {
+                this.voiceStatusText.textContent = '未识别到语音，请重试...';
+                this._voiceProcessing = false;
+                return;
+            }
+
+            // Show transcribed customer speech
+            this.renderMessage('customer', customerText);
+            this.voiceStatusText.textContent = '坐席回复中...';
+            this.scrollToBottom();
+
+            // Step 2: Process through chatbot
+            const turnResp = await fetch('/voice/turn', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    session_id: this.sessionId,
+                    customer_input: customerText,
+                }),
+            });
+
+            if (!turnResp.ok) {
+                const err = await turnResp.json();
+                throw new Error(err.detail || 'Turn failed');
+            }
+
+            const turnData = await turnResp.json();
+
+            // Render agent response
+            const audioUrl = turnData.audio_file || null;
+            this.renderMessage('agent', turnData.agent_text, audioUrl);
+            this.scrollToBottom();
+
+            if (turnData.is_finished) {
+                this.handleConversationEnd(turnData);
+                this.endVoiceCall();
+                return;
+            }
+
+            this.voiceStatusText.textContent = '按住按钮说话...';
+        } catch (err) {
+            console.error('Voice processing error:', err);
+            this.voiceStatusText.textContent = '处理出错: ' + err.message;
+        } finally {
+            this._voiceProcessing = false;
+        }
+    }
+
+    endVoiceCall() {
+        this.voiceCallActive = false;
+
+        // Stop media recorder
+        if (this.mediaRecorder && this.mediaRecorder.state === 'recording') {
+            this.mediaRecorder.stop();
+        }
+        if (this.mediaRecorder) {
+            this.mediaRecorder = null;
+        }
+        // Stop mic stream
+        if (this._voiceStream) {
+            this._voiceStream.getTracks().forEach(track => track.stop());
+            this._voiceStream = null;
+        }
+
+        // Reset UI
+        this.startCallBtn.textContent = '📞 开始通话';
+        this.startCallBtn.classList.remove('running', 'hidden');
+        this.startCallBtn.disabled = false;
+        this.voiceConfig.classList.remove('hidden');
+        this.voiceStatus.classList.add('hidden');
+        this.voiceControls.classList.add('hidden');
+        this.inputArea.classList.remove('hidden');
+        this._resetRecordButton();
+
+        if (this.voiceTimerInterval) {
+            clearInterval(this.voiceTimerInterval);
+            this.voiceTimerInterval = null;
+        }
+        this.voiceRecordingStart = null;
+        this._voiceProcessing = false;
+        this.audioChunks = [];
+
+        this.messageInput.disabled = true;
+        this.sendBtn.disabled = true;
+        this.messageInput.placeholder = '查看历史会话 (只读)';
+    }
+
+    _updateVoiceTimer() {
+        if (!this.voiceRecordingStart) return;
+        const elapsed = Math.floor((Date.now() - this.voiceRecordingStart) / 1000);
+        const mins = Math.floor(elapsed / 60).toString().padStart(2, '0');
+        const secs = (elapsed % 60).toString().padStart(2, '0');
+        this.voiceTimer.textContent = `${mins}:${secs}`;
     }
 
     /* ========== Session List ========== */

@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI, HTTPException, Depends, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -39,6 +39,7 @@ from api.schemas import (
     VoiceStartRequest,
     VoiceTurnRequest,
     VoiceSessionResponse,
+    ASRResponse,
     SessionSummary,
     SessionListResponse,
 )
@@ -947,6 +948,59 @@ async def voice_warmup(asr_model: str = "tiny"):
         return {"status": "ok", "asr_available": _asr_pipeline_cache.is_available, "model": asr_model}
     except Exception as e:
         return {"status": "error", "message": str(e)}
+
+
+@app.post("/voice/asr", response_model=ASRResponse)
+async def voice_asr(audio: UploadFile = File(...)):
+    """语音转文字 - 支持 webm/opus/wav 格式"""
+    import tempfile
+    import subprocess
+    import numpy as np
+
+    global _asr_pipeline_cache
+
+    try:
+        # Save uploaded audio to temp file
+        suffix = Path(audio.filename).suffix if audio.filename else '.webm'
+        with tempfile.NamedTemporaryFile(delete=False, suffix=suffix) as tmp_in:
+            content = await audio.read()
+            tmp_in.write(content)
+            input_path = tmp_in.name
+
+        # Convert to WAV using ffmpeg
+        wav_path = input_path + '.wav'
+        try:
+            result = subprocess.run(
+                ['ffmpeg', '-y', '-i', input_path,
+                 '-ar', '16000', '-ac', '1', '-f', 'wav',
+                 '-acodec', 'pcm_s16le', wav_path],
+                capture_output=True, timeout=15,
+            )
+            if result.returncode != 0:
+                return ASRResponse(text='', success=False,
+                                   error=f'Audio conversion failed: {result.stderr.decode()[:200]}')
+        except subprocess.TimeoutExpired:
+            return ASRResponse(text='', success=False, error='Audio conversion timed out')
+        except FileNotFoundError:
+            return ASRResponse(text='', success=False, error='ffmpeg not installed on server')
+
+        # Ensure ASR pipeline is loaded
+        if _asr_pipeline_cache is None or not _asr_pipeline_cache.is_available:
+            from core.voice.asr import ASRPipeline
+            _asr_pipeline_cache = await ASRPipeline.create(model_size='tiny')
+
+        # Transcribe
+        text = _asr_pipeline_cache.transcribe_file(wav_path)
+
+        # Cleanup
+        Path(input_path).unlink(missing_ok=True)
+        Path(wav_path).unlink(missing_ok=True)
+
+        return ASRResponse(text=text.strip(), success=bool(text.strip()))
+
+    except Exception as e:
+        logger.error(f"ASR endpoint error: {e}")
+        return ASRResponse(text='', success=False, error=str(e))
 
 
 @app.get("/voice/simulate/stream")

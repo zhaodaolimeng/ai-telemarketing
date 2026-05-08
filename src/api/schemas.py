@@ -198,3 +198,10 @@ class VoiceSessionResponse(BaseModel):
     state: str
     is_finished: bool
     is_successful: bool
+
+
+class ASRResponse(BaseModel):
+    """ASR 转写响应"""
+    text: str
+    success: bool
+    error: Optional[str] = None
