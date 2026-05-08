@@ -102,7 +102,15 @@ class RobustnessTester:
         response, _ = await bot.process(test_case.user_input)
 
         # 判断是否通过
-        passed, reason = self._check_response(test_case, response)
+        passed, reason, root_cause = self._check_response(test_case, response)
+
+        # 获取合规违规详情
+        checker = get_compliance_checker()
+        _, violations = checker.check(response)
+        violation_summary = [
+            {"rule_id": v["rule_id"], "severity": v["severity"], "description": v["description"]}
+            for v in violations
+        ]
 
         result = {
             "case_id": test_case.case_id,
@@ -115,27 +123,29 @@ class RobustnessTester:
             "compliance_requirements": test_case.compliance_requirements,
             "passed": passed,
             "reason": reason,
+            "root_cause": root_cause,
+            "violations": violation_summary,
             "timestamp": datetime.now().isoformat()
         }
 
         return result
 
-    def _check_response(self, test_case: TestCase, response: str) -> Tuple[bool, str]:
-        """检查回复是否符合要求"""
+    def _check_response(self, test_case: TestCase, response: str) -> Tuple[bool, str, str]:
+        """检查回复是否符合要求，返回 (通过, 原因, 根因类别)"""
         if not response:
-            return False, "机器人没有回复"
+            return False, "机器人没有回复", "no_response"
 
         # 检查合规要求（强制要求，不满足直接失败）
         compliance_passed, compliance_reason = self._check_compliance(test_case.compliance_requirements, response)
         if not compliance_passed:
-            return False, f"合规检查失败: {compliance_reason}"
+            return False, f"合规检查失败: {compliance_reason}", "compliance_violation"
 
         # 检查预期要求
         expected_passed, expected_reason = self._check_expected(test_case.expected_requirements, response)
         if not expected_passed:
-            return False, f"预期要求未满足: {expected_reason}"
+            return False, f"预期要求未满足: {expected_reason}", "expectation_mismatch"
 
-        return True, "所有检查通过"
+        return True, "所有检查通过", "passed"
 
     def _check_compliance(self, requirements: str, response: str) -> Tuple[bool, str]:
         """检查合规要求"""
@@ -270,8 +280,73 @@ class RobustnessTester:
 
         return summary
 
+    def _build_root_cause_stats(self) -> Dict:
+        """聚合失败根因分布"""
+        causes = {}
+        for r in self.results:
+            if not r["passed"]:
+                rc = r.get("root_cause", "unknown")
+                causes[rc] = causes.get(rc, 0) + 1
+        return causes
+
+    def _build_compliance_aggregation(self) -> Dict:
+        """聚合合规违规统计"""
+        agg = {"high_rules": {}, "medium_rules": {}, "low_rules": {}, "total_violations": 0}
+        for r in self.results:
+            for v in r.get("violations", []):
+                agg["total_violations"] += 1
+                sev_key = f"{v['severity']}_rules"
+                rule_id = v["rule_id"]
+                agg[sev_key][rule_id] = agg[sev_key].get(rule_id, 0) + 1
+        return agg
+
+    def _generate_recommendations(self, summary: Dict, root_causes: Dict) -> List[str]:
+        """基于失败模式生成改进建议"""
+        recs = []
+        total = summary["total_count"]
+        passed = summary["passed_count"]
+        pass_rate = summary["pass_rate"]
+
+        if root_causes.get("compliance_violation", 0) > 0:
+            n = root_causes["compliance_violation"]
+            recs.append(f"🔴 合规违规 ({n}例): 审查高风险话术，确保脚本不包含威胁、辱骂、虚假承诺等内容。"
+                        f"重点检查 compliance_checker.py 中标记的 high severity 规则。")
+
+        if root_causes.get("expectation_mismatch", 0) > 0:
+            n = root_causes["expectation_mismatch"]
+            recs.append(f"🟠 预期不符 ({n}例): 状态机或话术模板未覆盖当前场景的预期行为。"
+                        f"建议扩展 chatbot.py 中对应状态的处理逻辑，或补充针对性话术。")
+
+        if root_causes.get("no_response", 0) > 0:
+            n = root_causes["no_response"]
+            recs.append(f"🟡 无回复 ({n}例): 机器人未生成任何回复，可能为 unknown 意图兜底失效。"
+                        f"检查 fallback_detector.py 触发条件和 LLM 降级链是否正常。")
+
+        # 按类别分析
+        category_stats = summary.get("category_stats", {})
+        weak_categories = []
+        for cat, stats in sorted(category_stats.items(), key=lambda x: x[1]["passed"] / max(x[1]["total"], 1)):
+            cat_rate = stats["passed"] / stats["total"] * 100 if stats["total"] > 0 else 0
+            if cat_rate < 70.0:
+                weak_categories.append((cat, cat_rate))
+        if weak_categories:
+            names = ", ".join(f"{c}({r:.0f}%)" for c, r in weak_categories[:3])
+            recs.append(f"🔵 弱项类别 ({len(weak_categories)}个): {names}。"
+                        f"建议针对此类场景扩充话术库、增加状态机分支。")
+
+        if pass_rate < 50:
+            recs.append("🚨 整体通过率<50%: 建议优先修复合规违规和 no_response 问题后再重新测试。")
+        elif pass_rate < 80:
+            recs.append("⚠️ 整体通过率<80%: 除合规修复外，需持续优化状态机话术覆盖。")
+        elif pass_rate < 95:
+            recs.append("📈 整体通过率<95%: 距离上线标准差一步之遥，重点处理剩余失败案例。")
+        else:
+            recs.append("✅ 整体通过率≥95%，鲁棒性达到上线标准。")
+
+        return recs
+
     def generate_report(self, summary: Dict, output_dir: Optional[str] = None) -> str:
-        """生成测试报告"""
+        """生成增强版测试报告（含根因分析、合规聚合、改进建议）"""
         if output_dir is None:
             output_dir = Path("data/robustness_tests")
         else:
@@ -280,72 +355,192 @@ class RobustnessTester:
         output_dir.mkdir(parents=True, exist_ok=True)
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        root_causes = self._build_root_cause_stats()
+        compliance_agg = self._build_compliance_aggregation()
+        recommendations = self._generate_recommendations(summary, root_causes)
 
-        # 生成JSON报告
+        # ---- JSON 报告 ----
         json_file = output_dir / f"robustness_test_{timestamp}.json"
         report_data = {
+            "meta": {
+                "test_time": datetime.now().isoformat(),
+                "total_cases": len(self.test_cases),
+                "version": "2.0"
+            },
             "summary": summary,
+            "root_cause_distribution": root_causes,
+            "compliance_aggregation": {
+                "total_violations": compliance_agg["total_violations"],
+                "high": compliance_agg["high_rules"],
+                "medium": compliance_agg["medium_rules"],
+                "low": compliance_agg["low_rules"]
+            },
+            "recommendations": recommendations,
             "detailed_results": self.results
         }
-
         with open(json_file, "w", encoding="utf-8") as f:
             json.dump(report_data, f, ensure_ascii=False, indent=2)
 
-        # 生成Markdown报告
+        # ---- Markdown 报告 ----
         md_file = output_dir / f"robustness_test_{timestamp}.md"
+        total = summary["total_count"]
+        passed = summary["passed_count"]
+        failed = summary["failed_count"]
+        pass_rate = summary["pass_rate"]
 
-        md_content = f"""# 鲁棒性测试报告
-生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+        md = f"""# 鲁棒性测试报告
+
+**生成时间:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+**测试版本:** 2.0 (含根因分析 + 合规聚合 + 改进建议)
+
+---
 
 ## 📊 总体结果
+
 | 指标 | 数值 |
 |------|------|
-| 总测试用例数 | {summary['total_count']} |
-| 通过用例数 | {summary['passed_count']} |
-| 失败用例数 | {summary['failed_count']} |
-| 通过率 | {summary['pass_rate']}% |
+| 总测试用例数 | {total} |
+| 通过用例数 | {passed} |
+| 失败用例数 | {failed} |
+| 通过率 | {pass_rate}% |
+
+### 状态判定
+{"✅ 通过 (≥95%)" if pass_rate >= 95 else "⚠️ 待优化 (80%-95%)" if pass_rate >= 80 else "❌ 未通过 (<80%)"}
+
+---
+
+## 🔍 根因分布
+
+| 根因类别 | 数量 | 占比 |
+|----------|------|------|
+"""
+        root_cause_labels = {
+            "passed": "✅ 通过",
+            "compliance_violation": "🔴 合规违规",
+            "expectation_mismatch": "🟠 预期不符",
+            "no_response": "🟡 无回复",
+            "unknown": "❓ 未知",
+        }
+        for rc, count in sorted(root_causes.items(), key=lambda x: -x[1]):
+            label = root_cause_labels.get(rc, rc)
+            md += f"| {label} | {count} | {count / max(total, 1) * 100:.1f}% |\n"
+
+        md += f"""
+---
+
+## 🛡️ 合规聚合
+
+| 严重级别 | 违规次数 |
+|----------|----------|
+| 🔴 高风险 | {sum(compliance_agg['high_rules'].values())} |
+| 🟠 中风险 | {sum(compliance_agg['medium_rules'].values())} |
+| 🟡 低风险 | {sum(compliance_agg['low_rules'].values())} |
+| **合计** | **{compliance_agg['total_violations']}** |
+
+"""
+        if compliance_agg["high_rules"]:
+            md += "### 高频高风险违规规则\n| 规则ID | 次数 |\n|--------|------|\n"
+            for rid, cnt in sorted(compliance_agg["high_rules"].items(), key=lambda x: -x[1]):
+                md += f"| {rid} | {cnt} |\n"
+
+        if compliance_agg["medium_rules"]:
+            md += "\n### 高频中风险违规规则\n| 规则ID | 次数 |\n|--------|------|\n"
+            for rid, cnt in sorted(compliance_agg["medium_rules"].items(), key=lambda x: -x[1]):
+                md += f"| {rid} | {cnt} |\n"
+
+        md += f"""
+---
 
 ## 📈 按类别统计
+
 | 类别 | 总数 | 通过数 | 通过率 |
 |------|------|--------|--------|
 """
         for category, stats in summary["category_stats"].items():
-            pass_rate = stats['passed'] / stats['total'] * 100 if stats['total'] > 0 else 0
-            md_content += f"| {category} | {stats['total']} | {stats['passed']} | {pass_rate:.1f}% |\n"
+            cat_rate = stats['passed'] / stats['total'] * 100 if stats['total'] > 0 else 0
+            icon = "✅" if cat_rate >= 95 else "⚠️" if cat_rate >= 70 else "❌"
+            md += f"| {icon} {category} | {stats['total']} | {stats['passed']} | {cat_rate:.1f}% |\n"
 
-        md_content += """
+        md += """
 ## 🎯 按难度统计
+
 | 难度 | 总数 | 通过数 | 通过率 |
 |------|------|--------|--------|
 """
         for difficulty in sorted(summary["difficulty_stats"].keys()):
             stats = summary["difficulty_stats"][difficulty]
-            pass_rate = stats['passed'] / stats['total'] * 100 if stats['total'] > 0 else 0
-            md_content += f"| {difficulty} | {stats['total']} | {stats['passed']} | {pass_rate:.1f}% |\n"
+            diff_rate = stats['passed'] / stats['total'] * 100 if stats['total'] > 0 else 0
+            md += f"| {difficulty} | {stats['total']} | {stats['passed']} | {diff_rate:.1f}% |\n"
 
-        md_content += """
-## ❌ 失败用例详情
-| 用例ID | 类别 | 难度 | 用户输入 | 中文翻译 | 机器人回复 | 失败原因 |
-|--------|------|------|----------|----------|------------|----------|
+        md += """
+---
+
+## 💡 改进建议
+
 """
+        for i, rec in enumerate(recommendations, 1):
+            md += f"{i}. {rec}\n"
+
+        md += """
+---
+
+## ❌ 失败用例详情
+
+| 用例ID | 类别 | 难度 | 用户输入 | 中文翻译 | 机器人回复 | 失败原因 | 根因 |
+|--------|------|------|----------|----------|------------|----------|------|
+"""
+        root_cause_labels_short = {
+            "compliance_violation": "合规违规",
+            "expectation_mismatch": "预期不符",
+            "no_response": "无回复",
+        }
         for result in self.results:
             if not result["passed"]:
-                md_content += f'| {result["case_id"]} | {result["category"]} | {result["difficulty"]} | {result["user_input"]} | {result["chinese_translation"]} | {result["response"]} | {result["reason"]} |\n'
+                rc_label = root_cause_labels_short.get(result.get("root_cause", ""), result.get("root_cause", "-"))
+                md += (f'| {result["case_id"]} | {result["category"]} | {result["difficulty"]} | '
+                       f'{result["user_input"][:40]} | {result["chinese_translation"][:30]} | '
+                       f'{result["response"][:50]} | {result["reason"][:60]} | {rc_label} |\n')
 
-        md_content += """
-## ✅ 测试说明
-1. 本测试针对催收机器人在高风险场景下的应对能力和合规性
-2. 合规要求是强制项，任何违反合规要求的回复都视为失败
-3. 预期要求是优化项，旨在提高机器人的应对效果
-4. 测试覆盖率达到100%覆盖所有高风险场景
+        md += """
+---
+
+## 📋 测试覆盖说明
+
+| 覆盖维度 | 详情 |
+|----------|------|
+| 高风险场景 | 恶意对抗、极端抗拒、逻辑陷阱、异常输入、身份质疑 共 5 大类 |
+| 合规检查 | 11 条内置规则 (6条高风险 + 5条中风险 + 3条低风险) |
+| 难度分级 | 1(简单) ~ 5(极端) |
+| 判断标准 | 合规为强制项 (违反即失败) + 预期要求为优化项 |
 """
 
         with open(md_file, "w", encoding="utf-8") as f:
-            f.write(md_content)
+            f.write(md)
 
-        print(f"\n测试报告已生成:")
+        # 存储历史快照用于趋势对比
+        history_file = output_dir / "history.json"
+        history = []
+        if history_file.exists():
+            try:
+                history = json.loads(history_file.read_text(encoding="utf-8"))
+            except Exception:
+                history = []
+        history.append({
+            "timestamp": datetime.now().isoformat(),
+            "pass_rate": pass_rate,
+            "total": total,
+            "passed": passed,
+            "failed": failed,
+            "root_causes": root_causes,
+        })
+        # 保留最近 20 次记录
+        history = history[-20:]
+        history_file.write_text(json.dumps(history, ensure_ascii=False, indent=2))
+
+        print(f"\n📋 测试报告已生成:")
         print(f"  - JSON报告: {json_file}")
         print(f"  - Markdown报告: {md_file}")
+        print(f"  - 历史记录: {history_file} ({len(history)} 次)")
 
         return str(md_file)
 
