@@ -52,8 +52,9 @@ class SimpleIntentClassifier:
         text = self.clean_pattern.sub('', text)
         return text
 
-    def load_training_data(self, data_dir: str = 'data/gold_dataset') -> Tuple[List[str], List[str]]:
-        """从黄金数据集加载训练数据"""
+    def load_training_data(self, data_dir: str = 'data/gold_dataset',
+                            llm_labels_path: str = None) -> Tuple[List[str], List[str]]:
+        """从黄金数据集加载训练数据，可选补充 LLM 精标注数据"""
         texts = []
         labels = []
 
@@ -71,17 +72,34 @@ class SimpleIntentClassifier:
                 if turn.get('speaker') == 'customer':
                     text = turn.get('text', '').strip()
                     intent = turn.get('user_intent', '').strip()
-                    if text and intent and intent != 'unknown':
+                    if text and intent and intent != 'unknown' and intent != 'unknown_intent':
                         texts.append(self._preprocess(text))
                         labels.append(intent)
                         self.intent_labels.add(intent)
 
+        # 补充 LLM 精标注数据
+        if llm_labels_path and Path(llm_labels_path).exists():
+            with open(llm_labels_path, 'r', encoding='utf-8') as f:
+                llm_data = json.load(f)
+            llm_samples = llm_data.get('training_data', [])
+            llm_added = 0
+            for s in llm_samples:
+                text = s.get('text', '').strip()
+                intent = s.get('intent', 'unknown').strip()
+                if text and intent and intent != 'unknown':
+                    texts.append(self._preprocess(text))
+                    labels.append(intent)
+                    self.intent_labels.add(intent)
+                    llm_added += 1
+            print(f"补充 LLM 精标注数据: {llm_added} 条")
+
         print(f"加载训练数据: {len(texts)} 条样本，共 {len(self.intent_labels)} 种意图")
         return texts, labels
 
-    def train(self, data_dir: str = 'data/gold_dataset', test_size: float = 0.2) -> Dict:
-        """训练分类器"""
-        texts, labels = self.load_training_data(data_dir)
+    def train(self, data_dir: str = 'data/gold_dataset', test_size: float = 0.2,
+              llm_labels_path: str = None) -> Dict:
+        """训练分类器，可选补充 LLM 精标注数据"""
+        texts, labels = self.load_training_data(data_dir, llm_labels_path=llm_labels_path)
 
         if len(texts) < 100:
             print("警告：训练数据不足，可能影响分类效果")
@@ -171,10 +189,10 @@ class SimpleIntentClassifier:
         return classifier
 
 
-def train_and_save_model():
+def train_and_save_model(llm_labels_path: str = None):
     """训练并保存模型的快捷方法"""
     classifier = SimpleIntentClassifier()
-    classifier.train()
+    classifier.train(llm_labels_path=llm_labels_path)
     classifier.save_model()
     print("\n模型训练并保存完成！")
 

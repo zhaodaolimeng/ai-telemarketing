@@ -9,6 +9,7 @@
 - [用户画像与话术模板](05-user-profile-templating.md) - 个性化话术系统设计
 - [意图处理矩阵](06-intent-matrix.md) - 19类意图处理规则与状态流转
 - [数据流水线](08-data-pipeline.md) - ClickHouse取数→音频下载→ASR转写→自动标注
+- [迭代优化指南](../evaluation/ITERATION_GUIDE.md) - 样本补充→薄弱点修复→回归验证的标准操作流程
 
 ---
 

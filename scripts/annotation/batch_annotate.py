@@ -102,7 +102,15 @@ def annotate_transcript(transcript_file, output_dir):
     case_id = Path(transcript_file).stem
     transcript_with_speakers = data.get("transcript_with_speakers", [])
     if not transcript_with_speakers:
-        return False
+        # 回退：旧版ASR输出缺少transcript_with_speakers字段，从transcript重建
+        raw_transcript = data.get("transcript", [])
+        if not raw_transcript:
+            return False
+        current_speaker = "AGENT"
+        for seg in raw_transcript:
+            speaker = current_speaker
+            transcript_with_speakers.append({**seg, "speaker": speaker})
+            current_speaker = "CUSTOMER" if current_speaker == "AGENT" else "AGENT"
 
     # 处理对话内容
     dialogue = []

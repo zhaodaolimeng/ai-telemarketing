@@ -383,8 +383,9 @@ class IntentDetector:
     # 注意顺序：越具体的意图越靠前，避免被更通用的意图匹配覆盖
     INTENT_PATTERNS = [
         ("deny_identity", [r"\bbukan\b", r"\bsalah nomor\b", r"\banda salah orang\b", r"\bsaya tidak kenal\b", r"\bini bukan nomornya\b", r"\bsalah orang\b", r"\bbukan orang yang anda cari\b"]),
-        ("busy_later", [r"\bsibuk\b", r"\bnanti ya\b(?!.*bayar|.*transfer)", r"\bnanti dulu ya\b", r"\bnanti.*ya\b(?!.*bayar|.*transfer)", r"\bsaya lagi diluar\b", r"\bnanti saya hubungi balik\b", r"\bsebentar lagi\b", r"\bsaya lagi mengemudi\b", r"\bsaya sedang rapat\b", r"\bnanti saya telepon kembali\b", r"\bsaya tidak bisa bicara sekarang\b"]),
-        ("threaten", [r"\bsaya akan laporkan ke ojk\b", r"\bsaya akan lapor polisi\b", r"\banda ancam saya\b", r"\bsaya akan lapor ke pihak berwenang\b", r"\bsaya akan komplain\b", r"\bancam\b", r"\blapor\b"]),
+        ("busy_later", [r"\bsibuk\b", r"\bnanti ya\b(?!.*bayar|.*transfer)", r"\bnanti dulu ya\b", r"\bnanti.*ya\b(?!.*bayar|.*transfer)", r"\bsaya lagi diluar\b", r"\bnanti saya hubungi balik\b", r"\bsebentar lagi\b", r"\bsaya lagi mengemudi\b", r"\bsaya sedang rapat\b", r"\bnanti saya telepon kembali\b", r"\bsaya tidak bisa bicara sekarang\b", r"\bsalat dulu\b", r"\bberhenti dulu\b", r"\bnanti saya wasap\b"]),
+        ("user_abuse", [r"\banjing\b", r"\bbangsat\b", r"\bgoblok\b", r"\btolol\b", r"\bbego\b", r"\bkampret\b", r"\bbrengsek\b", r"\bsetan\b", r"\biblis\b"]),
+        ("threaten", [r"\bsaya akan laporkan ke ojk\b", r"\bsaya akan lapor polisi\b", r"\banda ancam saya\b", r"\bsaya akan lapor ke pihak berwenang\b", r"\bsaya akan komplain\b", r"\bsaya rekam\b", r"\brekam ini\b", r"\bsaya adukan\b", r"\bmesti aduk\b", r"\bakan saya adukan\b", r"\bpengawasnya\b", r"\bada pengawas\b", r"\bancam\b", r"\blapor\b"]),
         ("ask_extension", [r"\bperpanjang\b", r"\bdiperpanjang\b", r"\bperpanjangan\b", r"\bbisa tidak diperpanjang\b", r"\bbisa nggak diperpanjang\b", r"\bbisa gak diperpanjang\b", r"\bextension\b", r"\btunda bayar\b", r"\bditunda\b", r"\bbisa ditunda ya\b", r"\bsaya mau perpanjang\b", r"\bberapa hari bisa ditunda\b", r"\bnanti minggu depan baru bisa bayar\b", r"\bkasih waktu\b", r"\bbisa kasih waktu\b", r"\btunda dulu\b", r"\bperpanjang waktu\b", r"\bbutuh waktu lagi\b", r"\bbisa tunggu sampai\b", r"\bmau tunda bayar\b"]),
         ("ask_amount", [r"\bjumlahnya berapa\b", r"\btagihan berapa\b", r"\bbesarnya berapa\b", r"\bberapa nominalnya\b", r"\bbesar tagihan\b", r"\bberapa bayarnya\b"]),
         ("question_identity", [r"\bsiapa kamu\b", r"\banda dari mana\b", r"\bmana buktinya\b", r"\bsaya tidak percaya\b", r"\bpenipuan\b", r"\bapakah ini penipuan\b", r"\banda siapa\b", r"\bsaya tidak pinjam\b", r"\btidak pernah pinjam\b"]),
@@ -398,7 +399,7 @@ class IntentDetector:
         ("inquire_consequences", [r"\bjika tidak bayar bagaimana\b", r"\bakibatnya apa kalau tidak bayar\b", r"\bapa yang terjadi jika saya tidak bayar\b", r"\bkalau tidak bayar ada apa ya\b"]),
         ("borrowing_money", [r"\bsaya sedang pinjam uang dulu\b", r"\bsaya sedang kumpulkan uang\b", r"\bsedang cari uang untuk bayar\b", r"\bsaya sedang minta tolong temen\b", r"\bsedang pinjam ke saudara\b"]),
         ("transfer_in_process", [r"\bsaya sedang transfer sekarang\b", r"\bsedang proses transfer\b", r"\bsudah mau transfer\b", r"\bsedang isi rekening dulu\b", r"\bsedang bayar sekarang\b"]),
-        ("no_money", [r"\btidak ada duit\b", r"\bbelum ada duit\b", r"\bsaya tidak punya uang\b", r"\bsaya belum punya uang\b", r"\bsaya tidak punya duit\b", r"\bsaya belum punya duit\b", r"\blagi susah\b", r"\belum ada uang\b", r"\bsaya sedang kesulitan keuangan\b", r"\buang saya belum masuk\b", r"\bgaji belum cair\b", r"\bsulit\b", r"\bkesulitan\b", r"\bkeberatan\b", r"\btidak mampu\b", r"\belum mampu\b"]),
+        ("no_money", [r"\btidak ada duit\b", r"\bbelum ada duit\b", r"\bsaya tidak punya uang\b", r"\bsaya belum punya uang\b", r"\bsaya tidak punya duit\b", r"\bsaya belum punya duit\b", r"\blagi susah\b", r"\belum ada uang\b", r"\btidak ada uang\b", r"\bsaya tidak sanggup\b", r"\bbenar-benar tidak sanggup\b", r"\bsaya sedang kesulitan keuangan\b", r"\buang saya belum masuk\b", r"\bgaji belum cair\b", r"\bsulit\b", r"\bkesulitan\b", r"\bkeberatan\b", r"\btidak mampu\b", r"\bbelum mampu\b", r"\btidak bisa bayar\b", r"\bnggak bisa bayar\b", r"\bgak bisa bayar\b", r"\btidak sanggup bayar\b"]),
         ("agree_to_pay", [r"\bsiap bayar\b", r"\bolehan\b", r"\bsetuju\b", r"\bsaya akan bayar\b", r"\bsaya bayar nanti\b", r"\bnanti saya transfer\b", r"\bsaya bayar besok\b", r"\bsaya proses sekarang\b", r"\bsaya bayar hari ini\b", r"\baiya, saya bayar\b", r"\bbaik, saya bayar\b", r"\bsaya bayar\b", r"\btransfer segera\b", r"\bsaya akan transfer\b", r"\bnanti saya bayar\b", r"\bsaya akan bayar segera\b", r"\bsaya akan proses pembayaran\b", r"\bsaya bayar nanti ya\b", r"\bya saya bayar\b", r"\biya saya bayar\b", r"\bobayarnya saya transfer nanti\b", r"\bayar nanti ya\b", r"\bsaya akan bayar ya\b", r"\bok saya bayar\b", r"\boke saya bayar\b", r"\bok\b.*\bbayar", r"\bok\b.*\btransfer", r"\bok\b.*\buang", r"\bok\b.*\btagihan", r"\bok\b.*\bpembayaran", r"\boke\b.*\bbayar", r"\boke\b.*\btransfer", r"\boke\b.*\buang", r"\boke\b.*\btagihan", r"\boke\b.*\bpembayaran", r"\bya\b.*\bbayar", r"\bya\b.*\btransfer", r"\bya\b.*\buang", r"\bya\b.*\btagihan", r"\bya\b.*\bpembayaran", r"\biya\b.*\bbayar", r"\biya\b.*\btransfer", r"\biya\b.*\buang", r"\biya\b.*\btagihan", r"\biya\b.*\bpembayaran", r"\bbetul\b.*\bbayar", r"\bbetul\b.*\btransfer", r"\bbetul\b.*\buang", r"\bbetul\b.*\btagihan", r"\bbetul\b.*\bpembayaran", r"\bbaik\b.*\bbayar", r"\bbaik\b.*\btransfer", r"\bbaik\b.*\buang", r"\bbaik\b.*\btagihan", r"\bbaik\b.*\bpembayaran", r"\bsaya tunggu ya\b", r"\btunggu.*bayar", r"\btunggu.*pembayaran", r"\bnanti saya bayar ya\b", r"\bada pembayaran masuk\b", r"\bakan dibayarkan\b", r"\bsudah dibayarkan\b", r"\bsaya sudah transfer\b", r"\bsaya kirim nanti\b", r"\bnanti saya kirim\b", r"\bsaya proses dulu\b", r"\bproses pembayaran\b", r"\bsaya akan bayarnya nanti\b", r"\bobayarnya nanti ya\b", r"\bbayarnya nanti saja\b", r"\bsaya transfer nanti\b", r"\bbukti transfer\b", r"\bbukti pembayaran\b", r"\bkirim.*bukti\b", r"\bkirim.*buktinya\b", r"\bterima kasih saya bayar\b", r"\bok saya transfer\b", r"\boke saya transfer\b", r"\biya saya transfer\b", r"\bya saya transfer\b", r"\bsaya akan kirim\b", r"\bsaya bayar jam [0-9]+", r"\bsaya transfer jam [0-9]+", r"\bnanti jam [0-9]+ saya bayar\b", r"\bjam [0-9]+ saya bayar\b", r"\bjam [0-9]+ ya saya bayar\b", r"\bsaya bayar besok\b", r"\bsaya bayar hari ini\b", r"\bsaya bayar nanti sore\b", r"\bsaya bayar nanti pagi\b", r"\bsaya bayar siang ini\b", r"\bpukul [0-9]+ saya bayar\b", r"\bjam [0-9]+ saya transfer\b", r"\bbesok saya bayar\b", r"\bhari ini saya bayar\b", r"\bnanti sore saya bayar\b", r"\bpasti di jam [0-9]+ sudah dibayarkan\b", r"\bsudah dibayarkan jam [0-9]+\b", r"\bakan dibayarkan jam [0-9]+\b", r"\bsaya bayar tanggal [0-9]+\b", r"\bsaya bayar minggu depan\b", r"\bsaya bayar lusa\b", r"\bbayar\b", r"\bdibayar\b", r"\btransfer\b", r"\bproses\b", r"\bpembayaran\b"]),
         ("confirm_time", [r"\bjam [0-9]+ ya\s*$", r"\bbesok jam [0-9]+\b", r"\bhari ini jam [0-9]+\b", r"\bnanti sore jam [0-9]+\b", r"\bjuga jam [0-9]+\b", r"\bjam [0-9]+\b", r"\bpukul [0-9]+\b", r"\btanggal [0-9]+\b", r"\bbesok\b", r"\bhari ini\b", r"\bnanti sore\b", r"\bnanti pagi\b", r"\bsiang ini\b", r"\bminggu depan\b", r"\blusa\b"]),
         ("greeting", [r"^\s*halo\b", r"^\s*hai\b", r"^\s*pagi\b", r"^\s*siang\b", r"^\s*sore\b", r"^\s*selamat pagi\b", r"^\s*selamat siang\b", r"^\s*selamat sore\b", r"^\s*selamat malam\b", r"^\s*apa kabar\b", r"^\s*hi\b", r"^\s*hello\b", r"^\s*maaf\b", r"^\s*terima kasih\b", r"^\s*selamat datang\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*selamat\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*pagi\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*siang\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*sore\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*malam\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*halo\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*hai\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*apa kabar\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*terima kasih\b", r"^\s*(ya|iya|oke|baik|betul)\s*[,]?\s*maaf\b", r".*\bselamat pagi\b", r".*\bselamat siang\b", r".*\bselamat sore\b", r".*\bselamat malam\b", r".*\bapa kabar\b", r".*\bmaaf\b", r".*\bterima kasih\b", r".*\bhalo\b", r".*\bhai\b"]),
@@ -606,6 +607,10 @@ class CollectionChatBot:
         self.extension_agreed: bool = False
         self.objection_count: int = 0
         self.max_objections: int = 3
+        # P15-A01: 分类型异议递进计数器
+        self.no_money_count: int = 0
+        self.busy_count: int = 0
+        self.dont_know_count: int = 0
         self.user_intent: str = ""
         # 对话记忆
         self.user_history_intents: List[str] = []  # 用户历史意图列表
@@ -884,6 +889,34 @@ class CollectionChatBot:
                     "Saya mengerti kondisinya. Tapi kita harus cari solusi ya. Apakah Anda bisa membayar sedikit dulu, atau mau ambil opsi perpanjangan?"
                 ]
             },
+            "handle_no_money_level2": {
+                "*": [
+                    "Baik {name}, kalau belum bisa bayar penuh, bagaimana kalau bayar sebagian dulu? Rp100.000 atau Rp200.000 tidak apa-apa, yang penting ada itikad baik dulu ya.",
+                    "Saya kasih saran ya {name}, daripada didenda terus, mending bayar sebagian kecil dulu. Berapa yang {name} sanggup hari ini?",
+                    "Gini saja {name}, coba lihat dulu saldo sekarang. Kalau ada Rp50.000 atau Rp100.000, bayar itu dulu sebagai tanda itikad baik. Nanti sisanya bisa menyusul."
+                ]
+            },
+            "handle_no_money_level3": {
+                "*": [
+                    "Saya sudah coba bantu {name} dengan opsi perpanjangan dan cicilan. Tapi kalau tidak ada pembayaran sama sekali, konsekuensinya tagihan ini akan terus bertambah dendanya dan riwayat kredit {name} di OJK bisa terpengaruh. Ini serius ya, Pak/Bu.",
+                    "Baik {name}, saya sudah tawarkan berbagai solusi. Perlu {name} tahu, kalau tagihan ini tidak diurus, dendanya bertambah setiap hari dan nanti bisa masuk daftar hitam BI Checking. Masih ada waktu sebelum itu terjadi.",
+                    "{name}, ini peringatan dari saya dengan itikad baik. Tanpa pembayaran atau perpanjangan, sistem otomatis akan melaporkan status kredit {name} ke OJK. Saya tidak ingin itu terjadi. Jadi bagaimana baiknya?"
+                ]
+            },
+            "handle_busy_level2": {
+                "*": [
+                    "Baik {name}, saya catat ya. Saya telepon lagi nanti jam {time_suggestion}. Tolong diangkat ya, hanya perlu 2 menit untuk urus pembayarannya.",
+                    "Saya paham {name} sibuk. Nanti saya hubungi lagi sekitar jam 3 sore, atau {name} bisa tentukan sendiri jam yang enak. Yang penting hari ini kita dapat kepastian ya.",
+                    "Tidak apa-apa {name}, kita jadwal ulang. Hari ini jam berapa {name} ada waktu 2 menit? Saya sesuaikan dengan jadwal {name}."
+                ]
+            },
+            "handle_dont_know_level2": {
+                "*": [
+                    "Baik {name}, coba sekarang buka aplikasi Extra Uang ya. Di halaman utama ada detail tagihan yang sedang berjalan. Saya tunggu sebentar.",
+                    "{name}, untuk memastikan, coba cek aplikasi Extra Uang sekarang. Di menu 'Tagihan Saya' akan muncul detail pinjaman yang belum lunas. Nanti kita lanjutkan setelah {name} cek.",
+                    "Saran saya {name}, buka dulu aplikasinya. Kalau sudah ketemu, kita bisa langsung urus pembayarannya sekarang juga. Gimana?"
+                ]
+            },
             "handle_threat": {
                 "*": [
                     "Mohon maaf jika ada yang tidak berkenan ya {name}. Saya hanya ingin membantu menyelesaikan masalah tagihan ini dengan baik.",
@@ -974,23 +1007,23 @@ class CollectionChatBot:
             },
             "silence_level_1": {
                 "*": [
-                    "Halo Bapak/Ibu {name}? Apakah Anda bisa mendengar suara saya dengan jelas?",
-                    "Halo? Apakah koneksi telepon saya kurang jelas ya? Bisa tolong konfirmasi jika Anda masih di telepon?",
-                    "Halo {name}, maaf, apakah suara saya terdengar? Tolong beri tahu jika ada masalah dengan sambungan telepon ya."
+                    "Halo Bapak/Ibu {name}, bisa dengar suara saya? Bilang 'ya' atau 'bisa' saja ya.",
+                    "Halo {name}, saya ada informasi penting soal tagihan Anda. Bisa dengarkan sebentar?",
+                    "Selamat pagi {name}, saya dari Extra Uang. Bapak/Ibu ada di telepon?"
                 ]
             },
             "silence_level_2": {
                 "*": [
-                    "Baik, sambil Bapak/Ibu mendengarkan, izinkan saya informasikan bahwa tagihan Anda saat ini sebesar Rp {amount} dan sudah lewat jatuh tempo {days} hari ya.",
-                    "Saya informasikan dulu ya: pinjaman Bapak/Ibu {name} sebesar Rp {amount} sudah jatuh tempo sejak {days} hari yang lalu. Kami ingin membantu mencari solusi terbaik untuk Anda.",
-                    "Untuk informasi, tagihan Anda saat ini Rp {amount} dengan keterlambatan {days} hari. Kami memahami mungkin ada kendala, dan kami siap membantu."
+                    "Baik, sambil Bapak/Ibu mendengarkan, izinkan saya informasikan bahwa tagihan Anda saat ini sebesar Rp {amount} dan sudah lewat jatuh tempo {days} hari ya. Kalau sudah paham, bilang 'ya' saja ya.",
+                    "Saya informasikan dulu ya: pinjaman Bapak/Ibu {name} sebesar Rp {amount} sudah jatuh tempo sejak {days} hari yang lalu. Kami ingin membantu mencari solusi terbaik untuk Anda. Apakah Bapak/Ibu bersedia bicara sebentar?",
+                    "Untuk informasi, tagihan Anda saat ini Rp {amount} dengan keterlambatan {days} hari. Kami memahami mungkin ada kendala, dan kami siap membantu. Bisa lanjutkan?"
                 ]
             },
             "silence_level_3": {
                 "*": [
-                    "Untuk solusinya, Bapak/Ibu bisa: (1) melakukan pembayaran penuh sebesar Rp {amount} hari ini, (2) membayar sebagian terlebih dahulu, atau (3) mengajukan perpanjangan waktu dengan biaya administrasi Rp {extension_fee}. Mana yang lebih sesuai dengan kondisi Anda?",
-                    "Kami punya beberapa opsi: bisa bayar lunas Rp {amount} sekarang, bisa bayar setengah dulu dan sisanya nanti, atau bisa ambil opsi perpanjangan dengan biaya Rp {extension_fee}. Silakan pilih yang paling sesuai ya.",
-                    "Begini ya {name}, Anda bisa: langsung melunasi, mencicil sebagian, atau memperpanjang tenor dengan biaya Rp {extension_fee}. Tidak perlu khawatir, kami akan bantu sesuai kemampuan Anda."
+                    "Saya kasih tiga pilihan ya {name}, tidak perlu jawab panjang: (1) bayar lunas, (2) bayar sebagian, atau (3) perpanjang waktu. Bapak/Ibu pilih yang nomor berapa?",
+                    "Kami punya solusi mudah: (1) lunas hari ini, (2) cicil separuh dulu, (3) perpanjang dengan biaya Rp {extension_fee}. Tinggal sebut nomornya saja ya.",
+                    "Begini saja {name} — saya sebutkan pilihannya: satu, bayar penuh; dua, bayar setengah; tiga, perpanjangan. Pilih yang mana? Cukup sebut angkanya."
                 ]
             },
             "silence_level_4": {
@@ -998,6 +1031,15 @@ class CollectionChatBot:
                     "Karena kita belum bisa mencapai kesepakatan, kami informasikan bahwa keterlambatan ini akan tercatat dan denda akan terus bertambah ya. Jika nanti Bapak/Ibu sudah siap, silakan hubungi customer service kami di aplikasi Extra Uang. Terima kasih atas waktunya, selamat siang.",
                     "Baik, karena belum ada konfirmasi, kami sampaikan bahwa tagihan ini akan terus berjalan dengan denda keterlambatan ya. Anda bisa menghubungi kami kembali kapan saja melalui aplikasi jika sudah siap membayar. Terima kasih, selamat sore.",
                     "Terakhir dari saya: pembayaran yang tertunda akan menambah biaya denda dan mempengaruhi catatan kredit Anda. Jika ada pertanyaan nanti, silakan hubungi layanan pelanggan kami. Kami tunggu kabar baik dari Anda ya. Terima kasih."
+                ]
+            },
+            "silence_engage": {
+                "*": [
+                    "Saya bicara dengan Bapak/Ibu {name} ya? Jawab 'ya' saja.",
+                    "{name}, cukup jawab 'ya' kalau Anda dengar saya.",
+                    "Sebelum lanjut — Bapak/Ibu {name} masih di telepon? Bilang 'ya' saja.",
+                    "Maaf {name}, tolong konfirmasi sebentar — Anda dengar suara saya?",
+                    "Satu pertanyaan singkat ya {name}: Anda sudah terima SMS tagihan dari kami?"
                 ]
             },
             "push_time_unknown": {
@@ -1208,6 +1250,14 @@ class CollectionChatBot:
                 self.partial_payment_discussed = True
             elif self.user_intent == "ask_extension" or self.user_intent == "request_short_extension":
                 self.extension_discussed = True
+            # P15-A01: 用户展现合作意图时，重置异议递进计数器
+            if self.user_intent in ("agree_to_pay", "confirm_time", "greeting",
+                                     "ask_extension", "request_short_extension",
+                                     "partial_payment", "confirm_identity",
+                                     "respond_to_greeting", "propose_repayment_time"):
+                self.no_money_count = 0
+                self.busy_count = 0
+                self.dont_know_count = 0
         else:
             # 空输入、纯空格、省略号 → 视为沉默
             self.conversation[-1].customer = customer_input or ""
@@ -1471,9 +1521,17 @@ class CollectionChatBot:
                 response = self._get_script("handle_dont_know") + " " + self._get_script("push")
                 next_state = ChatState.PUSH_FOR_TIME
             elif self.user_intent == "busy_later":
-                # 用户现在忙
-                response = self._get_script("closing_busy")
-                next_state = ChatState.CLOSE
+                # 用户现在忙 —— 递进式反驳 P15-A01
+                self.busy_count += 1
+                if self.busy_count == 1:
+                    response = self._get_script("handle_busy_level2", time_suggestion="jam 3 sore")
+                    next_state = ChatState.PUSH_FOR_TIME
+                elif self.busy_count == 2:
+                    response = self._get_script("closing_busy")
+                    next_state = ChatState.CLOSE
+                else:
+                    response = self._get_script("push")
+                    next_state = ChatState.PUSH_FOR_TIME
             elif self.user_intent == "question_identity":
                 # 用户质疑身份
                 response = self._get_script("answer_identity")
@@ -1519,8 +1577,14 @@ class CollectionChatBot:
                 response = self._get_script("handle_transfer_in_process_response")
                 next_state = ChatState.CLOSE
             elif self.user_intent == "no_money":
-                # 用户说没钱
-                response = self._get_script("handle_no_money")
+                # 用户说没钱 —— 递进式反驳链 P15-A01
+                self.no_money_count += 1
+                if self.no_money_count == 1:
+                    response = self._get_script("handle_no_money")
+                elif self.no_money_count == 2:
+                    response = self._get_script("handle_no_money_level2")
+                else:
+                    response = self._get_script("handle_no_money_level3")
                 next_state = ChatState.HANDLE_OBJECTION
             elif self.user_intent == "threaten":
                 # 用户威胁
@@ -1572,13 +1636,35 @@ class CollectionChatBot:
                 response = self._get_script("handle_third_party")
                 next_state = ChatState.CLOSE
             elif self.user_intent == "dont_know":
-                # 用户说不知道，继续询问时间
-                response = self._get_script("handle_dont_know") + " " + self._get_script("objection_general")
+                # 用户说不知道 —— 递进式反驳
+                self.dont_know_count += 1
+                if self.dont_know_count == 1:
+                    response = self._get_script("handle_dont_know")
+                elif self.dont_know_count == 2:
+                    response = self._get_script("handle_dont_know_level2")
+                else:
+                    response = self._get_script("handle_dont_know") + " " + self._get_script("objection_general")
                 next_state = ChatState.ASK_TIME
             elif self.user_intent == "busy_later":
-                # 用户现在忙
-                response = self._get_script("closing_busy")
-                next_state = ChatState.CLOSE
+                # 用户现在忙 —— 递进式反驳，不直接挂断
+                self.busy_count += 1
+                if self.busy_count == 1:
+                    response = self._get_script("closing_busy")
+                elif self.busy_count == 2:
+                    response = self._get_script("handle_busy_level2", time_suggestion="jam 3 sore")
+                else:
+                    response = self._get_script("push")
+                next_state = ChatState.PUSH_FOR_TIME if self.busy_count >= 2 else ChatState.CLOSE
+            elif self.user_intent == "no_money":
+                # 用户再次说没钱 —— 递进式反驳链
+                self.no_money_count += 1
+                if self.no_money_count == 1:
+                    response = self._get_script("handle_no_money")
+                elif self.no_money_count == 2:
+                    response = self._get_script("handle_no_money_level2")
+                else:
+                    response = self._get_script("handle_no_money_level3")
+                next_state = ChatState.HANDLE_OBJECTION
             elif self.user_intent == "question_identity":
                 # 用户质疑身份
                 response = self._get_script("answer_identity")
@@ -1782,17 +1868,24 @@ class CollectionChatBot:
         return None
 
     def _handle_silence(self) -> Tuple[str, Optional[ChatState]]:
-        """处理用户沉默：4级递进式主动话术"""
+        """处理用户沉默：5级递进式主动话术（低门槛破冰→主动介绍→给选项→告知后果）"""
         self.silence_count += 1
-        level = min(self.silence_count, 4)
+        level = min(self.silence_count, 5)
 
         if level == 1:
-            return self._get_script("silence_level_1"), None
+            # 第1次沉默：超低门槛破冰 → 只需要回答"ya"或确认收到短信
+            return self._get_script("silence_engage"), None
         elif level == 2:
-            return self._get_script("silence_level_2"), None
+            # 第2次沉默：确认通话质量，用是非题降低回应门槛
+            return self._get_script("silence_level_1"), None
         elif level == 3:
+            # 第3次沉默：主动介绍账单信息，降低信息不对称
+            return self._get_script("silence_level_2"), None
+        elif level == 4:
+            # 第4次沉默：给三选一选项，锚定选择框架
             return self._get_script("silence_level_3"), ChatState.ASK_TIME
-        else:  # level >= 4
+        else:  # level >= 5
+            # 第5次沉默：告知后果 + 留联系方式 + 礼貌挂断
             return self._get_script("silence_level_4"), ChatState.CLOSE
 
     async def _tts_speak(self, text: str, use_tts: bool) -> Optional[str]:
@@ -1807,7 +1900,10 @@ class CollectionChatBot:
         返回: (回复内容, 下一个状态) 如果没有匹配到公共意图返回 (None, None)
         """
         # 结束类意图
-        if self.user_intent == "deny_identity":
+        if self.user_intent == "user_abuse":
+            # 用户辱骂/人身攻击，立即礼貌结束对话
+            return self._get_script("handle_user_abuse"), ChatState.CLOSE
+        elif self.user_intent == "deny_identity":
             # 用户否认身份/打错电话，直接回复错号结束语，结束对话
             return self._get_script("closing_wrong_number"), ChatState.CLOSE
         elif self.user_intent == "busy_later":
@@ -1876,13 +1972,14 @@ class CollectionChatBot:
 
         # 异议类意图
         elif self.user_intent == "no_money":
-            # 用户说没钱
-            if not self.user_mentioned_no_money:
-                # 第一次说没钱，提供展期和部分还款选项
+            # 用户说没钱 —— 递进式反驳链 P15-A01
+            self.no_money_count += 1
+            if self.no_money_count == 1:
                 return self._get_script("handle_no_money"), ChatState.HANDLE_OBJECTION
+            elif self.no_money_count == 2:
+                return self._get_script("handle_no_money_level2"), ChatState.HANDLE_OBJECTION
             else:
-                # 多次说没钱，使用更柔和的引导
-                return self._get_script("handle_no_money_repeat"), ChatState.HANDLE_OBJECTION
+                return self._get_script("handle_no_money_level3"), ChatState.HANDLE_OBJECTION
         elif self.user_intent == "request_interest_reduction":
             # 用户要求减免利息
             return self._get_script("handle_interest_reduction_request"), ChatState.HANDLE_OBJECTION

@@ -2,6 +2,14 @@
 # Backward compatibility: re-export from core/ so old import paths still work.
 # New code should import directly from core.*.
 
+import sys
+from pathlib import Path
+
+# 确保 src/ 在 sys.path 中（兼容 python -m src.experiments.xxx 调用方式）
+_src_dir = str(Path(__file__).resolve().parent.parent)
+if _src_dir not in sys.path:
+    sys.path.insert(0, _src_dir)
+
 from core.chatbot import (
     CollectionChatBot,
     ChatState,

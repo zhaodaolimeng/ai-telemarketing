@@ -13,6 +13,7 @@ class ChatState(str, Enum):
     PUSH_FOR_TIME = "push_for_time"
     COMMIT_TIME = "commit_time"
     CONFIRM = "confirm"
+    NEGOTIATE = "negotiate"
     CLOSE = "close"
     FAILED = "failed"
 

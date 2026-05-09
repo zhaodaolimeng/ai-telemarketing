@@ -300,28 +300,44 @@ class RealCustomerSimulatorV2:
         return "Iya"
 
     def _silent_response(self, stage: str, silence_round: int = 0) -> str:
-        """沉默型客户回应 — 渐进式：持续沉默到可能被说动"""
-        if silence_round <= 1:
-            # 第1-2轮: 大概率真沉默
-            if random.random() < 0.5:
+        """沉默型客户回应 — 5级渐进式，匹配 chatbot 5级沉默处理"""
+        if silence_round <= 0:
+            # 第1轮: 大概率真沉默 (chatbot silence_engage → "jawab 'ya' saja")
+            if random.random() < 0.60:
                 return ""
-            elif random.random() < 0.75:
+            elif random.random() < 0.80:
                 return "..."
             else:
                 return random.choice(["Halo?", "Iya?"])
-        elif silence_round == 2:
-            # 第3轮: 可能有点反应
-            if random.random() < 0.4:
+        elif silence_round == 1:
+            # 第2轮: 仍可能沉默 (chatbot silence_level_1 → 确认通话质量)
+            if random.random() < 0.45:
                 return ""
-            elif random.random() < 0.65:
+            elif random.random() < 0.70:
                 return "..."
             else:
                 return random.choice(["Iya", "Ya", "..."])
-        else:
-            # 第4轮+: 可能被说动给出时间
-            if random.random() < 0.3:
+        elif silence_round == 2:
+            # 第3轮: 可能开始有反应 (chatbot silence_level_2 → 主动介绍信息)
+            if random.random() < 0.35:
                 return ""
-            elif random.random() < 0.5:
+            elif random.random() < 0.55:
+                return "..."
+            else:
+                return random.choice(["Iya", "Ya", "Oh", "..."])
+        elif silence_round == 3:
+            # 第4轮: 给三选一选项后，30%可能性给出时间 (chatbot silence_level_3)
+            if random.random() < 0.25:
+                return ""
+            elif random.random() < 0.50:
+                return "..."
+            else:
+                return f"Jam {random.randint(1, 7)}"
+        else:
+            # 第5轮+: 告知后果+礼貌挂断前，最后机会被说动 (chatbot silence_level_4)
+            if random.random() < 0.15:
+                return ""
+            elif random.random() < 0.35:
                 return "..."
             else:
                 return f"Jam {random.randint(1, 7)}"

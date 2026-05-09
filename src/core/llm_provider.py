@@ -158,6 +158,12 @@ Aturan penting:
                 )
                 response.raise_for_status()
                 data = response.json()
+                # 兼容 reasoning 模型（如 deepseek-v4-pro）：content 可能包含
+                # thinking 和 text 两种类型，需找到 type="text" 的 block
+                for block in data.get("content", []):
+                    if block.get("type") == "text":
+                        return block["text"].strip()
+                # fallback: 尝试 content[0].text
                 return data["content"][0]["text"].strip()
             except httpx.TimeoutException:
                 raise LLMUnavailableError("LLM 调用超时")

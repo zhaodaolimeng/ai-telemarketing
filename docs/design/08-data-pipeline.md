@@ -18,10 +18,14 @@ ClickHouse (生产库)              本地文件系统
      │                              ├─ batch_asr_transcribe.py ── processed/transcripts/*.json
      │                              │  (Faster-Whisper, 监听模式)
      │                              │
-     │                              └─ batch_annotate.py ──────── gold_dataset/*.json
-     │                                 (规则自动标注, 监听模式)
+     │                              ├─ batch_annotate.py ──────── gold_dataset/*.json
+     │                              │  (规则自动标注, 监听模式)
+     │                              │
+     │                              └─ reannotate_intents.py ──── llm_intent_labels.json
+     │                                 (LLM 精标注, P15-C01 数据飞轮)
      │
-     └── 后续: 模型训练 / 评估 / 回放测试
+     ├── 训练: simple_classifier.py (ML 分类器)
+     └── 评估: playback_test.py / test_regression.py / robustness_test.py
 ```
 
 ## 阶段说明
@@ -145,6 +149,48 @@ while True:
 **标注内容**: 对话阶段、用户意图、合规检查、催收成功判定  
 **标注方法**: 规则引擎（ASR纠错 + 关键词匹配 + 阶段推断）
 
+### 阶段6: LLM 意图精标注 (`src/experiments/reannotate_intents.py`)
+
+规则自动标注的意图识别有盲区 — regex 只能覆盖已知模式，81% 的客户话语被标为 `unknown`。LLM 精标注阶段从 `unknown` 池中挖掘真实意图，形成数据飞轮。
+
+```bash
+# Round 1: 采样标注 + 训练 ML 分类器
+python3 src/experiments/reannotate_intents.py --sample-size 400
+# 产出: data/llm_intent_labels.json → 用于重训 ML
+
+# Round 2: 开放式发现新意图
+python3 src/experiments/discover_new_intents.py --limit 500
+# 产出: data/llm_discovery_results.json → 分析后改进 regex
+
+# 重训 ML 分类器
+python3 -c "
+from core.simple_classifier import train_and_save_model
+train_and_save_model(llm_labels_path='data/llm_intent_labels.json')
+"
+```
+
+**输出**: `data/llm_intent_labels.json` (训练数据), `models/simple_intent_classifier.pkl` (更新后的模型)  
+**标注方法**: DeepSeek API 批量分类 + 开放式发现  
+**迭代周期**: 每次管道产出入库后，按需运行精标注更新模型
+
+**数据飞轮闭环**:
+
+```
+规则标注 (快速, 有盲区)
+    │
+    ├─ 81% → unknown 池
+    │         │
+    │         ▼
+    │     LLM 精标注 (慢, 准确)
+    │         │
+    │         ├─ 归入已知意图 → 扩大训练集
+    │         ├─ 发现新意图   → 补充 regex 模式
+    │         └─ 仍无法判断   → ASR 质量问题跟踪
+    │
+    ▼
+重训 ML 分类器 → 上线 → 下一次管道产出继续收集
+```
+
 ## 一键启动全流水线
 
 ```bash
@@ -162,16 +208,20 @@ python scripts/batch_asr_transcribe.py --watch --interval 60
 
 ## 数据统计
 
-| 指标 | 当前值 (2026-05) |
-|------|-----------------|
-| 已提取原始记录 | 1892 条 (2个批次) |
-| 去重后 | 1459 条 |
-| 已下载音频 | 持续增长中 |
-| 转写总数 | 850 个 |
-| 黄金标注 | 720 个 |
+| 指标 | 当前值 (2026-05-09) |
+|------|---------------------|
+| 已提取原始记录 | 1,892 条 (2个批次) |
+| 去重后 | 1,459 条 |
+| 已下载音频 | 2,578 个 |
+| ASR 转写 | 2,288 条 |
+| 黄金标注 | 2,210 个 |
+| LLM 精标注 | 550 条 (P15-C01 两轮) |
+| ML 分类器类别 | 25 类 (从 16 类扩充) |
+| unknown 挖掘率 | ~82% (从 81%→18% unknown) |
 
 ## 待扩展
 
+- [x] LLM 意图精标注管道（P15-C01 数据飞轮）
 - [ ] ASR 纠错增强（印尼语专项优化）
 - [ ] 说话人分离（pyannote 替代固定交替分配）
 - [ ] 标注质量自动审核（人工抽检 + 一致性检查）

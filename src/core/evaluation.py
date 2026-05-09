@@ -421,6 +421,7 @@ class EvaluationFrameworkV2:
 
         current_persona = persona
         push_count = 0
+        silence_round = 0  # 跟踪实际沉默轮次（用于silent persona的渐进式模拟）
 
         # 开始对话
         agent_text, audio_file = await bot.process(use_tts=self.use_tts)
@@ -439,9 +440,10 @@ class EvaluationFrameworkV2:
             if bot.is_finished():
                 break
 
-            # 计算被追问次数
+            # 计算被追问次数和沉默轮次
             if "jam berapa" in agent_text.lower() or "kapan" in agent_text.lower():
                 push_count += 1
+            effective_push = silence_round if current_persona == "silent" else push_count
 
             # 客户回应
             customer_text = self.simulator.generate_response(
@@ -450,8 +452,12 @@ class EvaluationFrameworkV2:
                 persona=persona,
                 resistance_level=resistance_level,
                 last_agent_text=agent_text,
-                push_count=push_count
+                push_count=effective_push
             )
+
+            # 跟踪实际沉默轮次（用于silent persona的渐进式模拟）
+            if current_persona == "silent" and (not customer_text or not customer_text.strip() or customer_text.strip() in ["...", "。。。"]) :
+                silence_round += 1
 
             print(f"  Customer: {customer_text}")
             conversation_log.append({

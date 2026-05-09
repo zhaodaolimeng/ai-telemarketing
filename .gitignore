@@ -119,3 +119,7 @@ logs/
 # Cache
 .cache/
 .huggingface/
+src/experiments/test_deepseek.py
+data/scripts_generated_*.json
+data/scripts_deepseek_test.json
+data/deepseek_test_result.json
