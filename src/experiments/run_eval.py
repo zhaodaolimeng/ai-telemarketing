@@ -45,8 +45,8 @@ def train_calibrator():
 
         turns = len([t for t in dialogue if t.get("speaker") == "customer"])
         objection_types = list(set(
-            t.get("intent", "unknown") for t in dialogue
-            if t.get("speaker") == "customer" and t.get("intent", "unknown") != "unknown"
+            t.get("user_intent", "unknown") for t in dialogue
+            if t.get("speaker") == "customer" and t.get("user_intent", "unknown") != "unknown"
         ))
 
         log = {
