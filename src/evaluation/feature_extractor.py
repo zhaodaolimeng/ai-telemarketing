@@ -1,4 +1,5 @@
 """组件1: 对话特征提取器 — DialogueLog + UserProfile → 26维特征向量"""
+import zlib
 from dataclasses import dataclass, field
 from typing import Optional
 import numpy as np
@@ -19,9 +20,6 @@ class UserProfile:
     seats_group: str = ""      # 坐席组 CTM-xxx
 
     # 以下为用中位值填充的默认值
-    UNKNOWN_PRODUCT = "unknown_product"
-    UNKNOWN_MARITAL = "unknown_marital"
-    UNKNOWN_SEATS = "unknown_seats"
 
 
 class DialogueFeatureExtractor:
@@ -30,6 +28,7 @@ class DialogueFeatureExtractor:
     # 枚举编码映射
     PRODUCT_MAP = {"UangNow": 0, "PinjamPro": 1, "DuitFast": 2}
     MARITAL_MAP = {"married": 0, "single": 1, "divorced": 2, "widowed": 3}
+    CHAT_GROUP_MAP = {"H1": 0, "H2": 1, "S0": 2}
     APPROACH_MAP = {"educate": 0, "guide": 1, "maintain": 2, "light": 3, "firm": 4, "intervene": 5}
     TONE_MAP = {"soft": 0, "neutral": 1, "firm": 2, "urgent": 3}
 
@@ -84,7 +83,7 @@ class DialogueFeatureExtractor:
 
         # B. 用户画像特征 (10维)
         features.append(float(user_profile.new_flag))
-        features.append(float({"H1": 0, "H2": 1, "S0": 2}.get(user_profile.chat_group, 1)))
+        features.append(float(self.CHAT_GROUP_MAP.get(user_profile.chat_group, 1)))
         features.append(float(user_profile.dpd))
         features.append(float(user_profile.repay_history))
         features.append(float(user_profile.income_ratio))
@@ -92,7 +91,7 @@ class DialogueFeatureExtractor:
         features.append(float(self.MARITAL_MAP.get(user_profile.marital_status, 4)))
         features.append(float(user_profile.loan_seq))
         features.append(float(user_profile.call_hour))
-        features.append(float(hash(user_profile.seats_group) % 27 if user_profile.seats_group else 0))
+        features.append(float(zlib.adler32(user_profile.seats_group.encode()) % 27 if user_profile.seats_group else 0))
 
         # C. 策略参数特征 (6维)
         sp = strategy_params
@@ -103,6 +102,9 @@ class DialogueFeatureExtractor:
         features.append(float(sp.get("max_push_rounds", 3)))
         features.append(float(sp.get("extension_fee_ratio", 0.25)))
 
+        if dialogue_log.get("got_commitment") and dialogue_log.get("commitment_turn", -1) == -1:
+            self._count_missing("commitment_turn_when_committed")
+
         return np.array(features, dtype=np.float32)
 
     def extract_batch(
@@ -110,6 +112,10 @@ class DialogueFeatureExtractor:
         strategy_params: Optional[dict] = None,
     ) -> np.ndarray:
         """批量提取特征"""
+        if len(dialogue_logs) != len(user_profiles):
+            raise ValueError(
+                f"Length mismatch: {len(dialogue_logs)} logs vs {len(user_profiles)} profiles"
+            )
         return np.array([
             self.extract(log, profile, strategy_params)
             for log, profile in zip(dialogue_logs, user_profiles)

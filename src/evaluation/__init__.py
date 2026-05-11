@@ -2,19 +2,16 @@
 
 from .feature_extractor import DialogueFeatureExtractor, UserProfile
 
+__all__ = ["DialogueFeatureExtractor", "UserProfile"]
+
 try:
-    from .calibrator import RepaymentCalibrator  # noqa: F401
+    from .calibrator import RepaymentCalibrator
+    __all__.append("RepaymentCalibrator")
 except ImportError:
     pass
 
 try:
-    from .reporter import EvalReporter  # noqa: F401
+    from .reporter import EvalReporter
+    __all__.append("EvalReporter")
 except ImportError:
     pass
-
-__all__ = [
-    "DialogueFeatureExtractor",
-    "UserProfile",
-    "RepaymentCalibrator",
-    "EvalReporter",
-]
