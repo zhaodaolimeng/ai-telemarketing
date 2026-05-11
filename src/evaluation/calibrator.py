@@ -39,8 +39,6 @@ class RepaymentCalibrator:
             penalty='l2', C=1.0, solver='lbfgs',
             max_iter=1000, class_weight='balanced',
         )
-        self.model.fit(features, labels)
-        self.is_fitted = True
 
         # 5-fold CV 评估
         cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
@@ -50,6 +48,10 @@ class RepaymentCalibrator:
         # 校准误差 (ECE)
         prob_true, prob_pred = calibration_curve(labels, y_pred_proba, n_bins=10)
         self.cv_ece = float(np.mean(np.abs(prob_true - prob_pred)))
+
+        # Fit on all data after CV (for prediction API)
+        self.model.fit(features, labels)
+        self.is_fitted = True
 
         return {
             "auc": round(self.cv_auc, 3),
@@ -66,11 +68,12 @@ class RepaymentCalibrator:
         proba = self.model.predict_proba(features.reshape(1, -1))[0]
         repay_prob = float(proba[1])
 
-        # 95% CI: Wilson 近似
-        n_eff = max(10, self.model.n_features_in_)
+        # 95% CI: Wald normal interval (approximate, for display only)
+        # Uses feature count as heuristic for effective sample size
+        n_features = max(10, self.model.n_features_in_)
         z = 1.96
         p = repay_prob
-        margin = z * np.sqrt(p * (1 - p) / n_eff)
+        margin = z * np.sqrt(p * (1 - p) / n_features)
         ci_lower = max(0.0, p - margin)
         ci_upper = min(1.0, p + margin)
 
@@ -97,7 +100,11 @@ class RepaymentCalibrator:
     ) -> dict:
         """
         比较两组策略的 P(repay) 差异。
-        用 bootstrap 估计 p-value。
+
+        Uses permutation test on model-predicted probabilities.
+        NOTE: The p-value reflects whether the model-score difference
+        could arise by chance, NOT whether actual repayment rates differ.
+        This is a model-relative statistic, not a statement about true outcomes.
         """
         if not self.is_fitted:
             raise RuntimeError("Model not fitted. Call train() first.")
@@ -126,6 +133,7 @@ class RepaymentCalibrator:
         }
 
     def save(self, path: Path):
+        """Save model to pickle file. Only load models from trusted sources."""
         with open(path, "wb") as f:
             pickle.dump({
                 "model": self.model,
@@ -134,6 +142,8 @@ class RepaymentCalibrator:
             }, f)
 
     def load(self, path: Path):
+        """Load model from pickle file. WARNING: Only load from trusted sources.
+        Pickle deserialization can execute arbitrary code."""
         with open(path, "rb") as f:
             data = pickle.load(f)
         self.model = data["model"]
