@@ -39,7 +39,9 @@ class BehaviorProfile:
     repayment_threshold: float = 0.5   # push_intensity / 5 到达此值才还款
 
     # 内部 RNG (每个实例独立)
-    _rng: "random.Random" = field(default_factory=lambda: random.Random())
+    _rng: random.Random = field(default_factory=lambda: random.Random())
+    # 以下字段预留扩展，当前版本未完全接入决策链:
+    #   excuse_switch_rate, promise_detail_level, repayment_threshold, will_repay
 
     @classmethod
     def silent_payer_h2_old(cls) -> "BehaviorProfile":
@@ -351,8 +353,7 @@ class RealCustomerSimulatorV2:
         return "Iya"
 
     def _profile_excuse_prone(self, stage: str, push_count: int, profile: "BehaviorProfile") -> str:
-        """借口型 -- 递进式借口链，push>=3 后有小概率松口"""
-        r = profile._rng.random()
+        """借口型 — 递进式借口链，push≥3 后有小概率松口"""
         if stage in ("greeting", "identity"):
             return random.choice(["Halo?", "Ada apa?", "Ya?"])
 
