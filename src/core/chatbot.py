@@ -1098,6 +1098,20 @@ class CollectionChatBot:
                     "Saya mengerti, terima kasih atas waktu Anda. Kalau ada pertanyaan lain bisa hubungi customer service kami kapan saja."
                 ]
             },
+            "close_firm": {
+                "*": [
+                    "Baik, karena belum ada kesepakatan, tagihan akan terus berjalan dengan denda harian. Silakan hubungi CS kami melalui aplikasi jika sudah siap membayar. Terima kasih.",
+                    "Kami catat bahwa pembayaran belum bisa dilakukan hari ini. Perlu diingat denda akan terus bertambah. Silakan hubungi kami jika sudah siap. Terima kasih.",
+                    "Karena tidak ada kesepakatan, kami akan melanjutkan proses sesuai prosedur. Anda bisa menghubungi kami kapan saja jika sudah siap menyelesaikan tagihan. Terima kasih."
+                ]
+            },
+            "consequence_warning": {
+                "*": [
+                    "Perlu diingat, jika tagihan tidak segera diselesaikan, denda harian akan terus bertambah dan dapat mempengaruhi skor kredit Anda di OJK.",
+                    "Keterlambatan pembayaran akan dikenakan denda setiap hari dan bisa berdampak pada riwayat kredit Anda. Lebih baik segera diselesaikan ya.",
+                    "Tagihan yang tidak dibayar akan terus bertambah dendanya dan bisa mempengaruhi kemampuan Anda mendapatkan pinjaman di masa depan."
+                ]
+            },
             "confirm_extension_repeat": {
                 "*": [
                     "Apakah Anda masih setuju dengan opsi perpanjangan dengan biaya administrasi Rp {extension_fee} ya?",
@@ -1649,11 +1663,14 @@ class CollectionChatBot:
             else:
                 if self.objection_count < self.max_objections:
                     self.objection_count += 1
-                    # P15-B01: push 力度依据策略
-                    if self.strategy.push_intensity >= 4:
+                    # P15-B01: push 力度依据策略 tone + push_intensity
+                    if self.strategy.push_intensity >= 4 or self.strategy.tone == "urgent":
                         response = self._get_script("push_hard")
                     else:
                         response = self._get_script("push")
+                    # 高后果强调：追加后果警告
+                    if self.strategy.consequence_emphasis >= 4:
+                        response += " " + self._get_script("consequence_warning")
                 else:
                     # P15-B01: 展期优先策略 — 最后机会推展期
                     if self.strategy.extension_priority and not self.extension_discussed:
@@ -1796,8 +1813,11 @@ class CollectionChatBot:
                 response = self._get_script("close_agree_pay")
                 next_state = ChatState.CLOSE
             else:
-                # 其他情况返回通用结束语
-                response = self._get_script("close_general")
+                # P15-B01: 强硬/紧急语气用 firm closing
+                if self.strategy.tone in ("firm", "urgent"):
+                    response = self._get_script("close_firm")
+                else:
+                    response = self._get_script("close_general")
                 next_state = ChatState.CLOSE
 
         # 记录机器人回复

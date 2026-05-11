@@ -15,7 +15,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 
 
 class RepaymentCalibrator:
-    """Logistic Regression 校准模型 — 输出 P(有效还款|对话特征)"""
+    """ElasticNet Logistic Regression — 输出 P(有效还款|对话特征), L1+L2 自动特征选择"""
 
     def __init__(self):
         self.model: Optional[LogisticRegression] = None
@@ -24,23 +24,25 @@ class RepaymentCalibrator:
         self.cv_auc: float = 0.0
         self.cv_ece: float = 0.0
 
-    def train(self, features: np.ndarray, labels: np.ndarray) -> dict:
+    def train(self, features: np.ndarray, labels: np.ndarray,
+              sample_weight: np.ndarray = None) -> dict:
         """
         训练模型 + 5-fold CV 评估
 
         Args:
-            features: shape (N, 26)
+            features: shape (N, D)
             labels: shape (N,) 0/1
+            sample_weight: shape (N,) optional sample weights
 
         Returns:
             {"auc": float, "ece": float, "n_samples": int, "pos_rate": float}
         """
         self.model = LogisticRegression(
-            penalty='l2', C=1.0, solver='lbfgs',
-            max_iter=1000, class_weight='balanced',
+            penalty='elasticnet', C=0.5, solver='saga',
+            l1_ratio=0.5, max_iter=2000, class_weight='balanced',
         )
 
-        # 5-fold CV 评估
+        # 5-fold CV 评估 (CV 不传 sample_weight, 作为无偏估计)
         cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
         y_pred_proba = cross_val_predict(self.model, features, labels, cv=cv, method='predict_proba')[:, 1]
         self.cv_auc = roc_auc_score(labels, y_pred_proba)
@@ -50,7 +52,7 @@ class RepaymentCalibrator:
         self.cv_ece = float(np.mean(np.abs(prob_true - prob_pred)))
 
         # Fit on all data after CV (for prediction API)
-        self.model.fit(features, labels)
+        self.model.fit(features, labels, sample_weight=sample_weight)
         self.is_fitted = True
 
         return {

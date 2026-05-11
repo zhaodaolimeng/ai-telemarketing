@@ -9,18 +9,18 @@ from evaluation.calibrator import RepaymentCalibrator
 
 def make_synthetic_data(n=200, seed=42) -> tuple:
     rng = np.random.RandomState(seed)
-    # DPD 是最强特征：dpd<=0 → 97% pos, dpd 1-7 → 36% pos, dpd>7 → 1% pos
-    features = np.zeros((n, 26), dtype=np.float32)
-    dpd = rng.choice([0, 3, 15], size=n, p=[0.5, 0.25, 0.25])
-    features[:, 12] = dpd  # dpd column
+    # repay_history 是强特征：好(0.8-1.0)→85% pos, 中(0.3-0.7)→50% pos, 差(0.0-0.2)→10% pos
+    features = np.zeros((n, 33), dtype=np.float32)
+    repay_hist = rng.choice([0.9, 0.5, 0.1], size=n, p=[0.5, 0.25, 0.25])
+    features[:, 12] = repay_hist  # repay_history column
     # 加一些噪声
     features[:, 0] = rng.randint(5, 20, n)  # turns
     features[:, 1] = rng.randint(0, 5, n)   # push_count
 
     labels = np.zeros(n, dtype=int)
-    labels[dpd == 0] = rng.binomial(1, 0.97, np.sum(dpd == 0))
-    labels[dpd == 3] = rng.binomial(1, 0.36, np.sum(dpd == 3))
-    labels[dpd == 15] = rng.binomial(1, 0.01, np.sum(dpd == 15))
+    labels[repay_hist == 0.9] = rng.binomial(1, 0.85, np.sum(repay_hist == 0.9))
+    labels[repay_hist == 0.5] = rng.binomial(1, 0.50, np.sum(repay_hist == 0.5))
+    labels[repay_hist == 0.1] = rng.binomial(1, 0.10, np.sum(repay_hist == 0.1))
     return features, labels
 
 
@@ -29,7 +29,7 @@ def test_train_and_predict():
     cal = RepaymentCalibrator()
     result = cal.train(X, y)
 
-    assert result["auc"] >= 0.90  # DPD 是极强特征
+    assert result["auc"] >= 0.75  # repay_history 是强特征
     assert result["ece"] <= 0.20
     assert result["n_samples"] == 200
 
@@ -48,7 +48,7 @@ def test_compare():
     # 改变 push_intensity 特征的策略 B
     X_a = X[:100].copy()
     X_b = X[:100].copy()
-    X_b[:, 22] += 2  # push_intensity +2
+    X_b[:, 21] += 2  # push_intensity +2
 
     result = cal.compare(X_a, X_b)
     assert "delta_mean" in result

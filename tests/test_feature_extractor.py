@@ -17,7 +17,7 @@ def test_extract_full_input():
         "objection_types": ["no_money", "busy"],
         "final_state": "CLOSE", "cooperation_signals": 2,
     }
-    profile = UserProfile(new_flag=2, chat_group="H2", dpd=0,
+    profile = UserProfile(new_flag=2, chat_group="H2",
                           repay_history=0.8, income_ratio=2.5,
                           product_name="PinjamPro", marital_status="married",
                           loan_seq=5, call_hour=14, seats_group="CTM-JKT")
@@ -28,13 +28,15 @@ def test_extract_full_input():
     vec = ex.extract(log, profile, strategy)
 
     assert isinstance(vec, np.ndarray)
-    assert vec.shape == (26,)
+    assert vec.shape == (33,)
     assert vec.dtype == np.float32
     assert vec[0] == 12.0         # turns
     assert vec[10] == 2.0         # new_flag
     assert vec[11] == 1.0         # chat_group H2 → 1
-    assert vec[13] == pytest.approx(0.8, rel=1e-6)  # repay_history
-    assert vec[20] == 3.0         # approach "light" → 3
+    assert vec[12] == pytest.approx(0.8, rel=1e-6)  # repay_history
+    assert vec[19] == 3.0         # approach "light" → 3
+    # 交互特征
+    assert vec[25] > 0            # push_x_coop: push_intensity=1 × cooperation=2 = 2
 
 
 def test_extract_missing_profile_uses_defaults():
@@ -46,10 +48,10 @@ def test_extract_missing_profile_uses_defaults():
            "cooperation_signals": 0}
     vec = ex.extract(log)  # 不传 profile 和 strategy
 
-    assert vec.shape == (26,)
+    assert vec.shape == (33,)
     assert vec[0] == 5.0
     assert vec[10] == 0.0         # new_flag default
-    assert vec[13] == 0.5         # repay_history default
+    assert vec[12] == 0.5         # repay_history default
     assert ex.missing_report()["user_profile"] == 1
 
 
@@ -69,11 +71,11 @@ def test_extract_batch():
     ]
     profiles = [UserProfile(), None]
     batch = ex.extract_batch(logs, profiles)
-    assert batch.shape == (2, 26)
+    assert batch.shape == (2, 33)
 
 
 def test_feature_names():
     ex = DialogueFeatureExtractor()
-    assert len(ex.feature_names) == 26
+    assert len(ex.feature_names) == 33
     assert ex.feature_names[0] == "turns"
-    assert ex.feature_names[-1] == "extension_fee_ratio"
+    assert ex.feature_names[-1] == "tone_x_coop"
