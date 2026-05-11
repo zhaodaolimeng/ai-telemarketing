@@ -594,19 +594,26 @@ class CollectionChatBot:
     """催收对话机器人 - 增强版"""
 
     def __init__(self, chat_group: str = "H2", customer_name: Optional[str] = None,
-                 overdue_amount: int = 500000, overdue_days: int = 5):
+                 overdue_amount: int = 500000, overdue_days: int = 5,
+                 new_flag: int = 0, strategy_profile=None):
         # chat_group 催收阶段: H2=宽限期前2天(温和引导), H1=宽限期前1天(引导+暗示后果), S0=实质性逾期(高压催收)
         self.chat_group = chat_group
         self.customer_name = customer_name or "Pak/Bu"
         self.overdue_amount = overdue_amount  # 欠款金额，默认500k
         self.overdue_days = overdue_days  # 逾期天数，默认5天
-        self.extension_fee = int(overdue_amount * 0.3)  # 展期费用默认30%
+        # P15-B01: 分客群策略配置
+        from core.strategy_profile import get_strategy_profile, StrategyProfile
+        if strategy_profile is not None:
+            self.strategy = strategy_profile
+        else:
+            self.strategy = get_strategy_profile(new_flag, chat_group)
+        self.extension_fee = int(overdue_amount * self.strategy.extension_fee_ratio)
         self.state: ChatState = ChatState.INIT
         self.conversation: List[ChatTurn] = []
         self.commit_time: Optional[str] = None
         self.extension_agreed: bool = False
         self.objection_count: int = 0
-        self.max_objections: int = 3
+        self.max_objections: int = self.strategy.max_objections
         # P15-A01: 分类型异议递进计数器
         self.no_money_count: int = 0
         self.busy_count: int = 0
@@ -710,6 +717,13 @@ class CollectionChatBot:
                     "Selamat sore, saya petugas dari Extra Uang. Bisakah saya bicara dengan Bapak/Ibu {name}?"
                 ]
             },
+            "educate_intro": {
+                "*": [
+                    "Saya akan bantu jelaskan informasi tagihan Anda dan solusi yang tersedia ya. Tujuan kami membantu Anda menjaga riwayat kredit tetap baik.",
+                    "Ibu/Bapak baru pertama kali mendapat telepon dari kami, mohon maaf mengganggu. Saya akan jelaskan status tagihan dan cara pembayarannya ya.",
+                    "Kami menghubungi untuk membantu Anda menyelesaikan tagihan tepat waktu demi menjaga skor kredit. Bisa saya jelaskan status tagihannya?"
+                ]
+            },
             "purpose": {
                 "H2": [
                     "Saya menelpon untuk memberitahu bahwa tagihan pinjaman {name} sebesar Rp {amount} sudah jatuh tempo selama {days} hari ya.",
@@ -765,6 +779,13 @@ class CollectionChatBot:
                     "Hari apa bisa bayar ya?",
                     "Bisa kasih tahu pasti hari apa dan jam berapa ya?",
                     "Kita harus segera selesaikan ini, bisa kasih tahu kapan pastinya bisa bayar?"
+                ]
+            },
+            "push_hard": {
+                "*": [
+                    "Bapak/Ibu, jika tidak dibayar hari ini denda akan terus bertambah dan bisa berdampak pada skor kredit Anda di OJK. Kapan pastinya bisa bayar?",
+                    "Saya perlu kepastian sekarang. Tagihan ini sudah sangat terlambat. Jam berapa hari ini Bapak/Ibu bisa transfer?",
+                    "Ini panggilan terakhir untuk tagihan Anda. Jika tidak ada pembayaran dalam 24 jam, kami harus melanjutkan ke proses selanjutnya. Bisa bayar jam berapa?"
                 ]
             },
             "commit_time": {
@@ -837,6 +858,13 @@ class CollectionChatBot:
                     "Terima kasih atas perhatiannya.",
                     "Sukses selalu untuk Anda ya, terima kasih.",
                     "Selamat tinggal, semoga masalah keuangan Anda segera selesai."
+                ]
+            },
+            "closing_warm": {
+                "*": [
+                    "Terima kasih banyak {name}, kami hargai kerjasama Anda selama ini. Sampai jumpa dan sehat selalu ya.",
+                    "Terima kasih {name}, senang bisa membantu. Kalau ada pertanyaan, silakan hubungi kami kapan saja ya.",
+                    "Baik {name}, terima kasih sudah menjadi nasabah setia kami. Semoga bisnis Anda lancar terus ya."
                 ]
             },
             "closing_wrong_number": {
@@ -1163,6 +1191,18 @@ class CollectionChatBot:
             }
         }
 
+    def _get_closing(self) -> str:
+        """获取闭幕语，关系型客户用温暖版本"""
+        if self.strategy.relationship_emphasis:
+            warm = self.script_lib.get("closing_warm", {}).get("*", [])
+            if warm:
+                script = random.choice(warm)
+                self.last_responses.append(script)
+                if len(self.last_responses) > 2:
+                    self.last_responses.pop(0)
+                return self.var_replacer.replace(script, name=self.customer_name)
+        return self._get_script("closing")
+
     def _get_script(self, category: str, **kwargs) -> str:
         """获取话术并替换变量，避免连续重复回复"""
         # 先尝试获取对应催收阶段的话术，如果没有则用通配符"*"的话术
@@ -1214,6 +1254,9 @@ class CollectionChatBot:
         if self.state == ChatState.INIT:
             self.state = ChatState.IDENTITY_VERIFY
             identity_verify = self._get_script("identity_verify")
+            # 教育型策略：身份核实后追加简短合同说明
+            if self.strategy.education_emphasis:
+                identity_verify += " " + self._get_script("educate_intro")
             self.conversation.append(ChatTurn(agent=identity_verify))
             audio_file = await self._tts_speak(identity_verify, use_tts)
             return identity_verify, audio_file
@@ -1342,7 +1385,7 @@ class CollectionChatBot:
                         # 直接生成确认和结束语
                         commit_resp = self._get_script("commit_time", time=detected_time)
                         wait_script = self._get_script("wait", time=detected_time)
-                        closing = self._get_script("closing")
+                        closing = self._get_closing()
                         response = f"{commit_resp} {wait_script} {closing}"
                         next_state = ChatState.CLOSE
                     else:
@@ -1391,7 +1434,7 @@ class CollectionChatBot:
                     # 直接生成确认和结束语
                     commit_resp = self._get_script("commit_time", time=detected_time)
                     wait_script = self._get_script("wait", time=detected_time)
-                    closing = self._get_script("closing")
+                    closing = self._get_closing()
                     response = f"{commit_resp} {wait_script} {closing}"
                     next_state = ChatState.CLOSE
                 else:
@@ -1446,7 +1489,7 @@ class CollectionChatBot:
                 self.commit_time = detected_time
                 commit_resp = self._get_script("commit_time", time=detected_time)
                 wait_script = self._get_script("wait", time=detected_time)
-                closing = self._get_script("closing")
+                closing = self._get_closing()
                 response = f"{commit_resp} {wait_script} {closing}"
                 next_state = ChatState.CLOSE
             else:
@@ -1471,8 +1514,13 @@ class CollectionChatBot:
                     # 没有检测到时间，催促用户
                     if self.objection_count < self.max_objections:
                         self.objection_count += 1
-                        next_state = ChatState.PUSH_FOR_TIME
-                        response = self._get_script("push")
+                        # P15-B01: 展期优先策略 — 首次 push 先推展期而非全额还款
+                        if self.strategy.extension_priority and self.objection_count == 1:
+                            response = self._get_script("explain_extension")
+                            next_state = ChatState.CONFIRM_EXTENSION
+                        else:
+                            next_state = ChatState.PUSH_FOR_TIME
+                            response = self._get_script("push")
                     else:
                         next_state = ChatState.FAILED
                         response = ""
@@ -1485,7 +1533,7 @@ class CollectionChatBot:
                 self.commit_time = detected_time
                 commit_resp = self._get_script("commit_time", time=detected_time)
                 wait_script = self._get_script("wait", time=detected_time)
-                closing = self._get_script("closing")
+                closing = self._get_closing()
                 response = f"{commit_resp} {wait_script} {closing}"
                 next_state = ChatState.CLOSE
             elif self.user_intent == "ask_extension":
@@ -1601,10 +1649,20 @@ class CollectionChatBot:
             else:
                 if self.objection_count < self.max_objections:
                     self.objection_count += 1
-                    response = self._get_script("push")
+                    # P15-B01: push 力度依据策略
+                    if self.strategy.push_intensity >= 4:
+                        response = self._get_script("push_hard")
+                    else:
+                        response = self._get_script("push")
                 else:
-                    next_state = ChatState.FAILED
-                    response = ""
+                    # P15-B01: 展期优先策略 — 最后机会推展期
+                    if self.strategy.extension_priority and not self.extension_discussed:
+                        self.extension_discussed = True
+                        response = self._get_script("explain_extension")
+                        next_state = ChatState.CONFIRM_EXTENSION
+                    else:
+                        next_state = ChatState.FAILED
+                        response = ""
 
         elif self.state == ChatState.HANDLE_OBJECTION:
             # 处理一般异议
@@ -1835,7 +1893,7 @@ class CollectionChatBot:
             self.state = ChatState.CLOSE
             commit_resp = self._get_script("commit_time", time=detected_time)
             wait_script = self._get_script("wait", time=detected_time) if self.commit_time else "Saya tunggu ya."
-            closing = self._get_script("closing")
+            closing = self._get_closing()
             return f"{commit_resp} {wait_script} {closing}"
 
         # LLM 轮数限制
@@ -2053,10 +2111,15 @@ class CollectionChatBot:
         self.conversation = []
         self.commit_time = None
         self.objection_count = 0
+        self.max_objections = self.strategy.max_objections  # P15-B01: 恢复策略值
         self.in_llm_fallback = False
         self.llm_turn_count = 0
         self.llm_used_this_turn = False
         self.silence_count = 0
+        self.no_money_count = 0
+        self.busy_count = 0
+        self.dont_know_count = 0
+        self.extension_discussed = False
         self.session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
 
 
