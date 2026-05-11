@@ -9,11 +9,82 @@
 import random
 import json
 from pathlib import Path
+from dataclasses import dataclass, field
 from typing import List, Dict, Optional, Any, TYPE_CHECKING
 from abc import ABC, abstractmethod
 
 if TYPE_CHECKING:
     from core.evaluation import SimulatorInterface
+
+
+@dataclass
+class BehaviorProfile:
+    """与 sim stage 无关的底层客户人设 — 来自 P15-G01 校准数据"""
+    name: str                          # 档案名
+    response_style: str = "responsive" # silent / reluctant / responsive
+    intent_type: str = "honest"        # honest / excuse_prone / false_promiser
+    will_repay: str = "payer"          # payer / non_payer / conditional
+
+    # silent pass-through rounds: 第几轮后逐渐有反应
+    silent_thaw_round: int = 2
+
+    # excuse_prone 参数: 每轮切换借口的概率
+    excuse_switch_rate: float = 0.6
+
+    # false_promiser 参数: 给出承诺的轮次和具体程度
+    promise_round: int = 2             # 第几轮后开始给虚假承诺
+    promise_detail_level: float = 0.7  # 承诺具体程度 (越高越像真承诺)
+
+    # conditional 参数: 多强的 push 才能促使其还款
+    repayment_threshold: float = 0.5   # push_intensity / 5 到达此值才还款
+
+    # 内部 RNG (每个实例独立)
+    _rng: "random.Random" = field(default_factory=lambda: random.Random())
+
+    @classmethod
+    def silent_payer_h2_old(cls) -> "BehaviorProfile":
+        """档案1: H2老客·沉默还款型 — P15-G01 老客H2 90.4%"""
+        return cls(name="silent_payer", response_style="reluctant",
+                   intent_type="honest", will_repay="payer",
+                   silent_thaw_round=2)
+
+    @classmethod
+    def excuse_master_s0_new(cls) -> "BehaviorProfile":
+        """档案2: S0新客·借口大师型 — P15-G01 新客S0 28.2%"""
+        return cls(name="excuse_master", response_style="responsive",
+                   intent_type="excuse_prone", will_repay="conditional",
+                   repayment_threshold=0.6, excuse_switch_rate=0.7)
+
+    @classmethod
+    def false_promiser(cls) -> "BehaviorProfile":
+        """档案3: 虚假承诺型 — P15-G01 35.3% FPR"""
+        return cls(name="false_promiser", response_style="responsive",
+                   intent_type="false_promiser", will_repay="non_payer",
+                   promise_round=2, promise_detail_level=0.8)
+
+    @classmethod
+    def knowing_delayer_s0_old(cls) -> "BehaviorProfile":
+        """档案4: S0老客·明知故拖型 — P15-G01 老客S0 53.4%"""
+        return cls(name="knowing_delayer", response_style="responsive",
+                   intent_type="excuse_prone", will_repay="conditional",
+                   repayment_threshold=0.75, excuse_switch_rate=0.5)
+
+    @classmethod
+    def hopeless_dpd(cls) -> "BehaviorProfile":
+        """档案5: DPD极端·无力回天型 — P15-G01 DPD>7 0.7%"""
+        return cls(name="hopeless", response_style="responsive",
+                   intent_type="honest", will_repay="non_payer")
+
+
+def make_profiles() -> dict:
+    """返回 5 种预定义客户档案的独立实例"""
+    return {
+        "silent_payer": BehaviorProfile.silent_payer_h2_old(),
+        "excuse_master": BehaviorProfile.excuse_master_s0_new(),
+        "false_promiser": BehaviorProfile.false_promiser(),
+        "knowing_delayer": BehaviorProfile.knowing_delayer_s0_old(),
+        "hopeless": BehaviorProfile.hopeless_dpd(),
+    }
 
 
 class RealCustomerSimulatorV2:
@@ -191,7 +262,8 @@ class RealCustomerSimulatorV2:
         resistance_level: str = "medium",
         last_agent_text: str = "",
         conversation_history: List = None,
-        push_count: int = 0
+        push_count: int = 0,
+        profile: Optional["BehaviorProfile"] = None,
     ) -> str:
         """
         生成客户回应
@@ -206,6 +278,11 @@ class RealCustomerSimulatorV2:
             push_count: 被追问次数
         """
         history = conversation_history or []
+
+        # BehaviorProfile 优先: 有 profile 时走 profile 驱动逻辑
+        if profile is not None:
+            return self._profile_driven_response(
+                stage, profile, push_count)
 
         if persona == "cooperative":
             return self._cooperative_response(stage)
@@ -227,6 +304,103 @@ class RealCustomerSimulatorV2:
             )
         else:
             return random.choice(self.customer_patterns["greeting"])
+
+    def _profile_driven_response(
+        self, stage: str, profile: "BehaviorProfile", push_count: int,
+    ) -> str:
+        """基于 BehaviorProfile 生成内在一致的回复"""
+        pr = profile
+
+        # --- 决策1: 回不回应 ---
+        if pr.response_style == "silent":
+            if push_count < pr.silent_thaw_round:
+                return "" if random.random() < 0.7 else "..."
+            else:
+                if random.random() < 0.5:
+                    return random.choice(["Iya", "Ya", "Hm"])
+        elif pr.response_style == "reluctant":
+            if push_count < pr.silent_thaw_round and random.random() < 0.4:
+                return "" if random.random() < 0.5 else "..."
+
+        # --- 决策2: 给什么回应 ---
+        if pr.intent_type == "honest":
+            return self._profile_honest(stage, push_count)
+        elif pr.intent_type == "excuse_prone":
+            return self._profile_excuse_prone(stage, push_count, pr)
+        elif pr.intent_type == "false_promiser":
+            return self._profile_false_promiser(stage, push_count, pr)
+
+        return self._cooperative_response(stage)
+
+    def _profile_honest(self, stage: str, push_count: int) -> str:
+        """诚信型 -- 按真实意愿回应"""
+        if stage in ("greeting", "identity"):
+            return random.choice(["Halo", "Iya", "Ya"])
+        if stage in ("purpose", "ask_time"):
+            return random.choice([
+                "Saya belum punya duit", "Besok ya",
+                "Saya sedang kesulitan", "Nanti saya usahakan",
+            ])
+        if stage == "push":
+            if push_count >= 3:
+                return random.choice(["Maaf, benar-benar tidak bisa", "Saya menyerah"])
+            return random.choice([
+                "Saya lagi susah", "Nanti ya",
+                "Saya usahakan minggu ini",
+            ])
+        return "Iya"
+
+    def _profile_excuse_prone(self, stage: str, push_count: int, profile: "BehaviorProfile") -> str:
+        """借口型 -- 递进式借口链，push>=3 后有小概率松口"""
+        r = profile._rng.random()
+        if stage in ("greeting", "identity"):
+            return random.choice(["Halo?", "Ada apa?", "Ya?"])
+
+        chains = [
+            ["Nanti ya", "Sebentar lagi", "Saya tunggu dulu"],
+            ["Saya lagi susah", "Belum ada uang", "Gaji belum turun"],
+            ["Saya lupa", "Besok ya", "Minggu ini"],
+            ["Berapa sih?", "Saya kira sudah lunas", "Kok banyak?"],
+            ["Tidak bisa", "Jangan dipaksa", "Saya tidak mau"],
+        ]
+        chain_idx = min(push_count, len(chains) - 1)
+        if push_count >= 3 and random.random() < 0.2:
+            return random.choice([
+                "Oke deh, saya usahakan besok",
+                "Ya sudah, nanti saya transfer",
+            ])
+        return random.choice(chains[chain_idx])
+
+    def _profile_false_promiser(self, stage: str, push_count: int, profile: "BehaviorProfile") -> str:
+        """虚假承诺型 -- 痛快给承诺但不履约"""
+        if stage in ("greeting", "identity"):
+            return random.choice(["Halo", "Iya", "Ya pak"])
+
+        if stage in ("purpose", "ask_time"):
+            return random.choice([
+                "Oh iya pak, saya ingat tagihannya",
+                "Ya saya tahu, mohon maaf pak",
+            ])
+
+        if stage == "push" or stage == "confirm":
+            hours = ["1", "2", "3", "4", "5"]
+            times = ["jam " + h for h in hours]
+            times += ["nanti jam " + h for h in hours]
+            times += ["siang nanti", "sore ini", "malam nanti"]
+
+            if push_count >= profile.promise_round:
+                detail = random.choice(times)
+                confirmations = [
+                    f"Baik pak, {detail} saya transfer",
+                    f"Siap, {detail} pasti saya bayar",
+                    f"Oke pak, {detail} ya",
+                    f"Iya pak, {detail} saya lunasi",
+                ]
+                return random.choice(confirmations)
+            else:
+                return random.choice(["Iya pak", "Baik", "Saya usahakan"])
+
+        return "Iya pak"
 
     def _cooperative_response(self, stage: str) -> str:
         """合作型客户回应"""
