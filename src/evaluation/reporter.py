@@ -39,7 +39,7 @@ class EvalReporter:
             f"| 指标 | 方案A (旧) | 方案B (新) | Δ |",
             f"|------|-----------|-----------|---|",
             f"| 模拟器承诺率 | {sim_result.get('commit_rate_a', 0):.1%} | {sim_result.get('commit_rate_b', 0):.1%} | {sim_delta:+.1%} |",
-            f"| 模型 P(repay) | {sim_result.get('repay_prob_a', 0):.2f} | {sim_result.get('repay_prob_b', 0):.2f} | {model_delta:+.2f} |",
+            f"| 模型 P(repay) | {model_result.get('repay_prob_a', 0):.2f} | {model_result.get('repay_prob_b', 0):.2f} | {model_delta:+.2f} |",
             f"| 冲突状态 | {pattern} | | |",
             f"| 模型 AUC: {quality.get('auc', 0):.3f} | ECE: {quality.get('ece', 0):.3f} | | |",
             "",
