@@ -6,7 +6,7 @@ P15-B01: 分阶段×分客群差异化策略配置
 基于 P15-G02 调研数据：new_flag(新客0/新转老1/老客2) × chat_group(H1/H2/S0)
 = 9 种策略组合。参数依据 806 条 gold case + 1,459 条 CSV 量化验证。
 """
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Optional
 
 
@@ -36,6 +36,10 @@ class StrategyProfile:
     consequence_emphasis: int  # 1-5，后果强调程度
     education_emphasis: bool   # 教育型话术（解释合同、义务）
     relationship_emphasis: bool  # 关系型话术（认可历史、熟客口吻）
+
+    # P15-H02: LLM 策略路由附加字段（可选）
+    avoid_tactics: list = field(default_factory=list)   # 应避免的战术
+    fallback_approach: str = ""  # 主策略失败时的备选方案
 
     @property
     def tone_label(self) -> str:
@@ -271,6 +275,25 @@ def get_strategy_profile(
     else:
         # DPD 1-7: 催收发挥空间, 使用基准策略
         return base
+
+
+def profile_to_dict(profile: StrategyProfile) -> dict:
+    """将 StrategyProfile 转为 dict，用于 prompt 构造和评测"""
+    return {
+        "approach": profile.approach,
+        "tone": profile.tone,
+        "push_intensity": profile.push_intensity,
+        "max_objections": profile.max_objections,
+        "extension_fee_ratio": profile.extension_fee_ratio,
+        "extension_priority": profile.extension_priority,
+        "partial_payment_offered": profile.partial_payment_offered,
+        "max_push_rounds": profile.max_push_rounds,
+        "consequence_emphasis": profile.consequence_emphasis,
+        "education_emphasis": profile.education_emphasis,
+        "relationship_emphasis": profile.relationship_emphasis,
+        "avoid_tactics": profile.avoid_tactics,
+        "fallback_approach": profile.fallback_approach,
+    }
 
 
 def get_strategy_summary() -> str:
