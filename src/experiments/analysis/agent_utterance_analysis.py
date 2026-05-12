@@ -78,7 +78,7 @@ def main():
     print("催收员话术有效性分析 - 服务智能语音开发")
     print("="*80)
 
-    label_file = Path("data/label-chat-sample.xlsx")
+    label_file = Path("data/raw/leads/label-chat-sample.xlsx")
     df = pd.read_excel(label_file)
     df["result"] = df["repay_type"].apply(
         lambda x: "success" if pd.notna(x) and x in ["repay", "extend"] else "failed"

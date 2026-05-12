@@ -14,7 +14,7 @@ def main():
     print("="*70)
 
     # 读取标签
-    label_file = Path("data/label-chat-sample.xlsx")
+    label_file = Path("data/raw/leads/label-chat-sample.xlsx")
     df = pd.read_excel(label_file)
     print(f"\n标签数据: {len(df)} 条")
 

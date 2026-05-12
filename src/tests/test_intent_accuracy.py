@@ -18,7 +18,7 @@ def main():
     parser.add_argument('--model-path', default='models/simple_intent_classifier.pkl', help='ML模型路径')
     args = parser.parse_args()
 
-    gold_dir = Path('data/gold_dataset')
+    gold_dir = Path('data/raw/gold_dataset')
     intent_detector = IntentDetector()
     asr_corrector = ASRCorrector()
 

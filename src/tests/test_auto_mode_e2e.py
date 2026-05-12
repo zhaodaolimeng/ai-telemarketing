@@ -524,7 +524,7 @@ async def main():
           f"{'✓' if zero_turn_cases == 0 else f'✗ ({zero_turn_cases} cases with 0 turns)'}")
 
     # ---- 详细输出到 JSON ----
-    report_path = _PROJECT_ROOT / "data/test_reports"
+    report_path = _PROJECT_ROOT / "data/outputs/test_reports"
     report_path.mkdir(parents=True, exist_ok=True)
     timestamp = time.strftime("%Y%m%d_%H%M%S")
     json_path = report_path / f"auto_mode_e2e_{timestamp}.json"

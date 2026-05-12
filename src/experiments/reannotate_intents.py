@@ -280,11 +280,11 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(description="P15-C01: LLM 意图精标注管道")
-    parser.add_argument("--gold-dir", type=str, default="data/gold_dataset",
+    parser.add_argument("--gold-dir", type=str, default="data/raw/gold_dataset",
                         help="Gold dataset 目录")
     parser.add_argument("--sample-size", type=int, default=400,
                         help="LLM 标注的样本数")
-    parser.add_argument("--output", type=str, default="data/llm_intent_labels.json",
+    parser.add_argument("--output", type=str, default="data/outputs/llm_intent_labels.json",
                         help="输出文件路径")
     parser.add_argument("--dry-run", action="store_true",
                         help="仅提取和显示统计，不调用 LLM")

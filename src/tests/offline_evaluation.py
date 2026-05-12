@@ -65,7 +65,7 @@ class EvaluationResult:
 class OfflineEvaluator:
     """离线评估器"""
 
-    def __init__(self, historical_data_path: str = "data/historical/"):
+    def __init__(self, historical_data_path: str = "data/processed/historical/"):
         self.historical_dir = Path(historical_data_path)
         self.historical_cases: List[HistoricalCase] = []
         self.compliance_checker = get_compliance_checker()
@@ -418,7 +418,7 @@ class OfflineEvaluator:
             }
         return result
 
-    def generate_report(self, results: List[SimulationResult], eval_result: EvaluationResult, output_dir: str = "data/offline_evaluation_reports/") -> str:
+    def generate_report(self, results: List[SimulationResult], eval_result: EvaluationResult, output_dir: str = "data/outputs/offline_evaluation_reports/") -> str:
         """生成评估报告"""
         output_path = Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
@@ -580,8 +580,8 @@ async def main():
 
     parser = argparse.ArgumentParser(description="离线合成对照评估工具")
     parser.add_argument("--sample-size", type=int, help="抽样评估的样本量，默认使用全部数据")
-    parser.add_argument("--historical-data-path", default="data/historical/", help="历史数据目录")
-    parser.add_argument("--output-dir", default="data/offline_evaluation_reports/", help="报告输出目录")
+    parser.add_argument("--historical-data-path", default="data/processed/historical/", help="历史数据目录")
+    parser.add_argument("--output-dir", default="data/outputs/offline_evaluation_reports/", help="报告输出目录")
     parser.add_argument("--case", help="评估单个案例，指定case_id")
 
     args = parser.parse_args()
@@ -589,7 +589,7 @@ async def main():
     evaluator = OfflineEvaluator(args.historical_data_path)
 
     if not evaluator.historical_cases:
-        print("请先准备历史催收数据到 data/historical/ 目录")
+        print("请先准备历史催收数据到 data/processed/historical/ 目录")
         return
 
     if args.case:

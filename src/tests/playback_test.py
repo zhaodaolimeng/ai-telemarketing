@@ -33,7 +33,7 @@ class TestResult:
 class PlaybackTester:
     """回放测试器"""
 
-    def __init__(self, gold_dataset_dir: str = "data/gold_dataset/"):
+    def __init__(self, gold_dataset_dir: str = "data/raw/gold_dataset/"):
         self.gold_dir = Path(gold_dataset_dir)
         self.compliance_checker = get_compliance_checker()
         self.test_cases = self._load_gold_cases()
@@ -377,7 +377,7 @@ class PlaybackTester:
 
         return results, summary
 
-    def generate_report(self, results: List[TestResult], summary: Dict, output_dir: str = "data/playback_reports/") -> str:
+    def generate_report(self, results: List[TestResult], summary: Dict, output_dir: str = "data/outputs/playback_reports/") -> str:
         """生成测试报告"""
         output_path = Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
@@ -521,7 +521,7 @@ async def main():
     parser = argparse.ArgumentParser(description="对话回放测试工具")
     parser.add_argument("--case", help="运行单个测试用例，指定文件名")
     parser.add_argument("--generate-report", action="store_true", default=True, help="生成测试报告")
-    parser.add_argument("--output-dir", default="data/playback_reports/", help="报告输出目录")
+    parser.add_argument("--output-dir", default="data/outputs/playback_reports/", help="报告输出目录")
 
     args = parser.parse_args()
 

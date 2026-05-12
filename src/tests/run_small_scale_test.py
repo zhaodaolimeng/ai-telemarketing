@@ -302,7 +302,7 @@ class LargeScaleTester:
             "failure_examples": failure_examples
         }
 
-    def save_report(self, report: Dict[str, Any], output_file: str = "data/test_report.json"):
+    def save_report(self, report: Dict[str, Any], output_file: str = "data/outputs/test_report.json"):
         """保存报告"""
         Path("data").mkdir(exist_ok=True)
         with open(output_file, "w", encoding="utf-8") as f:
@@ -347,7 +347,7 @@ class LargeScaleTester:
 
         print("\n" + "=" * 90)
 
-    def generate_markdown_report(self, report: Dict[str, Any], output_file: str = "data/test_report.md"):
+    def generate_markdown_report(self, report: Dict[str, Any], output_file: str = "data/outputs/test_report.md"):
         """生成Markdown格式的详细报告"""
         summary = report["summary"]
 
@@ -444,7 +444,7 @@ class LargeScaleTester:
             f.write("\n".join(md_lines))
         print(f"Markdown报告已保存到: {output_file}")
 
-    def generate_csv_report(self, report: Dict[str, Any], output_file: str = "data/test_report.csv"):
+    def generate_csv_report(self, report: Dict[str, Any], output_file: str = "data/outputs/test_report.csv"):
         """生成CSV格式的详细结果"""
         with open(output_file, "w", newline="", encoding="utf-8") as f:
             writer = csv.writer(f)
@@ -598,7 +598,7 @@ async def main():
     tester.print_report(report)
 
     # 保存JSON报告
-    output_dir = _PROJECT_ROOT / "data/test_reports"
+    output_dir = _PROJECT_ROOT / "data/outputs/test_reports"
     output_dir.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     json_path = output_dir / f"{args.output_prefix}_{timestamp}.json"

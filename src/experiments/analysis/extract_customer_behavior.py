@@ -12,8 +12,8 @@ from collections import defaultdict, Counter
 
 # 配置
 DATA_DIR = Path("data/processed/transcripts/")
-LABEL_FILE = Path("data/label-chat-sample.xlsx")
-OUTPUT_DIR = Path("data/behavior_analysis/")
+LABEL_FILE = Path("data/raw/leads/label-chat-sample.xlsx")
+OUTPUT_DIR = Path("data/processed/behavior_analysis/")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # 印尼语关键词提取

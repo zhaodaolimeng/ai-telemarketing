@@ -138,8 +138,8 @@ Examples:
     parser.add_argument("--asr-model", default="small",
                         choices=["tiny", "small", "medium"],
                         help="ASR模型大小 (default: small)")
-    parser.add_argument("--output-dir", default="data/voice_simulations",
-                        help="输出目录 (default: data/voice_simulations)")
+    parser.add_argument("--output-dir", default="data/runs/voice_simulations",
+                        help="输出目录 (default: data/runs/voice_simulations)")
     parser.add_argument("--customer-name", default="Budi",
                         help="客户名称 (default: Budi)")
     parser.add_argument("--seed", type=int, help="随机种子")

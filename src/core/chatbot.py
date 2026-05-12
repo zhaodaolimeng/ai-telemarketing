@@ -5,6 +5,7 @@
 集成TTS功能，完善状态机，支持变量替换
 基于246条对话分析
 """
+import copy
 import random
 import asyncio
 from dataclasses import dataclass, field
@@ -112,7 +113,7 @@ class TextToSpeech:
             return None
 
         if output_file is None:
-            output_dir = _PROJECT_ROOT / "data/tts_output"
+            output_dir = _PROJECT_ROOT / "data/runs/tts_output"
             output_dir.mkdir(parents=True, exist_ok=True)
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
             output_file = str(output_dir / f"tts_{timestamp}.wav")
@@ -595,7 +596,8 @@ class CollectionChatBot:
 
     def __init__(self, chat_group: str = "H2", customer_name: Optional[str] = None,
                  overdue_amount: int = 500000, overdue_days: int = 5,
-                 new_flag: int = 0, strategy_profile=None):
+                 new_flag: int = 0, strategy_profile=None,
+                 user_memory=None):  # P15-D01: 跨会话用户记忆
         # chat_group 催收阶段: H2=宽限期前2天(温和引导), H1=宽限期前1天(引导+暗示后果), S0=实质性逾期(高压催收)
         self.chat_group = chat_group
         self.customer_name = customer_name or "Pak/Bu"
@@ -604,9 +606,9 @@ class CollectionChatBot:
         # P15-B01: 分客群策略配置
         from core.strategy_profile import get_strategy_profile, StrategyProfile
         if strategy_profile is not None:
-            self.strategy = strategy_profile
+            self.strategy = copy.copy(strategy_profile)
         else:
-            self.strategy = get_strategy_profile(new_flag, chat_group)
+            self.strategy = copy.copy(get_strategy_profile(new_flag, chat_group))
         self.extension_fee = int(overdue_amount * self.strategy.extension_fee_ratio)
         self.state: ChatState = ChatState.INIT
         self.conversation: List[ChatTurn] = []
@@ -618,6 +620,7 @@ class CollectionChatBot:
         self.no_money_count: int = 0
         self.busy_count: int = 0
         self.dont_know_count: int = 0
+        self.push_round: int = 0  # P15-B02: PUSH_FOR_TIME 中已执行的 push 次数
         self.user_intent: str = ""
         # 对话记忆
         self.user_history_intents: List[str] = []  # 用户历史意图列表
@@ -653,6 +656,41 @@ class CollectionChatBot:
 
         # 沉默处理
         self.silence_count: int = 0  # 连续沉默轮次计数
+
+        # P15-D01: 跨会话用户记忆
+        self.user_memory = user_memory
+        self.customer_phone = user_memory.phone if user_memory else None
+        self._is_returning_customer = False
+
+        if user_memory and user_memory.has_previous_sessions:
+            self._is_returning_customer = True
+            if user_memory.previously_promised_but_failed:
+                self.strategy.push_intensity = min(5, self.strategy.push_intensity + 1)
+                self.strategy.consequence_emphasis = min(5, self.strategy.consequence_emphasis + 1)
+            if user_memory.is_low_trust:
+                self.strategy.max_push_rounds = min(5, self.strategy.max_push_rounds + 1)
+
+            # P15-H05: T3 跨通话轨迹演化策略调整
+            if user_memory.trajectory_adjustments:
+                adj = user_memory.trajectory_adjustments
+                if adj.get("approach"):
+                    self.strategy.approach = adj["approach"]
+                if adj.get("tone"):
+                    self.strategy.tone = adj["tone"]
+                self.strategy.push_intensity = max(1, min(5,
+                    self.strategy.push_intensity + adj.get("push_intensity_delta", 0)))
+                self.strategy.consequence_emphasis = max(1, min(5,
+                    self.strategy.consequence_emphasis + adj.get("consequence_emphasis_delta", 0)))
+                self.strategy.max_push_rounds = max(1, min(5,
+                    self.strategy.max_push_rounds + adj.get("max_push_rounds_delta", 0)))
+                if adj.get("extension_priority") is not None:
+                    self.strategy.extension_priority = adj["extension_priority"]
+                if adj.get("education_emphasis") is not None:
+                    self.strategy.education_emphasis = adj["education_emphasis"]
+                if adj.get("relationship_emphasis") is not None:
+                    self.strategy.relationship_emphasis = adj["relationship_emphasis"]
+                self.strategy.extension_fee_ratio = max(0.10, min(0.40,
+                    self.strategy.extension_fee_ratio + adj.get("extension_fee_ratio_delta", 0.0)))
 
         # 话术库 - 扩展版
         self._init_script_lib()
@@ -786,6 +824,19 @@ class CollectionChatBot:
                     "Bapak/Ibu, jika tidak dibayar hari ini denda akan terus bertambah dan bisa berdampak pada skor kredit Anda di OJK. Kapan pastinya bisa bayar?",
                     "Saya perlu kepastian sekarang. Tagihan ini sudah sangat terlambat. Jam berapa hari ini Bapak/Ibu bisa transfer?",
                     "Ini panggilan terakhir untuk tagihan Anda. Jika tidak ada pembayaran dalam 24 jam, kami harus melanjutkan ke proses selanjutnya. Bisa bayar jam berapa?"
+                ]
+            },
+            "push_final": {
+                "*": [
+                    "Bapak/Ibu, ini adalah peringatan terakhir. Jika tagihan tidak diselesaikan hari ini, kami terpaksa melanjutkan ke proses penagihan selanjutnya sesuai prosedur. Kapan pastinya bisa bayar?",
+                    "Saya sudah memberikan beberapa kesempatan. Jika tidak ada pembayaran dalam waktu dekat, akun Anda akan masuk ke proses penagihan lanjutan. Ini kesempatan terakhir, kapan bisa bayar?",
+                    "Baik, saya catat bahwa Bapak/Ibu belum bisa memberikan kepastian pembayaran. Perlu diketahui ini akan mempengaruhi status kredit Anda. Ada yang bisa saya bantu untuk menyelesaikan ini hari ini?"
+                ]
+            },
+            "escalate_to_supervisor": {
+                "*": [
+                    "Baik, karena kita belum mencapai kesepakatan hari ini, kasus ini akan saya teruskan ke supervisor untuk penanganan lebih lanjut. Anda akan dihubungi kembali dalam 1-2 hari kerja. Terima kasih.",
+                    "Saya akan mencatat bahwa hari ini belum ada kesepakatan pembayaran. Kasus Anda akan ditinjau oleh tim penagihan senior dan mereka akan menghubungi Anda kembali. Terima kasih atas waktunya."
                 ]
             },
             "commit_time": {
@@ -1268,6 +1319,19 @@ class CollectionChatBot:
         if self.state == ChatState.INIT:
             self.state = ChatState.IDENTITY_VERIFY
             identity_verify = self._get_script("identity_verify")
+            # P15-D01: 回头客追加关系维护前缀
+            if self._is_returning_customer and self.user_memory:
+                if self.user_memory.previously_promised_but_failed:
+                    identity_verify = (
+                        f"Halo {self.customer_name}, kita pernah bicara sebelumnya. "
+                        f"Terakhir kali Bapak/Ibu bilang akan bayar tapi sampai sekarang belum ya. "
+                        + identity_verify
+                    )
+                else:
+                    identity_verify = (
+                        f"Halo {self.customer_name}, terima kasih sudah bicara lagi dengan kami. "
+                        + identity_verify
+                    )
             # 教育型策略：身份核实后追加简短合同说明
             if self.strategy.education_emphasis:
                 identity_verify += " " + self._get_script("educate_intro")
@@ -1526,6 +1590,9 @@ class CollectionChatBot:
                     next_state = ChatState.PUSH_FOR_TIME
                 else:
                     # 没有检测到时间，催促用户
+                    # P15-H04: T2 策略再评估（即将放弃前）
+                    if self.objection_count >= self.max_objections - 1:
+                        self._re_evaluate_strategy("ask_time")
                     if self.objection_count < self.max_objections:
                         self.objection_count += 1
                         # P15-B01: 展期优先策略 — 首次 push 先推展期而非全额还款
@@ -1661,22 +1728,46 @@ class CollectionChatBot:
                 response = self._get_script("handle_unknown")
                 next_state = ChatState.PUSH_FOR_TIME
             else:
-                if self.objection_count < self.max_objections:
-                    self.objection_count += 1
-                    # P15-B01: push 力度依据策略 tone + push_intensity
-                    if self.strategy.push_intensity >= 4 or self.strategy.tone == "urgent":
-                        response = self._get_script("push_hard")
-                    else:
-                        response = self._get_script("push")
-                    # 高后果强调：追加后果警告
-                    if self.strategy.consequence_emphasis >= 4:
-                        response += " " + self._get_script("consequence_warning")
+                # P15-B02: 递进式升级链 — objection_count 为最终安全阀
+                if self.objection_count >= self.max_objections:
+                    next_state = ChatState.FAILED
+                    response = ""
+                elif self.push_round < self.strategy.max_push_rounds:
+                    # P15-H04: T2 策略再评估（即将触发 fallback 前, 至少一次 push 后）
+                    if self.push_round > 0 and self.push_round >= self.strategy.max_push_rounds - 1:
+                        self._re_evaluate_strategy("push_for_time")
+                    if self.push_round < self.strategy.max_push_rounds:
+                        self.objection_count += 1
+                        self.push_round += 1
+                        if self.push_round == 1:
+                            response = self._get_script("push")
+                        elif self.push_round == 2:
+                            response = self._get_script("push_hard")
+                        else:
+                            response = self._get_script("push_final")
+                        if self.strategy.consequence_emphasis >= 3:
+                            response += " " + self._get_script("consequence_warning")
+                        next_state = ChatState.PUSH_FOR_TIME
                 else:
-                    # P15-B01: 展期优先策略 — 最后机会推展期
-                    if self.strategy.extension_priority and not self.extension_discussed:
+                    # 主策略耗尽，激活 fallback_approach
+                    fallback = self.strategy.fallback_approach
+                    if fallback == "offer_extension" and not self.extension_discussed:
                         self.extension_discussed = True
                         response = self._get_script("explain_extension")
                         next_state = ChatState.CONFIRM_EXTENSION
+                    elif fallback == "partial_payment" and not self.partial_payment_discussed:
+                        self.partial_payment_discussed = True
+                        response = self._get_script("handle_partial_payment")
+                        next_state = ChatState.PUSH_FOR_TIME
+                    elif fallback == "callback_later":
+                        response = self._get_script("closing_busy")
+                        next_state = ChatState.CLOSE
+                    elif fallback == "accept_promise":
+                        response = self._get_script("closing")
+                        next_state = ChatState.CLOSE
+                    elif fallback == "escalate":
+                        response = self._get_script("escalate_to_supervisor")
+                        next_state = ChatState.FAILED
                     else:
                         next_state = ChatState.FAILED
                         response = ""
@@ -1827,6 +1918,43 @@ class CollectionChatBot:
         self.state = next_state
         audio_file = await self._tts_speak(response, use_tts)
         return response, audio_file
+
+    def _re_evaluate_strategy(self, at_boundary: str = "ask_time"):
+        """P15-H04: T2 会话中策略再评估
+
+        在即将放弃或即将触发fallback时，根据对话信号调整策略参数。
+        纯规则驱动，无LLM调用延迟。
+        """
+        recent_intents = self.user_history_intents[-3:] if self.user_history_intents else []
+        cooperative_signals = {"agree_to_pay", "confirm_time", "give_time", "confirm_identity",
+                               "propose_repayment_time", "ask_extension"}
+        hostile_signals = {"refuse_to_pay", "threaten"}
+        hardship_signals = {"no_money", "complain_high_interest", "ask_fee"}
+
+        has_cooperation = any(i in cooperative_signals for i in recent_intents)
+        has_hostility = any(i in hostile_signals for i in recent_intents)
+        has_hardship = any(i in hardship_signals for i in recent_intents)
+        repeated_no_money = self.no_money_count >= 2
+        user_is_engaging = len(self.conversation) >= 5 and not has_hostility
+
+        if at_boundary == "ask_time":
+            if has_cooperation and not has_hostility:
+                if self.strategy.max_objections <= self.objection_count + 1:
+                    self.max_objections += 1
+                    self.strategy.max_objections += 1
+            if repeated_no_money:
+                self.strategy.extension_priority = True
+
+        elif at_boundary == "push_for_time":
+            if self.partial_payment_discussed or (has_hardship and not has_hostility):
+                if self.strategy.fallback_approach in ("", "escalate"):
+                    self.strategy.fallback_approach = "partial_payment"
+            elif not self.extension_discussed and not has_hostility:
+                if self.strategy.fallback_approach in ("", "escalate"):
+                    self.strategy.fallback_approach = "offer_extension"
+            if user_is_engaging and has_cooperation:
+                if self.strategy.max_push_rounds <= self.push_round + 1:
+                    self.strategy.max_push_rounds += 1
 
     def _check_llm_fallback(self) -> tuple:
         """检查是否需要触发 LLM Fallback"""
@@ -2139,6 +2267,7 @@ class CollectionChatBot:
         self.no_money_count = 0
         self.busy_count = 0
         self.dont_know_count = 0
+        self.push_round = 0  # P15-B02
         self.extension_discussed = False
         self.session_id = datetime.now().strftime("%Y%m%d_%H%M%S")
 
@@ -2360,7 +2489,7 @@ async def run_test_suite(use_tts: bool = False):
     print(f"\n总体成功率: {success_count}/{len(results)} ({success_count/len(results)*100:.1f}%)")
 
     # 保存结果
-    output_dir = _PROJECT_ROOT / "data/chatbot_tests"
+    output_dir = _PROJECT_ROOT / "data/runs/chatbot_tests"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     results_file = output_dir / f"test_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"

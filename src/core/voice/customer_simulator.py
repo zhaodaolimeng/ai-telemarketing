@@ -199,7 +199,7 @@ class CustomerVoiceSimulator:
         energy_threshold: float = 0.005,
         realtime: bool = False,
         save_artifacts: bool = True,
-        output_dir: str = "data/voice_simulations",
+        output_dir: str = "data/runs/voice_simulations",
     ):
         self._chatbot = chatbot
         self._simulator = text_simulator
@@ -246,7 +246,7 @@ class CustomerVoiceSimulator:
         agent_tts_engine: str = "edge_tts",
         realtime: bool = False,
         save_artifacts: bool = True,
-        output_dir: str = "data/voice_simulations",
+        output_dir: str = "data/runs/voice_simulations",
         **kwargs,
     ) -> "CustomerVoiceSimulator":
         """工厂方法：自动装配所有组件"""

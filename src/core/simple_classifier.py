@@ -87,7 +87,7 @@ class SimpleIntentClassifier:
         text = self.clean_pattern.sub('', text)
         return text
 
-    def load_training_data(self, data_dir: str = 'data/gold_dataset',
+    def load_training_data(self, data_dir: str = 'data/raw/gold_dataset',
                             llm_labels_path: str = None,
                             apply_consolidation: bool = True) -> Tuple[List[str], List[str]]:
         """从黄金数据集加载训练数据，可选补充 LLM 精标注数据
@@ -154,7 +154,7 @@ class SimpleIntentClassifier:
         print(f"加载训练数据: {len(texts)} 条样本，共 {len(self.intent_labels)} 种意图")
         return texts, labels
 
-    def train(self, data_dir: str = 'data/gold_dataset', test_size: float = 0.2,
+    def train(self, data_dir: str = 'data/raw/gold_dataset', test_size: float = 0.2,
               llm_labels_path: str = None,
               apply_consolidation: bool = True) -> Dict:
         """训练分类器，可选补充 LLM 精标注数据"""

@@ -702,7 +702,7 @@ class GenerativeCustomerSimulator:
     def __init__(self, corpus_path: Optional[Path] = None):
         """
         初始化生成式模拟器
-        :param corpus_path: 语料库路径，默认使用data/behavior_analysis/customer_response_corpus.json
+        :param corpus_path: 语料库路径，默认使用data/processed/behavior_analysis/customer_response_corpus.json
         """
         if corpus_path is None:
             # 从项目根目录查找语料库

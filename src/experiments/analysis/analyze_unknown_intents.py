@@ -11,7 +11,7 @@ from collections import Counter, defaultdict
 from typing import List, Dict, Any
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
-GOLD_DIR = _PROJECT_ROOT / "data/gold_dataset"
+GOLD_DIR = _PROJECT_ROOT / "data/raw/gold_dataset"
 
 # 印尼语常用停用词
 STOP_WORDS = {
@@ -200,7 +200,7 @@ def analyze_unknown_intents():
         "intent_pattern_match": {k: len(v) for k, v in intent_candidates.items()},
         "top_keywords": [{"keyword": k, "count": v} for k, v in keyword_counter.most_common(50)]
     }
-    output_file = Path("data/unknown_intent_analysis.json")
+    output_file = Path("data/outputs/unknown_intent_analysis.json")
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
     print(f"\n完整分析结果已保存到: {output_file}")

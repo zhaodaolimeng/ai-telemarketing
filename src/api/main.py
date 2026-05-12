@@ -152,6 +152,7 @@ def save_session_to_db(db: Session, bot: CollectionChatBot, chat_group: str):
         session_id=bot.session_id,
         chat_group=chat_group,
         customer_name=bot.customer_name,
+        customer_phone=getattr(bot, 'customer_phone', None),
         is_finished=bot.is_finished(),
         is_successful=bot.is_successful(),
         commit_time=bot.commit_time,
@@ -180,9 +181,17 @@ def save_session_to_db(db: Session, bot: CollectionChatBot, chat_group: str):
 async def start_chat(request: ChatTurnRequest, db: Session = Depends(get_db)):
     session_id = str(uuid.uuid4())
 
+    # P15-D01: 查询用户历史记忆
+    user_memory = None
+    if request.customer_phone:
+        from core.user_memory import UserMemoryStore
+        store = UserMemoryStore(db)
+        user_memory = store.load(request.customer_phone)
+
     bot = CollectionChatBot(
         chat_group=request.chat_group.value,
         customer_name=request.customer_name,
+        user_memory=user_memory,
     )
     bot.session_id = session_id
 
@@ -542,7 +551,7 @@ async def run_test_scenario(request: TestScenarioRequest):
 
 @app.get("/audio/{filename}")
 async def get_audio(filename: str):
-    audio_path = _PROJECT_ROOT / "data/tts_output" / filename
+    audio_path = _PROJECT_ROOT / "data/runs/tts_output" / filename
     if not audio_path.exists():
         raise HTTPException(status_code=404, detail="音频文件不存在")
     suffix = audio_path.suffix.lower()
@@ -1213,7 +1222,7 @@ async def voice_simulate_stream(
                         if audio_path:
                             src = getattr(turn, key)
                             if src and Path(src).exists():
-                                dst = _PROJECT_ROOT / "data/tts_output" / Path(src).name
+                                dst = _PROJECT_ROOT / "data/runs/tts_output" / Path(src).name
                                 if not dst.exists():
                                     shutil.copy2(src, dst)
 

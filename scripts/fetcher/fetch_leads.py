@@ -127,7 +127,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true",
                         help="仅打印 SQL，不执行")
     parser.add_argument("--output", default=None,
-                        help="输出 CSV 路径 (default: data/fetched_leads_<timestamp>.csv)")
+                        help="输出 CSV 路径 (default: data/raw/leads/fetched_leads_<timestamp>.csv)")
     args = parser.parse_args()
 
     config = load_config()

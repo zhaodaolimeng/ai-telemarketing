@@ -15,7 +15,7 @@ LLM 批量话术生成工具 (P15-H01)
     python3 -m src.experiments.generate_scripts --categories silence_engage --dry-run
 
     # 指定输出文件
-    python3 -m src.experiments.generate_scripts --all --count 20 --output data/scripts_generated.json
+    python3 -m src.experiments.generate_scripts --all --count 20 --output data/outputs/scripts/scripts_generated.json
 
 环境变量:
     OPENAI_API_KEY  - LLM API key
@@ -766,7 +766,7 @@ async def main():
 
     # 生成输出
     if not args.dry_run:
-        output_path = args.output or f"data/scripts_generated_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        output_path = args.output or f"data/outputs/scripts/scripts_generated_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
 
         output = {
             "meta": {

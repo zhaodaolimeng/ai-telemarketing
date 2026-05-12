@@ -170,7 +170,7 @@ class VoiceEvaluationResult:
 class VoiceSimulationTester:
     """多模态语音仿真测试器"""
 
-    def __init__(self, test_cases_dir: str = "data/voice_test_cases/"):
+    def __init__(self, test_cases_dir: str = "data/runs/voice_test_cases/"):
         self.test_cases_dir = Path(test_cases_dir)
         self.test_cases: List[VoiceTestCase] = []
         self.asr_client = MockASRClient()
@@ -547,7 +547,7 @@ class VoiceSimulationTester:
             error_analysis=dict(error_stats)
         )
 
-    def generate_report(self, results: List[SimulationResult], eval_result: VoiceEvaluationResult, output_dir: str = "data/voice_simulation_reports/") -> str:
+    def generate_report(self, results: List[SimulationResult], eval_result: VoiceEvaluationResult, output_dir: str = "data/outputs/voice_simulation_reports/") -> str:
         """生成语音仿真测试报告"""
         output_path = Path(output_dir)
         output_path.mkdir(parents=True, exist_ok=True)
@@ -726,8 +726,8 @@ async def main():
 
     parser = argparse.ArgumentParser(description="多模态语音仿真测试工具")
     parser.add_argument("--sample-size", type=int, help="抽样测试的样本量，默认使用全部用例")
-    parser.add_argument("--test-cases-dir", default="data/voice_test_cases/", help="测试用例目录")
-    parser.add_argument("--output-dir", default="data/voice_simulation_reports/", help="报告输出目录")
+    parser.add_argument("--test-cases-dir", default="data/runs/voice_test_cases/", help="测试用例目录")
+    parser.add_argument("--output-dir", default="data/outputs/voice_simulation_reports/", help="报告输出目录")
     parser.add_argument("--case", help="运行单个测试用例，指定case_id")
     parser.add_argument("--filter-accent", help="仅测试特定口音的用例")
     parser.add_argument("--filter-noise", help="仅测试特定噪音场景的用例")
@@ -737,7 +737,7 @@ async def main():
     tester = VoiceSimulationTester(args.test_cases_dir)
 
     if not tester.test_cases:
-        print("请先准备语音测试用例到 data/voice_test_cases/ 目录")
+        print("请先准备语音测试用例到 data/runs/voice_test_cases/ 目录")
         return
 
     # 过滤用例

@@ -20,7 +20,7 @@ from experiments.enhanced_customer_simulator import EnhancedCustomerSimulator, E
 class EnhancedTest:
     """增强版测试"""
 
-    def __init__(self, output_dir: str = "data/enhanced"):
+    def __init__(self, output_dir: str = "data/outputs/enhanced"):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.framework = EvaluationFrameworkV2(use_tts=False)

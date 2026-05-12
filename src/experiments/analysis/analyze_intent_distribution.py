@@ -8,8 +8,8 @@ from pathlib import Path
 from collections import defaultdict
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
-GOLD_DIR = _PROJECT_ROOT / "data/gold_dataset"
-ANNOTATION_LIST_FILE = _PROJECT_ROOT / "data/gold_dataset_annotation_list.json"
+GOLD_DIR = _PROJECT_ROOT / "data/raw/gold_dataset"
+ANNOTATION_LIST_FILE = _PROJECT_ROOT / "data/raw/gold_dataset_annotation_list.json"
 
 # 标准意图集合（扩展后）
 STANDARD_INTENTS = {

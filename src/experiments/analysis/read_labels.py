@@ -12,7 +12,7 @@ def main():
     print("读取标签文件")
     print("="*60)
 
-    label_file = Path("data/label-chat-sample.xlsx")
+    label_file = Path("data/raw/leads/label-chat-sample.xlsx")
     if not label_file.exists():
         print(f"文件不存在: {label_file}")
         return
@@ -39,7 +39,7 @@ def main():
             print(df[col].describe())
 
     # 保存为csv方便查看
-    csv_file = Path("data/label-chat-sample.csv")
+    csv_file = Path("data/raw/leads/label-chat-sample.csv")
     df.to_csv(csv_file, index=False, encoding="utf-8-sig")
     print(f"\n已保存为CSV: {csv_file}")
 

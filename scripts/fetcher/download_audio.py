@@ -5,7 +5,7 @@
 
 Usage:
     python scripts/fetcher/download_audio.py                                   # 默认读取最新 CSV
-    python scripts/fetcher/download_audio.py --csv data/fetched_leads_xxx.csv  # 指定 CSV
+    python scripts/fetcher/download_audio.py --csv data/raw/leads/fetched_leads_xxx.csv  # 指定 CSV
     python scripts/fetcher/download_audio.py --start 0 --end 100               # 只下载前100条
     python scripts/fetcher/download_audio.py --rate-limit 3 --retry 5          # 3秒间隔, 最多重试5次
     python scripts/fetcher/download_audio.py --dry-run                         # 仅检查，不下载

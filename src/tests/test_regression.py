@@ -293,7 +293,7 @@ class RegressionTester:
         """生成测试报告"""
         if output_file is None:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            output_file = f"data/regression_report_{timestamp}.md"
+            output_file = f"data/outputs/regression_reports/regression_report_{timestamp}.md"
 
         Path(output_file).parent.mkdir(parents=True, exist_ok=True)
 

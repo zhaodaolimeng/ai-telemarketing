@@ -172,13 +172,13 @@ def analyze(gold_dir: Path, csv_records: dict) -> dict:
 def main():
     import argparse
     parser = argparse.ArgumentParser(description="P15-G01 校准基线计算")
-    parser.add_argument("--output", type=str, default="data/calibration_baseline.json",
+    parser.add_argument("--output", type=str, default="data/processed/calibration_baseline.json",
                         help="输出文件路径")
     args = parser.parse_args()
 
     project_root = PROJECT_ROOT
-    gold_dir = project_root / "data/gold_dataset"
-    csv_path = project_root / "data/fetched_leads_deduped.csv"
+    gold_dir = project_root / "data/raw/gold_dataset"
+    csv_path = project_root / "data/raw/cases/fetched_leads_deduped.csv"
     output_path = project_root / args.output
 
     print("P15-G01: 校准基线计算")

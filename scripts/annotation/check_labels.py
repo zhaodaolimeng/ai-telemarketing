@@ -5,7 +5,7 @@
 import pandas as pd
 from pathlib import Path
 
-label_file = Path("data/label-chat-sample.xlsx")
+label_file = Path("data/raw/leads/label-chat-sample.xlsx")
 df = pd.read_excel(label_file)
 
 print("="*80)

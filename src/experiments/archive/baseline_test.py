@@ -43,7 +43,7 @@ BASELINE_TEST_SCENARIOS = [
 class BaselineTest:
     """基准测试"""
 
-    def __init__(self, output_dir: str = "data/baseline"):
+    def __init__(self, output_dir: str = "data/outputs/baseline"):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.framework = EvaluationFrameworkV2(use_tts=False)

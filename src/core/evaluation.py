@@ -86,12 +86,12 @@ class PlaybackTestCaseProvider(TestCaseProviderInterface):
         """
         初始化回放测试用例提供器
         :param transcripts_dir: 转写文件目录，默认data/processed/transcripts
-        :param labels_file: 标签文件路径，默认data/label-chat-sample.xlsx
+        :param labels_file: 标签文件路径，默认data/raw/leads/label-chat-sample.xlsx
         """
         if transcripts_dir is None:
             transcripts_dir = Path(__file__).parent.parent.parent / "data" / "processed" / "transcripts"
         if labels_file is None:
-            labels_file = Path(__file__).parent.parent.parent / "data" / "label-chat-sample.xlsx"
+            labels_file = Path(__file__).parent.parent.parent / "data/raw/leads" / "label-chat-sample.xlsx"
 
         self.transcripts_dir = transcripts_dir
         self.labels_file = labels_file
@@ -201,14 +201,14 @@ class DefaultGoldenTestCaseProvider(TestCaseProviderInterface):
 class GoldenDatasetTestCaseProvider(TestCaseProviderInterface):
     """
     标准化黄金数据集测试用例提供器
-    从data/gold_dataset目录加载所有标准化后的测试用例
+    从data/raw/gold_dataset目录加载所有标准化后的测试用例
     """
 
     def __init__(self, dataset_dir: Optional[Path] = None, annotation_list_file: Optional[Path] = None):
         """
         初始化黄金数据集提供器
-        :param dataset_dir: 黄金数据集目录，默认data/gold_dataset
-        :param annotation_list_file: 标注列表文件，默认data/gold_dataset_annotation_list.json
+        :param dataset_dir: 黄金数据集目录，默认data/raw/gold_dataset
+        :param annotation_list_file: 标注列表文件，默认data/raw/gold_dataset_annotation_list.json
         """
         if dataset_dir is None:
             dataset_dir = Path(__file__).parent.parent.parent / "data" / "gold_dataset"
@@ -985,7 +985,7 @@ class EvaluationFrameworkV2:
 
     def _save_report(self):
         """保存报告"""
-        output_dir = _PROJECT_ROOT / "data/evaluations"
+        output_dir = _PROJECT_ROOT / "data/outputs/evaluations"
         output_dir.mkdir(parents=True, exist_ok=True)
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -1061,7 +1061,7 @@ class EvaluationFrameworkV2:
         print("=" * 70)
         print("黄金数据集评估")
         print("=" * 70)
-        print(f"说明：基于标准化后的{len(list(Path('data/gold_dataset').glob('*.json'))) - 2}个真实催收案例（排除模板和示例）")
+        print(f"说明：基于标准化后的{len(list(Path('data/raw/gold_dataset').glob('*.json'))) - 2}个真实催收案例（排除模板和示例）")
         print("-" * 70)
 
         # 加载黄金数据集测试用例
@@ -1241,7 +1241,7 @@ class EvaluationFrameworkV2:
 
     def _save_report(self, report_prefix: str = "evaluation"):
         """保存报告，支持自定义前缀"""
-        output_dir = _PROJECT_ROOT / "data/evaluations"
+        output_dir = _PROJECT_ROOT / "data/outputs/evaluations"
         output_dir.mkdir(parents=True, exist_ok=True)
 
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

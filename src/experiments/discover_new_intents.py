@@ -123,8 +123,8 @@ async def call_llm_batch(utterances: list[dict], model: str = "deepseek-chat") -
 def main():
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", type=str, default="data/unknown_discovery_sample.json")
-    parser.add_argument("--output", type=str, default="data/llm_discovery_results.json")
+    parser.add_argument("--input", type=str, default="data/processed/unknown_discovery_sample.json")
+    parser.add_argument("--output", type=str, default="data/outputs/llm_discovery_results.json")
     parser.add_argument("--limit", type=int, default=200)
     args = parser.parse_args()
 

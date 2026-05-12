@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Dict, List
 
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
-_DEFAULT_INPUT = _PROJECT_ROOT / "data/voice_recordings"
+_DEFAULT_INPUT = _PROJECT_ROOT / "data/raw/recordings"
 _DEFAULT_OUTPUT = _PROJECT_ROOT / "data/processed/transcripts"
 
 

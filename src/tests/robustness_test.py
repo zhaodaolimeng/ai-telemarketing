@@ -350,7 +350,7 @@ class RobustnessTester:
     def generate_report(self, summary: Dict, output_dir: Optional[str] = None) -> str:
         """生成增强版测试报告（含根因分析、合规聚合、改进建议）"""
         if output_dir is None:
-            output_dir = _PROJECT_ROOT / "data/robustness_tests"
+            output_dir = _PROJECT_ROOT / "data/outputs/robustness_tests"
         else:
             output_dir = Path(output_dir)
 

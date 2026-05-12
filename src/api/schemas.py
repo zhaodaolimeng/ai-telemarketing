@@ -39,6 +39,7 @@ class ChatTurnRequest(BaseModel):
     chat_group: ChatGroup = ChatGroup.H2
     customer_name: Optional[str] = "Pak/Bu"
     customer_input: Optional[str] = None
+    customer_phone: Optional[str] = None  # P15-D01: 跨会话用户标识
 
 
 class ChatTurnResponse(BaseModel):

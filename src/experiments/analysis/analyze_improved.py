@@ -15,7 +15,7 @@ def main():
     print("\n说明：未标注repay_type = 沟通失败（24小时内未还款）")
 
     # 读取标签
-    label_file = Path("data/label-chat-sample.xlsx")
+    label_file = Path("data/raw/leads/label-chat-sample.xlsx")
     df = pd.read_excel(label_file)
     print(f"\n总标签数: {len(df)}")
 

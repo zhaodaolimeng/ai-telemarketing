@@ -14,7 +14,7 @@ def main():
     print("="*80)
 
     # 读取标签
-    label_file = Path("data/label-chat-sample.xlsx")
+    label_file = Path("data/raw/leads/label-chat-sample.xlsx")
     df = pd.read_excel(label_file)
     df["result"] = df["repay_type"].apply(
         lambda x: "success" if x in ["repay", "extend"] else "failed"

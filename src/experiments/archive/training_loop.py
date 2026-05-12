@@ -41,7 +41,7 @@ class ImprovementSuggestion:
 class AdversarialTrainer:
     """对抗训练器"""
 
-    def __init__(self, output_dir: str = "data/training"):
+    def __init__(self, output_dir: str = "data/outputs/training"):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.framework = EvaluationFrameworkV2(use_tts=False)
