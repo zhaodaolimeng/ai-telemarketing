@@ -25,6 +25,36 @@ except ImportError:
 class SimpleIntentClassifier:
     """简易意图分类器，使用TF-IDF + Logistic Regression"""
 
+    # P15-C01: 意图类别合并映射 — 将 LLM 细粒度标签合并到 chatbot 处理器粒度
+    # 原则: (1) 同一 chatbot handler 的合并 (2) 语义等价合并 (3) 样本数<5的合并到最近父类
+    INTENT_CONSOLIDATION = {
+        # 同 handler 合并 (chatbot L1308: ask_extension 与 request_short_extension 同处理)
+        "request_short_extension": "ask_extension",
+        # 同 handler 合并 (chatbot L1367: deny_identity 与 third_party 同处理)
+        # "third_party" → 保留，14 样本足够
+        # 威胁/辱骂合并 (chatbot L1553: threaten 单独处理，user_abuse 无独立 handler)
+        "user_abuse": "threaten",
+        # 身份质疑合并 (chatbot L1597/L1601: question_identity 与 request_identity_verification 相邻)
+        "request_identity_verification": "question_identity",
+        # 费用/利息投诉合并 (chatbot L1605/L1613: 相邻处理)
+        "complain_high_interest": "ask_fee",
+        "request_interest_reduction": "ask_fee",
+        # 暗示还款意愿 → agree_to_pay
+        "borrowing_money": "agree_to_pay",
+        "transfer_in_process": "agree_to_pay",
+        # 沉默变体合并
+        "silence_or_noise": "silence",
+        # Gold dataset 旧标签合并
+        "respond_to_greeting": "greeting",
+        "acknowledge_debt": "agree_to_pay",
+        "cannot_repay_now": "no_money",
+        # 极稀类(<5样本)合并到最近父类，待后续 LLM 标注补充后拆分
+        "request_payment_reminder": "ask_extension",   # 都是请求类
+        "request_settlement_proof": "ask_fee",          # 行政管理类
+        "app_uninstalled": "dont_know",                 # 无法继续表达
+        "inquire_consequences": "ask_fee",              # 财务后果类
+    }
+
     def __init__(self):
         if not SKLEARN_AVAILABLE:
             raise ImportError("需要安装scikit-learn才能使用本功能: pip install scikit-learn")
@@ -44,6 +74,11 @@ class SimpleIntentClassifier:
         # 预处理正则
         self.clean_pattern = re.compile(r'[^\w\s]')
 
+    @classmethod
+    def consolidate_intent(cls, intent: str) -> str:
+        """应用合并映射，返回合并后的意图标签"""
+        return cls.INTENT_CONSOLIDATION.get(intent, intent)
+
     def _preprocess(self, text: str) -> str:
         """文本预处理：小写化、去标点"""
         # 小写化
@@ -53,10 +88,16 @@ class SimpleIntentClassifier:
         return text
 
     def load_training_data(self, data_dir: str = 'data/gold_dataset',
-                            llm_labels_path: str = None) -> Tuple[List[str], List[str]]:
-        """从黄金数据集加载训练数据，可选补充 LLM 精标注数据"""
+                            llm_labels_path: str = None,
+                            apply_consolidation: bool = True) -> Tuple[List[str], List[str]]:
+        """从黄金数据集加载训练数据，可选补充 LLM 精标注数据
+
+        Args:
+            apply_consolidation: 应用 INTENT_CONSOLIDATION 合并细粒度标签
+        """
         texts = []
         labels = []
+        consolidate_count = {}  # 统计合并数量
 
         gold_path = Path(data_dir)
         for file_path in gold_path.glob('*.json'):
@@ -73,6 +114,12 @@ class SimpleIntentClassifier:
                     text = turn.get('text', '').strip()
                     intent = turn.get('user_intent', '').strip()
                     if text and intent and intent != 'unknown' and intent != 'unknown_intent':
+                        if apply_consolidation:
+                            original = intent
+                            intent = self.consolidate_intent(intent)
+                            if original != intent:
+                                consolidate_count[f"{original}→{intent}"] = \
+                                    consolidate_count.get(f"{original}→{intent}", 0) + 1
                         texts.append(self._preprocess(text))
                         labels.append(intent)
                         self.intent_labels.add(intent)
@@ -87,19 +134,33 @@ class SimpleIntentClassifier:
                 text = s.get('text', '').strip()
                 intent = s.get('intent', 'unknown').strip()
                 if text and intent and intent != 'unknown':
+                    if apply_consolidation:
+                        original = intent
+                        intent = self.consolidate_intent(intent)
+                        if original != intent:
+                            consolidate_count[f"{original}→{intent}"] = \
+                                consolidate_count.get(f"{original}→{intent}", 0) + 1
                     texts.append(self._preprocess(text))
                     labels.append(intent)
                     self.intent_labels.add(intent)
                     llm_added += 1
             print(f"补充 LLM 精标注数据: {llm_added} 条")
 
+        if consolidate_count:
+            print(f"意图合并统计 ({sum(consolidate_count.values())} 条被合并):")
+            for mapping, count in sorted(consolidate_count.items(), key=lambda x: -x[1]):
+                print(f"  {mapping}: {count}")
+
         print(f"加载训练数据: {len(texts)} 条样本，共 {len(self.intent_labels)} 种意图")
         return texts, labels
 
     def train(self, data_dir: str = 'data/gold_dataset', test_size: float = 0.2,
-              llm_labels_path: str = None) -> Dict:
+              llm_labels_path: str = None,
+              apply_consolidation: bool = True) -> Dict:
         """训练分类器，可选补充 LLM 精标注数据"""
-        texts, labels = self.load_training_data(data_dir, llm_labels_path=llm_labels_path)
+        texts, labels = self.load_training_data(
+            data_dir, llm_labels_path=llm_labels_path,
+            apply_consolidation=apply_consolidation)
 
         if len(texts) < 100:
             print("警告：训练数据不足，可能影响分类效果")
@@ -189,10 +250,10 @@ class SimpleIntentClassifier:
         return classifier
 
 
-def train_and_save_model(llm_labels_path: str = None):
+def train_and_save_model(llm_labels_path: str = None, apply_consolidation: bool = True):
     """训练并保存模型的快捷方法"""
     classifier = SimpleIntentClassifier()
-    classifier.train(llm_labels_path=llm_labels_path)
+    classifier.train(llm_labels_path=llm_labels_path, apply_consolidation=apply_consolidation)
     classifier.save_model()
     print("\n模型训练并保存完成！")
 
